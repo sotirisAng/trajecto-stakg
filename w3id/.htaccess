@@ -1,8 +1,17 @@
-# w3id.org/trajecto -> GitHub Pages documentation of the Trajecto ontology.
-# Submit as trajecto/.htaccess in a pull request to https://github.com/perma-id/w3id.org
-# Each module IRI serves HTML to browsers and RDF by content negotiation.
+# Trajecto ontology: https://w3id.org/trajecto
+#
+# The core module (https://w3id.org/trajecto) and its modules
+# (https://w3id.org/trajecto/<module>, e.g. /poi, /purpose/skos) redirect to
+# their WIDOCO documentation on GitHub Pages; RDF serializations are served by
+# content negotiation (RDF/XML, Turtle, JSON-LD, N-Triples).
+# Source: https://github.com/sotirisAng/trajecto-stakg
+#
+# ## Contact
+# This space is administered by:
+#
+# Sotirios Angelis
+# GitHub username: sotirisAng
 
-Options +FollowSymLinks
 RewriteEngine on
 
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
