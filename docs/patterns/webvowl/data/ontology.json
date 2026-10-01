@@ -63,28 +63,28 @@
         "value" : "2026-10-01",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.1.0",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://w3id.org/trajecto/patterns#",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "en",
-        "value" : "Trajecto Movement Patterns Module",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
         "type" : "label"
       } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Movement Patterns Module",
         "type" : "label"
       } ]
     }
@@ -97,7 +97,7 @@
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "8",
@@ -172,7 +172,7 @@
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "86",
@@ -253,10 +253,10 @@
     "id" : "83",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -265,10 +265,10 @@
     "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "50",
+    "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "50",
     "type" : "owl:Class"
   }, {
     "id" : "141",
@@ -332,27 +332,6 @@
     "id" : "0",
     "superClasses" : [ "1" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/patterns#SlowPaced",
-    "baseIri" : "http://w3id.org/trajecto/patterns",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/patterns",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SlowPaced",
-      "en" : "Slow Paced"
-    },
-    "comment" : {
-      "en" : "Consistently slow, leisurely movement throughout a trajectory."
-    },
-    "id" : "5",
-    "superClasses" : [ "4" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/patterns#ImmersiveMovement",
     "baseIri" : "http://w3id.org/trajecto/patterns",
     "instances" : 0,
@@ -371,8 +350,29 @@
     "comment" : {
       "en" : "Movement dominated by prolonged, immersive engagement with points of interest."
     },
-    "id" : "6",
-    "superClasses" : [ "7" ]
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SlowPaced",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SlowPaced",
+      "en" : "Slow Paced"
+    },
+    "comment" : {
+      "en" : "Consistently slow, leisurely movement throughout a trajectory."
+    },
+    "id" : "7",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#CircularReturn",
     "baseIri" : "http://w3id.org/trajecto/patterns",
@@ -416,27 +416,6 @@
     "id" : "10",
     "superClasses" : [ "11" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/patterns#SingleDestination",
-    "baseIri" : "http://w3id.org/trajecto/patterns",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/patterns",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SingleDestination",
-      "en" : "Single Destination"
-    },
-    "comment" : {
-      "en" : "Movement focused on reaching a single destination."
-    },
-    "id" : "33",
-    "superClasses" : [ "7" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/patterns#IndependentGroupMovement",
     "baseIri" : "http://w3id.org/trajecto/patterns",
     "instances" : 0,
@@ -455,8 +434,29 @@
     "comment" : {
       "en" : "Group members moving independently within a larger area."
     },
-    "id" : "34",
+    "id" : "33",
     "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SingleDestination",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SingleDestination",
+      "en" : "Single Destination"
+    },
+    "comment" : {
+      "en" : "Movement focused on reaching a single destination."
+    },
+    "id" : "34",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#GroupMovementPattern",
     "baseIri" : "http://w3id.org/trajecto/patterns",
@@ -473,7 +473,7 @@
       "IRI-based" : "GroupMovementPattern",
       "en" : "Group Movement Pattern"
     },
-    "subClasses" : [ "34", "0", "36", "37" ],
+    "subClasses" : [ "33", "0", "36", "37" ],
     "comment" : {
       "en" : "Pattern in the movement of groups of individuals."
     },
@@ -648,7 +648,7 @@
       "en" : "Movement that involves returning along previously traveled paths."
     },
     "id" : "55",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#FastPaced",
     "baseIri" : "http://w3id.org/trajecto/patterns",
@@ -686,7 +686,7 @@
       "IRI-based" : "PacePattern",
       "en" : "Pace Pattern"
     },
-    "subClasses" : [ "3", "5", "58", "74" ],
+    "subClasses" : [ "3", "7", "58", "74" ],
     "comment" : {
       "en" : "Pattern in the pace or rhythm of movement."
     },
@@ -829,7 +829,7 @@
       "en" : "Movement visiting multiple destinations."
     },
     "id" : "100",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#HesitationSegment",
     "baseIri" : "http://w3id.org/trajecto/patterns",
@@ -889,11 +889,11 @@
       "IRI-based" : "FocusPattern",
       "en" : "Focus Pattern"
     },
-    "subClasses" : [ "33", "100", "107", "55", "108", "109", "6" ],
+    "subClasses" : [ "34", "100", "107", "55", "108", "109", "5" ],
     "comment" : {
       "en" : "Pattern in the focus or intention of movement."
     },
-    "id" : "7",
+    "id" : "6",
     "superClasses" : [ "35" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#CyclicalPattern",
@@ -989,7 +989,7 @@
       "IRI-based" : "MovementPattern",
       "en" : "Movement Pattern"
     },
-    "subClasses" : [ "81", "87", "1", "41", "7", "9" ],
+    "subClasses" : [ "81", "87", "1", "41", "6", "9" ],
     "comment" : {
       "en" : "A recognizable pattern in movement behavior."
     },
@@ -1088,7 +1088,7 @@
       "en" : "Relaxed, low-speed movement without focused engagement."
     },
     "id" : "108",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#Consistent",
     "baseIri" : "http://w3id.org/trajecto/patterns",
@@ -1344,7 +1344,7 @@
       "en" : "Movement focused on exploration without specific destinations."
     },
     "id" : "107",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1388,27 +1388,6 @@
     "id" : "83",
     "superClasses" : [ "81" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/patterns#LeaderFollowerMovement",
-    "baseIri" : "http://w3id.org/trajecto/patterns",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/patterns",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "LeaderFollowerMovement",
-      "en" : "Leader Follower Movement"
-    },
-    "comment" : {
-      "en" : "Group following a leader who determines the movement path."
-    },
-    "id" : "37",
-    "superClasses" : [ "1" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/patterns#Zigzag",
     "baseIri" : "http://w3id.org/trajecto/patterns",
     "instances" : 0,
@@ -1429,6 +1408,27 @@
     },
     "id" : "24",
     "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#LeaderFollowerMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LeaderFollowerMovement",
+      "en" : "Leader Follower Movement"
+    },
+    "comment" : {
+      "en" : "Group following a leader who determines the movement path."
+    },
+    "id" : "37",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#duration",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1465,27 +1465,6 @@
     "id" : "13",
     "superClasses" : [ "121" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/patterns#ContinueForward",
-    "baseIri" : "http://w3id.org/trajecto/patterns",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/patterns",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ContinueForward",
-      "en" : "Continue Forward"
-    },
-    "comment" : {
-      "en" : "Decision to continue in the current direction."
-    },
-    "id" : "50",
-    "superClasses" : [ "48" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/patterns#SignageCheckPoint",
     "baseIri" : "http://w3id.org/trajecto/patterns",
     "instances" : 0,
@@ -1506,6 +1485,27 @@
     },
     "id" : "63",
     "superClasses" : [ "64" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ContinueForward",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ContinueForward",
+      "en" : "Continue Forward"
+    },
+    "comment" : {
+      "en" : "Decision to continue in the current direction."
+    },
+    "id" : "50",
+    "superClasses" : [ "48" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1614,10 +1614,10 @@
       "en" : "Steady Movement"
     },
     "comment" : {
-      "en" : "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."
+      "en" : "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory movement."
     },
     "id" : "109",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#AcceleratingDecelerating",
     "baseIri" : "http://w3id.org/trajecto/patterns",
@@ -1993,7 +1993,7 @@
   "propertyAttribute" : [ {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "2"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasDecisionTime",
@@ -2020,107 +2020,107 @@
   }, {
     "range" : "9",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "15"
   }, {
     "range" : "9",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "11",
     "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "19"
   }, {
     "range" : "11",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "21"
   }, {
     "range" : "9",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
     "range" : "11",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
     "range" : "11",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "11",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
     "range" : "11",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
     "range" : "48",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "range" : "48",
     "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
     "range" : "48",
     "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "53"
   }, {
     "range" : "40",
     "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "56"
   }, {
     "range" : "40",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
     "range" : "48",
     "domain" : "60",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "59"
   }, {
     "range" : "51",
     "domain" : "52",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
     "range" : "64",
     "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "62"
   }, {
     "range" : "40",
     "domain" : "39",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "65"
   }, {
     "range" : "64",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "66"
   }, {
     "range" : "41",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "68"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasDirectionalStraightness",
@@ -2145,14 +2145,14 @@
     "attributes" : [ "datatype" ],
     "id" : "69"
   }, {
-    "range" : "7",
-    "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "6",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "72"
   }, {
     "range" : "41",
     "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "73"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasAlternativePath",
@@ -2180,47 +2180,47 @@
   }, {
     "range" : "13",
     "domain" : "64",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "91"
   }, {
     "range" : "13",
     "domain" : "51",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "92"
   }, {
     "range" : "41",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
     "range" : "13",
     "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "94"
   }, {
     "range" : "87",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "95"
   }, {
     "range" : "87",
     "domain" : "88",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "96"
   }, {
     "range" : "13",
     "domain" : "98",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
     "range" : "87",
     "domain" : "90",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "99"
   }, {
     "range" : "81",
     "domain" : "86",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "101"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasDirectionality",
@@ -2248,7 +2248,7 @@
   }, {
     "range" : "81",
     "domain" : "85",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "104"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
@@ -2259,7 +2259,7 @@
     },
     "domain" : "106",
     "subproperty" : [ "103" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "105"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasDecisionPoint",
@@ -2286,47 +2286,47 @@
   }, {
     "range" : "81",
     "domain" : "84",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "112"
   }, {
     "range" : "45",
     "domain" : "76",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "113"
   }, {
     "range" : "45",
     "domain" : "75",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "114"
   }, {
     "range" : "81",
     "domain" : "83",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
     "range" : "81",
     "domain" : "82",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "range" : "4",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "117"
   }, {
     "range" : "4",
-    "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "118"
   }, {
     "range" : "45",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "119"
   }, {
     "range" : "4",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "120"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasVelocityVariance",
@@ -2375,77 +2375,77 @@
   }, {
     "range" : "80",
     "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "125"
   }, {
     "range" : "80",
     "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "126"
   }, {
     "range" : "35",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "127"
   }, {
     "range" : "80",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "128"
   }, {
     "range" : "80",
     "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "129"
   }, {
     "range" : "35",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "130"
   }, {
     "range" : "35",
     "domain" : "87",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "131"
   }, {
     "range" : "35",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "132"
   }, {
     "range" : "35",
     "domain" : "41",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "133"
   }, {
-    "range" : "7",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "134"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "109",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
     "range" : "35",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "136"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "137"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "100",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "138"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "108",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "139"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasDirectionalChanges",
@@ -2470,9 +2470,9 @@
     "attributes" : [ "datatype" ],
     "id" : "140"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "142"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#exhibitsPattern",
@@ -2501,7 +2501,7 @@
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasFocusPattern",
     "baseIri" : "http://w3id.org/trajecto/patterns",
-    "range" : "7",
+    "range" : "6",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2524,27 +2524,27 @@
   }, {
     "range" : "121",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "145"
   }, {
     "range" : "1",
-    "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "146"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "147"
   }, {
     "range" : "1",
     "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "148"
   }, {
     "range" : "1",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "149"
   }, {
     "iri" : "http://w3id.org/trajecto/patterns#hasVelocityPattern",

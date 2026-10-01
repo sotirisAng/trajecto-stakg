@@ -669,7 +669,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>Profile Snapshot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#ProfileSnapshot</p>
   <div class="comment">
-   <span class="markdown">The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15).</span>
+   <span class="markdown">The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -986,7 +986,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>has affinity for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasAffinityFor</p>
   <div class="comment">
-   <span class="markdown">A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual.</span>
+   <span class="markdown">A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1042,7 +1042,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>has inferred preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasInferredPreference</p>
   <div class="comment">
-   <span class="markdown">Relates a person to a category preference inferred by rule SR-20 from all of their trajectories.</span>
+   <span class="markdown">Relates a person to a category preference inferred from all of their trajectories.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1073,7 +1073,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>has preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasPreference</p>
   <div class="comment">
-   <span class="markdown">Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation).</span>
+   <span class="markdown">Relates a user profile directly to a category preference, without a chain of snapshots.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1426,7 +1426,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>immersive fraction<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#immersiveFraction</p>
   <div class="comment">
-   <span class="markdown">Share of the interactions with the category that are immersive (SR-20).</span>
+   <span class="markdown">Share of the interactions with the category that are immersive.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1457,7 +1457,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>initial preferences<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#initialPreferences</p>
   <div class="comment">
-   <span class="markdown">True for the seed snapshot that Stage 8 writes before any trajectory update.</span>
+   <span class="markdown">True for the initial snapshot of a user profile, created before any trajectory updates it.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1581,7 +1581,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>meaningful fraction<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#meaningfulFraction</p>
   <div class="comment">
-   <span class="markdown">Share of the interactions with the category that are meaningful (SR-20).</span>
+   <span class="markdown">Share of the interactions with the category that are meaningful.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1705,7 +1705,7 @@ This section provides details for each class and property defined by trajecto-us
   <h3>total visits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/user#totalVisits</p>
   <div class="comment">
-   <span class="markdown">Number of interactions with the category (SR-20).</span>
+   <span class="markdown">Number of interactions with the category.</span>
   </div>
   <dl class="definedBy">
    <dt>

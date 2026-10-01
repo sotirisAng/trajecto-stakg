@@ -199,7 +199,7 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/user#hasAffinityFor">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto#Person"/>
-        <rdfs:comment xml:lang="en">A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">has affinity for</rdfs:label>
     </owl:ObjectProperty>
@@ -225,7 +225,7 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/user#hasInferredPreference">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto#Person"/>
         <rdfs:range rdf:resource="http://w3id.org/trajecto/user#Preference"/>
-        <rdfs:comment xml:lang="en">Relates a person to a category preference inferred by rule SR-20 from all of their trajectories.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a person to a category preference inferred from all of their trajectories.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">has inferred preference</rdfs:label>
     </owl:ObjectProperty>
@@ -238,7 +238,7 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/user#hasPreference">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto/user#UserProfile"/>
         <rdfs:range rdf:resource="http://w3id.org/trajecto/user#Preference"/>
-        <rdfs:comment xml:lang="en">Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a user profile directly to a category preference, without a chain of snapshots.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">has preference</rdfs:label>
     </owl:ObjectProperty>
@@ -391,7 +391,7 @@
     <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/user#immersiveFraction">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto/user#Preference"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:comment xml:lang="en">Share of the interactions with the category that are immersive (SR-20).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Share of the interactions with the category that are immersive.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">immersive fraction</rdfs:label>
     </owl:DatatypeProperty>
@@ -404,7 +404,7 @@
     <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/user#initialPreferences">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto/user#ProfileSnapshot"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="en">True for the seed snapshot that Stage 8 writes before any trajectory update.</rdfs:comment>
+        <rdfs:comment xml:lang="en">True for the initial snapshot of a user profile, created before any trajectory updates it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">initial preferences</rdfs:label>
     </owl:DatatypeProperty>
@@ -463,7 +463,7 @@
     <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/user#meaningfulFraction">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto/user#Preference"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:comment xml:lang="en">Share of the interactions with the category that are meaningful (SR-20).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Share of the interactions with the category that are meaningful.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">meaningful fraction</rdfs:label>
     </owl:DatatypeProperty>
@@ -515,7 +515,7 @@
     <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/user#totalVisits">
         <rdfs:domain rdf:resource="http://w3id.org/trajecto/user#Preference"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Number of interactions with the category (SR-20).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Number of interactions with the category.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">total visits</rdfs:label>
     </owl:DatatypeProperty>
@@ -677,7 +677,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/trajecto/user#ProfileSnapshot">
-        <rdfs:comment xml:lang="en">The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/user"/>
         <rdfs:label xml:lang="en">Profile Snapshot</rdfs:label>
     </owl:Class>

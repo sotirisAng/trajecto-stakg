@@ -3,7 +3,7 @@
 <http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
 <http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
-<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/description> "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose."@en .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/description> "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and trajectories are assigned a purpose from the scheme through trajecto:hasPurpose."@en .
 <http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
 <http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .

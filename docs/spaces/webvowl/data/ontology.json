@@ -166,7 +166,7 @@
     "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "83",
     "type" : "owl:Class"
   }, {
     "id" : "22",
@@ -304,7 +304,7 @@
     "id" : "135",
     "type" : "owl:Class"
   }, {
-    "id" : "83",
+    "id" : "81",
     "type" : "owl:Class"
   }, {
     "id" : "40",
@@ -636,27 +636,6 @@
     "id" : "1",
     "superClasses" : [ "74" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/spaces#Purchase",
-    "baseIri" : "http://w3id.org/trajecto/spaces",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/spaces",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Purchase",
-      "en" : "Purchase"
-    },
-    "comment" : {
-      "en" : "The act of buying a product or service."
-    },
-    "id" : "80",
-    "superClasses" : [ "81" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/spaces#ExhibitMetadata",
     "baseIri" : "http://w3id.org/trajecto/spaces",
     "instances" : 0,
@@ -674,6 +653,27 @@
     },
     "comment" : {
       "en" : "Descriptive information about a cultural artifact."
+    },
+    "id" : "80",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spaces#Purchase",
+    "baseIri" : "http://w3id.org/trajecto/spaces",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spaces",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Purchase",
+      "en" : "Purchase"
+    },
+    "comment" : {
+      "en" : "The act of buying a product or service."
     },
     "id" : "82",
     "superClasses" : [ "83" ]
@@ -758,7 +758,7 @@
       "en" : "The intended purpose behind a commercial visit."
     },
     "id" : "27",
-    "superClasses" : [ "83" ]
+    "superClasses" : [ "81" ]
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#CommercialInteraction",
     "baseIri" : "http://w3id.org/trajecto/spaces",
@@ -775,11 +775,11 @@
       "IRI-based" : "CommercialInteraction",
       "en" : "Commercial Interaction"
     },
-    "subClasses" : [ "80", "105", "106" ],
+    "subClasses" : [ "82", "105", "106" ],
     "comment" : {
       "en" : "Interaction in a commercial context."
     },
-    "id" : "81",
+    "id" : "83",
     "superClasses" : [ "8" ]
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#CommercialSpace",
@@ -865,7 +865,7 @@
       "en" : "The act of using or consuming a service."
     },
     "id" : "106",
-    "superClasses" : [ "81" ]
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#DiningSpace",
     "baseIri" : "http://w3id.org/trajecto/spaces",
@@ -960,7 +960,7 @@
       "en" : "A non-physical offering available in a commercial space."
     },
     "id" : "70",
-    "superClasses" : [ "83" ]
+    "superClasses" : [ "81" ]
   }, {
     "iri" : "http://w3id.org/trajecto#RegionOfInterest",
     "baseIri" : "http://w3id.org/trajecto",
@@ -1012,7 +1012,7 @@
       "en" : "Information about the cultural importance or value of an entity."
     },
     "id" : "121",
-    "superClasses" : [ "83" ]
+    "superClasses" : [ "81" ]
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#Space",
     "baseIri" : "http://w3id.org/trajecto/spaces",
@@ -1061,7 +1061,7 @@
       "en" : "Looking at products without necessarily intending to purchase."
     },
     "id" : "105",
-    "superClasses" : [ "81" ]
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#SocialLearning",
     "baseIri" : "http://w3id.org/trajecto/spaces",
@@ -1538,7 +1538,7 @@
     "label" : {
       "IRI-based" : "Interaction"
     },
-    "subClasses" : [ "7", "81" ],
+    "subClasses" : [ "7", "83" ],
     "attributes" : [ "external" ],
     "id" : "8"
   }, {
@@ -1569,9 +1569,9 @@
     "label" : {
       "IRI-based" : "Abstract"
     },
-    "subClasses" : [ "82", "27", "128", "70", "121" ],
+    "subClasses" : [ "80", "27", "128", "70", "121" ],
     "attributes" : [ "external" ],
-    "id" : "83"
+    "id" : "81"
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#Exhibit",
     "baseIri" : "http://w3id.org/trajecto/spaces",
@@ -1634,7 +1634,7 @@
       "en" : "The physical arrangement and organization of a retail space."
     },
     "id" : "128",
-    "superClasses" : [ "83" ]
+    "superClasses" : [ "81" ]
   } ],
   "property" : [ {
     "id" : "0",
@@ -2269,12 +2269,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "109"
   }, {
-    "range" : "81",
+    "range" : "83",
     "domain" : "106",
     "attributes" : [ "anonymous", "object" ],
     "id" : "110"
   }, {
-    "range" : "81",
+    "range" : "83",
     "domain" : "105",
     "attributes" : [ "anonymous", "object" ],
     "id" : "111"
@@ -2321,8 +2321,8 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
-    "range" : "81",
-    "domain" : "80",
+    "range" : "83",
+    "domain" : "82",
     "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
@@ -2353,18 +2353,18 @@
     "attributes" : [ "object" ],
     "id" : "120"
   }, {
-    "range" : "83",
+    "range" : "81",
     "domain" : "121",
     "attributes" : [ "anonymous", "object" ],
     "id" : "122"
   }, {
-    "range" : "83",
+    "range" : "81",
     "domain" : "27",
     "attributes" : [ "anonymous", "object" ],
     "id" : "123"
   }, {
-    "range" : "83",
-    "domain" : "82",
+    "range" : "81",
+    "domain" : "80",
     "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
@@ -2390,12 +2390,12 @@
     "attributes" : [ "object" ],
     "id" : "125"
   }, {
-    "range" : "83",
+    "range" : "81",
     "domain" : "70",
     "attributes" : [ "anonymous", "object" ],
     "id" : "126"
   }, {
-    "range" : "83",
+    "range" : "81",
     "domain" : "128",
     "attributes" : [ "anonymous", "object" ],
     "id" : "127"
@@ -2424,7 +2424,7 @@
   }, {
     "iri" : "http://w3id.org/trajecto/spaces#hasExhibitMetadata",
     "baseIri" : "http://w3id.org/trajecto/spaces",
-    "range" : "82",
+    "range" : "80",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2488,7 +2488,7 @@
     "id" : "77"
   }, {
     "range" : "8",
-    "domain" : "81",
+    "domain" : "83",
     "attributes" : [ "anonymous", "object" ],
     "id" : "138"
   }, {

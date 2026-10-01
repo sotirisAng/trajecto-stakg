@@ -11,7 +11,7 @@ the modules and the imported ontologies in `imports/` (datAcron, SSN, SOSA) load
 Release for the public repository. The changes keep every axiom that the pipeline relies on: the POI class hierarchy,
 the dwell configuration of every POI type, the purpose links, and the profile class definitions are unchanged, and
 the OWL RL classification of stage 13 assigns the same profile classes. HermiT reports the DL fragment consistent
-(1,192 classes). Rerunning the stage 3 and immersive-interaction queries with this ontology on the
+(1,190 classes). Rerunning the stage 3 and immersive-interaction queries with this ontology on the
 evaluated KGs reproduces their passing (295 OSM Rome, 7,461 GeoLife) and immersive (177, 3,113) interactions exactly,
 and their meaningful interactions to within 1 and 4.
 
@@ -92,7 +92,9 @@ Mixed `dc:`/`dcterms:` annotations and `dc:contributor` values that described th
 
 ### Removed
 
-`trajecto:hasModel`, `isActivated`, `isPaused`: undocumented properties without domain, unused by any data.
+- `trajecto:hasModel`, `isActivated`, `isPaused`: undocumented properties without domain, unused by any data.
+- A full copy of the W3C WGS84 vocabulary (its header, change log and terms) that the spatial module carried
+  although none of its axioms use it.
 
 ### Readability
 
@@ -104,6 +106,9 @@ Mixed `dc:`/`dcterms:` annotations and `dc:contributor` values that described th
   (`poi:Leisure` "Leisure" vs `poi:LeisureFacility` "Leisure Facility", and likewise for Sports, Nightlife, Club,
   Dining, Retail).
 - Every term carries `rdfs:isDefinedBy` its module, and all labels and definitions are tagged `@en`.
+- Definitions describe the domain only. References to the code that builds the knowledge graph (rule numbers,
+  notebooks, pipeline stages, queries, mappings) and to particular datasets were removed, so the ontology stands
+  on its own.
 
 ### Known limits
 

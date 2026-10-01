@@ -10,7 +10,7 @@
     "version" : "1.1.0",
     "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
     "description" : {
-      "en" : "Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."
+      "en" : "Trajectory events detected over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."
     },
     "labels" : {
       "en" : "trajecto-events"
@@ -218,7 +218,7 @@
     },
     "subClasses" : [ "4", "11", "0", "15", "2", "16" ],
     "comment" : {
-      "en" : "A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types."
+      "en" : "A behavioral transition or notable occurrence within a trajectory, detected from the sequence of its positions and the types of their interactions."
     },
     "id" : "1",
     "superClasses" : [ "14" ]
@@ -352,10 +352,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "21",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "22",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "23",
     "type" : "owl:objectProperty"
@@ -381,22 +381,22 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "3"
   }, {
     "range" : "1",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "9"
   }, {
     "range" : "1",
     "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "10"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "12"
   }, {
     "iri" : "http://w3id.org/trajecto/events#toInteractionType",
@@ -423,12 +423,12 @@
   }, {
     "range" : "4",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "2",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
     "iri" : "http://w3id.org/trajecto/events#toCategory",
@@ -453,28 +453,6 @@
     "attributes" : [ "object" ],
     "id" : "20"
   }, {
-    "iri" : "http://w3id.org/trajecto/events#atPosition",
-    "baseIri" : "http://w3id.org/trajecto/events",
-    "range" : "19",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/events",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "atPosition",
-      "en" : "at position"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "The position at which the event occurs within the trajectory."
-    },
-    "attributes" : [ "object" ],
-    "id" : "21"
-  }, {
     "iri" : "http://w3id.org/trajecto/events#eventSequenceIndex",
     "baseIri" : "http://w3id.org/trajecto/events",
     "range" : "5",
@@ -495,6 +473,28 @@
       "en" : "The position index at which the event occurs, corresponding to hasPositionIndex of the associated RawPosition."
     },
     "attributes" : [ "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#atPosition",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "19",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "atPosition",
+      "en" : "at position"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The position at which the event occurs within the trajectory."
+    },
+    "attributes" : [ "object" ],
     "id" : "22"
   }, {
     "iri" : "http://w3id.org/trajecto/events#fromCategory",
@@ -543,17 +543,17 @@
   }, {
     "range" : "14",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
     "range" : "1",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
     "range" : "1",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
     "iri" : "http://w3id.org/trajecto/events#fromInteractionType",
@@ -580,7 +580,7 @@
   }, {
     "range" : "1",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   } ]
 }

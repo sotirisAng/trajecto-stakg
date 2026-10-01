@@ -110,7 +110,7 @@
 <http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#Person> .
 <http://w3id.org/trajecto#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."@en .
+<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual."@en .
 <http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#label> "has affinity for"@en .
 # 
@@ -126,7 +126,7 @@
 <http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#Person> .
 <http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#Preference> .
-<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."@en .
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a person to a category preference inferred from all of their trajectories."@en .
 <http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#label> "has inferred preference"@en .
 # 
@@ -134,7 +134,7 @@
 <http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
 <http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#Preference> .
-<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."@en .
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile directly to a category preference, without a chain of snapshots."@en .
 <http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#label> "has preference"@en .
 # 
@@ -229,7 +229,7 @@
 <http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
 <http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Share of the interactions with the category that are immersive (SR-20)."@en .
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Share of the interactions with the category that are immersive."@en .
 <http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#label> "immersive fraction"@en .
 # 
@@ -237,7 +237,7 @@
 <http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#ProfileSnapshot> .
 <http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#comment> "True for the seed snapshot that Stage 8 writes before any trajectory update."@en .
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#comment> "True for the initial snapshot of a user profile, created before any trajectory updates it."@en .
 <http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#label> "initial preferences"@en .
 # 
@@ -277,7 +277,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
 <http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Share of the interactions with the category that are meaningful (SR-20)."@en .
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Share of the interactions with the category that are meaningful."@en .
 <http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#label> "meaningful fraction"@en .
 # 
@@ -309,7 +309,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
 <http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of interactions with the category (SR-20)."@en .
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of interactions with the category."@en .
 <http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#label> "total visits"@en .
 # 
@@ -403,7 +403,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://w3id.org/trajecto/user#ProfileSnapshot
 <http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."@en .
+<http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows."@en .
 <http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
 <http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "Profile Snapshot"@en .
 # 

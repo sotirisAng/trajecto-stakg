@@ -670,7 +670,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://w3id.org/trajecto/patterns#SteadyMovement
 :SteadyMovement rdf:type owl:Class ;
                 rdfs:subClassOf :FocusPattern ;
-                rdfs:comment "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."@en ;
+                rdfs:comment "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory movement."@en ;
                 rdfs:isDefinedBy <http://w3id.org/trajecto/patterns> ;
                 rdfs:label "Steady Movement"@en .
 

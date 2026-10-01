@@ -54,7 +54,7 @@ trajecto:CasualNavigation a owl:Class ;
 
 trajecto:CentralityRole a owl:Class ;
     rdfs:label "Centrality Role"@en ;
-    rdfs:comment "Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21)."@en ;
+    rdfs:comment "Structural role of a POI in the graphs of co-visitation and flow between POIs, derived from its degree, betweenness and PageRank relative to the other POIs."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:subClassOf dul:Abstract .
 
@@ -66,7 +66,7 @@ trajecto:CulturalEvent a owl:Class ;
 
 trajecto:EngagementLevel a owl:Class ;
     rdfs:label "Engagement Level"@en ;
-    rdfs:comment "Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."@en ;
+    rdfs:comment "Engagement of a trajectory as a whole, derived from the share of its meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> .
 
 trajecto:EntityOfInterest a owl:Class ;
@@ -162,22 +162,22 @@ trajecto:SocialInteraction a owl:Class ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:subClassOf trajecto:Interaction .
 
-trajecto:Stop a owl:Class ;
-    rdfs:label "Stop"@en ;
-    rdfs:comment "A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration."@en ;
-    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
-    rdfs:subClassOf datacron:Point,
-        datacron:TrajectoryPart .
-
 trajecto:stop a owl:Class ;
     rdfs:label "stop (deprecated)"@en ;
     rdfs:comment "Deprecated since 1.1.0: renamed to Stop."@en ;
     owl:deprecated true ;
     owl:equivalentClass trajecto:Stop .
 
+trajecto:Stop a owl:Class ;
+    rdfs:label "Stop"@en ;
+    rdfs:comment "A trajectory part during which the moving object stays within a small area for a minimum time."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf datacron:Point,
+        datacron:TrajectoryPart .
+
 trajecto:StopPosition a owl:Class ;
     rdfs:label "Stop Position"@en ;
-    rdfs:comment "A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing."@en ;
+    rdfs:comment "A raw position that belongs to a stop."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:subClassOf datacron:RawPosition .
 
@@ -190,7 +190,7 @@ trajecto:TargetedNavigation a owl:Class ;
 
 trajecto:TrajectorySimilarity a owl:Class ;
     rdfs:label "Trajectory Similarity"@en ;
-    rdfs:comment "A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13."@en ;
+    rdfs:comment "A scored similarity between two trajectories along one facet, such as shared POI categories, navigation pattern, temporal context or purpose."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:subClassOf dul:Abstract .
 
@@ -247,7 +247,7 @@ trajecto:hasCentralityRole a owl:ObjectProperty ;
 
 trajecto:hasEngagementLevel a owl:ObjectProperty ;
     rdfs:label "has engagement level"@en ;
-    rdfs:comment "Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes."@en ;
+    rdfs:comment "Relates a trajectory to its engagement level. The engagement classes of the profiles module are defined over it."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range trajecto:EngagementLevel .
@@ -277,7 +277,7 @@ trajecto:hasInterest a owl:ObjectProperty ;
 
 trajecto:hasJaccardCategorySimilarity a owl:ObjectProperty ;
     rdfs:label "has category similarity"@en ;
-    rdfs:comment "Jaccard similarity of the POI categories two trajectories interact with (SR-11)."@en ;
+    rdfs:comment "Jaccard similarity of the POI categories two trajectories interact with."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range trajecto:TrajectorySimilarity .
@@ -292,7 +292,7 @@ trajecto:hasModeOfTransportation a owl:ObjectProperty ;
 
 trajecto:hasNavigationMatch a owl:ObjectProperty ;
     rdfs:label "has navigation match"@en ;
-    rdfs:comment "Two trajectories share a navigation pattern (SR-12)."@en ;
+    rdfs:comment "Two trajectories share a navigation pattern."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range trajecto:TrajectorySimilarity .
@@ -309,7 +309,7 @@ trajecto:hasNavigationStyle a owl:ObjectProperty ;
 trajecto:hasNextPosition a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "has next position"@en ;
-    rdfs:comment "Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position."@en ;
+    rdfs:comment "Relates a raw position to a later position of the same trajectory. Asserted between consecutive positions; as the property is transitive, a reasoner extends it to every later position."@en ;
     rdfs:domain datacron:RawPosition ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range datacron:RawPosition ;
@@ -343,14 +343,14 @@ trajecto:hasPreviousPosition a owl:ObjectProperty,
 
 trajecto:hasPurpose a owl:ObjectProperty ;
     rdfs:label "has purpose"@en ;
-    rdfs:comment "Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory."@en ;
+    rdfs:comment "Relates a trajectory to its purpose, a concept of the purpose concept scheme."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range trajecto:PurposeOfMovement .
 
 trajecto:hasPurposeMatch a owl:ObjectProperty ;
     rdfs:label "has purpose match"@en ;
-    rdfs:comment "Two trajectories share a purpose (BIRD instantiation)."@en ;
+    rdfs:comment "Two trajectories share a purpose."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range trajecto:TrajectorySimilarity .
@@ -373,7 +373,7 @@ trajecto:hasStop a owl:ObjectProperty ;
 
 trajecto:hasTemporalOverlap a owl:ObjectProperty ;
     rdfs:label "has temporal overlap"@en ;
-    rdfs:comment "Jaccard similarity of the temporal contexts of two trajectories (SR-13)."@en ;
+    rdfs:comment "Jaccard similarity of the temporal contexts of two trajectories."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range trajecto:TrajectorySimilarity .
@@ -390,7 +390,7 @@ trajecto:hasTrajectory a owl:InverseFunctionalProperty,
 
 trajecto:includesInteraction a owl:ObjectProperty ;
     rdfs:label "includes interaction"@en ;
-    rdfs:comment "Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes."@en ;
+    rdfs:comment "Relates a trajectory to the POI interactions that occur at its positions. A shortcut for the chain from a trajectory to its positions to their interactions, so that classes over interactions can be defined on trajectories."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range poi:POIInteraction .
@@ -478,21 +478,21 @@ trajecto:hasAddress a owl:DatatypeProperty ;
 
 trajecto:hasEasting a owl:DatatypeProperty ;
     rdfs:label "has easting"@en ;
-    rdfs:comment "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset."@en ;
+    rdfs:comment "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, for example in indoor tracking."@en ;
     rdfs:domain datacron:Point ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range xsd:float .
 
 trajecto:hasImmersiveInteractionCount a owl:DatatypeProperty ;
     rdfs:label "has immersive interaction count"@en ;
-    rdfs:comment "Number of immersive interactions of a trajectory (SR-40)."@en ;
+    rdfs:comment "Number of immersive interactions of a trajectory."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range xsd:integer .
 
 trajecto:hasMeaningfulInteractionCount a owl:DatatypeProperty ;
     rdfs:label "has meaningful interaction count"@en ;
-    rdfs:comment "Number of meaningful interactions of a trajectory (SR-40)."@en ;
+    rdfs:comment "Number of meaningful interactions of a trajectory."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range xsd:integer .
@@ -520,7 +520,7 @@ trajecto:hasPlaceID a owl:DatatypeProperty ;
 
 trajecto:hasPOICount a owl:DatatypeProperty ;
     rdfs:label "has POI count"@en ;
-    rdfs:comment "Number of distinct POIs a trajectory interacts with (SR-44)."@en ;
+    rdfs:comment "Number of distinct POIs a trajectory interacts with."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range xsd:integer .
@@ -534,13 +534,13 @@ trajecto:hasPositionIndex a owl:DatatypeProperty ;
 
 trajecto:hasTotalDwellTime a owl:DatatypeProperty ;
     rdfs:label "has total dwell time"@en ;
-    rdfs:comment "Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42)."@en ;
+    rdfs:comment "Sum of the dwell times of the interactions of a trajectory, in seconds."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> .
 
 trajecto:hasUniqueCategoryCount a owl:DatatypeProperty ;
     rdfs:label "has unique category count"@en ;
-    rdfs:comment "Number of distinct POI categories a trajectory interacts with (SR-43)."@en ;
+    rdfs:comment "Number of distinct POI categories a trajectory interacts with."@en ;
     rdfs:domain datacron:Trajectory ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
     rdfs:range xsd:integer .

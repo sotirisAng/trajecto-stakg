@@ -118,7 +118,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://w3id.org/trajecto/user#hasAffinityFor
 :hasAffinityFor rdf:type owl:ObjectProperty ;
                 rdfs:domain <http://w3id.org/trajecto#Person> ;
-                rdfs:comment "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."@en ;
+                rdfs:comment "A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual."@en ;
                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                 rdfs:label "has affinity for"@en .
 
@@ -136,7 +136,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasInferredPreference rdf:type owl:ObjectProperty ;
                        rdfs:domain <http://w3id.org/trajecto#Person> ;
                        rdfs:range :Preference ;
-                       rdfs:comment "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."@en ;
+                       rdfs:comment "Relates a person to a category preference inferred from all of their trajectories."@en ;
                        rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                        rdfs:label "has inferred preference"@en .
 
@@ -145,7 +145,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasPreference rdf:type owl:ObjectProperty ;
                rdfs:domain :UserProfile ;
                rdfs:range :Preference ;
-               rdfs:comment "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."@en ;
+               rdfs:comment "Relates a user profile directly to a category preference, without a chain of snapshots."@en ;
                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                rdfs:label "has preference"@en .
 
@@ -246,7 +246,7 @@ xsd:date rdf:type rdfs:Datatype .
 :immersiveFraction rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Preference ;
                    rdfs:range xsd:float ;
-                   rdfs:comment "Share of the interactions with the category that are immersive (SR-20)."@en ;
+                   rdfs:comment "Share of the interactions with the category that are immersive."@en ;
                    rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                    rdfs:label "immersive fraction"@en .
 
@@ -255,7 +255,7 @@ xsd:date rdf:type rdfs:Datatype .
 :initialPreferences rdf:type owl:DatatypeProperty ;
                     rdfs:domain :ProfileSnapshot ;
                     rdfs:range xsd:boolean ;
-                    rdfs:comment "True for the seed snapshot that Stage 8 writes before any trajectory update."@en ;
+                    rdfs:comment "True for the initial snapshot of a user profile, created before any trajectory updates it."@en ;
                     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                     rdfs:label "initial preferences"@en .
 
@@ -295,7 +295,7 @@ xsd:date rdf:type rdfs:Datatype .
 :meaningfulFraction rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Preference ;
                     rdfs:range xsd:float ;
-                    rdfs:comment "Share of the interactions with the category that are meaningful (SR-20)."@en ;
+                    rdfs:comment "Share of the interactions with the category that are meaningful."@en ;
                     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                     rdfs:label "meaningful fraction"@en .
 
@@ -331,7 +331,7 @@ xsd:date rdf:type rdfs:Datatype .
 :totalVisits rdf:type owl:DatatypeProperty ;
              rdfs:domain :Preference ;
              rdfs:range xsd:integer ;
-             rdfs:comment "Number of interactions with the category (SR-20)."@en ;
+             rdfs:comment "Number of interactions with the category."@en ;
              rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
              rdfs:label "total visits"@en .
 
@@ -434,7 +434,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/trajecto/user#ProfileSnapshot
 :ProfileSnapshot rdf:type owl:Class ;
-                 rdfs:comment "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."@en ;
+                 rdfs:comment "The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows."@en ;
                  rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
                  rdfs:label "Profile Snapshot"@en .
 

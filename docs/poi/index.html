@@ -1150,7 +1150,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">trajecto-poi: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that the SPARQL enrichment uses to classify interactions.</span></div>
+<span class="markdown">Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that classify interactions as passing, meaningful or immersive.</span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -4688,7 +4688,7 @@ This section provides details for each class and property defined by trajecto-po
   <h3>Significant POI<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/poi#SignificantPOI</p>
   <div class="comment">
-   <span class="markdown">A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories. Assigned by the dominance and significance stage.</span>
+   <span class="markdown">A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -5284,7 +5284,7 @@ This section provides details for each class and property defined by trajecto-po
   <h3>covisited with<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/poi#covisitedWith</p>
   <div class="comment">
-   <span class="markdown">Two POIs are interacted with meaningfully in the same trajectory (SR-05).</span>
+   <span class="markdown">Two POIs are interacted with meaningfully in the same trajectory.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -5315,7 +5315,7 @@ This section provides details for each class and property defined by trajecto-po
   <h3>followed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/poi#followedBy</p>
   <div class="comment">
-   <span class="markdown">A POI is interacted with meaningfully immediately before another in at least one trajectory (SR-06).</span>
+   <span class="markdown">A POI is interacted with meaningfully immediately before another in at least one trajectory.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -5582,7 +5582,7 @@ This section provides details for each class and property defined by trajecto-po
   <h3>has room<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/poi#hasRoom</p>
   <div class="comment">
-   <span class="markdown">The museum room in which an artwork is exhibited (BIRD instantiation).</span>
+   <span class="markdown">The room in which an artwork is exhibited.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -5775,7 +5775,7 @@ This section provides details for each class and property defined by trajecto-po
   <h3>has dwell time in seconds<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/poi#hasDwellTimeInSeconds</p>
   <div class="comment">
-   <span class="markdown">Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime used by the CSV-to-RDF mappings and analytics queries.</span>
+   <span class="markdown">Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -5806,7 +5806,7 @@ This section provides details for each class and property defined by trajecto-po
   <h3>has era<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto/poi#hasEra</p>
   <div class="comment">
-   <span class="markdown">The art-historical era of an artwork (BIRD instantiation).</span>
+   <span class="markdown">The art-historical era of an artwork.</span>
   </div>
   <dl class="definedBy">
    <dt>

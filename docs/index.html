@@ -481,7 +481,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>Centrality Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#CentralityRole</p>
   <div class="comment">
-   <span class="markdown">Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21).</span>
+   <span class="markdown">Structural role of a POI in the graphs of co-visitation and flow between POIs, derived from its degree, betweenness and PageRank relative to the other POIs.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -539,7 +539,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>Engagement Level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#EngagementLevel</p>
   <div class="comment">
-   <span class="markdown">Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately.</span>
+   <span class="markdown">Engagement of a trajectory as a whole, derived from the share of its meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -991,7 +991,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>Stop<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#Stop</p>
   <div class="comment">
-   <span class="markdown">A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration.</span>
+   <span class="markdown">A trajectory part during which the moving object stays within a small area for a minimum time.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1042,7 +1042,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>Stop Position<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#StopPosition</p>
   <div class="comment">
-   <span class="markdown">A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing.</span>
+   <span class="markdown">A raw position that belongs to a stop.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1096,7 +1096,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>Trajectory Similarity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#TrajectorySimilarity</p>
   <div class="comment">
-   <span class="markdown">A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13.</span>
+   <span class="markdown">A scored similarity between two trajectories along one facet, such as shared POI categories, navigation pattern, temporal context or purpose.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1345,7 +1345,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has category similarity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasJaccardCategorySimilarity</p>
   <div class="comment">
-   <span class="markdown">Jaccard similarity of the POI categories two trajectories interact with (SR-11).</span>
+   <span class="markdown">Jaccard similarity of the POI categories two trajectories interact with.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1407,7 +1407,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has engagement level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasEngagementLevel</p>
   <div class="comment">
-   <span class="markdown">Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes.</span>
+   <span class="markdown">Relates a trajectory to its engagement level. The engagement classes of the profiles module are defined over it.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1580,7 +1580,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has navigation match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasNavigationMatch</p>
   <div class="comment">
-   <span class="markdown">Two trajectories share a navigation pattern (SR-12).</span>
+   <span class="markdown">Two trajectories share a navigation pattern.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1656,7 +1656,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has next position<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasNextPosition</p>
   <div class="comment">
-   <span class="markdown">Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position.</span>
+   <span class="markdown">Relates a raw position to a later position of the same trajectory. Asserted between consecutive positions; as the property is transitive, a reasoner extends it to every later position.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1818,7 +1818,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPurpose</p>
   <div class="comment">
-   <span class="markdown">Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory.</span>
+   <span class="markdown">Relates a trajectory to its purpose, a concept of the purpose concept scheme.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1849,7 +1849,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has purpose match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPurposeMatch</p>
   <div class="comment">
-   <span class="markdown">Two trajectories share a purpose (BIRD instantiation).</span>
+   <span class="markdown">Two trajectories share a purpose.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1954,7 +1954,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has temporal overlap<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasTemporalOverlap</p>
   <div class="comment">
-   <span class="markdown">Jaccard similarity of the temporal contexts of two trajectories (SR-13).</span>
+   <span class="markdown">Jaccard similarity of the temporal contexts of two trajectories.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2031,7 +2031,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>includes interaction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#includesInteraction</p>
   <div class="comment">
-   <span class="markdown">Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes.</span>
+   <span class="markdown">Relates a trajectory to the POI interactions that occur at its positions. A shortcut for the chain from a trajectory to its positions to their interactions, so that classes over interactions can be defined on trajectories.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2430,7 +2430,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has easting<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasEasting</p>
   <div class="comment">
-   <span class="markdown">Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset.</span>
+   <span class="markdown">Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, for example in indoor tracking.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2461,7 +2461,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has immersive interaction count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasImmersiveInteractionCount</p>
   <div class="comment">
-   <span class="markdown">Number of immersive interactions of a trajectory (SR-40).</span>
+   <span class="markdown">Number of immersive interactions of a trajectory.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2492,7 +2492,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has meaningful interaction count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasMeaningfulInteractionCount</p>
   <div class="comment">
-   <span class="markdown">Number of meaningful interactions of a trajectory (SR-40).</span>
+   <span class="markdown">Number of meaningful interactions of a trajectory.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2616,7 +2616,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has POI count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPOICount</p>
   <div class="comment">
-   <span class="markdown">Number of distinct POIs a trajectory interacts with (SR-44).</span>
+   <span class="markdown">Number of distinct POIs a trajectory interacts with.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2678,7 +2678,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has total dwell time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasTotalDwellTime</p>
   <div class="comment">
-   <span class="markdown">Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42).</span>
+   <span class="markdown">Sum of the dwell times of the interactions of a trajectory, in seconds.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2703,7 +2703,7 @@ This section provides details for each class and property defined by trajecto.
   <h3>has unique category count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/trajecto#hasUniqueCategoryCount</p>
   <div class="comment">
-   <span class="markdown">Number of distinct POI categories a trajectory interacts with (SR-43).</span>
+   <span class="markdown">Number of distinct POI categories a trajectory interacts with.</span>
   </div>
   <dl class="definedBy">
    <dt>

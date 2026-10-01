@@ -14,7 +14,7 @@
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-09</terms:created>
         <terms:creator>Konstantinos Kotis</terms:creator>
         <terms:creator>Sotirios Angelis</terms:creator>
-        <terms:description xml:lang="en">SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose.</terms:description>
+        <terms:description xml:lang="en">SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and trajectories are assigned a purpose from the scheme through trajecto:hasPurpose.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>

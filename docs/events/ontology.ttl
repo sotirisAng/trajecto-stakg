@@ -12,7 +12,7 @@
                                    <http://purl.org/dc/terms/created> "2026-03-29"^^xsd:date ;
                                    <http://purl.org/dc/terms/creator> "Konstantinos Kotis" ,
                                                                       "Sotirios Angelis" ;
-                                   <http://purl.org/dc/terms/description> "Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."@en ;
+                                   <http://purl.org/dc/terms/description> "Trajectory events detected over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."@en ;
                                    <http://purl.org/dc/terms/issued> "2026-10-01"^^xsd:date ;
                                    <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                    <http://purl.org/dc/terms/modified> "2026-10-01"^^xsd:date ;
@@ -197,7 +197,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://w3id.org/trajecto/events#TrajectoryEvent
 :TrajectoryEvent rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
-                 rdfs:comment "A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types."@en ;
+                 rdfs:comment "A behavioral transition or notable occurrence within a trajectory, detected from the sequence of its positions and the types of their interactions."@en ;
                  rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
                  rdfs:label "Trajectory Event"@en .
 

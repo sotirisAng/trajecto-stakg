@@ -54,7 +54,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."
+    "@value" : "Trajectory events detected over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -203,7 +203,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types."
+    "@value" : "A behavioral transition or notable occurrence within a trajectory, detected from the sequence of its positions and the types of their interactions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto/events"

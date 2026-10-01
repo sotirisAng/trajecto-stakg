@@ -13,7 +13,7 @@
     dcterms:created "2026-03-29"^^xsd:date ;
     dcterms:creator "Konstantinos Kotis",
         "Sotirios Angelis" ;
-    dcterms:description "Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."@en ;
+    dcterms:description "Trajectory events detected over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."@en ;
     dcterms:issued "2026-10-01"^^xsd:date ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcterms:modified "2026-10-01"^^xsd:date ;
@@ -68,7 +68,7 @@ events:EngagementEscalation a owl:Class ;
 
 events:TrajectoryEvent a owl:Class ;
     rdfs:label "Trajectory Event"@en ;
-    rdfs:comment "A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types."@en ;
+    rdfs:comment "A behavioral transition or notable occurrence within a trajectory, detected from the sequence of its positions and the types of their interactions."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
     rdfs:subClassOf dul:Event .
 

@@ -31,12 +31,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Sotirios Angelis",
+        "value" : "Konstantinos Kotis",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Konstantinos Kotis",
+        "value" : "Sotirios Angelis",
         "type" : "label"
       } ],
       "created" : [ {
@@ -63,10 +63,10 @@
         "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "http://w3id.org/trajecto#",
+        "value" : "1.1.0",
         "type" : "label"
       } ],
       "bibliographicCitation" : [ {
@@ -75,22 +75,22 @@
         "value" : "Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
-        "value" : "1.1.0",
-        "type" : "label"
-      } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "en",
-        "value" : "Trajecto Ontology",
+        "value" : "http://w3id.org/trajecto#",
         "type" : "label"
       } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Ontology",
         "type" : "label"
       } ]
     }
@@ -163,7 +163,7 @@
     "id" : "65",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "74",
+    "id" : "75",
     "type" : "owl:Class"
   }, {
     "id" : "23",
@@ -211,7 +211,7 @@
     "id" : "31",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "129",
+    "id" : "130",
     "type" : "owl:Class"
   }, {
     "id" : "113",
@@ -355,15 +355,6 @@
     "id" : "21",
     "superClasses" : [ "22", "10" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/events#TrajectoryEvent",
-    "baseIri" : "http://w3id.org/trajecto/events",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TrajectoryEvent"
-    },
-    "attributes" : [ "external" ],
-    "id" : "25"
-  }, {
     "iri" : "http://w3id.org/trajecto#CasualNavigation",
     "baseIri" : "http://w3id.org/trajecto",
     "instances" : 0,
@@ -383,8 +374,17 @@
       "en" : "Deprecated: use patterns:CasualMovement."
     },
     "attributes" : [ "deprecated" ],
-    "id" : "26",
+    "id" : "25",
     "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#TrajectoryEvent",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrajectoryEvent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26"
   }, {
     "iri" : "http://w3id.org/trajecto#Region_of_Interest",
     "equivalent" : [ "31" ],
@@ -397,7 +397,7 @@
     "comment" : {
       "en" : "Deprecated since 1.1.0: renamed to RegionOfInterest."
     },
-    "attributes" : [ "deprecated", "equivalent" ],
+    "attributes" : [ "equivalent", "deprecated" ],
     "id" : "30"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -608,9 +608,9 @@
       }
     } ],
     "comment" : {
-      "en" : "Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."
+      "en" : "Engagement of a trajectory as a whole, derived from the share of its meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."
     },
-    "id" : "74"
+    "id" : "75"
   }, {
     "iri" : "http://w3id.org/trajecto#CulturalEvent",
     "baseIri" : "http://w3id.org/trajecto",
@@ -840,7 +840,7 @@
       }
     } ],
     "comment" : {
-      "en" : "Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21)."
+      "en" : "Structural role of a POI in the graphs of co-visitation and flow between POIs, derived from its degree, betweenness and PageRank relative to the other POIs."
     },
     "id" : "88",
     "superClasses" : [ "46" ]
@@ -883,7 +883,7 @@
       "en" : "Stop Position"
     },
     "comment" : {
-      "en" : "A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing."
+      "en" : "A raw position that belongs to a stop."
     },
     "id" : "110",
     "superClasses" : [ "71" ]
@@ -905,7 +905,7 @@
       "en" : "Stop"
     },
     "comment" : {
-      "en" : "A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration."
+      "en" : "A trajectory part during which the moving object stays within a small area for a minimum time."
     },
     "attributes" : [ "equivalent" ],
     "id" : "7",
@@ -950,7 +950,7 @@
       "IRI-based" : "Agent"
     },
     "attributes" : [ "external" ],
-    "id" : "129"
+    "id" : "130"
   }, {
     "iri" : "http://www.datacron-project.eu/datAcron#Region",
     "baseIri" : "http://www.datacron-project.eu/datAcron",
@@ -1060,7 +1060,7 @@
       "IRI-based" : "NavigationStyle",
       "en" : "Navigation Style"
     },
-    "subClasses" : [ "26", "111", "17", "48" ],
+    "subClasses" : [ "25", "111", "17", "48" ],
     "comment" : {
       "en" : "Deprecated: navigation styles are modeled as movement patterns in the patterns module (patterns:TargetedSegment, patterns:CasualMovement, patterns:ExploratoryMovement, patterns:ImmersiveMovement) and asserted with patterns:exhibitsPattern."
     },
@@ -1114,7 +1114,7 @@
     "comment" : {
       "en" : "Deprecated since 1.1.0: renamed to Stop."
     },
-    "attributes" : [ "deprecated", "equivalent" ],
+    "attributes" : [ "equivalent", "deprecated" ],
     "id" : "117"
   }, {
     "iri" : "http://w3id.org/trajecto/poi#POIInteraction",
@@ -1191,7 +1191,7 @@
       "en" : "Trajectory Similarity"
     },
     "comment" : {
-      "en" : "A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13."
+      "en" : "A scored similarity between two trajectories along one facet, such as shared POI categories, navigation pattern, temporal context or purpose."
     },
     "id" : "2",
     "superClasses" : [ "46" ]
@@ -1295,7 +1295,7 @@
     "id" : "72",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "75",
+    "id" : "74",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "76",
@@ -1409,7 +1409,7 @@
     "id" : "128",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "130",
+    "id" : "129",
     "type" : "owl:objectProperty"
   }, {
     "id" : "97",
@@ -1418,25 +1418,25 @@
     "id" : "131",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "58",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "132",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "133",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "96",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "135",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "136",
+    "id" : "96",
     "type" : "owl:objectProperty"
   }, {
     "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "136",
     "type" : "owl:objectProperty"
   }, {
     "id" : "69",
@@ -1478,7 +1478,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Jaccard similarity of the POI categories two trajectories interact with (SR-11)."
+      "en" : "Jaccard similarity of the POI categories two trajectories interact with."
     },
     "attributes" : [ "object" ],
     "id" : "0"
@@ -1491,12 +1491,12 @@
     },
     "domain" : "4",
     "subproperty" : [ "5" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "3"
   }, {
     "range" : "8",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "6"
   }, {
     "iri" : "http://w3id.org/trajecto#hasPointOfInterest",
@@ -1561,7 +1561,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Two trajectories share a purpose (BIRD instantiation)."
+      "en" : "Two trajectories share a purpose."
     },
     "attributes" : [ "object" ],
     "id" : "16"
@@ -1583,7 +1583,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Number of meaningful interactions of a trajectory (SR-40)."
+      "en" : "Number of meaningful interactions of a trajectory."
     },
     "attributes" : [ "datatype" ],
     "id" : "19"
@@ -1613,32 +1613,32 @@
   }, {
     "range" : "12",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
     "range" : "29",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "10",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
     "range" : "10",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
     "range" : "10",
     "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "10",
     "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
     "iri" : "http://w3id.org/trajecto#encloses",
@@ -1666,7 +1666,7 @@
   }, {
     "range" : "41",
     "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "iri" : "http://w3id.org/trajecto#hasNorthing",
@@ -1693,7 +1693,7 @@
   }, {
     "range" : "21",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "44"
   }, {
     "iri" : "http://w3id.org/trajecto#hasNavigationMatch",
@@ -1713,7 +1713,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Two trajectories share a navigation pattern (SR-12)."
+      "en" : "Two trajectories share a navigation pattern."
     },
     "attributes" : [ "object" ],
     "id" : "47"
@@ -1816,7 +1816,7 @@
     },
     "domain" : "4",
     "subproperty" : [ "69" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "68"
   }, {
     "iri" : "http://w3id.org/trajecto#hasPreviousPosition",
@@ -1839,7 +1839,7 @@
     "comment" : {
       "en" : "Inverse of hasNextPosition: relates a raw position to an earlier position of the same trajectory."
     },
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "70"
   }, {
     "iri" : "http://w3id.org/trajecto#includesInteraction",
@@ -1859,7 +1859,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes."
+      "en" : "Relates a trajectory to the POI interactions that occur at its positions. A shortcut for the chain from a trajectory to its positions to their interactions, so that classes over interactions can be defined on trajectories."
     },
     "attributes" : [ "object" ],
     "id" : "72"
@@ -1884,7 +1884,7 @@
       "en" : "External identifier of a region of interest, such as an OpenStreetMap or geocoder place ID."
     },
     "attributes" : [ "datatype" ],
-    "id" : "75"
+    "id" : "74"
   }, {
     "iri" : "http://w3id.org/trajecto#hasAddress",
     "baseIri" : "http://w3id.org/trajecto",
@@ -1925,7 +1925,7 @@
     },
     "domain" : "8",
     "comment" : {
-      "en" : "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset."
+      "en" : "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, for example in indoor tracking."
     },
     "attributes" : [ "datatype" ],
     "id" : "78"
@@ -1991,7 +1991,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Number of distinct POIs a trajectory interacts with (SR-44)."
+      "en" : "Number of distinct POIs a trajectory interacts with."
     },
     "attributes" : [ "datatype" ],
     "id" : "84"
@@ -2021,32 +2021,32 @@
   }, {
     "range" : "46",
     "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "86"
   }, {
     "range" : "46",
     "domain" : "88",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "87"
   }, {
     "range" : "46",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "89"
   }, {
     "range" : "46",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "90"
   }, {
     "range" : "46",
     "domain" : "92",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "91"
   }, {
     "range" : "22",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
@@ -2057,7 +2057,7 @@
     },
     "domain" : "4",
     "subproperty" : [ "24", "94", "70", "11", "95", "96", "97", "85", "98" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "13"
   }, {
     "iri" : "http://www.datacron-project.eu/datAcron#occurs",
@@ -2067,7 +2067,7 @@
       "IRI-based" : "occurs"
     },
     "domain" : "4",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "99"
   }, {
     "iri" : "http://w3id.org/trajecto#hasTemporalOverlap",
@@ -2087,7 +2087,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Jaccard similarity of the temporal contexts of two trajectories (SR-13)."
+      "en" : "Jaccard similarity of the temporal contexts of two trajectories."
     },
     "attributes" : [ "object" ],
     "id" : "100"
@@ -2139,7 +2139,7 @@
   }, {
     "range" : "50",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "103"
   }, {
     "iri" : "http://w3id.org/trajecto#happensdDuringEventOfInterest",
@@ -2159,42 +2159,42 @@
   }, {
     "range" : "18",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "105"
   }, {
     "range" : "18",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "106"
   }, {
     "range" : "92",
     "domain" : "108",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "107"
   }, {
     "range" : "71",
     "domain" : "110",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "109"
   }, {
     "range" : "113",
     "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "112"
   }, {
     "range" : "8",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "114"
   }, {
     "range" : "18",
     "domain" : "111",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
     "range" : "18",
-    "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "iri" : "http://w3id.org/trajecto#isTrajectoryFormedBy",
@@ -2249,7 +2249,7 @@
       "IRI-based" : "hasWeatherCondition"
     },
     "domain" : "4",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "120"
   }, {
     "iri" : "http://w3id.org/trajecto#hasImmersiveInteractionCount",
@@ -2269,7 +2269,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Number of immersive interactions of a trajectory (SR-40)."
+      "en" : "Number of immersive interactions of a trajectory."
     },
     "attributes" : [ "datatype" ],
     "id" : "121"
@@ -2293,7 +2293,7 @@
     "comment" : {
       "en" : "Deprecated duplicate of isTrajectoryFormedBy: relates a trajectory to its moving object."
     },
-    "attributes" : [ "deprecated", "functional", "object" ],
+    "attributes" : [ "deprecated", "object", "functional" ],
     "id" : "123"
   }, {
     "iri" : "http://w3id.org/trajecto#hasCentralityRole",
@@ -2335,7 +2335,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Number of distinct POI categories a trajectory interacts with (SR-43)."
+      "en" : "Number of distinct POI categories a trajectory interacts with."
     },
     "attributes" : [ "datatype" ],
     "id" : "125"
@@ -2408,7 +2408,7 @@
   }, {
     "iri" : "http://w3id.org/trajecto#hasEvent",
     "baseIri" : "http://w3id.org/trajecto",
-    "range" : "25",
+    "range" : "26",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2426,7 +2426,7 @@
       "en" : "Links a trajectory to a behavioral event detected within its position sequence."
     },
     "attributes" : [ "object" ],
-    "id" : "130"
+    "id" : "129"
   }, {
     "iri" : "http://w3id.org/trajecto#hasRegionOfInterest",
     "baseIri" : "http://w3id.org/trajecto",
@@ -2468,21 +2468,10 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory."
+      "en" : "Relates a trajectory to its purpose, a concept of the purpose concept scheme."
     },
     "attributes" : [ "object" ],
     "id" : "131"
-  }, {
-    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart",
-    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPart"
-    },
-    "domain" : "4",
-    "subproperty" : [ "56" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "58"
   }, {
     "iri" : "http://w3id.org/trajecto#hasTotalDwellTime",
     "baseIri" : "http://w3id.org/trajecto",
@@ -2501,10 +2490,21 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42)."
+      "en" : "Sum of the dwell times of the interactions of a trajectory, in seconds."
     },
     "attributes" : [ "datatype" ],
     "id" : "132"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "4",
+    "subproperty" : [ "56" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "58"
   }, {
     "iri" : "http://w3id.org/trajecto#externalLabel",
     "baseIri" : "http://w3id.org/trajecto",
@@ -2528,30 +2528,6 @@
     "attributes" : [ "datatype" ],
     "id" : "133"
   }, {
-    "iri" : "http://w3id.org/trajecto#hasNextPosition",
-    "inverse" : "70",
-    "baseIri" : "http://w3id.org/trajecto",
-    "range" : "71",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasNextPosition",
-      "en" : "has next position"
-    },
-    "superproperty" : [ "13" ],
-    "domain" : "71",
-    "comment" : {
-      "en" : "Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position."
-    },
-    "attributes" : [ "transitive", "object" ],
-    "id" : "96"
-  }, {
     "iri" : "http://w3id.org/trajecto#hasTrajectory",
     "inverse" : "123",
     "baseIri" : "http://w3id.org/trajecto",
@@ -2572,12 +2548,13 @@
     "comment" : {
       "en" : "Deprecated duplicate of formsTrajectory: relates a moving object to a trajectory it forms."
     },
-    "attributes" : [ "deprecated", "inverse functional", "object" ],
+    "attributes" : [ "inverse functional", "deprecated", "object" ],
     "id" : "135"
   }, {
-    "iri" : "http://w3id.org/trajecto#participatesIn",
+    "iri" : "http://w3id.org/trajecto#hasNextPosition",
+    "inverse" : "70",
     "baseIri" : "http://w3id.org/trajecto",
-    "range" : "92",
+    "range" : "71",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2587,15 +2564,16 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "participatesIn",
-      "en" : "participates in"
+      "IRI-based" : "hasNextPosition",
+      "en" : "has next position"
     },
-    "domain" : "129",
+    "superproperty" : [ "13" ],
+    "domain" : "71",
     "comment" : {
-      "en" : "Relates an agent to an interaction it takes part in."
+      "en" : "Relates a raw position to a later position of the same trajectory. Asserted between consecutive positions; as the property is transitive, a reasoner extends it to every later position."
     },
-    "attributes" : [ "object" ],
-    "id" : "136"
+    "attributes" : [ "object", "transitive" ],
+    "id" : "96"
   }, {
     "iri" : "http://w3id.org/trajecto#hasModeOfTransportation",
     "baseIri" : "http://w3id.org/trajecto",
@@ -2619,6 +2597,28 @@
     },
     "attributes" : [ "object" ],
     "id" : "94"
+  }, {
+    "iri" : "http://w3id.org/trajecto#participatesIn",
+    "baseIri" : "http://w3id.org/trajecto",
+    "range" : "92",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "participatesIn",
+      "en" : "participates in"
+    },
+    "domain" : "130",
+    "comment" : {
+      "en" : "Relates an agent to an interaction it takes part in."
+    },
+    "attributes" : [ "object" ],
+    "id" : "136"
   }, {
     "iri" : "http://w3id.org/trajecto#hasStop",
     "baseIri" : "http://w3id.org/trajecto",
@@ -2759,7 +2759,7 @@
   }, {
     "iri" : "http://w3id.org/trajecto#hasEngagementLevel",
     "baseIri" : "http://w3id.org/trajecto",
-    "range" : "74",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2774,7 +2774,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes."
+      "en" : "Relates a trajectory to its engagement level. The engagement classes of the profiles module are defined over it."
     },
     "attributes" : [ "object" ],
     "id" : "141"

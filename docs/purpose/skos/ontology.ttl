@@ -11,7 +11,7 @@
                                          <http://purl.org/dc/terms/created> "2025-05-09"^^xsd:date ;
                                          <http://purl.org/dc/terms/creator> "Konstantinos Kotis" ,
                                                                             "Sotirios Angelis" ;
-                                         <http://purl.org/dc/terms/description> "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose."@en ;
+                                         <http://purl.org/dc/terms/description> "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and trajectories are assigned a purpose from the scheme through trajecto:hasPurpose."@en ;
                                          <http://purl.org/dc/terms/issued> "2026-10-01"^^xsd:date ;
                                          <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          <http://purl.org/dc/terms/modified> "2026-10-01"^^xsd:date ;

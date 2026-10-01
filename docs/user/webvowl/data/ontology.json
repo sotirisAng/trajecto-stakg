@@ -148,7 +148,7 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "51",
+    "id" : "49",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "12",
@@ -160,7 +160,7 @@
     "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "51",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "64",
@@ -187,7 +187,7 @@
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "24",
@@ -199,7 +199,7 @@
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "39",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -323,27 +323,6 @@
     "id" : "13",
     "superClasses" : [ "14" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/user#PoiCategoryPreference",
-    "baseIri" : "http://w3id.org/trajecto/user",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/user",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "PoiCategoryPreference",
-      "en" : "POI Category Preference"
-    },
-    "comment" : {
-      "en" : "Preference for specific POI categories"
-    },
-    "id" : "15",
-    "superClasses" : [ "11" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/user#ShortDwell",
     "baseIri" : "http://w3id.org/trajecto/user",
     "instances" : 0,
@@ -381,8 +360,29 @@
     "comment" : {
       "en" : "Preference for brief visits (<15 minutes)"
     },
-    "id" : "16",
+    "id" : "15",
     "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#PoiCategoryPreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PoiCategoryPreference",
+      "en" : "POI Category Preference"
+    },
+    "comment" : {
+      "en" : "Preference for specific POI categories"
+    },
+    "id" : "16",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://w3id.org/trajecto/user#PreferredStyle",
     "equivalent" : [ "34" ],
@@ -423,7 +423,7 @@
       "IRI-based" : "Preference",
       "en" : "Preference"
     },
-    "subClasses" : [ "14", "24", "15", "5" ],
+    "subClasses" : [ "14", "24", "16", "5" ],
     "comment" : {
       "en" : "A preference of a user. Specialized as POI category, dwell, time and visit-style preferences."
     },
@@ -568,7 +568,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "51",
+    "id" : "49",
     "label" : {
       "IRI-based" : "string"
     }
@@ -629,7 +629,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "49",
+    "id" : "51",
     "label" : {
       "IRI-based" : "float"
     }
@@ -642,7 +642,7 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "37", "8" ],
+    "union" : [ "39", "8" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "65"
   }, {
@@ -698,7 +698,7 @@
       "IRI-based" : "DwellPreference",
       "en" : "Dwell Preference"
     },
-    "subClasses" : [ "16", "6", "18", "4" ],
+    "subClasses" : [ "15", "6", "18", "4" ],
     "comment" : {
       "en" : "A preference for how long to stay at POIs."
     },
@@ -712,7 +712,7 @@
       "IRI-based" : "Trajectory"
     },
     "attributes" : [ "external" ],
-    "id" : "39"
+    "id" : "37"
   }, {
     "iri" : "http://w3id.org/trajecto/user#TimePreference",
     "baseIri" : "http://w3id.org/trajecto/user",
@@ -831,9 +831,9 @@
       "en" : "Profile Snapshot"
     },
     "comment" : {
-      "en" : "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."
+      "en" : "The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows."
     },
-    "id" : "37"
+    "id" : "39"
   } ],
   "property" : [ {
     "id" : "0",
@@ -1026,7 +1026,7 @@
     },
     "domain" : "11",
     "comment" : {
-      "en" : "Share of the interactions with the category that are immersive (SR-20)."
+      "en" : "Share of the interactions with the category that are immersive."
     },
     "attributes" : [ "datatype" ],
     "id" : "10"
@@ -1056,7 +1056,7 @@
       "IRI-based" : "prefersPoiCategory",
       "en" : "prefers POI category"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "The POI class that a POI category preference scores. The value is a class of the POI module used as an individual."
     },
@@ -1064,7 +1064,7 @@
     "id" : "20"
   }, {
     "range" : "11",
-    "domain" : "15",
+    "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
@@ -1074,7 +1074,7 @@
     "id" : "23"
   }, {
     "range" : "5",
-    "domain" : "16",
+    "domain" : "15",
     "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
@@ -1125,31 +1125,9 @@
     "attributes" : [ "object" ],
     "id" : "35"
   }, {
-    "iri" : "http://w3id.org/trajecto/user#hasSnapshot",
-    "baseIri" : "http://w3id.org/trajecto/user",
-    "range" : "37",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/user",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSnapshot",
-      "en" : "has snapshot"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Relates a user profile to one of its snapshots."
-    },
-    "attributes" : [ "object" ],
-    "id" : "36"
-  }, {
     "iri" : "http://w3id.org/trajecto/user#hasTrajectory",
     "baseIri" : "http://w3id.org/trajecto/user",
-    "range" : "39",
+    "range" : "37",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1165,6 +1143,28 @@
     "domain" : "8",
     "comment" : {
       "en" : "Links a user profile to their trajectories"
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasSnapshot",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSnapshot",
+      "en" : "has snapshot"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile to one of its snapshots."
     },
     "attributes" : [ "object" ],
     "id" : "38"
@@ -1186,7 +1186,7 @@
     },
     "domain" : "11",
     "comment" : {
-      "en" : "Share of the interactions with the category that are meaningful (SR-20)."
+      "en" : "Share of the interactions with the category that are meaningful."
     },
     "attributes" : [ "datatype" ],
     "id" : "40"
@@ -1230,7 +1230,7 @@
     },
     "domain" : "8",
     "comment" : {
-      "en" : "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."
+      "en" : "Relates a user profile directly to a category preference, without a chain of snapshots."
     },
     "attributes" : [ "object" ],
     "id" : "43"
@@ -1241,7 +1241,7 @@
     "id" : "45"
   }, {
     "iri" : "http://w3id.org/trajecto/user#belongsToUser",
-    "inverse" : "38",
+    "inverse" : "36",
     "baseIri" : "http://w3id.org/trajecto/user",
     "range" : "8",
     "annotations" : {
@@ -1256,38 +1256,16 @@
       "IRI-based" : "belongsToUser",
       "en" : "belongs to user"
     },
-    "domain" : "39",
+    "domain" : "37",
     "comment" : {
       "en" : "Associates a trajectory with its user profile"
     },
     "attributes" : [ "object" ],
     "id" : "46"
   }, {
-    "iri" : "http://w3id.org/trajecto/user#interestLevel",
-    "baseIri" : "http://w3id.org/trajecto/user",
-    "range" : "49",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/user",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "interestLevel",
-      "en" : "interest level"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Interest level from 0.0 to 1.0"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "48"
-  }, {
     "iri" : "http://w3id.org/trajecto/user#hasInterest",
     "baseIri" : "http://w3id.org/trajecto/user",
-    "range" : "51",
+    "range" : "49",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1303,6 +1281,28 @@
     "domain" : "8",
     "comment" : {
       "en" : "A free-text interest keyword of a user profile."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#interestLevel",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "51",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "interestLevel",
+      "en" : "interest level"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Interest level from 0.0 to 1.0"
     },
     "attributes" : [ "datatype" ],
     "id" : "50"
@@ -1366,9 +1366,9 @@
       "IRI-based" : "initialPreferences",
       "en" : "initial preferences"
     },
-    "domain" : "37",
+    "domain" : "39",
     "comment" : {
-      "en" : "True for the seed snapshot that Stage 8 writes before any trajectory update."
+      "en" : "True for the initial snapshot of a user profile, created before any trajectory updates it."
     },
     "attributes" : [ "datatype" ],
     "id" : "57"
@@ -1412,7 +1412,7 @@
     },
     "domain" : "63",
     "comment" : {
-      "en" : "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."
+      "en" : "A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual."
     },
     "attributes" : [ "object" ],
     "id" : "62"
@@ -1432,7 +1432,7 @@
       "IRI-based" : "hasPreferences",
       "en" : "has preferences"
     },
-    "domain" : "37",
+    "domain" : "39",
     "comment" : {
       "en" : "Relates a profile snapshot to a POI category preference it holds."
     },
@@ -1478,7 +1478,7 @@
     },
     "domain" : "11",
     "comment" : {
-      "en" : "Number of interactions with the category (SR-20)."
+      "en" : "Number of interactions with the category."
     },
     "attributes" : [ "datatype" ],
     "id" : "69"
@@ -1522,14 +1522,14 @@
     },
     "domain" : "63",
     "comment" : {
-      "en" : "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."
+      "en" : "Relates a person to a category preference inferred from all of their trajectories."
     },
     "attributes" : [ "object" ],
     "id" : "71"
   }, {
     "iri" : "http://w3id.org/trajecto/user#considersTrajectory",
     "baseIri" : "http://w3id.org/trajecto/user",
-    "range" : "39",
+    "range" : "37",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1608,7 +1608,7 @@
       "IRI-based" : "updateTimestamp",
       "en" : "update timestamp"
     },
-    "domain" : "37",
+    "domain" : "39",
     "comment" : {
       "en" : "The time a profile snapshot refers to: the end of the trajectory that produced it."
     },
@@ -1630,7 +1630,7 @@
       "IRI-based" : "observationCount",
       "en" : "observation count"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "Number of interactions with the category that a POI category preference has accumulated."
     },
@@ -1639,7 +1639,7 @@
   }, {
     "iri" : "http://w3id.org/trajecto/user#generatedSnapshot",
     "baseIri" : "http://w3id.org/trajecto/user",
-    "range" : "37",
+    "range" : "39",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1652,7 +1652,7 @@
       "IRI-based" : "generatedSnapshot",
       "en" : "generated snapshot"
     },
-    "domain" : "39",
+    "domain" : "37",
     "comment" : {
       "en" : "Relates a trajectory to the profile snapshot its update produced."
     },

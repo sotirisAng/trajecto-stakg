@@ -112,10 +112,10 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "42",
@@ -247,7 +247,7 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "19",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "107",
@@ -289,10 +289,10 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "95",
+    "id" : "106",
     "type" : "owl:Class"
   }, {
-    "id" : "106",
+    "id" : "95",
     "type" : "owl:Class"
   }, {
     "id" : "84",
@@ -437,27 +437,6 @@
     "id" : "31",
     "superClasses" : [ "32" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/context#SystemRecommendation",
-    "baseIri" : "http://w3id.org/trajecto/context",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/context",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SystemRecommendation",
-      "en" : "System Recommendation"
-    },
-    "comment" : {
-      "en" : "Recommendations from automated systems that influence movement patterns."
-    },
-    "id" : "35",
-    "superClasses" : [ "36" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/context#Winter",
     "baseIri" : "http://w3id.org/trajecto/context",
     "instances" : 0,
@@ -478,6 +457,27 @@
     },
     "id" : "1",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/context#SystemRecommendation",
+    "baseIri" : "http://w3id.org/trajecto/context",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/context",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SystemRecommendation",
+      "en" : "System Recommendation"
+    },
+    "comment" : {
+      "en" : "Recommendations from automated systems that influence movement patterns."
+    },
+    "id" : "35",
+    "superClasses" : [ "36" ]
   }, {
     "iri" : "http://w3id.org/trajecto/context#Night",
     "baseIri" : "http://w3id.org/trajecto/context",
@@ -1385,7 +1385,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "21",
+    "id" : "19",
     "label" : {
       "IRI-based" : "float"
     }
@@ -1624,27 +1624,6 @@
     "id" : "8",
     "superClasses" : [ "15" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/context#HolidayPeriod",
-    "baseIri" : "http://w3id.org/trajecto/context",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/context",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "HolidayPeriod",
-      "en" : "Holiday Period"
-    },
-    "comment" : {
-      "en" : "Holiday periods with distinctive movement patterns."
-    },
-    "id" : "95",
-    "superClasses" : [ "13" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/context#RuralSetting",
     "baseIri" : "http://w3id.org/trajecto/context",
     "instances" : 0,
@@ -1665,6 +1644,27 @@
     },
     "id" : "106",
     "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/context#HolidayPeriod",
+    "baseIri" : "http://w3id.org/trajecto/context",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/context",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HolidayPeriod",
+      "en" : "Holiday Period"
+    },
+    "comment" : {
+      "en" : "Holiday periods with distinctive movement patterns."
+    },
+    "id" : "95",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://w3id.org/trajecto/context#Fall",
     "baseIri" : "http://w3id.org/trajecto/context",
@@ -1692,10 +1692,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "17",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "20",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "27",
     "type" : "rdfs:SubClassOf"
@@ -1736,7 +1736,7 @@
     "id" : "55",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "19",
+    "id" : "21",
     "type" : "owl:objectProperty"
   }, {
     "id" : "62",
@@ -1925,32 +1925,9 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
-    "iri" : "http://w3id.org/trajecto/context#hasTemporalContext",
-    "baseIri" : "http://w3id.org/trajecto/context",
-    "range" : "9",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/context",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasTemporalContext",
-      "en" : "has temporal context"
-    },
-    "superproperty" : [ "19" ],
-    "domain" : "18",
-    "comment" : {
-      "en" : "Associates a trajectory with its temporal context."
-    },
-    "attributes" : [ "object" ],
-    "id" : "17"
-  }, {
     "iri" : "http://w3id.org/trajecto/context#hasPredictability",
     "baseIri" : "http://w3id.org/trajecto/context",
-    "range" : "21",
+    "range" : "19",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1968,6 +1945,29 @@
       "en" : "A numerical value indicating how predictable a trajectory is (0.0 to 1.0)."
     },
     "attributes" : [ "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://w3id.org/trajecto/context#hasTemporalContext",
+    "baseIri" : "http://w3id.org/trajecto/context",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/context",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTemporalContext",
+      "en" : "has temporal context"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "18",
+    "comment" : {
+      "en" : "Associates a trajectory with its temporal context."
+    },
+    "attributes" : [ "object" ],
     "id" : "20"
   }, {
     "range" : "2",
@@ -2103,12 +2103,12 @@
     },
     "superproperty" : [ "57" ],
     "domain" : "18",
-    "subproperty" : [ "17", "58", "59", "60" ],
+    "subproperty" : [ "20", "58", "59", "60" ],
     "comment" : {
       "en" : "Associates a trajectory with its contextual dimensions."
     },
     "attributes" : [ "object" ],
-    "id" : "19"
+    "id" : "21"
   }, {
     "range" : "46",
     "domain" : "61",
@@ -2200,7 +2200,7 @@
       "IRI-based" : "hasRoutineContext",
       "en" : "has routine context"
     },
-    "superproperty" : [ "19" ],
+    "superproperty" : [ "21" ],
     "domain" : "18",
     "comment" : {
       "en" : "Associates a trajectory with its routine context."
@@ -2255,7 +2255,7 @@
       "IRI-based" : "associatedWith"
     },
     "domain" : "107",
-    "subproperty" : [ "108", "19" ],
+    "subproperty" : [ "108", "21" ],
     "attributes" : [ "external", "object" ],
     "id" : "57"
   }, {
@@ -2451,7 +2451,7 @@
       "IRI-based" : "hasEnvironmentalContext",
       "en" : "has environmental context"
     },
-    "superproperty" : [ "19" ],
+    "superproperty" : [ "21" ],
     "domain" : "18",
     "comment" : {
       "en" : "Associates a trajectory with its environmental context."
@@ -2484,7 +2484,7 @@
       "IRI-based" : "hasSocialContext",
       "en" : "has social context"
     },
-    "superproperty" : [ "19" ],
+    "superproperty" : [ "21" ],
     "domain" : "18",
     "comment" : {
       "en" : "Associates a trajectory with its social context."

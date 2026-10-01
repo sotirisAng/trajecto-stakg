@@ -10,7 +10,7 @@
     "version" : "1.1.0",
     "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
     "description" : {
-      "en" : "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that the SPARQL enrichment uses to classify interactions."
+      "en" : "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that classify interactions as passing, meaningful or immersive."
     },
     "labels" : {
       "en" : "trajecto-poi"
@@ -127,7 +127,7 @@
     "id" : "71",
     "type" : "owl:Class"
   }, {
-    "id" : "74",
+    "id" : "72",
     "type" : "owl:Class"
   }, {
     "id" : "77",
@@ -142,7 +142,7 @@
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "87",
+    "id" : "85",
     "type" : "owl:Class"
   }, {
     "id" : "91",
@@ -175,10 +175,10 @@
     "id" : "115",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "116",
     "type" : "owl:Class"
   }, {
-    "id" : "120",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "83",
@@ -217,10 +217,10 @@
     "id" : "133",
     "type" : "owl:Class"
   }, {
-    "id" : "90",
+    "id" : "119",
     "type" : "owl:Class"
   }, {
-    "id" : "116",
+    "id" : "90",
     "type" : "owl:Class"
   }, {
     "id" : "140",
@@ -229,13 +229,13 @@
     "id" : "143",
     "type" : "owl:Class"
   }, {
-    "id" : "121",
+    "id" : "117",
     "type" : "owl:Class"
   }, {
     "id" : "144",
     "type" : "owl:Class"
   }, {
-    "id" : "147",
+    "id" : "145",
     "type" : "owl:Class"
   }, {
     "id" : "41",
@@ -250,10 +250,10 @@
     "id" : "157",
     "type" : "owl:Class"
   }, {
-    "id" : "158",
+    "id" : "103",
     "type" : "owl:Class"
   }, {
-    "id" : "103",
+    "id" : "159",
     "type" : "owl:Class"
   }, {
     "id" : "160",
@@ -268,7 +268,7 @@
     "id" : "49",
     "type" : "owl:Class"
   }, {
-    "id" : "122",
+    "id" : "118",
     "type" : "owl:Class"
   }, {
     "id" : "101",
@@ -286,7 +286,7 @@
     "id" : "81",
     "type" : "owl:Class"
   }, {
-    "id" : "118",
+    "id" : "121",
     "type" : "owl:Class"
   }, {
     "id" : "202",
@@ -313,7 +313,7 @@
     "id" : "99",
     "type" : "owl:Class"
   }, {
-    "id" : "139",
+    "id" : "137",
     "type" : "owl:Class"
   }, {
     "id" : "221",
@@ -328,13 +328,13 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "88",
+    "id" : "86",
     "type" : "owl:Class"
   }, {
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "117",
+    "id" : "120",
     "type" : "owl:Class"
   }, {
     "id" : "51",
@@ -370,19 +370,19 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "239",
+    "id" : "171",
     "type" : "owl:Class"
   }, {
-    "id" : "171",
+    "id" : "239",
     "type" : "owl:Class"
   }, {
     "id" : "55",
     "type" : "owl:Class"
   }, {
-    "id" : "138",
+    "id" : "59",
     "type" : "owl:Class"
   }, {
-    "id" : "59",
+    "id" : "136",
     "type" : "owl:Class"
   }, {
     "id" : "223",
@@ -400,7 +400,7 @@
     "id" : "260",
     "type" : "owl:Class"
   }, {
-    "id" : "73",
+    "id" : "75",
     "type" : "owl:Thing"
   }, {
     "id" : "44",
@@ -439,10 +439,10 @@
     "id" : "141",
     "type" : "owl:Class"
   }, {
-    "id" : "168",
+    "id" : "217",
     "type" : "owl:Class"
   }, {
-    "id" : "217",
+    "id" : "168",
     "type" : "owl:Class"
   }, {
     "id" : "273",
@@ -472,7 +472,7 @@
     "id" : "229",
     "type" : "owl:Class"
   }, {
-    "id" : "137",
+    "id" : "135",
     "type" : "owl:Class"
   }, {
     "id" : "92",
@@ -490,10 +490,10 @@
     "id" : "111",
     "type" : "owl:Class"
   }, {
-    "id" : "159",
+    "id" : "158",
     "type" : "owl:Class"
   }, {
-    "id" : "119",
+    "id" : "122",
     "type" : "owl:Class"
   }, {
     "id" : "298",
@@ -508,10 +508,10 @@
     "id" : "215",
     "type" : "owl:Class"
   }, {
-    "id" : "164",
+    "id" : "216",
     "type" : "owl:Class"
   }, {
-    "id" : "216",
+    "id" : "164",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -520,7 +520,7 @@
     "id" : "231",
     "type" : "owl:Class"
   }, {
-    "id" : "146",
+    "id" : "147",
     "type" : "owl:Class"
   }, {
     "id" : "108",
@@ -544,10 +544,10 @@
     "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "145",
+    "id" : "146",
     "type" : "owl:Class"
   }, {
-    "id" : "86",
+    "id" : "88",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "166",
@@ -559,10 +559,10 @@
     "id" : "341",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "75",
+    "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "135",
+    "id" : "139",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "254",
@@ -595,10 +595,10 @@
     "id" : "142",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "179",
     "type" : "owl:Class"
   }, {
-    "id" : "179",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "233",
@@ -607,7 +607,7 @@
     "id" : "107",
     "type" : "owl:Class"
   }, {
-    "id" : "136",
+    "id" : "134",
     "type" : "owl:Class"
   }, {
     "id" : "21",
@@ -928,8 +928,8 @@
     "comment" : {
       "en" : "A hostel offering budget accommodation."
     },
-    "id" : "74",
-    "superClasses" : [ "75" ]
+    "id" : "72",
+    "superClasses" : [ "73" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#TrainStation",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -1076,8 +1076,8 @@
     "comment" : {
       "en" : "A theater."
     },
-    "id" : "87",
-    "superClasses" : [ "88" ]
+    "id" : "85",
+    "superClasses" : [ "86" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Gymnasium",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -1128,7 +1128,7 @@
       "en" : "Significant POI"
     },
     "comment" : {
-      "en" : "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories. Assigned by the dominance and significance stage."
+      "en" : "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories."
     },
     "id" : "93",
     "superClasses" : [ "31" ]
@@ -1340,7 +1340,7 @@
       "en" : "A hotel."
     },
     "id" : "112",
-    "superClasses" : [ "75" ]
+    "superClasses" : [ "73" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#ParkingArea",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -1375,6 +1375,28 @@
     "id" : "115",
     "superClasses" : [ "78" ]
   }, {
+    "iri" : "http://w3id.org/trajecto/poi#Observation",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Observation",
+      "en" : "Observation"
+    },
+    "subClasses" : [ "117", "118" ],
+    "comment" : {
+      "en" : "Passive observation of a point of interest."
+    },
+    "id" : "116",
+    "superClasses" : [ "8" ]
+  }, {
     "iri" : "http://w3id.org/trajecto/poi#Commercial",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -1402,34 +1424,12 @@
       "IRI-based" : "Commercial",
       "en" : "Commercial"
     },
-    "subClasses" : [ "116", "117", "118", "34", "119", "105" ],
+    "subClasses" : [ "119", "120", "121", "34", "122", "105" ],
     "comment" : {
       "en" : "Points of interest with commercial function."
     },
     "id" : "35",
     "superClasses" : [ "31" ]
-  }, {
-    "iri" : "http://w3id.org/trajecto/poi#Observation",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Observation",
-      "en" : "Observation"
-    },
-    "subClasses" : [ "121", "122" ],
-    "comment" : {
-      "en" : "Passive observation of a point of interest."
-    },
-    "id" : "120",
-    "superClasses" : [ "8" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Beach",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -1737,15 +1737,6 @@
     "id" : "133",
     "superClasses" : [ "40" ]
   }, {
-    "iri" : "http://www.datacron-project.eu/datAcron#TrajectoryPart",
-    "baseIri" : "http://www.datacron-project.eu/datAcron",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TrajectoryPart"
-    },
-    "attributes" : [ "external" ],
-    "id" : "90"
-  }, {
     "iri" : "http://w3id.org/trajecto/poi#Dining",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -1773,12 +1764,21 @@
       "IRI-based" : "Dining",
       "en" : "Dining"
     },
-    "subClasses" : [ "136", "137", "138", "139" ],
+    "subClasses" : [ "134", "135", "136", "137" ],
     "comment" : {
       "en" : "A place to eat or drink. Top category of restaurants, cafes, fast food and food courts."
     },
-    "id" : "116",
+    "id" : "119",
     "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#TrajectoryPart",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrajectoryPart"
+    },
+    "attributes" : [ "external" ],
+    "id" : "90"
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Club",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -1853,30 +1853,8 @@
     "comment" : {
       "en" : "Short, passing observation of a point of interest."
     },
-    "id" : "121",
-    "superClasses" : [ "120" ]
-  }, {
-    "iri" : "http://w3id.org/trajecto/poi#Engagement",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Engagement",
-      "en" : "Engagement"
-    },
-    "subClasses" : [ "145", "146" ],
-    "comment" : {
-      "en" : "Active engagement with a point of interest."
-    },
-    "id" : "144",
-    "superClasses" : [ "8" ]
+    "id" : "117",
+    "superClasses" : [ "116" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#HistoricalLandmark",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -1902,8 +1880,30 @@
     "comment" : {
       "en" : "Landmarks with historical significance."
     },
-    "id" : "147",
+    "id" : "144",
     "superClasses" : [ "64", "128" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/poi#Engagement",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Engagement",
+      "en" : "Engagement"
+    },
+    "subClasses" : [ "146", "147" ],
+    "comment" : {
+      "en" : "Active engagement with a point of interest."
+    },
+    "id" : "145",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#PrivateService",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -2032,27 +2032,6 @@
     "id" : "157",
     "superClasses" : [ "99" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/poi#Consulate",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Consulate",
-      "en" : "Consulate"
-    },
-    "comment" : {
-      "en" : "A consular office of a foreign state."
-    },
-    "id" : "158",
-    "superClasses" : [ "40" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/poi#Healthcare",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -2080,12 +2059,33 @@
       "IRI-based" : "Healthcare",
       "en" : "Healthcare"
     },
-    "subClasses" : [ "159", "102", "156" ],
+    "subClasses" : [ "158", "102", "156" ],
     "comment" : {
       "en" : "A healthcare facility. Top category of hospitals, clinics and pharmacies."
     },
     "id" : "103",
     "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/poi#Consulate",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Consulate",
+      "en" : "Consulate"
+    },
+    "comment" : {
+      "en" : "A consular office of a foreign state."
+    },
+    "id" : "159",
+    "superClasses" : [ "40" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Airport",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -2213,8 +2213,8 @@
     "comment" : {
       "en" : "Longer, more focused observation of a point of interest."
     },
-    "id" : "122",
-    "superClasses" : [ "120" ]
+    "id" : "118",
+    "superClasses" : [ "116" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#EmergentSequence",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -2363,7 +2363,7 @@
     "comment" : {
       "en" : "A large venue for conventions and trade fairs."
     },
-    "id" : "118",
+    "id" : "121",
     "superClasses" : [ "35" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#ServiceTransaction",
@@ -2484,7 +2484,7 @@
       "IRI-based" : "POIInteraction",
       "en" : "POI Interaction"
     },
-    "subClasses" : [ "212", "111", "7", "2", "120", "144" ],
+    "subClasses" : [ "212", "111", "7", "2", "116", "145" ],
     "comment" : {
       "en" : "Interaction between a moving object and a point of interest."
     },
@@ -2603,8 +2603,8 @@
     "comment" : {
       "en" : "A fast-food restaurant."
     },
-    "id" : "139",
-    "superClasses" : [ "116" ]
+    "id" : "137",
+    "superClasses" : [ "119" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Photography",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -2712,11 +2712,11 @@
       "IRI-based" : "PerformanceVenue",
       "en" : "Performance Venue"
     },
-    "subClasses" : [ "233", "87" ],
+    "subClasses" : [ "233", "85" ],
     "comment" : {
       "en" : "A venue for live or screened performances, such as a theater or cinema."
     },
-    "id" : "88",
+    "id" : "86",
     "superClasses" : [ "104" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#ATM",
@@ -2770,7 +2770,7 @@
     "comment" : {
       "en" : "Promotional displays or advertisements as points of interest."
     },
-    "id" : "117",
+    "id" : "120",
     "superClasses" : [ "35" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#RecommendedSequence",
@@ -2927,7 +2927,7 @@
       "IRI-based" : "PointOfInterest",
       "en" : "Point of Interest"
     },
-    "subClasses" : [ "78", "17", "27", "104", "80", "75", "128", "64", "46", "103", "34", "35", "33", "55", "93", "99" ],
+    "subClasses" : [ "78", "17", "27", "104", "80", "73", "128", "64", "46", "103", "34", "35", "33", "55", "93", "99" ],
     "attributes" : [ "external" ],
     "id" : "31"
   }, {
@@ -3028,6 +3028,27 @@
     "id" : "4",
     "superClasses" : [ "2" ]
   }, {
+    "iri" : "http://w3id.org/trajecto/poi#Embassy",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Embassy",
+      "en" : "Embassy"
+    },
+    "comment" : {
+      "en" : "A diplomatic mission of a foreign state."
+    },
+    "id" : "171",
+    "superClasses" : [ "40" ]
+  }, {
     "iri" : "http://w3id.org/trajecto/poi#POITypeConfiguration",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -3116,42 +3137,6 @@
         "en" : "RestArea configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#SeatingArea-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT15M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT2H",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT2M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 2 min, typical at 15 min, and anomalous beyond 2 h. Used by: SeatingArea."
-      },
-      "labels" : {
-        "IRI-based" : "SeatingArea-configuration",
-        "en" : "SeatingArea configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#HistoricalSite-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -3186,6 +3171,42 @@
       "labels" : {
         "IRI-based" : "HistoricalSite-configuration",
         "en" : "HistoricalSite configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#SeatingArea-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT15M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT2H",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT2M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 2 min, typical at 15 min, and anomalous beyond 2 h. Used by: SeatingArea."
+      },
+      "labels" : {
+        "IRI-based" : "SeatingArea-configuration",
+        "en" : "SeatingArea configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#CommercialStreet-configuration",
@@ -3368,42 +3389,6 @@
         "en" : "InformationSign configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#Waypoint-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT1M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT5M",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT10S",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Waypoint."
-      },
-      "labels" : {
-        "IRI-based" : "Waypoint-configuration",
-        "en" : "Waypoint configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#Bar-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -3438,6 +3423,42 @@
       "labels" : {
         "IRI-based" : "Bar-configuration",
         "en" : "Bar configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#Waypoint-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT1M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT5M",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT10S",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Waypoint."
+      },
+      "labels" : {
+        "IRI-based" : "Waypoint-configuration",
+        "en" : "Waypoint configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#TransitionPOI-configuration",
@@ -3656,42 +3677,6 @@
         "en" : "ReligiousPOI configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#ATM-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT3M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT15M",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT1M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 1 min, typical at 3 min, and anomalous beyond 15 min. Used by: ATM."
-      },
-      "labels" : {
-        "IRI-based" : "ATM-configuration",
-        "en" : "ATM configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#School-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -3762,6 +3747,42 @@
       "labels" : {
         "IRI-based" : "ExhibitPOI-configuration",
         "en" : "ExhibitPOI configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#ATM-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT3M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT15M",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT1M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 1 min, typical at 3 min, and anomalous beyond 15 min. Used by: ATM."
+      },
+      "labels" : {
+        "IRI-based" : "ATM-configuration",
+        "en" : "ATM configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#Bank-configuration",
@@ -3908,42 +3929,6 @@
         "en" : "ArtworkPOI configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#Restaurant-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT1H30M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT5H",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT30M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 30 min, typical at 1 h 30 min, and anomalous beyond 5 h. Used by: Restaurant."
-      },
-      "labels" : {
-        "IRI-based" : "Restaurant-configuration",
-        "en" : "Restaurant configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#Bench-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -3978,6 +3963,42 @@
       "labels" : {
         "IRI-based" : "Bench-configuration",
         "en" : "Bench configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#Restaurant-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT1H30M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT5H",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT30M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 30 min, typical at 1 h 30 min, and anomalous beyond 5 h. Used by: Restaurant."
+      },
+      "labels" : {
+        "IRI-based" : "Restaurant-configuration",
+        "en" : "Restaurant configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#NightlifePOI-configuration",
@@ -4340,7 +4361,7 @@
         "en" : "Entrance configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#Gallery-configuration",
+      "iri" : "http://w3id.org/trajecto/poi#HealthcarePOI-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -4352,28 +4373,28 @@
         "hasTypicalDuration" : [ {
           "identifier" : "hasTypicalDuration",
           "language" : "undefined",
-          "value" : "PT30M",
+          "value" : "PT45M",
           "type" : "label"
         } ],
         "hasMaximumReasonableDuration" : [ {
           "identifier" : "hasMaximumReasonableDuration",
           "language" : "undefined",
-          "value" : "PT3H",
+          "value" : "PT8H",
           "type" : "label"
         } ],
         "hasMinimumMeaningfulDuration" : [ {
           "identifier" : "hasMinimumMeaningfulDuration",
           "language" : "undefined",
-          "value" : "PT8M",
+          "value" : "PT15M",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 8 min, typical at 30 min, and anomalous beyond 3 h. Used by: Gallery."
+        "en" : "Dwell thresholds: an interaction is meaningful from 15 min, typical at 45 min, and anomalous beyond 8 h. Used by: Healthcare."
       },
       "labels" : {
-        "IRI-based" : "Gallery-configuration",
-        "en" : "Gallery configuration"
+        "IRI-based" : "HealthcarePOI-configuration",
+        "en" : "HealthcarePOI configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#Map-configuration",
@@ -4412,7 +4433,7 @@
         "en" : "Map configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#HealthcarePOI-configuration",
+      "iri" : "http://w3id.org/trajecto/poi#Gallery-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -4424,28 +4445,28 @@
         "hasTypicalDuration" : [ {
           "identifier" : "hasTypicalDuration",
           "language" : "undefined",
-          "value" : "PT45M",
+          "value" : "PT30M",
           "type" : "label"
         } ],
         "hasMaximumReasonableDuration" : [ {
           "identifier" : "hasMaximumReasonableDuration",
           "language" : "undefined",
-          "value" : "PT8H",
+          "value" : "PT3H",
           "type" : "label"
         } ],
         "hasMinimumMeaningfulDuration" : [ {
           "identifier" : "hasMinimumMeaningfulDuration",
           "language" : "undefined",
-          "value" : "PT15M",
+          "value" : "PT8M",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 15 min, typical at 45 min, and anomalous beyond 8 h. Used by: Healthcare."
+        "en" : "Dwell thresholds: an interaction is meaningful from 8 min, typical at 30 min, and anomalous beyond 3 h. Used by: Gallery."
       },
       "labels" : {
-        "IRI-based" : "HealthcarePOI-configuration",
-        "en" : "HealthcarePOI configuration"
+        "IRI-based" : "Gallery-configuration",
+        "en" : "Gallery configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#PerformanceVenue-configuration",
@@ -4700,42 +4721,6 @@
         "en" : "WaterFountain configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#EntertainmentPOI-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT1H30M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT8H",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT15M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: Entertainment."
-      },
-      "labels" : {
-        "IRI-based" : "EntertainmentPOI-configuration",
-        "en" : "EntertainmentPOI configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#TrainStation-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -4770,6 +4755,42 @@
       "labels" : {
         "IRI-based" : "TrainStation-configuration",
         "en" : "TrainStation configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#EntertainmentPOI-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT1H30M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT8H",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT15M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: Entertainment."
+      },
+      "labels" : {
+        "IRI-based" : "EntertainmentPOI-configuration",
+        "en" : "EntertainmentPOI configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#CulturalPOI-configuration",
@@ -4880,42 +4901,6 @@
         "en" : "Sculpture configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#DigitalDisplay-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT3M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT15M",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT30S",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 30 s, typical at 3 min, and anomalous beyond 15 min. Used by: DigitalDisplay."
-      },
-      "labels" : {
-        "IRI-based" : "DigitalDisplay-configuration",
-        "en" : "DigitalDisplay configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#Default-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -4950,6 +4935,42 @@
       "labels" : {
         "IRI-based" : "Default-configuration",
         "en" : "Default POI configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#DigitalDisplay-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT3M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT15M",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT30S",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 30 s, typical at 3 min, and anomalous beyond 15 min. Used by: DigitalDisplay."
+      },
+      "labels" : {
+        "IRI-based" : "DigitalDisplay-configuration",
+        "en" : "DigitalDisplay configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#ParkingArea-configuration",
@@ -5240,7 +5261,7 @@
         "en" : "InformationPOI configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#Church-configuration",
+      "iri" : "http://w3id.org/trajecto/poi#Beach-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -5252,28 +5273,28 @@
         "hasTypicalDuration" : [ {
           "identifier" : "hasTypicalDuration",
           "language" : "undefined",
-          "value" : "PT1H",
+          "value" : "PT3H",
           "type" : "label"
         } ],
         "hasMaximumReasonableDuration" : [ {
           "identifier" : "hasMaximumReasonableDuration",
           "language" : "undefined",
-          "value" : "PT3H",
+          "value" : "PT10H",
           "type" : "label"
         } ],
         "hasMinimumMeaningfulDuration" : [ {
           "identifier" : "hasMinimumMeaningfulDuration",
           "language" : "undefined",
-          "value" : "PT15M",
+          "value" : "PT30M",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h, and anomalous beyond 3 h. Used by: Church."
+        "en" : "Dwell thresholds: an interaction is meaningful from 30 min, typical at 3 h, and anomalous beyond 10 h. Used by: Beach."
       },
       "labels" : {
-        "IRI-based" : "Church-configuration",
-        "en" : "Church configuration"
+        "IRI-based" : "Beach-configuration",
+        "en" : "Beach configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#LeisurePOI-configuration",
@@ -5312,7 +5333,7 @@
         "en" : "LeisurePOI configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#Beach-configuration",
+      "iri" : "http://w3id.org/trajecto/poi#Church-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -5323,65 +5344,29 @@
         } ],
         "hasTypicalDuration" : [ {
           "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT1H",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
           "language" : "undefined",
           "value" : "PT3H",
           "type" : "label"
         } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT10H",
-          "type" : "label"
-        } ],
         "hasMinimumMeaningfulDuration" : [ {
           "identifier" : "hasMinimumMeaningfulDuration",
           "language" : "undefined",
-          "value" : "PT30M",
+          "value" : "PT15M",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 30 min, typical at 3 h, and anomalous beyond 10 h. Used by: Beach."
+        "en" : "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h, and anomalous beyond 3 h. Used by: Church."
       },
       "labels" : {
-        "IRI-based" : "Beach-configuration",
-        "en" : "Beach configuration"
-      }
-    }, {
-      "iri" : "http://w3id.org/trajecto/poi#AccommodationPOI-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT2H",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "P1D",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT30M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 30 min, typical at 2 h, and anomalous beyond P1D. Used by: Accommodation."
-      },
-      "labels" : {
-        "IRI-based" : "AccommodationPOI-configuration",
-        "en" : "AccommodationPOI configuration"
+        "IRI-based" : "Church-configuration",
+        "en" : "Church configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#RecreationalPOI-configuration",
@@ -5418,6 +5403,42 @@
       "labels" : {
         "IRI-based" : "RecreationalPOI-configuration",
         "en" : "RecreationalPOI configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#AccommodationPOI-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT2H",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "P1D",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT30M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 30 min, typical at 2 h, and anomalous beyond P1D. Used by: Accommodation."
+      },
+      "labels" : {
+        "IRI-based" : "AccommodationPOI-configuration",
+        "en" : "AccommodationPOI configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#Cafe-configuration",
@@ -5564,42 +5585,6 @@
         "en" : "Exit configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#NavigationLandmark-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT2M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT10M",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT15S",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 15 s, typical at 2 min, and anomalous beyond 10 min. Used by: NavigationLandmark."
-      },
-      "labels" : {
-        "IRI-based" : "NavigationLandmark-configuration",
-        "en" : "NavigationLandmark configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#FastFood-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -5634,6 +5619,42 @@
       "labels" : {
         "IRI-based" : "FastFood-configuration",
         "en" : "FastFood configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#NavigationLandmark-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT2M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT10M",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT15S",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 15 s, typical at 2 min, and anomalous beyond 10 min. Used by: NavigationLandmark."
+      },
+      "labels" : {
+        "IRI-based" : "NavigationLandmark-configuration",
+        "en" : "NavigationLandmark configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#EducationalPOI-configuration",
@@ -5816,42 +5837,6 @@
         "en" : "Theater configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#AmenityPOI-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT10M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT1H",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT1M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 1 min, typical at 10 min, and anomalous beyond 1 h. Used by: Amenity."
-      },
-      "labels" : {
-        "IRI-based" : "AmenityPOI-configuration",
-        "en" : "AmenityPOI configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#ShoppingMall-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -5886,6 +5871,42 @@
       "labels" : {
         "IRI-based" : "ShoppingMall-configuration",
         "en" : "ShoppingMall configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#AmenityPOI-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT10M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT1H",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT1M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 1 min, typical at 10 min, and anomalous beyond 1 h. Used by: Amenity."
+      },
+      "labels" : {
+        "IRI-based" : "AmenityPOI-configuration",
+        "en" : "AmenityPOI configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#Museum-configuration",
@@ -5924,42 +5945,6 @@
         "en" : "Museum configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#FoodCourt-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT45M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT2H30M",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT20M",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 20 min, typical at 45 min, and anomalous beyond 2 h 30 min. Used by: FoodCourt."
-      },
-      "labels" : {
-        "IRI-based" : "FoodCourt-configuration",
-        "en" : "FoodCourt configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#Pharmacy-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -5994,6 +5979,42 @@
       "labels" : {
         "IRI-based" : "Pharmacy-configuration",
         "en" : "Pharmacy configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#FoodCourt-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT45M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT2H30M",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT20M",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 20 min, typical at 45 min, and anomalous beyond 2 h 30 min. Used by: FoodCourt."
+      },
+      "labels" : {
+        "IRI-based" : "FoodCourt-configuration",
+        "en" : "FoodCourt configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#Library-configuration",
@@ -6068,42 +6089,6 @@
         "en" : "Airport configuration"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/poi#Staircase-configuration",
-      "baseIri" : "http://w3id.org/trajecto/poi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/poi",
-          "type" : "iri"
-        } ],
-        "hasTypicalDuration" : [ {
-          "identifier" : "hasTypicalDuration",
-          "language" : "undefined",
-          "value" : "PT1M",
-          "type" : "label"
-        } ],
-        "hasMaximumReasonableDuration" : [ {
-          "identifier" : "hasMaximumReasonableDuration",
-          "language" : "undefined",
-          "value" : "PT5M",
-          "type" : "label"
-        } ],
-        "hasMinimumMeaningfulDuration" : [ {
-          "identifier" : "hasMinimumMeaningfulDuration",
-          "language" : "undefined",
-          "value" : "PT10S",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Staircase."
-      },
-      "labels" : {
-        "IRI-based" : "Staircase-configuration",
-        "en" : "Staircase configuration"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/poi#Monument-configuration",
       "baseIri" : "http://w3id.org/trajecto/poi",
       "annotations" : {
@@ -6138,6 +6123,42 @@
       "labels" : {
         "IRI-based" : "Monument-configuration",
         "en" : "Monument configuration"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/poi#Staircase-configuration",
+      "baseIri" : "http://w3id.org/trajecto/poi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/poi",
+          "type" : "iri"
+        } ],
+        "hasTypicalDuration" : [ {
+          "identifier" : "hasTypicalDuration",
+          "language" : "undefined",
+          "value" : "PT1M",
+          "type" : "label"
+        } ],
+        "hasMaximumReasonableDuration" : [ {
+          "identifier" : "hasMaximumReasonableDuration",
+          "language" : "undefined",
+          "value" : "PT5M",
+          "type" : "label"
+        } ],
+        "hasMinimumMeaningfulDuration" : [ {
+          "identifier" : "hasMinimumMeaningfulDuration",
+          "language" : "undefined",
+          "value" : "PT10S",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Staircase."
+      },
+      "labels" : {
+        "IRI-based" : "Staircase-configuration",
+        "en" : "Staircase configuration"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/poi#Stadium-configuration",
@@ -6325,27 +6346,6 @@
     },
     "id" : "239"
   }, {
-    "iri" : "http://w3id.org/trajecto/poi#Embassy",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Embassy",
-      "en" : "Embassy"
-    },
-    "comment" : {
-      "en" : "A diplomatic mission of a foreign state."
-    },
-    "id" : "171",
-    "superClasses" : [ "40" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/poi#Religious",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -6380,6 +6380,27 @@
     "id" : "55",
     "superClasses" : [ "31" ]
   }, {
+    "iri" : "http://w3id.org/trajecto/poi#Bottleneck",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bottleneck",
+      "en" : "Bottleneck"
+    },
+    "comment" : {
+      "en" : "Points where movement is constrained or restricted."
+    },
+    "id" : "59",
+    "superClasses" : [ "26" ]
+  }, {
     "iri" : "http://w3id.org/trajecto/poi#Restaurant",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -6410,29 +6431,8 @@
     "comment" : {
       "en" : "A restaurant."
     },
-    "id" : "138",
-    "superClasses" : [ "116" ]
-  }, {
-    "iri" : "http://w3id.org/trajecto/poi#Bottleneck",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Bottleneck",
-      "en" : "Bottleneck"
-    },
-    "comment" : {
-      "en" : "Points where movement is constrained or restricted."
-    },
-    "id" : "59",
-    "superClasses" : [ "26" ]
+    "id" : "136",
+    "superClasses" : [ "119" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#BusStation",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -6573,7 +6573,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "73",
+    "id" : "75",
     "label" : {
       "undefined" : "Thing"
     }
@@ -6648,7 +6648,7 @@
       "IRI-based" : "Landmark",
       "en" : "Landmark"
     },
-    "subClasses" : [ "182", "132", "147" ],
+    "subClasses" : [ "182", "132", "144" ],
     "comment" : {
       "en" : "Points of interest that serve as recognizable landmarks."
     },
@@ -6703,7 +6703,7 @@
       "IRI-based" : "Historical",
       "en" : "Historical"
     },
-    "subClasses" : [ "186", "125", "147" ],
+    "subClasses" : [ "186", "125", "144" ],
     "comment" : {
       "en" : "Historical objects or sites as points of interest."
     },
@@ -6807,7 +6807,7 @@
       "IRI-based" : "Entertainment",
       "en" : "Entertainment"
     },
-    "subClasses" : [ "88", "141" ],
+    "subClasses" : [ "86", "141" ],
     "comment" : {
       "en" : "Entertainment features as points of interest."
     },
@@ -6902,39 +6902,6 @@
     "id" : "141",
     "superClasses" : [ "104" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/poi#Stadium",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ],
-      "related" : [ {
-        "identifier" : "related",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/purpose/skos#SportsAttendance",
-        "type" : "iri"
-      } ],
-      "hasTypeConfiguration" : [ {
-        "identifier" : "hasTypeConfiguration",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi#Stadium-configuration",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Stadium",
-      "en" : "Stadium"
-    },
-    "comment" : {
-      "en" : "A stadium."
-    },
-    "id" : "168",
-    "superClasses" : [ "92" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/poi#School",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -6967,6 +6934,39 @@
     },
     "id" : "217",
     "superClasses" : [ "99" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/poi#Stadium",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ],
+      "related" : [ {
+        "identifier" : "related",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose/skos#SportsAttendance",
+        "type" : "iri"
+      } ],
+      "hasTypeConfiguration" : [ {
+        "identifier" : "hasTypeConfiguration",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi#Stadium-configuration",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Stadium",
+      "en" : "Stadium"
+    },
+    "comment" : {
+      "en" : "A stadium."
+    },
+    "id" : "168",
+    "superClasses" : [ "92" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Painting",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -7224,8 +7224,8 @@
     "comment" : {
       "en" : "A cafe serving coffee, drinks and light food."
     },
-    "id" : "137",
-    "superClasses" : [ "116" ]
+    "id" : "135",
+    "superClasses" : [ "119" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Sports",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -7282,7 +7282,7 @@
       "IRI-based" : "PublicService",
       "en" : "Public Service"
     },
-    "subClasses" : [ "158", "171", "133", "96" ],
+    "subClasses" : [ "159", "171", "133", "96" ],
     "comment" : {
       "en" : "Points of interest providing public services."
     },
@@ -7391,7 +7391,7 @@
     "comment" : {
       "en" : "A medical clinic or doctor's practice."
     },
-    "id" : "159",
+    "id" : "158",
     "superClasses" : [ "103" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#ConferenceCenter",
@@ -7412,7 +7412,7 @@
     "comment" : {
       "en" : "A venue built for conferences and meetings."
     },
-    "id" : "119",
+    "id" : "122",
     "superClasses" : [ "35" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Waypoint",
@@ -7517,27 +7517,6 @@
     "id" : "215",
     "superClasses" : [ "33" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/poi#SportsFacility",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SportsFacility",
-      "en" : "Sports Facility"
-    },
-    "comment" : {
-      "en" : "A facility dedicated to sports activities."
-    },
-    "id" : "164",
-    "superClasses" : [ "92" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/poi#Library",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -7570,6 +7549,27 @@
     },
     "id" : "216",
     "superClasses" : [ "99" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/poi#SportsFacility",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SportsFacility",
+      "en" : "Sports Facility"
+    },
+    "comment" : {
+      "en" : "A facility dedicated to sports activities."
+    },
+    "id" : "164",
+    "superClasses" : [ "92" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#ExtendedInteraction",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -7643,8 +7643,8 @@
     "comment" : {
       "en" : "Physical interaction with a point of interest."
     },
-    "id" : "146",
-    "superClasses" : [ "144" ]
+    "id" : "147",
+    "superClasses" : [ "145" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#CommercialStreet",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -7848,12 +7848,12 @@
     "comment" : {
       "en" : "Digital or electronic interaction with a point of interest."
     },
-    "id" : "145",
-    "superClasses" : [ "144" ]
+    "id" : "146",
+    "superClasses" : [ "145" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "86",
+    "id" : "88",
     "label" : {
       "IRI-based" : "float"
     }
@@ -7906,16 +7906,16 @@
       "IRI-based" : "Accommodation",
       "en" : "Accommodation"
     },
-    "subClasses" : [ "74", "112" ],
+    "subClasses" : [ "72", "112" ],
     "comment" : {
       "en" : "A place that offers overnight stays, such as a hotel or hostel."
     },
-    "id" : "75",
+    "id" : "73",
     "superClasses" : [ "31" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "135",
+    "id" : "139",
     "label" : {
       "IRI-based" : "float"
     }
@@ -8084,33 +8084,6 @@
     "id" : "142",
     "superClasses" : [ "140", "141" ]
   }, {
-    "iri" : "http://w3id.org/trajecto/poi#StartInteraction",
-    "baseIri" : "http://w3id.org/trajecto/poi",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://w3id.org/trajecto/poi",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A meaningful interaction marking the beginning of a trajectory, typically representing the user's departure point.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "StartInteraction",
-      "en" : "Start Interaction"
-    },
-    "comment" : {
-      "en" : "An interaction at the origin/start point of a trajectory."
-    },
-    "id" : "1",
-    "superClasses" : [ "2" ]
-  }, {
     "iri" : "http://w3id.org/trajecto/poi#SportsField",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -8138,6 +8111,33 @@
     "id" : "179",
     "superClasses" : [ "92" ]
   }, {
+    "iri" : "http://w3id.org/trajecto/poi#StartInteraction",
+    "baseIri" : "http://w3id.org/trajecto/poi",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/poi",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A meaningful interaction marking the beginning of a trajectory, typically representing the user's departure point.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StartInteraction",
+      "en" : "Start Interaction"
+    },
+    "comment" : {
+      "en" : "An interaction at the origin/start point of a trajectory."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
     "iri" : "http://w3id.org/trajecto/poi#Cinema",
     "baseIri" : "http://w3id.org/trajecto/poi",
     "instances" : 0,
@@ -8163,7 +8163,7 @@
       "en" : "A cinema."
     },
     "id" : "233",
-    "superClasses" : [ "88" ]
+    "superClasses" : [ "86" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#ShoppingMall",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -8216,8 +8216,8 @@
     "comment" : {
       "en" : "An area with several food outlets and shared seating."
     },
-    "id" : "136",
-    "superClasses" : [ "116" ]
+    "id" : "134",
+    "superClasses" : [ "119" ]
   }, {
     "iri" : "http://w3id.org/trajecto/poi#Artwork",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -8308,13 +8308,13 @@
     "id" : "69",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "72",
+    "id" : "74",
     "type" : "owl:objectProperty"
   }, {
     "id" : "76",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "85",
+    "id" : "87",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "89",
@@ -8335,7 +8335,7 @@
     "id" : "113",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "134",
+    "id" : "138",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "149",
@@ -8932,7 +8932,7 @@
   }, {
     "iri" : "http://w3id.org/trajecto/poi#hasRoom",
     "baseIri" : "http://w3id.org/trajecto/poi",
-    "range" : "73",
+    "range" : "75",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8947,10 +8947,10 @@
     },
     "domain" : "31",
     "comment" : {
-      "en" : "The museum room in which an artwork is exhibited (BIRD instantiation)."
+      "en" : "The room in which an artwork is exhibited."
     },
     "attributes" : [ "object" ],
-    "id" : "72"
+    "id" : "74"
   }, {
     "iri" : "http://w3id.org/trajecto/poi#followedBy",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -8969,14 +8969,14 @@
     },
     "domain" : "31",
     "comment" : {
-      "en" : "A POI is interacted with meaningfully immediately before another in at least one trajectory (SR-06)."
+      "en" : "A POI is interacted with meaningfully immediately before another in at least one trajectory."
     },
     "attributes" : [ "object" ],
     "id" : "76"
   }, {
     "iri" : "http://w3id.org/trajecto/poi#hasAttractionStrength",
     "baseIri" : "http://w3id.org/trajecto/poi",
-    "range" : "86",
+    "range" : "88",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8994,7 +8994,7 @@
       "en" : "Numerical value indicating the strength of attraction of a POI."
     },
     "attributes" : [ "datatype" ],
-    "id" : "85"
+    "id" : "87"
   }, {
     "iri" : "http://w3id.org/trajecto/poi#hasPOIInteraction",
     "baseIri" : "http://w3id.org/trajecto/poi",
@@ -9055,14 +9055,14 @@
     },
     "domain" : "8",
     "comment" : {
-      "en" : "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime used by the CSV-to-RDF mappings and analytics queries."
+      "en" : "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime."
     },
     "attributes" : [ "datatype" ],
     "id" : "113"
   }, {
     "iri" : "http://w3id.org/trajecto/poi#hasPopularity",
     "baseIri" : "http://w3id.org/trajecto/poi",
-    "range" : "135",
+    "range" : "139",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -9080,7 +9080,7 @@
       "en" : "Numerical value indicating the popularity of a POI."
     },
     "attributes" : [ "datatype" ],
-    "id" : "134"
+    "id" : "138"
   }, {
     "range" : "40",
     "domain" : "96",
@@ -9140,7 +9140,7 @@
     "id" : "167"
   }, {
     "range" : "40",
-    "domain" : "158",
+    "domain" : "159",
     "attributes" : [ "object", "anonymous" ],
     "id" : "169"
   }, {
@@ -9243,7 +9243,7 @@
     "id" : "197"
   }, {
     "range" : "104",
-    "domain" : "88",
+    "domain" : "86",
     "attributes" : [ "object", "anonymous" ],
     "id" : "198"
   }, {
@@ -9354,7 +9354,7 @@
     "id" : "225"
   }, {
     "range" : "64",
-    "domain" : "147",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
     "id" : "226"
   }, {
@@ -9389,7 +9389,7 @@
     "id" : "236"
   }, {
     "range" : "128",
-    "domain" : "147",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
     "id" : "237"
   }, {
@@ -9538,8 +9538,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "262"
   }, {
-    "range" : "116",
-    "domain" : "138",
+    "range" : "119",
+    "domain" : "136",
     "attributes" : [ "object", "anonymous" ],
     "id" : "263"
   }, {
@@ -9548,8 +9548,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "264"
   }, {
-    "range" : "116",
-    "domain" : "139",
+    "range" : "119",
+    "domain" : "137",
     "attributes" : [ "object", "anonymous" ],
     "id" : "265"
   }, {
@@ -9570,7 +9570,7 @@
     },
     "domain" : "31",
     "comment" : {
-      "en" : "Two POIs are interacted with meaningfully in the same trajectory (SR-05)."
+      "en" : "Two POIs are interacted with meaningfully in the same trajectory."
     },
     "attributes" : [ "object" ],
     "id" : "266"
@@ -9580,8 +9580,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "267"
   }, {
-    "range" : "75",
-    "domain" : "74",
+    "range" : "73",
+    "domain" : "72",
     "attributes" : [ "object", "anonymous" ],
     "id" : "268"
   }, {
@@ -9590,13 +9590,13 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "269"
   }, {
-    "range" : "75",
+    "range" : "73",
     "domain" : "112",
     "attributes" : [ "object", "anonymous" ],
     "id" : "270"
   }, {
-    "range" : "116",
-    "domain" : "137",
+    "range" : "119",
+    "domain" : "135",
     "attributes" : [ "object", "anonymous" ],
     "id" : "271"
   }, {
@@ -9605,8 +9605,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "272"
   }, {
-    "range" : "116",
-    "domain" : "136",
+    "range" : "119",
+    "domain" : "134",
     "attributes" : [ "object", "anonymous" ],
     "id" : "274"
   }, {
@@ -9665,8 +9665,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "286"
   }, {
-    "range" : "120",
-    "domain" : "122",
+    "range" : "35",
+    "domain" : "105",
     "attributes" : [ "object", "anonymous" ],
     "id" : "288"
   }, {
@@ -9675,8 +9675,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "289"
   }, {
-    "range" : "120",
-    "domain" : "121",
+    "range" : "35",
+    "domain" : "122",
     "attributes" : [ "object", "anonymous" ],
     "id" : "290"
   }, {
@@ -9688,21 +9688,21 @@
     },
     "domain" : "291",
     "subproperty" : [ "250", "183", "292" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "185"
   }, {
     "range" : "35",
-    "domain" : "105",
+    "domain" : "34",
     "attributes" : [ "object", "anonymous" ],
     "id" : "294"
   }, {
     "range" : "35",
-    "domain" : "118",
+    "domain" : "119",
     "attributes" : [ "object", "anonymous" ],
     "id" : "295"
   }, {
-    "range" : "35",
-    "domain" : "117",
+    "range" : "116",
+    "domain" : "118",
     "attributes" : [ "object", "anonymous" ],
     "id" : "296"
   }, {
@@ -9712,7 +9712,7 @@
     "id" : "297"
   }, {
     "range" : "35",
-    "domain" : "119",
+    "domain" : "121",
     "attributes" : [ "object", "anonymous" ],
     "id" : "299"
   }, {
@@ -9722,7 +9722,7 @@
     "id" : "300"
   }, {
     "range" : "35",
-    "domain" : "34",
+    "domain" : "120",
     "attributes" : [ "object", "anonymous" ],
     "id" : "301"
   }, {
@@ -9751,8 +9751,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "306"
   }, {
-    "range" : "35",
-    "domain" : "116",
+    "range" : "116",
+    "domain" : "117",
     "attributes" : [ "object", "anonymous" ],
     "id" : "307"
   }, {
@@ -9792,12 +9792,12 @@
     "id" : "314"
   }, {
     "range" : "8",
-    "domain" : "144",
+    "domain" : "145",
     "attributes" : [ "object", "anonymous" ],
     "id" : "315"
   }, {
     "range" : "8",
-    "domain" : "120",
+    "domain" : "116",
     "attributes" : [ "object", "anonymous" ],
     "id" : "316"
   }, {
@@ -9874,7 +9874,7 @@
     "id" : "327"
   }, {
     "range" : "103",
-    "domain" : "159",
+    "domain" : "158",
     "attributes" : [ "object", "anonymous" ],
     "id" : "328"
   }, {
@@ -9883,13 +9883,13 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "329"
   }, {
-    "range" : "144",
-    "domain" : "146",
+    "range" : "145",
+    "domain" : "147",
     "attributes" : [ "object", "anonymous" ],
     "id" : "330"
   }, {
-    "range" : "144",
-    "domain" : "145",
+    "range" : "145",
+    "domain" : "146",
     "attributes" : [ "object", "anonymous" ],
     "id" : "331"
   }, {
@@ -10016,7 +10016,7 @@
     "id" : "347"
   }, {
     "range" : "31",
-    "domain" : "75",
+    "domain" : "73",
     "attributes" : [ "object", "anonymous" ],
     "id" : "348"
   }, {
@@ -10072,7 +10072,7 @@
     },
     "domain" : "31",
     "comment" : {
-      "en" : "The art-historical era of an artwork (BIRD instantiation)."
+      "en" : "The art-historical era of an artwork."
     },
     "attributes" : [ "datatype" ],
     "id" : "356"
@@ -10092,12 +10092,12 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "359"
   }, {
-    "range" : "88",
-    "domain" : "87",
+    "range" : "86",
+    "domain" : "85",
     "attributes" : [ "object", "anonymous" ],
     "id" : "360"
   }, {
-    "range" : "88",
+    "range" : "86",
     "domain" : "233",
     "attributes" : [ "object", "anonymous" ],
     "id" : "361"

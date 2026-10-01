@@ -1035,7 +1035,7 @@
 
     <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SteadyMovement">
         <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
-        <rdfs:comment xml:lang="en">Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory movement.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
         <rdfs:label xml:lang="en">Steady Movement</rdfs:label>
     </owl:Class>

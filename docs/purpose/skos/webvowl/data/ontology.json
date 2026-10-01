@@ -10,7 +10,7 @@
     "version" : "1.1.0",
     "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
     "description" : {
-      "en" : "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose."
+      "en" : "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and trajectories are assigned a purpose from the scheme through trajecto:hasPurpose."
     },
     "labels" : {
       "en" : "trajecto-purpose-skos"
@@ -132,22 +132,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -157,7 +142,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose",
+          "value" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -167,7 +157,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
+          "value" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -177,7 +172,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+          "value" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
           "type" : "iri"
         } ],
         "definition" : [ {
@@ -211,28 +211,28 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#ExerciseActivity",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
-        "related" : [ {
-          "identifier" : "related",
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
           "language" : "undefined",
-          "value" : "https://schema.org/ExerciseAction",
+          "value" : "http://w3id.org/trajecto/purpose#ExerciseActivity",
           "type" : "iri"
         } ],
         "inScheme" : [ {
           "identifier" : "inScheme",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "related" : [ {
+          "identifier" : "related",
+          "language" : "undefined",
+          "value" : "https://schema.org/ExerciseAction",
           "type" : "iri"
         } ],
         "prefLabel" : [ {
@@ -261,16 +261,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#CulturalEventAttendance",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#CulturalEventAttendance",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -375,17 +375,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#Commuting",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#InformationSeeking",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos#TransferBetweenModes",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#Transit",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -395,7 +390,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#Transit",
+          "value" : "http://w3id.org/trajecto/purpose/skos#Commuting",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#InformationSeeking",
           "type" : "iri"
         } ],
         "definition" : [ {
@@ -424,16 +424,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#FieldStudy",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#FieldStudy",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -506,16 +506,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#FormalLearning",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#FormalLearning",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -638,28 +638,28 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#Tourism",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#Tourism",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "value" : "http://w3id.org/trajecto/purpose#Tourism",
           "type" : "iri"
         } ],
         "related" : [ {
           "identifier" : "related",
           "language" : "undefined",
           "value" : "https://schema.org/TouristTrip",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
           "type" : "iri"
         } ],
         "prefLabel" : [ {
@@ -688,16 +688,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#ServiceAccess",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#ServiceAccess",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -732,16 +732,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#BusinessMeeting",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#BusinessMeeting",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -858,16 +858,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#WorkPurpose",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -885,7 +885,12 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#BusinessMeeting",
+          "value" : "http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ProfessionalEvent",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -895,12 +900,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ProfessionalEvent",
+          "value" : "http://w3id.org/trajecto/purpose/skos#BusinessMeeting",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -1092,16 +1092,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#EducationalTour",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#EducationalTour",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#EducationalTour",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -1136,44 +1136,6 @@
       },
       "labels" : {
         "IRI-based" : "EducationalTour"
-      }
-    }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#ReligiousCeremony",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Religious Ceremony",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Purpose related to attending religious ceremonies (weddings, funerals, baptisms).",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ReligiousCeremony"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#TherapySession",
@@ -1214,15 +1176,9 @@
         "IRI-based" : "TherapySession"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+      "iri" : "http://w3id.org/trajecto/purpose/skos#ReligiousCeremony",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#CommercialPurpose",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
@@ -1238,61 +1194,39 @@
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Commercial Purpose",
+          "value" : "Religious Ceremony",
           "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#DiningExperience",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#Shopping",
-          "type" : "iri"
         } ],
         "definition" : [ {
           "identifier" : "definition",
           "language" : "en",
-          "value" : "Movement purpose related to commercial activities such as shopping or services.",
+          "value" : "Purpose related to attending religious ceremonies (weddings, funerals, baptisms).",
           "type" : "label"
         } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
+        "broader" : [ {
+          "identifier" : "broader",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
           "type" : "iri"
-        } ],
-        "example" : [ {
-          "identifier" : "example",
-          "language" : "en",
-          "value" : "Shopping, dining out, visiting a bank",
-          "type" : "label"
         } ]
       },
       "labels" : {
-        "IRI-based" : "CommercialPurpose"
+        "IRI-based" : "ReligiousCeremony"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#LeisureActivity",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -1322,6 +1256,72 @@
       },
       "labels" : {
         "IRI-based" : "LeisureActivity"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#CommercialPurpose",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Commercial Purpose",
+          "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#DiningExperience",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#Shopping",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Movement purpose related to commercial activities such as shopping or services.",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "en",
+          "value" : "Shopping, dining out, visiting a bank",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CommercialPurpose"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#InformationSeeking",
@@ -1558,6 +1558,82 @@
         "IRI-based" : "FastFoodVisit"
       }
     }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#RecreationalPurpose",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Recreational Purpose",
+          "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#SocialGathering",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#Tourism",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Movement purpose related to leisure and recreational activities.",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "en",
+          "value" : "Park visits, beach trips, attending sporting events",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RecreationalPurpose"
+      }
+    }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#TheaterVisit",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
@@ -1594,126 +1670,6 @@
       },
       "labels" : {
         "IRI-based" : "TheaterVisit"
-      }
-    }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#RecreationalPurpose",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Recreational Purpose",
-          "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#SocialGathering",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#Tourism",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Movement purpose related to leisure and recreational activities.",
-          "type" : "label"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "example" : [ {
-          "identifier" : "example",
-          "language" : "en",
-          "value" : "Park visits, beach trips, attending sporting events",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "RecreationalPurpose"
-      }
-    }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#OfficeWork",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#OfficeWork",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Office Work",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Purpose related to working in an office environment.",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "OfficeWork"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#SportsAttendance",
@@ -1754,6 +1710,122 @@
         "IRI-based" : "SportsAttendance"
       }
     }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#Shopping",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#Shopping",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "related" : [ {
+          "identifier" : "related",
+          "language" : "undefined",
+          "value" : "https://schema.org/BuyAction",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Shopping",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Purpose related to purchasing goods.",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Shopping"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#ResidentialPurpose",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Residential Purpose",
+          "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#DomesticActivity",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#HomeBound",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Movement purpose related to residential and home-based activities.",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "en",
+          "value" : "Returning home, local neighborhood activities",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ResidentialPurpose"
+      }
+    }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#Worship",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
@@ -1792,13 +1864,13 @@
         "IRI-based" : "Worship"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose",
+      "iri" : "http://w3id.org/trajecto/purpose/skos#OfficeWork",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#ResidentialPurpose",
+          "value" : "http://w3id.org/trajecto/purpose#OfficeWork",
           "type" : "iri"
         } ],
         "isDefinedBy" : [ {
@@ -1816,140 +1888,24 @@
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Residential Purpose",
-          "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#HomeBound",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#DomesticActivity",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Movement purpose related to residential and home-based activities.",
-          "type" : "label"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "example" : [ {
-          "identifier" : "example",
-          "language" : "en",
-          "value" : "Returning home, local neighborhood activities",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ResidentialPurpose"
-      }
-    }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#Shopping",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#Shopping",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "related" : [ {
-          "identifier" : "related",
-          "language" : "undefined",
-          "value" : "https://schema.org/BuyAction",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Shopping",
+          "value" : "Office Work",
           "type" : "label"
         } ],
         "definition" : [ {
           "identifier" : "definition",
           "language" : "en",
-          "value" : "Purpose related to purchasing goods.",
+          "value" : "Purpose related to working in an office environment.",
           "type" : "label"
         } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+          "value" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose",
           "type" : "iri"
         } ]
       },
       "labels" : {
-        "IRI-based" : "Shopping"
-      }
-    }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#HomeBound",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#HomeBound",
-          "type" : "iri"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Home Bound",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Purpose related to returning to or staying at home.",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HomeBound"
+        "IRI-based" : "OfficeWork"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#AirportTransit",
@@ -1988,6 +1944,50 @@
       },
       "labels" : {
         "IRI-based" : "AirportTransit"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#HomeBound",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#HomeBound",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Home Bound",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Purpose related to returning to or staying at home.",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HomeBound"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#RestaurantDining",
@@ -2031,16 +2031,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#MuseumVisit",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#MuseumVisit",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#MuseumVisit",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2075,16 +2075,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#WorkplaceRoutine",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2119,16 +2119,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#SocialGathering",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#SocialGathering",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2163,16 +2163,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#Transit",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#Transit",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2207,16 +2207,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#ArtisticExperience",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#ArtisticExperience",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#ArtisticExperience",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2278,22 +2278,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#WorkshopAttendance",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#Research",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#FormalLearning",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#LibraryVisit",
+          "value" : "http://w3id.org/trajecto/purpose/skos#EducationalTour",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -2303,7 +2288,22 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#EducationalTour",
+          "value" : "http://w3id.org/trajecto/purpose/skos#LibraryVisit",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#FormalLearning",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#Research",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#WorkshopAttendance",
           "type" : "iri"
         } ],
         "definition" : [ {
@@ -2370,16 +2370,16 @@
       "iri" : "http://w3id.org/trajecto/purpose/skos#DomesticActivity",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#DomesticActivity",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2435,12 +2435,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#Worship",
+          "value" : "http://w3id.org/trajecto/purpose/skos#SpiritualRetreat",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -2450,7 +2445,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#SpiritualRetreat",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#Worship",
           "type" : "iri"
         } ],
         "definition" : [ {
@@ -2596,50 +2596,6 @@
         "IRI-based" : "TrainStationTransit"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#WorkshopAttendance",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose#WorkshopAttendance",
-          "type" : "iri"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Workshop Attendance",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Purpose related to attending workshops, seminars, or training sessions.",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "WorkshopAttendance"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#FieldWork",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
@@ -2684,19 +2640,63 @@
         "IRI-based" : "FieldWork"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose",
+      "iri" : "http://w3id.org/trajecto/purpose/skos#WorkshopAttendance",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose#WorkshopAttendance",
+          "type" : "iri"
+        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Workshop Attendance",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Purpose related to attending workshops, seminars, or training sessions.",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "WorkshopAttendance"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
         "exactMatch" : [ {
           "identifier" : "exactMatch",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose#CulturalPurpose",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2714,22 +2714,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#EducationalTour",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TheaterVisit",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#MuseumVisit",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ArtisticExperience",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -2739,7 +2724,22 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ArtisticExperience",
+          "value" : "http://w3id.org/trajecto/purpose/skos#MuseumVisit",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TheaterVisit",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#EducationalTour",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -2749,7 +2749,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit",
+          "value" : "http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance",
           "type" : "iri"
         } ],
         "definition" : [ {
@@ -3185,44 +3185,6 @@
         "IRI-based" : "Banking"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#Parking",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Parking",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Purpose related to parking a vehicle.",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "Parking"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#HostelStay",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
@@ -3261,7 +3223,7 @@
         "IRI-based" : "HostelStay"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#ParkVisit",
+      "iri" : "http://w3id.org/trajecto/purpose/skos#Parking",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -3279,24 +3241,24 @@
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Park Visit",
+          "value" : "Parking",
           "type" : "label"
         } ],
         "definition" : [ {
           "identifier" : "definition",
           "language" : "en",
-          "value" : "Purpose related to visiting parks for relaxation or recreation.",
+          "value" : "Purpose related to parking a vehicle.",
           "type" : "label"
         } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose",
           "type" : "iri"
         } ]
       },
       "labels" : {
-        "IRI-based" : "ParkVisit"
+        "IRI-based" : "Parking"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#HeritageExploration",
@@ -3343,6 +3305,44 @@
         "IRI-based" : "HeritageExploration"
       }
     }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#ParkVisit",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Park Visit",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Purpose related to visiting parks for relaxation or recreation.",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ParkVisit"
+      }
+    }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#NightlifeActivity",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
@@ -3379,6 +3379,44 @@
       },
       "labels" : {
         "IRI-based" : "NightlifeActivity"
+      }
+    }, {
+      "iri" : "http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage",
+      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Religious Pilgrimage",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Purpose related to visiting sacred sites as part of a religious journey.",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ReligiousPilgrimage"
       }
     }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose",
@@ -3447,44 +3485,6 @@
         "IRI-based" : "AccommodationPurpose"
       }
     }, {
-      "iri" : "http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage",
-      "baseIri" : "http://w3id.org/trajecto/purpose/skos",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Religious Pilgrimage",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Purpose related to visiting sacred sites as part of a religious journey.",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ReligiousPilgrimage"
-      }
-    }, {
       "iri" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose",
       "baseIri" : "http://w3id.org/trajecto/purpose/skos",
       "annotations" : {
@@ -3509,22 +3509,22 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#TherapySession",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "http://w3id.org/trajecto/purpose/skos#PharmacyVisit",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos#MedicalAppointment",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "http://w3id.org/trajecto/purpose/skos#EmergencyCare",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#TherapySession",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/purpose/skos#PharmacyVisit",
           "type" : "iri"
         } ],
         "definition" : [ {

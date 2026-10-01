@@ -364,7 +364,7 @@ patterns:SpreadTimePattern a owl:Class ;
 
 patterns:SteadyMovement a owl:Class ;
     rdfs:label "Steady Movement"@en ;
-    rdfs:comment "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."@en ;
+    rdfs:comment "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory movement."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/patterns> ;
     rdfs:subClassOf patterns:FocusPattern .
 

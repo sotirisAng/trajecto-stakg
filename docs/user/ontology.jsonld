@@ -267,7 +267,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."
+    "@value" : "The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto/user"
@@ -568,7 +568,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."
+    "@value" : "A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto#Person"
@@ -605,7 +605,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."
+    "@value" : "Relates a person to a category preference inferred from all of their trajectories."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto#Person"
@@ -645,7 +645,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."
+    "@value" : "Relates a user profile directly to a category preference, without a chain of snapshots."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto/user#UserProfile"
@@ -785,7 +785,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Share of the interactions with the category that are immersive (SR-20)."
+    "@value" : "Share of the interactions with the category that are immersive."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto/user#Preference"
@@ -822,7 +822,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "True for the seed snapshot that Stage 8 writes before any trajectory update."
+    "@value" : "True for the initial snapshot of a user profile, created before any trajectory updates it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto/user#ProfileSnapshot"
@@ -946,7 +946,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Share of the interactions with the category that are meaningful (SR-20)."
+    "@value" : "Share of the interactions with the category that are meaningful."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto/user#Preference"
@@ -1094,7 +1094,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Number of interactions with the category (SR-20)."
+    "@value" : "Number of interactions with the category."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/trajecto/user#Preference"

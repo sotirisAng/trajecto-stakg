@@ -90,7 +90,7 @@ user:PreferredStyle a owl:Class ;
 
 user:ProfileSnapshot a owl:Class ;
     rdfs:label "Profile Snapshot"@en ;
-    rdfs:comment "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."@en ;
+    rdfs:comment "The state of a user profile after a trajectory. Each snapshot updates the previous one by an exponentially weighted moving average of the preferences the trajectory shows."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> .
 
 user:ShortDwell a owl:Class ;
@@ -157,7 +157,7 @@ user:generatedSnapshot a owl:ObjectProperty ;
 
 user:hasAffinityFor a owl:ObjectProperty ;
     rdfs:label "has affinity for"@en ;
-    rdfs:comment "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."@en ;
+    rdfs:comment "A person has a strong inferred preference for a POI class. The value is a class of the POI module used as an individual."@en ;
     rdfs:domain trajecto:Person ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> .
 
@@ -170,14 +170,14 @@ user:hasDwellPreference a owl:ObjectProperty ;
 
 user:hasInferredPreference a owl:ObjectProperty ;
     rdfs:label "has inferred preference"@en ;
-    rdfs:comment "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."@en ;
+    rdfs:comment "Relates a person to a category preference inferred from all of their trajectories."@en ;
     rdfs:domain trajecto:Person ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
     rdfs:range user:Preference .
 
 user:hasPreference a owl:ObjectProperty ;
     rdfs:label "has preference"@en ;
-    rdfs:comment "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."@en ;
+    rdfs:comment "Relates a user profile directly to a category preference, without a chain of snapshots."@en ;
     rdfs:domain user:UserProfile ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
     rdfs:range user:Preference .
@@ -257,14 +257,14 @@ user:hasInterest a owl:DatatypeProperty ;
 
 user:immersiveFraction a owl:DatatypeProperty ;
     rdfs:label "immersive fraction"@en ;
-    rdfs:comment "Share of the interactions with the category that are immersive (SR-20)."@en ;
+    rdfs:comment "Share of the interactions with the category that are immersive."@en ;
     rdfs:domain user:Preference ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
     rdfs:range xsd:float .
 
 user:initialPreferences a owl:DatatypeProperty ;
     rdfs:label "initial preferences"@en ;
-    rdfs:comment "True for the seed snapshot that Stage 8 writes before any trajectory update."@en ;
+    rdfs:comment "True for the initial snapshot of a user profile, created before any trajectory updates it."@en ;
     rdfs:domain user:ProfileSnapshot ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
     rdfs:range xsd:boolean .
@@ -293,7 +293,7 @@ user:learningRate a owl:DatatypeProperty ;
 
 user:meaningfulFraction a owl:DatatypeProperty ;
     rdfs:label "meaningful fraction"@en ;
-    rdfs:comment "Share of the interactions with the category that are meaningful (SR-20)."@en ;
+    rdfs:comment "Share of the interactions with the category that are meaningful."@en ;
     rdfs:domain user:Preference ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
     rdfs:range xsd:float .
@@ -321,7 +321,7 @@ user:profileCreated a owl:DatatypeProperty ;
 
 user:totalVisits a owl:DatatypeProperty ;
     rdfs:label "total visits"@en ;
-    rdfs:comment "Number of interactions with the category (SR-20)."@en ;
+    rdfs:comment "Number of interactions with the category."@en ;
     rdfs:domain user:Preference ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
     rdfs:range xsd:integer .

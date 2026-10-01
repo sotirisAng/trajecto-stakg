@@ -15,7 +15,7 @@
     dcterms:created "2025-05-09"^^xsd:date ;
     dcterms:creator "Konstantinos Kotis",
         "Sotirios Angelis" ;
-    dcterms:description "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that the SPARQL enrichment uses to classify interactions."@en ;
+    dcterms:description "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that classify interactions as passing, meaningful or immersive."@en ;
     dcterms:issued "2026-10-01"^^xsd:date ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcterms:modified "2026-10-01"^^xsd:date ;
@@ -889,19 +889,19 @@ poi:Restaurant a owl:Class ;
     rdfs:subClassOf poi:Dining ;
     skos:related purposeskos:RestaurantDining .
 
-poi:RestRoom a owl:Class ;
-    rdfs:label "Public Restroom"@en ;
-    poi:hasTypeConfiguration poi:ServicePOI-configuration ;
-    rdfs:comment "Public toilets provided as a public service. See also Restroom, under Amenity."@en ;
-    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
-    rdfs:subClassOf poi:PublicService .
-
 poi:Restroom a owl:Class ;
     rdfs:label "Restroom"@en ;
     poi:hasTypeConfiguration poi:Restroom-configuration ;
     rdfs:comment "Toilets available to visitors."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
     rdfs:subClassOf poi:Amenity .
+
+poi:RestRoom a owl:Class ;
+    rdfs:label "Public Restroom"@en ;
+    poi:hasTypeConfiguration poi:ServicePOI-configuration ;
+    rdfs:comment "Public toilets provided as a public service. See also Restroom, under Amenity."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+    rdfs:subClassOf poi:PublicService .
 
 poi:Retail a owl:Class ;
     rdfs:label "Retail"@en ;
@@ -972,7 +972,7 @@ poi:ShoppingMall a owl:Class ;
 
 poi:SignificantPOI a owl:Class ;
     rdfs:label "Significant POI"@en ;
-    rdfs:comment "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories. Assigned by the dominance and significance stage."@en ;
+    rdfs:comment "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
     rdfs:subClassOf trajecto:PointOfInterest .
 
@@ -1142,14 +1142,14 @@ poi:Waypoint a owl:Class ;
 
 poi:covisitedWith a owl:ObjectProperty ;
     rdfs:label "covisited with"@en ;
-    rdfs:comment "Two POIs are interacted with meaningfully in the same trajectory (SR-05)."@en ;
+    rdfs:comment "Two POIs are interacted with meaningfully in the same trajectory."@en ;
     rdfs:domain trajecto:PointOfInterest ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
     rdfs:range trajecto:PointOfInterest .
 
 poi:followedBy a owl:ObjectProperty ;
     rdfs:label "followed by"@en ;
-    rdfs:comment "A POI is interacted with meaningfully immediately before another in at least one trajectory (SR-06)."@en ;
+    rdfs:comment "A POI is interacted with meaningfully immediately before another in at least one trajectory."@en ;
     rdfs:domain trajecto:PointOfInterest ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
     rdfs:range trajecto:PointOfInterest .
@@ -1209,7 +1209,7 @@ poi:hasPrimaryFunction a owl:ObjectProperty ;
 
 poi:hasRoom a owl:ObjectProperty ;
     rdfs:label "has room"@en ;
-    rdfs:comment "The museum room in which an artwork is exhibited (BIRD instantiation)."@en ;
+    rdfs:comment "The room in which an artwork is exhibited."@en ;
     rdfs:domain trajecto:PointOfInterest ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> .
 
@@ -1255,14 +1255,14 @@ poi:hasDwellTime a owl:DatatypeProperty ;
 
 poi:hasDwellTimeInSeconds a owl:DatatypeProperty ;
     rdfs:label "has dwell time in seconds"@en ;
-    rdfs:comment "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime used by the CSV-to-RDF mappings and analytics queries."@en ;
+    rdfs:comment "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime."@en ;
     rdfs:domain poi:POIInteraction ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
     rdfs:range xsd:float .
 
 poi:hasEra a owl:DatatypeProperty ;
     rdfs:label "has era"@en ;
-    rdfs:comment "The art-historical era of an artwork (BIRD instantiation)."@en ;
+    rdfs:comment "The art-historical era of an artwork."@en ;
     rdfs:domain trajecto:PointOfInterest ;
     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
     rdfs:range xsd:string .

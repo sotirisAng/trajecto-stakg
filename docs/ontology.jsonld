@@ -149,7 +149,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21)."
+    "@value" : "Structural role of a POI in the graphs of co-visitation and flow between POIs, derived from its degree, betweenness and PageRank relative to the other POIs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto"
@@ -200,7 +200,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."
+    "@value" : "Engagement of a trajectory as a whole, derived from the share of its meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto"
@@ -591,7 +591,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration."
+    "@value" : "A trajectory part during which the moving object stays within a small area for a minimum time."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto"
@@ -613,7 +613,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing."
+    "@value" : "A raw position that belongs to a stop."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto"
@@ -651,7 +651,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13."
+    "@value" : "A scored similarity between two trajectories along one facet, such as shared POI categories, navigation pattern, temporal context or purpose."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto"
@@ -912,7 +912,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset."
+    "@value" : "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, for example in indoor tracking."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Point"
@@ -932,7 +932,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes."
+    "@value" : "Relates a trajectory to its engagement level. The engagement classes of the profiles module are defined over it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -972,7 +972,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Number of immersive interactions of a trajectory (SR-40)."
+    "@value" : "Number of immersive interactions of a trajectory."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1038,7 +1038,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Jaccard similarity of the POI categories two trajectories interact with (SR-11)."
+    "@value" : "Jaccard similarity of the POI categories two trajectories interact with."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1058,7 +1058,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Number of meaningful interactions of a trajectory (SR-40)."
+    "@value" : "Number of meaningful interactions of a trajectory."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1101,7 +1101,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Two trajectories share a navigation pattern (SR-12)."
+    "@value" : "Two trajectories share a navigation pattern."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1148,7 +1148,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position."
+    "@value" : "Relates a raw position to a later position of the same trajectory. Asserted between consecutive positions; as the property is transitive, a reasoner extends it to every later position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#RawPosition"
@@ -1237,7 +1237,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Number of distinct POIs a trajectory interacts with (SR-44)."
+    "@value" : "Number of distinct POIs a trajectory interacts with."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1343,7 +1343,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory."
+    "@value" : "Relates a trajectory to its purpose, a concept of the purpose concept scheme."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1363,7 +1363,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Two trajectories share a purpose (BIRD instantiation)."
+    "@value" : "Two trajectories share a purpose."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1429,7 +1429,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Jaccard similarity of the temporal contexts of two trajectories (SR-13)."
+    "@value" : "Jaccard similarity of the temporal contexts of two trajectories."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1449,7 +1449,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42)."
+    "@value" : "Sum of the dwell times of the interactions of a trajectory, in seconds."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1493,7 +1493,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Number of distinct POI categories a trajectory interacts with (SR-43)."
+    "@value" : "Number of distinct POI categories a trajectory interacts with."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
@@ -1533,7 +1533,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes."
+    "@value" : "Relates a trajectory to the POI interactions that occur at its positions. A shortcut for the chain from a trajectory to its positions to their interactions, so that classes over interactions can be defined on trajectories."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"

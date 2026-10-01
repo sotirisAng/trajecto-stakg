@@ -14,7 +14,7 @@
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-29</terms:created>
         <terms:creator>Konstantinos Kotis</terms:creator>
         <terms:creator>Sotirios Angelis</terms:creator>
-        <terms:description xml:lang="en">Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter.</terms:description>
+        <terms:description xml:lang="en">Trajectory events detected over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
@@ -329,7 +329,7 @@
 
     <owl:Class rdf:about="http://w3id.org/trajecto/events#TrajectoryEvent">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-        <rdfs:comment xml:lang="en">A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A behavioral transition or notable occurrence within a trajectory, detected from the sequence of its positions and the types of their interactions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
         <rdfs:label xml:lang="en">Trajectory Event</rdfs:label>
     </owl:Class>

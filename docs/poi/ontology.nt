@@ -3,7 +3,7 @@
 <http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
 <http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
-<http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/description> "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that the SPARQL enrichment uses to classify interactions."@en .
+<http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/description> "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that classify interactions as passing, meaningful or immersive."@en .
 <http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
 <http://w3id.org/trajecto/poi> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -121,7 +121,7 @@
 <http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
 <http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#PointOfInterest> .
-<http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Two POIs are interacted with meaningfully in the same trajectory (SR-05)."@en .
+<http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Two POIs are interacted with meaningfully in the same trajectory."@en .
 <http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/poi> .
 <http://w3id.org/trajecto/poi#covisitedWith> <http://www.w3.org/2000/01/rdf-schema#label> "covisited with"@en .
 # 
@@ -129,7 +129,7 @@
 <http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
 <http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#PointOfInterest> .
-<http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI is interacted with meaningfully immediately before another in at least one trajectory (SR-06)."@en .
+<http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI is interacted with meaningfully immediately before another in at least one trajectory."@en .
 <http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/poi> .
 <http://w3id.org/trajecto/poi#followedBy> <http://www.w3.org/2000/01/rdf-schema#label> "followed by"@en .
 # 
@@ -196,7 +196,7 @@
 # http://w3id.org/trajecto/poi#hasRoom
 <http://w3id.org/trajecto/poi#hasRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/trajecto/poi#hasRoom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
-<http://w3id.org/trajecto/poi#hasRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "The museum room in which an artwork is exhibited (BIRD instantiation)."@en .
+<http://w3id.org/trajecto/poi#hasRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "The room in which an artwork is exhibited."@en .
 <http://w3id.org/trajecto/poi#hasRoom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/poi> .
 <http://w3id.org/trajecto/poi#hasRoom> <http://www.w3.org/2000/01/rdf-schema#label> "has room"@en .
 # 
@@ -256,7 +256,7 @@
 <http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/poi#POIInteraction> .
 <http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime used by the CSV-to-RDF mappings and analytics queries."@en .
+<http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime."@en .
 <http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/poi> .
 <http://w3id.org/trajecto/poi#hasDwellTimeInSeconds> <http://www.w3.org/2000/01/rdf-schema#label> "has dwell time in seconds"@en .
 # 
@@ -264,7 +264,7 @@
 <http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
 <http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/2000/01/rdf-schema#comment> "The art-historical era of an artwork (BIRD instantiation)."@en .
+<http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/2000/01/rdf-schema#comment> "The art-historical era of an artwork."@en .
 <http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/poi> .
 <http://w3id.org/trajecto/poi#hasEra> <http://www.w3.org/2000/01/rdf-schema#label> "has era"@en .
 # 
@@ -1385,7 +1385,7 @@
 # http://w3id.org/trajecto/poi#SignificantPOI
 <http://w3id.org/trajecto/poi#SignificantPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/trajecto/poi#SignificantPOI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#PointOfInterest> .
-<http://w3id.org/trajecto/poi#SignificantPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories. Assigned by the dominance and significance stage."@en .
+<http://w3id.org/trajecto/poi#SignificantPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories."@en .
 <http://w3id.org/trajecto/poi#SignificantPOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/poi> .
 <http://w3id.org/trajecto/poi#SignificantPOI> <http://www.w3.org/2000/01/rdf-schema#label> "Significant POI"@en .
 # 

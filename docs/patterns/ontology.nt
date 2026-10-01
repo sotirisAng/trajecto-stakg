@@ -603,7 +603,7 @@
 # http://w3id.org/trajecto/patterns#SteadyMovement
 <http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
-<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."@en .
+<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory movement."@en .
 <http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
 <http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Steady Movement"@en .
 # 

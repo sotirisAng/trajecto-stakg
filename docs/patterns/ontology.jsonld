@@ -1032,7 +1032,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."
+    "@value" : "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory movement."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://w3id.org/trajecto/patterns"
