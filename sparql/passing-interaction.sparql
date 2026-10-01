@@ -1,0 +1,44 @@
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT {
+    ?interaction a poi:PassingInteraction .
+}
+WHERE {
+    ?interaction poi:hasDwellTime ?dwellTime ;
+          poi:interactsWith ?poi .
+
+    ?poi a ?poiType .
+
+    ?configIndividual a poi:POITypeConfiguration ;
+        poi:hasMinimumMeaningfulDuration ?minDuration .
+    # A POI class's configuration is the individual named after it:
+    # <Class>-configuration or <Class>POI-configuration.
+    FILTER(STRAFTER(STR(?configIndividual), "#") IN (
+        CONCAT(STRAFTER(STR(?poiType), "#"), "-configuration"),
+        CONCAT(STRAFTER(STR(?poiType), "#"), "POI-configuration")))
+
+    FILTER(?dwellTime < ?minDuration)
+
+    # Origin and destination interactions are meaningful by position
+    # (origin-destination-interaction.sparql), never passing.
+    FILTER(!STRENDS(STR(?interaction), "_origin") && !STRENDS(STR(?interaction), "_destination"))
+
+    # A POI typed with two unrelated classes can clear one class's threshold
+    # and miss the other's; meaningful wins (meaningful-interaction.sparql runs first).
+    FILTER NOT EXISTS { ?interaction a poi:MeaningfulInteraction }
+
+    # Use most specific type
+    FILTER NOT EXISTS {
+        ?poi a ?moreSpecificType .
+        ?moreSpecificConfig a poi:POITypeConfiguration ;
+            poi:hasMinimumMeaningfulDuration ?moreSpecificMin .
+        FILTER(STRAFTER(STR(?moreSpecificConfig), "#") IN (
+            CONCAT(STRAFTER(STR(?moreSpecificType), "#"), "-configuration"),
+            CONCAT(STRAFTER(STR(?moreSpecificType), "#"), "POI-configuration")))
+        FILTER(?moreSpecificType != ?poiType)
+        ?moreSpecificType rdfs:subClassOf+ ?poiType .
+    }
+}

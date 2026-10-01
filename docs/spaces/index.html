@@ -1,0 +1,2683 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto Spaces Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto/spaces#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto/spaces#","name":"Trajecto Spaces Module", "headline":"This module extends the trajecto ontology with cultural spaces and commercial spaces concepts for semantic trajectories.", "dateReleased":"2025-05-09", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto Spaces Module</h1>
+<h2>Release: 2025-05-09</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/spaces/1.1.0">http://w3id.org/trajecto/spaces/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/spaces/1.0">http://w3id.org/trajecto/spaces/1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://w3id.org/trajecto/purpose">purpose</a></dd>
+
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/spaces.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/spaces.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This module extends the trajecto ontology with cultural spaces and commercial spaces concepts for semantic trajectories.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/spaces.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dul</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>spaces</b></td><td>&lt;http://w3id.org/trajecto/spaces#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto-spaces: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AccessPoint" title="http://w3id.org/trajecto/spaces#AccessPoint">Access Point</a>
+   </li>
+   <li>
+      <a href="#ArtifactEngagement"
+         title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a>
+   </li>
+   <li>
+      <a href="#Artwork" title="http://w3id.org/trajecto/spaces#Artwork">Artwork</a>
+   </li>
+   <li>
+      <a href="#Browsing" title="http://w3id.org/trajecto/spaces#Browsing">Browsing</a>
+   </li>
+   <li>
+      <a href="#BrowsingIntent" title="http://w3id.org/trajecto/spaces#BrowsingIntent">Browsing Intent</a>
+   </li>
+   <li>
+      <a href="#Checkout" title="http://w3id.org/trajecto/spaces#Checkout">Checkout</a>
+   </li>
+   <li>
+      <a href="#CommercialIntent" title="http://w3id.org/trajecto/spaces#CommercialIntent">Commercial Intent</a>
+   </li>
+   <li>
+      <a href="#CommercialInteraction"
+         title="http://w3id.org/trajecto/spaces#CommercialInteraction">Commercial Interaction</a>
+   </li>
+   <li>
+      <a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a>
+   </li>
+   <li>
+      <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a>
+   </li>
+   <li>
+      <a href="#CulturalInteraction"
+         title="http://w3id.org/trajecto/spaces#CulturalInteraction">Cultural Interaction</a>
+   </li>
+   <li>
+      <a href="#CulturalLandmark" title="http://w3id.org/trajecto/spaces#CulturalLandmark">Cultural Landmark</a>
+   </li>
+   <li>
+      <a href="#CulturalSignificance"
+         title="http://w3id.org/trajecto/spaces#CulturalSignificance">Cultural Significance</a>
+   </li>
+   <li>
+      <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a>
+   </li>
+   <li>
+      <a href="#Department" title="http://w3id.org/trajecto/spaces#Department">Department</a>
+   </li>
+   <li>
+      <a href="#DigitalInstallation"
+         title="http://w3id.org/trajecto/spaces#DigitalInstallation">Digital Installation</a>
+   </li>
+   <li>
+      <a href="#DiningEstablishment"
+         title="http://w3id.org/trajecto/spaces#DiningEstablishment">Dining Establishment</a>
+   </li>
+   <li>
+      <a href="#DiningSpace" title="http://w3id.org/trajecto/spaces#DiningSpace">Dining Space</a>
+   </li>
+   <li>
+      <a href="#Exhibit" title="http://w3id.org/trajecto/spaces#Exhibit">Exhibit</a>
+   </li>
+   <li>
+      <a href="#ExhibitMetadata" title="http://w3id.org/trajecto/spaces#ExhibitMetadata">Exhibit Metadata</a>
+   </li>
+   <li>
+      <a href="#FirstTimeVisit" title="http://w3id.org/trajecto/spaces#FirstTimeVisit">First Time Visit</a>
+   </li>
+   <li>
+      <a href="#Gallery" title="http://w3id.org/trajecto/spaces#Gallery">Gallery</a>
+   </li>
+   <li>
+      <a href="#GuidedVisit" title="http://w3id.org/trajecto/spaces#GuidedVisit">Guided Visit</a>
+   </li>
+   <li>
+      <a href="#HistoricalObject" title="http://w3id.org/trajecto/spaces#HistoricalObject">Historical Object</a>
+   </li>
+   <li>
+      <a href="#HistoricalSite" title="http://w3id.org/trajecto/spaces#HistoricalSite">Historical Site</a>
+   </li>
+   <li>
+      <a href="#Listening" title="http://w3id.org/trajecto/spaces#Listening">Listening</a>
+   </li>
+   <li>
+      <a href="#Museum" title="http://w3id.org/trajecto/spaces#Museum">Museum</a>
+   </li>
+   <li>
+      <a href="#PerformanceVenue"
+         title="http://w3id.org/trajecto/spaces#PerformanceVenue">Performance Venue</a>
+   </li>
+   <li>
+      <a href="#Photographing" title="http://w3id.org/trajecto/spaces#Photographing">Photographing</a>
+   </li>
+   <li>
+      <a href="#Product" title="http://w3id.org/trajecto/spaces#Product">Product</a>
+   </li>
+   <li>
+      <a href="#Purchase" title="http://w3id.org/trajecto/spaces#Purchase">Purchase</a>
+   </li>
+   <li>
+      <a href="#PurchaseIntent" title="http://w3id.org/trajecto/spaces#PurchaseIntent">Purchase Intent</a>
+   </li>
+   <li>
+      <a href="#Reading" title="http://w3id.org/trajecto/spaces#Reading">Reading</a>
+   </li>
+   <li>
+      <a href="#RepeatVisit" title="http://w3id.org/trajecto/spaces#RepeatVisit">Repeat Visit</a>
+   </li>
+   <li>
+      <a href="#RetailLayout" title="http://w3id.org/trajecto/spaces#RetailLayout">Retail Layout</a>
+   </li>
+   <li>
+      <a href="#RetailSpace" title="http://w3id.org/trajecto/spaces#RetailSpace">Retail Space</a>
+   </li>
+   <li>
+      <a href="#RetailStore" title="http://w3id.org/trajecto/spaces#RetailStore">Retail Store</a>
+   </li>
+   <li>
+      <a href="#SelfDirectedVisit"
+         title="http://w3id.org/trajecto/spaces#SelfDirectedVisit">Self Directed Visit</a>
+   </li>
+   <li>
+      <a href="#Service" title="http://w3id.org/trajecto/spaces#Service">Service</a>
+   </li>
+   <li>
+      <a href="#ServiceConsumption"
+         title="http://w3id.org/trajecto/spaces#ServiceConsumption">Service Consumption</a>
+   </li>
+   <li>
+      <a href="#ServiceIntent" title="http://w3id.org/trajecto/spaces#ServiceIntent">Service Intent</a>
+   </li>
+   <li>
+      <a href="#ServiceProvider" title="http://w3id.org/trajecto/spaces#ServiceProvider">Service Provider</a>
+   </li>
+   <li>
+      <a href="#ServiceSpace" title="http://w3id.org/trajecto/spaces#ServiceSpace">Service Space</a>
+   </li>
+   <li>
+      <a href="#ShoppingAisle" title="http://w3id.org/trajecto/spaces#ShoppingAisle">Shopping Aisle</a>
+   </li>
+   <li>
+      <a href="#ShoppingMall" title="http://w3id.org/trajecto/spaces#ShoppingMall">Shopping Mall</a>
+   </li>
+   <li>
+      <a href="#SocialLearning" title="http://w3id.org/trajecto/spaces#SocialLearning">Social Learning</a>
+   </li>
+   <li>
+      <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a>
+   </li>
+   <li>
+      <a href="#ThematicVisit" title="http://w3id.org/trajecto/spaces#ThematicVisit">Thematic Visit</a>
+   </li>
+   <li>
+      <a href="#TransactionEvent"
+         title="http://w3id.org/trajecto/spaces#TransactionEvent">Transaction Event</a>
+   </li>
+   <li>
+      <a href="#Viewing" title="http://w3id.org/trajecto/spaces#Viewing">Viewing</a>
+   </li>
+   <li>
+      <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a>
+   </li>
+   <li>
+      <a href="#Zone" title="http://w3id.org/trajecto/spaces#Zone">Zone</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#containsEntity" title="http://w3id.org/trajecto/spaces#containsEntity">contains entity</a>
+   </li>
+   <li>
+      <a href="#exhibits" title="http://w3id.org/trajecto/spaces#exhibits">exhibits</a>
+   </li>
+   <li>
+      <a href="#hasCommercialIntent"
+         title="http://w3id.org/trajecto/spaces#hasCommercialIntent">has commercial intent</a>
+   </li>
+   <li>
+      <a href="#hasCulturalSignificance"
+         title="http://w3id.org/trajecto/spaces#hasCulturalSignificance">has cultural significance</a>
+   </li>
+   <li>
+      <a href="#hasEntrance" title="http://w3id.org/trajecto/spaces#hasEntrance">has entrance</a>
+   </li>
+   <li>
+      <a href="#hasExhibitMetadata"
+         title="http://w3id.org/trajecto/spaces#hasExhibitMetadata">has exhibit metadata</a>
+   </li>
+   <li>
+      <a href="#hasExit" title="http://w3id.org/trajecto/spaces#hasExit">has exit</a>
+   </li>
+   <li>
+      <a href="#hasTransactionEvent"
+         title="http://w3id.org/trajecto/spaces#hasTransactionEvent">has transaction event</a>
+   </li>
+   <li>
+      <a href="#hasVisitContext" title="http://w3id.org/trajecto/spaces#hasVisitContext">has visit context</a>
+   </li>
+   <li>
+      <a href="#hasZone" title="http://w3id.org/trajecto/spaces#hasZone">has zone</a>
+   </li>
+   <li>
+      <a href="#isLocationOf" title="http://w3id.org/trajecto/spaces#isLocationOf">is location of</a>
+   </li>
+   <li>
+      <a href="#providesService" title="http://w3id.org/trajecto/spaces#providesService">provides service</a>
+   </li>
+   <li>
+      <a href="#sells" title="http://w3id.org/trajecto/spaces#sells">sells</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasAccessibility" title="http://w3id.org/trajecto/spaces#hasAccessibility">has accessibility</a>
+   </li>
+   <li>
+      <a href="#hasArtist" title="http://w3id.org/trajecto/spaces#hasArtist">has artist</a>
+   </li>
+   <li>
+      <a href="#hasCapacity" title="http://w3id.org/trajecto/spaces#hasCapacity">has capacity</a>
+   </li>
+   <li>
+      <a href="#hasCreationDate" title="http://w3id.org/trajecto/spaces#hasCreationDate">has creation date</a>
+   </li>
+   <li>
+      <a href="#hasExhibitID" title="http://w3id.org/trajecto/spaces#hasExhibitID">has exhibit ID</a>
+   </li>
+   <li>
+      <a href="#hasOpeningHours" title="http://w3id.org/trajecto/spaces#hasOpeningHours">has opening hours</a>
+   </li>
+   <li>
+      <a href="#hasPrice" title="http://w3id.org/trajecto/spaces#hasPrice">has price</a>
+   </li>
+   <li>
+      <a href="#hasProductCategory"
+         title="http://w3id.org/trajecto/spaces#hasProductCategory">has product category</a>
+   </li>
+   <li>
+      <a href="#hasTransactionAmount"
+         title="http://w3id.org/trajecto/spaces#hasTransactionAmount">has transaction amount</a>
+   </li>
+   <li>
+      <a href="#hasVisitDuration" title="http://w3id.org/trajecto/spaces#hasVisitDuration">has visit duration</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto-spaces: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module extends the trajecto ontology with cultural spaces and commercial spaces concepts for semantic trajectories.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto-spaces classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto-spaces.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AccessPoint" title="http://w3id.org/trajecto/spaces#AccessPoint">Access Point</a></li>
+  <li><a href="#ArtifactEngagement" title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a></li>
+  <li><a href="#Artwork" title="http://w3id.org/trajecto/spaces#Artwork">Artwork</a></li>
+  <li><a href="#Browsing" title="http://w3id.org/trajecto/spaces#Browsing">Browsing</a></li>
+  <li><a href="#BrowsingIntent" title="http://w3id.org/trajecto/spaces#BrowsingIntent">Browsing Intent</a></li>
+  <li><a href="#Checkout" title="http://w3id.org/trajecto/spaces#Checkout">Checkout</a></li>
+  <li><a href="#CommercialIntent" title="http://w3id.org/trajecto/spaces#CommercialIntent">Commercial Intent</a></li>
+  <li><a href="#CommercialInteraction" title="http://w3id.org/trajecto/spaces#CommercialInteraction">Commercial Interaction</a></li>
+  <li><a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a></li>
+  <li><a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a></li>
+  <li><a href="#CulturalInteraction" title="http://w3id.org/trajecto/spaces#CulturalInteraction">Cultural Interaction</a></li>
+  <li><a href="#CulturalLandmark" title="http://w3id.org/trajecto/spaces#CulturalLandmark">Cultural Landmark</a></li>
+  <li><a href="#CulturalSignificance" title="http://w3id.org/trajecto/spaces#CulturalSignificance">Cultural Significance</a></li>
+  <li><a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a></li>
+  <li><a href="#Department" title="http://w3id.org/trajecto/spaces#Department">Department</a></li>
+  <li><a href="#DigitalInstallation" title="http://w3id.org/trajecto/spaces#DigitalInstallation">Digital Installation</a></li>
+  <li><a href="#DiningEstablishment" title="http://w3id.org/trajecto/spaces#DiningEstablishment">Dining Establishment</a></li>
+  <li><a href="#DiningSpace" title="http://w3id.org/trajecto/spaces#DiningSpace">Dining Space</a></li>
+  <li><a href="#Exhibit" title="http://w3id.org/trajecto/spaces#Exhibit">Exhibit</a></li>
+  <li><a href="#ExhibitMetadata" title="http://w3id.org/trajecto/spaces#ExhibitMetadata">Exhibit Metadata</a></li>
+  <li><a href="#FirstTimeVisit" title="http://w3id.org/trajecto/spaces#FirstTimeVisit">First Time Visit</a></li>
+  <li><a href="#Gallery" title="http://w3id.org/trajecto/spaces#Gallery">Gallery</a></li>
+  <li><a href="#GuidedVisit" title="http://w3id.org/trajecto/spaces#GuidedVisit">Guided Visit</a></li>
+  <li><a href="#HistoricalObject" title="http://w3id.org/trajecto/spaces#HistoricalObject">Historical Object</a></li>
+  <li><a href="#HistoricalSite" title="http://w3id.org/trajecto/spaces#HistoricalSite">Historical Site</a></li>
+  <li><a href="#Listening" title="http://w3id.org/trajecto/spaces#Listening">Listening</a></li>
+  <li><a href="#Museum" title="http://w3id.org/trajecto/spaces#Museum">Museum</a></li>
+  <li><a href="#PerformanceVenue" title="http://w3id.org/trajecto/spaces#PerformanceVenue">Performance Venue</a></li>
+  <li><a href="#Photographing" title="http://w3id.org/trajecto/spaces#Photographing">Photographing</a></li>
+  <li><a href="#Product" title="http://w3id.org/trajecto/spaces#Product">Product</a></li>
+  <li><a href="#Purchase" title="http://w3id.org/trajecto/spaces#Purchase">Purchase</a></li>
+  <li><a href="#PurchaseIntent" title="http://w3id.org/trajecto/spaces#PurchaseIntent">Purchase Intent</a></li>
+  <li><a href="#Reading" title="http://w3id.org/trajecto/spaces#Reading">Reading</a></li>
+  <li><a href="#RepeatVisit" title="http://w3id.org/trajecto/spaces#RepeatVisit">Repeat Visit</a></li>
+  <li><a href="#RetailLayout" title="http://w3id.org/trajecto/spaces#RetailLayout">Retail Layout</a></li>
+  <li><a href="#RetailSpace" title="http://w3id.org/trajecto/spaces#RetailSpace">Retail Space</a></li>
+  <li><a href="#RetailStore" title="http://w3id.org/trajecto/spaces#RetailStore">Retail Store</a></li>
+  <li><a href="#SelfDirectedVisit" title="http://w3id.org/trajecto/spaces#SelfDirectedVisit">Self Directed Visit</a></li>
+  <li><a href="#Service" title="http://w3id.org/trajecto/spaces#Service">Service</a></li>
+  <li><a href="#ServiceConsumption" title="http://w3id.org/trajecto/spaces#ServiceConsumption">Service Consumption</a></li>
+  <li><a href="#ServiceIntent" title="http://w3id.org/trajecto/spaces#ServiceIntent">Service Intent</a></li>
+  <li><a href="#ServiceProvider" title="http://w3id.org/trajecto/spaces#ServiceProvider">Service Provider</a></li>
+  <li><a href="#ServiceSpace" title="http://w3id.org/trajecto/spaces#ServiceSpace">Service Space</a></li>
+  <li><a href="#ShoppingAisle" title="http://w3id.org/trajecto/spaces#ShoppingAisle">Shopping Aisle</a></li>
+  <li><a href="#ShoppingMall" title="http://w3id.org/trajecto/spaces#ShoppingMall">Shopping Mall</a></li>
+  <li><a href="#SocialLearning" title="http://w3id.org/trajecto/spaces#SocialLearning">Social Learning</a></li>
+  <li><a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a></li>
+  <li><a href="#ThematicVisit" title="http://w3id.org/trajecto/spaces#ThematicVisit">Thematic Visit</a></li>
+  <li><a href="#TransactionEvent" title="http://w3id.org/trajecto/spaces#TransactionEvent">Transaction Event</a></li>
+  <li><a href="#Viewing" title="http://w3id.org/trajecto/spaces#Viewing">Viewing</a></li>
+  <li><a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a></li>
+  <li><a href="#Zone" title="http://w3id.org/trajecto/spaces#Zone">Zone</a></li>
+ </ul>
+ <div class="entity" id="AccessPoint">
+  <h3>Access Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#AccessPoint</p>
+  <div class="comment">
+   <span class="markdown">A point where a space can be entered or exited.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#PointOfInterest" target="_blank" title="http://w3id.org/trajecto#PointOfInterest">Point Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEntrance" title="http://w3id.org/trajecto/spaces#hasEntrance">has entrance</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExit" title="http://w3id.org/trajecto/spaces#hasExit">has exit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ArtifactEngagement">
+  <h3>Artifact Engagement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ArtifactEngagement</p>
+  <div class="comment">
+   <span class="markdown">Direct engagement with a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalInteraction" title="http://w3id.org/trajecto/spaces#CulturalInteraction">Cultural Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Listening" title="http://w3id.org/trajecto/spaces#Listening">Listening</a> <sup class="type-c" title="class">c</sup>, <a href="#Photographing" title="http://w3id.org/trajecto/spaces#Photographing">Photographing</a> <sup class="type-c" title="class">c</sup>, <a href="#Reading" title="http://w3id.org/trajecto/spaces#Reading">Reading</a> <sup class="type-c" title="class">c</sup>, <a href="#Viewing" title="http://w3id.org/trajecto/spaces#Viewing">Viewing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Artwork">
+  <h3>Artwork<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Artwork</p>
+  <div class="comment">
+   <span class="markdown">A creative work of art.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Browsing">
+  <h3>Browsing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Browsing</p>
+  <div class="comment">
+   <span class="markdown">Looking at products without necessarily intending to purchase.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialInteraction" title="http://w3id.org/trajecto/spaces#CommercialInteraction">Commercial Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BrowsingIntent">
+  <h3>Browsing Intent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#BrowsingIntent</p>
+  <div class="comment">
+   <span class="markdown">Intent to browse without specific purchase plans.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialIntent" title="http://w3id.org/trajecto/spaces#CommercialIntent">Commercial Intent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Checkout">
+  <h3>Checkout<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Checkout</p>
+  <div class="comment">
+   <span class="markdown">Area where purchases are processed and paid for.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Zone" title="http://w3id.org/trajecto/spaces#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CommercialIntent">
+  <h3>Commercial Intent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CommercialIntent</p>
+  <div class="comment">
+   <span class="markdown">The intended purpose behind a commercial visit.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BrowsingIntent" title="http://w3id.org/trajecto/spaces#BrowsingIntent">Browsing Intent</a> <sup class="type-c" title="class">c</sup>, <a href="#PurchaseIntent" title="http://w3id.org/trajecto/spaces#PurchaseIntent">Purchase Intent</a> <sup class="type-c" title="class">c</sup>, <a href="#ServiceIntent" title="http://w3id.org/trajecto/spaces#ServiceIntent">Service Intent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCommercialIntent" title="http://w3id.org/trajecto/spaces#hasCommercialIntent">has commercial intent</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CommercialInteraction">
+  <h3>Commercial Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CommercialInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction in a commercial context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#Interaction" target="_blank" title="http://w3id.org/trajecto#Interaction">Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Browsing" title="http://w3id.org/trajecto/spaces#Browsing">Browsing</a> <sup class="type-c" title="class">c</sup>, <a href="#Purchase" title="http://w3id.org/trajecto/spaces#Purchase">Purchase</a> <sup class="type-c" title="class">c</sup>, <a href="#ServiceConsumption" title="http://w3id.org/trajecto/spaces#ServiceConsumption">Service Consumption</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CommercialSpace">
+  <h3>Commercial Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CommercialSpace</p>
+  <div class="comment">
+   <span class="markdown">A space dedicated to commercial activities such as retail, services, or dining.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A designated space where commercial transactions and activities take place.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Shops, malls, restaurants, banks</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DiningSpace" title="http://w3id.org/trajecto/spaces#DiningSpace">Dining Space</a> <sup class="type-c" title="class">c</sup>, <a href="#RetailSpace" title="http://w3id.org/trajecto/spaces#RetailSpace">Retail Space</a> <sup class="type-c" title="class">c</sup>, <a href="#ServiceSpace" title="http://w3id.org/trajecto/spaces#ServiceSpace">Service Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasOpeningHours" title="http://w3id.org/trajecto/spaces#hasOpeningHours">has opening hours</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalArtifact">
+  <h3>Cultural Artifact<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CulturalArtifact</p>
+  <div class="comment">
+   <span class="markdown">A physical object of cultural significance or value.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#ObjectOfInterest" target="_blank" title="http://w3id.org/trajecto#ObjectOfInterest">Object Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Artwork" title="http://w3id.org/trajecto/spaces#Artwork">Artwork</a> <sup class="type-c" title="class">c</sup>, <a href="#DigitalInstallation" title="http://w3id.org/trajecto/spaces#DigitalInstallation">Digital Installation</a> <sup class="type-c" title="class">c</sup>, <a href="#Exhibit" title="http://w3id.org/trajecto/spaces#Exhibit">Exhibit</a> <sup class="type-c" title="class">c</sup>, <a href="#HistoricalObject" title="http://w3id.org/trajecto/spaces#HistoricalObject">Historical Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasArtist" title="http://w3id.org/trajecto/spaces#hasArtist">has artist</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCreationDate" title="http://w3id.org/trajecto/spaces#hasCreationDate">has creation date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCulturalSignificance" title="http://w3id.org/trajecto/spaces#hasCulturalSignificance">has cultural significance</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExhibitID" title="http://w3id.org/trajecto/spaces#hasExhibitID">has exhibit ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExhibitMetadata" title="http://w3id.org/trajecto/spaces#hasExhibitMetadata">has exhibit metadata</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#exhibits" title="http://w3id.org/trajecto/spaces#exhibits">exhibits</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalInteraction">
+  <h3>Cultural Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CulturalInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction with cultural artifacts or in cultural contexts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#Interaction" target="_blank" title="http://w3id.org/trajecto#Interaction">Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ArtifactEngagement" title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a> <sup class="type-c" title="class">c</sup>, <a href="#SocialLearning" title="http://w3id.org/trajecto/spaces#SocialLearning">Social Learning</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalLandmark">
+  <h3>Cultural Landmark<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CulturalLandmark</p>
+  <div class="comment">
+   <span class="markdown">A recognizable cultural feature of a landscape or cityscape.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalSignificance">
+  <h3>Cultural Significance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CulturalSignificance</p>
+  <div class="comment">
+   <span class="markdown">Information about the cultural importance or value of an entity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCulturalSignificance" title="http://w3id.org/trajecto/spaces#hasCulturalSignificance">has cultural significance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalSpace">
+  <h3>Cultural Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#CulturalSpace</p>
+  <div class="comment">
+   <span class="markdown">A space dedicated to cultural activities, exhibitions, or performances.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A designated space where cultural artifacts are exhibited or cultural events take place.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Museums, galleries, theaters, historical sites</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CulturalLandmark" title="http://w3id.org/trajecto/spaces#CulturalLandmark">Cultural Landmark</a> <sup class="type-c" title="class">c</sup>, <a href="#Gallery" title="http://w3id.org/trajecto/spaces#Gallery">Gallery</a> <sup class="type-c" title="class">c</sup>, <a href="#HistoricalSite" title="http://w3id.org/trajecto/spaces#HistoricalSite">Historical Site</a> <sup class="type-c" title="class">c</sup>, <a href="#Museum" title="http://w3id.org/trajecto/spaces#Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#PerformanceVenue" title="http://w3id.org/trajecto/spaces#PerformanceVenue">Performance Venue</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#exhibits" title="http://w3id.org/trajecto/spaces#exhibits">exhibits</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCulturalSignificance" title="http://w3id.org/trajecto/spaces#hasCulturalSignificance">has cultural significance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Department">
+  <h3>Department<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Department</p>
+  <div class="comment">
+   <span class="markdown">A section of a retail space dedicated to a specific category of products.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Zone" title="http://w3id.org/trajecto/spaces#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DigitalInstallation">
+  <h3>Digital Installation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#DigitalInstallation</p>
+  <div class="comment">
+   <span class="markdown">A digital or electronic installation in a cultural space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DiningEstablishment">
+  <h3>Dining Establishment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#DiningEstablishment</p>
+  <div class="comment">
+   <span class="markdown">A restaurant, café, or other food service establishment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DiningSpace" title="http://w3id.org/trajecto/spaces#DiningSpace">Dining Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DiningSpace">
+  <h3>Dining Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#DiningSpace</p>
+  <div class="comment">
+   <span class="markdown">A commercial space dedicated to food service.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DiningEstablishment" title="http://w3id.org/trajecto/spaces#DiningEstablishment">Dining Establishment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Exhibit">
+  <h3>Exhibit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Exhibit</p>
+  <div class="comment">
+   <span class="markdown">An object displayed in a cultural space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExhibitMetadata">
+  <h3>Exhibit Metadata<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ExhibitMetadata</p>
+  <div class="comment">
+   <span class="markdown">Descriptive information about a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasExhibitMetadata" title="http://w3id.org/trajecto/spaces#hasExhibitMetadata">has exhibit metadata</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FirstTimeVisit">
+  <h3>First Time Visit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#FirstTimeVisit</p>
+  <div class="comment">
+   <span class="markdown">A first-time visit to a space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Gallery">
+  <h3>Gallery<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Gallery</p>
+  <div class="comment">
+   <span class="markdown">A space for exhibiting art, typically visual art.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GuidedVisit">
+  <h3>Guided Visit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#GuidedVisit</p>
+  <div class="comment">
+   <span class="markdown">A visit with a guide or guided tour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HistoricalObject">
+  <h3>Historical Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#HistoricalObject</p>
+  <div class="comment">
+   <span class="markdown">An object with historical significance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HistoricalSite">
+  <h3>Historical Site<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#HistoricalSite</p>
+  <div class="comment">
+   <span class="markdown">A location recognized for its historical significance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Listening">
+  <h3>Listening<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Listening</p>
+  <div class="comment">
+   <span class="markdown">Listening to audio associated with a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtifactEngagement" title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Museum">
+  <h3>Museum<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Museum</p>
+  <div class="comment">
+   <span class="markdown">A building or institution that houses and exhibits collections of artifacts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PerformanceVenue">
+  <h3>Performance Venue<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#PerformanceVenue</p>
+  <div class="comment">
+   <span class="markdown">A space designed for performing arts events.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Photographing">
+  <h3>Photographing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Photographing</p>
+  <div class="comment">
+   <span class="markdown">Taking photographs of a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtifactEngagement" title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Product">
+  <h3>Product<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Product</p>
+  <div class="comment">
+   <span class="markdown">A physical item available for purchase in a commercial space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#ObjectOfInterest" target="_blank" title="http://w3id.org/trajecto#ObjectOfInterest">Object Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasPrice" title="http://w3id.org/trajecto/spaces#hasPrice">has price</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasProductCategory" title="http://w3id.org/trajecto/spaces#hasProductCategory">has product category</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#sells" title="http://w3id.org/trajecto/spaces#sells">sells</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Purchase">
+  <h3>Purchase<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Purchase</p>
+  <div class="comment">
+   <span class="markdown">The act of buying a product or service.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialInteraction" title="http://w3id.org/trajecto/spaces#CommercialInteraction">Commercial Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PurchaseIntent">
+  <h3>Purchase Intent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#PurchaseIntent</p>
+  <div class="comment">
+   <span class="markdown">Intent to purchase specific products or services.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialIntent" title="http://w3id.org/trajecto/spaces#CommercialIntent">Commercial Intent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Reading">
+  <h3>Reading<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Reading</p>
+  <div class="comment">
+   <span class="markdown">Reading text associated with a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtifactEngagement" title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RepeatVisit">
+  <h3>Repeat Visit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#RepeatVisit</p>
+  <div class="comment">
+   <span class="markdown">A return visit to a previously visited space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RetailLayout">
+  <h3>Retail Layout<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#RetailLayout</p>
+  <div class="comment">
+   <span class="markdown">The physical arrangement and organization of a retail space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RetailSpace">
+  <h3>Retail Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#RetailSpace</p>
+  <div class="comment">
+   <span class="markdown">A commercial space dedicated to selling goods to customers.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#RetailStore" title="http://w3id.org/trajecto/spaces#RetailStore">Retail Store</a> <sup class="type-c" title="class">c</sup>, <a href="#ShoppingMall" title="http://w3id.org/trajecto/spaces#ShoppingMall">Shopping Mall</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#sells" title="http://w3id.org/trajecto/spaces#sells">sells</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RetailStore">
+  <h3>Retail Store<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#RetailStore</p>
+  <div class="comment">
+   <span class="markdown">A retail establishment selling goods to customers.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RetailSpace" title="http://w3id.org/trajecto/spaces#RetailSpace">Retail Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SelfDirectedVisit">
+  <h3>Self Directed Visit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#SelfDirectedVisit</p>
+  <div class="comment">
+   <span class="markdown">A self-guided visit without formal guidance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Service">
+  <h3>Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Service</p>
+  <div class="comment">
+   <span class="markdown">A non-physical offering available in a commercial space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasPrice" title="http://w3id.org/trajecto/spaces#hasPrice">has price</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#providesService" title="http://w3id.org/trajecto/spaces#providesService">provides service</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceConsumption">
+  <h3>Service Consumption<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ServiceConsumption</p>
+  <div class="comment">
+   <span class="markdown">The act of using or consuming a service.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialInteraction" title="http://w3id.org/trajecto/spaces#CommercialInteraction">Commercial Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceIntent">
+  <h3>Service Intent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ServiceIntent</p>
+  <div class="comment">
+   <span class="markdown">Intent to use specific services.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialIntent" title="http://w3id.org/trajecto/spaces#CommercialIntent">Commercial Intent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceProvider">
+  <h3>Service Provider<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ServiceProvider</p>
+  <div class="comment">
+   <span class="markdown">An establishment providing specific services (banking, healthcare, etc.).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ServiceSpace" title="http://w3id.org/trajecto/spaces#ServiceSpace">Service Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceSpace">
+  <h3>Service Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ServiceSpace</p>
+  <div class="comment">
+   <span class="markdown">A commercial space dedicated to providing services.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ServiceProvider" title="http://w3id.org/trajecto/spaces#ServiceProvider">Service Provider</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#providesService" title="http://w3id.org/trajecto/spaces#providesService">provides service</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ShoppingAisle">
+  <h3>Shopping Aisle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ShoppingAisle</p>
+  <div class="comment">
+   <span class="markdown">A pathway between shelves or displays in a retail space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Zone" title="http://w3id.org/trajecto/spaces#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ShoppingMall">
+  <h3>Shopping Mall<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ShoppingMall</p>
+  <div class="comment">
+   <span class="markdown">A large enclosed shopping area containing multiple retail stores.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RetailSpace" title="http://w3id.org/trajecto/spaces#RetailSpace">Retail Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialLearning">
+  <h3>Social Learning<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#SocialLearning</p>
+  <div class="comment">
+   <span class="markdown">Learning through social interaction in a cultural context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalInteraction" title="http://w3id.org/trajecto/spaces#CulturalInteraction">Cultural Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Space">
+  <h3>Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Space</p>
+  <div class="comment">
+   <span class="markdown">A designated area with defined boundaries where human movement occurs.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A physical or conceptual area where human movement and activities take place, characterized by boundaries and internal organization.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#RegionOfInterest" target="_blank" title="http://w3id.org/trajecto#RegionOfInterest">Region Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#containsEntity" title="http://w3id.org/trajecto/spaces#containsEntity">contains entity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAccessibility" title="http://w3id.org/trajecto/spaces#hasAccessibility">has accessibility</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCapacity" title="http://w3id.org/trajecto/spaces#hasCapacity">has capacity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEntrance" title="http://w3id.org/trajecto/spaces#hasEntrance">has entrance</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExit" title="http://w3id.org/trajecto/spaces#hasExit">has exit</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasZone" title="http://w3id.org/trajecto/spaces#hasZone">has zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#isLocationOf" title="http://w3id.org/trajecto/spaces#isLocationOf">is location of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThematicVisit">
+  <h3>Thematic Visit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#ThematicVisit</p>
+  <div class="comment">
+   <span class="markdown">A visit focused on a specific theme or aspect of the space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransactionEvent">
+  <h3>Transaction Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#TransactionEvent</p>
+  <div class="comment">
+   <span class="markdown">An event involving a commercial transaction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#EventOfInterest" target="_blank" title="http://w3id.org/trajecto#EventOfInterest">Event Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasTransactionAmount" title="http://w3id.org/trajecto/spaces#hasTransactionAmount">has transaction amount</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTransactionEvent" title="http://w3id.org/trajecto/spaces#hasTransactionEvent">has transaction event</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Viewing">
+  <h3>Viewing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Viewing</p>
+  <div class="comment">
+   <span class="markdown">Looking at or observing a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtifactEngagement" title="http://w3id.org/trajecto/spaces#ArtifactEngagement">Artifact Engagement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VisitContext">
+  <h3>Visit Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#VisitContext</p>
+  <div class="comment">
+   <span class="markdown">Contextual information about a visit to a space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FirstTimeVisit" title="http://w3id.org/trajecto/spaces#FirstTimeVisit">First Time Visit</a> <sup class="type-c" title="class">c</sup>, <a href="#GuidedVisit" title="http://w3id.org/trajecto/spaces#GuidedVisit">Guided Visit</a> <sup class="type-c" title="class">c</sup>, <a href="#RepeatVisit" title="http://w3id.org/trajecto/spaces#RepeatVisit">Repeat Visit</a> <sup class="type-c" title="class">c</sup>, <a href="#SelfDirectedVisit" title="http://w3id.org/trajecto/spaces#SelfDirectedVisit">Self Directed Visit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicVisit" title="http://w3id.org/trajecto/spaces#ThematicVisit">Thematic Visit</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasVisitDuration" title="http://w3id.org/trajecto/spaces#hasVisitDuration">has visit duration</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasVisitContext" title="http://w3id.org/trajecto/spaces#hasVisitContext">has visit context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Zone">
+  <h3>Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#Zone</p>
+  <div class="comment">
+   <span class="markdown">A defined section or area within a larger space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#RegionOfInterest" target="_blank" title="http://w3id.org/trajecto#RegionOfInterest">Region Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Checkout" title="http://w3id.org/trajecto/spaces#Checkout">Checkout</a> <sup class="type-c" title="class">c</sup>, <a href="#Department" title="http://w3id.org/trajecto/spaces#Department">Department</a> <sup class="type-c" title="class">c</sup>, <a href="#ShoppingAisle" title="http://w3id.org/trajecto/spaces#ShoppingAisle">Shopping Aisle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasZone" title="http://w3id.org/trajecto/spaces#hasZone">has zone</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#containsEntity" title="http://w3id.org/trajecto/spaces#containsEntity">contains entity</a></li>
+  <li><a href="#exhibits" title="http://w3id.org/trajecto/spaces#exhibits">exhibits</a></li>
+  <li><a href="#hasCommercialIntent" title="http://w3id.org/trajecto/spaces#hasCommercialIntent">has commercial intent</a></li>
+  <li><a href="#hasCulturalSignificance" title="http://w3id.org/trajecto/spaces#hasCulturalSignificance">has cultural significance</a></li>
+  <li><a href="#hasEntrance" title="http://w3id.org/trajecto/spaces#hasEntrance">has entrance</a></li>
+  <li><a href="#hasExhibitMetadata" title="http://w3id.org/trajecto/spaces#hasExhibitMetadata">has exhibit metadata</a></li>
+  <li><a href="#hasExit" title="http://w3id.org/trajecto/spaces#hasExit">has exit</a></li>
+  <li><a href="#hasTransactionEvent" title="http://w3id.org/trajecto/spaces#hasTransactionEvent">has transaction event</a></li>
+  <li><a href="#hasVisitContext" title="http://w3id.org/trajecto/spaces#hasVisitContext">has visit context</a></li>
+  <li><a href="#hasZone" title="http://w3id.org/trajecto/spaces#hasZone">has zone</a></li>
+  <li><a href="#isLocationOf" title="http://w3id.org/trajecto/spaces#isLocationOf">is location of</a></li>
+  <li><a href="#providesService" title="http://w3id.org/trajecto/spaces#providesService">provides service</a></li>
+  <li><a href="#sells" title="http://w3id.org/trajecto/spaces#sells">sells</a></li>
+ </ul>
+ <div class="entity" id="containsEntity">
+  <h3>contains entity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#containsEntity</p>
+  <div class="comment">
+   <span class="markdown">Relates a space to entities it contains.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#EntityOfInterest" target="_blank" title="http://w3id.org/trajecto#EntityOfInterest">Entity Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="exhibits">
+  <h3>exhibits<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#exhibits</p>
+  <div class="comment">
+   <span class="markdown">Relates a cultural space to artifacts it exhibits.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCommercialIntent">
+  <h3>has commercial intent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasCommercialIntent</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory part to commercial intent.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CommercialIntent" title="http://w3id.org/trajecto/spaces#CommercialIntent">Commercial Intent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCulturalSignificance">
+  <h3>has cultural significance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasCulturalSignificance</p>
+  <div class="comment">
+   <span class="markdown">Links a cultural entity to its significance information.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#CulturalSpace" title="http://w3id.org/trajecto/spaces#CulturalSpace">Cultural Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CulturalSignificance" title="http://w3id.org/trajecto/spaces#CulturalSignificance">Cultural Significance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEntrance">
+  <h3>has entrance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasEntrance</p>
+  <div class="comment">
+   <span class="markdown">Relates a space to its entrance points.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AccessPoint" title="http://w3id.org/trajecto/spaces#AccessPoint">Access Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExhibitMetadata">
+  <h3>has exhibit metadata<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasExhibitMetadata</p>
+  <div class="comment">
+   <span class="markdown">Links a cultural artifact to its metadata information.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ExhibitMetadata" title="http://w3id.org/trajecto/spaces#ExhibitMetadata">Exhibit Metadata</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExit">
+  <h3>has exit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasExit</p>
+  <div class="comment">
+   <span class="markdown">Relates a space to its exit points.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AccessPoint" title="http://w3id.org/trajecto/spaces#AccessPoint">Access Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTransactionEvent">
+  <h3>has transaction event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasTransactionEvent</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory part to a transaction event.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TransactionEvent" title="http://w3id.org/trajecto/spaces#TransactionEvent">Transaction Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasVisitContext">
+  <h3>has visit context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasVisitContext</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory to the context of the visit.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasZone">
+  <h3>has zone<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasZone</p>
+  <div class="comment">
+   <span class="markdown">Relates a space to its constituent zones or areas.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Zone" title="http://w3id.org/trajecto/spaces#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isLocationOf">
+  <h3>is location of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#isLocationOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a space to events that take place there.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#EventOfInterest" target="_blank" title="http://w3id.org/trajecto#EventOfInterest">Event Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="providesService">
+  <h3>provides service<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#providesService</p>
+  <div class="comment">
+   <span class="markdown">Relates a service space to services it provides.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceSpace" title="http://w3id.org/trajecto/spaces#ServiceSpace">Service Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Service" title="http://w3id.org/trajecto/spaces#Service">Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sells">
+  <h3>sells<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#sells</p>
+  <div class="comment">
+   <span class="markdown">Relates a retail space to products it sells.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RetailSpace" title="http://w3id.org/trajecto/spaces#RetailSpace">Retail Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Product" title="http://w3id.org/trajecto/spaces#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasAccessibility" title="http://w3id.org/trajecto/spaces#hasAccessibility">has accessibility</a></li>
+  <li><a href="#hasArtist" title="http://w3id.org/trajecto/spaces#hasArtist">has artist</a></li>
+  <li><a href="#hasCapacity" title="http://w3id.org/trajecto/spaces#hasCapacity">has capacity</a></li>
+  <li><a href="#hasCreationDate" title="http://w3id.org/trajecto/spaces#hasCreationDate">has creation date</a></li>
+  <li><a href="#hasExhibitID" title="http://w3id.org/trajecto/spaces#hasExhibitID">has exhibit ID</a></li>
+  <li><a href="#hasOpeningHours" title="http://w3id.org/trajecto/spaces#hasOpeningHours">has opening hours</a></li>
+  <li><a href="#hasPrice" title="http://w3id.org/trajecto/spaces#hasPrice">has price</a></li>
+  <li><a href="#hasProductCategory" title="http://w3id.org/trajecto/spaces#hasProductCategory">has product category</a></li>
+  <li><a href="#hasTransactionAmount" title="http://w3id.org/trajecto/spaces#hasTransactionAmount">has transaction amount</a></li>
+  <li><a href="#hasVisitDuration" title="http://w3id.org/trajecto/spaces#hasVisitDuration">has visit duration</a></li>
+ </ul>
+ <div class="entity" id="hasAccessibility">
+  <h3>has accessibility<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasAccessibility</p>
+  <div class="comment">
+   <span class="markdown">Accessibility features of a space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasArtist">
+  <h3>has artist<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasArtist</p>
+  <div class="comment">
+   <span class="markdown">Artist or creator of a cultural artifact.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCapacity">
+  <h3>has capacity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasCapacity</p>
+  <div class="comment">
+   <span class="markdown">Maximum capacity of a space in terms of people.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Space" title="http://w3id.org/trajecto/spaces#Space">Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCreationDate">
+  <h3>has creation date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasCreationDate</p>
+  <div class="comment">
+   <span class="markdown">Date when a cultural artifact was created.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExhibitID">
+  <h3>has exhibit ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasExhibitID</p>
+  <div class="comment">
+   <span class="markdown">Identifier for a cultural artifact in an exhibition.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CulturalArtifact" title="http://w3id.org/trajecto/spaces#CulturalArtifact">Cultural Artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOpeningHours">
+  <h3>has opening hours<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasOpeningHours</p>
+  <div class="comment">
+   <span class="markdown">Opening hours of a commercial space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CommercialSpace" title="http://w3id.org/trajecto/spaces#CommercialSpace">Commercial Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPrice">
+  <h3>has price<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasPrice</p>
+  <div class="comment">
+   <span class="markdown">Price of a product or service.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Product" title="http://w3id.org/trajecto/spaces#Product">Product</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Service" title="http://w3id.org/trajecto/spaces#Service">Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProductCategory">
+  <h3>has product category<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasProductCategory</p>
+  <div class="comment">
+   <span class="markdown">Category of a product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Product" title="http://w3id.org/trajecto/spaces#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTransactionAmount">
+  <h3>has transaction amount<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasTransactionAmount</p>
+  <div class="comment">
+   <span class="markdown">Amount of money involved in a transaction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransactionEvent" title="http://w3id.org/trajecto/spaces#TransactionEvent">Transaction Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasVisitDuration">
+  <h3>has visit duration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spaces#hasVisitDuration</p>
+  <div class="comment">
+   <span class="markdown">Duration of a visit.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spaces">http://w3id.org/trajecto/spaces</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#VisitContext" title="http://w3id.org/trajecto/spaces#VisitContext">Visit Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#duration" target="_blank" title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

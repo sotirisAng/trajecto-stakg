@@ -1,0 +1,24 @@
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+# Mark origin and destination interactions as meaningful and with their specific type
+# Origin interactions (start of trajectory) -> StartInteraction
+# Destination interactions (end of trajectory) -> DestinationInteraction
+
+INSERT {
+    ?interaction a poi:MeaningfulInteraction .
+    ?interaction a poi:StartInteraction .
+}
+WHERE {
+    ?interaction a poi:POIInteraction .
+    FILTER(STRENDS(STR(?interaction), "_origin"))
+};
+
+INSERT {
+    ?interaction a poi:MeaningfulInteraction .
+    ?interaction a poi:DestinationInteraction .
+}
+WHERE {
+    ?interaction a poi:POIInteraction .
+    FILTER(STRENDS(STR(?interaction), "_destination"))
+}

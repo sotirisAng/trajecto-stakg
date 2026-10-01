@@ -1,0 +1,122 @@
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix poi:      <http://w3id.org/trajecto/poi#> .
+@prefix patterns: <http://w3id.org/trajecto/patterns#> .
+@prefix context:  <http://w3id.org/trajecto/context#> .
+@prefix dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix time:     <http://www.w3.org/2006/time#> .
+@prefix ex:       <http://w3id.org/trajecto/validation#> .
+
+ex: a owl:Ontology ;
+    sh:declare [
+        sh:prefix "poi" ;
+        sh:namespace "http://w3id.org/trajecto/poi#"^^xsd:anyURI ;
+    ] .
+
+# --- Stage 06: Navigation Styles (cumulative: stage-05 + navigation pattern) ---
+
+ex:TrajectoryShape a sh:NodeShape ;
+    sh:targetClass datacron:Trajectory ;
+    sh:property [
+        sh:path [ sh:inversePath dul:isPartOf ] ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory should have at least one position" ;
+    ] ;
+    sh:property [
+        sh:path context:hasTemporalContext ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory must have temporal context" ;
+    ] ;
+    sh:property [
+        sh:path context:hasTemporalContext ;
+        sh:in (
+            context:Morning context:Afternoon context:Evening context:Night
+            context:Weekday context:Weekend
+            context:Spring context:Summer context:Fall context:Winter
+            context:SpecialPeriod
+            time:Monday time:Tuesday time:Wednesday time:Thursday
+            time:Friday time:Saturday time:Sunday
+        ) ;
+        sh:severity sh:Violation ;
+        sh:message "Temporal context must be a known value" ;
+    ] ;
+    sh:property [
+        sh:path patterns:exhibitsPattern ;
+        sh:minCount 1 ;
+        sh:in (
+            patterns:CasualMovement
+            patterns:ExploratoryMovement
+            patterns:TargetedSegment
+            patterns:ImmersiveMovement
+        ) ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory should have a known navigation pattern" ;
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "trajectory_\\d+" ;
+    sh:severity sh:Warning ;
+    sh:message "Trajectory URI must match pattern trajectory_DIGITS" .
+
+ex:PositionShape a sh:NodeShape ;
+    sh:targetClass datacron:RawPosition ;
+    sh:property [
+        sh:path dul:isPartOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class datacron:Trajectory ;
+        sh:severity sh:Violation ;
+        sh:message "Position must belong to exactly one trajectory" ;
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "rawPosition_\\d+_\\d+" ;
+    sh:severity sh:Violation ;
+    sh:message "Position URI must match pattern rawPosition_TRAJ_SEQ" .
+
+ex:InteractionShape a sh:NodeShape ;
+    sh:targetClass poi:POIInteraction ;
+    sh:property [
+        sh:path poi:interactsWith ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class trajecto:PointOfInterest ;
+        sh:severity sh:Violation ;
+        sh:message "Interaction must link to exactly one PointOfInterest" ;
+    ] ;
+    sh:property [
+        sh:path poi:hasDwellTimeInSeconds ;
+        sh:minCount 1 ;
+        sh:datatype xsd:float ;
+        sh:severity sh:Violation ;
+        sh:message "Interaction must have a dwell time (xsd:float)" ;
+    ] .
+
+ex:NonEndpointDwellShape a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:prefixes ex: ;
+        sh:select """
+            SELECT ?this WHERE {
+                ?this a poi:POIInteraction .
+                FILTER NOT EXISTS { ?this a poi:StartInteraction }
+                FILTER NOT EXISTS { ?this a poi:DestinationInteraction }
+            }
+        """ ;
+    ] ;
+    sh:property [
+        sh:path poi:hasDwellTimeInSeconds ;
+        sh:minExclusive 0 ;
+        sh:severity sh:Violation ;
+        sh:message "Non-endpoint interaction must have positive dwell time (required for scoring)" ;
+    ] .
+
+ex:POIShape a sh:NodeShape ;
+    sh:targetClass trajecto:PointOfInterest ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "pointOfInterest_\\d+" ;
+    sh:severity sh:Warning ;
+    sh:message "POI URI must match pattern pointOfInterest_DIGITS" .

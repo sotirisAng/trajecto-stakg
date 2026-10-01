@@ -1,0 +1,113 @@
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix scheduled: <http://w3id.org/trajecto/scheduled#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/trajecto/scheduled> a owl:Ontology ;
+    rdfs:label "trajecto-scheduled-events"@en ;
+    dcterms:created "2026-04-22"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "Externally scheduled events (concerts, conferences, exhibitions, matches, services) hosted at a POI for a finite time window. Event-gated POI categories are recommended only when such an event overlaps the trajectory."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Scheduled Events Module"@en ;
+    vann:preferredNamespacePrefix "scheduled" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/scheduled#" ;
+    owl:imports <http://w3id.org/trajecto/poi> ;
+    owl:priorVersion <http://w3id.org/trajecto/scheduled/1.0> ;
+    owl:versionIRI <http://w3id.org/trajecto/scheduled/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+scheduled:ScheduledEvent a owl:Class ;
+    rdfs:label "Scheduled Event"@en ;
+    rdfs:comment "A calendared event (concert, conference, exhibition, sports match, festival, religious service) hosted at a POI for a finite time window. Distinct from trajecto/events#TrajectoryEvent which models behavioral trajectory events."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:subClassOf dul:Event .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+scheduled:hostedAt a owl:ObjectProperty ;
+    rdfs:label "hosted at"@en ;
+    rdfs:comment "POI where the scheduled event takes place."@en ;
+    rdfs:domain scheduled:ScheduledEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:range trajecto:PointOfInterest .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+scheduled:endTime a owl:DatatypeProperty ;
+    rdfs:label "end time"@en ;
+    rdfs:comment "Event end (inclusive). Equal to startTime for instantaneous events."@en ;
+    rdfs:domain scheduled:ScheduledEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:range xsd:dateTime .
+
+scheduled:eventCategory a owl:DatatypeProperty ;
+    rdfs:label "event category"@en ;
+    rdfs:comment "Event classification: Concert, Exhibition, Conference, Festival, Sports, Theater, ReligiousService, Other."@en ;
+    rdfs:domain scheduled:ScheduledEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:range xsd:string .
+
+scheduled:externalId a owl:DatatypeProperty ;
+    rdfs:label "external id"@en ;
+    rdfs:comment "Identifier assigned by the source system; used for idempotent ingestion."@en ;
+    rdfs:domain scheduled:ScheduledEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:range xsd:string .
+
+scheduled:externalSource a owl:DatatypeProperty ;
+    rdfs:label "external source"@en ;
+    rdfs:comment "Provenance tag: fixture, ticketmaster, eventbrite, etc."@en ;
+    rdfs:domain scheduled:ScheduledEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:range xsd:string .
+
+scheduled:startTime a owl:DatatypeProperty ;
+    rdfs:label "start time"@en ;
+    rdfs:comment "Event start (inclusive)."@en ;
+    rdfs:domain scheduled:ScheduledEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/scheduled> ;
+    rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .

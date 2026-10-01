@@ -1,0 +1,38 @@
+# SR-53: Materialize CategoryTransition events
+# Transition between consecutive meaningful interactions at POIs of different categories.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX events:   <http://w3id.org/trajecto/events#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasEvent _:evt .
+    _:evt a events:CategoryTransition .
+    _:evt events:atPosition ?pos2 .
+    _:evt events:fromCategory ?cat1 .
+    _:evt events:toCategory ?cat2 .
+    _:evt events:eventSequenceIndex ?idx2 .
+}
+WHERE {
+    ?pos1 dul:isPartOf ?traj .
+    ?pos1 trajecto:hasInteraction ?int1 .
+    ?int1 a poi:MeaningfulInteraction .
+    ?int1 poi:interactsWith ?poi1 .
+    ?poi1 a ?cat1 .
+    FILTER(?cat1 != trajecto:PointOfInterest && ?cat1 != poi:SignificantPOI)
+
+    ?pos1 trajecto:hasNextPosition ?pos2 .
+
+    ?pos2 dul:isPartOf ?traj .
+    ?pos2 trajecto:hasInteraction ?int2 .
+    ?int2 a poi:MeaningfulInteraction .
+    ?int2 poi:interactsWith ?poi2 .
+    ?poi2 a ?cat2 .
+    FILTER(?cat2 != trajecto:PointOfInterest && ?cat2 != poi:SignificantPOI)
+
+    FILTER(?cat1 != ?cat2)
+
+    OPTIONAL { ?pos2 trajecto:hasPositionIndex ?idx2 }
+}

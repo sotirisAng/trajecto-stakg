@@ -1,0 +1,137 @@
+[
+  {
+    "id": "rm-2018-04-21-natale-di-roma",
+    "label": "Natale di Roma Historical Parade",
+    "category": "Festival",
+    "start": "2018-04-21T10:00:00",
+    "end":   "2018-04-21T18:00:00",
+    "lat": 41.8902,
+    "lon": 12.4922
+  },
+  {
+    "id": "rm-2018-06-15-opera-caracalla",
+    "label": "Opera al Circo Massimo — Open Air Aida",
+    "category": "Concert",
+    "start": "2018-06-15T21:00:00",
+    "end":   "2018-06-16T00:00:00",
+    "lat": 41.8862,
+    "lon": 12.4851
+  },
+  {
+    "id": "rm-2019-03-09-fori-exhibition",
+    "label": "Fori Imperiali Archaeological Exhibition",
+    "category": "Exhibition",
+    "start": "2019-03-09T10:00:00",
+    "end":   "2019-03-09T19:00:00",
+    "lat": 41.8925,
+    "lon": 12.4853
+  },
+  {
+    "id": "rm-2019-06-02-festa-repubblica",
+    "label": "Festa della Repubblica Parade and Fly-over",
+    "category": "Festival",
+    "start": "2019-06-02T09:30:00",
+    "end":   "2019-06-02T13:30:00",
+    "lat": 41.8947,
+    "lon": 12.4830
+  },
+  {
+    "id": "rm-2019-10-12-symposium-antiquity",
+    "label": "International Symposium on Classical Antiquity",
+    "category": "Conference",
+    "start": "2019-10-12T09:00:00",
+    "end":   "2019-10-13T18:00:00",
+    "lat": 41.8957,
+    "lon": 12.4760
+  },
+  {
+    "id": "rm-2020-07-11-pantheon-concert",
+    "label": "Summer Classical Concert at Pantheon Square",
+    "category": "Concert",
+    "start": "2020-07-11T20:30:00",
+    "end":   "2020-07-11T23:00:00",
+    "lat": 41.8986,
+    "lon": 12.4769
+  },
+  {
+    "id": "rm-2021-05-08-navona-art-fair",
+    "label": "Piazza Navona Contemporary Art Fair",
+    "category": "Exhibition",
+    "start": "2021-05-08T10:00:00",
+    "end":   "2021-05-09T20:00:00",
+    "lat": 41.8992,
+    "lon": 12.4732
+  },
+  {
+    "id": "rm-2021-10-02-rome-marathon",
+    "label": "Rome City Marathon — Fori Start",
+    "category": "Sports",
+    "start": "2021-10-02T07:30:00",
+    "end":   "2021-10-02T14:00:00",
+    "lat": 41.8908,
+    "lon": 12.4894
+  },
+  {
+    "id": "rm-2022-04-10-trevi-festival",
+    "label": "Trevi Fountain Spring Lights Festival",
+    "category": "Festival",
+    "start": "2022-04-10T19:00:00",
+    "end":   "2022-04-10T23:30:00",
+    "lat": 41.9009,
+    "lon": 12.4833
+  },
+  {
+    "id": "rm-2022-09-20-castel-santangelo-conf",
+    "label": "Mediterranean Heritage Conference",
+    "category": "Conference",
+    "start": "2022-09-20T09:00:00",
+    "end":   "2022-09-21T18:00:00",
+    "lat": 41.9031,
+    "lon": 12.4663
+  },
+  {
+    "id": "rm-2023-03-19-teatro-opera",
+    "label": "Primavera Lirica: Gala Serale",
+    "category": "Concert",
+    "start": "2023-03-19T20:00:00",
+    "end":   "2023-03-19T23:00:00",
+    "lat": 41.9011,
+    "lon": 12.4978
+  },
+  {
+    "id": "rm-2023-06-24-san-giovanni",
+    "label": "Festa di San Giovanni Evening Procession",
+    "category": "Festival",
+    "start": "2023-06-24T18:00:00",
+    "end":   "2023-06-24T23:30:00",
+    "lat": 41.8864,
+    "lon": 12.4957
+  },
+  {
+    "id": "rm-2024-02-18-piazza-venezia-exhibition",
+    "label": "Risorgimento Centenary Exhibition",
+    "category": "Exhibition",
+    "start": "2024-02-18T10:00:00",
+    "end":   "2024-02-18T19:00:00",
+    "lat": 41.8947,
+    "lon": 12.4830
+  },
+  {
+    "id": "rm-2024-05-11-circo-massimo-rally",
+    "label": "Rome Sports Day at Circo Massimo",
+    "category": "Sports",
+    "start": "2024-05-11T09:00:00",
+    "end":   "2024-05-11T17:00:00",
+    "lat": 41.8862,
+    "lon": 12.4851
+  },
+  {
+    "id": "rm-2024-10-05-popolo-concert",
+    "label": "Piazza del Popolo Autumn Concert",
+    "category": "Concert",
+    "start": "2024-10-05T20:00:00",
+    "end":   "2024-10-05T23:30:00",
+    "lat": 41.9109,
+    "lon": 12.4764
+  }
+]

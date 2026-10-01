@@ -1,0 +1,2795 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto Spatial Analysis Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto/spatial#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto/spatial#","name":"Trajecto Spatial Analysis Module", "headline":"This module extends the trajecto ontology with comprehensive spatial analysis capabilities for trajectory proximity detection and spatial relationship modeling.", "dateReleased":"2025-05-30", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto Spatial Analysis Module</h1>
+<h2>Release: 2025-05-30</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/spatial/1.1.0">http://w3id.org/trajecto/spatial/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/spatial/1.0">http://w3id.org/trajecto/spatial/1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/spatial.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/spatial.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This module extends the trajecto ontology with comprehensive spatial analysis capabilities for trajectory proximity detection and spatial relationship modeling.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/spatial.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dul</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>geo</b></td><td>&lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>spatial</b></td><td>&lt;http://w3id.org/trajecto/spatial#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto-spatial: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AttractionInteraction"
+         title="http://w3id.org/trajecto/spatial#AttractionInteraction">Attraction Interaction</a>
+   </li>
+   <li>
+      <a href="#AvoidanceInteraction"
+         title="http://w3id.org/trajecto/spatial#AvoidanceInteraction">Avoidance Interaction</a>
+   </li>
+   <li>
+      <a href="#BufferAnalysis" title="http://w3id.org/trajecto/spatial#BufferAnalysis">Buffer Analysis</a>
+   </li>
+   <li>
+      <a href="#CircularZone" title="http://w3id.org/trajecto/spatial#CircularZone">Circular Zone</a>
+   </li>
+   <li>
+      <a href="#CloseProximity" title="http://w3id.org/trajecto/spatial#CloseProximity">Close Proximity</a>
+   </li>
+   <li>
+      <a href="#DBSCANClustering"
+         title="http://w3id.org/trajecto/spatial#DBSCANClustering">DBSCAN Clustering</a>
+   </li>
+   <li>
+      <a href="#DenseCluster" title="http://w3id.org/trajecto/spatial#DenseCluster">Dense Cluster</a>
+   </li>
+   <li>
+      <a href="#DistanceMeasurement"
+         title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a>
+   </li>
+   <li>
+      <a href="#DistanceMetric" title="http://w3id.org/trajecto/spatial#DistanceMetric">Distance Metric</a>
+   </li>
+   <li>
+      <a href="#DistantProximity"
+         title="http://w3id.org/trajecto/spatial#DistantProximity">Distant Proximity</a>
+   </li>
+   <li>
+      <a href="#EuclideanMetric" title="http://w3id.org/trajecto/spatial#EuclideanMetric">Euclidean Metric</a>
+   </li>
+   <li>
+      <a href="#HaversineMetric" title="http://w3id.org/trajecto/spatial#HaversineMetric">Haversine Metric</a>
+   </li>
+   <li>
+      <a href="#HighQuality" title="http://w3id.org/trajecto/spatial#HighQuality">High Quality</a>
+   </li>
+   <li>
+      <a href="#ImmediateProximity"
+         title="http://w3id.org/trajecto/spatial#ImmediateProximity">Immediate Proximity</a>
+   </li>
+   <li>
+      <a href="#IndoorSpatialContext"
+         title="http://w3id.org/trajecto/spatial#IndoorSpatialContext">Indoor Spatial Context</a>
+   </li>
+   <li>
+      <a href="#InfluenceInteraction"
+         title="http://w3id.org/trajecto/spatial#InfluenceInteraction">Influence Interaction</a>
+   </li>
+   <li>
+      <a href="#InfluenceZone" title="http://w3id.org/trajecto/spatial#InfluenceZone">Influence Zone</a>
+   </li>
+   <li>
+      <a href="#KNearestNeighbor"
+         title="http://w3id.org/trajecto/spatial#KNearestNeighbor">K Nearest Neighbor</a>
+   </li>
+   <li>
+      <a href="#LowQuality" title="http://w3id.org/trajecto/spatial#LowQuality">Low Quality</a>
+   </li>
+   <li>
+      <a href="#ManhattanMetric"
+         title="http://w3id.org/trajecto/spatial#ManhattanMetric">Manhattan Metric</a>
+   </li>
+   <li>
+      <a href="#MediumQuality" title="http://w3id.org/trajecto/spatial#MediumQuality">Medium Quality</a>
+   </li>
+   <li>
+      <a href="#NearbyProximity"
+         title="http://w3id.org/trajecto/spatial#NearbyProximity">Nearby Proximity</a>
+   </li>
+   <li>
+      <a href="#NoiseCluster" title="http://w3id.org/trajecto/spatial#NoiseCluster">Noise Cluster</a>
+   </li>
+   <li>
+      <a href="#OutdoorSpatialContext"
+         title="http://w3id.org/trajecto/spatial#OutdoorSpatialContext">Outdoor Spatial Context</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">point</a>
+   </li>
+   <li>
+      <a href="#PolygonalZone" title="http://w3id.org/trajecto/spatial#PolygonalZone">Polygonal Zone</a>
+   </li>
+   <li>
+      <a href="#ProximityAnalysis"
+         title="http://w3id.org/trajecto/spatial#ProximityAnalysis">Proximity Analysis</a>
+   </li>
+   <li>
+      <a href="#ProximityInteraction"
+         title="http://w3id.org/trajecto/spatial#ProximityInteraction">Proximity Interaction</a>
+   </li>
+   <li>
+      <a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a>
+   </li>
+   <li>
+      <a href="#ProximityPattern"
+         title="http://w3id.org/trajecto/spatial#ProximityPattern">Proximity Pattern</a>
+   </li>
+   <li>
+      <a href="#ProximityResult"
+         title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a>
+   </li>
+   <li>
+      <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a>
+   </li>
+   <li>
+      <a href="#RuralSpatialContext"
+         title="http://w3id.org/trajecto/spatial#RuralSpatialContext">Rural Spatial Context</a>
+   </li>
+   <li>
+      <a href="#SparseCluster" title="http://w3id.org/trajecto/spatial#SparseCluster">Sparse Cluster</a>
+   </li>
+   <li>
+      <a href="#SpatialAnalysisAlgorithm"
+         title="http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm">Spatial Analysis Algorithm</a>
+   </li>
+   <li>
+      <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a>
+   </li>
+   <li>
+      <a href="#SpatialColdspot"
+         title="http://w3id.org/trajecto/spatial#SpatialColdspot">Spatial Coldspot</a>
+   </li>
+   <li>
+      <a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a>
+   </li>
+   <li>
+      <a href="#SpatialCorridor"
+         title="http://w3id.org/trajecto/spatial#SpatialCorridor">Spatial Corridor</a>
+   </li>
+   <li>
+      <a href="#SpatialFeature" title="http://w3id.org/trajecto/spatial#SpatialFeature">Spatial Feature</a>
+   </li>
+   <li>
+      <a href="#SpatialHotspot" title="http://w3id.org/trajecto/spatial#SpatialHotspot">Spatial Hotspot</a>
+   </li>
+   <li>
+      <a href="#SpatialInteraction"
+         title="http://w3id.org/trajecto/spatial#SpatialInteraction">Spatial Interaction</a>
+   </li>
+   <li>
+      <a href="#SpatialQuality" title="http://w3id.org/trajecto/spatial#SpatialQuality">Spatial Quality</a>
+   </li>
+   <li>
+      <a href="#SpatialRelationship"
+         title="http://w3id.org/trajecto/spatial#SpatialRelationship">Spatial Relationship</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+         title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
+   </li>
+   <li>
+      <a href="#UrbanSpatialContext"
+         title="http://w3id.org/trajecto/spatial#UrbanSpatialContext">Urban Spatial Context</a>
+   </li>
+   <li>
+      <a href="#VicinityProximity"
+         title="http://w3id.org/trajecto/spatial#VicinityProximity">Vicinity Proximity</a>
+   </li>
+   <li>
+      <a href="#VoronoiAnalysis"
+         title="http://w3id.org/trajecto/spatial#VoronoiAnalysis">Voronoi Analysis</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#clustersWith" title="http://w3id.org/trajecto/spatial#clustersWith">clusters with</a>
+   </li>
+   <li>
+      <a href="#containsTrajectoryPart"
+         title="http://w3id.org/trajecto/spatial#containsTrajectoryPart">contains trajectory part</a>
+   </li>
+   <li>
+      <a href="#hasDistanceMeasurement"
+         title="http://w3id.org/trajecto/spatial#hasDistanceMeasurement">has distance measurement</a>
+   </li>
+   <li>
+      <a href="#hasInfluenceZone"
+         title="http://w3id.org/trajecto/spatial#hasInfluenceZone">has influence zone</a>
+   </li>
+   <li>
+      <a href="#hasProximityAnalysis"
+         title="http://w3id.org/trajecto/spatial#hasProximityAnalysis">has proximity analysis</a>
+   </li>
+   <li>
+      <a href="#hasProximityResult"
+         title="http://w3id.org/trajecto/spatial#hasProximityResult">has proximity result</a>
+   </li>
+   <li>
+      <a href="#hasProximityZone"
+         title="http://w3id.org/trajecto/spatial#hasProximityZone">has proximity zone</a>
+   </li>
+   <li>
+      <a href="#hasSpatialCluster"
+         title="http://w3id.org/trajecto/spatial#hasSpatialCluster">has spatial cluster</a>
+   </li>
+   <li>
+      <a href="#hasSpatialContext"
+         title="http://w3id.org/trajecto/spatial#hasSpatialContext">has spatial context</a>
+   </li>
+   <li>
+      <a href="#hasSpatialRelationship"
+         title="http://w3id.org/trajecto/spatial#hasSpatialRelationship">has spatial relationship</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+         <span>location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#proximityTo" title="http://w3id.org/trajecto/spatial#proximityTo">proximity to</a>
+   </li>
+   <li>
+      <a href="#relatedTo" title="http://w3id.org/trajecto/spatial#relatedTo">related to</a>
+   </li>
+   <li>
+      <a href="#spatiallyInteractsWith"
+         title="http://w3id.org/trajecto/spatial#spatiallyInteractsWith">spatially interacts with</a>
+   </li>
+   <li>
+      <a href="#usesDistanceMetric"
+         title="http://w3id.org/trajecto/spatial#usesDistanceMetric">uses distance metric</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#analysisAccuracy"
+         title="http://w3id.org/trajecto/spatial#analysisAccuracy">analysis accuracy</a>
+   </li>
+   <li>
+      <a href="#analysisTimestamp"
+         title="http://w3id.org/trajecto/spatial#analysisTimestamp">analysis timestamp</a>
+   </li>
+   <li>
+      <a href="#clusterDensity" title="http://w3id.org/trajecto/spatial#clusterDensity">cluster density</a>
+   </li>
+   <li>
+      <a href="#clusterSize" title="http://w3id.org/trajecto/spatial#clusterSize">cluster size</a>
+   </li>
+   <li>
+      <a href="#hasDistance" title="http://w3id.org/trajecto/spatial#hasDistance">has distance</a>
+   </li>
+   <li>
+      <a href="#hasEuclideanDistance"
+         title="http://w3id.org/trajecto/spatial#hasEuclideanDistance">has euclidean distance</a>
+   </li>
+   <li>
+      <a href="#hasHaversineDistance"
+         title="http://w3id.org/trajecto/spatial#hasHaversineDistance">has haversine distance</a>
+   </li>
+   <li>
+      <a href="#hasManhattanDistance"
+         title="http://w3id.org/trajecto/spatial#hasManhattanDistance">has manhattan distance</a>
+   </li>
+   <li>
+      <a href="#influenceRadius" title="http://w3id.org/trajecto/spatial#influenceRadius">influence radius</a>
+   </li>
+   <li>
+      <a href="#proximityRank" title="http://w3id.org/trajecto/spatial#proximityRank">proximity rank</a>
+   </li>
+   <li>
+      <a href="#proximityScore" title="http://w3id.org/trajecto/spatial#proximityScore">proximity score</a>
+   </li>
+   <li>
+      <a href="#spatialCohesion" title="http://w3id.org/trajecto/spatial#spatialCohesion">spatial cohesion</a>
+   </li>
+   <li>
+      <a href="#withinProximity" title="http://w3id.org/trajecto/spatial#withinProximity">within proximity</a>
+   </li>
+   <li>
+      <a href="#zoneRadius" title="http://w3id.org/trajecto/spatial#zoneRadius">zone radius</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto-spatial: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module extends the trajecto ontology with comprehensive spatial analysis capabilities for trajectory proximity detection and spatial relationship modeling.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto-spatial classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto-spatial.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AttractionInteraction" title="http://w3id.org/trajecto/spatial#AttractionInteraction">Attraction Interaction</a></li>
+  <li><a href="#AvoidanceInteraction" title="http://w3id.org/trajecto/spatial#AvoidanceInteraction">Avoidance Interaction</a></li>
+  <li><a href="#BufferAnalysis" title="http://w3id.org/trajecto/spatial#BufferAnalysis">Buffer Analysis</a></li>
+  <li><a href="#CircularZone" title="http://w3id.org/trajecto/spatial#CircularZone">Circular Zone</a></li>
+  <li><a href="#CloseProximity" title="http://w3id.org/trajecto/spatial#CloseProximity">Close Proximity</a></li>
+  <li><a href="#DBSCANClustering" title="http://w3id.org/trajecto/spatial#DBSCANClustering">DBSCAN Clustering</a></li>
+  <li><a href="#DenseCluster" title="http://w3id.org/trajecto/spatial#DenseCluster">Dense Cluster</a></li>
+  <li><a href="#DistanceMeasurement" title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a></li>
+  <li><a href="#DistanceMetric" title="http://w3id.org/trajecto/spatial#DistanceMetric">Distance Metric</a></li>
+  <li><a href="#DistantProximity" title="http://w3id.org/trajecto/spatial#DistantProximity">Distant Proximity</a></li>
+  <li><a href="#EuclideanMetric" title="http://w3id.org/trajecto/spatial#EuclideanMetric">Euclidean Metric</a></li>
+  <li><a href="#HaversineMetric" title="http://w3id.org/trajecto/spatial#HaversineMetric">Haversine Metric</a></li>
+  <li><a href="#HighQuality" title="http://w3id.org/trajecto/spatial#HighQuality">High Quality</a></li>
+  <li><a href="#ImmediateProximity" title="http://w3id.org/trajecto/spatial#ImmediateProximity">Immediate Proximity</a></li>
+  <li><a href="#IndoorSpatialContext" title="http://w3id.org/trajecto/spatial#IndoorSpatialContext">Indoor Spatial Context</a></li>
+  <li><a href="#InfluenceInteraction" title="http://w3id.org/trajecto/spatial#InfluenceInteraction">Influence Interaction</a></li>
+  <li><a href="#InfluenceZone" title="http://w3id.org/trajecto/spatial#InfluenceZone">Influence Zone</a></li>
+  <li><a href="#KNearestNeighbor" title="http://w3id.org/trajecto/spatial#KNearestNeighbor">K Nearest Neighbor</a></li>
+  <li><a href="#LowQuality" title="http://w3id.org/trajecto/spatial#LowQuality">Low Quality</a></li>
+  <li><a href="#ManhattanMetric" title="http://w3id.org/trajecto/spatial#ManhattanMetric">Manhattan Metric</a></li>
+  <li><a href="#MediumQuality" title="http://w3id.org/trajecto/spatial#MediumQuality">Medium Quality</a></li>
+  <li><a href="#NearbyProximity" title="http://w3id.org/trajecto/spatial#NearbyProximity">Nearby Proximity</a></li>
+  <li><a href="#NoiseCluster" title="http://w3id.org/trajecto/spatial#NoiseCluster">Noise Cluster</a></li>
+  <li><a href="#OutdoorSpatialContext" title="http://w3id.org/trajecto/spatial#OutdoorSpatialContext">Outdoor Spatial Context</a></li>
+  <li><a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">point</a></li>
+  <li><a href="#PolygonalZone" title="http://w3id.org/trajecto/spatial#PolygonalZone">Polygonal Zone</a></li>
+  <li><a href="#ProximityAnalysis" title="http://w3id.org/trajecto/spatial#ProximityAnalysis">Proximity Analysis</a></li>
+  <li><a href="#ProximityInteraction" title="http://w3id.org/trajecto/spatial#ProximityInteraction">Proximity Interaction</a></li>
+  <li><a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a></li>
+  <li><a href="#ProximityPattern" title="http://w3id.org/trajecto/spatial#ProximityPattern">Proximity Pattern</a></li>
+  <li><a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a></li>
+  <li><a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a></li>
+  <li><a href="#RuralSpatialContext" title="http://w3id.org/trajecto/spatial#RuralSpatialContext">Rural Spatial Context</a></li>
+  <li><a href="#SparseCluster" title="http://w3id.org/trajecto/spatial#SparseCluster">Sparse Cluster</a></li>
+  <li><a href="#SpatialAnalysisAlgorithm" title="http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm">Spatial Analysis Algorithm</a></li>
+  <li><a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a></li>
+  <li><a href="#SpatialColdspot" title="http://w3id.org/trajecto/spatial#SpatialColdspot">Spatial Coldspot</a></li>
+  <li><a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a></li>
+  <li><a href="#SpatialCorridor" title="http://w3id.org/trajecto/spatial#SpatialCorridor">Spatial Corridor</a></li>
+  <li><a href="#SpatialFeature" title="http://w3id.org/trajecto/spatial#SpatialFeature">Spatial Feature</a></li>
+  <li><a href="#SpatialHotspot" title="http://w3id.org/trajecto/spatial#SpatialHotspot">Spatial Hotspot</a></li>
+  <li><a href="#SpatialInteraction" title="http://w3id.org/trajecto/spatial#SpatialInteraction">Spatial Interaction</a></li>
+  <li><a href="#SpatialQuality" title="http://w3id.org/trajecto/spatial#SpatialQuality">Spatial Quality</a></li>
+  <li><a href="#SpatialRelationship" title="http://w3id.org/trajecto/spatial#SpatialRelationship">Spatial Relationship</a></li>
+  <li><a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a></li>
+  <li><a href="#UrbanSpatialContext" title="http://w3id.org/trajecto/spatial#UrbanSpatialContext">Urban Spatial Context</a></li>
+  <li><a href="#VicinityProximity" title="http://w3id.org/trajecto/spatial#VicinityProximity">Vicinity Proximity</a></li>
+  <li><a href="#VoronoiAnalysis" title="http://w3id.org/trajecto/spatial#VoronoiAnalysis">Voronoi Analysis</a></li>
+ </ul>
+ <div class="entity" id="AttractionInteraction">
+  <h3>Attraction Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#AttractionInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction where POI attracts trajectory movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#InfluenceInteraction" title="http://w3id.org/trajecto/spatial#InfluenceInteraction">Influence Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AvoidanceInteraction">
+  <h3>Avoidance Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#AvoidanceInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction where POI causes trajectory avoidance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#InfluenceInteraction" title="http://w3id.org/trajecto/spatial#InfluenceInteraction">Influence Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BufferAnalysis">
+  <h3>Buffer Analysis<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#BufferAnalysis</p>
+  <div class="comment">
+   <span class="markdown">Buffer-based proximity analysis algorithm.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialAnalysisAlgorithm" title="http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm">Spatial Analysis Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CircularZone">
+  <h3>Circular Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#CircularZone</p>
+  <div class="comment">
+   <span class="markdown">A circular proximity zone defined by a center point and radius.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CloseProximity">
+  <h3>Close Proximity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#CloseProximity</p>
+  <div class="comment">
+   <span class="markdown">Close proximity (typically 10-50 meters).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DBSCANClustering">
+  <h3>DBSCAN Clustering<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#DBSCANClustering</p>
+  <div class="comment">
+   <span class="markdown">DBSCAN clustering algorithm for spatial analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialAnalysisAlgorithm" title="http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm">Spatial Analysis Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DenseCluster">
+  <h3>Dense Cluster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#DenseCluster</p>
+  <div class="comment">
+   <span class="markdown">A spatial cluster with high density of trajectory points.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DistanceMeasurement">
+  <h3>Distance Measurement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#DistanceMeasurement</p>
+  <div class="comment">
+   <span class="markdown">A measurement of distance between spatial entities.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A structured measurement containing distance values calculated using different metrics.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasEuclideanDistance" title="http://w3id.org/trajecto/spatial#hasEuclideanDistance">has euclidean distance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasHaversineDistance" title="http://w3id.org/trajecto/spatial#hasHaversineDistance">has haversine distance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasManhattanDistance" title="http://w3id.org/trajecto/spatial#hasManhattanDistance">has manhattan distance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usesDistanceMetric" title="http://w3id.org/trajecto/spatial#usesDistanceMetric">uses distance metric</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDistanceMeasurement" title="http://w3id.org/trajecto/spatial#hasDistanceMeasurement">has distance measurement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DistanceMetric">
+  <h3>Distance Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#DistanceMetric</p>
+  <div class="comment">
+   <span class="markdown">A method for calculating distance between spatial points.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EuclideanMetric" title="http://w3id.org/trajecto/spatial#EuclideanMetric">Euclidean Metric</a> <sup class="type-c" title="class">c</sup>, <a href="#HaversineMetric" title="http://w3id.org/trajecto/spatial#HaversineMetric">Haversine Metric</a> <sup class="type-c" title="class">c</sup>, <a href="#ManhattanMetric" title="http://w3id.org/trajecto/spatial#ManhattanMetric">Manhattan Metric</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#usesDistanceMetric" title="http://w3id.org/trajecto/spatial#usesDistanceMetric">uses distance metric</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DistantProximity">
+  <h3>Distant Proximity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#DistantProximity</p>
+  <div class="comment">
+   <span class="markdown">Distant proximity (beyond 200 meters).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EuclideanMetric">
+  <h3>Euclidean Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#EuclideanMetric</p>
+  <div class="comment">
+   <span class="markdown">Euclidean distance metric for straight-line distance calculation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DistanceMetric" title="http://w3id.org/trajecto/spatial#DistanceMetric">Distance Metric</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HaversineMetric">
+  <h3>Haversine Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#HaversineMetric</p>
+  <div class="comment">
+   <span class="markdown">Haversine distance metric accounting for Earth's curvature.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DistanceMetric" title="http://w3id.org/trajecto/spatial#DistanceMetric">Distance Metric</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HighQuality">
+  <h3>High Quality<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#HighQuality</p>
+  <div class="comment">
+   <span class="markdown">High quality spatial analysis with reliable results.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialQuality" title="http://w3id.org/trajecto/spatial#SpatialQuality">Spatial Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImmediateProximity">
+  <h3>Immediate Proximity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ImmediateProximity</p>
+  <div class="comment">
+   <span class="markdown">Immediate proximity (typically 0-10 meters).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IndoorSpatialContext">
+  <h3>Indoor Spatial Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#IndoorSpatialContext</p>
+  <div class="comment">
+   <span class="markdown">Spatial context for indoor trajectory analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InfluenceInteraction">
+  <h3>Influence Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#InfluenceInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction where POI influences trajectory behavior.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialInteraction" title="http://w3id.org/trajecto/spatial#SpatialInteraction">Spatial Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AttractionInteraction" title="http://w3id.org/trajecto/spatial#AttractionInteraction">Attraction Interaction</a> <sup class="type-c" title="class">c</sup>, <a href="#AvoidanceInteraction" title="http://w3id.org/trajecto/spatial#AvoidanceInteraction">Avoidance Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InfluenceZone">
+  <h3>Influence Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#InfluenceZone</p>
+  <div class="comment">
+   <span class="markdown">A zone where a point of interest has measurable influence on trajectory behavior.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A spatial area where a POI demonstrates measurable attraction or influence on movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#influenceRadius" title="http://w3id.org/trajecto/spatial#influenceRadius">influence radius</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInfluenceZone" title="http://w3id.org/trajecto/spatial#hasInfluenceZone">has influence zone</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="KNearestNeighbor">
+  <h3>K Nearest Neighbor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#KNearestNeighbor</p>
+  <div class="comment">
+   <span class="markdown">K-nearest neighbor algorithm for proximity analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialAnalysisAlgorithm" title="http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm">Spatial Analysis Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LowQuality">
+  <h3>Low Quality<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#LowQuality</p>
+  <div class="comment">
+   <span class="markdown">Low quality spatial analysis with unreliable results.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialQuality" title="http://w3id.org/trajecto/spatial#SpatialQuality">Spatial Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ManhattanMetric">
+  <h3>Manhattan Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ManhattanMetric</p>
+  <div class="comment">
+   <span class="markdown">Manhattan distance metric for grid-based distance calculation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DistanceMetric" title="http://w3id.org/trajecto/spatial#DistanceMetric">Distance Metric</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediumQuality">
+  <h3>Medium Quality<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#MediumQuality</p>
+  <div class="comment">
+   <span class="markdown">Medium quality spatial analysis with acceptable results.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialQuality" title="http://w3id.org/trajecto/spatial#SpatialQuality">Spatial Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NearbyProximity">
+  <h3>Nearby Proximity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#NearbyProximity</p>
+  <div class="comment">
+   <span class="markdown">Nearby proximity (typically 50-100 meters).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NoiseCluster">
+  <h3>Noise Cluster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#NoiseCluster</p>
+  <div class="comment">
+   <span class="markdown">Trajectories that do not fit into any meaningful spatial cluster.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OutdoorSpatialContext">
+  <h3>Outdoor Spatial Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#OutdoorSpatialContext</p>
+  <div class="comment">
+   <span class="markdown">Spatial context for outdoor trajectory analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+  <h3>point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#Point</p>
+  <div class="comment">
+   <span class="markdown"> Uniquely identified by lat/long/alt. i.e. spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT), lat(P2, LAT), long(P2, LONG), alt(P2, ALT). sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2). </span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PolygonalZone">
+  <h3>Polygonal Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#PolygonalZone</p>
+  <div class="comment">
+   <span class="markdown">A polygonal proximity zone defined by boundary coordinates.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProximityAnalysis">
+  <h3>Proximity Analysis<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ProximityAnalysis</p>
+  <div class="comment">
+   <span class="markdown">A comprehensive analysis of spatial proximity relationships in a trajectory.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">An analytical process that identifies and measures spatial relationships between trajectory elements and points of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#analysisAccuracy" title="http://w3id.org/trajecto/spatial#analysisAccuracy">analysis accuracy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#analysisTimestamp" title="http://w3id.org/trajecto/spatial#analysisTimestamp">analysis timestamp</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasProximityAnalysis" title="http://w3id.org/trajecto/spatial#hasProximityAnalysis">has proximity analysis</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProximityInteraction">
+  <h3>Proximity Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ProximityInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction based on being within proximity threshold.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialInteraction" title="http://w3id.org/trajecto/spatial#SpatialInteraction">Spatial Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProximityLevel">
+  <h3>Proximity Level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ProximityLevel</p>
+  <div class="comment">
+   <span class="markdown">Classification level for spatial proximity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CloseProximity" title="http://w3id.org/trajecto/spatial#CloseProximity">Close Proximity</a> <sup class="type-c" title="class">c</sup>, <a href="#DistantProximity" title="http://w3id.org/trajecto/spatial#DistantProximity">Distant Proximity</a> <sup class="type-c" title="class">c</sup>, <a href="#ImmediateProximity" title="http://w3id.org/trajecto/spatial#ImmediateProximity">Immediate Proximity</a> <sup class="type-c" title="class">c</sup>, <a href="#NearbyProximity" title="http://w3id.org/trajecto/spatial#NearbyProximity">Nearby Proximity</a> <sup class="type-c" title="class">c</sup>, <a href="#VicinityProximity" title="http://w3id.org/trajecto/spatial#VicinityProximity">Vicinity Proximity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProximityPattern">
+  <h3>Proximity Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ProximityPattern</p>
+  <div class="comment">
+   <span class="markdown">Pattern of proximity relationships in trajectory data.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialFeature" title="http://w3id.org/trajecto/spatial#SpatialFeature">Spatial Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProximityResult">
+  <h3>Proximity Result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ProximityResult</p>
+  <div class="comment">
+   <span class="markdown">Result of proximity calculation between a trajectory part and a point of interest.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A structured result containing distance measurements, proximity classifications, and related metadata for a trajectory-POI pair.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDistance" title="http://w3id.org/trajecto/spatial#hasDistance">has distance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDistanceMeasurement" title="http://w3id.org/trajecto/spatial#hasDistanceMeasurement">has distance measurement</a> <sup class="type-op" title="object property">op</sup>, <a href="#proximityRank" title="http://w3id.org/trajecto/spatial#proximityRank">proximity rank</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#proximityScore" title="http://w3id.org/trajecto/spatial#proximityScore">proximity score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#proximityTo" title="http://w3id.org/trajecto/spatial#proximityTo">proximity to</a> <sup class="type-op" title="object property">op</sup>, <a href="#withinProximity" title="http://w3id.org/trajecto/spatial#withinProximity">within proximity</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasProximityResult" title="http://w3id.org/trajecto/spatial#hasProximityResult">has proximity result</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProximityZone">
+  <h3>Proximity Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#ProximityZone</p>
+  <div class="comment">
+   <span class="markdown">A defined spatial zone around a point of interest for proximity detection.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A circular or polygonal area around a POI within which trajectory points are considered to be in proximity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#RegionOfInterest" target="_blank" title="http://w3id.org/trajecto#RegionOfInterest">Region Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CircularZone" title="http://w3id.org/trajecto/spatial#CircularZone">Circular Zone</a> <sup class="type-c" title="class">c</sup>, <a href="#InfluenceZone" title="http://w3id.org/trajecto/spatial#InfluenceZone">Influence Zone</a> <sup class="type-c" title="class">c</sup>, <a href="#PolygonalZone" title="http://w3id.org/trajecto/spatial#PolygonalZone">Polygonal Zone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#containsTrajectoryPart" title="http://w3id.org/trajecto/spatial#containsTrajectoryPart">contains trajectory part</a> <sup class="type-op" title="object property">op</sup>, <a href="#zoneRadius" title="http://w3id.org/trajecto/spatial#zoneRadius">zone radius</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasProximityZone" title="http://w3id.org/trajecto/spatial#hasProximityZone">has proximity zone</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RuralSpatialContext">
+  <h3>Rural Spatial Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#RuralSpatialContext</p>
+  <div class="comment">
+   <span class="markdown">Spatial context in rural environments with low POI density.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SparseCluster">
+  <h3>Sparse Cluster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SparseCluster</p>
+  <div class="comment">
+   <span class="markdown">A spatial cluster with low density of trajectory points.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialAnalysisAlgorithm">
+  <h3>Spatial Analysis Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm</p>
+  <div class="comment">
+   <span class="markdown">Algorithm used for spatial proximity analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BufferAnalysis" title="http://w3id.org/trajecto/spatial#BufferAnalysis">Buffer Analysis</a> <sup class="type-c" title="class">c</sup>, <a href="#DBSCANClustering" title="http://w3id.org/trajecto/spatial#DBSCANClustering">DBSCAN Clustering</a> <sup class="type-c" title="class">c</sup>, <a href="#KNearestNeighbor" title="http://w3id.org/trajecto/spatial#KNearestNeighbor">K Nearest Neighbor</a> <sup class="type-c" title="class">c</sup>, <a href="#VoronoiAnalysis" title="http://w3id.org/trajecto/spatial#VoronoiAnalysis">Voronoi Analysis</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialCluster">
+  <h3>Spatial Cluster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialCluster</p>
+  <div class="comment">
+   <span class="markdown">A cluster of trajectories based on spatial proximity patterns.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A group of trajectories that exhibit similar spatial proximity patterns to points of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.datacron-project.eu/datAcron#TrajectoryCluster" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryCluster">Trajectory Cluster</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DenseCluster" title="http://w3id.org/trajecto/spatial#DenseCluster">Dense Cluster</a> <sup class="type-c" title="class">c</sup>, <a href="#NoiseCluster" title="http://w3id.org/trajecto/spatial#NoiseCluster">Noise Cluster</a> <sup class="type-c" title="class">c</sup>, <a href="#SparseCluster" title="http://w3id.org/trajecto/spatial#SparseCluster">Sparse Cluster</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#clusterDensity" title="http://w3id.org/trajecto/spatial#clusterDensity">cluster density</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#clusterSize" title="http://w3id.org/trajecto/spatial#clusterSize">cluster size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#spatialCohesion" title="http://w3id.org/trajecto/spatial#spatialCohesion">spatial cohesion</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSpatialCluster" title="http://w3id.org/trajecto/spatial#hasSpatialCluster">has spatial cluster</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialColdspot">
+  <h3>Spatial Coldspot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialColdspot</p>
+  <div class="comment">
+   <span class="markdown">Area with low concentration of trajectory activity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialFeature" title="http://w3id.org/trajecto/spatial#SpatialFeature">Spatial Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialContext">
+  <h3>Spatial Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialContext</p>
+  <div class="comment">
+   <span class="markdown">Spatial context information for trajectory analysis.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Contextual information about the spatial environment and relationships relevant to trajectory analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IndoorSpatialContext" title="http://w3id.org/trajecto/spatial#IndoorSpatialContext">Indoor Spatial Context</a> <sup class="type-c" title="class">c</sup>, <a href="#OutdoorSpatialContext" title="http://w3id.org/trajecto/spatial#OutdoorSpatialContext">Outdoor Spatial Context</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralSpatialContext" title="http://w3id.org/trajecto/spatial#RuralSpatialContext">Rural Spatial Context</a> <sup class="type-c" title="class">c</sup>, <a href="#UrbanSpatialContext" title="http://w3id.org/trajecto/spatial#UrbanSpatialContext">Urban Spatial Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSpatialContext" title="http://w3id.org/trajecto/spatial#hasSpatialContext">has spatial context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialCorridor">
+  <h3>Spatial Corridor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialCorridor</p>
+  <div class="comment">
+   <span class="markdown">Linear feature showing common trajectory paths.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialFeature" title="http://w3id.org/trajecto/spatial#SpatialFeature">Spatial Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialFeature">
+  <h3>Spatial Feature<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialFeature</p>
+  <div class="comment">
+   <span class="markdown">Spatial feature extracted from trajectory analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ProximityPattern" title="http://w3id.org/trajecto/spatial#ProximityPattern">Proximity Pattern</a> <sup class="type-c" title="class">c</sup>, <a href="#SpatialColdspot" title="http://w3id.org/trajecto/spatial#SpatialColdspot">Spatial Coldspot</a> <sup class="type-c" title="class">c</sup>, <a href="#SpatialCorridor" title="http://w3id.org/trajecto/spatial#SpatialCorridor">Spatial Corridor</a> <sup class="type-c" title="class">c</sup>, <a href="#SpatialHotspot" title="http://w3id.org/trajecto/spatial#SpatialHotspot">Spatial Hotspot</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialHotspot">
+  <h3>Spatial Hotspot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialHotspot</p>
+  <div class="comment">
+   <span class="markdown">Area with high concentration of trajectory activity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialFeature" title="http://w3id.org/trajecto/spatial#SpatialFeature">Spatial Feature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialInteraction">
+  <h3>Spatial Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialInteraction</p>
+  <div class="comment">
+   <span class="markdown">Interaction defined by spatial proximity relationships.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">An interaction between trajectory elements and entities based on spatial proximity criteria.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#Interaction" target="_blank" title="http://w3id.org/trajecto#Interaction">Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#InfluenceInteraction" title="http://w3id.org/trajecto/spatial#InfluenceInteraction">Influence Interaction</a> <sup class="type-c" title="class">c</sup>, <a href="#ProximityInteraction" title="http://w3id.org/trajecto/spatial#ProximityInteraction">Proximity Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialQuality">
+  <h3>Spatial Quality<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialQuality</p>
+  <div class="comment">
+   <span class="markdown">Quality assessment of spatial analysis results.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality">Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#HighQuality" title="http://w3id.org/trajecto/spatial#HighQuality">High Quality</a> <sup class="type-c" title="class">c</sup>, <a href="#LowQuality" title="http://w3id.org/trajecto/spatial#LowQuality">Low Quality</a> <sup class="type-c" title="class">c</sup>, <a href="#MediumQuality" title="http://w3id.org/trajecto/spatial#MediumQuality">Medium Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpatialRelationship">
+  <h3>Spatial Relationship<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#SpatialRelationship</p>
+  <div class="comment">
+   <span class="markdown">A spatial relationship between trajectory elements and entities of interest.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A formalized spatial relationship that describes how trajectory elements relate to entities in space.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#relatedTo" title="http://w3id.org/trajecto/spatial#relatedTo">related to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSpatialRelationship" title="http://w3id.org/trajecto/spatial#hasSpatialRelationship">has spatial relationship</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+  <h3>SpatialThing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</p>
+  <div class="comment">
+   <span class="markdown">Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes. </span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#alt" target="_blank" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="http://www.w3.org/2003/01/geo/wgs84_pos#lat" target="_blank" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="http://www.w3.org/2003/01/geo/wgs84_pos#long" target="_blank" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UrbanSpatialContext">
+  <h3>Urban Spatial Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#UrbanSpatialContext</p>
+  <div class="comment">
+   <span class="markdown">Spatial context in urban environments with high POI density.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VicinityProximity">
+  <h3>Vicinity Proximity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#VicinityProximity</p>
+  <div class="comment">
+   <span class="markdown">Vicinity proximity (typically 100-200 meters).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProximityLevel" title="http://w3id.org/trajecto/spatial#ProximityLevel">Proximity Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VoronoiAnalysis">
+  <h3>Voronoi Analysis<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#VoronoiAnalysis</p>
+  <div class="comment">
+   <span class="markdown">Voronoi diagram-based spatial analysis algorithm.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpatialAnalysisAlgorithm" title="http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm">Spatial Analysis Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#clustersWith" title="http://w3id.org/trajecto/spatial#clustersWith">clusters with</a></li>
+  <li><a href="#containsTrajectoryPart" title="http://w3id.org/trajecto/spatial#containsTrajectoryPart">contains trajectory part</a></li>
+  <li><a href="#hasDistanceMeasurement" title="http://w3id.org/trajecto/spatial#hasDistanceMeasurement">has distance measurement</a></li>
+  <li><a href="#hasInfluenceZone" title="http://w3id.org/trajecto/spatial#hasInfluenceZone">has influence zone</a></li>
+  <li><a href="#hasProximityAnalysis" title="http://w3id.org/trajecto/spatial#hasProximityAnalysis">has proximity analysis</a></li>
+  <li><a href="#hasProximityResult" title="http://w3id.org/trajecto/spatial#hasProximityResult">has proximity result</a></li>
+  <li><a href="#hasProximityZone" title="http://w3id.org/trajecto/spatial#hasProximityZone">has proximity zone</a></li>
+  <li><a href="#hasSpatialCluster" title="http://w3id.org/trajecto/spatial#hasSpatialCluster">has spatial cluster</a></li>
+  <li><a href="#hasSpatialContext" title="http://w3id.org/trajecto/spatial#hasSpatialContext">has spatial context</a></li>
+  <li><a href="#hasSpatialRelationship" title="http://w3id.org/trajecto/spatial#hasSpatialRelationship">has spatial relationship</a></li>
+  <li><a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location"> <span>location</span> </a></li>
+  <li><a href="#proximityTo" title="http://w3id.org/trajecto/spatial#proximityTo">proximity to</a></li>
+  <li><a href="#relatedTo" title="http://w3id.org/trajecto/spatial#relatedTo">related to</a></li>
+  <li><a href="#spatiallyInteractsWith" title="http://w3id.org/trajecto/spatial#spatiallyInteractsWith">spatially interacts with</a></li>
+  <li><a href="#usesDistanceMetric" title="http://w3id.org/trajecto/spatial#usesDistanceMetric">uses distance metric</a></li>
+ </ul>
+ <div class="entity" id="clustersWith">
+  <h3>clusters with<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#clustersWith</p>
+  <div class="comment">
+   <span class="markdown">Indicates that two trajectories cluster together spatially.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> symmetric, transitive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containsTrajectoryPart">
+  <h3>contains trajectory part<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#containsTrajectoryPart</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a proximity zone contains a trajectory part.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDistanceMeasurement">
+  <h3>has distance measurement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasDistanceMeasurement</p>
+  <div class="comment">
+   <span class="markdown">Associates a proximity result with its distance measurement details.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DistanceMeasurement" title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInfluenceZone">
+  <h3>has influence zone<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasInfluenceZone</p>
+  <div class="comment">
+   <span class="markdown">Associates a point of interest with its influence zone.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#PointOfInterest" target="_blank" title="http://w3id.org/trajecto#PointOfInterest">Point Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InfluenceZone" title="http://w3id.org/trajecto/spatial#InfluenceZone">Influence Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProximityAnalysis">
+  <h3>has proximity analysis<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasProximityAnalysis</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its spatial proximity analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ProximityAnalysis" title="http://w3id.org/trajecto/spatial#ProximityAnalysis">Proximity Analysis</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProximityResult">
+  <h3>has proximity result<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasProximityResult</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory part with its proximity analysis results.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProximityZone">
+  <h3>has proximity zone<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasProximityZone</p>
+  <div class="comment">
+   <span class="markdown">Associates a point of interest with its proximity zone definition.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#PointOfInterest" target="_blank" title="http://w3id.org/trajecto#PointOfInterest">Point Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSpatialCluster">
+  <h3>has spatial cluster<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasSpatialCluster</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with a spatial cluster based on proximity patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSpatialContext">
+  <h3>has spatial context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasSpatialContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory part with its spatial context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SpatialContext" title="http://w3id.org/trajecto/spatial#SpatialContext">Spatial Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSpatialRelationship">
+  <h3>has spatial relationship<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasSpatialRelationship</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory part with its spatial relationships.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SpatialRelationship" title="http://w3id.org/trajecto/spatial#SpatialRelationship">Spatial Relationship</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+  <h3>location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#location</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://xmlns.com/foaf/0.1/based_near" target="_blank" title="http://xmlns.com/foaf/0.1/based_near">based near</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location">annotation property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="proximityTo">
+  <h3>proximity to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#proximityTo</p>
+  <div class="comment">
+   <span class="markdown">Specifies the point of interest that the proximity result refers to.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#PointOfInterest" target="_blank" title="http://w3id.org/trajecto#PointOfInterest">Point Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="relatedTo">
+  <h3>related to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#relatedTo</p>
+  <div class="comment">
+   <span class="markdown">Specifies the entity that the spatial relationship involves.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SpatialRelationship" title="http://w3id.org/trajecto/spatial#SpatialRelationship">Spatial Relationship</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#EntityOfInterest" target="_blank" title="http://w3id.org/trajecto#EntityOfInterest">Entity Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="spatiallyInteractsWith">
+  <h3>spatially interacts with<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#spatiallyInteractsWith</p>
+  <div class="comment">
+   <span class="markdown">Indicates spatial interaction between trajectory part and entity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#EntityOfInterest" target="_blank" title="http://w3id.org/trajecto#EntityOfInterest">Entity Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usesDistanceMetric">
+  <h3>uses distance metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#usesDistanceMetric</p>
+  <div class="comment">
+   <span class="markdown">Specifies the distance metric used in a measurement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DistanceMeasurement" title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DistanceMetric" title="http://w3id.org/trajecto/spatial#DistanceMetric">Distance Metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#analysisAccuracy" title="http://w3id.org/trajecto/spatial#analysisAccuracy">analysis accuracy</a></li>
+  <li><a href="#analysisTimestamp" title="http://w3id.org/trajecto/spatial#analysisTimestamp">analysis timestamp</a></li>
+  <li><a href="#clusterDensity" title="http://w3id.org/trajecto/spatial#clusterDensity">cluster density</a></li>
+  <li><a href="#clusterSize" title="http://w3id.org/trajecto/spatial#clusterSize">cluster size</a></li>
+  <li><a href="#hasDistance" title="http://w3id.org/trajecto/spatial#hasDistance">has distance</a></li>
+  <li><a href="#hasEuclideanDistance" title="http://w3id.org/trajecto/spatial#hasEuclideanDistance">has euclidean distance</a></li>
+  <li><a href="#hasHaversineDistance" title="http://w3id.org/trajecto/spatial#hasHaversineDistance">has haversine distance</a></li>
+  <li><a href="#hasManhattanDistance" title="http://w3id.org/trajecto/spatial#hasManhattanDistance">has manhattan distance</a></li>
+  <li><a href="#influenceRadius" title="http://w3id.org/trajecto/spatial#influenceRadius">influence radius</a></li>
+  <li><a href="#proximityRank" title="http://w3id.org/trajecto/spatial#proximityRank">proximity rank</a></li>
+  <li><a href="#proximityScore" title="http://w3id.org/trajecto/spatial#proximityScore">proximity score</a></li>
+  <li><a href="#spatialCohesion" title="http://w3id.org/trajecto/spatial#spatialCohesion">spatial cohesion</a></li>
+  <li><a href="#withinProximity" title="http://w3id.org/trajecto/spatial#withinProximity">within proximity</a></li>
+  <li><a href="#zoneRadius" title="http://w3id.org/trajecto/spatial#zoneRadius">zone radius</a></li>
+ </ul>
+ <div class="entity" id="analysisAccuracy">
+  <h3>analysis accuracy<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#analysisAccuracy</p>
+  <div class="comment">
+   <span class="markdown">Accuracy measure of the proximity analysis (0.0-1.0).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityAnalysis" title="http://w3id.org/trajecto/spatial#ProximityAnalysis">Proximity Analysis</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="analysisTimestamp">
+  <h3>analysis timestamp<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#analysisTimestamp</p>
+  <div class="comment">
+   <span class="markdown">Timestamp when the proximity analysis was performed.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityAnalysis" title="http://w3id.org/trajecto/spatial#ProximityAnalysis">Proximity Analysis</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="clusterDensity">
+  <h3>cluster density<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#clusterDensity</p>
+  <div class="comment">
+   <span class="markdown">Density measure of the spatial cluster.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="clusterSize">
+  <h3>cluster size<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#clusterSize</p>
+  <div class="comment">
+   <span class="markdown">Number of trajectories in the spatial cluster.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDistance">
+  <h3>has distance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasDistance</p>
+  <div class="comment">
+   <span class="markdown">Distance value in meters between trajectory part and point of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasEuclideanDistance" title="http://w3id.org/trajecto/spatial#hasEuclideanDistance">has euclidean distance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasHaversineDistance" title="http://w3id.org/trajecto/spatial#hasHaversineDistance">has haversine distance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasManhattanDistance" title="http://w3id.org/trajecto/spatial#hasManhattanDistance">has manhattan distance</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEuclideanDistance">
+  <h3>has euclidean distance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasEuclideanDistance</p>
+  <div class="comment">
+   <span class="markdown">Euclidean distance in meters.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasDistance" title="http://w3id.org/trajecto/spatial#hasDistance">has distance</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DistanceMeasurement" title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasHaversineDistance">
+  <h3>has haversine distance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasHaversineDistance</p>
+  <div class="comment">
+   <span class="markdown">Haversine distance in meters, accounting for Earth's curvature.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasDistance" title="http://w3id.org/trajecto/spatial#hasDistance">has distance</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DistanceMeasurement" title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasManhattanDistance">
+  <h3>has manhattan distance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#hasManhattanDistance</p>
+  <div class="comment">
+   <span class="markdown">Manhattan distance in meters.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasDistance" title="http://w3id.org/trajecto/spatial#hasDistance">has distance</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DistanceMeasurement" title="http://w3id.org/trajecto/spatial#DistanceMeasurement">Distance Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="influenceRadius">
+  <h3>influence radius<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#influenceRadius</p>
+  <div class="comment">
+   <span class="markdown">Radius of the influence zone in meters.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InfluenceZone" title="http://w3id.org/trajecto/spatial#InfluenceZone">Influence Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="proximityRank">
+  <h3>proximity rank<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#proximityRank</p>
+  <div class="comment">
+   <span class="markdown">Rank of proximity (1 = closest) for a trajectory part among all nearby POIs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="proximityScore">
+  <h3>proximity score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#proximityScore</p>
+  <div class="comment">
+   <span class="markdown">Normalized proximity score (0.0-1.0) where 1.0 is highest proximity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="spatialCohesion">
+  <h3>spatial cohesion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#spatialCohesion</p>
+  <div class="comment">
+   <span class="markdown">Measure of spatial cohesion within the cluster (0.0-1.0).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SpatialCluster" title="http://w3id.org/trajecto/spatial#SpatialCluster">Spatial Cluster</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="withinProximity">
+  <h3>within proximity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#withinProximity</p>
+  <div class="comment">
+   <span class="markdown">Boolean indicating if the trajectory part is within proximity threshold.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityResult" title="http://w3id.org/trajecto/spatial#ProximityResult">Proximity Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="zoneRadius">
+  <h3>zone radius<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/spatial#zoneRadius</p>
+  <div class="comment">
+   <span class="markdown">Radius of the proximity zone in meters.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/spatial">http://w3id.org/trajecto/spatial</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProximityZone" title="http://w3id.org/trajecto/spatial#ProximityZone">Proximity Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,729 @@
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix spatial: <http://w3id.org/trajecto/spatial#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://w3id.org/trajecto/spatial> a owl:Ontology ;
+    rdfs:label "trajecto-spatial"@en ;
+    dcterms:created "2025-05-30"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "This module extends the trajecto ontology with comprehensive spatial analysis capabilities for trajectory proximity detection and spatial relationship modeling."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Spatial Analysis Module"@en ;
+    vann:preferredNamespacePrefix "spatial" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/spatial#" ;
+    owl:priorVersion <http://w3id.org/trajecto/spatial/1.0> ;
+    owl:versionIRI <http://w3id.org/trajecto/spatial/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+spatial:AttractionInteraction a owl:Class ;
+    rdfs:label "Attraction Interaction"@en ;
+    rdfs:comment "Interaction where POI attracts trajectory movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:InfluenceInteraction .
+
+spatial:AvoidanceInteraction a owl:Class ;
+    rdfs:label "Avoidance Interaction"@en ;
+    rdfs:comment "Interaction where POI causes trajectory avoidance."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:InfluenceInteraction .
+
+spatial:BufferAnalysis a owl:Class ;
+    rdfs:label "Buffer Analysis"@en ;
+    rdfs:comment "Buffer-based proximity analysis algorithm."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialAnalysisAlgorithm .
+
+spatial:CircularZone a owl:Class ;
+    rdfs:label "Circular Zone"@en ;
+    rdfs:comment "A circular proximity zone defined by a center point and radius."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityZone .
+
+spatial:CloseProximity a owl:Class ;
+    rdfs:label "Close Proximity"@en ;
+    rdfs:comment "Close proximity (typically 10-50 meters)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityLevel .
+
+spatial:DBSCANClustering a owl:Class ;
+    rdfs:label "DBSCAN Clustering"@en ;
+    rdfs:comment "DBSCAN clustering algorithm for spatial analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialAnalysisAlgorithm .
+
+spatial:DenseCluster a owl:Class ;
+    rdfs:label "Dense Cluster"@en ;
+    rdfs:comment "A spatial cluster with high density of trajectory points."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialCluster .
+
+spatial:DistanceMeasurement a owl:Class ;
+    rdfs:label "Distance Measurement"@en ;
+    rdfs:comment "A measurement of distance between spatial entities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract ;
+    skos:definition "A structured measurement containing distance values calculated using different metrics."@en .
+
+spatial:DistanceMetric a owl:Class ;
+    rdfs:label "Distance Metric"@en ;
+    rdfs:comment "A method for calculating distance between spatial points."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract .
+
+spatial:DistantProximity a owl:Class ;
+    rdfs:label "Distant Proximity"@en ;
+    rdfs:comment "Distant proximity (beyond 200 meters)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityLevel .
+
+spatial:EuclideanMetric a owl:Class ;
+    rdfs:label "Euclidean Metric"@en ;
+    rdfs:comment "Euclidean distance metric for straight-line distance calculation."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:DistanceMetric .
+
+spatial:HaversineMetric a owl:Class ;
+    rdfs:label "Haversine Metric"@en ;
+    rdfs:comment "Haversine distance metric accounting for Earth's curvature."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:DistanceMetric .
+
+spatial:HighQuality a owl:Class ;
+    rdfs:label "High Quality"@en ;
+    rdfs:comment "High quality spatial analysis with reliable results."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialQuality .
+
+spatial:ImmediateProximity a owl:Class ;
+    rdfs:label "Immediate Proximity"@en ;
+    rdfs:comment "Immediate proximity (typically 0-10 meters)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityLevel .
+
+spatial:IndoorSpatialContext a owl:Class ;
+    rdfs:label "Indoor Spatial Context"@en ;
+    rdfs:comment "Spatial context for indoor trajectory analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialContext .
+
+spatial:InfluenceInteraction a owl:Class ;
+    rdfs:label "Influence Interaction"@en ;
+    rdfs:comment "Interaction where POI influences trajectory behavior."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialInteraction .
+
+spatial:InfluenceZone a owl:Class ;
+    rdfs:label "Influence Zone"@en ;
+    rdfs:comment "A zone where a point of interest has measurable influence on trajectory behavior."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityZone ;
+    skos:definition "A spatial area where a POI demonstrates measurable attraction or influence on movement patterns."@en .
+
+spatial:KNearestNeighbor a owl:Class ;
+    rdfs:label "K Nearest Neighbor"@en ;
+    rdfs:comment "K-nearest neighbor algorithm for proximity analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialAnalysisAlgorithm .
+
+spatial:LowQuality a owl:Class ;
+    rdfs:label "Low Quality"@en ;
+    rdfs:comment "Low quality spatial analysis with unreliable results."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialQuality .
+
+spatial:ManhattanMetric a owl:Class ;
+    rdfs:label "Manhattan Metric"@en ;
+    rdfs:comment "Manhattan distance metric for grid-based distance calculation."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:DistanceMetric .
+
+spatial:MediumQuality a owl:Class ;
+    rdfs:label "Medium Quality"@en ;
+    rdfs:comment "Medium quality spatial analysis with acceptable results."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialQuality .
+
+spatial:NearbyProximity a owl:Class ;
+    rdfs:label "Nearby Proximity"@en ;
+    rdfs:comment "Nearby proximity (typically 50-100 meters)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityLevel .
+
+spatial:NoiseCluster a owl:Class ;
+    rdfs:label "Noise Cluster"@en ;
+    rdfs:comment "Trajectories that do not fit into any meaningful spatial cluster."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialCluster .
+
+spatial:OutdoorSpatialContext a owl:Class ;
+    rdfs:label "Outdoor Spatial Context"@en ;
+    rdfs:comment "Spatial context for outdoor trajectory analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialContext .
+
+spatial:PolygonalZone a owl:Class ;
+    rdfs:label "Polygonal Zone"@en ;
+    rdfs:comment "A polygonal proximity zone defined by boundary coordinates."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityZone .
+
+spatial:ProximityAnalysis a owl:Class ;
+    rdfs:label "Proximity Analysis"@en ;
+    rdfs:comment "A comprehensive analysis of spatial proximity relationships in a trajectory."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Situation ;
+    skos:definition "An analytical process that identifies and measures spatial relationships between trajectory elements and points of interest."@en .
+
+spatial:ProximityInteraction a owl:Class ;
+    rdfs:label "Proximity Interaction"@en ;
+    rdfs:comment "Interaction based on being within proximity threshold."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialInteraction .
+
+spatial:ProximityLevel a owl:Class ;
+    rdfs:label "Proximity Level"@en ;
+    rdfs:comment "Classification level for spatial proximity."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract .
+
+spatial:ProximityPattern a owl:Class ;
+    rdfs:label "Proximity Pattern"@en ;
+    rdfs:comment "Pattern of proximity relationships in trajectory data."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialFeature .
+
+spatial:ProximityResult a owl:Class ;
+    rdfs:label "Proximity Result"@en ;
+    rdfs:comment "Result of proximity calculation between a trajectory part and a point of interest."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract ;
+    skos:definition "A structured result containing distance measurements, proximity classifications, and related metadata for a trajectory-POI pair."@en .
+
+spatial:ProximityZone a owl:Class ;
+    rdfs:label "Proximity Zone"@en ;
+    rdfs:comment "A defined spatial zone around a point of interest for proximity detection."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf trajecto:RegionOfInterest ;
+    skos:definition "A circular or polygonal area around a POI within which trajectory points are considered to be in proximity."@en .
+
+spatial:RuralSpatialContext a owl:Class ;
+    rdfs:label "Rural Spatial Context"@en ;
+    rdfs:comment "Spatial context in rural environments with low POI density."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialContext .
+
+spatial:SparseCluster a owl:Class ;
+    rdfs:label "Sparse Cluster"@en ;
+    rdfs:comment "A spatial cluster with low density of trajectory points."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialCluster .
+
+spatial:SpatialAnalysisAlgorithm a owl:Class ;
+    rdfs:label "Spatial Analysis Algorithm"@en ;
+    rdfs:comment "Algorithm used for spatial proximity analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract .
+
+spatial:SpatialCluster a owl:Class ;
+    rdfs:label "Spatial Cluster"@en ;
+    rdfs:comment "A cluster of trajectories based on spatial proximity patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf datacron:TrajectoryCluster ;
+    skos:definition "A group of trajectories that exhibit similar spatial proximity patterns to points of interest."@en .
+
+spatial:SpatialColdspot a owl:Class ;
+    rdfs:label "Spatial Coldspot"@en ;
+    rdfs:comment "Area with low concentration of trajectory activity."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialFeature .
+
+spatial:SpatialContext a owl:Class ;
+    rdfs:label "Spatial Context"@en ;
+    rdfs:comment "Spatial context information for trajectory analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Situation ;
+    skos:definition "Contextual information about the spatial environment and relationships relevant to trajectory analysis."@en .
+
+spatial:SpatialCorridor a owl:Class ;
+    rdfs:label "Spatial Corridor"@en ;
+    rdfs:comment "Linear feature showing common trajectory paths."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialFeature .
+
+spatial:SpatialFeature a owl:Class ;
+    rdfs:label "Spatial Feature"@en ;
+    rdfs:comment "Spatial feature extracted from trajectory analysis."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract .
+
+spatial:SpatialHotspot a owl:Class ;
+    rdfs:label "Spatial Hotspot"@en ;
+    rdfs:comment "Area with high concentration of trajectory activity."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialFeature .
+
+spatial:SpatialInteraction a owl:Class ;
+    rdfs:label "Spatial Interaction"@en ;
+    rdfs:comment "Interaction defined by spatial proximity relationships."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf trajecto:Interaction ;
+    skos:definition "An interaction between trajectory elements and entities based on spatial proximity criteria."@en .
+
+spatial:SpatialQuality a owl:Class ;
+    rdfs:label "Spatial Quality"@en ;
+    rdfs:comment "Quality assessment of spatial analysis results."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Quality .
+
+spatial:SpatialRelationship a owl:Class ;
+    rdfs:label "Spatial Relationship"@en ;
+    rdfs:comment "A spatial relationship between trajectory elements and entities of interest."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf dul:Abstract ;
+    skos:definition "A formalized spatial relationship that describes how trajectory elements relate to entities in space."@en .
+
+spatial:UrbanSpatialContext a owl:Class ;
+    rdfs:label "Urban Spatial Context"@en ;
+    rdfs:comment "Spatial context in urban environments with high POI density."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialContext .
+
+spatial:VicinityProximity a owl:Class ;
+    rdfs:label "Vicinity Proximity"@en ;
+    rdfs:comment "Vicinity proximity (typically 100-200 meters)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:ProximityLevel .
+
+spatial:VoronoiAnalysis a owl:Class ;
+    rdfs:label "Voronoi Analysis"@en ;
+    rdfs:comment "Voronoi diagram-based spatial analysis algorithm."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:subClassOf spatial:SpatialAnalysisAlgorithm .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+spatial:clustersWith a owl:ObjectProperty,
+        owl:SymmetricProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "clusters with"@en ;
+    rdfs:comment "Indicates that two trajectories cluster together spatially."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range datacron:Trajectory .
+
+spatial:containsTrajectoryPart a owl:ObjectProperty ;
+    rdfs:label "contains trajectory part"@en ;
+    rdfs:comment "Indicates that a proximity zone contains a trajectory part."@en ;
+    rdfs:domain spatial:ProximityZone ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range datacron:TrajectoryPart .
+
+spatial:hasDistanceMeasurement a owl:ObjectProperty ;
+    rdfs:label "has distance measurement"@en ;
+    rdfs:comment "Associates a proximity result with its distance measurement details."@en ;
+    rdfs:domain spatial:ProximityResult ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:DistanceMeasurement .
+
+spatial:hasInfluenceZone a owl:ObjectProperty ;
+    rdfs:label "has influence zone"@en ;
+    rdfs:comment "Associates a point of interest with its influence zone."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:InfluenceZone .
+
+spatial:hasProximityAnalysis a owl:ObjectProperty ;
+    rdfs:label "has proximity analysis"@en ;
+    rdfs:comment "Associates a trajectory with its spatial proximity analysis."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:ProximityAnalysis ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+spatial:hasProximityResult a owl:ObjectProperty ;
+    rdfs:label "has proximity result"@en ;
+    rdfs:comment "Associates a trajectory part with its proximity analysis results."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:ProximityResult ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+spatial:hasProximityZone a owl:ObjectProperty ;
+    rdfs:label "has proximity zone"@en ;
+    rdfs:comment "Associates a point of interest with its proximity zone definition."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:ProximityZone .
+
+spatial:hasSpatialCluster a owl:ObjectProperty ;
+    rdfs:label "has spatial cluster"@en ;
+    rdfs:comment "Associates a trajectory with a spatial cluster based on proximity patterns."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:SpatialCluster .
+
+spatial:hasSpatialContext a owl:ObjectProperty ;
+    rdfs:label "has spatial context"@en ;
+    rdfs:comment "Associates a trajectory part with its spatial context."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:SpatialContext ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+spatial:hasSpatialRelationship a owl:ObjectProperty ;
+    rdfs:label "has spatial relationship"@en ;
+    rdfs:comment "Associates a trajectory part with its spatial relationships."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:SpatialRelationship .
+
+spatial:proximityTo a owl:ObjectProperty ;
+    rdfs:label "proximity to"@en ;
+    rdfs:comment "Specifies the point of interest that the proximity result refers to."@en ;
+    rdfs:domain spatial:ProximityResult ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range trajecto:PointOfInterest .
+
+spatial:relatedTo a owl:ObjectProperty ;
+    rdfs:label "related to"@en ;
+    rdfs:comment "Specifies the entity that the spatial relationship involves."@en ;
+    rdfs:domain spatial:SpatialRelationship ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range trajecto:EntityOfInterest .
+
+spatial:spatiallyInteractsWith a owl:ObjectProperty ;
+    rdfs:label "spatially interacts with"@en ;
+    rdfs:comment "Indicates spatial interaction between trajectory part and entity."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range trajecto:EntityOfInterest ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+spatial:usesDistanceMetric a owl:ObjectProperty ;
+    rdfs:label "uses distance metric"@en ;
+    rdfs:comment "Specifies the distance metric used in a measurement."@en ;
+    rdfs:domain spatial:DistanceMeasurement ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range spatial:DistanceMetric .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+spatial:analysisAccuracy a owl:DatatypeProperty ;
+    rdfs:label "analysis accuracy"@en ;
+    rdfs:comment "Accuracy measure of the proximity analysis (0.0-1.0)."@en ;
+    rdfs:domain spatial:ProximityAnalysis ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:float .
+
+spatial:analysisTimestamp a owl:DatatypeProperty ;
+    rdfs:label "analysis timestamp"@en ;
+    rdfs:comment "Timestamp when the proximity analysis was performed."@en ;
+    rdfs:domain spatial:ProximityAnalysis ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:dateTime .
+
+spatial:clusterDensity a owl:DatatypeProperty ;
+    rdfs:label "cluster density"@en ;
+    rdfs:comment "Density measure of the spatial cluster."@en ;
+    rdfs:domain spatial:SpatialCluster ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:float .
+
+spatial:clusterSize a owl:DatatypeProperty ;
+    rdfs:label "cluster size"@en ;
+    rdfs:comment "Number of trajectories in the spatial cluster."@en ;
+    rdfs:domain spatial:SpatialCluster ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:positiveInteger .
+
+spatial:hasDistance a owl:DatatypeProperty ;
+    rdfs:label "has distance"@en ;
+    rdfs:comment "Distance value in meters between trajectory part and point of interest."@en ;
+    rdfs:domain spatial:ProximityResult ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:double .
+
+spatial:hasEuclideanDistance a owl:DatatypeProperty ;
+    rdfs:label "has euclidean distance"@en ;
+    rdfs:comment "Euclidean distance in meters."@en ;
+    rdfs:domain spatial:DistanceMeasurement ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:double ;
+    rdfs:subPropertyOf spatial:hasDistance .
+
+spatial:hasHaversineDistance a owl:DatatypeProperty ;
+    rdfs:label "has haversine distance"@en ;
+    rdfs:comment "Haversine distance in meters, accounting for Earth's curvature."@en ;
+    rdfs:domain spatial:DistanceMeasurement ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:double ;
+    rdfs:subPropertyOf spatial:hasDistance .
+
+spatial:hasManhattanDistance a owl:DatatypeProperty ;
+    rdfs:label "has manhattan distance"@en ;
+    rdfs:comment "Manhattan distance in meters."@en ;
+    rdfs:domain spatial:DistanceMeasurement ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:double ;
+    rdfs:subPropertyOf spatial:hasDistance .
+
+spatial:influenceRadius a owl:DatatypeProperty ;
+    rdfs:label "influence radius"@en ;
+    rdfs:comment "Radius of the influence zone in meters."@en ;
+    rdfs:domain spatial:InfluenceZone ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:double .
+
+spatial:proximityRank a owl:DatatypeProperty ;
+    rdfs:label "proximity rank"@en ;
+    rdfs:comment "Rank of proximity (1 = closest) for a trajectory part among all nearby POIs."@en ;
+    rdfs:domain spatial:ProximityResult ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:positiveInteger .
+
+spatial:proximityScore a owl:DatatypeProperty ;
+    rdfs:label "proximity score"@en ;
+    rdfs:comment "Normalized proximity score (0.0-1.0) where 1.0 is highest proximity."@en ;
+    rdfs:domain spatial:ProximityResult ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:float .
+
+spatial:spatialCohesion a owl:DatatypeProperty ;
+    rdfs:label "spatial cohesion"@en ;
+    rdfs:comment "Measure of spatial cohesion within the cluster (0.0-1.0)."@en ;
+    rdfs:domain spatial:SpatialCluster ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:float .
+
+spatial:withinProximity a owl:DatatypeProperty ;
+    rdfs:label "within proximity"@en ;
+    rdfs:comment "Boolean indicating if the trajectory part is within proximity threshold."@en ;
+    rdfs:domain spatial:ProximityResult ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:boolean .
+
+spatial:zoneRadius a owl:DatatypeProperty ;
+    rdfs:label "zone radius"@en ;
+    rdfs:comment "Radius of the proximity zone in meters."@en ;
+    rdfs:domain spatial:ProximityZone ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spatial> ;
+    rdfs:range xsd:double .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+trajecto:EntityOfInterest a owl:Class .
+
+trajecto:Interaction a owl:Class .
+
+trajecto:PointOfInterest a owl:Class .
+
+trajecto:RegionOfInterest a owl:Class .
+
+datacron:Trajectory a owl:Class .
+
+datacron:TrajectoryCluster a owl:Class .
+
+datacron:TrajectoryPart a owl:Class .
+
+dul:Abstract a owl:Class .
+
+dul:Quality a owl:Class .
+
+dul:Situation a owl:Class .
+
+dul:associatedWith a owl:ObjectProperty .
+
+geo: rdfs:label "geo"@en ;
+    dc:date "$Date: 2009/04/20 15:00:30 $" ;
+    dc:description """A vocabulary for representing latitude, longitude and 
+ altitude information in the WGS84 geodetic reference datum. 
+ Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.""" ;
+    dc:title "WGS84 Geo Positioning: an RDF vocabulary" ;
+    rdfs:comment """
+Recent changes to this namespace:
+$Log: wgs84_pos.rdf,v $
+Revision 1.22  2009/04/20 15:00:30  timbl
+Remove the time bits which have been deal with elsewhere eg in iCal.
+
+Revision 1.21  2009/04/20 12:52:47  timbl
+try again
+
+Revision 1.20  2009/04/20 12:42:11  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.19  2009/04/20 12:36:31  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.18  2006/02/01 22:01:04  danbri
+Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
+
+Revision 1.17  2004/02/06 17:38:12  danbri
+Fixed a bad commit screwup
+
+Revision 1.15  2003/04/19 11:24:08  danbri
+Fixed the typo even more.
+
+Revision 1.14  2003/04/19 11:16:56  danbri
+fixed a typo
+
+Revision 1.13  2003/02/19 22:27:27  connolly
+relaxed domain constraints on lat/long/alt from Point to SpatialThing
+
+Revision 1.12  2003/01/12 01:41:41  danbri
+Trying local copy of XSLT doc.
+
+Revision 1.11  2003/01/12 01:20:18  danbri
+added a link to morten's xslt rdfs viewer.
+
+Revision 1.10  2003/01/11 18:56:49  danbri
+Removed datatype range from lat and long properties, since they would
+have required each occurance of the property to mention the datatype.
+
+Revision 1.9  2003/01/11 11:41:31  danbri
+Another typo; repaired rdfs:Property to rdf:Property x4
+
+Revision 1.8  2003/01/11 11:05:02  danbri
+Added an rdfs:range for each lat/long/alt property,
+http://www.w3.org/2001/XMLSchema#float
+
+Revision 1.7  2003/01/10 20:25:16  danbri
+Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
+coordinate system(s) at the same time. Feedback welcomed.
+
+Revision 1.6  2003/01/10 20:18:30  danbri
+Added CVS log comments into the RDF/XML as an rdfs:comment property of the
+vocabulary. Note that this is not common practice (but seems both harmless
+and potentially useful).
+
+
+revision 1.5
+date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
+Updated schema:
+Added a dc:date, added url for more info. Changed the rdfs:label of the
+namespace from gp to geo. Added a class Point, set as the rdfs:domain of
+each property. Added XML comment on the lat_long property suggesting that
+we might not need it (based on #rdfig commentary from implementors).
+
+revision 1.4
+date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
+Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
+#rdfig for catching this error.
+
+revision 1.3
+date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
+fixed buglet in vocab, added more wgs links
+
+revision 1.2
+date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
+Removed alt from the as-a-flat-string property, and switched from
+space separated to comma separated.
+
+revision 1.1
+date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
+basic geo vocab
+
+"""@en .
+
+geo:Point a owl:Class ;
+    rdfs:label "point"@en ;
+    rdfs:comment """ 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  """@en,
+        """A point, typically described using a coordinate system relative to Earth, such as WGS84.
+  """@en ;
+    rdfs:subClassOf geo:SpatialThing .
+
+geo:SpatialThing a owl:Class ;
+    rdfs:label "SpatialThing"@en ;
+    rdfs:comment """Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+"""@en .
+
+geo:alt a owl:AnnotationProperty ;
+    rdfs:label "altitude"@en ;
+    rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid)."""@en ;
+    rdfs:domain geo:SpatialThing .
+
+geo:lat a owl:AnnotationProperty ;
+    rdfs:label "latitude"@en ;
+    rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)."@en ;
+    rdfs:domain geo:SpatialThing .
+
+geo:lat_long rdfs:label "lat/long"@en ;
+    rdfs:comment "A comma-separated representation of a latitude, longitude coordinate."@en .
+
+geo:location a owl:AnnotationProperty,
+        owl:ObjectProperty ;
+    rdfs:label "location"@en ;
+    rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """@en ;
+    rdfs:range geo:SpatialThing ;
+    rdfs:subPropertyOf foaf:based_near .
+
+geo:long a owl:AnnotationProperty ;
+    rdfs:label "longitude"@en ;
+    rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)."@en ;
+    rdfs:domain geo:SpatialThing .
+
+skos:definition a owl:AnnotationProperty .
+
+foaf:based_near a owl:AnnotationProperty .

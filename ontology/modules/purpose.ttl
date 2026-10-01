@@ -1,0 +1,462 @@
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix purpose: <http://w3id.org/trajecto/purpose#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/trajecto/purpose> a owl:Ontology ;
+    rdfs:label "trajecto-purpose"@en ;
+    dcterms:created "2025-05-09"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "This module extends the trajecto ontology with a comprehensive framework for representing purposes of movement."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Purpose Module"@en ;
+    vann:preferredNamespacePrefix "purpose" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/purpose#" ;
+    owl:imports <http://w3id.org/trajecto/purpose/skos> ;
+    owl:priorVersion <http://w3id.org/trajecto/purpose/1.0> ;
+    owl:versionIRI <http://w3id.org/trajecto/purpose/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+purpose:ArtisticExperience a owl:Class ;
+    rdfs:label "Artistic Experience"@en ;
+    rdfs:comment "Purpose related to experiencing artistic works or performances."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CulturalPurpose .
+
+purpose:BusinessMeeting a owl:Class ;
+    rdfs:label "Business Meeting"@en ;
+    rdfs:comment "Purpose related to professional business meetings."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:WorkPurpose .
+
+purpose:CommercialPurpose a owl:Class ;
+    rdfs:label "Commercial Purpose"@en ;
+    rdfs:comment "Movement purpose related to commercial activities such as shopping or services."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated by purchase, consumption or service-seeking activities."@en ;
+    skos:example "Shopping, dining out, visiting a bank"@en .
+
+purpose:Commuting a owl:Class ;
+    rdfs:label "Commuting"@en ;
+    rdfs:comment "Purpose related to regular travel between home and work/education."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:TransportationPurpose .
+
+purpose:CulturalEventAttendance a owl:Class ;
+    rdfs:label "Cultural Event Attendance"@en ;
+    rdfs:comment "Purpose related to attending cultural events, festivals, or performances."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CulturalPurpose .
+
+purpose:CulturalPurpose a owl:Class ;
+    rdfs:label "Cultural Purpose"@en ;
+    rdfs:comment "Movement purpose related to cultural activities and experiences."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated by engagement with cultural artifacts, spaces, or events."@en ;
+    skos:example "Museum visits, attending performances, exploring heritage sites"@en .
+
+purpose:DiningExperience a owl:Class ;
+    rdfs:label "Dining Experience"@en ;
+    rdfs:comment "Purpose related to dining at restaurants or food establishments."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CommercialPurpose .
+
+purpose:DomesticActivity a owl:Class ;
+    rdfs:label "Domestic Activity"@en ;
+    rdfs:comment "Purpose related to household or domestic activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ResidentialPurpose .
+
+purpose:EducationalPurpose a owl:Class ;
+    rdfs:label "Educational Purpose"@en ;
+    rdfs:comment "Movement purpose related to learning and educational activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated by formal or informal learning objectives."@en ;
+    skos:example "School attendance, workshops, field studies, research activities"@en .
+
+purpose:EducationalTour a owl:Class ;
+    rdfs:label "Educational Tour"@en ;
+    rdfs:comment "Purpose that combines cultural experience with educational objectives."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CulturalPurpose,
+        purpose:EducationalPurpose .
+
+purpose:EntertainmentAttendance a owl:Class ;
+    rdfs:label "Entertainment Attendance"@en ;
+    rdfs:comment "Purpose related to attending entertainment events (cinema, sports, etc.)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:RecreationalPurpose .
+
+purpose:ExerciseActivity a owl:Class ;
+    rdfs:label "Exercise Activity"@en ;
+    rdfs:comment "Purpose related to physical exercise or sports activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:RecreationalPurpose .
+
+purpose:FieldStudy a owl:Class ;
+    rdfs:label "Field Study"@en ;
+    rdfs:comment "Purpose related to educational field studies or site visits."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:EducationalPurpose .
+
+purpose:FieldWork a owl:Class ;
+    rdfs:label "Field Work"@en ;
+    rdfs:comment "Purpose related to professional work conducted in the field."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:WorkPurpose .
+
+purpose:FineArtsPurpose a owl:Class ;
+    rdfs:label "Fine Arts Purpose"@en ;
+    rdfs:comment "Purpose related to engagement with paintings, mixed media, mirrors, and installations."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ArtisticExperience .
+
+purpose:FormalLearning a owl:Class ;
+    rdfs:label "Formal Learning"@en ;
+    rdfs:comment "Purpose related to formal educational activities (classes, lectures)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:EducationalPurpose .
+
+purpose:GeneralPurpose a owl:Class ;
+    rdfs:label "General Purpose"@en ;
+    rdfs:comment "Mixed cultural engagement with no dominant artwork type."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CulturalPurpose .
+
+purpose:HeritageExploration a owl:Class ;
+    rdfs:label "Heritage Exploration"@en ;
+    rdfs:comment "Purpose related to exploring heritage sites or historical locations."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CulturalPurpose .
+
+purpose:HomeBound a owl:Class ;
+    rdfs:label "Home Bound"@en ;
+    rdfs:comment "Purpose related to returning to or staying at home."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ResidentialPurpose .
+
+purpose:LeisureActivity a owl:Class ;
+    rdfs:label "Leisure Activity"@en ;
+    rdfs:comment "Purpose related to casual leisure activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:RecreationalPurpose .
+
+purpose:LocalCommunityEngagement a owl:Class ;
+    rdfs:label "Local Community Engagement"@en ;
+    rdfs:comment "Purpose related to engaging with the local community near one's residence."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ResidentialPurpose .
+
+purpose:MuseumVisit a owl:Class ;
+    rdfs:label "Museum Visit"@en ;
+    rdfs:comment "Purpose related to visiting museums or exhibitions."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CulturalPurpose .
+
+purpose:OfficeWork a owl:Class ;
+    rdfs:label "Office Work"@en ;
+    rdfs:comment "Purpose related to working in an office environment."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:WorkPurpose .
+
+purpose:PhotographyPurpose a owl:Class ;
+    rdfs:label "Photography Purpose"@en ;
+    rdfs:comment "Purpose related to engagement with photographic works."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ArtisticExperience .
+
+purpose:PrintPurpose a owl:Class ;
+    rdfs:label "Print Purpose"@en ;
+    rdfs:comment "Purpose related to engagement with prints and printmaking works."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ArtisticExperience .
+
+purpose:ProfessionalEvent a owl:Class ;
+    rdfs:label "Professional Event"@en ;
+    rdfs:comment "Purpose related to attending professional events, conferences, or trade shows."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:WorkPurpose .
+
+purpose:PurposeCategory a owl:Class ;
+    rdfs:label "Purpose Category"@en ;
+    rdfs:comment "A general category of movement purpose."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf trajecto:PurposeOfMovement ;
+    skos:definition "A classification of movement purpose into general categories that can be hierarchically organized."@en .
+
+purpose:PurposeHierarchy a owl:Class ;
+    rdfs:label "Purpose Hierarchy"@en ;
+    rdfs:comment "A structure representing the hierarchical organization of movement purposes."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf dul:Abstract ;
+    skos:definition "A construct that represents the organization of primary, secondary, and opportunistic purposes that motivate a trajectory."@en .
+
+purpose:PurposeTransition a owl:Class ;
+    rdfs:label "Purpose Transition"@en ;
+    rdfs:comment "Represents a change from one purpose to another during a trajectory."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf dul:Event ;
+    skos:definition "An event where the primary motivation for movement changes from one purpose to another."@en .
+
+purpose:RecreationalPurpose a owl:Class ;
+    rdfs:label "Recreational Purpose"@en ;
+    rdfs:comment "Movement purpose related to leisure and recreational activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated by leisure, entertainment, relaxation, or pleasure."@en ;
+    skos:example "Park visits, beach trips, attending sporting events"@en .
+
+purpose:Research a owl:Class ;
+    rdfs:label "Research"@en ;
+    rdfs:comment "Purpose related to research activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:EducationalPurpose .
+
+purpose:ResidentialPurpose a owl:Class ;
+    rdfs:label "Residential Purpose"@en ;
+    rdfs:comment "Movement purpose related to residential and home-based activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated by home-related activities or local community engagement."@en ;
+    skos:example "Returning home, local neighborhood activities"@en .
+
+purpose:SculpturePurpose a owl:Class ;
+    rdfs:label "Sculpture Purpose"@en ;
+    rdfs:comment "Purpose related to engagement with sculptural works."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:ArtisticExperience .
+
+purpose:ServiceAccess a owl:Class ;
+    rdfs:label "Service Access"@en ;
+    rdfs:comment "Purpose related to accessing commercial services (banking, healthcare, etc.)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CommercialPurpose .
+
+purpose:Shopping a owl:Class ;
+    rdfs:label "Shopping"@en ;
+    rdfs:comment "Purpose related to purchasing goods."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:CommercialPurpose .
+
+purpose:SocialGathering a owl:Class ;
+    rdfs:label "Social Gathering"@en ;
+    rdfs:comment "Purpose related to meeting and socializing with others."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:RecreationalPurpose .
+
+purpose:Tourism a owl:Class ;
+    rdfs:label "Tourism"@en ;
+    rdfs:comment "Purpose related to visiting places as a tourist."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:RecreationalPurpose .
+
+purpose:TransferBetweenModes a owl:Class ;
+    rdfs:label "Transfer Between Modes"@en ;
+    rdfs:comment "Purpose related to transferring between different modes of transportation."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:TransportationPurpose .
+
+purpose:Transit a owl:Class ;
+    rdfs:label "Transit"@en ;
+    rdfs:comment "Purpose primarily focused on moving from one location to another."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:TransportationPurpose .
+
+purpose:TransportationPurpose a owl:Class ;
+    rdfs:label "Transportation Purpose"@en ;
+    rdfs:comment "Movement purpose primarily related to transport and transit between locations."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated primarily by the need to travel between locations rather than activities at those locations."@en ;
+    skos:example "Commuting, transit transfers, wandering"@en .
+
+purpose:Wandering a owl:Class ;
+    rdfs:label "Wandering"@en ;
+    rdfs:comment "Purpose involving movement without a specific destination or goal."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:TransportationPurpose .
+
+purpose:WorkplaceRoutine a owl:Class ;
+    rdfs:label "Workplace Routine"@en ;
+    rdfs:comment "Purpose related to regular workplace routines and activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:WorkPurpose .
+
+purpose:WorkPurpose a owl:Class ;
+    rdfs:label "Work Purpose"@en ;
+    rdfs:comment "Movement purpose related to employment and professional activities."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:PurposeCategory ;
+    skos:definition "Movement motivated by professional responsibilities or employment-related activities."@en ;
+    skos:example "Office work, field work, business meetings"@en .
+
+purpose:WorkshopAttendance a owl:Class ;
+    rdfs:label "Workshop Attendance"@en ;
+    rdfs:comment "Purpose related to attending workshops, seminars, or training sessions."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:subClassOf purpose:EducationalPurpose .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+purpose:fromPurpose a owl:ObjectProperty ;
+    rdfs:label "from purpose"@en ;
+    rdfs:comment "Specifies the original purpose before a transition."@en ;
+    rdfs:domain purpose:PurposeTransition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeCategory .
+
+purpose:hasOpportunisticPurpose a owl:ObjectProperty ;
+    rdfs:label "has opportunistic purpose"@en ;
+    rdfs:comment "Specifies unplanned purposes that emerge during the trajectory."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeCategory ;
+    rdfs:subPropertyOf trajecto:hasPurpose ;
+    skos:definition "Spontaneous or unplanned purposes that arise during the trajectory and influence movement patterns."@en .
+
+purpose:hasPrimaryPurpose a owl:ObjectProperty ;
+    rdfs:label "has primary purpose"@en ;
+    rdfs:comment "Specifies the main purpose of a trajectory."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeCategory ;
+    rdfs:subPropertyOf trajecto:hasPurpose ;
+    skos:definition "The primary motivation or goal behind the movement represented by the trajectory."@en .
+
+purpose:hasPurposeCharacteristic a owl:ObjectProperty ;
+    rdfs:label "has purpose characteristic"@en ;
+    rdfs:comment "Links a purpose category to its characteristic properties."@en ;
+    rdfs:domain purpose:PurposeCategory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> .
+
+purpose:hasPurposeHierarchy a owl:ObjectProperty ;
+    rdfs:label "has purpose hierarchy"@en ;
+    rdfs:comment "Links a trajectory to its complete purpose hierarchy."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeHierarchy .
+
+purpose:hasPurposeTransition a owl:ObjectProperty ;
+    rdfs:label "has purpose transition"@en ;
+    rdfs:comment "Links a trajectory to purpose transitions that occur within it."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeTransition ;
+    skos:definition "Identifies changes in movement purpose that occur during a trajectory."@en .
+
+purpose:hasSecondaryPurpose a owl:ObjectProperty ;
+    rdfs:label "has secondary purpose"@en ;
+    rdfs:comment "Specifies additional purposes of a trajectory that are not the main driver of movement."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeCategory ;
+    rdfs:subPropertyOf trajecto:hasPurpose ;
+    skos:definition "Additional goals or aims that may be fulfilled during the trajectory, but are not the primary motivation for the movement."@en .
+
+purpose:toPurpose a owl:ObjectProperty ;
+    rdfs:label "to purpose"@en ;
+    rdfs:comment "Specifies the new purpose after a transition."@en ;
+    rdfs:domain purpose:PurposeTransition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range purpose:PurposeCategory .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+purpose:hasPurposeConfidenceScore a owl:DatatypeProperty ;
+    rdfs:label "has purpose confidence score"@en ;
+    rdfs:comment "Share of the meaningful dwell of a trajectory spent at POIs of its assigned purpose, as a percentage (0 to 100)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range xsd:decimal .
+
+purpose:hasPurposeDuration a owl:DatatypeProperty ;
+    rdfs:label "has purpose duration"@en ;
+    rdfs:comment "Specifies the typical duration associated with a purpose."@en ;
+    rdfs:domain purpose:PurposeCategory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range xsd:duration .
+
+purpose:hasPurposeFrequency a owl:DatatypeProperty ;
+    rdfs:label "has purpose frequency"@en ;
+    rdfs:comment "Describes how frequently this purpose typically occurs (e.g., 'daily', 'weekly', 'monthly', 'rarely')."@en ;
+    rdfs:domain purpose:PurposeCategory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range xsd:string .
+
+purpose:hasPurposePriority a owl:DatatypeProperty ;
+    rdfs:label "has purpose priority"@en ;
+    rdfs:comment "Numeric representation of purpose priority, with lower numbers indicating higher priority."@en ;
+    rdfs:domain purpose:PurposeCategory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range xsd:integer .
+
+purpose:transitionTimestamp a owl:DatatypeProperty ;
+    rdfs:label "transition timestamp"@en ;
+    rdfs:comment "Timestamp when the purpose transition occurred."@en ;
+    rdfs:domain purpose:PurposeTransition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose> ;
+    rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+trajecto:PurposeOfMovement a owl:Class .
+
+trajecto:hasPurpose a owl:ObjectProperty .
+
+datacron:Trajectory a owl:Class .
+
+dul:Abstract a owl:Class .
+
+dul:Event a owl:Class .
+
+xsd:duration a rdfs:Datatype .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .

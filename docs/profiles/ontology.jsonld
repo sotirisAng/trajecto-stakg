@@ -1,0 +1,5679 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid108"
+    }, {
+      "@id" : "_:genid106"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid108",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Afternoon"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid110",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error8"
+    }, {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid113",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid117"
+    }, {
+      "@id" : "_:genid115"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid115",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid117",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid119",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid123"
+    }, {
+      "@id" : "_:genid121"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid121",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid123",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid125",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid127"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid128"
+  } ]
+}, {
+  "@id" : "_:genid128",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid130"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid15"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid130",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Cultural"
+  } ]
+}, {
+  "@id" : "_:genid133",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid137"
+    }, {
+      "@id" : "_:genid135"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid135",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid137",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid139",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid143"
+    }, {
+      "@id" : "_:genid141"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid141",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid145",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error11"
+    }, {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid148",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid152"
+    }, {
+      "@id" : "_:genid150"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid16"
+  } ]
+}, {
+  "@id" : "_:genid150",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid152",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid154",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid158"
+    }, {
+      "@id" : "_:genid156"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid156",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid158",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid18"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid160",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error10"
+    }, {
+      "@id" : "_:genid162"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid162",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid164",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid166"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid166",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid167"
+  } ]
+}, {
+  "@id" : "_:genid167",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid169"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid169",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Educational"
+  } ]
+}, {
+  "@id" : "_:genid172",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#HasDominantEncounter"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#HighEngagementTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid175",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error4"
+    }, {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid178",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid180"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Artwork"
+  } ]
+}, {
+  "@id" : "_:genid180",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid181"
+  } ]
+}, {
+  "@id" : "_:genid181",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid183"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid183",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Entertainment"
+  } ]
+}, {
+  "@id" : "_:genid186",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#EveningTrajectory"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#RecreationTargeted"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid189",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid191"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid191",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Evening"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid193",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid195"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid195",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid196"
+  } ]
+}, {
+  "@id" : "_:genid196",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid198"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid198",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Exhibit"
+  } ]
+}, {
+  "@id" : "_:genid201",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid203"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid203",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Fall"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid205",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid207"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid207",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid208"
+  } ]
+}, {
+  "@id" : "_:genid208",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid210"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid23"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid210",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#FastFood"
+  } ]
+}, {
+  "@id" : "_:genid213",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid215"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid215",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid216"
+  } ]
+}, {
+  "@id" : "_:genid216",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid218"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid218",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#FoodCourt"
+  } ]
+}, {
+  "@id" : "_:genid221",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error12"
+    }, {
+      "@id" : "http://w3id.org/trajecto/user#UserProfile"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid224",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error7"
+    }, {
+      "@id" : "http://w3id.org/trajecto/user#UserProfile"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid227",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error6"
+    }, {
+      "@id" : "http://w3id.org/trajecto/user#UserProfile"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid24"
+  } ]
+}, {
+  "@id" : "_:genid230",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error13"
+    }, {
+      "@id" : "http://w3id.org/trajecto/user#UserProfile"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid233",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error2"
+    }, {
+      "@id" : "http://w3id.org/trajecto/user#UserProfile"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid236",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error3"
+    }, {
+      "@id" : "http://w3id.org/trajecto/user#UserProfile"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid239",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid241"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid26"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid241",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid242"
+  } ]
+}, {
+  "@id" : "_:genid242",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid244"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid244",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Gallery"
+  } ]
+}, {
+  "@id" : "_:genid247",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid249"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid249",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/events#CategoryDiscovery"
+  } ]
+}, {
+  "@id" : "_:genid251",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid253"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid253",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/events#CategoryTransition"
+  } ]
+}, {
+  "@id" : "_:genid255",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid257"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid257",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#DestinationInteraction"
+  } ]
+}, {
+  "@id" : "_:genid259",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid261"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Bar"
+  } ]
+}, {
+  "@id" : "_:genid261",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/events#DominantEncounter"
+  } ]
+}, {
+  "@id" : "_:genid263",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid265"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid265",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#DominantInteraction"
+  } ]
+}, {
+  "@id" : "_:genid267",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid269"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid269",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/events#EngagementDrop"
+  } ]
+}, {
+  "@id" : "_:genid271",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid273"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid273",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/events#EngagementEscalation"
+  } ]
+}, {
+  "@id" : "_:genid275",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid277"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid277",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+  } ]
+}, {
+  "@id" : "_:genid279",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid281"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid281",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#StartInteraction"
+  } ]
+}, {
+  "@id" : "_:genid283",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#CulturalExplorer"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#HighEngagementTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid286",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid288"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid288",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto#HighEngagement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEngagementLevel"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid31"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid290",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#HasCategoryDiscovery"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#HistoricalFocusedTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid293",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error5"
+    }, {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid296",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid298"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid298",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid299"
+  } ]
+}, {
+  "@id" : "_:genid299",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid301"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "_:genid301",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#HistoricalLandmark"
+  } ]
+}, {
+  "@id" : "_:genid304",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid306"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid306",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid307"
+  } ]
+}, {
+  "@id" : "_:genid307",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid309"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid309",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#HistoricalSite"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid32"
+  } ]
+}, {
+  "@id" : "_:genid312",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid314"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid314",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid315"
+  } ]
+}, {
+  "@id" : "_:genid315",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid317"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid317",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Historical"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid34"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid320",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid322"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid322",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#SpecialPeriod"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid324",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#ImmersiveCulturalVisitor"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#MorningTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid327",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid329"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid329",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid330"
+  } ]
+}, {
+  "@id" : "_:genid330",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+    }, {
+      "@id" : "_:genid332"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid332",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid333"
+  } ]
+}, {
+  "@id" : "_:genid333",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#Artwork"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Cultural"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Exhibit"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Gallery"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Museum"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Beach"
+  } ]
+}, {
+  "@id" : "_:genid341",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid343"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid343",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid344"
+  } ]
+}, {
+  "@id" : "_:genid344",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+    }, {
+      "@id" : "_:genid346"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid346",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid347"
+  } ]
+}, {
+  "@id" : "_:genid347",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#Cafe"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#FastFood"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#FoodCourt"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Restaurant"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid354",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid358"
+    }, {
+      "@id" : "_:genid356"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid356",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+  } ]
+}, {
+  "@id" : "_:genid358",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#DominantInteraction"
+  } ]
+}, {
+  "@id" : "_:genid360",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid362"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid362",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid363"
+  } ]
+}, {
+  "@id" : "_:genid363",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+    }, {
+      "@id" : "_:genid365"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid365",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid366"
+  } ]
+}, {
+  "@id" : "_:genid366",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#Bar"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Cinema"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Entertainment"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Nightclub"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#NightlifeFacility"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#PerformanceVenue"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Theater"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid39"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid376",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid378"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid378",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid379"
+  } ]
+}, {
+  "@id" : "_:genid379",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+    }, {
+      "@id" : "_:genid381"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid381",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid382"
+  } ]
+}, {
+  "@id" : "_:genid382",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#Historical"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#HistoricalLandmark"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#HistoricalSite"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Monument"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid389",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid391"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid40"
+  } ]
+}, {
+  "@id" : "_:genid391",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid392"
+  } ]
+}, {
+  "@id" : "_:genid392",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+    }, {
+      "@id" : "_:genid394"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid394",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid395"
+  } ]
+}, {
+  "@id" : "_:genid395",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#Beach"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#LeisureFacility"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Park"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#Recreational"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#SportsFacility"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid6"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid42"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid403",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid405"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid405",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid406"
+  } ]
+}, {
+  "@id" : "_:genid406",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction"
+    }, {
+      "@id" : "_:genid408"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid408",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid409"
+  } ]
+}, {
+  "@id" : "_:genid409",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#Commercial"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#CommercialStreet"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#MarketArea"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#RetailStore"
+    }, {
+      "@id" : "http://w3id.org/trajecto/poi#ShoppingMall"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid417",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid419"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid419",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid420"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Cafe"
+  } ]
+}, {
+  "@id" : "_:genid420",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid422"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid422",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Information"
+  } ]
+}, {
+  "@id" : "_:genid425",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid427"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid427",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid428"
+  } ]
+}, {
+  "@id" : "_:genid428",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid430"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid430",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Landmark"
+  } ]
+}, {
+  "@id" : "_:genid433",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid437"
+    }, {
+      "@id" : "_:genid435"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid435",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid437",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid439",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid443"
+    }, {
+      "@id" : "_:genid441"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid441",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid443",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid445",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid447"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid447",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid448"
+  } ]
+}, {
+  "@id" : "_:genid448",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid450"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#HasEngagementEscalation"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#HasImmersiveInteraction"
+    }, {
+      "@id" : "_:genid47"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid450",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#LeisureFacility"
+  } ]
+}, {
+  "@id" : "_:genid453",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid457"
+    }, {
+      "@id" : "_:genid455"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid455",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid457",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid459",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid463"
+    }, {
+      "@id" : "_:genid461"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid461",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid463",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid465",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid467"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid467",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid468"
+  } ]
+}, {
+  "@id" : "_:genid468",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid470"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid470",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Library"
+  } ]
+}, {
+  "@id" : "_:genid473",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid475"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid475",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto#LowEngagement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEngagementLevel"
+  } ]
+}, {
+  "@id" : "_:genid477",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid479"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid479",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid480"
+  } ]
+}, {
+  "@id" : "_:genid480",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid482"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid482",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#MarketArea"
+  } ]
+}, {
+  "@id" : "_:genid485",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid487"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid487",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto#MediumEngagement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasEngagementLevel"
+  } ]
+}, {
+  "@id" : "_:genid489",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid491"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid491",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid492"
+  } ]
+}, {
+  "@id" : "_:genid492",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid494"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid494",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Monument"
+  } ]
+}, {
+  "@id" : "_:genid497",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#CulturalCasual"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#MorningTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid52"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid500",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#CulturalExplorer"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#MorningTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid503",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid505"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid505",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Morning"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid507",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid509"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid509",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid510"
+  } ]
+}, {
+  "@id" : "_:genid510",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid512"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid512",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Museum"
+  } ]
+}, {
+  "@id" : "_:genid515",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid517"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid517",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Night"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid519",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid521"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid53"
+  } ]
+}, {
+  "@id" : "_:genid521",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid522"
+  } ]
+}, {
+  "@id" : "_:genid522",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid524"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid524",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Nightclub"
+  } ]
+}, {
+  "@id" : "_:genid527",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid529"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid529",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid530"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid55"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid530",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid532"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid532",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#NightlifeFacility"
+  } ]
+}, {
+  "@id" : "_:genid535",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid537"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid537",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid538"
+  } ]
+}, {
+  "@id" : "_:genid538",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid540"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid540",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Park"
+  } ]
+}, {
+  "@id" : "_:genid543",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid545"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid545",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid546"
+  } ]
+}, {
+  "@id" : "_:genid546",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid548"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid548",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#PerformanceVenue"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Cinema"
+  } ]
+}, {
+  "@id" : "_:genid551",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid555"
+    }, {
+      "@id" : "_:genid553"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid553",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid555",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid557",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid561"
+    }, {
+      "@id" : "_:genid559"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid559",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid561",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid563",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error1"
+    }, {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid566",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid570"
+    }, {
+      "@id" : "_:genid568"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid568",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid570",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid572",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid576"
+    }, {
+      "@id" : "_:genid574"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid574",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid576",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid578",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid580"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid62"
+    }, {
+      "@id" : "_:genid60"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid580",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid581"
+  } ]
+}, {
+  "@id" : "_:genid581",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid583"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid583",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Recreational"
+  } ]
+}, {
+  "@id" : "_:genid586",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid588"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid588",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid589"
+  } ]
+}, {
+  "@id" : "_:genid589",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid591"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid591",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Religious"
+  } ]
+}, {
+  "@id" : "_:genid594",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid596"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid596",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid597"
+  } ]
+}, {
+  "@id" : "_:genid597",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid599"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid599",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Restaurant"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Accommodation"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid602",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid604"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid604",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid605"
+  } ]
+}, {
+  "@id" : "_:genid605",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid607"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid607",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#RetailStore"
+  } ]
+}, {
+  "@id" : "_:genid610",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid612"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid612",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid613"
+  } ]
+}, {
+  "@id" : "_:genid613",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid615"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid615",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#School"
+  } ]
+}, {
+  "@id" : "_:genid618",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid622"
+    }, {
+      "@id" : "_:genid620"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid620",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#CasualMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid622",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid624",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid628"
+    }, {
+      "@id" : "_:genid626"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid626",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid628",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid630",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error9"
+    }, {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid633",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid637"
+    }, {
+      "@id" : "_:genid635"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid635",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid637",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid639",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid641"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid68"
+    }, {
+      "@id" : "_:genid66"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid641",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid642"
+  } ]
+}, {
+  "@id" : "_:genid642",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid644"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid644",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#ShoppingMall"
+  } ]
+}, {
+  "@id" : "_:genid647",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid651"
+    }, {
+      "@id" : "_:genid649"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid649",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid651",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid653",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid655"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid655",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid656"
+  } ]
+}, {
+  "@id" : "_:genid656",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid658"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid658",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#SportsFacility"
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid661",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid663"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid663",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Spring"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid665",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#RecreationCasual"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#SummerTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid668",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid670"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid670",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Summer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid672",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid674"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid674",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid675"
+  } ]
+}, {
+  "@id" : "_:genid675",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid677"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid677",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Theater"
+  } ]
+}, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid680",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid682"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid682",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid683"
+  } ]
+}, {
+  "@id" : "_:genid683",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid685"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid685",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#University"
+  } ]
+}, {
+  "@id" : "_:genid688",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#DiningCasual"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#WeekdayTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid691",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid693"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid693",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Weekday"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid695",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#HighEngagementTrajectory"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#ImmersiveDiningVisitor"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#WeekendTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid699",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/profiles#RecreationExplorer"
+    }, {
+      "@id" : "http://w3id.org/trajecto/profiles#WeekendTrajectory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid74"
+    }, {
+      "@id" : "_:genid72"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid702",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid704"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid704",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Weekend"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid706",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid708"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid708",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/context#Winter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/context#hasTemporalContext"
+  } ]
+}, {
+  "@id" : "_:genid710",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid711",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid712",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid713",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid714",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid715",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid716",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid717",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid718",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid719",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid720",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid721",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid722",
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid78"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid79"
+  } ]
+}, {
+  "@id" : "_:genid79",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid81"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#CommercialStreet"
+  } ]
+}, {
+  "@id" : "_:genid84",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid88"
+    }, {
+      "@id" : "_:genid86"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid86",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern"
+  } ]
+}, {
+  "@id" : "_:genid88",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#hasPurpose"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid11"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid92"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto#includesInteraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid93"
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction"
+    }, {
+      "@id" : "_:genid95"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#interactsWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/trajecto/poi#Commercial"
+  } ]
+}, {
+  "@id" : "_:genid98",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.datacron-project.eu/datAcron#Trajectory"
+    }, {
+      "@id" : "_:genid102"
+    }, {
+      "@id" : "_:genid100"
+    } ]
+  } ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#HighEngagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#LowEngagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#MediumEngagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#hasEngagementLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#hasEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#hasPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto#includesInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Afternoon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Evening",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Fall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Morning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Night",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#SpecialPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Spring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Summer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Weekday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Weekend",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#Winter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/context#hasTemporalContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/events#CategoryDiscovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/events#CategoryTransition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/events#DominantEncounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/events#EngagementDrop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/events#EngagementEscalation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/patterns#CasualMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/patterns#ExploratoryMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/patterns#ImmersiveMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/patterns#TargetedSegment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/patterns#exhibitsPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Accommodation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Artwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Bar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Beach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Cafe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Cinema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Commercial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#CommercialStreet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Cultural",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#DestinationInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#DominantInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Educational",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Entertainment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Exhibit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#FastFood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#FoodCourt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Gallery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Historical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#HistoricalLandmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#HistoricalSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#ImmersiveInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Information",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Landmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#LeisureFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Library",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#MarketArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#MeaningfulInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Monument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Museum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Nightclub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#NightlifeFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Park",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#PerformanceVenue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Recreational",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Religious",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Restaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#RetailStore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#School",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#ShoppingMall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#SportsFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#StartInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#Theater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#University",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/poi#interactsWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-03-29"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Konstantinos Kotis"
+  }, {
+    "@value" : "Sotirios Angelis"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Trajectory profile classes defined by necessary and sufficient conditions over purpose, navigation pattern, engagement level, interaction types, temporal context and trajectory events. An OWL reasoner assigns them to trajectories. Generated by scripts/generate_profiles_module.py; do not edit by hand."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-01"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-01"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Trajecto Trajectory Profiles Module"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "profiles"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://w3id.org/trajecto/profiles#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "trajecto-profiles"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://w3id.org/trajecto/context"
+  }, {
+    "@id" : "http://w3id.org/trajecto/events"
+  }, {
+    "@id" : "http://w3id.org/trajecto/patterns"
+  }, {
+    "@id" : "http://w3id.org/trajecto/poi"
+  }, {
+    "@id" : "http://w3id.org/trajecto/user"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles/1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles/1.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.1.0"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#AccommodationVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Accommodation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Accommodation Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#AfternoonTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Afternoon."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Afternoon Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ArtworkVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Artwork."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Artwork Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#BarVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Bar."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bar Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid21"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#BeachVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Beach."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Beach Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid29"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CafeVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Cafe."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cafe Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid37"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CasualToImmersiveArc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A casual trajectory (patterns:CasualMovement) with an engagement escalation event and at least one immersive interaction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Casual to Immersive Arc"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid45"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CinemaVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Cinema."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cinema Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid50"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CommercialCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CommercialPurpose that exhibits the patterns:CasualMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid58"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CommercialExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CommercialPurpose that exhibits the patterns:ExploratoryMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid64"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CommercialImmersive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CommercialPurpose that exhibits the patterns:ImmersiveMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Immersive"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid70"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CommercialStreetVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:CommercialStreet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Street Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid76"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CommercialTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CommercialPurpose that exhibits the patterns:TargetedSegment navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid84"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CommercialVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Commercial."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid90"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CulturalCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CulturalPurpose that exhibits the patterns:CasualMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid98"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CulturalExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CulturalPurpose that exhibits the patterns:ExploratoryMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid104"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CulturalFocusedTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least three meaningful interactions at cultural POIs (Artwork, Exhibit, Gallery, Museum, Cultural)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Focused Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid110"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CulturalImmersive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CulturalPurpose that exhibits the patterns:ImmersiveMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Immersive"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid113"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CulturalTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:CulturalPurpose that exhibits the patterns:TargetedSegment navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid119"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#CulturalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid125"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#DiningCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:DiningExperience that exhibits the patterns:CasualMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dining Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid133"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#DiningExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:DiningExperience that exhibits the patterns:ExploratoryMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dining Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid139"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#DiningFocusedTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least three meaningful interactions at dining POIs (Cafe, FastFood, FoodCourt, Restaurant)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dining Focused Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid145"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#DiningImmersive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:DiningExperience that exhibits the patterns:ImmersiveMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dining Immersive"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid148"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#DiningTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:DiningExperience that exhibits the patterns:TargetedSegment navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dining Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid154"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#DiscoveryDrivenArc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An exploratory trajectory (patterns:ExploratoryMovement) with at least two category discovery events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Discovery Driven Arc"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid160"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#EducationalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Educational."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Educational Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid164"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#EngagementFocusedArc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:HighEngagementTrajectory and a profiles:HasDominantEncounter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Engagement Focused Arc"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid172"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#EntertainmentFocusedTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least three meaningful interactions at entertainment POIs (NightlifeFacility, Bar, Nightclub, PerformanceVenue, Cinema, Theater, Entertainment)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entertainment Focused Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid175"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#EntertainmentVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Entertainment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entertainment Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid178"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#EveningRecreationTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:EveningTrajectory and a profiles:RecreationTargeted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Evening Recreation Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid186"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#EveningTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Evening."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Evening Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid189"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ExhibitVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Exhibit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Exhibit Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid193"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FallTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Fall."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fall Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid201"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FastFoodVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:FastFood."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fast Food Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid205"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FoodCourtVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:FoodCourt."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Food Court Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid213"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FrequentCulturalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user profile with at least three trajectories classified as profiles:CulturalVisitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frequent Cultural Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid221"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FrequentDiningVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user profile with at least three trajectories classified as profiles:RestaurantVisitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frequent Dining Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid224"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FrequentEntertainmentVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user profile with at least three trajectories classified as profiles:EntertainmentVisitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frequent Entertainment Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid227"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FrequentHistoricalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user profile with at least three trajectories classified as profiles:HistoricalVisitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frequent Historical Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid230"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FrequentRecreationVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user profile with at least three trajectories classified as profiles:ParkVisitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frequent Recreation Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid233"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#FrequentShoppingVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user profile with at least three trajectories classified as profiles:RetailStoreVisitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frequent Shopping Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid236"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#GalleryVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Gallery."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gallery Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid239"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasCategoryDiscovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one events:CategoryDiscovery event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Category Discovery"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid247"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasCategoryTransition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one events:CategoryTransition event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Category Transition"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid251"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasDestinationInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that includes at least one poi:DestinationInteraction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Destination Interaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid255"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasDominantEncounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one events:DominantEncounter event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Dominant Encounter"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid259"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasDominantInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that includes at least one poi:DominantInteraction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Dominant Interaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid263"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasEngagementDrop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one events:EngagementDrop event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Engagement Drop"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid267"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasEngagementEscalation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one events:EngagementEscalation event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Engagement Escalation"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid271"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasImmersiveInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that includes at least one poi:ImmersiveInteraction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Immersive Interaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid275"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HasStartInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that includes at least one poi:StartInteraction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has Start Interaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid279"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HighEngagementCulturalExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:HighEngagementTrajectory and a profiles:CulturalExplorer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Engagement Cultural Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid283"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HighEngagementTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory whose engagement level is trajecto:HighEngagement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Engagement Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid286"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HistoricalDiscoveryExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:HistoricalFocusedTrajectory and a profiles:HasCategoryDiscovery."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Historical Discovery Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid290"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HistoricalFocusedTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least three meaningful interactions at historical POIs (Historical, HistoricalLandmark, HistoricalSite, Monument)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Historical Focused Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid293"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HistoricalLandmarkVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:HistoricalLandmark."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Historical Landmark Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid296"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HistoricalSiteVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:HistoricalSite."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Historical Site Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid304"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HistoricalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Historical."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Historical Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid312"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#HolidayPeriodTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:SpecialPeriod."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Holiday Period Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid320"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveCulturalMorning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:ImmersiveCulturalVisitor and a profiles:MorningTrajectory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Cultural Morning"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid324"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveCulturalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one immersive interaction at a cultural POI (Artwork, Exhibit, Gallery, Museum, Cultural)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Cultural Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid327"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveDiningVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one immersive interaction at a dining POI (Cafe, FastFood, FoodCourt, Restaurant)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Dining Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid341"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveDominantTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that includes at least one poi:ImmersiveInteraction and at least one poi:DominantInteraction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Dominant Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid354"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveEntertainmentVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one immersive interaction at a entertainment POI (NightlifeFacility, Bar, Nightclub, PerformanceVenue, Cinema, Theater, Entertainment)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Entertainment Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid360"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveHistoricalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one immersive interaction at a historical POI (Historical, HistoricalLandmark, HistoricalSite, Monument)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Historical Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid376"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveRecreationVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one immersive interaction at a recreation POI (LeisureFacility, SportsFacility, Beach, Park, Recreational)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Recreation Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid389"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ImmersiveShoppingVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one immersive interaction at a shopping POI (CommercialStreet, MarketArea, RetailStore, ShoppingMall, Commercial)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersive Shopping Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid403"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#InformationVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Information."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Information Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid417"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LandmarkVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Landmark."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Landmark Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid425"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LeisureCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:LeisureActivity that exhibits the patterns:CasualMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leisure Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid433"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LeisureExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:LeisureActivity that exhibits the patterns:ExploratoryMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leisure Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid439"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LeisureFacilityVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:LeisureFacility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leisure Facility Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid445"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LeisureImmersive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:LeisureActivity that exhibits the patterns:ImmersiveMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leisure Immersive"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid453"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LeisureTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:LeisureActivity that exhibits the patterns:TargetedSegment navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leisure Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid459"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LibraryVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Library."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Library Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid465"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#LowEngagementTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory whose engagement level is trajecto:LowEngagement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low Engagement Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid473"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MarketAreaVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:MarketArea."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Market Area Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid477"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MediumEngagementTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory whose engagement level is trajecto:MediumEngagement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium Engagement Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid485"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MonumentVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Monument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Monument Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid489"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MorningCulturalCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:CulturalCasual and a profiles:MorningTrajectory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Morning Cultural Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid497"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MorningCulturalExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:CulturalExplorer and a profiles:MorningTrajectory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Morning Cultural Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid500"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MorningTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Morning."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Morning Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid503"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#MuseumVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Museum."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Museum Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid507"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#NightTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Night."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Night Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid515"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#NightclubVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Nightclub."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nightclub Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid519"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#NightlifeFacilityVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:NightlifeFacility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nightlife Facility Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid527"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ParkVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Park."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Park Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid535"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#PerformanceVenueVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:PerformanceVenue."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Performance Venue Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid543"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RecreationCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:RecreationalPurpose that exhibits the patterns:CasualMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recreation Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid551"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RecreationExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:RecreationalPurpose that exhibits the patterns:ExploratoryMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recreation Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid557"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RecreationFocusedTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least three meaningful interactions at recreation POIs (LeisureFacility, SportsFacility, Beach, Park, Recreational)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recreation Focused Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid563"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RecreationImmersive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:RecreationalPurpose that exhibits the patterns:ImmersiveMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recreation Immersive"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid566"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RecreationTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:RecreationalPurpose that exhibits the patterns:TargetedSegment navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recreation Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid572"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RecreationalVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Recreational."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recreational Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid578"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ReligiousVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Religious."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Religious Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid586"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RestaurantVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Restaurant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Restaurant Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid594"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#RetailStoreVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:RetailStore."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Retail Store Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid602"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#SchoolVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:School."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "School Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid610"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ShoppingCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:Shopping that exhibits the patterns:CasualMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shopping Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid618"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ShoppingExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:Shopping that exhibits the patterns:ExploratoryMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shopping Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid624"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ShoppingFocusedTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least three meaningful interactions at shopping POIs (CommercialStreet, MarketArea, RetailStore, ShoppingMall, Commercial)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shopping Focused Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid630"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ShoppingImmersive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:Shopping that exhibits the patterns:ImmersiveMovement navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shopping Immersive"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid633"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ShoppingMallVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:ShoppingMall."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shopping Mall Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid639"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#ShoppingTargeted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with purpose purposeskos:Shopping that exhibits the patterns:TargetedSegment navigation pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shopping Targeted"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid647"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#SportsFacilityVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:SportsFacility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sports Facility Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid653"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#SpringTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Spring."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spring Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid661"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#SummerRecreationCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:SummerTrajectory and a profiles:RecreationCasual."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Summer Recreation Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid665"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#SummerTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Summer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Summer Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid668"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#TheaterVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:Theater."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Theater Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid672"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#UniversityVisitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with at least one meaningful interaction at a poi:University."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "University Visitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid680"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#WeekdayDiningCasual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:WeekdayTrajectory and a profiles:DiningCasual."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weekday Dining Casual"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid688"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#WeekdayTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Weekday."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weekday Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid691"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#WeekendImmersiveDiner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:WeekendTrajectory and a profiles:ImmersiveDiningVisitor and a profiles:HighEngagementTrajectory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weekend Immersive Diner"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid695"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#WeekendRecreationExplorer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory that is a profiles:WeekendTrajectory and a profiles:RecreationExplorer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weekend Recreation Explorer"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid699"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#WeekendTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Weekend."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weekend Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid702"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/profiles#WinterTrajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A trajectory with temporal context context:Winter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/profiles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Winter Trajectory"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid706"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/user#UserProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.datacron-project.eu/datAcron#Trajectory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

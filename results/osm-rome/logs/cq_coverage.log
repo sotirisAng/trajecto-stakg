@@ -1,0 +1,20 @@
+
+=== osm-rome ===
+  CQ1   ok        543  How many stop positions does each trajectory contain?
+  CQ2   ok        563  Which POIs are co-visited, and by how many trajectories?
+  CQ3   ok         49  How many trajectories did each moving entity produce?
+  CQ4   ok       1638  Which POI interactions were recognised, with what dwell time a
+  CQ5   ok          9  Given a POI, which POIs are recorded as following it?
+  CQ6   ok          9  Which purpose classes are assigned, and to how many trajectori
+  CQ7   ok          3  Which movement patterns are exhibited, and by how many traject
+  CQ8   ok          3  What engagement level is inferred per trajectory, and how are 
+  CQ9   ok         55  What are a user's inferred category preferences, with score an
+  CQ10  ok          9  What is the mean dwell time of trajectories grouped by purpose
+  CQ11  ok        347  Which POIs are co-visited with a POI the trajectory already co
+  CQ12  ok        873  Which POI categories does a user prefer that they have not yet
+  CQ13  ok         18  Under which temporal contexts do trajectories occur?
+  CQ14  ok         91  What dwell thresholds does the ontology define for each POI ty
+  CQ15  ok        592  Which POIs are structurally central, by materialised PageRank?
+
+=== coverage summary ===
+  osm-rome 15/15 answered  (requirements 13/13)   empty: []   errors: []

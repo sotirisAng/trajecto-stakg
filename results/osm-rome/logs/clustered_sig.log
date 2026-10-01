@@ -1,0 +1,38 @@
+Fuseki query endpoint: http://localhost:3030/osm-rome/sparql
+Fuseki update endpoint: http://localhost:3030/osm-rome/update
+Loading context-aware recommender data...
+  Features: loaded 543 from file
+  Interactions: 537 trajectories, 765 unique POIs
+  Metadata: 543 trajectories
+  POI metadata: 4596 POIs
+  Engagement: 537 trajectories classified
+  Preferences: 49 users
+  Graphs: flow=568 edges, covisit=890 edges
+  Significant POIs: 11
+Loaded: 543 trajectories, 765 POIs, 49 users with preferences
+  Loading ontological classifications...
+  Ontological: 537 classified, 12 profile classes
+  SR engine: ready (5 recommendation rules)
+  Precomputing archetype similarity matrix...
+  Archetype similarity: 407 trajectories, 6023 pairs cached
+  Precomputing route similarity matrix...
+  Route similarity: 416 trajectories, 2611 pairs cached
+  Indexes: 3 engagement levels, 53 category groups, 49 user visit sets
+  Events: 14 scheduled events at 12 POIs
+  Trajectory windows: 543 cached
+  Dwell semantics: 102 typed thresholds, 1335 interaction dwells
+
+=== osm-rome — 49 users over 543 trajectories ===
+comparison                                      delta   p flat  p clust  verdict
+unified_route_heavy vs popularity recall@10    +0.044    0.425    0.549  -
+unified_route_heavy vs popularity mrr          +0.115    0.032    0.318  LOST
+unified_route_heavy vs markov recall@10        -0.047    0.348    0.871  -
+unified_route_heavy vs markov mrr              +0.028    0.520    0.500  -
+unified_route_heavy vs markov2 recall@10       -0.066    0.125    0.746  -
+unified_route_heavy vs markov2 mrr             -0.012    0.580    0.625  -
+lr_fusion vs unified_route_ recall@10          +0.047    0.253    0.501  -
+lr_fusion vs unified_route_ mrr                +0.000    1.000    0.877  -
+rrf_uni+markov2+prox vs unified_route_ recall@10   +0.066    0.063    0.501  -
+rrf_uni+markov2+prox vs unified_route_ mrr     +0.032    0.197    0.123  -
+
+wrote notebooks/output/evaluation/round3_clustered_significance.csv

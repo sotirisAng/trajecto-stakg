@@ -1,0 +1,2774 @@
+@prefix : <http://w3id.org/trajecto/poi#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/trajecto/poi#> .
+
+<http://w3id.org/trajecto/poi> rdf:type owl:Ontology ;
+                                owl:versionIRI <http://w3id.org/trajecto/poi/1.1.0> ;
+                                <http://purl.org/dc/terms/created> "2025-05-09"^^xsd:date ;
+                                <http://purl.org/dc/terms/creator> "Konstantinos Kotis" ,
+                                                                   "Sotirios Angelis" ;
+                                <http://purl.org/dc/terms/description> "Point-of-interest taxonomy (aligned to OpenStreetMap tags), POI functions and attraction levels, POI sequences, and the POI interaction hierarchy (passing, meaningful, immersive, extended, dominant, start, destination). The module also carries one POITypeConfiguration individual per POI type with the dwell thresholds (minimum meaningful, typical, maximum reasonable duration) that the SPARQL enrichment uses to classify interactions."@en ;
+                                <http://purl.org/dc/terms/issued> "2026-10-01"^^xsd:date ;
+                                <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                <http://purl.org/dc/terms/modified> "2026-10-01"^^xsd:date ;
+                                <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+                                <http://purl.org/dc/terms/title> "Trajecto POI Module"@en ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "poi" ;
+                                <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/poi#" ;
+                                rdfs:label "trajecto-poi"@en ;
+                                owl:priorVersion <http://w3id.org/trajecto/poi/1.0> ;
+                                owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/trajecto/poi#hasMaximumReasonableDuration
+:hasMaximumReasonableDuration rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "Maximum reasonable duration for interaction with this POI category before it becomes anomalous."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "has maximum reasonable duration"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "The upper threshold beyond which an interaction duration is considered unusually long."@en ;
+                              rdfs:range xsd:duration ;
+                              rdfs:domain :POITypeConfiguration .
+
+
+###  http://w3id.org/trajecto/poi#hasMinimumMeaningfulDuration
+:hasMinimumMeaningfulDuration rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "Minimum duration required for an interaction to be considered meaningful for this POI category."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "has minimum meaningful duration"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "The threshold duration below which an interaction is considered too brief to be meaningful for the specific POI type."@en ;
+                              rdfs:range xsd:duration ;
+                              rdfs:domain :POITypeConfiguration .
+
+
+###  http://w3id.org/trajecto/poi#hasTypeConfiguration
+:hasTypeConfiguration rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "Links a POI class to the configuration individual carrying its dwell parameters."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "has type configuration"@en ;
+                      rdfs:range :POITypeConfiguration .
+
+
+###  http://w3id.org/trajecto/poi#hasTypicalDuration
+:hasTypicalDuration rdf:type owl:AnnotationProperty ;
+                    rdfs:comment "Typical or expected duration for meaningful engagement with this POI category."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "has typical duration"@en ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "The average or expected duration for normal engagement with this type of POI."@en ;
+                    rdfs:range xsd:duration ;
+                    rdfs:domain :POITypeConfiguration .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/trajecto/poi#covisitedWith
+:covisitedWith rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+               rdfs:range <http://w3id.org/trajecto#PointOfInterest> ;
+               rdfs:comment "Two POIs are interacted with meaningfully in the same trajectory (SR-05)."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "covisited with"@en .
+
+
+###  http://w3id.org/trajecto/poi#followedBy
+:followedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+            rdfs:range <http://w3id.org/trajecto#PointOfInterest> ;
+            rdfs:comment "A POI is interacted with meaningfully immediately before another in at least one trajectory (SR-06)."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "followed by"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasInteractionClassification
+:hasInteractionClassification rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                              rdfs:domain :POIInteraction ;
+                              rdfs:range :InteractionClassification ;
+                              rdfs:comment "Associates a POI interaction with its duration-based classification."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "has interaction classification"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasNextPOI
+:hasNextPOI rdf:type owl:ObjectProperty ,
+                     owl:TransitiveProperty ;
+            rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+            rdfs:range <http://w3id.org/trajecto#PointOfInterest> ;
+            rdfs:comment "Links a point of interest to the next one in a sequence."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "has next POI"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasPOIAttraction
+:hasPOIAttraction rdf:type owl:ObjectProperty ;
+                  rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+                  rdfs:range :AttractionLevel ;
+                  rdfs:comment "Specifies the level of attraction a POI has for visitors."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "has POI attraction"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasPOICategory
+:hasPOICategory rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+                rdfs:range :POICategory ;
+                rdfs:comment "Associates a point of interest with its category."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "has POI category"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasPOIInteraction
+:hasPOIInteraction rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://www.datacron-project.eu/datAcron#TrajectoryPart> ;
+                   rdfs:range :POIInteraction ;
+                   rdfs:comment "Links a trajectory part to an interaction with a point of interest."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "has POI interaction"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasPOISequence
+:hasPOISequence rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://www.datacron-project.eu/datAcron#Trajectory> ;
+                rdfs:range :POISequence ;
+                rdfs:comment "Links a trajectory to a sequence of visited points of interest."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "has POI sequence"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasPrimaryFunction
+:hasPrimaryFunction rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                    rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+                    rdfs:range :POIFunction ;
+                    rdfs:comment "Associates a point of interest with its main function."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "has primary function"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasRoom
+:hasRoom rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+         rdfs:comment "The museum room in which an artwork is exhibited (BIRD instantiation)."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "has room"@en .
+
+
+###  http://w3id.org/trajecto/poi#interactsWith
+:interactsWith rdf:type owl:ObjectProperty ;
+               rdfs:domain :POIInteraction ;
+               rdfs:range <http://w3id.org/trajecto#PointOfInterest> ;
+               rdfs:comment "Specifies the point of interest involved in an interaction."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "interacts with"@en .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/trajecto/poi#creationPeriod
+:creationPeriod rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Creation date or period of an artwork point of interest."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "creation period"@en .
+
+
+###  http://w3id.org/trajecto/poi#creator
+:creator rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Creator or artist of an artwork point of interest."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "creator"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasAttractionStrength
+:hasAttractionStrength rdf:type owl:DatatypeProperty ;
+                       rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+                       rdfs:range xsd:float ;
+                       rdfs:comment "Numerical value indicating the strength of attraction of a POI."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "has attraction strength"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasDwellTime
+:hasDwellTime rdf:type owl:DatatypeProperty ;
+              rdfs:domain :POIInteraction ;
+              rdfs:range xsd:duration ;
+              rdfs:comment "Duration of time spent at a point of interest."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "has dwell time"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasDwellTimeInSeconds
+:hasDwellTimeInSeconds rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :POIInteraction ;
+                       rdfs:range xsd:float ;
+                       rdfs:comment "Duration of time spent at a point of interest, in seconds. Numeric counterpart of hasDwellTime used by the CSV-to-RDF mappings and analytics queries."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "has dwell time in seconds"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasEra
+:hasEra rdf:type owl:DatatypeProperty ;
+        rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The art-historical era of an artwork (BIRD instantiation)."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "has era"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasPopularity
+:hasPopularity rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+               rdfs:range xsd:float ;
+               rdfs:comment "Numerical value indicating the popularity of a POI."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "has popularity"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasRevisitCount
+:hasRevisitCount rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+                 rdfs:range xsd:positiveInteger ;
+                 rdfs:comment "Number of times a point of interest is revisited in a trajectory."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "has revisit count"@en .
+
+
+###  http://w3id.org/trajecto/poi#hasType
+:hasType rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://w3id.org/trajecto#PointOfInterest> ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Medium or type of an artwork (e.g. Oil on canvas, Bronze)."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "has type"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/trajecto#Interaction
+<http://w3id.org/trajecto#Interaction> rdf:type owl:Class .
+
+
+###  http://w3id.org/trajecto#PointOfInterest
+<http://w3id.org/trajecto#PointOfInterest> rdf:type owl:Class ;
+                                           :hasTypeConfiguration :Default-configuration ;
+                                           rdfs:label "Point of Interest"@en .
+
+
+###  http://w3id.org/trajecto/poi#ATM
+:ATM rdf:type owl:Class ;
+     rdfs:subClassOf :PrivateService ,
+                     :Service ;
+     :hasTypeConfiguration :ATM-configuration ;
+     rdfs:comment "Automated teller machines."@en ;
+     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+     rdfs:label "ATM"@en .
+
+
+###  http://w3id.org/trajecto/poi#Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+               :hasTypeConfiguration :AccommodationPOI-configuration ;
+               rdfs:comment "A place that offers overnight stays, such as a hotel or hostel."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Accommodation"@en ;
+               <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#Airport
+:Airport rdf:type owl:Class ;
+         rdfs:subClassOf :Transportation ;
+         :hasTypeConfiguration :Airport-configuration ;
+         rdfs:comment "An airport or airfield."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Airport"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#AirportTransit> .
+
+
+###  http://w3id.org/trajecto/poi#Amenity
+:Amenity rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ,
+                         :POICategory ;
+         :hasTypeConfiguration :AmenityPOI-configuration ;
+         rdfs:comment "Points of interest providing comfort or convenience amenities."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Amenity"@en .
+
+
+###  http://w3id.org/trajecto/poi#AnomalousInteraction
+:AnomalousInteraction rdf:type owl:Class ;
+                      rdfs:subClassOf :POIInteraction ;
+                      rdfs:comment "An interaction with duration that exceeds reasonable bounds, potentially indicating data quality issues or unusual circumstances."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Anomalous Interaction"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "A POI interaction with duration beyond reasonable limits, requiring investigation for data quality or exceptional circumstances."@en .
+
+
+###  http://w3id.org/trajecto/poi#Artwork
+:Artwork rdf:type owl:Class ;
+         rdfs:subClassOf :Cultural ;
+         :hasTypeConfiguration :ArtworkPOI-configuration ;
+         rdfs:comment "Artworks as points of interest in cultural spaces."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Artwork"@en .
+
+
+###  http://w3id.org/trajecto/poi#AttractionLevel
+:AttractionLevel rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> ;
+                 rdfs:comment "Level of attraction a point of interest has for visitors."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Attraction Level"@en .
+
+
+###  http://w3id.org/trajecto/poi#Bank
+:Bank rdf:type owl:Class ;
+      rdfs:subClassOf :Service ;
+      :hasTypeConfiguration :Bank-configuration ;
+      rdfs:comment "A bank branch."@en ;
+      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+      rdfs:label "Bank"@en ;
+      <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Banking> .
+
+
+###  http://w3id.org/trajecto/poi#Bar
+:Bar rdf:type owl:Class ;
+     rdfs:subClassOf :Nightlife ;
+     :hasTypeConfiguration :Bar-configuration ;
+     rdfs:comment "A bar or pub serving drinks."@en ;
+     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+     rdfs:label "Bar"@en .
+
+
+###  http://w3id.org/trajecto/poi#Beach
+:Beach rdf:type owl:Class ;
+       rdfs:subClassOf :Leisure ;
+       :hasTypeConfiguration :Beach-configuration ;
+       rdfs:comment "A beach used for recreation."@en ;
+       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+       rdfs:label "Beach"@en ;
+       <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#BeachVisit> .
+
+
+###  http://w3id.org/trajecto/poi#Bench
+:Bench rdf:type owl:Class ;
+       rdfs:comment "A bench. Not yet placed in the POI hierarchy and not linked to its own dwell configuration (Bench-configuration); interactions with it use the default configuration."@en ;
+       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+       rdfs:label "Bench"@en .
+
+
+###  http://w3id.org/trajecto/poi#Bottleneck
+:Bottleneck rdf:type owl:Class ;
+            rdfs:subClassOf :TransitionPoint ;
+            rdfs:comment "Points where movement is constrained or restricted."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Bottleneck"@en .
+
+
+###  http://w3id.org/trajecto/poi#BriefObservation
+:BriefObservation rdf:type owl:Class ;
+                  rdfs:subClassOf :Observation ;
+                  rdfs:comment "Short, passing observation of a point of interest."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Brief Observation"@en .
+
+
+###  http://w3id.org/trajecto/poi#BusStation
+:BusStation rdf:type owl:Class ;
+            rdfs:subClassOf :Transportation ;
+            :hasTypeConfiguration :BusStation-configuration ;
+            rdfs:comment "A bus station or major bus stop."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Bus Station"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#BusStationTransit> .
+
+
+###  http://w3id.org/trajecto/poi#Cafe
+:Cafe rdf:type owl:Class ;
+      rdfs:subClassOf :Dining ;
+      :hasTypeConfiguration :Cafe-configuration ;
+      rdfs:comment "A cafe serving coffee, drinks and light food."@en ;
+      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+      rdfs:label "Cafe"@en ;
+      <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#CafeVisit> .
+
+
+###  http://w3id.org/trajecto/poi#Church
+:Church rdf:type owl:Class ;
+        rdfs:subClassOf :Religious ;
+        :hasTypeConfiguration :Church-configuration ;
+        rdfs:comment "A Christian place of worship."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Church"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Worship> .
+
+
+###  http://w3id.org/trajecto/poi#Cinema
+:Cinema rdf:type owl:Class ;
+        rdfs:subClassOf :PerformanceVenue ;
+        :hasTypeConfiguration :Cinema-configuration ;
+        rdfs:comment "A cinema."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Cinema"@en .
+
+
+###  http://w3id.org/trajecto/poi#Clinic
+:Clinic rdf:type owl:Class ;
+        rdfs:subClassOf :Healthcare ;
+        :hasTypeConfiguration :Clinic-configuration ;
+        rdfs:comment "A medical clinic or doctor's practice."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Clinic"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#MedicalAppointment> .
+
+
+###  http://w3id.org/trajecto/poi#Club
+:Club rdf:type owl:Class ;
+      rdfs:subClassOf :Nightlife ;
+      :hasTypeConfiguration :Club-configuration ;
+      rdfs:comment "A club, typically a nightlife venue."@en ;
+      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+      rdfs:label "Club"@en .
+
+
+###  http://w3id.org/trajecto/poi#ComfortFunction
+:ComfortFunction rdf:type owl:Class ;
+                 rdfs:subClassOf :POIFunction ;
+                 rdfs:comment "Function of providing comfort or rest."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Comfort Function"@en .
+
+
+###  http://w3id.org/trajecto/poi#Commercial
+:Commercial rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+            :hasTypeConfiguration :CommercialPOI-configuration ;
+            rdfs:comment "Points of interest with commercial function."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Commercial"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#CommercialPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#CommercialStreet
+:CommercialStreet rdf:type owl:Class ;
+                  rdfs:subClassOf :Retail ;
+                  :hasTypeConfiguration :CommercialStreet-configuration ;
+                  rdfs:comment "A street lined with shops and commercial premises."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Commercial Street"@en .
+
+
+###  http://w3id.org/trajecto/poi#ConferenceCenter
+:ConferenceCenter rdf:type owl:Class ;
+                  rdfs:subClassOf :Commercial ;
+                  rdfs:comment "A venue built for conferences and meetings."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Conference Center"@en .
+
+
+###  http://w3id.org/trajecto/poi#Consulate
+:Consulate rdf:type owl:Class ;
+           rdfs:subClassOf :PublicService ;
+           rdfs:comment "A consular office of a foreign state."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Consulate"@en .
+
+
+###  http://w3id.org/trajecto/poi#ContentInformation
+:ContentInformation rdf:type owl:Class ;
+                    rdfs:subClassOf :Information ;
+                    rdfs:comment "Gathering content or subject information."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Content Information"@en .
+
+
+###  http://w3id.org/trajecto/poi#ConventionCenter
+:ConventionCenter rdf:type owl:Class ;
+                  rdfs:subClassOf :Commercial ;
+                  rdfs:comment "A large venue for conventions and trade fairs."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Convention Center"@en .
+
+
+###  http://w3id.org/trajecto/poi#Cultural
+:Cultural rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+          :hasTypeConfiguration :CulturalPOI-configuration ;
+          rdfs:comment "Points of interest with cultural significance."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Cultural"@en ;
+          <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#CustomerService
+:CustomerService rdf:type owl:Class ;
+                 rdfs:subClassOf :PrivateService ;
+                 :hasTypeConfiguration :ServicePOI-configuration ;
+                 rdfs:comment "Customer service points."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Customer Service"@en .
+
+
+###  http://w3id.org/trajecto/poi#DestinationInteraction
+:DestinationInteraction rdf:type owl:Class ;
+                        rdfs:subClassOf :MeaningfulInteraction ;
+                        rdfs:comment "An interaction at the destination/end point of a trajectory."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Destination Interaction"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A meaningful interaction marking the end of a trajectory, typically representing the user's arrival point or final destination."@en .
+
+
+###  http://w3id.org/trajecto/poi#DigitalDisplay
+:DigitalDisplay rdf:type owl:Class ;
+                rdfs:subClassOf :Information ;
+                :hasTypeConfiguration :DigitalDisplay-configuration ;
+                rdfs:comment "An electronic display that shows information or advertising."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Digital Display"@en .
+
+
+###  http://w3id.org/trajecto/poi#DigitalEngagement
+:DigitalEngagement rdf:type owl:Class ;
+                   rdfs:subClassOf :Engagement ;
+                   rdfs:comment "Digital or electronic interaction with a point of interest."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "Digital Engagement"@en .
+
+
+###  http://w3id.org/trajecto/poi#Dining
+:Dining rdf:type owl:Class ;
+        rdfs:subClassOf :Commercial ;
+        :hasTypeConfiguration :DiningPOI-configuration ;
+        rdfs:comment "A place to eat or drink. Top category of restaurants, cafes, fast food and food courts."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Dining"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#DiningExperience> .
+
+
+###  http://w3id.org/trajecto/poi#DominantInteraction
+:DominantInteraction rdf:type owl:Class ;
+                     rdfs:subClassOf :MeaningfulInteraction ;
+                     rdfs:comment "The single interaction with the highest engagement score within a trajectory. Singleton per trajectory."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Dominant Interaction"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "The POI interaction that scored highest on the engagement metric (0.8 * log_norm_dwell + 0.2 * inv_norm_distance) within its trajectory. Exactly one per trajectory."@en .
+
+
+###  http://w3id.org/trajecto/poi#Educational
+:Educational rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+             :hasTypeConfiguration :EducationalPOI-configuration ;
+             rdfs:comment "A place of education or research. Top category of schools, universities and libraries."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Educational"@en ;
+             <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#Elevator
+:Elevator rdf:type owl:Class ;
+          rdfs:subClassOf :Transition ;
+          :hasTypeConfiguration :Elevator-configuration ;
+          rdfs:comment "An elevator connecting floors or levels."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Elevator"@en .
+
+
+###  http://w3id.org/trajecto/poi#Embassy
+:Embassy rdf:type owl:Class ;
+         rdfs:subClassOf :PublicService ;
+         rdfs:comment "A diplomatic mission of a foreign state."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Embassy"@en .
+
+
+###  http://w3id.org/trajecto/poi#EmergentSequence
+:EmergentSequence rdf:type owl:Class ;
+                  rdfs:subClassOf :POISequence ;
+                  rdfs:comment "A sequence of points of interest that emerges during movement."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Emergent Sequence"@en .
+
+
+###  http://w3id.org/trajecto/poi#Engagement
+:Engagement rdf:type owl:Class ;
+            rdfs:subClassOf :POIInteraction ;
+            rdfs:comment "Active engagement with a point of interest."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Engagement"@en .
+
+
+###  http://w3id.org/trajecto/poi#Entertainment
+:Entertainment rdf:type owl:Class ;
+               rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ,
+                               :Recreational ;
+               :hasTypeConfiguration :EntertainmentPOI-configuration ;
+               rdfs:comment "Entertainment features as points of interest."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Entertainment"@en .
+
+
+###  http://w3id.org/trajecto/poi#Entrance
+:Entrance rdf:type owl:Class ;
+          rdfs:subClassOf :Transition ,
+                          :TransitionPoint ;
+          :hasTypeConfiguration :Entrance-configuration ;
+          rdfs:comment "Entry points to spaces."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Entrance"@en .
+
+
+###  http://w3id.org/trajecto/poi#Escalator
+:Escalator rdf:type owl:Class ;
+           rdfs:subClassOf :Transition ;
+           :hasTypeConfiguration :Escalator-configuration ;
+           rdfs:comment "An escalator connecting floors or levels."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Escalator"@en .
+
+
+###  http://w3id.org/trajecto/poi#EventSpace
+:EventSpace rdf:type owl:Class ;
+            rdfs:subClassOf :Social ;
+            rdfs:comment "Spaces designated for events or activities."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Event Space"@en .
+
+
+###  http://w3id.org/trajecto/poi#Exhibit
+:Exhibit rdf:type owl:Class ;
+         rdfs:subClassOf :Cultural ;
+         :hasTypeConfiguration :ExhibitPOI-configuration ;
+         rdfs:comment "Exhibits as points of interest in cultural spaces."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Exhibit"@en .
+
+
+###  http://w3id.org/trajecto/poi#ExhibitionHall
+:ExhibitionHall rdf:type owl:Class ;
+                rdfs:subClassOf :Cultural ;
+                rdfs:comment "A hall hosting temporary exhibitions."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Exhibition Hall"@en .
+
+
+###  http://w3id.org/trajecto/poi#Exit
+:Exit rdf:type owl:Class ;
+      rdfs:subClassOf :Transition ,
+                      :TransitionPoint ;
+      :hasTypeConfiguration :Exit-configuration ;
+      rdfs:comment "Exit points from spaces."@en ;
+      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+      rdfs:label "Exit"@en .
+
+
+###  http://w3id.org/trajecto/poi#ExtendedInteraction
+:ExtendedInteraction rdf:type owl:Class ;
+                     rdfs:subClassOf :MeaningfulInteraction ;
+                     rdfs:comment "An interaction that significantly exceeds typical duration, indicating deep engagement or special circumstances."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Extended Interaction"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A POI interaction with duration substantially above typical engagement levels, suggesting intensive interest or extended activity."@en .
+
+
+###  http://w3id.org/trajecto/poi#ExtendedObservation
+:ExtendedObservation rdf:type owl:Class ;
+                     rdfs:subClassOf :Observation ;
+                     rdfs:comment "Longer, more focused observation of a point of interest."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Extended Observation"@en .
+
+
+###  http://w3id.org/trajecto/poi#FastFood
+:FastFood rdf:type owl:Class ;
+          rdfs:subClassOf :Dining ;
+          :hasTypeConfiguration :FastFood-configuration ;
+          rdfs:comment "A fast-food restaurant."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Fast Food"@en ;
+          <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#FastFoodVisit> .
+
+
+###  http://w3id.org/trajecto/poi#FoodCourt
+:FoodCourt rdf:type owl:Class ;
+           rdfs:subClassOf :Dining ;
+           :hasTypeConfiguration :FoodCourt-configuration ;
+           rdfs:comment "An area with several food outlets and shared seating."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Food Court"@en .
+
+
+###  http://w3id.org/trajecto/poi#Fountain
+:Fountain rdf:type owl:Class ;
+          rdfs:subClassOf :VisualLandmark ;
+          :hasTypeConfiguration :Fountain-configuration ;
+          rdfs:comment "A decorative or drinking fountain."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Fountain"@en .
+
+
+###  http://w3id.org/trajecto/poi#Gallery
+:Gallery rdf:type owl:Class ;
+         rdfs:subClassOf :Cultural ;
+         :hasTypeConfiguration :Gallery-configuration ;
+         rdfs:comment "An art gallery."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Gallery"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#GalleryVisit> .
+
+
+###  http://w3id.org/trajecto/poi#GatheringArea
+:GatheringArea rdf:type owl:Class ;
+               rdfs:subClassOf :Social ;
+               rdfs:comment "Areas where people gather or socialize."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Gathering Area"@en .
+
+
+###  http://w3id.org/trajecto/poi#Gymnasium
+:Gymnasium rdf:type owl:Class ;
+           rdfs:subClassOf :Sports ;
+           :hasTypeConfiguration :Gymnasium-configuration ;
+           rdfs:comment "A gym or fitness center."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Gymnasium"@en ;
+           <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#GymVisit> .
+
+
+###  http://w3id.org/trajecto/poi#Healthcare
+:Healthcare rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+            :hasTypeConfiguration :HealthcarePOI-configuration ;
+            rdfs:comment "A healthcare facility. Top category of hospitals, clinics and pharmacies."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Healthcare"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> .
+
+
+###  http://w3id.org/trajecto/poi#HighAttraction
+:HighAttraction rdf:type owl:Class ;
+                rdfs:subClassOf :AttractionLevel ;
+                rdfs:comment "Points of interest with high attraction level."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "High Attraction"@en .
+
+
+###  http://w3id.org/trajecto/poi#Historical
+:Historical rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ,
+                            :Cultural ;
+            :hasTypeConfiguration :HistoricalPOI-configuration ;
+            rdfs:comment "Historical objects or sites as points of interest."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Historical"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> .
+
+
+###  http://w3id.org/trajecto/poi#HistoricalLandmark
+:HistoricalLandmark rdf:type owl:Class ;
+                    rdfs:subClassOf :Historical ,
+                                    :Landmark ;
+                    :hasTypeConfiguration :HistoricalLandmark-configuration ;
+                    rdfs:comment "Landmarks with historical significance."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Historical Landmark"@en .
+
+
+###  http://w3id.org/trajecto/poi#HistoricalSite
+:HistoricalSite rdf:type owl:Class ;
+                rdfs:subClassOf :Historical ;
+                :hasTypeConfiguration :HistoricalSite-configuration ;
+                rdfs:comment "A site of historical interest, such as ruins or an archaeological site."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Historical Site"@en .
+
+
+###  http://w3id.org/trajecto/poi#Hospital
+:Hospital rdf:type owl:Class ;
+          rdfs:subClassOf :Healthcare ;
+          :hasTypeConfiguration :Hospital-configuration ;
+          rdfs:comment "A hospital."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Hospital"@en ;
+          <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#MedicalAppointment> .
+
+
+###  http://w3id.org/trajecto/poi#Hostel
+:Hostel rdf:type owl:Class ;
+        rdfs:subClassOf :Accommodation ;
+        :hasTypeConfiguration :Hostel-configuration ;
+        rdfs:comment "A hostel offering budget accommodation."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Hostel"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#HostelStay> .
+
+
+###  http://w3id.org/trajecto/poi#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Accommodation ;
+       :hasTypeConfiguration :Hotel-configuration ;
+       rdfs:comment "A hotel."@en ;
+       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+       rdfs:label "Hotel"@en ;
+       <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#HotelStay> .
+
+
+###  http://w3id.org/trajecto/poi#IconicBuilding
+:IconicBuilding rdf:type owl:Class ;
+                rdfs:subClassOf :VisualLandmark ;
+                :hasTypeConfiguration :IconicBuilding-configuration ;
+                rdfs:comment "A building recognized for its architecture or symbolism."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Iconic Building"@en .
+
+
+###  http://w3id.org/trajecto/poi#ImmersiveInteraction
+:ImmersiveInteraction rdf:type owl:Class ;
+                      rdfs:subClassOf :MeaningfulInteraction ;
+                      rdfs:comment "An interaction with duration significantly exceeding the meaningful threshold, indicating deep engagement or immersion at a POI."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Immersive Interaction"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "A POI interaction whose dwell time substantially surpasses the meaningful duration threshold, suggesting the user was deeply engaged with the location."@en .
+
+
+###  http://w3id.org/trajecto/poi#InfoDisplay
+:InfoDisplay rdf:type owl:Class ;
+             rdfs:subClassOf :Information ;
+             :hasTypeConfiguration :Default-configuration ;
+             rdfs:comment "Electronic or physical displays providing information."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Info Display"@en .
+
+
+###  http://w3id.org/trajecto/poi#Information
+:Information rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ,
+                             :POICategory ;
+             rdfs:comment "Information gathering at a point of interest."@en ,
+                          "Points of interest providing information."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Information"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationDesk
+:InformationDesk rdf:type owl:Class ;
+                 rdfs:subClassOf :PublicService ;
+                 :hasTypeConfiguration :ServicePOI-configuration ;
+                 rdfs:comment "Information service points."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Information Desk"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationFunction
+:InformationFunction rdf:type owl:Class ;
+                     rdfs:subClassOf :POIFunction ;
+                     rdfs:comment "Function of providing information."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Information Function"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationKiosk
+:InformationKiosk rdf:type owl:Class ;
+                  rdfs:subClassOf :Information ;
+                  :hasTypeConfiguration :InformationKiosk-configuration ;
+                  rdfs:comment "A kiosk providing tourist or visitor information."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Information Kiosk"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationSign
+:InformationSign rdf:type owl:Class ;
+                 rdfs:subClassOf :Information ;
+                 :hasTypeConfiguration :InformationSign-configuration ;
+                 rdfs:comment "Signage providing information."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Information Sign"@en .
+
+
+###  http://w3id.org/trajecto/poi#Installation
+:Installation rdf:type owl:Class ;
+              rdfs:subClassOf :Artwork ;
+              rdfs:comment "A three-dimensional artwork that occupies and transforms a space."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Installation"@en .
+
+
+###  http://w3id.org/trajecto/poi#InteractionClassification
+:InteractionClassification rdf:type owl:Class ;
+                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> ;
+                           rdfs:comment "Classification scheme for POI interactions based on duration analysis."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "Interaction Classification"@en .
+
+
+###  http://w3id.org/trajecto/poi#Intersection
+:Intersection rdf:type owl:Class ;
+              rdfs:subClassOf :NavigationLandmark ;
+              :hasTypeConfiguration :Intersection-configuration ;
+              rdfs:comment "A road or path intersection used as a reference point."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Intersection"@en .
+
+
+###  http://w3id.org/trajecto/poi#Junction
+:Junction rdf:type owl:Class ;
+          rdfs:subClassOf :Transition ,
+                          :TransitionPoint ;
+          :hasTypeConfiguration :Junction-configuration ;
+          rdfs:comment "Points where multiple paths intersect."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Junction"@en .
+
+
+###  http://w3id.org/trajecto/poi#Landmark
+:Landmark rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ,
+                          :POICategory ;
+          :hasTypeConfiguration :LandmarkPOI-configuration ;
+          rdfs:comment "Points of interest that serve as recognizable landmarks."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Landmark"@en .
+
+
+###  http://w3id.org/trajecto/poi#Leisure
+:Leisure rdf:type owl:Class ;
+         rdfs:subClassOf :Recreational ;
+         :hasTypeConfiguration :LeisurePOI-configuration ;
+         rdfs:comment "Leisure facilities as points of interest."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Leisure"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#LeisureActivity> .
+
+
+###  http://w3id.org/trajecto/poi#LeisureFacility
+:LeisureFacility rdf:type owl:Class ;
+                 rdfs:subClassOf :Leisure ;
+                 rdfs:comment "A facility dedicated to leisure activities."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Leisure Facility"@en .
+
+
+###  http://w3id.org/trajecto/poi#Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf :Educational ;
+         :hasTypeConfiguration :Library-configuration ;
+         rdfs:comment "A library."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Library"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#LibraryVisit> .
+
+
+###  http://w3id.org/trajecto/poi#LowAttraction
+:LowAttraction rdf:type owl:Class ;
+               rdfs:subClassOf :AttractionLevel ;
+               rdfs:comment "Points of interest with low attraction level."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Low Attraction"@en .
+
+
+###  http://w3id.org/trajecto/poi#Map
+:Map rdf:type owl:Class ;
+     rdfs:subClassOf :Information ;
+     :hasTypeConfiguration :Map-configuration ;
+     rdfs:comment "Maps providing spatial information."@en ;
+     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+     rdfs:label "Map"@en .
+
+
+###  http://w3id.org/trajecto/poi#MarketArea
+:MarketArea rdf:type owl:Class ;
+            rdfs:subClassOf :Retail ;
+            :hasTypeConfiguration :MarketArea-configuration ;
+            rdfs:comment "A marketplace or market hall."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Market Area"@en .
+
+
+###  http://w3id.org/trajecto/poi#MeaningfulInteraction
+:MeaningfulInteraction rdf:type owl:Class ;
+                       rdfs:subClassOf :POIInteraction ;
+                       rdfs:comment "An interaction with sufficient duration to be considered meaningful engagement with a POI."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Meaningful Interaction"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A POI interaction that meets or exceeds the minimum meaningful duration threshold for the specific POI category."@en .
+
+
+###  http://w3id.org/trajecto/poi#MediumAttraction
+:MediumAttraction rdf:type owl:Class ;
+                  rdfs:subClassOf :AttractionLevel ;
+                  rdfs:comment "Points of interest with medium attraction level."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Medium Attraction"@en .
+
+
+###  http://w3id.org/trajecto/poi#MeetingPoint
+:MeetingPoint rdf:type owl:Class ;
+              rdfs:subClassOf :Social ;
+              rdfs:comment "Designated meeting points."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Meeting Point"@en .
+
+
+###  http://w3id.org/trajecto/poi#Mirror
+:Mirror rdf:type owl:Class ;
+        rdfs:subClassOf :Artwork ;
+        rdfs:comment "A decorative or artistic mirror displayed as an artwork."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Mirror"@en .
+
+
+###  http://w3id.org/trajecto/poi#MixedMedia
+:MixedMedia rdf:type owl:Class ;
+            rdfs:subClassOf :Artwork ;
+            rdfs:comment "An artwork combining several media or materials."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Mixed Media"@en .
+
+
+###  http://w3id.org/trajecto/poi#Monument
+:Monument rdf:type owl:Class ;
+          rdfs:subClassOf :Historical ;
+          :hasTypeConfiguration :Monument-configuration ;
+          rdfs:comment "A monument or memorial."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Monument"@en .
+
+
+###  http://w3id.org/trajecto/poi#Mosque
+:Mosque rdf:type owl:Class ;
+        rdfs:subClassOf :Religious ;
+        :hasTypeConfiguration :Mosque-configuration ;
+        rdfs:comment "A mosque."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Mosque"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Worship> .
+
+
+###  http://w3id.org/trajecto/poi#Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :Cultural ;
+        :hasTypeConfiguration :Museum-configuration ;
+        rdfs:comment "A museum."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Museum"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#MuseumVisit> .
+
+
+###  http://w3id.org/trajecto/poi#NavigationFunction
+:NavigationFunction rdf:type owl:Class ;
+                    rdfs:subClassOf :POIFunction ;
+                    rdfs:comment "Function of aiding navigation or wayfinding."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Navigation Function"@en .
+
+
+###  http://w3id.org/trajecto/poi#NavigationInformation
+:NavigationInformation rdf:type owl:Class ;
+                       rdfs:subClassOf :Information ;
+                       rdfs:comment "Gathering navigation or wayfinding information."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Navigation Information"@en .
+
+
+###  http://w3id.org/trajecto/poi#NavigationLandmark
+:NavigationLandmark rdf:type owl:Class ;
+                    rdfs:subClassOf :Landmark ;
+                    :hasTypeConfiguration :NavigationLandmark-configuration ;
+                    rdfs:comment "Landmarks used for navigation or wayfinding."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Navigation Landmark"@en .
+
+
+###  http://w3id.org/trajecto/poi#Nightclub
+:Nightclub rdf:type owl:Class ;
+           rdfs:subClassOf :Club ,
+                           :Nightlife ;
+           rdfs:comment "A club operating primarily at night with music and dancing."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Nightclub"@en .
+
+
+###  http://w3id.org/trajecto/poi#Nightlife
+:Nightlife rdf:type owl:Class ;
+           rdfs:subClassOf :Entertainment ;
+           :hasTypeConfiguration :NightlifePOI-configuration ;
+           rdfs:comment "A nightlife venue. Top category of bars, clubs and nightlife facilities."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Nightlife"@en ;
+           <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#NightlifeActivity> .
+
+
+###  http://w3id.org/trajecto/poi#NightlifeFacility
+:NightlifeFacility rdf:type owl:Class ;
+                   rdfs:subClassOf :Nightlife ;
+                   rdfs:comment "A venue dedicated to nightlife activities."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "Nightlife Facility"@en .
+
+
+###  http://w3id.org/trajecto/poi#Observation
+:Observation rdf:type owl:Class ;
+             rdfs:subClassOf :POIInteraction ;
+             rdfs:comment "Passive observation of a point of interest."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Observation"@en .
+
+
+###  http://w3id.org/trajecto/poi#POICategory
+:POICategory rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> ;
+             rdfs:comment "A category or classification of points of interest."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "POI Category"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A classification system for points of interest based on their primary characteristics and function."@en .
+
+
+###  http://w3id.org/trajecto/poi#POIFunction
+:POIFunction rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> ;
+             rdfs:comment "The function or purpose of a point of interest."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "POI Function"@en .
+
+
+###  http://w3id.org/trajecto/poi#POIInteraction
+:POIInteraction rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/trajecto#Interaction> ;
+                rdfs:comment "Interaction between a moving object and a point of interest."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "POI Interaction"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A specific interaction between a moving entity and a point of interest during a trajectory."@en .
+
+
+###  http://w3id.org/trajecto/poi#POISequence
+:POISequence rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> ;
+             rdfs:comment "An ordered sequence of points of interest visited in a trajectory."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "POI Sequence"@en .
+
+
+###  http://w3id.org/trajecto/poi#POITypeConfiguration
+:POITypeConfiguration rdf:type owl:Class ;
+                      rdfs:comment "Carrier for the dwell parameters that define, per POI type, what counts as a meaningful interaction. A configuration describes a POI class; it is not itself a Point of Interest."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "POI Type Configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Painting
+:Painting rdf:type owl:Class ;
+          rdfs:subClassOf :Artwork ;
+          rdfs:comment "A painted artwork."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Painting"@en .
+
+
+###  http://w3id.org/trajecto/poi#Park
+:Park rdf:type owl:Class ;
+      rdfs:subClassOf :Leisure ;
+      :hasTypeConfiguration :Park-configuration ;
+      rdfs:comment "A public park or garden."@en ;
+      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+      rdfs:label "Park"@en ;
+      <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#ParkVisit> .
+
+
+###  http://w3id.org/trajecto/poi#ParkingArea
+:ParkingArea rdf:type owl:Class ;
+             rdfs:subClassOf :Transportation ;
+             :hasTypeConfiguration :ParkingArea-configuration ;
+             rdfs:comment "A parking area for vehicles or bicycles."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Parking Area"@en ;
+             <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Parking> .
+
+
+###  http://w3id.org/trajecto/poi#PassingInteraction
+:PassingInteraction rdf:type owl:Class ;
+                    rdfs:subClassOf :POIInteraction ;
+                    rdfs:comment "A brief interaction that falls below the meaningful engagement threshold, indicating passing or superficial contact."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Passing Interaction"@en ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "A POI interaction with duration below the minimum meaningful threshold, suggesting the visitor was merely passing by or made only brief contact."@en .
+
+
+###  http://w3id.org/trajecto/poi#PerformanceVenue
+:PerformanceVenue rdf:type owl:Class ;
+                  rdfs:subClassOf :Entertainment ;
+                  :hasTypeConfiguration :PerformanceVenue-configuration ;
+                  rdfs:comment "A venue for live or screened performances, such as a theater or cinema."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Performance Venue"@en .
+
+
+###  http://w3id.org/trajecto/poi#Pharmacy
+:Pharmacy rdf:type owl:Class ;
+          rdfs:subClassOf :Healthcare ;
+          :hasTypeConfiguration :Pharmacy-configuration ;
+          rdfs:comment "A pharmacy."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Pharmacy"@en ;
+          <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#PharmacyVisit> .
+
+
+###  http://w3id.org/trajecto/poi#Photography
+:Photography rdf:type owl:Class ;
+             rdfs:subClassOf :Artwork ;
+             rdfs:comment "A photographic artwork."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Photography"@en .
+
+
+###  http://w3id.org/trajecto/poi#PhysicalEngagement
+:PhysicalEngagement rdf:type owl:Class ;
+                    rdfs:subClassOf :Engagement ;
+                    rdfs:comment "Physical interaction with a point of interest."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Physical Engagement"@en .
+
+
+###  http://w3id.org/trajecto/poi#PlannedSequence
+:PlannedSequence rdf:type owl:Class ;
+                 rdfs:subClassOf :POISequence ;
+                 rdfs:comment "A pre-planned sequence of points of interest."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Planned Sequence"@en .
+
+
+###  http://w3id.org/trajecto/poi#Playground
+:Playground rdf:type owl:Class ;
+            rdfs:subClassOf :Leisure ;
+            :hasTypeConfiguration :Playground-configuration ;
+            rdfs:comment "A playground."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Playground"@en .
+
+
+###  http://w3id.org/trajecto/poi#PostOffice
+:PostOffice rdf:type owl:Class ;
+            rdfs:subClassOf :Service ;
+            :hasTypeConfiguration :PostOffice-configuration ;
+            rdfs:comment "A post office."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Post Office"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#PostalService> .
+
+
+###  http://w3id.org/trajecto/poi#Print
+:Print rdf:type owl:Class ;
+       rdfs:subClassOf :Artwork ;
+       rdfs:comment "An artwork produced by a printmaking technique."@en ;
+       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+       rdfs:label "Print"@en .
+
+
+###  http://w3id.org/trajecto/poi#PrivateService
+:PrivateService rdf:type owl:Class ;
+                rdfs:subClassOf :Service ;
+                :hasTypeConfiguration :ServicePOI-configuration ;
+                rdfs:comment "Points of interest providing private services."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Private Service"@en .
+
+
+###  http://w3id.org/trajecto/poi#Promotional
+:Promotional rdf:type owl:Class ;
+             rdfs:subClassOf :Commercial ;
+             :hasTypeConfiguration :CommercialPOI-configuration ;
+             rdfs:comment "Promotional displays or advertisements as points of interest."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Promotional"@en .
+
+
+###  http://w3id.org/trajecto/poi#PublicService
+:PublicService rdf:type owl:Class ;
+               rdfs:subClassOf :Service ;
+               :hasTypeConfiguration :ServicePOI-configuration ;
+               rdfs:comment "Points of interest providing public services."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Public Service"@en .
+
+
+###  http://w3id.org/trajecto/poi#PurchaseTransaction
+:PurchaseTransaction rdf:type owl:Class ;
+                     rdfs:subClassOf :Transaction ;
+                     rdfs:comment "Purchase transaction at a point of interest."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Purchase Transaction"@en .
+
+
+###  http://w3id.org/trajecto/poi#RecommendedSequence
+:RecommendedSequence rdf:type owl:Class ;
+                     rdfs:subClassOf :POISequence ;
+                     rdfs:comment "A recommended sequence of points of interest."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Recommended Sequence"@en .
+
+
+###  http://w3id.org/trajecto/poi#Recreational
+:Recreational rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+              :hasTypeConfiguration :RecreationalPOI-configuration ;
+              rdfs:comment "Points of interest with recreational function."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Recreational"@en ;
+              <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#Religious
+:Religious rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+           :hasTypeConfiguration :ReligiousPOI-configuration ;
+           rdfs:comment "A place of worship. Top category of churches, mosques and temples."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Religious"@en ;
+           <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#ResearchFacility
+:ResearchFacility rdf:type owl:Class ;
+                  rdfs:subClassOf :Educational ;
+                  rdfs:comment "A facility such as a laboratory or research center."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Research Facility"@en .
+
+
+###  http://w3id.org/trajecto/poi#ResearchInstitute
+:ResearchInstitute rdf:type owl:Class ;
+                   rdfs:subClassOf :Educational ;
+                   rdfs:comment "An institute dedicated to scientific or scholarly research."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "Research Institute"@en .
+
+
+###  http://w3id.org/trajecto/poi#RestArea
+:RestArea rdf:type owl:Class ;
+          rdfs:subClassOf :Amenity ;
+          :hasTypeConfiguration :RestArea-configuration ;
+          rdfs:comment "Areas designated for rest or relaxation."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Rest Area"@en .
+
+
+###  http://w3id.org/trajecto/poi#RestRoom
+:RestRoom rdf:type owl:Class ;
+          rdfs:subClassOf :PublicService ;
+          :hasTypeConfiguration :ServicePOI-configuration ;
+          rdfs:comment "Public toilets provided as a public service. See also Restroom, under Amenity."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Public Restroom"@en .
+
+
+###  http://w3id.org/trajecto/poi#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf :Dining ;
+            :hasTypeConfiguration :Restaurant-configuration ;
+            rdfs:comment "A restaurant."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Restaurant"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#RestaurantDining> .
+
+
+###  http://w3id.org/trajecto/poi#Restroom
+:Restroom rdf:type owl:Class ;
+          rdfs:subClassOf :Amenity ;
+          :hasTypeConfiguration :Restroom-configuration ;
+          rdfs:comment "Toilets available to visitors."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Restroom"@en .
+
+
+###  http://w3id.org/trajecto/poi#Retail
+:Retail rdf:type owl:Class ;
+        rdfs:subClassOf :Commercial ;
+        :hasTypeConfiguration :RetailPOI-configuration ;
+        rdfs:comment "Retail products or displays as points of interest."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Retail"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Shopping> .
+
+
+###  http://w3id.org/trajecto/poi#RetailStore
+:RetailStore rdf:type owl:Class ;
+             rdfs:subClassOf :Retail ;
+             :hasTypeConfiguration :RetailStore-configuration ;
+             rdfs:comment "A shop."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Retail Store"@en .
+
+
+###  http://w3id.org/trajecto/poi#School
+:School rdf:type owl:Class ;
+        rdfs:subClassOf :Educational ;
+        :hasTypeConfiguration :School-configuration ;
+        rdfs:comment "A primary or secondary school."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "School"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#SchoolAttendance> .
+
+
+###  http://w3id.org/trajecto/poi#Sculpture
+:Sculpture rdf:type owl:Class ;
+           rdfs:subClassOf :VisualLandmark ;
+           :hasTypeConfiguration :Sculpture-configuration ;
+           rdfs:comment "A sculpture in public space."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Sculpture"@en .
+
+
+###  http://w3id.org/trajecto/poi#SeatingArea
+:SeatingArea rdf:type owl:Class ;
+             rdfs:subClassOf :Amenity ;
+             :hasTypeConfiguration :SeatingArea-configuration ;
+             rdfs:comment "Areas providing seating facilities."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Seating Area"@en .
+
+
+###  http://w3id.org/trajecto/poi#Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ,
+                         :Commercial ,
+                         :POICategory ;
+         :hasTypeConfiguration :ServicePOI-configuration ;
+         rdfs:comment "Points of interest providing specific services."@en ,
+                      "Service points as points of interest."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Service"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#ServiceAccess> .
+
+
+###  http://w3id.org/trajecto/poi#ServiceFunction
+:ServiceFunction rdf:type owl:Class ;
+                 rdfs:subClassOf :POIFunction ;
+                 rdfs:comment "Function of providing services."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Service Function"@en .
+
+
+###  http://w3id.org/trajecto/poi#ServiceTransaction
+:ServiceTransaction rdf:type owl:Class ;
+                    rdfs:subClassOf :Transaction ;
+                    rdfs:comment "Service transaction at a point of interest."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Service Transaction"@en .
+
+
+###  http://w3id.org/trajecto/poi#ShoppingMall
+:ShoppingMall rdf:type owl:Class ;
+              rdfs:subClassOf :Retail ;
+              :hasTypeConfiguration :ShoppingMall-configuration ;
+              rdfs:comment "A shopping mall."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Shopping Mall"@en .
+
+
+###  http://w3id.org/trajecto/poi#SignificantPOI
+:SignificantPOI rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+                rdfs:comment "A POI with at least ten meaningful interactions, or that is dominant in at least five trajectories. Assigned by the dominance and significance stage."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Significant POI"@en .
+
+
+###  http://w3id.org/trajecto/poi#Social
+:Social rdf:type owl:Class ;
+        rdfs:subClassOf :POICategory ;
+        rdfs:comment "Points of interest with social significance or function."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Social"@en .
+
+
+###  http://w3id.org/trajecto/poi#SocialFunction
+:SocialFunction rdf:type owl:Class ;
+                rdfs:subClassOf :POIFunction ;
+                rdfs:comment "Function of facilitating social interaction."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Social Function"@en .
+
+
+###  http://w3id.org/trajecto/poi#Sports
+:Sports rdf:type owl:Class ;
+        rdfs:subClassOf :Recreational ;
+        :hasTypeConfiguration :SportsPOI-configuration ;
+        rdfs:comment "Sports facilities or features as points of interest."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Sports"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#ExerciseActivity> .
+
+
+###  http://w3id.org/trajecto/poi#SportsComplex
+:SportsComplex rdf:type owl:Class ;
+               rdfs:subClassOf :Sports ;
+               :hasTypeConfiguration :SportsComplex-configuration ;
+               rdfs:comment "A complex of sports facilities."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Sports Complex"@en .
+
+
+###  http://w3id.org/trajecto/poi#SportsFacility
+:SportsFacility rdf:type owl:Class ;
+                rdfs:subClassOf :Sports ;
+                rdfs:comment "A facility dedicated to sports activities."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Sports Facility"@en .
+
+
+###  http://w3id.org/trajecto/poi#SportsField
+:SportsField rdf:type owl:Class ;
+             rdfs:subClassOf :Sports ;
+             :hasTypeConfiguration :SportsField-configuration ;
+             rdfs:comment "A sports field or pitch."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Sports Field"@en .
+
+
+###  http://w3id.org/trajecto/poi#Stadium
+:Stadium rdf:type owl:Class ;
+         rdfs:subClassOf :Sports ;
+         :hasTypeConfiguration :Stadium-configuration ;
+         rdfs:comment "A stadium."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Stadium"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#SportsAttendance> .
+
+
+###  http://w3id.org/trajecto/poi#Staircase
+:Staircase rdf:type owl:Class ;
+           rdfs:subClassOf :Transition ;
+           :hasTypeConfiguration :Staircase-configuration ;
+           rdfs:comment "A staircase connecting floors or levels."@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+           rdfs:label "Staircase"@en .
+
+
+###  http://w3id.org/trajecto/poi#StartInteraction
+:StartInteraction rdf:type owl:Class ;
+                  rdfs:subClassOf :MeaningfulInteraction ;
+                  rdfs:comment "An interaction at the origin/start point of a trajectory."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                  rdfs:label "Start Interaction"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A meaningful interaction marking the beginning of a trajectory, typically representing the user's departure point."@en .
+
+
+###  http://w3id.org/trajecto/poi#Temple
+:Temple rdf:type owl:Class ;
+        rdfs:subClassOf :Religious ;
+        :hasTypeConfiguration :Temple-configuration ;
+        rdfs:comment "A temple or synagogue."@en ;
+        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+        rdfs:label "Temple"@en ;
+        <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Worship> .
+
+
+###  http://w3id.org/trajecto/poi#Theater
+:Theater rdf:type owl:Class ;
+         rdfs:subClassOf :PerformanceVenue ;
+         :hasTypeConfiguration :Theater-configuration ;
+         rdfs:comment "A theater."@en ;
+         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+         rdfs:label "Theater"@en ;
+         <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#TheaterVisit> .
+
+
+###  http://w3id.org/trajecto/poi#Tower
+:Tower rdf:type owl:Class ;
+       rdfs:subClassOf :VisualLandmark ;
+       :hasTypeConfiguration :Tower-configuration ;
+       rdfs:comment "A tower, such as a bell tower or observation tower."@en ;
+       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+       rdfs:label "Tower"@en .
+
+
+###  http://w3id.org/trajecto/poi#TrainStation
+:TrainStation rdf:type owl:Class ;
+              rdfs:subClassOf :Transportation ;
+              :hasTypeConfiguration :TrainStation-configuration ;
+              rdfs:comment "A railway or metro station."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Train Station"@en ;
+              <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#TrainStationTransit> .
+
+
+###  http://w3id.org/trajecto/poi#Transaction
+:Transaction rdf:type owl:Class ;
+             rdfs:subClassOf :POIInteraction ;
+             rdfs:comment "Transaction or exchange at a point of interest."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+             rdfs:label "Transaction"@en .
+
+
+###  http://w3id.org/trajecto/poi#Transition
+:Transition rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+            :hasTypeConfiguration :TransitionPOI-configuration ;
+            rdfs:comment "A feature that connects spaces or levels, such as an entrance, exit, staircase or elevator."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "Transition"@en .
+
+
+###  http://w3id.org/trajecto/poi#TransitionPoint
+:TransitionPoint rdf:type owl:Class ;
+                 rdfs:subClassOf :POICategory ;
+                 rdfs:comment "Points of interest that mark transitions between different spaces."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                 rdfs:label "Transition Point"@en .
+
+
+###  http://w3id.org/trajecto/poi#Transportation
+:Transportation rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/trajecto#PointOfInterest> ;
+                :hasTypeConfiguration :TransportationPOI-configuration ;
+                rdfs:comment "A transport facility. Top category of stations, airports and parking areas. Excluded from recommendation."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Transportation"@en ;
+                <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+
+
+###  http://w3id.org/trajecto/poi#University
+:University rdf:type owl:Class ;
+            rdfs:subClassOf :Educational ;
+            :hasTypeConfiguration :University-configuration ;
+            rdfs:comment "A university or college."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+            rdfs:label "University"@en ;
+            <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#UniversityAttendance> .
+
+
+###  http://w3id.org/trajecto/poi#VendingMachine
+:VendingMachine rdf:type owl:Class ;
+                rdfs:comment "A vending machine. Not yet placed in the POI hierarchy and not linked to its own dwell configuration (VendingMachine-configuration); interactions with it use the default configuration."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Vending Machine"@en .
+
+
+###  http://w3id.org/trajecto/poi#ViewingPoint
+:ViewingPoint rdf:type owl:Class ;
+              rdfs:subClassOf :VisualLandmark ;
+              :hasTypeConfiguration :ViewingPoint-configuration ;
+              rdfs:comment "A viewpoint or observation point."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+              rdfs:label "Viewing Point"@en .
+
+
+###  http://w3id.org/trajecto/poi#VisualLandmark
+:VisualLandmark rdf:type owl:Class ;
+                rdfs:subClassOf :Landmark ;
+                :hasTypeConfiguration :VisualLandmark-configuration ;
+                rdfs:comment "Visually distinctive landmarks."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                rdfs:label "Visual Landmark"@en .
+
+
+###  http://w3id.org/trajecto/poi#WaterFountain
+:WaterFountain rdf:type owl:Class ;
+               rdfs:comment "A water fountain. Not yet placed in the POI hierarchy and not linked to its own dwell configuration (WaterFountain-configuration); interactions with it use the default configuration."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+               rdfs:label "Water Fountain"@en .
+
+
+###  http://w3id.org/trajecto/poi#Waypoint
+:Waypoint rdf:type owl:Class ;
+          rdfs:subClassOf :NavigationLandmark ;
+          :hasTypeConfiguration :Waypoint-configuration ;
+          rdfs:comment "A point used for orientation along a route."@en ;
+          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+          rdfs:label "Waypoint"@en .
+
+
+###  http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> rdf:type owl:Class .
+
+
+###  http://www.datacron-project.eu/datAcron#TrajectoryPart
+<http://www.datacron-project.eu/datAcron#TrajectoryPart> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/trajecto/poi#ATM-configuration
+:ATM-configuration rdf:type owl:NamedIndividual ,
+                            :POITypeConfiguration ;
+                   :hasMaximumReasonableDuration "PT15M"^^xsd:duration ;
+                   :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                   :hasTypicalDuration "PT3M"^^xsd:duration ;
+                   rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 3 min, and anomalous beyond 15 min. Used by: ATM."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "ATM configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#AccommodationPOI-configuration
+:AccommodationPOI-configuration rdf:type owl:NamedIndividual ,
+                                         :POITypeConfiguration ;
+                                :hasMaximumReasonableDuration "P1D"^^xsd:duration ;
+                                :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                                :hasTypicalDuration "PT2H"^^xsd:duration ;
+                                rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 2 h, and anomalous beyond P1D. Used by: Accommodation."@en ;
+                                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                rdfs:label "AccommodationPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Airport-configuration
+:Airport-configuration rdf:type owl:NamedIndividual ,
+                                :POITypeConfiguration ;
+                       :hasMaximumReasonableDuration "PT12H"^^xsd:duration ;
+                       :hasMinimumMeaningfulDuration "PT1H"^^xsd:duration ;
+                       :hasTypicalDuration "PT3H"^^xsd:duration ;
+                       rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 h, typical at 3 h, and anomalous beyond 12 h. Used by: Airport."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Airport configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#AmenityPOI-configuration
+:AmenityPOI-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                          :hasTypicalDuration "PT10M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 10 min, and anomalous beyond 1 h. Used by: Amenity."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "AmenityPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ArtworkPOI-configuration
+:ArtworkPOI-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                          :hasTypicalDuration "PT5M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 5 min, and anomalous beyond 30 min. Used by: Artwork."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "ArtworkPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Bank-configuration
+:Bank-configuration rdf:type owl:NamedIndividual ,
+                             :POITypeConfiguration ;
+                    :hasMaximumReasonableDuration "PT1H30M"^^xsd:duration ;
+                    :hasMinimumMeaningfulDuration "PT5M"^^xsd:duration ;
+                    :hasTypicalDuration "PT15M"^^xsd:duration ;
+                    rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 min, typical at 15 min, and anomalous beyond 1 h 30 min. Used by: Bank."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Bank configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Bar-configuration
+:Bar-configuration rdf:type owl:NamedIndividual ,
+                            :POITypeConfiguration ;
+                   :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                   :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                   :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                   rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 1 h 30 min, and anomalous beyond 6 h. Used by: Bar."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "Bar configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Beach-configuration
+:Beach-configuration rdf:type owl:NamedIndividual ,
+                              :POITypeConfiguration ;
+                     :hasMaximumReasonableDuration "PT10H"^^xsd:duration ;
+                     :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                     :hasTypicalDuration "PT3H"^^xsd:duration ;
+                     rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 3 h, and anomalous beyond 10 h. Used by: Beach."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Beach configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Bench-configuration
+:Bench-configuration rdf:type owl:NamedIndividual ,
+                              :POITypeConfiguration ;
+                     :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                     :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                     :hasTypicalDuration "PT5M"^^xsd:duration ;
+                     rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 5 min, and anomalous beyond 30 min. Used by: no POI class (not linked in this version)."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Bench configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#BusStation-configuration
+:BusStation-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT2H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT5M"^^xsd:duration ;
+                          :hasTypicalDuration "PT15M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 min, typical at 15 min, and anomalous beyond 2 h. Used by: BusStation."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "BusStation configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Cafe-configuration
+:Cafe-configuration rdf:type owl:NamedIndividual ,
+                             :POITypeConfiguration ;
+                    :hasMaximumReasonableDuration "PT3H"^^xsd:duration ;
+                    :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                    :hasTypicalDuration "PT45M"^^xsd:duration ;
+                    rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 45 min, and anomalous beyond 3 h. Used by: Cafe."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Cafe configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Church-configuration
+:Church-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT3H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                      :hasTypicalDuration "PT1H"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h, and anomalous beyond 3 h. Used by: Church."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Church configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Cinema-configuration
+:Cinema-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT5H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT1H30M"^^xsd:duration ;
+                      :hasTypicalDuration "PT2H30M"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 h 30 min, typical at 2 h 30 min, and anomalous beyond 5 h. Used by: Cinema."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Cinema configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Clinic-configuration
+:Clinic-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                      :hasTypicalDuration "PT1H"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 1 h, and anomalous beyond 4 h. Used by: Clinic."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Clinic configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Club-configuration
+:Club-configuration rdf:type owl:NamedIndividual ,
+                             :POITypeConfiguration ;
+                    :hasMaximumReasonableDuration "PT12H"^^xsd:duration ;
+                    :hasMinimumMeaningfulDuration "PT45M"^^xsd:duration ;
+                    :hasTypicalDuration "PT4H"^^xsd:duration ;
+                    rdfs:comment "Dwell thresholds: an interaction is meaningful from 45 min, typical at 4 h, and anomalous beyond 12 h. Used by: Club."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Club configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#CommercialPOI-configuration
+:CommercialPOI-configuration rdf:type owl:NamedIndividual ,
+                                      :POITypeConfiguration ;
+                             :hasMaximumReasonableDuration "PT5H"^^xsd:duration ;
+                             :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                             :hasTypicalDuration "PT25M"^^xsd:duration ;
+                             rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 25 min, and anomalous beyond 5 h. Used by: Commercial, Promotional."@en ;
+                             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                             rdfs:label "CommercialPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#CommercialStreet-configuration
+:CommercialStreet-configuration rdf:type owl:NamedIndividual ,
+                                         :POITypeConfiguration ;
+                                :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                                :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                                :hasTypicalDuration "PT1H15M"^^xsd:duration ;
+                                rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 1 h 15 min, and anomalous beyond 6 h. Used by: CommercialStreet."@en ;
+                                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                rdfs:label "CommercialStreet configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#CulturalPOI-configuration
+:CulturalPOI-configuration rdf:type owl:NamedIndividual ,
+                                    :POITypeConfiguration ;
+                           :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                           :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                           :hasTypicalDuration "PT20M"^^xsd:duration ;
+                           rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 20 min, and anomalous beyond 4 h. Used by: Cultural."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "CulturalPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Default-configuration
+:Default-configuration rdf:type owl:NamedIndividual ,
+                                :POITypeConfiguration ;
+                       :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                       :hasMinimumMeaningfulDuration "PT15S"^^xsd:duration ;
+                       :hasTypicalDuration "PT5M"^^xsd:duration ;
+                       rdfs:comment "Default dwell thresholds: an interaction is meaningful from 15 s, typical at 5 min, and anomalous beyond 60 min. Linked to trajecto:PointOfInterest, so they apply to POIs without a category and to POIs whose class has no configuration of its own (for example Bench, WaterFountain, VendingMachine, InfoDisplay)."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Default POI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#DigitalDisplay-configuration
+:DigitalDisplay-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT15M"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                              :hasTypicalDuration "PT3M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 3 min, and anomalous beyond 15 min. Used by: DigitalDisplay."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "DigitalDisplay configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#DiningPOI-configuration
+:DiningPOI-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                         :hasTypicalDuration "PT1H"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h, and anomalous beyond 4 h. Used by: Dining."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "DiningPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#EducationalPOI-configuration
+:EducationalPOI-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                              :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: Educational."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "EducationalPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Elevator-configuration
+:Elevator-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT10M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                        :hasTypicalDuration "PT2M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 2 min, and anomalous beyond 10 min. Used by: Elevator."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Elevator configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#EntertainmentPOI-configuration
+:EntertainmentPOI-configuration rdf:type owl:NamedIndividual ,
+                                         :POITypeConfiguration ;
+                                :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                                :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                                :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                                rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: Entertainment."@en ;
+                                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                rdfs:label "EntertainmentPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Entrance-configuration
+:Entrance-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT3M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT5S"^^xsd:duration ;
+                        :hasTypicalDuration "PT20S"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 s, typical at 20 s, and anomalous beyond 3 min. Used by: Entrance."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Entrance configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Escalator-configuration
+:Escalator-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT3M"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT15S"^^xsd:duration ;
+                         :hasTypicalDuration "PT45S"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 s, typical at 45 s, and anomalous beyond 3 min. Used by: Escalator."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "Escalator configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ExhibitPOI-configuration
+:ExhibitPOI-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT45M"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                          :hasTypicalDuration "PT8M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 8 min, and anomalous beyond 45 min. Used by: Exhibit."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "ExhibitPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Exit-configuration
+:Exit-configuration rdf:type owl:NamedIndividual ,
+                             :POITypeConfiguration ;
+                    :hasMaximumReasonableDuration "PT2M"^^xsd:duration ;
+                    :hasMinimumMeaningfulDuration "PT5S"^^xsd:duration ;
+                    :hasTypicalDuration "PT15S"^^xsd:duration ;
+                    rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 s, typical at 15 s, and anomalous beyond 2 min. Used by: Exit."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Exit configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#FastFood-configuration
+:FastFood-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT1H30M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                        :hasTypicalDuration "PT25M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 25 min, and anomalous beyond 1 h 30 min. Used by: FastFood."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "FastFood configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#FoodCourt-configuration
+:FoodCourt-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT2H30M"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                         :hasTypicalDuration "PT45M"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 45 min, and anomalous beyond 2 h 30 min. Used by: FoodCourt."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "FoodCourt configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Fountain-configuration
+:Fountain-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                        :hasTypicalDuration "PT8M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 8 min, and anomalous beyond 30 min. Used by: Fountain."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Fountain configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Gallery-configuration
+:Gallery-configuration rdf:type owl:NamedIndividual ,
+                                :POITypeConfiguration ;
+                       :hasMaximumReasonableDuration "PT3H"^^xsd:duration ;
+                       :hasMinimumMeaningfulDuration "PT8M"^^xsd:duration ;
+                       :hasTypicalDuration "PT30M"^^xsd:duration ;
+                       rdfs:comment "Dwell thresholds: an interaction is meaningful from 8 min, typical at 30 min, and anomalous beyond 3 h. Used by: Gallery."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Gallery configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Gymnasium-configuration
+:Gymnasium-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                         :hasTypicalDuration "PT1H15M"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 1 h 15 min, and anomalous beyond 4 h. Used by: Gymnasium."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "Gymnasium configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#HealthcarePOI-configuration
+:HealthcarePOI-configuration rdf:type owl:NamedIndividual ,
+                                      :POITypeConfiguration ;
+                             :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                             :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                             :hasTypicalDuration "PT45M"^^xsd:duration ;
+                             rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 45 min, and anomalous beyond 8 h. Used by: Healthcare."@en ;
+                             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                             rdfs:label "HealthcarePOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#HistoricalLandmark-configuration
+:HistoricalLandmark-configuration rdf:type owl:NamedIndividual ,
+                                           :POITypeConfiguration ;
+                                  :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                                  :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                                  :hasTypicalDuration "PT10M"^^xsd:duration ;
+                                  rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 10 min, and anomalous beyond 1 h. Used by: HistoricalLandmark."@en ;
+                                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                  rdfs:label "HistoricalLandmark configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#HistoricalPOI-configuration
+:HistoricalPOI-configuration rdf:type owl:NamedIndividual ,
+                                      :POITypeConfiguration ;
+                             :hasMaximumReasonableDuration "PT2H"^^xsd:duration ;
+                             :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                             :hasTypicalDuration "PT15M"^^xsd:duration ;
+                             rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 15 min, and anomalous beyond 2 h. Used by: Historical."@en ;
+                             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                             rdfs:label "HistoricalPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#HistoricalSite-configuration
+:HistoricalSite-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                              :hasTypicalDuration "PT45M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 45 min, and anomalous beyond 4 h. Used by: HistoricalSite."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "HistoricalSite configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Hospital-configuration
+:Hospital-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT12H"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                        :hasTypicalDuration "PT2H"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 2 h, and anomalous beyond 12 h. Used by: Hospital."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Hospital configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Hostel-configuration
+:Hostel-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "P1D"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                      :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 1 h 30 min, and anomalous beyond P1D. Used by: Hostel."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Hostel configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Hotel-configuration
+:Hotel-configuration rdf:type owl:NamedIndividual ,
+                              :POITypeConfiguration ;
+                     :hasMaximumReasonableDuration "P1D"^^xsd:duration ;
+                     :hasMinimumMeaningfulDuration "PT1H"^^xsd:duration ;
+                     :hasTypicalDuration "PT3H"^^xsd:duration ;
+                     rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 h, typical at 3 h, and anomalous beyond P1D. Used by: Hotel."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Hotel configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#IconicBuilding-configuration
+:IconicBuilding-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                              :hasTypicalDuration "PT10M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 10 min, and anomalous beyond 1 h. Used by: IconicBuilding."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "IconicBuilding configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationKiosk-configuration
+:InformationKiosk-configuration rdf:type owl:NamedIndividual ,
+                                         :POITypeConfiguration ;
+                                :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                                :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                                :hasTypicalDuration "PT8M"^^xsd:duration ;
+                                rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 8 min, and anomalous beyond 30 min. Used by: InformationKiosk."@en ;
+                                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                rdfs:label "InformationKiosk configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationPOI-configuration
+:InformationPOI-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT20M"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                              :hasTypicalDuration "PT3M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 3 min, and anomalous beyond 20 min. Used by: no POI class (not linked in this version)."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "InformationPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#InformationSign-configuration
+:InformationSign-configuration rdf:type owl:NamedIndividual ,
+                                        :POITypeConfiguration ;
+                               :hasMaximumReasonableDuration "PT10M"^^xsd:duration ;
+                               :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                               :hasTypicalDuration "PT2M"^^xsd:duration ;
+                               rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 2 min, and anomalous beyond 10 min. Used by: InformationSign."@en ;
+                               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                               rdfs:label "InformationSign configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Intersection-configuration
+:Intersection-configuration rdf:type owl:NamedIndividual ,
+                                     :POITypeConfiguration ;
+                            :hasMaximumReasonableDuration "PT3M"^^xsd:duration ;
+                            :hasMinimumMeaningfulDuration "PT5S"^^xsd:duration ;
+                            :hasTypicalDuration "PT30S"^^xsd:duration ;
+                            rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 s, typical at 30 s, and anomalous beyond 3 min. Used by: Intersection."@en ;
+                            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                            rdfs:label "Intersection configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Junction-configuration
+:Junction-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT5M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT10S"^^xsd:duration ;
+                        :hasTypicalDuration "PT1M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Junction."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Junction configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#LandmarkPOI-configuration
+:LandmarkPOI-configuration rdf:type owl:NamedIndividual ,
+                                    :POITypeConfiguration ;
+                           :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                           :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                           :hasTypicalDuration "PT5M"^^xsd:duration ;
+                           rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 5 min, and anomalous beyond 30 min. Used by: Landmark."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "LandmarkPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#LeisurePOI-configuration
+:LeisurePOI-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                          :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: Leisure."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "LeisurePOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Library-configuration
+:Library-configuration rdf:type owl:NamedIndividual ,
+                                :POITypeConfiguration ;
+                       :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                       :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                       :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                       rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: Library."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Library configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Map-configuration
+:Map-configuration rdf:type owl:NamedIndividual ,
+                            :POITypeConfiguration ;
+                   :hasMaximumReasonableDuration "PT20M"^^xsd:duration ;
+                   :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                   :hasTypicalDuration "PT5M"^^xsd:duration ;
+                   rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 5 min, and anomalous beyond 20 min. Used by: Map."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                   rdfs:label "Map configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#MarketArea-configuration
+:MarketArea-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                          :hasTypicalDuration "PT45M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 45 min, and anomalous beyond 4 h. Used by: MarketArea."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "MarketArea configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Monument-configuration
+:Monument-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                        :hasTypicalDuration "PT8M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 8 min, and anomalous beyond 30 min. Used by: Monument."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Monument configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Mosque-configuration
+:Mosque-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT2H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                      :hasTypicalDuration "PT30M"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 30 min, and anomalous beyond 2 h. Used by: Mosque."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Mosque configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Museum-configuration
+:Museum-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                      :hasTypicalDuration "PT45M"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 45 min, and anomalous beyond 4 h. Used by: Museum."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Museum configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#NavigationLandmark-configuration
+:NavigationLandmark-configuration rdf:type owl:NamedIndividual ,
+                                           :POITypeConfiguration ;
+                                  :hasMaximumReasonableDuration "PT10M"^^xsd:duration ;
+                                  :hasMinimumMeaningfulDuration "PT15S"^^xsd:duration ;
+                                  :hasTypicalDuration "PT2M"^^xsd:duration ;
+                                  rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 s, typical at 2 min, and anomalous beyond 10 min. Used by: NavigationLandmark."@en ;
+                                  rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                  rdfs:label "NavigationLandmark configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#NightlifePOI-configuration
+:NightlifePOI-configuration rdf:type owl:NamedIndividual ,
+                                     :POITypeConfiguration ;
+                            :hasMaximumReasonableDuration "PT10H"^^xsd:duration ;
+                            :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                            :hasTypicalDuration "PT3H"^^xsd:duration ;
+                            rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 3 h, and anomalous beyond 10 h. Used by: Nightlife."@en ;
+                            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                            rdfs:label "NightlifePOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Park-configuration
+:Park-configuration rdf:type owl:NamedIndividual ,
+                             :POITypeConfiguration ;
+                    :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                    :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                    :hasTypicalDuration "PT1H15M"^^xsd:duration ;
+                    rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 15 min, and anomalous beyond 8 h. Used by: Park."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                    rdfs:label "Park configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ParkingArea-configuration
+:ParkingArea-configuration rdf:type owl:NamedIndividual ,
+                                    :POITypeConfiguration ;
+                           :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                           :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                           :hasTypicalDuration "PT5M"^^xsd:duration ;
+                           rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 5 min, and anomalous beyond 30 min. Used by: ParkingArea."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "ParkingArea configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#PerformanceVenue-configuration
+:PerformanceVenue-configuration rdf:type owl:NamedIndividual ,
+                                         :POITypeConfiguration ;
+                                :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                                :hasMinimumMeaningfulDuration "PT1H30M"^^xsd:duration ;
+                                :hasTypicalDuration "PT2H30M"^^xsd:duration ;
+                                rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 h 30 min, typical at 2 h 30 min, and anomalous beyond 6 h. Used by: PerformanceVenue."@en ;
+                                rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                rdfs:label "PerformanceVenue configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Pharmacy-configuration
+:Pharmacy-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT5M"^^xsd:duration ;
+                        :hasTypicalDuration "PT15M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 min, typical at 15 min, and anomalous beyond 1 h. Used by: Pharmacy."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Pharmacy configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Playground-configuration
+:Playground-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                          :hasTypicalDuration "PT1H"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 1 h, and anomalous beyond 4 h. Used by: Playground."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "Playground configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#PostOffice-configuration
+:PostOffice-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                          :hasTypicalDuration "PT10M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 10 min, and anomalous beyond 1 h. Used by: PostOffice."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "PostOffice configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#RecreationalPOI-configuration
+:RecreationalPOI-configuration rdf:type owl:NamedIndividual ,
+                                        :POITypeConfiguration ;
+                               :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                               :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                               :hasTypicalDuration "PT1H"^^xsd:duration ;
+                               rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 1 h, and anomalous beyond 8 h. Used by: Recreational."@en ;
+                               rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                               rdfs:label "RecreationalPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ReligiousPOI-configuration
+:ReligiousPOI-configuration rdf:type owl:NamedIndividual ,
+                                     :POITypeConfiguration ;
+                            :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                            :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                            :hasTypicalDuration "PT45M"^^xsd:duration ;
+                            rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 45 min, and anomalous beyond 4 h. Used by: Religious."@en ;
+                            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                            rdfs:label "ReligiousPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#RestArea-configuration
+:RestArea-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT1H30M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                        :hasTypicalDuration "PT15M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 15 min, and anomalous beyond 1 h 30 min. Used by: RestArea."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "RestArea configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Restaurant-configuration
+:Restaurant-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT5H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                          :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 1 h 30 min, and anomalous beyond 5 h. Used by: Restaurant."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "Restaurant configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Restroom-configuration
+:Restroom-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT20M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                        :hasTypicalDuration "PT5M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 5 min, and anomalous beyond 20 min. Used by: Restroom."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Restroom configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#RetailPOI-configuration
+:RetailPOI-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT5H"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT5M"^^xsd:duration ;
+                         :hasTypicalDuration "PT30M"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 min, typical at 30 min, and anomalous beyond 5 h. Used by: Retail."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "RetailPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#RetailStore-configuration
+:RetailStore-configuration rdf:type owl:NamedIndividual ,
+                                    :POITypeConfiguration ;
+                           :hasMaximumReasonableDuration "PT3H"^^xsd:duration ;
+                           :hasMinimumMeaningfulDuration "PT5M"^^xsd:duration ;
+                           :hasTypicalDuration "PT20M"^^xsd:duration ;
+                           rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 min, typical at 20 min, and anomalous beyond 3 h. Used by: RetailStore."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "RetailStore configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#School-configuration
+:School-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT20M"^^xsd:duration ;
+                      :hasTypicalDuration "PT1H"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 20 min, typical at 1 h, and anomalous beyond 6 h. Used by: School."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "School configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Sculpture-configuration
+:Sculpture-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT20M"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                         :hasTypicalDuration "PT5M"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 5 min, and anomalous beyond 20 min. Used by: Sculpture."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "Sculpture configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#SeatingArea-configuration
+:SeatingArea-configuration rdf:type owl:NamedIndividual ,
+                                    :POITypeConfiguration ;
+                           :hasMaximumReasonableDuration "PT2H"^^xsd:duration ;
+                           :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                           :hasTypicalDuration "PT15M"^^xsd:duration ;
+                           rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 15 min, and anomalous beyond 2 h. Used by: SeatingArea."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "SeatingArea configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ServicePOI-configuration
+:ServicePOI-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT1H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                          :hasTypicalDuration "PT8M"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 8 min, and anomalous beyond 1 h. Used by: CustomerService, InformationDesk, PrivateService, PublicService, RestRoom, Service."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "ServicePOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ShoppingMall-configuration
+:ShoppingMall-configuration rdf:type owl:NamedIndividual ,
+                                     :POITypeConfiguration ;
+                            :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                            :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                            :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                            rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 8 h. Used by: ShoppingMall."@en ;
+                            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                            rdfs:label "ShoppingMall configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#SportsComplex-configuration
+:SportsComplex-configuration rdf:type owl:NamedIndividual ,
+                                      :POITypeConfiguration ;
+                             :hasMaximumReasonableDuration "PT8H"^^xsd:duration ;
+                             :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                             :hasTypicalDuration "PT2H"^^xsd:duration ;
+                             rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 2 h, and anomalous beyond 8 h. Used by: SportsComplex."@en ;
+                             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                             rdfs:label "SportsComplex configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#SportsField-configuration
+:SportsField-configuration rdf:type owl:NamedIndividual ,
+                                    :POITypeConfiguration ;
+                           :hasMaximumReasonableDuration "PT5H"^^xsd:duration ;
+                           :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                           :hasTypicalDuration "PT1H30M"^^xsd:duration ;
+                           rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 30 min, and anomalous beyond 5 h. Used by: SportsField."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                           rdfs:label "SportsField configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#SportsPOI-configuration
+:SportsPOI-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                         :hasTypicalDuration "PT1H15M"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 1 h 15 min, and anomalous beyond 6 h. Used by: Sports."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "SportsPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Stadium-configuration
+:Stadium-configuration rdf:type owl:NamedIndividual ,
+                                :POITypeConfiguration ;
+                       :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                       :hasMinimumMeaningfulDuration "PT1H"^^xsd:duration ;
+                       :hasTypicalDuration "PT3H"^^xsd:duration ;
+                       rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 h, typical at 3 h, and anomalous beyond 6 h. Used by: Stadium."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Stadium configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Staircase-configuration
+:Staircase-configuration rdf:type owl:NamedIndividual ,
+                                  :POITypeConfiguration ;
+                         :hasMaximumReasonableDuration "PT5M"^^xsd:duration ;
+                         :hasMinimumMeaningfulDuration "PT10S"^^xsd:duration ;
+                         :hasTypicalDuration "PT1M"^^xsd:duration ;
+                         rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Staircase."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                         rdfs:label "Staircase configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Temple-configuration
+:Temple-configuration rdf:type owl:NamedIndividual ,
+                               :POITypeConfiguration ;
+                      :hasMaximumReasonableDuration "PT3H"^^xsd:duration ;
+                      :hasMinimumMeaningfulDuration "PT15M"^^xsd:duration ;
+                      :hasTypicalDuration "PT45M"^^xsd:duration ;
+                      rdfs:comment "Dwell thresholds: an interaction is meaningful from 15 min, typical at 45 min, and anomalous beyond 3 h. Used by: Temple."@en ;
+                      rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                      rdfs:label "Temple configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Theater-configuration
+:Theater-configuration rdf:type owl:NamedIndividual ,
+                                :POITypeConfiguration ;
+                       :hasMaximumReasonableDuration "PT6H"^^xsd:duration ;
+                       :hasMinimumMeaningfulDuration "PT2H"^^xsd:duration ;
+                       :hasTypicalDuration "PT3H"^^xsd:duration ;
+                       rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 h, typical at 3 h, and anomalous beyond 6 h. Used by: Theater."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                       rdfs:label "Theater configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Tower-configuration
+:Tower-configuration rdf:type owl:NamedIndividual ,
+                              :POITypeConfiguration ;
+                     :hasMaximumReasonableDuration "PT1H30M"^^xsd:duration ;
+                     :hasMinimumMeaningfulDuration "PT3M"^^xsd:duration ;
+                     :hasTypicalDuration "PT15M"^^xsd:duration ;
+                     rdfs:comment "Dwell thresholds: an interaction is meaningful from 3 min, typical at 15 min, and anomalous beyond 1 h 30 min. Used by: Tower."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                     rdfs:label "Tower configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#TrainStation-configuration
+:TrainStation-configuration rdf:type owl:NamedIndividual ,
+                                     :POITypeConfiguration ;
+                            :hasMaximumReasonableDuration "PT4H"^^xsd:duration ;
+                            :hasMinimumMeaningfulDuration "PT10M"^^xsd:duration ;
+                            :hasTypicalDuration "PT30M"^^xsd:duration ;
+                            rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 min, typical at 30 min, and anomalous beyond 4 h. Used by: TrainStation."@en ;
+                            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                            rdfs:label "TrainStation configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#TransitionPOI-configuration
+:TransitionPOI-configuration rdf:type owl:NamedIndividual ,
+                                      :POITypeConfiguration ;
+                             :hasMaximumReasonableDuration "PT5M"^^xsd:duration ;
+                             :hasMinimumMeaningfulDuration "PT5S"^^xsd:duration ;
+                             :hasTypicalDuration "PT30S"^^xsd:duration ;
+                             rdfs:comment "Dwell thresholds: an interaction is meaningful from 5 s, typical at 30 s, and anomalous beyond 5 min. Used by: Transition."@en ;
+                             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                             rdfs:label "TransitionPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#TransportationPOI-configuration
+:TransportationPOI-configuration rdf:type owl:NamedIndividual ,
+                                          :POITypeConfiguration ;
+                                 :hasMaximumReasonableDuration "PT3H"^^xsd:duration ;
+                                 :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                                 :hasTypicalDuration "PT15M"^^xsd:duration ;
+                                 rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 15 min, and anomalous beyond 3 h. Used by: Transportation."@en ;
+                                 rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                                 rdfs:label "TransportationPOI configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#University-configuration
+:University-configuration rdf:type owl:NamedIndividual ,
+                                   :POITypeConfiguration ;
+                          :hasMaximumReasonableDuration "PT10H"^^xsd:duration ;
+                          :hasMinimumMeaningfulDuration "PT30M"^^xsd:duration ;
+                          :hasTypicalDuration "PT2H"^^xsd:duration ;
+                          rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 min, typical at 2 h, and anomalous beyond 10 h. Used by: University."@en ;
+                          rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                          rdfs:label "University configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#VendingMachine-configuration
+:VendingMachine-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT10M"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT1M"^^xsd:duration ;
+                              :hasTypicalDuration "PT3M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 1 min, typical at 3 min, and anomalous beyond 10 min. Used by: no POI class (not linked in this version)."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "VendingMachine configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#ViewingPoint-configuration
+:ViewingPoint-configuration rdf:type owl:NamedIndividual ,
+                                     :POITypeConfiguration ;
+                            :hasMaximumReasonableDuration "PT45M"^^xsd:duration ;
+                            :hasMinimumMeaningfulDuration "PT2M"^^xsd:duration ;
+                            :hasTypicalDuration "PT10M"^^xsd:duration ;
+                            rdfs:comment "Dwell thresholds: an interaction is meaningful from 2 min, typical at 10 min, and anomalous beyond 45 min. Used by: ViewingPoint."@en ;
+                            rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                            rdfs:label "ViewingPoint configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#VisualLandmark-configuration
+:VisualLandmark-configuration rdf:type owl:NamedIndividual ,
+                                       :POITypeConfiguration ;
+                              :hasMaximumReasonableDuration "PT30M"^^xsd:duration ;
+                              :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                              :hasTypicalDuration "PT5M"^^xsd:duration ;
+                              rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 5 min, and anomalous beyond 30 min. Used by: VisualLandmark."@en ;
+                              rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                              rdfs:label "VisualLandmark configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#WaterFountain-configuration
+:WaterFountain-configuration rdf:type owl:NamedIndividual ,
+                                      :POITypeConfiguration ;
+                             :hasMaximumReasonableDuration "PT5M"^^xsd:duration ;
+                             :hasMinimumMeaningfulDuration "PT30S"^^xsd:duration ;
+                             :hasTypicalDuration "PT1M"^^xsd:duration ;
+                             rdfs:comment "Dwell thresholds: an interaction is meaningful from 30 s, typical at 1 min, and anomalous beyond 5 min. Used by: no POI class (not linked in this version)."@en ;
+                             rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                             rdfs:label "WaterFountain configuration"@en .
+
+
+###  http://w3id.org/trajecto/poi#Waypoint-configuration
+:Waypoint-configuration rdf:type owl:NamedIndividual ,
+                                 :POITypeConfiguration ;
+                        :hasMaximumReasonableDuration "PT5M"^^xsd:duration ;
+                        :hasMinimumMeaningfulDuration "PT10S"^^xsd:duration ;
+                        :hasTypicalDuration "PT1M"^^xsd:duration ;
+                        rdfs:comment "Dwell thresholds: an interaction is meaningful from 10 s, typical at 1 min, and anomalous beyond 5 min. Used by: Waypoint."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/poi> ;
+                        rdfs:label "Waypoint configuration"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

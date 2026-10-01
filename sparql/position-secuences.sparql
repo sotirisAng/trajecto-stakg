@@ -1,0 +1,25 @@
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?pos1 trajecto:hasNextPosition ?pos2 .
+    ?pos2 trajecto:hasPreviousPosition ?pos1 .
+}
+WHERE {
+    # Extract sequence index from position URI (e.g., rawPosition_123_45 -> 45)
+    ?pos1 dul:isPartOf ?trajectory .
+    ?pos2 dul:isPartOf ?trajectory .
+
+    # Extract the index from URI: everything after the last underscore
+    BIND(STRAFTER(STR(?pos1), "rawPosition_") AS ?suffix1)
+    BIND(STRAFTER(?suffix1, "_") AS ?idx1Str)
+    BIND(xsd:integer(?idx1Str) AS ?idx1)
+
+    BIND(STRAFTER(STR(?pos2), "rawPosition_") AS ?suffix2)
+    BIND(STRAFTER(?suffix2, "_") AS ?idx2Str)
+    BIND(xsd:integer(?idx2Str) AS ?idx2)
+
+    # pos2 must be exactly the next position (index + 1)
+    FILTER(?idx2 = (?idx1 + 1))
+}

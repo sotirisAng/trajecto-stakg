@@ -1,0 +1,4 @@
+Input Notebook:  21-kg-analytics.ipynb
+Output Notebook: output/pipeline-osm-rome/21-out.ipynb
+Executing:   0%|          | 0/12 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   8%|▊         | 1/12 [00:00<00:08,  1.26cell/s]Executing:  17%|█▋        | 2/12 [00:01<00:08,  1.12cell/s]Executing:  33%|███▎      | 4/12 [00:02<00:04,  1.99cell/s]Executing:  42%|████▏     | 5/12 [00:03<00:03,  1.76cell/s]Executing:  58%|█████▊    | 7/12 [00:03<00:01,  2.85cell/s]Executing:  75%|███████▌  | 9/12 [00:03<00:00,  4.15cell/s]Executing:  92%|█████████▏| 11/12 [00:03<00:00,  4.56cell/s]Executing: 100%|██████████| 12/12 [00:03<00:00,  3.03cell/s]

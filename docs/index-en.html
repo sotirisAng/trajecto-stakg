@@ -1,0 +1,3089 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto#","name":"Trajecto Ontology", "headline":"Trajecto is a modular ontology for semantic trajectories: GPS-derived movement of people, the points of interest they interact with, the patterns, purposes and contexts of that movement, and the user profiles learned from it.", "dateReleased":"2025-05-09", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto Ontology</h1>
+<h2>Release: 2025-05-09</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/1.1.0">http://w3id.org/trajecto/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/0.9">http://w3id.org/trajecto/0.9</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://w3id.org/trajecto/context">context</a></dd><dd><a href="http://w3id.org/trajecto/events">events</a></dd><dd><a href="http://w3id.org/trajecto/patterns">patterns</a></dd><dd><a href="http://w3id.org/trajecto/poi">poi</a></dd><dd><a href="http://w3id.org/trajecto/profiles">profiles</a></dd><dd><a href="http://w3id.org/trajecto/purpose">purpose</a></dd><dd><a href="http://w3id.org/trajecto/purpose/skos">purpose/skos</a></dd><dd><a href="http://w3id.org/trajecto/scheduled">scheduled</a></dd><dd><a href="http://w3id.org/trajecto/spaces">spaces</a></dd><dd><a href="http://w3id.org/trajecto/spatial">spatial</a></dd><dd><a href="http://w3id.org/trajecto/temporal-dwell">temporal-dwell</a></dd><dd><a href="http://w3id.org/trajecto/user">user</a></dd><dd><a href="http://www.datacron-project.eu/datAcron#">datAcron</a></dd>
+
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/trajecto.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/trajecto.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+Trajecto is a modular ontology for semantic trajectories: GPS-derived movement of people, the points of interest they interact with, the patterns, purposes and contexts of that movement, and the user profiles learned from it.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/trajecto.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dul</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#&gt;</td></tr>
+<tr><td><b>events</b></td><td>&lt;http://w3id.org/trajecto/events#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>poi</b></td><td>&lt;http://w3id.org/trajecto/poi#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#CasualNavigation" title="http://w3id.org/trajecto#CasualNavigation">Casual Navigation</a>
+   </li>
+   <li>
+      <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a>
+   </li>
+   <li>
+      <a href="#CulturalEvent" title="http://w3id.org/trajecto#CulturalEvent">Cultural Event</a>
+   </li>
+   <li>
+      <a href="#EngagementLevel" title="http://w3id.org/trajecto#EngagementLevel">Engagement Level</a>
+   </li>
+   <li>
+      <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a>
+   </li>
+   <li>
+      <a href="#EventOfInterest" title="http://w3id.org/trajecto#EventOfInterest">Event of Interest</a>
+   </li>
+   <li>
+      <a href="#ExploratoryNavigation" title="http://w3id.org/trajecto#ExploratoryNavigation">Exploratory Navigation</a>
+   </li>
+   <li>
+      <a href="#ImmersiveNavigation" title="http://w3id.org/trajecto#ImmersiveNavigation">Immersive Navigation</a>
+   </li>
+   <li>
+      <a href="#Interaction" title="http://w3id.org/trajecto#Interaction">Interaction</a>
+   </li>
+   <li>
+      <a href="#ModeOfTransportation" title="http://w3id.org/trajecto#ModeOfTransportation">Mode of Transportation</a>
+   </li>
+   <li>
+      <a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a>
+   </li>
+   <li>
+      <a href="#ObjectOfInterest" title="http://w3id.org/trajecto#ObjectOfInterest">Object of Interest</a>
+   </li>
+   <li>
+      <a href="#Person" title="http://w3id.org/trajecto#Person">Person</a>
+   </li>
+   <li>
+      <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a>
+   </li>
+   <li>
+      <a href="#PurposeOfMovement" title="http://w3id.org/trajecto#PurposeOfMovement">Purpose of Movement</a>
+   </li>
+   <li>
+      <a href="#RegionOfInterest" title="http://w3id.org/trajecto#RegionOfInterest">Region of Interest</a>
+   </li>
+   <li>
+      <a href="#Region_of_Interest" title="http://w3id.org/trajecto#Region_of_Interest">Region_of_Interest (deprecated)</a>
+   </li>
+   <li>
+      <a href="#SocialInteraction" title="http://w3id.org/trajecto#SocialInteraction">Social Interaction</a>
+   </li>
+   <li>
+      <a href="#Stop" title="http://w3id.org/trajecto#Stop">Stop</a>
+   </li>
+   <li>
+      <a href="#stop" title="http://w3id.org/trajecto#stop">stop (deprecated)</a>
+   </li>
+   <li>
+      <a href="#StopPosition" title="http://w3id.org/trajecto#StopPosition">Stop Position</a>
+   </li>
+   <li>
+      <a href="#TargetedNavigation" title="http://w3id.org/trajecto#TargetedNavigation">Targeted Navigation</a>
+   </li>
+   <li>
+      <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#clusters" title="http://w3id.org/trajecto#clusters">clusters</a>
+   </li>
+   <li>
+      <a href="#encloses" title="http://w3id.org/trajecto#encloses">encloses</a>
+   </li>
+   <li>
+      <a href="#formsTrajectory" title="http://w3id.org/trajecto#formsTrajectory">forms trajectory</a>
+   </li>
+   <li>
+      <a href="#happensDuringEventOfInterest"
+         title="http://w3id.org/trajecto#happensDuringEventOfInterest">happens during event of interest</a>
+   </li>
+   <li>
+      <a href="#happensdDuringEventOfInterest"
+         title="http://w3id.org/trajecto#happensdDuringEventOfInterest">happensdDuringEventOfInterest (deprecated)</a>
+   </li>
+   <li>
+      <a href="#hasJaccardCategorySimilarity"
+         title="http://w3id.org/trajecto#hasJaccardCategorySimilarity">has category similarity</a>
+   </li>
+   <li>
+      <a href="#hasCentralityRole" title="http://w3id.org/trajecto#hasCentralityRole">has centrality role</a>
+   </li>
+   <li>
+      <a href="#hasEngagementLevel" title="http://w3id.org/trajecto#hasEngagementLevel">has engagement level</a>
+   </li>
+   <li>
+      <a href="#hasEvent" title="http://w3id.org/trajecto#hasEvent">has event</a>
+   </li>
+   <li>
+      <a href="#hasInteraction" title="http://w3id.org/trajecto#hasInteraction">has interaction</a>
+   </li>
+   <li>
+      <a href="#hasInterest" title="http://w3id.org/trajecto#hasInterest">has interest</a>
+   </li>
+   <li>
+      <a href="#hasModeOfTransportation" title="http://w3id.org/trajecto#hasModeOfTransportation">has mode of transportation</a>
+   </li>
+   <li>
+      <a href="#hasNavigationMatch" title="http://w3id.org/trajecto#hasNavigationMatch">has navigation match</a>
+   </li>
+   <li>
+      <a href="#hasNavigationStyle" title="http://w3id.org/trajecto#hasNavigationStyle">has navigation style</a>
+   </li>
+   <li>
+      <a href="#hasNextPosition" title="http://w3id.org/trajecto#hasNextPosition">has next position</a>
+   </li>
+   <li>
+      <a href="#hasOccurredEvent" title="http://w3id.org/trajecto#hasOccurredEvent">has occurred event</a>
+   </li>
+   <li>
+      <a href="#hasPointOfInterest" title="http://w3id.org/trajecto#hasPointOfInterest">has point of interest</a>
+   </li>
+   <li>
+      <a href="#hasPreviousPosition" title="http://w3id.org/trajecto#hasPreviousPosition">has previous position</a>
+   </li>
+   <li>
+      <a href="#hasPurpose" title="http://w3id.org/trajecto#hasPurpose">has purpose</a>
+   </li>
+   <li>
+      <a href="#hasPurposeMatch" title="http://w3id.org/trajecto#hasPurposeMatch">has purpose match</a>
+   </li>
+   <li>
+      <a href="#hasRegionOfInterest" title="http://w3id.org/trajecto#hasRegionOfInterest">has region of interest</a>
+   </li>
+   <li>
+      <a href="#hasStop" title="http://w3id.org/trajecto#hasStop">has stop</a>
+   </li>
+   <li>
+      <a href="#hasTemporalOverlap" title="http://w3id.org/trajecto#hasTemporalOverlap">has temporal overlap</a>
+   </li>
+   <li>
+      <a href="#hasTrajectory" title="http://w3id.org/trajecto#hasTrajectory">has trajectory</a>
+   </li>
+   <li>
+      <a href="#includesInteraction" title="http://w3id.org/trajecto#includesInteraction">includes interaction</a>
+   </li>
+   <li>
+      <a href="#isTrajectoryFormedBy" title="http://w3id.org/trajecto#isTrajectoryFormedBy">is trajectory formed by</a>
+   </li>
+   <li>
+      <a href="#isWeatherConditionOf" title="http://w3id.org/trajecto#isWeatherConditionOf">is weather condition of</a>
+   </li>
+   <li>
+      <a href="#participatesIn" title="http://w3id.org/trajecto#participatesIn">participates in</a>
+   </li>
+   <li>
+      <a href="#trajectoryRefersTo" title="http://w3id.org/trajecto#trajectoryRefersTo">trajectory refers to</a>
+   </li>
+   <li>
+      <a href="#withTrajectory" title="http://w3id.org/trajecto#withTrajectory">with trajectory</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#betweennessCentrality" title="http://w3id.org/trajecto#betweennessCentrality">betweenness centrality</a>
+   </li>
+   <li>
+      <a href="#communityId" title="http://w3id.org/trajecto#communityId">community ID</a>
+   </li>
+   <li>
+      <a href="#externalDescription" title="http://w3id.org/trajecto#externalDescription">external description</a>
+   </li>
+   <li>
+      <a href="#externalLabel" title="http://w3id.org/trajecto#externalLabel">external label</a>
+   </li>
+   <li>
+      <a href="#floor" title="http://w3id.org/trajecto#floor">floor</a>
+   </li>
+   <li>
+      <a href="#hasAddress" title="http://w3id.org/trajecto#hasAddress">has address</a>
+   </li>
+   <li>
+      <a href="#hasEasting" title="http://w3id.org/trajecto#hasEasting">has easting</a>
+   </li>
+   <li>
+      <a href="#hasImmersiveInteractionCount"
+         title="http://w3id.org/trajecto#hasImmersiveInteractionCount">has immersive interaction count</a>
+   </li>
+   <li>
+      <a href="#hasMeaningfulInteractionCount"
+         title="http://w3id.org/trajecto#hasMeaningfulInteractionCount">has meaningful interaction count</a>
+   </li>
+   <li>
+      <a href="#hasNorthing" title="http://w3id.org/trajecto#hasNorthing">has northing</a>
+   </li>
+   <li>
+      <a href="#hasOSMType" title="http://w3id.org/trajecto#hasOSMType">has OSM type</a>
+   </li>
+   <li>
+      <a href="#hasPlaceID" title="http://w3id.org/trajecto#hasPlaceID">has place ID</a>
+   </li>
+   <li>
+      <a href="#hasPOICount" title="http://w3id.org/trajecto#hasPOICount">has POI count</a>
+   </li>
+   <li>
+      <a href="#hasPositionIndex" title="http://w3id.org/trajecto#hasPositionIndex">has position index</a>
+   </li>
+   <li>
+      <a href="#hasTotalDwellTime" title="http://w3id.org/trajecto#hasTotalDwellTime">has total dwell time</a>
+   </li>
+   <li>
+      <a href="#hasUniqueCategoryCount" title="http://w3id.org/trajecto#hasUniqueCategoryCount">has unique category count</a>
+   </li>
+   <li>
+      <a href="#hasVelocity" title="http://w3id.org/trajecto#hasVelocity">has velocity</a>
+   </li>
+   <li>
+      <a href="#pageRank" title="http://w3id.org/trajecto#pageRank">PageRank</a>
+   </li>
+   <li>
+      <a href="#similarityScore" title="http://w3id.org/trajecto#similarityScore">similarity score</a>
+   </li>
+   <li>
+      <a href="#timestamp" title="http://w3id.org/trajecto#timestamp">timestamp</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#DestinationPOI" title="http://w3id.org/trajecto#DestinationPOI">Destination POI</a>
+   </li>
+   <li>
+      <a href="#GatewayPOI" title="http://w3id.org/trajecto#GatewayPOI">Gateway POI</a>
+   </li>
+   <li>
+      <a href="#HighEngagement" title="http://w3id.org/trajecto#HighEngagement">High Engagement</a>
+   </li>
+   <li>
+      <a href="#HubPOI" title="http://w3id.org/trajecto#HubPOI">Hub POI</a>
+   </li>
+   <li>
+      <a href="#LowEngagement" title="http://w3id.org/trajecto#LowEngagement">Low Engagement</a>
+   </li>
+   <li>
+      <a href="#MediumEngagement" title="http://w3id.org/trajecto#MediumEngagement">Medium Engagement</a>
+   </li>
+   <li>
+      <a href="#OriginPOI" title="http://w3id.org/trajecto#OriginPOI">Origin POI</a>
+   </li>
+   <li>
+      <a href="#PeripheralPOI" title="http://w3id.org/trajecto#PeripheralPOI">Peripheral POI</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Trajecto is a modular ontology for semantic trajectories: GPS-derived movement of people, the points of interest they interact with, the patterns, purposes and contexts of that movement, and the user profiles learned from it. The core module defines the moving person, entities of interest and interactions, and reuses the datAcron trajectory model (Trajectory, TrajectoryPart, RawPosition, MovingObject) and DUL. It imports the other eleven modules and the purpose concept scheme, and is the entry point to the whole ontology.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#CasualNavigation" title="http://w3id.org/trajecto#CasualNavigation">Casual Navigation</a></li>
+  <li><a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a></li>
+  <li><a href="#CulturalEvent" title="http://w3id.org/trajecto#CulturalEvent">Cultural Event</a></li>
+  <li><a href="#EngagementLevel" title="http://w3id.org/trajecto#EngagementLevel">Engagement Level</a></li>
+  <li><a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a></li>
+  <li><a href="#EventOfInterest" title="http://w3id.org/trajecto#EventOfInterest">Event of Interest</a></li>
+  <li><a href="#ExploratoryNavigation" title="http://w3id.org/trajecto#ExploratoryNavigation">Exploratory Navigation</a></li>
+  <li><a href="#ImmersiveNavigation" title="http://w3id.org/trajecto#ImmersiveNavigation">Immersive Navigation</a></li>
+  <li><a href="#Interaction" title="http://w3id.org/trajecto#Interaction">Interaction</a></li>
+  <li><a href="#ModeOfTransportation" title="http://w3id.org/trajecto#ModeOfTransportation">Mode of Transportation</a></li>
+  <li><a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a></li>
+  <li><a href="#ObjectOfInterest" title="http://w3id.org/trajecto#ObjectOfInterest">Object of Interest</a></li>
+  <li><a href="#Person" title="http://w3id.org/trajecto#Person">Person</a></li>
+  <li><a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a></li>
+  <li><a href="#PurposeOfMovement" title="http://w3id.org/trajecto#PurposeOfMovement">Purpose of Movement</a></li>
+  <li><a href="#RegionOfInterest" title="http://w3id.org/trajecto#RegionOfInterest">Region of Interest</a></li>
+  <li><a href="#Region_of_Interest" title="http://w3id.org/trajecto#Region_of_Interest">Region_of_Interest (deprecated)</a></li>
+  <li><a href="#SocialInteraction" title="http://w3id.org/trajecto#SocialInteraction">Social Interaction</a></li>
+  <li><a href="#Stop" title="http://w3id.org/trajecto#Stop">Stop</a></li>
+  <li><a href="#stop" title="http://w3id.org/trajecto#stop">stop (deprecated)</a></li>
+  <li><a href="#StopPosition" title="http://w3id.org/trajecto#StopPosition">Stop Position</a></li>
+  <li><a href="#TargetedNavigation" title="http://w3id.org/trajecto#TargetedNavigation">Targeted Navigation</a></li>
+  <li><a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a></li>
+ </ul>
+ <div class="entity" id="CasualNavigation">
+  <h3>Casual Navigation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#CasualNavigation</p>
+  <div class="comment">
+   <span class="markdown">Deprecated: use patterns:CasualMovement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CentralityRole">
+  <h3>Centrality Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#CentralityRole</p>
+  <div class="comment">
+   <span class="markdown">Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCentralityRole" title="http://w3id.org/trajecto#hasCentralityRole">has centrality role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#DestinationPOI" title="http://w3id.org/trajecto#DestinationPOI">Destination POI</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GatewayPOI" title="http://w3id.org/trajecto#GatewayPOI">Gateway POI</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HubPOI" title="http://w3id.org/trajecto#HubPOI">Hub POI</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#OriginPOI" title="http://w3id.org/trajecto#OriginPOI">Origin POI</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PeripheralPOI" title="http://w3id.org/trajecto#PeripheralPOI">Peripheral POI</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalEvent">
+  <h3>Cultural Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">An event of interest of a cultural nature, such as a festival or an exhibition opening.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EventOfInterest" title="http://w3id.org/trajecto#EventOfInterest">Event of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EngagementLevel">
+  <h3>Engagement Level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#EngagementLevel</p>
+  <div class="comment">
+   <span class="markdown">Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEngagementLevel" title="http://w3id.org/trajecto#hasEngagementLevel">has engagement level</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#HighEngagement" title="http://w3id.org/trajecto#HighEngagement">High Engagement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#LowEngagement" title="http://w3id.org/trajecto#LowEngagement">Low Engagement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MediumEngagement" title="http://w3id.org/trajecto#MediumEngagement">Medium Engagement</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EntityOfInterest">
+  <h3>Entity of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#EntityOfInterest</p>
+  <div class="comment">
+   <span class="markdown">The entity of interest of any kind (object, event, living organism), that the recording activity aims to record.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EventOfInterest" title="http://w3id.org/trajecto#EventOfInterest">Event of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="#ObjectOfInterest" title="http://w3id.org/trajecto#ObjectOfInterest">Object of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="#RegionOfInterest" title="http://w3id.org/trajecto#RegionOfInterest">Region of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasOSMType" title="http://w3id.org/trajecto#hasOSMType">has OSM type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInterest" title="http://w3id.org/trajecto#hasInterest">has interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EventOfInterest">
+  <h3>Event of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#EventOfInterest</p>
+  <div class="comment">
+   <span class="markdown">The specific event that the recording activity aims to record. This event may be a natural phenomenon, the movement of an individual etc.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.datacron-project.eu/datAcron#Event" target="_blank" title="http://www.datacron-project.eu/datAcron#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://w3id.org/trajecto#CulturalEvent">Cultural Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#happensDuringEventOfInterest" title="http://w3id.org/trajecto#happensDuringEventOfInterest">happens during event of interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExploratoryNavigation">
+  <h3>Exploratory Navigation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#ExploratoryNavigation</p>
+  <div class="comment">
+   <span class="markdown">Deprecated: use patterns:ExploratoryMovement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImmersiveNavigation">
+  <h3>Immersive Navigation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#ImmersiveNavigation</p>
+  <div class="comment">
+   <span class="markdown">Deprecated: use patterns:ImmersiveMovement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Interaction">
+  <h3>Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#Interaction</p>
+  <div class="comment">
+   <span class="markdown">Something a moving entity does with, or near, an entity of interest during a trajectory. Specialized as POI interactions in the POI module.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#SocialInteraction" title="http://w3id.org/trajecto#SocialInteraction">Social Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#participatesIn" title="http://w3id.org/trajecto#participatesIn">participates in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModeOfTransportation">
+  <h3>Mode of Transportation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#ModeOfTransportation</p>
+  <div class="comment">
+   <span class="markdown">The means by which a trajectory part is travelled, such as walking, cycling or bus.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasModeOfTransportation" title="http://w3id.org/trajecto#hasModeOfTransportation">has mode of transportation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NavigationStyle">
+  <h3>Navigation Style<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#NavigationStyle</p>
+  <div class="comment">
+   <span class="markdown">Deprecated: navigation styles are modeled as movement patterns in the patterns module (patterns:TargetedSegment, patterns:CasualMovement, patterns:ExploratoryMovement, patterns:ImmersiveMovement) and asserted with patterns:exhibitsPattern.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CasualNavigation" title="http://w3id.org/trajecto#CasualNavigation">Casual Navigation</a> <sup class="type-c" title="class">c</sup>, <a href="#ExploratoryNavigation" title="http://w3id.org/trajecto#ExploratoryNavigation">Exploratory Navigation</a> <sup class="type-c" title="class">c</sup>, <a href="#ImmersiveNavigation" title="http://w3id.org/trajecto#ImmersiveNavigation">Immersive Navigation</a> <sup class="type-c" title="class">c</sup>, <a href="#TargetedNavigation" title="http://w3id.org/trajecto#TargetedNavigation">Targeted Navigation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasNavigationStyle" title="http://w3id.org/trajecto#hasNavigationStyle">has navigation style</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ObjectOfInterest">
+  <h3>Object of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#ObjectOfInterest</p>
+  <div class="comment">
+   <span class="markdown">The specific physical object that the recording activity aims to record. The object of interest may be a tree, a monument, a person etc.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Person">
+  <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#Person</p>
+  <div class="comment">
+   <span class="markdown">A person whose movement is recorded as one or more trajectories.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.datacron-project.eu/datAcron#MovingObject" target="_blank" title="http://www.datacron-project.eu/datAcron#MovingObject">Moving Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PointOfInterest">
+  <h3>Point of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#PointOfInterest</p>
+  <div class="comment">
+   <span class="markdown">The specific spatial point that the recording activity aims to record. The point of interest may be literally one geometric point or an central point of a wider entity of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.datacron-project.eu/datAcron#Point" target="_blank" title="http://www.datacron-project.eu/datAcron#Point">Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#pageRank" title="http://w3id.org/trajecto#pageRank">PageRank</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#betweennessCentrality" title="http://w3id.org/trajecto#betweennessCentrality">betweenness centrality</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#communityId" title="http://w3id.org/trajecto#communityId">community ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#externalDescription" title="http://w3id.org/trajecto#externalDescription">external description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#externalLabel" title="http://w3id.org/trajecto#externalLabel">external label</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCentralityRole" title="http://w3id.org/trajecto#hasCentralityRole">has centrality role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPointOfInterest" title="http://w3id.org/trajecto#hasPointOfInterest">has point of interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PurposeOfMovement">
+  <h3>Purpose of Movement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#PurposeOfMovement</p>
+  <div class="comment">
+   <span class="markdown">The reason a trajectory is undertaken. The purpose module specializes it; trajectories point to purpose concepts through hasPurpose.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPurpose" title="http://w3id.org/trajecto#hasPurpose">has purpose</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RegionOfInterest">
+  <h3>Region of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#RegionOfInterest</p>
+  <div class="comment">
+   <span class="markdown">The region that a recording activity aims to record, such as a forest, an archaeological site or a town.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Region_of_Interest" title="http://w3id.org/trajecto#Region_of_Interest">Region_of_Interest (deprecated)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.datacron-project.eu/datAcron#Region" target="_blank" title="http://www.datacron-project.eu/datAcron#Region">Region</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAddress" title="http://w3id.org/trajecto#hasAddress">has address</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPlaceID" title="http://w3id.org/trajecto#hasPlaceID">has place ID</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRegionOfInterest" title="http://w3id.org/trajecto#hasRegionOfInterest">has region of interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Region_of_Interest">
+  <h3>Region_of_Interest (deprecated)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#Region_of_Interest</p>
+  <div class="comment">
+   <span class="markdown">Deprecated since 1.1.0: renamed to RegionOfInterest.</span>
+  </div>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description"></dl>
+ </div>
+ <div class="entity" id="SocialInteraction">
+  <h3>Social Interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#SocialInteraction</p>
+  <div class="comment">
+   <span class="markdown">An interaction between moving persons within an area of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Interaction" title="http://w3id.org/trajecto#Interaction">Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Stop">
+  <h3>Stop<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#Stop</p>
+  <div class="comment">
+   <span class="markdown">A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#stop" title="http://w3id.org/trajecto#stop">stop (deprecated)</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.datacron-project.eu/datAcron#Point" target="_blank" title="http://www.datacron-project.eu/datAcron#Point">Point</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasStop" title="http://w3id.org/trajecto#hasStop">has stop</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="stop">
+  <h3>stop (deprecated)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#stop</p>
+  <div class="comment">
+   <span class="markdown">Deprecated since 1.1.0: renamed to Stop.</span>
+  </div>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description"></dl>
+ </div>
+ <div class="entity" id="StopPosition">
+  <h3>Stop Position<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#StopPosition</p>
+  <div class="comment">
+   <span class="markdown">A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TargetedNavigation">
+  <h3>Targeted Navigation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#TargetedNavigation</p>
+  <div class="comment">
+   <span class="markdown">Deprecated: use patterns:TargetedSegment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TrajectorySimilarity">
+  <h3>Trajectory Similarity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#TrajectorySimilarity</p>
+  <div class="comment">
+   <span class="markdown">A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#similarityScore" title="http://w3id.org/trajecto#similarityScore">similarity score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#withTrajectory" title="http://w3id.org/trajecto#withTrajectory">with trajectory</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasJaccardCategorySimilarity" title="http://w3id.org/trajecto#hasJaccardCategorySimilarity">has category similarity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasNavigationMatch" title="http://w3id.org/trajecto#hasNavigationMatch">has navigation match</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPurposeMatch" title="http://w3id.org/trajecto#hasPurposeMatch">has purpose match</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTemporalOverlap" title="http://w3id.org/trajecto#hasTemporalOverlap">has temporal overlap</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#clusters" title="http://w3id.org/trajecto#clusters">clusters</a></li>
+  <li><a href="#encloses" title="http://w3id.org/trajecto#encloses">encloses</a></li>
+  <li><a href="#formsTrajectory" title="http://w3id.org/trajecto#formsTrajectory">forms trajectory</a></li>
+  <li><a href="#happensDuringEventOfInterest" title="http://w3id.org/trajecto#happensDuringEventOfInterest">happens during event of interest</a></li>
+  <li><a href="#happensdDuringEventOfInterest" title="http://w3id.org/trajecto#happensdDuringEventOfInterest">happensdDuringEventOfInterest (deprecated)</a></li>
+  <li><a href="#hasJaccardCategorySimilarity" title="http://w3id.org/trajecto#hasJaccardCategorySimilarity">has category similarity</a></li>
+  <li><a href="#hasCentralityRole" title="http://w3id.org/trajecto#hasCentralityRole">has centrality role</a></li>
+  <li><a href="#hasEngagementLevel" title="http://w3id.org/trajecto#hasEngagementLevel">has engagement level</a></li>
+  <li><a href="#hasEvent" title="http://w3id.org/trajecto#hasEvent">has event</a></li>
+  <li><a href="#hasInteraction" title="http://w3id.org/trajecto#hasInteraction">has interaction</a></li>
+  <li><a href="#hasInterest" title="http://w3id.org/trajecto#hasInterest">has interest</a></li>
+  <li><a href="#hasModeOfTransportation" title="http://w3id.org/trajecto#hasModeOfTransportation">has mode of transportation</a></li>
+  <li><a href="#hasNavigationMatch" title="http://w3id.org/trajecto#hasNavigationMatch">has navigation match</a></li>
+  <li><a href="#hasNavigationStyle" title="http://w3id.org/trajecto#hasNavigationStyle">has navigation style</a></li>
+  <li><a href="#hasNextPosition" title="http://w3id.org/trajecto#hasNextPosition">has next position</a></li>
+  <li><a href="#hasOccurredEvent" title="http://w3id.org/trajecto#hasOccurredEvent">has occurred event</a></li>
+  <li><a href="#hasPointOfInterest" title="http://w3id.org/trajecto#hasPointOfInterest">has point of interest</a></li>
+  <li><a href="#hasPreviousPosition" title="http://w3id.org/trajecto#hasPreviousPosition">has previous position</a></li>
+  <li><a href="#hasPurpose" title="http://w3id.org/trajecto#hasPurpose">has purpose</a></li>
+  <li><a href="#hasPurposeMatch" title="http://w3id.org/trajecto#hasPurposeMatch">has purpose match</a></li>
+  <li><a href="#hasRegionOfInterest" title="http://w3id.org/trajecto#hasRegionOfInterest">has region of interest</a></li>
+  <li><a href="#hasStop" title="http://w3id.org/trajecto#hasStop">has stop</a></li>
+  <li><a href="#hasTemporalOverlap" title="http://w3id.org/trajecto#hasTemporalOverlap">has temporal overlap</a></li>
+  <li><a href="#hasTrajectory" title="http://w3id.org/trajecto#hasTrajectory">has trajectory</a></li>
+  <li><a href="#includesInteraction" title="http://w3id.org/trajecto#includesInteraction">includes interaction</a></li>
+  <li><a href="#isTrajectoryFormedBy" title="http://w3id.org/trajecto#isTrajectoryFormedBy">is trajectory formed by</a></li>
+  <li><a href="#isWeatherConditionOf" title="http://w3id.org/trajecto#isWeatherConditionOf">is weather condition of</a></li>
+  <li><a href="#participatesIn" title="http://w3id.org/trajecto#participatesIn">participates in</a></li>
+  <li><a href="#trajectoryRefersTo" title="http://w3id.org/trajecto#trajectoryRefersTo">trajectory refers to</a></li>
+  <li><a href="#withTrajectory" title="http://w3id.org/trajecto#withTrajectory">with trajectory</a></li>
+ </ul>
+ <div class="entity" id="clusters">
+  <h3>clusters<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#clusters</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory cluster to a trajectory it groups.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryCluster" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryCluster">Trajectory Cluster</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="encloses">
+  <h3>encloses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#encloses</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory to a segment that is part of it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> inverse functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#hasPart" target="_blank" title="http://www.datacron-project.eu/datAcron#hasPart">has Part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Segment" target="_blank" title="http://www.datacron-project.eu/datAcron#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="formsTrajectory">
+  <h3>forms trajectory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#formsTrajectory</p>
+  <div class="comment">
+   <span class="markdown">Specifies the moving object which forms a trajectory</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#MovingObject" target="_blank" title="http://www.datacron-project.eu/datAcron#MovingObject">Moving Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isTrajectoryFormedBy" title="http://w3id.org/trajecto#isTrajectoryFormedBy">is trajectory formed by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="happensDuringEventOfInterest">
+  <h3>happens during event of interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#happensDuringEventOfInterest</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory part to an event of interest that takes place while it is recorded.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#happensdDuringEventOfInterest" title="http://w3id.org/trajecto#happensdDuringEventOfInterest">happensdDuringEventOfInterest (deprecated)</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EventOfInterest" title="http://w3id.org/trajecto#EventOfInterest">Event of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="happensdDuringEventOfInterest">
+  <h3>happensdDuringEventOfInterest (deprecated)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#happensdDuringEventOfInterest</p>
+  <div class="comment">
+   <span class="markdown">Deprecated since 1.1.0: renamed to happensDuringEventOfInterest.</span>
+  </div>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#happensDuringEventOfInterest" title="http://w3id.org/trajecto#happensDuringEventOfInterest">happens during event of interest</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasJaccardCategorySimilarity">
+  <h3>has category similarity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasJaccardCategorySimilarity</p>
+  <div class="comment">
+   <span class="markdown">Jaccard similarity of the POI categories two trajectories interact with (SR-11).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCentralityRole">
+  <h3>has centrality role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasCentralityRole</p>
+  <div class="comment">
+   <span class="markdown">Relates a POI to its structural role.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEngagementLevel">
+  <h3>has engagement level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasEngagementLevel</p>
+  <div class="comment">
+   <span class="markdown">Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EngagementLevel" title="http://w3id.org/trajecto#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEvent">
+  <h3>has event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasEvent</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory to a behavioral event detected within its position sequence.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/events#TrajectoryEvent" target="_blank" title="http://w3id.org/trajecto/events#TrajectoryEvent">Trajectory Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInteraction">
+  <h3>has interaction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasInteraction</p>
+  <div class="comment">
+   <span class="markdown">Relates a raw position to a POI interaction that takes place at it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/poi#POIInteraction" target="_blank" title="http://w3id.org/trajecto/poi#POIInteraction">P O I Interaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInterest">
+  <h3>has interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasInterest</p>
+  <div class="comment">
+   <span class="markdown">Correlates an entity of interest with the type of interest that it presents.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasModeOfTransportation">
+  <h3>has mode of transportation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasModeOfTransportation</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory part to the mode of transportation used for it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ModeOfTransportation" title="http://w3id.org/trajecto#ModeOfTransportation">Mode of Transportation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasNavigationMatch">
+  <h3>has navigation match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasNavigationMatch</p>
+  <div class="comment">
+   <span class="markdown">Two trajectories share a navigation pattern (SR-12).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasNavigationStyle">
+  <h3>has navigation style<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasNavigationStyle</p>
+  <div class="comment">
+   <span class="markdown">Deprecated: use patterns:exhibitsPattern.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#NavigationStyle" title="http://w3id.org/trajecto#NavigationStyle">Navigation Style</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasNextPosition">
+  <h3>has next position<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasNextPosition</p>
+  <div class="comment">
+   <span class="markdown">Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasPreviousPosition" title="http://w3id.org/trajecto#hasPreviousPosition">has previous position</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOccurredEvent">
+  <h3>has occurred event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasOccurredEvent</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory part to an event that occurred during it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Event" target="_blank" title="http://www.datacron-project.eu/datAcron#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#occurs" target="_blank" title="http://www.datacron-project.eu/datAcron#occurs">occurs</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPointOfInterest">
+  <h3>has point of interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPointOfInterest</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory part to a point of interest associated with it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPreviousPosition">
+  <h3>has previous position<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPreviousPosition</p>
+  <div class="comment">
+   <span class="markdown">Inverse of hasNextPosition: relates a raw position to an earlier position of the same trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasNextPosition" title="http://w3id.org/trajecto#hasNextPosition">has next position</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurpose">
+  <h3>has purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPurpose</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeOfMovement" title="http://w3id.org/trajecto#PurposeOfMovement">Purpose of Movement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposeMatch">
+  <h3>has purpose match<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPurposeMatch</p>
+  <div class="comment">
+   <span class="markdown">Two trajectories share a purpose (BIRD instantiation).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRegionOfInterest">
+  <h3>has region of interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasRegionOfInterest</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory part to a region of interest it passes through.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#RegionOfInterest" title="http://w3id.org/trajecto#RegionOfInterest">Region of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStop">
+  <h3>has stop<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasStop</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory part to a stop it comprises.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#comprises" target="_blank" title="http://www.datacron-project.eu/datAcron#comprises">comprises</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Stop" title="http://w3id.org/trajecto#Stop">Stop</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalOverlap">
+  <h3>has temporal overlap<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasTemporalOverlap</p>
+  <div class="comment">
+   <span class="markdown">Jaccard similarity of the temporal contexts of two trajectories (SR-13).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTrajectory">
+  <h3>has trajectory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasTrajectory</p>
+  <div class="comment">
+   <span class="markdown">Deprecated duplicate of formsTrajectory: relates a moving object to a trajectory it forms.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#MovingObject" target="_blank" title="http://www.datacron-project.eu/datAcron#MovingObject">Moving Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#trajectoryRefersTo" title="http://w3id.org/trajecto#trajectoryRefersTo">trajectory refers to</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="includesInteraction">
+  <h3>includes interaction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#includesInteraction</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/poi#POIInteraction" target="_blank" title="http://w3id.org/trajecto/poi#POIInteraction">P O I Interaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isTrajectoryFormedBy">
+  <h3>is trajectory formed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#isTrajectoryFormedBy</p>
+  <div class="comment">
+   <span class="markdown">Inverse of formsTrajectory: relates a trajectory to the moving object that forms it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#MovingObject" target="_blank" title="http://www.datacron-project.eu/datAcron#MovingObject">Moving Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#formsTrajectory" title="http://w3id.org/trajecto#formsTrajectory">forms trajectory</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isWeatherConditionOf">
+  <h3>is weather condition of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#isWeatherConditionOf</p>
+  <div class="comment">
+   <span class="markdown">Inverse of datAcron:hasWeatherCondition.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#hasWeatherCondition" target="_blank" title="http://www.datacron-project.eu/datAcron#hasWeatherCondition">has Weather Condition</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="participatesIn">
+  <h3>participates in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#participatesIn</p>
+  <div class="comment">
+   <span class="markdown">Relates an agent to an interaction it takes part in.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Interaction" title="http://w3id.org/trajecto#Interaction">Interaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="trajectoryRefersTo">
+  <h3>trajectory refers to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#trajectoryRefersTo</p>
+  <div class="comment">
+   <span class="markdown">Deprecated duplicate of isTrajectoryFormedBy: relates a trajectory to its moving object.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#MovingObject" target="_blank" title="http://www.datacron-project.eu/datAcron#MovingObject">Moving Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTrajectory" title="http://w3id.org/trajecto#hasTrajectory">has trajectory</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="withTrajectory">
+  <h3>with trajectory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#withTrajectory</p>
+  <div class="comment">
+   <span class="markdown">The other trajectory of a trajectory similarity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#betweennessCentrality" title="http://w3id.org/trajecto#betweennessCentrality">betweenness centrality</a></li>
+  <li><a href="#communityId" title="http://w3id.org/trajecto#communityId">community ID</a></li>
+  <li><a href="#externalDescription" title="http://w3id.org/trajecto#externalDescription">external description</a></li>
+  <li><a href="#externalLabel" title="http://w3id.org/trajecto#externalLabel">external label</a></li>
+  <li><a href="#floor" title="http://w3id.org/trajecto#floor">floor</a></li>
+  <li><a href="#hasAddress" title="http://w3id.org/trajecto#hasAddress">has address</a></li>
+  <li><a href="#hasEasting" title="http://w3id.org/trajecto#hasEasting">has easting</a></li>
+  <li><a href="#hasImmersiveInteractionCount" title="http://w3id.org/trajecto#hasImmersiveInteractionCount">has immersive interaction count</a></li>
+  <li><a href="#hasMeaningfulInteractionCount" title="http://w3id.org/trajecto#hasMeaningfulInteractionCount">has meaningful interaction count</a></li>
+  <li><a href="#hasNorthing" title="http://w3id.org/trajecto#hasNorthing">has northing</a></li>
+  <li><a href="#hasOSMType" title="http://w3id.org/trajecto#hasOSMType">has OSM type</a></li>
+  <li><a href="#hasPlaceID" title="http://w3id.org/trajecto#hasPlaceID">has place ID</a></li>
+  <li><a href="#hasPOICount" title="http://w3id.org/trajecto#hasPOICount">has POI count</a></li>
+  <li><a href="#hasPositionIndex" title="http://w3id.org/trajecto#hasPositionIndex">has position index</a></li>
+  <li><a href="#hasTotalDwellTime" title="http://w3id.org/trajecto#hasTotalDwellTime">has total dwell time</a></li>
+  <li><a href="#hasUniqueCategoryCount" title="http://w3id.org/trajecto#hasUniqueCategoryCount">has unique category count</a></li>
+  <li><a href="#hasVelocity" title="http://w3id.org/trajecto#hasVelocity">has velocity</a></li>
+  <li><a href="#pageRank" title="http://w3id.org/trajecto#pageRank">PageRank</a></li>
+  <li><a href="#similarityScore" title="http://w3id.org/trajecto#similarityScore">similarity score</a></li>
+  <li><a href="#timestamp" title="http://w3id.org/trajecto#timestamp">timestamp</a></li>
+ </ul>
+ <div class="entity" id="betweennessCentrality">
+  <h3>betweenness centrality<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#betweennessCentrality</p>
+  <div class="comment">
+   <span class="markdown">Betweenness centrality of a POI in the POI flow graph.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="communityId">
+  <h3>community ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#communityId</p>
+  <div class="comment">
+   <span class="markdown">Identifier of the co-visitation community a POI belongs to.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="externalDescription">
+  <h3>external description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#externalDescription</p>
+  <div class="comment">
+   <span class="markdown">Description of the Wikidata entity a POI is linked to.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="externalLabel">
+  <h3>external label<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#externalLabel</p>
+  <div class="comment">
+   <span class="markdown">Label of the Wikidata entity a POI is linked to.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="floor">
+  <h3>floor<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#floor</p>
+  <div class="comment">
+   <span class="markdown">Floor number of a position, for indoor positioning.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Point" target="_blank" title="http://www.datacron-project.eu/datAcron#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAddress">
+  <h3>has address<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasAddress</p>
+  <div class="comment">
+   <span class="markdown">Postal address of a region of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RegionOfInterest" title="http://w3id.org/trajecto#RegionOfInterest">Region of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEasting">
+  <h3>has easting<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasEasting</p>
+  <div class="comment">
+   <span class="markdown">Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Point" target="_blank" title="http://www.datacron-project.eu/datAcron#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasImmersiveInteractionCount">
+  <h3>has immersive interaction count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasImmersiveInteractionCount</p>
+  <div class="comment">
+   <span class="markdown">Number of immersive interactions of a trajectory (SR-40).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMeaningfulInteractionCount">
+  <h3>has meaningful interaction count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasMeaningfulInteractionCount</p>
+  <div class="comment">
+   <span class="markdown">Number of meaningful interactions of a trajectory (SR-40).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasNorthing">
+  <h3>has northing<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasNorthing</p>
+  <div class="comment">
+   <span class="markdown">Northing (y) of a position in a projected or indoor coordinate reference system, in meters. Used instead of longitude where positions are planar.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Point" target="_blank" title="http://www.datacron-project.eu/datAcron#Point">Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOSMType">
+  <h3>has OSM type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasOSMType</p>
+  <div class="comment">
+   <span class="markdown">The OpenStreetMap tag (key=value) that identifies the type of an entity of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EntityOfInterest" title="http://w3id.org/trajecto#EntityOfInterest">Entity of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPlaceID">
+  <h3>has place ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPlaceID</p>
+  <div class="comment">
+   <span class="markdown">External identifier of a region of interest, such as an OpenStreetMap or geocoder place ID.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RegionOfInterest" title="http://w3id.org/trajecto#RegionOfInterest">Region of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPOICount">
+  <h3>has POI count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPOICount</p>
+  <div class="comment">
+   <span class="markdown">Number of distinct POIs a trajectory interacts with (SR-44).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPositionIndex">
+  <h3>has position index<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasPositionIndex</p>
+  <div class="comment">
+   <span class="markdown">Zero-based order of a raw position within its trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTotalDwellTime">
+  <h3>has total dwell time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasTotalDwellTime</p>
+  <div class="comment">
+   <span class="markdown">Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasUniqueCategoryCount">
+  <h3>has unique category count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasUniqueCategoryCount</p>
+  <div class="comment">
+   <span class="markdown">Number of distinct POI categories a trajectory interacts with (SR-43).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasVelocity">
+  <h3>has velocity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#hasVelocity</p>
+  <div class="comment">
+   <span class="markdown">Velocity value attached to a geometry, as recorded by the source.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Geometry" target="_blank" title="http://www.datacron-project.eu/datAcron#Geometry">Geometry</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="pageRank">
+  <h3>PageRank<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#pageRank</p>
+  <div class="comment">
+   <span class="markdown">PageRank of a POI in the POI flow graph.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://w3id.org/trajecto#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="similarityScore">
+  <h3>similarity score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#similarityScore</p>
+  <div class="comment">
+   <span class="markdown">Score of a trajectory similarity, from 0 to 1.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TrajectorySimilarity" title="http://w3id.org/trajecto#TrajectorySimilarity">Trajectory Similarity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="timestamp">
+  <h3>timestamp<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#timestamp</p>
+  <div class="comment">
+   <span class="markdown">Recording time of a raw position, as an ISO 8601 local date-time string.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#RawPosition" target="_blank" title="http://www.datacron-project.eu/datAcron#RawPosition">Raw Position</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#DestinationPOI" title="http://w3id.org/trajecto#DestinationPOI">Destination POI</a></li>
+  <li><a href="#GatewayPOI" title="http://w3id.org/trajecto#GatewayPOI">Gateway POI</a></li>
+  <li><a href="#HighEngagement" title="http://w3id.org/trajecto#HighEngagement">High Engagement</a></li>
+  <li><a href="#HubPOI" title="http://w3id.org/trajecto#HubPOI">Hub POI</a></li>
+  <li><a href="#LowEngagement" title="http://w3id.org/trajecto#LowEngagement">Low Engagement</a></li>
+  <li><a href="#MediumEngagement" title="http://w3id.org/trajecto#MediumEngagement">Medium Engagement</a></li>
+  <li><a href="#OriginPOI" title="http://w3id.org/trajecto#OriginPOI">Origin POI</a></li>
+  <li><a href="#PeripheralPOI" title="http://w3id.org/trajecto#PeripheralPOI">Peripheral POI</a></li>
+ </ul>
+ <div class="entity" id="DestinationPOI">
+  <h3>Destination POI<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#DestinationPOI</p>
+  <div class="comment">
+   <span class="markdown">A high-PageRank POI with clearly more incoming than outgoing flow.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GatewayPOI">
+  <h3>Gateway POI<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#GatewayPOI</p>
+  <div class="comment">
+   <span class="markdown">A POI in the top quintile of betweenness: it bridges otherwise separate parts of the flow graph.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HighEngagement">
+  <h3>High Engagement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#HighEngagement</p>
+  <div class="comment">
+   <span class="markdown">Engagement level of a trajectory with a high share of meaningful and immersive interactions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EngagementLevel" title="http://w3id.org/trajecto#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HubPOI">
+  <h3>Hub POI<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#HubPOI</p>
+  <div class="comment">
+   <span class="markdown">A POI in the top quintile of both co-visitation degree and PageRank.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LowEngagement">
+  <h3>Low Engagement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#LowEngagement</p>
+  <div class="comment">
+   <span class="markdown">Engagement level of a trajectory with few or no meaningful interactions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EngagementLevel" title="http://w3id.org/trajecto#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediumEngagement">
+  <h3>Medium Engagement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#MediumEngagement</p>
+  <div class="comment">
+   <span class="markdown">Engagement level of a trajectory with a moderate share of meaningful interactions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EngagementLevel" title="http://w3id.org/trajecto#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OriginPOI">
+  <h3>Origin POI<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#OriginPOI</p>
+  <div class="comment">
+   <span class="markdown">A POI with clearly more outgoing than incoming flow.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PeripheralPOI">
+  <h3>Peripheral POI<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto#PeripheralPOI</p>
+  <div class="comment">
+   <span class="markdown">A POI with none of the other structural roles.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto">http://w3id.org/trajecto</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CentralityRole" title="http://w3id.org/trajecto#CentralityRole">Centrality Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

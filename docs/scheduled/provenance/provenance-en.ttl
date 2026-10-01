@@ -1,0 +1,15 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://w3id.org/trajecto/scheduled/1.1.0> a prov:Entity;
+	 dc:title "Trajecto Scheduled Events Module";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://w3id.org/trajecto/scheduled>;
+	 prov:wasRevisionOf <http://w3id.org/trajecto/scheduled/1.0>;
+	 prov:wasGeneratedAt "2026-04-22";
+.
+:agent0 a prov:Agent; foaf:name "Sotirios Angelis".
+:agent1 a prov:Agent; foaf:name "Konstantinos Kotis".

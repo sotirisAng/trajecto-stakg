@@ -1,0 +1,31 @@
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX spatial: <http://w3id.org/trajecto/spatial#>
+PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
+
+INSERT {
+    ?poi a poi:SignificantPOI
+}
+WHERE {
+    ?poi a trajecto:PointOfInterest .
+    { # Criterion 1: POI with 10+ meaningful interactions
+        SELECT ?poi (COUNT(?interaction) AS ?count)
+        WHERE {
+            ?interaction a poi:MeaningfulInteraction ;
+                        poi:interactsWith ?poi .
+        }
+        GROUP BY ?poi
+        HAVING (COUNT(?interaction) >= 10)
+    }
+      UNION {
+  	{ # Criterion 2: Dominant Interaction for 5+ trajectories
+        SELECT ?poi (COUNT(?interaction) AS ?count)
+        WHERE {
+            ?interaction a poi:DominantInteraction ;
+                        poi:interactsWith ?poi .
+        }
+        GROUP BY ?poi
+        HAVING (COUNT(?interaction) >= 5)
+    }
+  }
+}

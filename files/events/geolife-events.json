@@ -1,0 +1,137 @@
+[
+  {
+    "id": "bj-2008-05-20-chia-tai-conference",
+    "label": "Beijing International Petrochemicals Summit",
+    "category": "Conference",
+    "start": "2008-05-20T09:00:00",
+    "end":   "2008-05-20T18:00:00",
+    "lat": 39.9890984,
+    "lon": 116.3000284
+  },
+  {
+    "id": "bj-2008-05-20-chemical-industry-museum",
+    "label": "Spring Exhibition: Chemistry in Daily Life",
+    "category": "Exhibition",
+    "start": "2008-05-20T10:00:00",
+    "end":   "2008-05-20T17:00:00",
+    "lat": 39.9833085,
+    "lon": 116.3027596
+  },
+  {
+    "id": "bj-2008-08-08-olympic-opening-area",
+    "label": "Olympic Opening Ceremony Celebration Rally",
+    "category": "Sports",
+    "start": "2008-08-08T20:00:00",
+    "end":   "2008-08-08T23:30:00",
+    "lat": 39.9941781,
+    "lon": 116.3907623
+  },
+  {
+    "id": "bj-2008-09-14-lantern-festival",
+    "label": "Mid-Autumn Lantern Festival",
+    "category": "Festival",
+    "start": "2008-09-14T18:00:00",
+    "end":   "2008-09-14T22:30:00",
+    "lat": 39.9156987,
+    "lon": 116.4151611
+  },
+  {
+    "id": "bj-2009-03-15-cultural-gala",
+    "label": "Classical Music Gala",
+    "category": "Concert",
+    "start": "2009-03-15T19:30:00",
+    "end":   "2009-03-15T22:00:00",
+    "lat": 39.9820066,
+    "lon": 116.3017439
+  },
+  {
+    "id": "bj-2009-06-10-sculpture-exhibition",
+    "label": "Contemporary Sculpture Exhibition",
+    "category": "Exhibition",
+    "start": "2009-06-10T10:00:00",
+    "end":   "2009-06-10T19:00:00",
+    "lat": 39.9262469,
+    "lon": 116.3275503
+  },
+  {
+    "id": "bj-2009-10-01-national-day",
+    "label": "National Day Historical Tour",
+    "category": "Festival",
+    "start": "2009-10-01T09:00:00",
+    "end":   "2009-10-01T21:00:00",
+    "lat": 39.8812877,
+    "lon": 116.4057238
+  },
+  {
+    "id": "bj-2010-04-22-earth-day-rally",
+    "label": "Earth Day Environmental Rally",
+    "category": "Festival",
+    "start": "2010-04-22T10:00:00",
+    "end":   "2010-04-22T16:00:00",
+    "lat": 39.9914612,
+    "lon": 116.2998591
+  },
+  {
+    "id": "bj-2010-07-04-summer-concert",
+    "label": "Summer Open-Air Concert",
+    "category": "Concert",
+    "start": "2010-07-04T20:00:00",
+    "end":   "2010-07-04T23:00:00",
+    "lat": 39.989218,
+    "lon": 116.306944
+  },
+  {
+    "id": "bj-2010-11-12-biotech-conference",
+    "label": "Asia-Pacific Biotech Conference",
+    "category": "Conference",
+    "start": "2010-11-12T08:30:00",
+    "end":   "2010-11-14T18:00:00",
+    "lat": 39.9890984,
+    "lon": 116.3000284
+  },
+  {
+    "id": "bj-2011-02-17-spring-festival",
+    "label": "Spring Festival Lantern Parade",
+    "category": "Festival",
+    "start": "2011-02-17T18:00:00",
+    "end":   "2011-02-17T22:00:00",
+    "lat": 39.9833085,
+    "lon": 116.3027596
+  },
+  {
+    "id": "bj-2011-05-01-labor-day-gala",
+    "label": "Labor Day Cultural Gala",
+    "category": "Concert",
+    "start": "2011-05-01T19:00:00",
+    "end":   "2011-05-01T22:30:00",
+    "lat": 39.9156987,
+    "lon": 116.4151611
+  },
+  {
+    "id": "bj-2011-09-10-academic-symposium",
+    "label": "International Chemistry Symposium",
+    "category": "Conference",
+    "start": "2011-09-10T09:00:00",
+    "end":   "2011-09-11T17:00:00",
+    "lat": 39.9890984,
+    "lon": 116.3000284
+  },
+  {
+    "id": "bj-2012-04-15-sculpture-opening",
+    "label": "Public Sculpture Opening",
+    "category": "Exhibition",
+    "start": "2012-04-15T14:00:00",
+    "end":   "2012-04-15T18:00:00",
+    "lat": 39.9914612,
+    "lon": 116.2998591
+  },
+  {
+    "id": "bj-2012-08-01-marathon",
+    "label": "Beijing Summer Marathon",
+    "category": "Sports",
+    "start": "2012-08-01T06:00:00",
+    "end":   "2012-08-01T12:00:00",
+    "lat": 39.9941781,
+    "lon": 116.3907623
+  }
+]

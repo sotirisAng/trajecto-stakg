@@ -1,0 +1,55 @@
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix poi:      <http://w3id.org/trajecto/poi#> .
+@prefix dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix ex:       <http://w3id.org/trajecto/validation#> .
+
+# --- Stage 02: Base RDF (validates RML output) ---
+
+ex:TrajectoryShape a sh:NodeShape ;
+    sh:targetClass datacron:Trajectory ;
+    sh:property [
+        sh:path [ sh:inversePath dul:isPartOf ] ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory should have at least one position" ;
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "trajectory_\\d+" ;
+    sh:severity sh:Warning ;
+    sh:message "Trajectory URI must match pattern trajectory_DIGITS" .
+
+ex:PositionShape a sh:NodeShape ;
+    sh:targetClass datacron:RawPosition ;
+    sh:property [
+        sh:path dul:isPartOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class datacron:Trajectory ;
+        sh:severity sh:Violation ;
+        sh:message "Position must belong to exactly one trajectory" ;
+    ] ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "rawPosition_\\d+_\\d+" ;
+    sh:severity sh:Violation ;
+    sh:message "Position URI must match pattern rawPosition_TRAJ_SEQ" .
+
+ex:InteractionShape a sh:NodeShape ;
+    sh:targetClass poi:POIInteraction ;
+    sh:property [
+        sh:path poi:interactsWith ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class trajecto:PointOfInterest ;
+        sh:severity sh:Violation ;
+        sh:message "Interaction must link to exactly one PointOfInterest" ;
+    ] .
+
+ex:POIShape a sh:NodeShape ;
+    sh:targetClass trajecto:PointOfInterest ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "pointOfInterest_\\d+" ;
+    sh:severity sh:Warning ;
+    sh:message "POI URI must match pattern pointOfInterest_DIGITS" .

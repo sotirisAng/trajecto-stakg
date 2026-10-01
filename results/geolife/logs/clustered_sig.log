@@ -1,0 +1,38 @@
+Fuseki query endpoint: http://localhost:3030/geolife/sparql
+Fuseki update endpoint: http://localhost:3030/geolife/update
+Loading context-aware recommender data...
+  Features: loaded 1160 from file
+  Interactions: 1145 trajectories, 3041 unique POIs
+  Metadata: 1160 trajectories
+  POI metadata: 8486 POIs
+  Engagement: 1145 trajectories classified
+  Preferences: 96 users
+  Graphs: flow=2237 edges, covisit=5251 edges
+  Significant POIs: 163
+Loaded: 1160 trajectories, 3041 POIs, 96 users with preferences
+  Loading ontological classifications...
+  Ontological: 1145 classified, 13 profile classes
+  SR engine: ready (5 recommendation rules)
+  Precomputing archetype similarity matrix...
+  Archetype similarity: 1145 trajectories, 17175 pairs cached
+  Precomputing route similarity matrix...
+  Route similarity: 791 trajectories, 9370 pairs cached
+  Indexes: 3 engagement levels, 63 category groups, 96 user visit sets
+  Events: 0 scheduled events at 0 POIs
+  Trajectory windows: 1160 cached
+  Dwell semantics: 102 typed thresholds, 7171 interaction dwells
+
+=== geolife — 96 users over 1160 trajectories ===
+comparison                                      delta   p flat  p clust  verdict
+unified_route_heavy vs popularity recall@10    +0.189    0.000    0.000  holds
+unified_route_heavy vs popularity mrr          +0.166    0.000    0.000  holds
+unified_route_heavy vs markov recall@10        +0.122    0.000    0.000  holds
+unified_route_heavy vs markov mrr              +0.065    0.001    0.010  holds
+unified_route_heavy vs markov2 recall@10       +0.037    0.037    0.123  LOST
+unified_route_heavy vs markov2 mrr             +0.004    0.796    0.865  -
+lr_fusion vs unified_route_ recall@10          +0.030    0.001    0.013  holds
+lr_fusion vs unified_route_ mrr                +0.015    0.078    0.091  -
+rrf_uni+markov2+prox vs unified_route_ recall@10   +0.040    0.003    0.029  holds
+rrf_uni+markov2+prox vs unified_route_ mrr     -0.023    0.078    0.396  -
+
+wrote notebooks/output/evaluation/geolife_clustered_significance.csv

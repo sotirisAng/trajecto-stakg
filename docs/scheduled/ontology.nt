@@ -1,0 +1,157 @@
+<http://w3id.org/trajecto/scheduled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/scheduled> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/scheduled/1.1.0> .
+<http://w3id.org/trajecto/scheduled> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/poi> .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/created> "2026-04-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/description> "Externally scheduled events (concerts, conferences, exhibitions, matches, services) hosted at a POI for a finite time window. Event-gated POI categories are recommended only when such an event overlaps the trajectory."@en .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/dc/terms/title> "Trajecto Scheduled Events Module"@en .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/vocab/vann/preferredNamespacePrefix> "scheduled" .
+<http://w3id.org/trajecto/scheduled> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/scheduled#" .
+<http://w3id.org/trajecto/scheduled> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-scheduled-events"@en .
+<http://w3id.org/trajecto/scheduled> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/scheduled/1.0> .
+<http://w3id.org/trajecto/scheduled> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/scheduled#hostedAt
+<http://w3id.org/trajecto/scheduled#hostedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/scheduled#hostedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/scheduled#ScheduledEvent> .
+<http://w3id.org/trajecto/scheduled#hostedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/scheduled#hostedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "POI where the scheduled event takes place."@en .
+<http://w3id.org/trajecto/scheduled#hostedAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#hostedAt> <http://www.w3.org/2000/01/rdf-schema#label> "hosted at"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/scheduled#endTime
+<http://w3id.org/trajecto/scheduled#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/scheduled#endTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/scheduled#ScheduledEvent> .
+<http://w3id.org/trajecto/scheduled#endTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/trajecto/scheduled#endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Event end (inclusive). Equal to startTime for instantaneous events."@en .
+<http://w3id.org/trajecto/scheduled#endTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#endTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time"@en .
+# 
+# http://w3id.org/trajecto/scheduled#eventCategory
+<http://w3id.org/trajecto/scheduled#eventCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/scheduled#eventCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/scheduled#ScheduledEvent> .
+<http://w3id.org/trajecto/scheduled#eventCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/scheduled#eventCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Event classification: Concert, Exhibition, Conference, Festival, Sports, Theater, ReligiousService, Other."@en .
+<http://w3id.org/trajecto/scheduled#eventCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#eventCategory> <http://www.w3.org/2000/01/rdf-schema#label> "event category"@en .
+# 
+# http://w3id.org/trajecto/scheduled#externalId
+<http://w3id.org/trajecto/scheduled#externalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/scheduled#externalId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/scheduled#ScheduledEvent> .
+<http://w3id.org/trajecto/scheduled#externalId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/scheduled#externalId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier assigned by the source system; used for idempotent ingestion."@en .
+<http://w3id.org/trajecto/scheduled#externalId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#externalId> <http://www.w3.org/2000/01/rdf-schema#label> "external id"@en .
+# 
+# http://w3id.org/trajecto/scheduled#externalSource
+<http://w3id.org/trajecto/scheduled#externalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/scheduled#externalSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/scheduled#ScheduledEvent> .
+<http://w3id.org/trajecto/scheduled#externalSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/scheduled#externalSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Provenance tag: fixture, ticketmaster, eventbrite, etc."@en .
+<http://w3id.org/trajecto/scheduled#externalSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#externalSource> <http://www.w3.org/2000/01/rdf-schema#label> "external source"@en .
+# 
+# http://w3id.org/trajecto/scheduled#startTime
+<http://w3id.org/trajecto/scheduled#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/scheduled#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/scheduled#ScheduledEvent> .
+<http://w3id.org/trajecto/scheduled#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/trajecto/scheduled#startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Event start (inclusive)."@en .
+<http://w3id.org/trajecto/scheduled#startTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "start time"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#PointOfInterest
+# 
+# http://w3id.org/trajecto/scheduled#ScheduledEvent
+<http://w3id.org/trajecto/scheduled#ScheduledEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/scheduled#ScheduledEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/scheduled#ScheduledEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A calendared event (concert, conference, exhibition, sports match, festival, religious service) hosted at a POI for a finite time window. Distinct from trajecto/events#TrajectoryEvent which models behavioral trajectory events."@en .
+<http://w3id.org/trajecto/scheduled#ScheduledEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto/scheduled#ScheduledEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Scheduled Event"@en .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

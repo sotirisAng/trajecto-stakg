@@ -1,0 +1,48 @@
+Fuseki query endpoint: http://localhost:3030/osm-rome/sparql
+Fuseki update endpoint: http://localhost:3030/osm-rome/update
+Loading context-aware recommender data...
+  Features: loaded 1160 from file
+  Interactions: 537 trajectories, 765 unique POIs
+  Metadata: 543 trajectories
+  POI metadata: 4596 POIs
+  Engagement: 537 trajectories classified
+  Preferences: 49 users
+  Graphs: flow=568 edges, covisit=890 edges
+  Significant POIs: 11
+Loaded: 1160 trajectories, 765 POIs, 49 users with preferences
+  Loading ontological classifications...
+  Ontological: 537 classified, 12 profile classes
+  SR engine: ready (5 recommendation rules)
+  Precomputing archetype similarity matrix...
+  Archetype similarity: 407 trajectories, 6023 pairs cached
+  Precomputing route similarity matrix...
+  Route similarity: 416 trajectories, 2611 pairs cached
+  Indexes: 3 engagement levels, 53 category groups, 49 user visit sets
+  Events: 14 scheduled events at 12 POIs
+  Trajectory windows: 543 cached
+  Dwell semantics: 102 typed thresholds, 1335 interaction dwells
+CORPUS CHECK: endpoint=http://localhost:3030/osm-rome/sparql, trajectories=537, POIs=765
+
+=== within 500 m ===
+  random                   R@10=0.211  MRR=0.087  N=19
+  popularity               R@10=0.342  MRR=0.288  N=19
+  category_popularity      R@10=0.132  MRR=0.178  N=19
+  proximity                R@10=0.263  MRR=0.127  N=19
+  markov                   R@10=0.447  MRR=0.344  N=19
+  markov2                  R@10=0.342  MRR=0.315  N=19
+  unified_default          R@10=0.368  MRR=0.319  N=19
+  unified_route_heavy      R@10=0.447  MRR=0.296  N=19
+  rrf_uni+markov2+prox     R@10=0.421  MRR=0.287  N=19
+  -> output/evaluation/round3_protocol_radius500_fixed.csv
+
+=== within 1000 m ===
+  random                   R@10=0.122  MRR=0.084  N=37
+  popularity               R@10=0.185  MRR=0.177  N=37
+  category_popularity      R@10=0.095  MRR=0.092  N=37
+  proximity                R@10=0.122  MRR=0.076  N=37
+  markov                   R@10=0.347  MRR=0.275  N=37
+  markov2                  R@10=0.297  MRR=0.277  N=37
+  unified_default          R@10=0.230  MRR=0.234  N=37
+  unified_route_heavy      R@10=0.284  MRR=0.248  N=37
+  rrf_uni+markov2+prox     R@10=0.351  MRR=0.267  N=37
+  -> output/evaluation/round3_protocol_radius1000_fixed.csv

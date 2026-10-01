@@ -1,0 +1,36 @@
+# SR-40: Materialize aggregate interaction counts per trajectory
+# Provides: hasMeaningfulInteractionCount, hasImmersiveInteractionCount
+# Prerequisites for OWL defined classes that use qualified cardinality restrictions.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# Meaningful interaction count (includes immersive, since ImmersiveInteraction ⊑ MeaningfulInteraction)
+INSERT {
+    ?traj trajecto:hasMeaningfulInteractionCount ?cnt .
+}
+WHERE {
+    SELECT ?traj (COUNT(DISTINCT ?int) AS ?cnt)
+    WHERE {
+        ?pos dul:isPartOf ?traj .
+        ?pos trajecto:hasInteraction ?int .
+        ?int a poi:MeaningfulInteraction .
+    }
+    GROUP BY ?traj
+};
+
+# Immersive interaction count
+INSERT {
+    ?traj trajecto:hasImmersiveInteractionCount ?cnt .
+}
+WHERE {
+    SELECT ?traj (COUNT(DISTINCT ?int) AS ?cnt)
+    WHERE {
+        ?pos dul:isPartOf ?traj .
+        ?pos trajecto:hasInteraction ?int .
+        ?int a poi:ImmersiveInteraction .
+    }
+    GROUP BY ?traj
+}

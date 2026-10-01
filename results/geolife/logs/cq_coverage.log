@@ -1,0 +1,20 @@
+
+=== geolife ===
+  CQ1   ok       1160  How many stop positions does each trajectory contain?
+  CQ2   ok       1994  Which POIs are co-visited, and by how many trajectories?
+  CQ3   ok         96  How many trajectories did each moving entity produce?
+  CQ4   ok      16593  Which POI interactions were recognised, with what dwell time a
+  CQ5   ok          7  Given a POI, which POIs are recorded as following it?
+  CQ6   ok          8  Which purpose classes are assigned, and to how many trajectori
+  CQ7   ok          3  Which movement patterns are exhibited, and by how many traject
+  CQ8   ok          3  What engagement level is inferred per trajectory, and how are 
+  CQ9   ok         57  What are a user's inferred category preferences, with score an
+  CQ10  ok          8  What is the mean dwell time of trajectories grouped by purpose
+  CQ11  ok        778  Which POIs are co-visited with a POI the trajectory already co
+  CQ12  ok       1936  Which POI categories does a user prefer that they have not yet
+  CQ13  ok         18  Under which temporal contexts do trajectories occur?
+  CQ14  ok         91  What dwell thresholds does the ontology define for each POI ty
+  CQ15  ok       1443  Which POIs are structurally central, by materialised PageRank?
+
+=== coverage summary ===
+  geolife 15/15 answered  (requirements 13/13)   empty: []   errors: []

@@ -1,0 +1,593 @@
+poi,label,category,covisit_degree,betweenness,eigenvector,pagerank,flow_in,flow_out,community,role
+http://w3id.org/trajecto/poi#pointOfInterest_5762607353,Aroma,Restaurant,41,0.13740068570442546,0.05904302671951354,0.015883913381541652,25,14,1,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3739088577,Varco ZTL,,18,0.05745548407382703,0.03492114811177485,0.011903124193739865,5,3,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4893981522,Antico Café Ruschena,RetailStore,31,0.11743272744032832,0.218039862098168,0.011053291871517193,10,18,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2148972457,Antica Pesa,Restaurant,37,0.002217155639679944,3.0492554929127433e-06,0.010141041969690132,14,14,5,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_6753188757,Teobaldo di Provins,Artwork,25,0.03406371806386597,0.3852805107210515,0.008026308354706697,4,4,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1125488401,Varco ZTL,Transition,8,0.018974829600313554,0.009605707267566092,0.007850592009746016,3,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1421083055,Fori Imperiali,Transportation,6,0.02468013092910347,0.0005205179748724126,0.00784408605168983,4,2,4,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_9501019636,Taxi Porta Portese 060609,Service,12,0.01101085832824627,0.11290344970748405,0.007442961088953951,7,3,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12987462101,Entrance Piazza del Colosseo,Entrance,19,0.0704815562217253,0.07693488381567047,0.007284883773109856,4,4,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12487097048,Il Cuore di Nerone,,24,0.03322052127774054,0.36495938203066036,0.006730449507421081,3,4,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4884459084,Binario 9 3/4 coffee house,Cafe,5,0.006244740725511614,0.00022034552482418814,0.006239458583632625,4,1,4,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12834516516,Gruppo Lega Salvini Premier – Partito Sardo d’Azione,Service,11,0.03682216808432072,0.01645226231792189,0.005921957883938192,3,2,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_13033261896,Carrefour,RetailStore,10,0.00673378036623326,0.01848651830285995,0.005737232225137699,2,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1148203560,Ara Pacis,Service,9,0.01868885080134578,0.03600078934721477,0.005155683438350279,4,3,8,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_7239169954,Giulio Cesare,Monument,14,0.04516431989647529,0.10130063806477278,0.004925823995855254,2,4,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1692350297,Terme Caracalla/Porta Capena,BusStation,9,0.014842140936300286,0.05296291170093433,0.004882575603068272,5,2,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10313301196,Leone Fiorentino,,13,0.02924550255445894,0.000134981604041398,0.004574640246654193,6,7,4,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_6707390224,Nilo,Artwork,7,0.0,0.007168490295264731,0.004419658245764636,1,0,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_6707390226,Danubio,Artwork,6,0.0,0.008996721399804642,0.004341566419354241,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1682317562,Paola,SeatingArea,7,0.0,0.007168490295264731,0.004341566419354241,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2515145544,St. Philip,,8,0.0003607927813456516,0.15516925970127066,0.004336436474836083,1,1,11,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_8789982819,Muro della Repubblica Romana,Monument,7,0.0,0.007168490295264731,0.004296898812138426,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4847981925,Stazione Carabinieri di piazza farnese,PublicService,6,0.0,0.008996721399804642,0.004296898812138426,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12020648971,Carrefour Express,RetailStore,8,1.7207261464337953e-06,0.020410803225072445,0.0042746359379716315,1,0,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1421083048,Colosseo (MB),BusStation,12,0.026090727458704735,0.05376453522525927,0.0042553152121781014,3,2,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2515145553,St. Thomas,,11,0.006641443215829,0.15971830434594728,0.00425225518061397,2,1,11,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1564055705,Panificio Arnese,FoodCourt,12,5.162178439301385e-05,2.0969062744540904e-06,0.0041963466623379025,5,4,5,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_259699754,Cannone di Mezzogiorno,HistoricalLandmark,7,0.0,0.007168490295264731,0.004190782302029361,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10313607340,Giorgiana Masi,HistoricalLandmark,7,0.0002716835393424914,0.009339675554894325,0.004190782302029361,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_8526374728,Presidenza del Senato della Repubblica,,8,1.7207261464337953e-06,0.020410803225072445,0.004178228710271381,1,1,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12593641706,Rione X Campitelli,,11,0.015915468855329466,0.07943405711390673,0.004178162236119885,2,3,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3394186923,Banca Etica,Bank,3,0.0024137008039614933,0.0011402581333222975,0.004176523686496873,3,0,8,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_11305156300,Monumento alle Vittime del Terrorismo,Monument,11,0.04456822020590485,0.004898424401847833,0.0041624576684940575,6,5,6,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_621245337,V.le Vaticano/Clivo M. Vaticane,SeatingArea,4,6.88290458573518e-05,2.7520023762260907e-80,0.004137286952373799,4,0,17,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10162305305,Bosco di viale Aurelio Saffi,ViewingPoint,3,0.0,0.01550747796048469,0.004105887579393022,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4778707350,VinAllegro,Cafe,2,0.0,0.0040713244037208505,0.00409103746660424,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5640579821,Francesco Zuccari,Hostel,5,0.04614038856159926,0.07833136855202553,0.00409103746660424,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1880658326,Belvedere Niccolò Scatoli,ViewingPoint,7,0.0,0.007168490295264731,0.00409103746660424,1,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2676800384,Moro,Artwork,13,0.002950089382163685,0.037011102241366146,0.0040668731256344876,2,1,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4716611560,L'Osteria di Cicerone,Restaurant,1,0.0,4.789543892286403e-05,0.004057086863358992,1,0,4,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_1617810999,L.go S. Susanna,PublicService,1,0.0,0.00017563210784790764,0.003997227961468679,1,0,12,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_9383445914,Celtis autralis,Landmark,3,0.0,0.01550747796048469,0.00396780903383529,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9366053221,Emporium,HistoricalLandmark,11,0.009309328979632776,0.15433033689461165,0.0039482618223764185,5,4,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3287606229,Punto 1 Giardini Colle Oppio (fantasma di Messalina),HistoricalLandmark,2,0.002105021652470676,0.0019094575193359159,0.0038538575720139753,1,1,12,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_9367885259,Araucaria,Landmark,7,0.003122940420540008,0.04018555102698235,0.0038106199687950202,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1671721492,Lgt Ripa/Porto,SeatingArea,1,0.0,1.68710545939633e-05,0.003749899787326997,1,0,9,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_3693023670,Chihana sushi restaurant,Restaurant,7,0.01460896498322292,1.3605504531884222e-05,0.003740096022887357,5,2,3,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_13378150129,Oriana,VendingMachine,4,0.018646935673520892,0.020583825095714055,0.0036846264293073816,3,1,12,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_5826736985,L'Artigianato,RetailStore,6,0.011933271622250385,0.001918878385821798,0.003661869761715548,2,2,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10313301198,Lello Fiorentino,,7,0.014597493475580028,0.001978799185132844,0.003642138701539666,4,3,16,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_307878083,Arco di Paolo V,Monument,4,0.0,0.028062958460671424,0.003632736039124261,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4769984122,Traiano,Monument,8,0.003954005691078742,0.07399794862250743,0.003610775712095198,2,2,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1739836623,Navicella/Villa Celimontana,Transportation,4,0.01659353580544323,0.00018342073356771054,0.0035626724131866605,3,1,9,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_253874144,Quattro Fontane (Four Fountains),NavigationLandmark,14,0.0245383207578667,0.055809469785777756,0.003485793313679241,2,3,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_13397462303,Larte Sacra,Artwork,13,0.002950089382163685,0.037011102241366146,0.0034744295554873382,2,2,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_5884531902,Gate to residence of Russian ambassador,Entrance,4,0.0,0.028062958460671424,0.003421758440913755,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3132175210,Studio DCA S.R.L.,,6,0.008851964357408964,0.02194093022462002,0.0034141013545242204,5,1,6,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_9051032378,Nerva,Monument,7,0.0026123866136635206,0.07237366401393219,0.003345420933625203,2,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_11400217439,Il Barroccio,Restaurant,2,0.0,1.4240258472733616e-05,0.003339825596157924,1,0,3,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_393180368,Belvedere Romolo E Remo,ViewingPoint,4,0.0,0.03687591662762287,0.003318294971299753,2,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1661285311,Postamat,ATM,13,0.002950089382163685,0.037011102241366146,0.0032395887878176074,2,2,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12981678570,Moll Flanders,RetailStore,1,0.0,0.0020012209816451265,0.0032391485407387895,1,0,1,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_13120244803,Vinificio,Bar,1,0.0,0.0005125801161773006,0.0031967743699754273,1,0,1,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_12895829500,Stazione S. Pietro (FL),BusStation,4,0.0,0.028062958460671424,0.0031754954483912867,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10915854326,Fori Imperiali,Service,6,0.00022344816718042226,0.03396416529354069,0.003139260042873431,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1684931486,Bocca della Verità,BusStation,3,0.00419857179729846,0.00014049643120323376,0.0030805754806485933,2,1,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_11066696192,Scuola Alfredo Baccarini,School,1,0.0,7.392366551730346e-06,0.0030711800512338563,1,0,3,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_2623878919,Embassy of Croatia to the Holy See,Embassy,9,0.0024658144338163255,0.15638080899766182,0.0030434789420485495,2,0,11,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1987147422,Emporio,BusStation,3,0.006292121942126244,0.02040202782772878,0.0029897885832994935,3,0,29,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4349794699,Supermercato Affare Fatto,RetailStore,5,0.00831714163062624,0.021756826494389207,0.0029617383419665495,4,1,1,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4208626021,Federico Seismit Doda,Artwork,5,0.002105021652470676,0.011133295564612823,0.0029542075449304575,2,1,2,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4228358173,Pandora,RetailStore,2,0.002105021652470676,1.2628263894131678e-06,0.002923896413235865,2,0,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_442558378,Bastioni di Michelangelo,SeatingArea,4,0.00629785769594769,0.005572471836972754,0.0029117020082447824,3,1,1,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3545526107,Monastero di San Lorenzo in Panisperna,Religious,5,0.016645157589836243,0.0009147859309279784,0.002911317584133648,2,3,14,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_5645460201,Romolo,Cafe,13,0.008855048150762336,0.20879199642233578,0.0028869279809024566,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2923536881,WP Outlet,RetailStore,2,0.012195925100355283,0.003141887587269596,0.0028557286376816693,2,0,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_6707390225,Río de la Plata,Artwork,6,0.00022344816718042226,0.03396416529354069,0.002845111242164606,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_6297443485,Salumi e Formaggi,RetailStore,1,0.0,0.010384879810025557,0.002820805356844809,1,0,0,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_4388751889,Flying Tiger Copenhagen,RetailStore,1,0.0,0.010384879810025557,0.002820805356844809,1,0,0,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_9685722773,Evo Hosteria,Restaurant,9,2.982591987151911e-05,1.0786986557451675e-06,0.002819461284519489,2,3,5,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_5446426922,Piazza del Quirinale,ViewingPoint,1,0.0,4.277491127845415e-81,0.002819461284519489,1,0,22,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_1684931505,Emporio,SeatingArea,4,0.00629785769594769,0.00339760872649741,0.0027952818976956354,2,2,8,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_12593531850,Hotel Palazzo Manfredi,HistoricalLandmark,3,0.004204307551119906,8.559958113357216e-05,0.0027720870087029814,3,0,14,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1616178133,Gregorio VII/S. Silverio,SeatingArea,5,0.008385672086954028,8.035760256121321e-05,0.0027643830324943107,4,1,3,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_364860899,Forum Romanum view,ViewingPoint,11,0.03410295727769702,0.014525177651340575,0.002703041748031727,2,3,3,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3577359551,Il Pozzo dei Desideri,Restaurant,30,0.08682988776338176,0.0744666027705952,0.0026759114740051017,3,7,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4496942092,Kilo Shop,RetailStore,4,0.0,1.1157971172598575e-55,0.0026750230326944564,1,0,21,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10009484031,Manioka,Restaurant,2,0.0,0.010862047110996828,0.0026503645279152043,2,0,1,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_10933957168,On Movo,Service,6,0.01738624243442278,0.006644441793209203,0.0026477524505627865,3,2,4,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1486489802,S. Claudio,SeatingArea,3,0.0,8.728019453081462e-05,0.002644988011457839,1,0,13,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_3512356840,Piadineria Romagnola E45,FastFood,1,0.0,1.5694858409465655e-06,0.0026013381364654166,1,0,16,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_2201468649,Columbia,Hotel,3,1.720726146433795e-05,2.4307847150123195e-93,0.002560054804454285,3,0,27,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_4991221421,Lian Club,Dining,5,5.7357538214459836e-05,1.1154030366723242e-82,0.002560054804454285,3,2,18,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2109413555,Ingresso del Petriano,Entrance,9,0.0003607927813456516,0.1983157994223593,0.002549236295621631,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_9094641317,Save the Children Italy,,4,0.00022344816718042226,0.018932319861858737,0.002530428430607595,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1172691363,Babington's,Cafe,15,0.029671715107040073,0.0692743771879603,0.0024979598337286756,1,1,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1675888683,Trastevere/Bernard. da Feltre,BusStation,5,0.008818568652088408,0.03514516760530423,0.0024686601987935763,3,2,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_10871400301,Alimentari,RetailStore,4,2.8678769107229918e-05,1.0021832699803574e-80,0.0024681985048401263,2,1,22,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4297715074,Il Tarallo in Trastevere,Restaurant,7,7.169692276807479e-05,7.599380550170194e-07,0.0024681985048401263,2,2,5,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_2401541507,Enel - stazione di ricarica,VendingMachine,3,1.1471507642891967e-05,4.209117512366781e-84,0.0024681985048401263,2,0,30,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_2601856597,Leonardo di Noblac,Artwork,5,0.0,0.058737058846949214,0.002430494257928474,1,0,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1387899487,Altare di città Gorizia,Monument,6,0.0,0.012959958786854109,0.002408792605664805,1,0,3,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4739547145,Lumière,Restaurant,3,0.022627548825604405,0.0019430492334833105,0.002381108459740867,2,1,9,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10045234717,Cambio,Restaurant,2,0.006280650434483352,0.005478172982656526,0.0023763422052259673,1,1,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1690151032,Aventino-Circo Massimo (MB),PublicService,3,0.0,0.00023304603426098418,0.0023612026003740913,1,0,8,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_4294771236,Enoteca Corsi,RetailStore,1,0.0,8.419262128800573e-88,0.00233733755261977,1,0,19,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_1207362549,Barberini,Entrance,1,0.0,1.2521297967896178e-06,0.0023109117291157896,1,0,3,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_7082306423,Trattoria Pizzeria Luzzi,Restaurant,2,0.002105021652470676,0.005477368292692887,0.0022987173241247067,2,0,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1447566606,Lapis Niger,HistoricalLandmark,3,0.0,1.2374947407255098e-69,0.0022983329000135725,1,0,24,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_762098474,Castel Sant'Angelo,Restroom,6,0.0014337237838734412,0.07710308787255002,0.0022983329000135725,1,2,0,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_7119017152,Piazza di Ponte Umberto I,Landmark,2,0.0,3.5972704244314884e-84,0.0022983329000135725,1,0,31,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_5357363522,Suite Dreams,Hotel,3,0.0,1.2374947407255098e-69,0.0022983329000135725,1,0,25,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_1416733018,Vatican Excavation Office,,8,0.0003607927813456516,0.15516925970127066,0.0022983329000135725,1,1,11,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1767741095,Traforo/Tritone,PublicService,4,0.0,1.1157971172598575e-55,0.0022983329000135725,1,1,21,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_3263612332,Albero di Natale di Piazza San Silvestro,Landmark,8,1.7207261464337953e-06,0.020410803225072445,0.0022764002940819147,1,1,7,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_4260198490,Da Tonino,Restaurant,3,0.0,0.0018615091176747746,0.0022740663819179412,1,0,2,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_4450594029,Miracle Water,WaterFountain,3,0.0,0.00021904307681796213,0.0022740663819179412,1,0,2,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_5853362485,La voglia,RetailStore,3,0.0,0.008875186174650345,0.0022698207630428217,1,0,3,Destination
+http://w3id.org/trajecto/poi#pointOfInterest_9738049433,Caffè Roma Gelateria,Amenity,4,0.002105021652470676,8.796175115112586e-05,0.002263024197498858,2,1,13,Hub
+http://w3id.org/trajecto/poi#pointOfInterest_1286811116,Angel with the Sponge,,11,0.010601428540653815,0.20395030352148086,0.002260866645140594,2,2,0,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1468085718,Fori Imperiali/Campidoglio,SeatingArea,3,0.002938754440088003,0.010222591429155093,0.0022564901673359753,1,1,8,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1410071604,Chiesa Nuova,Amenity,1,0.0,0.00029987620070301424,0.0022261848773803754,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1342178556,Blue Ice,FoodCourt,2,0.002105021652470676,1.7051671350538624e-05,0.0022118411052594903,1,1,16,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_2676800498,Nettuno,Artwork,8,1.7207261464337953e-06,0.020410803225072445,0.002198289057665851,1,1,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2818358459,Ma Che Siete Venuti A Fà,Dining,1,0.0,0.00331137308522464,0.0021822972135755597,1,0,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8808834179,Piazza della Repubblica,Landmark,11,0.024094158325816722,0.04188443185540008,0.002174909963529838,1,3,0,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_2629144989,Reparto Carabinieri Presidenza della Repubblica,PublicService,3,0.0016889473389516403,0.002068865130586697,0.002174909963529838,1,2,8,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1739836626,Navicella/Villa Celimontana,BusStation,3,0.004204307551119906,1.6227137906089781e-06,0.002151398348374235,3,0,9,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10436841365,Jing Yuan,Restaurant,4,0.010450543462674582,0.0019428985199094878,0.002151398348374235,3,1,12,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12578442681,Rione XIX Celio,HistoricalLandmark,2,0.013992936772614331,0.03385747919182813,0.002149579250613697,1,1,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_13281151842,Porta del Perugino,NavigationLandmark,9,0.0003607927813456516,0.1983157994223593,0.002149579250613697,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5287431738,Beerland Trilussa,Bar,7,7.169692276807479e-05,7.599380550170194e-07,0.002135973115581914,2,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_252440275,Pizzeria ai Marmi,Restaurant,3,2.619327578460332e-05,5.750113093637853e-07,0.0020925980039523846,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1071282082,Moncler,RetailStore,9,0.0,0.04114691364120835,0.0020900570639116518,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1313559944,Cicerone/Cavour,TrainStation,2,0.01041039318592446,0.009398293203259024,0.002074229358622792,2,0,20,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_3056184799,Bottega Rocchi,Restaurant,1,0.0,1.9729991320011658e-06,0.0020568446763830203,1,0,10,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1349160473,Isola Tiberina,Transportation,4,0.026642576500616594,0.0014982112343961235,0.0020541531084538995,2,1,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_5296423361,Winged Victory,Artwork,6,0.0,0.012959958786854109,0.0019854670646287987,1,1,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4704961892,Wine Bar De Penitenzieri,Restaurant,3,0.0,6.503068206452176e-07,0.0019528179058071568,2,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12007208869,Di Marco PMZ,,7,0.00016729281979217453,1.399992268876327e-06,0.0019528179058071568,2,3,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2141674123,Accademia Nazionale dei Lincei,Museum,4,7.647671761927978e-06,7.59828662368154e-07,0.0019528179058071568,2,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1665299306,Piemonte/Carducci,BusStation,3,0.004204307551119906,0.0005125801161773006,0.0019470701203342098,2,1,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1675888308,Bernardino da Feltre,SeatingArea,7,0.01460896498322292,0.0019609673287023345,0.0019470701203342098,2,5,15,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_2373132879,Bar,Dining,2,5.7357538214459835e-06,3.9568445521050863e-101,0.0019470701203342098,2,0,36,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10743161972,Nostrum,FastFood,1,0.0,4.1828712901103906e-05,0.0019358428438203798,1,0,6,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12115434165,Digital Boschetto,RetailStore,2,0.0,0.0002094330631157017,0.0019288195211112783,1,0,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10751612907,Pasticceria Valzani,RetailStore,3,0.0,0.00023304603426098418,0.0019288195211112783,1,1,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1468207593,Zanardelli,BusStation,1,0.0,0.00031251398269856157,0.0019094789298851847,1,0,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4230176674,Nuvolari,RetailStore,1,0.0,0.00031251398269856157,0.0019094789298851847,1,0,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1166425489,Istituto Nazionale di Archeologia e Storia dell'Arte,Cultural,4,0.0,0.01104703586899934,0.001905422263727256,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12796102568,Bartolomè Mitre,Artwork,6,0.0,0.07010442728489463,0.001905422263727256,1,0,2,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3167641924,Bernardino da Feltre,SeatingArea,3,4.0150276750121883e-05,1.6838524257601146e-87,0.0019011419705271303,2,1,19,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1730948931,Celio Vibenna,SeatingArea,3,0.0,0.0025387292045928253,0.0018714390209394697,1,0,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1682317532,P.za S. Pancrazio,SeatingArea,2,0.0,3.40711480288662e-07,0.0018577515574986856,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9366053222,Emporium,Service,5,0.030594510883592874,0.020760996029453856,0.001855675514673501,2,3,9,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1684931513,Lgt Testaccio,SeatingArea,3,0.0035709758820442242,0.026940191715615007,0.001855675514673501,2,1,2,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10578527910,Pietà,Artwork,3,0.0,0.01800227810372601,0.001855213820720051,1,1,11,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10435944764,Camplus - North entrance (to car park),Entrance,3,4.588603057156787e-05,3.0329950338735532e-80,0.001855213820720051,1,1,17,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6707390223,Gange,Artwork,2,0.0,3.5972704244314884e-84,0.001855213820720051,1,1,31,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12481055293,Segni delle inondazioni del Tevere,Monument,4,0.0,1.115797117259857e-55,0.001855213820720051,2,0,34,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5108555139,Dome of Saint Peter,ViewingPoint,8,0.0003607927813456516,0.15516925970127066,0.001855213820720051,1,1,11,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13435802067,Repubblica,Transportation,1,0.0,2.7979116148945537e-101,0.001855213820720051,1,0,35,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5611906441,Da Nunzia Al Colle Oppio,Cafe,2,0.00419857179729846,8.487521899296072e-05,0.001855213820720051,1,1,14,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1542758952,Change,Service,3,0.0,0.008672995301194576,0.001855213820720051,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5825601753,Il Guru,Restaurant,2,0.0,1.262889319320084e-87,0.001855213820720051,1,0,32,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1340628842,Ara Coeli/Piazza Venezia,Transportation,3,0.0,1.2374947407255098e-69,0.001855213820720051,1,1,25,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2142007235,Varco ZTL,Transition,1,0.0,2.7979116148945537e-101,0.001855213820720051,1,0,39,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9780170491,Colosseum Shop,RetailStore,1,0.0,2.7979116148945537e-101,0.001855213820720051,1,0,33,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12895401159,My Style,RetailStore,4,0.0,1.1157971172598575e-55,0.001855213820720051,1,1,21,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4727944089,Hosteria la Vacca M'briaca,Restaurant,1,0.0,2.7979116148945537e-101,0.001855213820720051,1,0,38,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10134243277,Viminale,BusStation,3,0.00419857179729846,0.0006227902712055994,0.001855213820720051,1,1,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_11534596511,Casa di Livia,Landmark,3,0.0,1.2374947407255098e-69,0.001855213820720051,1,1,24,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13037852594,Galleria Aurora,RetailStore,5,0.0,0.058737058846949214,0.001855213820720051,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9326638600,Maestro,Restaurant,1,0.0,2.7979116148945537e-101,0.001855213820720051,1,0,37,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3067591006,Oppio Caffè,Cafe,3,0.005892608686637759,0.009353580247203947,0.001846599477224793,1,2,8,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_11827067229,Grano Trattoria,Restaurant,1,0.0,0.0006111836064808928,0.001846599477224793,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9500886098,Taxi Stamperia 060609,Service,8,1.7207261464337953e-06,0.020410803225072445,0.0018294928716586934,1,1,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9502197892,Taxi Bocca della Verità 060609,Service,1,0.0,4.988234024618016e-83,0.0018092856709129715,1,0,18,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1421083057,Labicana/Colosseo,SeatingArea,1,0.0,4.988234024618016e-83,0.0018092856709129715,1,0,18,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5109908121,I Pinco Pallino,RetailStore,1,0.0,0.0018604325341336427,0.0017776562846505914,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12895882543,Ripetta/Ara Pacis,Amenity,2,0.002105021652470676,0.0032602343699776534,0.0017705069028782416,1,1,0,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1447568821,Ingresso principale Foro Romano - Palatino: Via Sacra Arco di Tito,Entrance,6,0.00022344816718042226,0.03396416529354069,0.0017677370165627541,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4317410993,Gelateria del viale,Cafe,2,0.0,0.0003642482391281388,0.0017531686237224466,1,1,16,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4616512990,Parafarmacia,Pharmacy,1,0.0,0.0001821241195640694,0.0017531686237224466,1,0,16,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1266998227,Varco ZTL,Transition,2,0.00419857179729846,0.00018369360540501596,0.0017531686237224466,1,1,16,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10782843205,Scala Elicoidale Giuseppe Momo,VisualLandmark,3,0.0,0.010676479870204234,0.001712071250062893,1,0,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10300778759,Caffè delle Terme,Cafe,9,0.0,0.04114691364120835,0.00170942215948821,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3909073672,La Licata,Dining,6,0.01576863839618723,0.01928076214876702,0.00170942215948821,1,1,0,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_7715446785,baldinini,RetailStore,1,0.0,0.0051351393260970265,0.00170942215948821,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4176683412,Musa,RetailStore,1,0.0,1.8848785580627527e-06,0.001705429398290473,1,0,2,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8188993868,Ambasciata della Repubblica Democratica del Congo,Embassy,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9955543225,Circo Massimo / Mouth of Thruth,Amenity,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1712770072,Dandolo,PublicService,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2293531289,Nike,RetailStore,2,0.003487065192304804,0.006314645407075848,0.0016857326400046317,1,1,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4230144617,Gino Sorbillo,Restaurant,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3056184804,Monte dei Paschi di Siena,Bank,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4376086295,UniCredit Bank,Bank,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5429217410,Chamber of Deputies,HistoricalLandmark,1,0.0,0.005431023555498414,0.0016857326400046317,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6753188758,Norberto di Prémontré,Artwork,9,0.0003607927813456516,0.19831579942235927,0.0016821024963250353,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4884459076,Notel Isa,Hotel,2,0.002105021652470676,0.00018190899415243544,0.0016651337268405158,2,0,15,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12045802240,Barbara Gregori,RetailStore,7,0.010444807708853136,0.002067007035413619,0.0016456738409553675,1,2,8,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_13435802066,Repubblica,TrainStation,2,1.1471507642891967e-05,4.496092949396446e-96,0.001640577778274172,2,0,28,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4885746124,Antico Café Ruschena,Cafe,2,1.1471507642891967e-05,4.496092949396446e-96,0.001640577778274172,2,0,26,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1753895604,Emporio,SeatingArea,2,0.002105021652470676,6.177302745767604e-07,0.001640577778274172,2,0,13,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_5739601048,Lo Scopettaro,Restaurant,7,0.019072124497143857,0.002492412686158116,0.001640577778274172,2,5,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_3198931974,Fisheye,RetailStore,3,2.619327578460332e-05,5.750113093637853e-07,0.0016130623034674911,1,1,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3836026357,Almost Corner Bookshop,RetailStore,3,2.619327578460332e-05,5.750113093637853e-07,0.0016130623034674911,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12015135043,ICBC,Bank,2,0.0,0.007547183814426184,0.00161041570614754,1,0,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10793539905,Oriental Fonzie,FastFood,6,0.0,0.012959958786854109,0.00161041570614754,1,1,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5288226321,Piccolo Arancio,Restaurant,9,0.0,0.04114691364120835,0.00161041570614754,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1468085716,Circo Massimo (MB),SeatingArea,3,0.004204307551119906,7.569844197416667e-06,0.0015946496284670925,1,2,20,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4230104788,Santini Outlet,RetailStore,2,0.01651897100576443,0.020235708756476532,0.0015737391211798077,2,0,15,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_2139261441,Biblioteca Casanatense,Library,2,0.002105021652470676,2.1450051666251318e-05,0.001571246836903374,1,1,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12003994018,Luisa Spagnol Roma Tritone,RetailStore,1,0.0,2.126702450298865e-05,0.001571246836903374,1,0,10,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1987857548,Naumachia,Restaurant,5,0.016559121282514553,0.009016155630718475,0.0015576121364014538,2,2,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4194722890,La Fraschetta di Castel Sant Angelo,Restaurant,1,0.0,8.415085685234927e-05,0.00154611764046283,1,0,14,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4884459072,Alibaba Kebab,FastFood,4,0.0069438947680365536,0.005615806841134077,0.0015384136642541592,2,2,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1754337224,Lgt Sanzio/Colomba Antonetti,SeatingArea,2,0.009103028250408443,0.020284593499283174,0.0015216262827292158,2,0,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1695255321,Renato e Luisa,Restaurant,2,0.0,1.7568517008403018e-06,0.0015077948977161063,1,0,9,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6180677369,Centro Informazioni Turistiche Parco archeologico del Colosseo,,6,0.015877402524567603,0.010527047106351757,0.001487096574140903,1,2,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_72959652,Rome,Thing,6,0.0,0.012959958786854109,0.001487096574140903,1,1,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8899039132,The first dolce,Hotel,2,0.002105021652470676,0.00045457782235186207,0.001428954960836248,1,1,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_7019444885,Hostaria Dar Buttero,Restaurant,2,0.0,0.0005570099146480566,0.001428954960836248,1,0,6,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6969191038,Orto,Restaurant,1,0.0,0.00045072881899987764,0.001428954960836248,1,0,6,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6365006674,Parapharmacia,Pharmacy,1,0.0,0.00045072881899987764,0.001428954960836248,1,0,6,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2122709063,National Gallery of Ancient Art,,3,0.0,0.00023304603426098418,0.0014209779383772463,1,1,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12050062252,Twins Roma,RetailStore,2,0.0,0.0002094330631157017,0.0014209779383772463,1,1,8,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10921413962,GAMM - Museo del Videogioco,Museum,2,0.006280650434483352,7.177325909568953e-05,0.0013992264842773738,2,0,13,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1915802155,Golosseum,FastFood,1,0.0,6.963140848167597e-07,0.0013989370562304353,1,0,20,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4197712796,Hotel Valle,Hotel,1,0.0,6.963140848167597e-07,0.0013989370562304353,1,0,20,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12880677290,Residenza Leone XIII,Hotel,1,0.0,0.0008294163908214165,0.00138312461726775,1,0,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10933957176,Shapla Minimarket,RetailStore,3,0.00042413395807528126,0.00026172324877145705,0.0013770126447033102,3,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4464465294,Ristorante Virginiae,Restaurant,1,0.0,0.0005165677159135277,0.0013750120171580407,1,0,6,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4411686590,That's Amore,Restaurant,7,1.3192233789325769e-05,0.02844599525812054,0.0013709609725205715,2,2,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1489221903,Sperone Valadier,Entrance,3,0.0,0.0025387292045928253,0.0013532839083614287,1,1,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5288226122,La Rinascente,RetailStore,1,0.0,0.003854120586832324,0.0013374828113349312,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11066696923,Sovrintendenza di polizia della Presidenza della Repubblica,PublicService,9,0.0,0.04114691364120835,0.0013374828113349312,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6325416986,Gelateria Artigianale,FoodCourt,2,0.0,3.40711480288662e-07,0.0013369593289506078,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2142007238,Varco ZTL,,1,0.0,3.0646798655607736e-07,0.0013369593289506078,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3517497854,Cassa di Risparmio di Ferrara,Bank,2,0.0,3.40711480288662e-07,0.0013369593289506078,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11482807948,Memoriale ai partigiani trasteverini,HistoricalLandmark,3,2.619327578460332e-05,5.750113093637853e-07,0.0013369593289506078,1,1,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1133982857,Trattoria Da Lucia,Restaurant,2,0.0,3.40711480288662e-07,0.0013369593289506078,1,1,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10933957169,Alimentari coreano,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,68,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4464465296,Ristorante Biolosophy,Restaurant,3,1.1471507642891967e-05,4.209117512366781e-84,0.001334085436214134,1,1,31,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13386979269,Sistema Musei Civici,,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,90,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_261737105,Hotel Majestic,Hotel,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,67,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_260770350,Obelisco Matteiano,Monument,3,0.0,0.008672995301194576,0.001334085436214134,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12691602006,La Nuova Piazzetta Navona,Restaurant,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,53,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4610388993,La fraschetta romanesca,Restaurant,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,85,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13324778271,Carabinieri Stazione Piazza Venezia,PublicService,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,65,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4455036144,Civico 4,Cafe,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,52,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8854537905,Divorum,HistoricalSite,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,71,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_250889369,Quattro Fontane,Theater,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,57,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4711609657,Farmacia S. Sabina,Pharmacy,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,59,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4715503446,Colosseo,Cafe,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,78,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2514765586,Vitale di Milano,Artwork,5,0.0,0.058737058846949214,0.001334085436214134,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5826790786,Mimì e Cocò,Restaurant,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,92,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13094031501,Stadio Palatino,ViewingPoint,3,0.0,1.2374947407255098e-69,0.001334085436214134,1,1,24,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2642837149,Grand Hotel Palatino,Hotel,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,41,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12994840472,Libreria claudiana,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,66,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3822623157,Smartfood,FastFood,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,61,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10115885154,Il Cantico,Hotel,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,70,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3736269126,Finn Pub,NightlifeFacility,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,87,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11426709469,Pasta urbana,Restaurant,2,5.7357538214459835e-06,3.9568445521050863e-101,0.001334085436214134,1,1,38,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11305156298,Rione XXI San Saba,HistoricalLandmark,2,5.7357538214459835e-06,3.9568445521050863e-101,0.001334085436214134,1,1,35,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11497777267,Gran Caffè,Dining,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,43,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3512356839,Colors Hotel,Hotel,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,49,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9500847834,Taxi Piazza Barberini 060609,Transportation,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,76,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12723154216,EPS historic site: The Goldfish Fountain of the Physics Institute of Panisperna Street,HistoricalLandmark,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,75,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_9432155426,Fontana della Pigna,WaterFountain,8,0.0003607927813456516,0.15516925970127066,0.001334085436214134,1,1,11,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3217327590,075,Cafe,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,60,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3180610241,Trattoria Papa Re,Restaurant,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,44,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11709312168,Censured Gay Cruising Bar,Bar,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,63,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10200225254,Domenico Paternoster,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,77,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3154799948,San Carlo,Monument,2,0.0,1.262889319320084e-87,0.001334085436214134,2,0,46,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13039324949,Opera Romani Pellegrinaggi,Service,2,0.0,2.2160497028478077e-80,0.001334085436214134,1,1,17,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11066696905,Argiletum,HistoricalLandmark,2,0.0,7.462700454205005e-81,0.001334085436214134,1,1,22,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13041338129,Ave Roma,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,42,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4791996132,Geeks Academy,Educational,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,64,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10300778727,IBL Banca,Bank,5,0.006300725572858413,2.3864396679961283e-06,0.001334085436214134,1,4,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_13139687101,Enoteca Bernabei,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,55,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4386815596,il Mastello,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,73,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_900550305,LaLiFarm,Pharmacy,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,82,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4425315690,Sergio & Mario,RetailStore,2,0.002105021652470676,0.001892593112724613,0.001334085436214134,1,1,29,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12652255697,Il Colonnato,Restaurant,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,93,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4176683411,Banchetti sport,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,62,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1739836609,Cola di Rienzo/Terenzio,SeatingArea,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,91,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12021226984,Luisa Spagnoli,RetailStore,4,0.0,1.115797117259857e-55,0.001334085436214134,2,2,34,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1754294134,Sonnino,BusStation,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,94,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12025186194,Tec It Easy Roma Centro,RetailStore,10,0.0024658144338163272,0.19986423349879687,0.001334085436214134,1,2,0,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_5248413732,Vintage,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,74,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1739836620,Navicella/Porta Metronia,Transportation,2,0.002105021652470676,7.874313297337176e-06,0.001334085436214134,1,1,14,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10873692958,Sephora,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,48,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6782520304,Gi Group,PrivateService,4,0.0,1.1157971172598575e-55,0.001334085436214134,1,1,21,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5296362350,Winged Lion,Artwork,3,0.0,1.2374947407255098e-69,0.001334085436214134,1,1,25,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1257246656,Nuovo Olimpia,Cinema,2,0.002105021652470676,2.044458689624605e-05,0.001334085436214134,1,1,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1686028646,L'archetto II,Restaurant,7,0.0,0.007168490295264731,0.001334085436214134,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12474301850,Suore Missionarie del Sacro Costato,Religious,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,50,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1662303156,Museo Universale,Museum,4,0.0059499570096831385,0.0011552673429116493,0.001334085436214134,1,2,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_5327223921,Big Star,Bar,2,0.0,3.40711480288662e-07,0.001334085436214134,1,1,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1684931467,Bocca della Verità,SeatingArea,2,5.7357538214459835e-06,3.9568445521050863e-101,0.001334085436214134,1,1,37,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1682317638,Vitellia/Innocenzo X,SeatingArea,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,72,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12052505812,Al Sogno,RetailStore,2,0.0,1.262889319320084e-87,0.001334085436214134,1,1,32,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1675920562,Trastevere/Mastai,BusStation,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,84,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1675888367,Emporio,PublicService,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,54,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_663736649,Spagna,Transportation,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,81,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6544567060,Tamoil,VendingMachine,5,0.004204307551119906,0.013084688359823966,0.001334085436214134,1,4,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_5222142783,"Pronto Soccorso Ospedale ""San Giovanni Calibita""",Hospital,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,79,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1352360800,Arco della Sentinella,HistoricalLandmark,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,45,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5201639412,il Grottino a Testaccio dal 1936,Restaurant,2,5.7357538214459835e-06,3.9568445521050863e-101,0.001334085436214134,1,1,39,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13443245243,Liceo Artistico Via di Ripetta,School,3,0.01857810662766354,0.00014031587078520896,0.001334085436214134,1,2,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_813193663,Roma San Pietro,Amenity,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,88,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4812056222,La Renella,Restaurant,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,89,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2149029061,Antico Arco,Restaurant,5,0.0002398501056334662,5.734324117083171e-07,0.001334085436214134,1,1,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5895824551,Saint Louis College of Music,Educational,2,5.7357538214459835e-06,3.9568445521050863e-101,0.001334085436214134,1,1,33,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2144627661,Pontifical University of The Holy Cross,,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,86,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_7807845523,FORI IMPERIALI Ingresso dalla Colonna Traiana,NavigationLandmark,2,0.0,6.30902968140782e-05,0.001334085436214134,1,1,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10748229391,Annibali & Co.,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,47,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10876007640,Mini Market,RetailStore,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,69,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13473470735,Coffee Time,Cafe,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,51,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5737556419,Caffè delle carrozze,Dining,3,0.0,0.01800227810372601,0.001334085436214134,1,1,11,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12020603669,Spada Roma,RetailStore,2,0.0,3.5972704244314884e-84,0.001334085436214134,1,1,30,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4926487721,Stella d'oro,Restaurant,3,4.0150276750121883e-05,1.6838524257601146e-87,0.001334085436214134,1,2,19,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2001954485,Varco ZTL,,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,56,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13443245244,Accademia di belle arti di Roma,Educational,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,80,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10873692961,Skechers,RetailStore,2,0.002105021652470676,0.00045457782235186207,0.001334085436214134,1,1,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12020660918,VyNique,Bar,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,83,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4971065306,Mizio's - cibo da strada,FastFood,1,0.0,5.549118335323823e-113,0.001334085436214134,1,0,58,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1672413303,Fori Imperiali,SeatingArea,2,0.002105021652470676,0.00018024682418375833,0.001334085436214134,1,1,9,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_6705707387,Al Picchio,Restaurant,10,0.002844742703643126,0.029083317957671162,0.0013039233640875024,1,1,7,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_227544136,IP,VendingMachine,9,0.0003607927813456516,0.1983157994223593,0.0012881572864070548,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1730948986,XX Settembre,PublicService,3,0.00540689223750368,0.006996047188148673,0.0012881572864070548,1,2,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10873556175,The Gelatist,FoodCourt,1,0.0,0.01838320039181941,0.0012881572864070548,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1730948895,Carini/Pilo,SeatingArea,1,0.0,8.419262128800571e-88,0.0012881572864070548,1,0,19,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11599880399,Circo Massimo,Transportation,1,0.0,1.2419449726619922e-05,0.0012766858099354614,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10582275505,Cucina Abruzzese Pizzeria,Restaurant,1,0.0,1.2419449726619922e-05,0.0012766858099354614,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10313603401,Rione VII - Regola,InformationSign,1,0.0,1.2419449726619922e-05,0.0012766858099354614,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2189156343,Bulldog Inn Rome,Bar,1,0.0,1.2419449726619922e-05,0.0012766858099354614,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5629466740,Cappella del transito di Santa Caterina da Siena,,1,0.0,1.2419449726619922e-05,0.0012766858099354614,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2147946539,Cioccolata e Vino,Bar,1,0.0,1.407073998337732e-07,0.0012745397276571183,1,0,5,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3248385621,Antica Caciara,FoodCourt,1,0.0,0.00190959906060342,0.001246995391114875,1,0,9,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2274883508,Le Coppelle 52,Bar,1,0.0,0.00190959906060342,0.001246995391114875,1,0,9,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8793015803,Iscrizione del ponte Cestio,Monument,2,0.002105021652470676,0.020226461559734454,0.0012426908305534258,1,1,0,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4724213565,Triumphs and Laments,Artwork,1,0.0,0.020055338773175994,0.0012426908305534258,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6206217423,Lion of Nectanebo,Artwork,3,0.0,0.010676479870204234,0.0011657582291207994,1,1,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5815881584,Cadorin,Restaurant,2,0.002105021652470676,2.0485856612059492e-05,0.0011578751902805756,1,1,2,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_9955543227,Colosseum Archeological Area,ViewingPoint,1,0.0,0.00046288249538214,0.0011578751902805756,1,0,23,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13162919918,San Silvestro,TrainStation,1,0.0,0.0005727474077342423,0.0010927341422173362,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3958385764,David Saddler,RetailStore,3,0.0,8.728019453081462e-05,0.0010927341422173362,1,1,13,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8223174271,Embassy of Honduras to the Holy See,Embassy,1,0.0,0.00018036998330053544,0.0010521490427204405,1,0,15,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1796927439,ASL,Hospital,1,0.0,0.00018036998330053544,0.0010521490427204405,1,0,15,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2537258886,Signor Panino,FastFood,1,0.0,0.00018036998330053544,0.0010521490427204405,1,0,15,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4881500424,La Paolo,Restaurant,5,0.01316729939976951,0.030887901965497965,0.0010460308623073153,1,2,7,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_6556336685,Città del sole,RetailStore,2,0.0,0.00836634192579667,0.0010460308623073153,1,1,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5183354424,Tessier,RetailStore,2,0.0,0.007547183814426184,0.0010460308623073153,1,1,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_12471829759,Campo de' Fiori,MarketArea,6,0.0,0.012959958786854109,0.0010460308623073153,1,1,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4756213131,Klass,Restaurant,9,0.0,0.04114691364120835,0.0010460308623073153,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_7112120711,Appetito,RetailStore,2,0.00014207143562731638,3.155570387808302e-05,0.0010275930941540965,1,1,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5978649686,Colosseo,ViewingPoint,3,0.006292121942126244,0.005031584023543514,0.0010275930941540965,1,2,23,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_2925051759,Consolini,Restaurant,1,0.0,2.7787382593057645e-96,0.0010275930941540965,1,0,26,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1536870124,Visitor Center Fori Imperiali,Service,1,0.0,4.2946836298603846e-05,0.0010275930941540965,1,0,23,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1168549494,Dogs' fountain,WaterFountain,4,0.00419857179729846,0.00022076914041049294,0.0010275930941540965,1,2,2,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4306388718,Grand Hotel Olympic,Hotel,1,0.0,2.7979116148945537e-101,0.0010275930941540965,1,0,40,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1920404978,Hotel Abruzzi Rome,Hotel,1,0.0,0.00029798915560852506,0.0010275930941540965,1,0,2,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_10300224596,Intesa Sanpaolo,Bank,1,0.0,2.7979116148945537e-101,0.0010275930941540965,1,0,40,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_3633506637,Todis,RetailStore,1,0.0,2.126702450298865e-05,0.0010275930941540965,1,0,10,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5825531457,Mr. Brown Pub,NightlifeFacility,1,0.0,2.7787382593057645e-96,0.0010275930941540965,1,0,28,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_665448449,Ciclofficina Centrale Ciclonauti,Service,6,0.008106455301241494,0.0013020730526476477,0.0010275930941540965,1,5,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_2537299956,Gelateria Santa Maria Maggiore,FoodCourt,2,0.006280650434483352,8.090165126279875e-05,0.0010275930941540965,1,1,20,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4616498390,Camponeschi,Restaurant,2,0.004164157274369784,1.2639028695802349e-05,0.0010046290192505568,1,1,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_7341371815,U.S. Embassy to the Holy See,Embassy,1,0.0,0.0012035801940869734,0.0010046290192505568,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_2098756750,Pontifical Ecclesiastical Academy,Educational,1,0.0,2.195789691824282e-07,0.0010046290192505568,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11305156299,Monumento alle Vittime del Terrorismo,HistoricalLandmark,2,0.004164157274369784,1.2639028695802349e-05,0.0010046290192505568,1,1,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4340336304,Libreria Caffè Bohemien,Cafe,1,0.0,2.195789691824282e-07,0.0010046290192505568,1,0,4,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6288525586,Bata,RetailStore,2,0.002105021652470676,0.00023121089019251023,0.0010000362042698488,1,1,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1617966547,Prefetti,BusStation,1,0.0,0.00022925472610717807,0.0010000362042698488,1,0,10,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4498908563,Hotel NH Collection Roma Giustiniano,Hotel,2,0.00419857179729846,0.00023122772523917926,0.0010000362042698488,1,1,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12235987719,Gelateria Maximo,FoodCourt,2,0.011729972669919327,0.005660278281605591,0.0010000362042698488,1,1,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_6854692890,Riccardo Taliani,Dining,1,0.0,0.0005081684347589567,0.000925428980134084,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_8164814603,Doppelgänger,RetailStore,1,0.0,0.0018445527800798297,0.000925428980134084,1,0,7,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_4908975143,Courtyard of Saint Ivo,Hotel,1,0.0,0.0005081684347589567,0.000925428980134084,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_6402045185,Holiday home The Rosary,Hotel,1,0.0,1.6720500286785837e-05,0.000925428980134084,1,0,12,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1379490417,Cola di Rienzo,Monument,1,0.0,8.975055633533163e-05,0.000925428980134084,1,0,6,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_1730948898,Cavour (MB),PublicService,1,0.0,1.6720500286785837e-05,0.000925428980134084,1,0,12,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_5768796753,Squisito Cook,Dining,1,0.0,7.763739090915605e-05,0.000925428980134084,1,0,3,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_11451877569,Mibo,RetailStore,2,0.0,1.7568517008403018e-06,0.000925428980134084,1,1,9,Peripheral
+http://w3id.org/trajecto/poi#pointOfInterest_13096016469,Hotel Regina Baglioni,HistoricalLandmark,5,0.016610743066907567,0.0007736232693219733,0.0008743469231240776,1,2,13,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1692350232,Aventino,SeatingArea,3,0.002105021652470676,0.0062265808681783415,0.0008743469231240776,1,2,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_623250473,Colosseo – Fori Imperiali,Transportation,1,0.0,4.1828712901103906e-05,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1640363964,Mameli,BusStation,2,0.0,3.40711480288662e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1217614876,Foot Locker,RetailStore,1,0.0,1.8808962256086144e-06,0.0007211007520940588,0,1,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5851843128,IP,VendingMachine,3,0.004204307551119906,0.005524510793947845,0.0007211007520940588,0,3,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_6566250565,Zuiki,RetailStore,1,0.0,1.2521297967896178e-06,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5826838088,Celio,RetailStore,1,0.0,5.682141438116807e-08,0.0007211007520940588,0,1,13,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1617966571,Veneto/Emilia,SeatingArea,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,62,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1640363979,P.le Garibaldi G.,SeatingArea,2,2.619327578460332e-05,5.17219314354748e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12219202508,Associazione dei Cavalieri Italiani del Sovrano Militare Ordine di Malta - Delegazione Roma,Service,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,69,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1421083059,Milano,TrainStation,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,75,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6705819695,Trophy of Marius,Artwork,1,0.0,0.0005038320469570821,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1420526267,Angel with the Lance,Artwork,2,0.0,2.2160497028478077e-80,0.0007211007520940588,0,1,17,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1419037551,San Pietro,Artwork,1,0.0,7.874313297337176e-06,0.0007211007520940588,0,1,14,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1640364012,Psg Gianicolo/Villa Corsini,SeatingArea,2,8.316843041096676e-05,3.7182762022076845e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10737374742,Giorgio Bachi,RetailStore,4,0.0,1.1157971172598575e-55,0.0007211007520940588,0,1,21,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10748877185,The Hive Hotel,Hotel,2,0.010624943098331388,0.0003014057071259164,0.0007211007520940588,0,2,4,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_6036283886,Enoteca Costantini,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,47,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12438456541,Frinchillucci,RetailStore,1,0.0,4.714942715811317e-05,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_621424114,Hard Rock Cafe,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,71,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12566269101,Farmacia Celimontana,Pharmacy,1,0.0,7.243621406114432e-07,0.0007211007520940588,0,1,14,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1544656929,Ombre Rosse,Restaurant,3,7.552075864903878e-06,2.6117194122787563e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10748229377,OpenArt,Restaurant,1,0.0,4.714942715811317e-05,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6298662585,Nannarella,Restaurant,2,0.0,6.30902968140782e-05,0.0007211007520940588,0,1,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1515913911,Di Bartolomei,RetailStore,1,0.0,3.0646798655607736e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12299435752,MamaMary,RetailStore,1,0.0,0.0001821241195640694,0.0007211007520940588,0,1,16,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6365025992,Il Ponentino,Restaurant,1,0.0,0.020055338773175994,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6190242585,Pifebo,RetailStore,2,0.0,7.462700454205005e-81,0.0007211007520940588,0,1,22,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6174597085,Tricolore,Restaurant,2,0.0,1.4240258472733618e-05,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6165388288,La Locanda del Prosciutto,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,51,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6417684863,Roma 5,PostOffice,1,0.0,0.0018765811346758406,0.0007211007520940588,0,1,29,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6476405885,Murano max,RetailStore,1,0.0,0.020055338773175994,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6488092285,Panino Divino,FastFood,1,0.0,1.1618445553355213e-80,0.0007211007520940588,0,1,17,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_610686402,Belli,TrainStation,1,0.0,7.392366551730346e-06,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_653947448,Giardino degli Aranci,ViewingPoint,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,66,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1416939065,Repubblica (MA),BusStation,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,38,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_3878100135,Ristorente Pizzeria L'esquilino Bar,Restaurant,1,0.0,1.492572754581998e-07,0.0007211007520940588,0,1,9,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1410071566,Aurelia/Rampa V.le Vaticano,PublicService,1,0.0,1.1618445553355213e-80,0.0007211007520940588,0,1,17,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6779636766,Ristorante Grano,Restaurant,1,0.0,0.005431023555498414,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13144404687,Barberini,NavigationLandmark,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,39,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_8908192125,Garage Vespasiano,Transition,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,88,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9001933166,Saint Louis College of Music,School,2,0.008351257564025352,0.000871940655575633,0.0007211007520940588,0,2,20,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_13144404686,Repubblica,PerformanceVenue,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,65,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10300778737,Vero food,Restaurant,2,0.002657605044682392,0.007449156506336698,0.0007211007520940588,0,2,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_9051095330,Embassy of Japan to the Holy See,Embassy,1,0.0,0.0032326517797867825,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12701919764,Il Messaggero,Service,1,0.0,2.7787382593057645e-96,0.0007211007520940588,0,1,28,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9238568606,Sitbus from airport Via Crescenzio 19,SeatingArea,1,0.0,0.00190959906060342,0.0007211007520940588,0,1,9,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13096064675,Chiesa di Santo Stefano del Cacco,Cultural,1,0.0,0.00018036998330053544,0.0007211007520940588,0,1,15,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9355785978,Avocado,Landmark,2,0.0002810519372508532,4.4717538638985057e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12707172366,Università Roma Tre - Dipartimento di Scienze della Formazione,University,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,67,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9378989717,Ruver,FastFood,3,0.0,0.01629307066649524,0.0007211007520940588,0,3,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10200225252,Doppelgänger,RetailStore,1,0.0,1.2521297967896178e-06,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12993636705,Congregation of the Sisters of St. Dorothy Frassinetti,Religious,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,77,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12942199301,Timberland,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,93,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12918286540,Quattro Novembre/S. Apostoli,SeatingArea,4,0.010444807708853136,1.7343502434791458e-05,0.0007211007520940588,0,3,9,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_10134243286,Cavour/Esquilino,BusStation,1,0.0,7.392366551730346e-06,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12823711179,Douglas,RetailStore,1,0.0,0.005431023555498414,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9668187898,Azione Cattolica Italiana - Sede legale,Religious,6,0.0,0.07010442728489463,0.0007211007520940588,0,1,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12895401172,Caffè Ripetta,Cafe,2,0.00419857179729846,6.658803952028303e-06,0.0007211007520940588,0,2,13,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12895401107,Istat,PublicService,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,36,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12881172495,La Vite Vaticana,Hotel,1,0.0,7.392366551730346e-06,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9828491417,Studio Silice,RetailStore,1,0.0,0.004871633141662211,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_9866167845,Humana,RetailStore,1,0.0,0.0141952743175226,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12833549891,Arenula/Cairoli,BusStation,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,68,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10300778738,Il mio gioiello,RetailStore,1,0.0,0.002018132950838283,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1324437899,Farmacia Internazionale,Pharmacy,9,0.0,0.04114691364120835,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10300778742,Bar Dei Pari,Cafe,1,0.0,1.2419449726619922e-05,0.0007211007520940588,0,1,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_754694592,Gelateria Millennium,FoodCourt,3,0.0,0.01800227810372601,0.0007211007520940588,0,1,11,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1401571413,XX Settembre/Min. Finanze,PublicService,1,0.0,1.6579118285927082e-05,0.0007211007520940588,0,1,9,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_6802412362,Hollywood – Tutto sul cinema,Entertainment,1,0.0,0.001893302862844585,0.0007211007520940588,0,1,12,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_685957640,S.Andrea della Valle,Transportation,4,0.0,1.115797117259857e-55,0.0007211007520940588,0,2,34,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1387901060,ZTL anello ferroviario,NavigationLandmark,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,82,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_7012887885,Accademia di San Luca,Museum,7,0.0,0.007168490295264731,0.0007211007520940588,0,1,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1257346325,Commissariato Trevi - Campo Marzio,PublicService,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,61,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1640364016,S. Onofrio/Bambin Gesù (H),SeatingArea,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,76,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10556988648,Monteverde Guesthouse,Hostel,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,58,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13452249689,Legami,RetailStore,1,0.0,1.4034142095543903e-93,0.0007211007520940588,0,1,27,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13435802059,Venezia,Transportation,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,64,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_7525502443,Ministero della Salute – Sede del Ministro,PublicService,1,0.0,8.419262128800571e-88,0.0007211007520940588,0,1,19,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_761224971,Piazza Garibaldi,Restroom,1,0.0,0.002018132950838283,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_8784750028,Aromaticus,Restaurant,1,0.0,0.005431023555498414,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13435802057,Argentina,Transportation,1,0.0,0.0005125801161773006,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13431482502,Sant'Eustachio,InformationSign,3,0.0,0.0018615091176747746,0.0007211007520940588,0,1,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13431482108,Roma Giubileo 2025,Service,2,0.0,0.0014745463266508099,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12593548158,Ludus Magnus,HistoricalLandmark,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,48,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13393174838,Colosseo,Transportation,2,0.002105021652470676,0.00046683346441057265,0.0007211007520940588,0,2,23,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_8217874934,Embassy of Cyprus to the Holy See,Embassy,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,89,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_828291664,Taxi Cinque Lune 060609,Service,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,43,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_13385664065,Centro Informazioni del Clivo di Acilio,InformationSign,1,0.0,0.0012035801940869734,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_8626237471,BPP Sviluppo,RetailStore,1,0.0,0.00031251398269856157,0.0007211007520940588,0,1,8,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_8632312138,Nomination Gold Shop,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,42,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_8658007630,Bar Glorioso Bistrot,Restaurant,1,0.0,8.415085685234927e-05,0.0007211007520940588,0,1,14,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5745871063,Astemio Wine & Food,Restaurant,4,0.01858288642251475,0.008076152700379403,0.0007211007520940588,0,4,1,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_5488446321,Caffè Lungara,Cafe,1,0.0,4.988234024618016e-83,0.0007211007520940588,0,1,18,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5737557524,Padiglione delle carrozze,Museum,8,0.0003607927813456516,0.15516925970127066,0.0007211007520940588,0,1,11,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4463705568,BCC Roma,ATM,2,6.825547047520719e-05,3.8283520498851103e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4362410894,Antico Caffé San Pietro,Dining,4,0.001987474495863035,0.00024109010498813457,0.0007211007520940588,0,2,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2959672887,Varco ZTL,Service,1,0.0,1.6732004740217592e-05,0.0007211007520940588,0,1,15,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11058143130,Istituto professionale Leonardo Da Vinci,School,1,0.0,0.0010240552036809446,0.0007211007520940588,0,1,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4406742999,Green Line Tours,Amenity,2,0.0007267200091772066,0.00012267375075285147,0.0007211007520940588,0,2,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4418927289,Pane&Vino,Cafe,1,0.0,0.00017870801319333583,0.0007211007520940588,0,1,12,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1170556146,Madonna Addolorata,HistoricalLandmark,1,0.0,0.0024779612851136583,0.0007211007520940588,0,1,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11057027898,Wycon Cosmetics,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,79,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_442561794,Burger King,FastFood,3,0.012486736069287905,0.0008439508793230682,0.0007211007520940588,0,3,3,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_11048215798,Casa dell'Acqua,Amenity,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,45,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11768222262,Leonardo Global Solutions,Commercial,1,0.0,0.004871633141662211,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4455036153,Osteria della Suburra,Restaurant,1,0.0,4.277491127845415e-81,0.0007211007520940588,0,1,22,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11818788869,The Bulldog Rome,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,56,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11659814871,Mimi e Coco Trast,Restaurant,2,0.0,3.40711480288662e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_261743538,Commissariato,PublicService,1,0.0,8.419262128800573e-88,0.0007211007520940588,0,1,19,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4471394212,Ristorante Sabatini,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,44,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10946649861,Bulgari,Hotel,3,0.004204307551119906,0.00018178391853876404,0.0007211007520940588,0,3,12,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4523011482,Casa Santa Sofia,Hotel,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,52,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4544541989,Caffé Falombini,Dining,5,0.0,0.058737058846949214,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4559867795,Taverna Angelica,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,90,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11846545625,Il Matriciano,Restaurant,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,37,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2578132866,XX Settembre/Min. Finanze,PublicService,2,5.7357538214459835e-06,3.9568445521050863e-101,0.0007211007520940588,0,2,40,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4703893389,Il Piccolo,Restaurant,1,0.0,1.9396081853451629e-84,0.0007211007520940588,0,1,31,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2537258887,aT,Restaurant,1,0.0,2.195789691824282e-07,0.0007211007520940588,0,1,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4715503471,Gavi,Cafe,1,0.0,0.00017408091866922258,0.0007211007520940588,0,1,29,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4359128194,Barnum cafe,Cafe,1,0.0,1.2913093856628185e-05,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4347815690,Borsalino boutique,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,78,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4716609910,Fideuram,ATM,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,83,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_3512103330,BNL,Bank,1,0.0,4.988234024618016e-83,0.0007211007520940588,0,1,18,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_3991610957,Il Meccanismo,Dining,1,0.0,0.010384879810025557,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4058542376,Sovraintendenza ai Beni Culturali di Roma,PublicService,2,0.0,3.5972704244314884e-84,0.0007211007520940588,0,1,30,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4110101491,Trattoria da Giggi,Restaurant,1,0.0,1.2419449726619922e-05,0.0007211007520940588,0,1,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4153864000,Downtown Accommodation,Hotel,1,0.0,0.00017870801319333583,0.0007211007520940588,0,1,12,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_385139806,Eni,VendingMachine,1,0.0,0.0032326517797867825,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_3753627861,Angelo Brunetti detto Ciceuracchio,Artwork,1,0.0,0.00331137308522464,0.0007211007520940588,0,1,8,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1135464611,Washington,Dining,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,92,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4199809191,Come il Latte,FastFood,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,49,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11305156297,Santuario della Madonna del Divino Amore,Religious,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,53,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4228358182,Paul Bianco,RetailStore,1,0.0,0.00018036998330053544,0.0007211007520940588,0,1,15,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1286797435,Conad City,RetailStore,2,0.002105021652470676,0.0032395841405858817,0.0007211007520940588,0,2,2,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_3454192542,Parcheggio Parlamentari,ParkingArea,1,0.0,1.1622219133252956e-07,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4346363789,La Taverna de' Mercanti,Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,94,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4244609014,Bottega Organica,FastFood,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,86,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4251104389,Drogheria Innocenzi,RetailStore,2,0.0,6.129359731121547e-07,0.0007211007520940588,0,2,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11281412001,Tigre Amico,RetailStore,1,0.0,0.00010488501073136554,0.0007211007520940588,0,1,8,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4278403789,Lucas apartment,Accommodation,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,55,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4282063589,Il Canestro,RetailStore,1,0.0,5.763330657293416e-08,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4283666390,Pasta Chef street food,FastFood,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,63,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4283669389,Pasta chef street food,FastFood,1,0.0,0.0005125801161773006,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1117042442,Arenula/Min. G. Giustizia,TrainStation,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,60,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11599863868,Colosseo,HistoricalLandmark,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,41,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4300599292,O bag store,RetailStore,1,0.0,0.002018132950838283,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_11638032638,daplace - Gran Torino Suites,Hostel,1,0.0,1.492572754581998e-07,0.0007211007520940588,0,1,9,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4716609605,Camillo B.,Restaurant,2,0.0,0.010862047110996828,0.0007211007520940588,0,2,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1001130475,Terrazza del Gianicolo,ViewingPoint,1,0.0,1.2521297967896178e-06,0.0007211007520940588,0,1,3,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1640364029,Trastevere/Min. Pubblica Istruzione,Amenity,2,1.1471507642891967e-05,4.496092949396446e-96,0.0007211007520940588,0,2,26,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12060135008,Marisa Padovan,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,84,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1880658304,Deutsche Bank,Bank,1,0.0,1.4034142095543903e-93,0.0007211007520940588,0,1,27,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5158388017,National Institute of Statistics,,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,81,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1754808362,Terme Caracalla/Porta Capena,SeatingArea,7,0.018913457034424187,0.0200418779214365,0.0007211007520940588,0,3,7,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12043395379,Hotel Del Corso,Hotel,2,0.017973314294405702,0.005881752374498291,0.0007211007520940588,0,2,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_1739836600,Circo Massimo (MB),Amenity,1,0.0,0.020055338773175994,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1692350301,Terme Caracalla/Porta Capena,Transportation,3,0.0028443603200550643,0.0009755536273539471,0.0007211007520940588,0,3,6,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_12045802237,Le Labo,RetailStore,1,0.0,0.020055338773175994,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5308330922,Gran Caffè Vittoriano,Cafe,1,0.0,0.0001821241195640694,0.0007211007520940588,0,1,16,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5314050376,Società Geografica Italiana,Service,3,0.0,0.008672995301194576,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12047159080,Olfattorio,RetailStore,1,0.0,1.4034142095543903e-93,0.0007211007520940588,0,1,27,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_534612091,Varco ZTL,Transition,4,0.0,0.01104703586899934,0.0007211007520940588,0,1,2,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5383710021,Fontana del Bottino,WaterFountain,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,74,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5107467923,Domus Severiana,HistoricalLandmark,3,0.0,1.2374947407255098e-69,0.0007211007520940588,0,1,24,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1673707987,Emo/Bragadin,SeatingArea,1,0.0,0.00045072881899987764,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5444797749,I Gruppo Centro Polizia Locale di Roma Capitale,PublicService,2,0.0,3.40711480288662e-07,0.0007211007520940588,0,1,5,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10873452588,Cottage,Bar,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,57,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5542854573,Bar Quadrani,Cafe,2,1.1471507642891967e-05,4.496092949396446e-96,0.0007211007520940588,0,2,28,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12112712302,Buccianti,FoodCourt,1,0.0,0.006852652368347722,0.0007211007520940588,0,1,7,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1671721483,Lgt Farnesina/Trilussa,SeatingArea,1,0.0,1.9396081853451629e-84,0.0007211007520940588,0,1,30,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5634631727,Letiel,RetailStore,1,0.0,7.874313297337176e-06,0.0007211007520940588,0,1,14,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10857746510,Carrefour Express,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,72,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10855611971,Snack Bar,Bar,1,0.0,1.1618445553355213e-80,0.0007211007520940588,0,1,17,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5645513337,Museo di Patologia del libro,Museum,1,0.0,2.7787382593057645e-96,0.0007211007520940588,0,1,26,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5735233116,Soprani,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,91,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12021202309,Nomination Italy Roma,RetailStore,1,0.0,1.2419449726619922e-05,0.0007211007520940588,0,1,4,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5020824223,Pan Bernardo,Restaurant,1,0.0,0.005431023555498414,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4716614609,Bottega Vittoria,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,54,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4817326321,Diesel,RetailStore,2,0.0,1.262889319320084e-87,0.0007211007520940588,0,2,46,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12005711035,Starbucks,RetailStore,9,0.0003607927813456516,0.1983157994223593,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12005711040,Bedetti,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,85,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2302343814,Esselunga,RetailStore,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,87,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4744488121,Wanted,Restaurant,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,36,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10928722977,Commissione elettorale circondariale di Roma,PublicService,1,0.0,0.005431023555498414,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10926033338,Farmacia Quirinale,Pharmacy,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,35,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2244954388,Escopazzo,NightlifeFacility,2,0.002105021652470676,0.00023121089019251023,0.0007211007520940588,0,2,10,Gateway
+http://w3id.org/trajecto/poi#pointOfInterest_4798313742,CONAD,RetailStore,1,0.0,0.005431023555498414,0.0007211007520940588,0,1,1,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2194837614,Rione Monti,Service,1,0.0,2.7979116148945537e-101,0.0007211007520940588,0,1,33,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4812119722,Pinsa 'M Po',Restaurant,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,70,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4817311425,Acqua di Parma,RetailStore,1,0.0,1.68710545939633e-05,0.0007211007520940588,0,1,9,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4841699600,Pronto Soccorso Ospedale Bambino Gesù,Hospital,1,0.0,0.020055338773175994,0.0007211007520940588,0,1,0,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_5019615324,Monte dei Paschi di Siena,Bank,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,50,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4847967810,Banco di Sardegna,Bank,1,0.0,8.091065734832922e-06,0.0007211007520940588,0,1,13,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4847968429,Taverna Urbana,Restaurant,1,0.0,0.0005165677159135277,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1201568109,Vascello,,1,0.0,4.988234024618016e-83,0.0007211007520940588,0,1,18,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2142007236,Varco ZTL,Transition,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,73,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2141800766,Varco ZTL,Service,1,0.0,0.00010628109564817892,0.0007211007520940588,0,1,6,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2126941293,Varco ZTL,Service,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,80,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_10875926276,Napoletano's,Cafe,2,0.0,1.262889319320084e-87,0.0007211007520940588,0,1,32,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_2012371794,Bibliothe,Dining,1,0.0,0.00022925472610717807,0.0007211007520940588,0,1,10,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_4929711022,Mosaico del Cristo con due schiavi,Artwork,1,0.0,5.549118335323823e-113,0.0007211007520940588,0,1,59,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_1995402509,Tezenis,RetailStore,3,0.0,1.2374947407255098e-69,0.0007211007520940588,0,1,25,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_500129236,La Bottega del Caffè,Cafe,1,0.0,0.014383662780718258,0.0007211007520940588,0,1,11,Origin
+http://w3id.org/trajecto/poi#pointOfInterest_12847502548,AA citypharm,Pharmacy,1,0.0,1.2521297967896178e-06,0.0007211007520940588,0,1,3,Origin

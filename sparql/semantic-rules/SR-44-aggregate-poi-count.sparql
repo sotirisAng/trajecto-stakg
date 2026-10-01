@@ -1,0 +1,21 @@
+# SR-44: Materialize distinct POI count per trajectory
+# Counts distinct POIs from meaningful interactions.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasPOICount ?cnt .
+}
+WHERE {
+    SELECT ?traj (COUNT(DISTINCT ?poi) AS ?cnt)
+    WHERE {
+        ?pos dul:isPartOf ?traj .
+        ?pos trajecto:hasInteraction ?int .
+        ?int a poi:MeaningfulInteraction .
+        ?int poi:interactsWith ?poi .
+    }
+    GROUP BY ?traj
+}

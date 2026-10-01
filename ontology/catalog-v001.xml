@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Resolves owl:imports to the local files, for Protégé and the OWL API. -->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="http://w3id.org/trajecto" uri="trajecto.ttl"/>
+    <uri name="http://w3id.org/trajecto/poi" uri="modules/poi.ttl"/>
+    <uri name="http://w3id.org/trajecto/spaces" uri="modules/spaces.ttl"/>
+    <uri name="http://w3id.org/trajecto/purpose" uri="modules/purpose.ttl"/>
+    <uri name="http://w3id.org/trajecto/purpose/skos" uri="modules/purpose-skos.ttl"/>
+    <uri name="http://w3id.org/trajecto/context" uri="modules/context.ttl"/>
+    <uri name="http://w3id.org/trajecto/patterns" uri="modules/patterns.ttl"/>
+    <uri name="http://w3id.org/trajecto/spatial" uri="modules/spatial.ttl"/>
+    <uri name="http://w3id.org/trajecto/temporal-dwell" uri="modules/temporal-dwell.ttl"/>
+    <uri name="http://w3id.org/trajecto/events" uri="modules/events.ttl"/>
+    <uri name="http://w3id.org/trajecto/scheduled" uri="modules/scheduled-events.ttl"/>
+    <uri name="http://w3id.org/trajecto/profiles" uri="modules/profiles.ttl"/>
+    <uri name="http://w3id.org/trajecto/user" uri="modules/user.ttl"/>
+    <uri name="http://www.datacron-project.eu/datAcron#" uri="imports/datacron.owl"/>
+    <uri name="http://www.w3.org/ns/ssn/" uri="imports/ssn.owl"/>
+    <uri name="http://www.w3.org/ns/sosa/" uri="imports/sosa.owl"/>
+</catalog>

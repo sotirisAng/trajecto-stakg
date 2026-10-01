@@ -1,0 +1,2154 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-05-09"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Konstantinos Kotis"
+  }, {
+    "@value" : "Sotirios Angelis"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-01"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-01"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Trajecto Purpose Concept Scheme"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "purposeskos"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://w3id.org/trajecto/purpose/skos#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "trajecto-purpose-skos"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos/1.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.1.0"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to staying at temporary lodging."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Hotel stays, hostel accommodation, vacation rentals"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HostelStay"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HotelStay"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TemporaryLodging"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Accommodation Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://schema.org/LodgingReservation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#AirportTransit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Transit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to using airport facilities for travel."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Airport Transit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ArtisticExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to experiencing artistic works or performances."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#ArtisticExperience"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Artistic Experience"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Banking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to banking and financial transactions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Banking"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#BeachVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting beaches for leisure."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Beach Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#BusStationTransit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Transit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to using bus station facilities for travel."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Bus Station Transit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#BusinessMeeting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to professional business meetings."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#BusinessMeeting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Business Meeting"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#CafeVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting a cafe for refreshments or socializing."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Cafe Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to commercial activities such as shopping or services."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Shopping, dining out, visiting a bank"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Commuting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to regular travel between home and work/education."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#Commuting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Commuting"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending cultural events, festivals, or performances."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#CulturalEventAttendance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Event Attendance"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to cultural activities and experiences."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Museum visits, attending performances, exploring heritage sites"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ArtisticExperience"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalTour"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#GalleryVisit"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HeritageExploration"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#MuseumVisit"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TheaterVisit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to dining at restaurants or food establishments."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#DiningExperience"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Dining Experience"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://schema.org/EatAction"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#DomesticActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to household or domestic activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#DomesticActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Domestic Activity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to learning and educational activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "School attendance, workshops, field studies, research activities"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalTour"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#FieldStudy"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#FormalLearning"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LibraryVisit"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Research"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkshopAttendance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Educational Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalTour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose that combines cultural experience with educational objectives."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#EducationalTour"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Educational Tour"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#EmergencyCare",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to seeking urgent or emergency medical attention."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Emergency Care"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending entertainment events (cinema, sports, etc.)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#EntertainmentAttendance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Entertainment Attendance"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to physical exercise or sports activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#ExerciseActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exercise Activity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://schema.org/ExerciseAction"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#FastFoodVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to quick dining at fast food establishments."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Fast Food Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#FieldStudy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to educational field studies or site visits."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#FieldStudy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Field Study"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#FieldWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to professional work conducted in the field."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#FieldWork"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Field Work"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#FormalLearning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to formal educational activities (classes, lectures)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#FormalLearning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Formal Learning"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#GalleryVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting art galleries or exhibitions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Gallery Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#GroceryShopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to purchasing food and household essentials."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Grocery Shopping"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#GymVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting a gymnasium for exercise."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Gym Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to healthcare and medical activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Doctor visits, pharmacy trips, hospital appointments"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EmergencyCare"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#MedicalAppointment"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#PharmacyVisit"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TherapySession"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Healthcare Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#HeritageExploration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to exploring heritage sites or historical locations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#HeritageExploration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Heritage Exploration"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting historical sites, monuments, or landmarks."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Historical Site Visit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HeritageExploration"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#HomeBound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to returning to or staying at home."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#HomeBound"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Home Bound"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#HostelStay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to staying at a hostel or budget accommodation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Hostel Stay"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#HotelStay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to staying at a hotel or similar accommodation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Hotel Stay"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#InformationSeeking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to seeking information or wayfinding assistance."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Information Seeking"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Tourism"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to casual leisure activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#LeisureActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Leisure Activity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#LibraryVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting a library for study or research."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Library Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to engaging with the local community near one's residence."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#LocalCommunityEngagement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Local Community Engagement"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#MedicalAppointment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to scheduled medical consultations or check-ups."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Medical Appointment"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#MuseumVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting museums or exhibitions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#MuseumVisit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Museum Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#NightlifeActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to nightlife entertainment (bars, clubs, night venues)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Nightlife Activity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#OfficeWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to working in an office environment."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#OfficeWork"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Office Work"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#OutdoorRecreation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to outdoor recreational activities (hiking, cycling, etc.)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Outdoor Recreation"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ParkVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting parks for relaxation or recreation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Park Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Parking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to parking a vehicle."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Parking"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#PharmacyVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to obtaining medication or pharmaceutical services."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Pharmacy Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#PostalService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to using postal or courier services."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Postal Service"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ProfessionalEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending professional events, conferences, or trade shows."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#ProfessionalEvent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Professional Event"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to leisure and recreational activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Park visits, beach trips, attending sporting events"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ExerciseActivity"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LeisureActivity"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#SocialGathering"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Tourism"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Recreational Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousCeremony",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending religious ceremonies (weddings, funerals, baptisms)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Religious Ceremony"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting sacred sites as part of a religious journey."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Religious Pilgrimage"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to religious or spiritual activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Attending church, mosque, temple, or spiritual retreat"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousCeremony"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#SpiritualRetreat"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Worship"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Religious Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Research",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to research activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#Research"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Research"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to residential and home-based activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#ResidentialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Returning home, local neighborhood activities"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DomesticActivity"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HomeBound"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Residential Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#RestaurantDining",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#DiningExperience"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to dining at a restaurant."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Restaurant Dining"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#RetailShopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to shopping at retail stores or malls."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Retail Shopping"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#SchoolAttendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#FormalLearning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending primary or secondary school."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "School Attendance"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#ServiceAccess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to accessing commercial services (banking, healthcare, etc.)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#ServiceAccess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Service Access"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Shopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to purchasing goods."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#Shopping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Shopping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://schema.org/BuyAction"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#SocialGathering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to meeting and socializing with others."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#SocialGathering"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Social Gathering"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#SpiritualRetreat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending spiritual or meditation retreats."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Spiritual Retreat"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#SportsAttendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending sports events as a spectator."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Sports Attendance"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TemporaryLodging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to staying at temporary rental accommodations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Temporary Lodging"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TheaterVisit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending theatrical performances."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Theater Visit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TherapySession",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending therapy or rehabilitation sessions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Therapy Session"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Tourism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to visiting places as a tourist."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#Tourism"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Tourism"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "https://schema.org/TouristTrip"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TrainStationTransit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Transit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to using train station facilities for travel."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Train Station Transit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-01-01"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "A SKOS concept scheme representing purposes of movement in trajectory data. Covers commercial, cultural, educational, recreational, residential, transportation, and work-related movement purposes."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Trajecto Purpose of Movement Concept Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "trajectory purpose scheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme of the purposes a trajectory can be assigned."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CommercialPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#CulturalPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Trajectory purpose scheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TransferBetweenModes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to transferring between different modes of transportation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#TransferBetweenModes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Transfer Between Modes"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Transit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose primarily focused on moving from one location to another."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#Transit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Transit"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose primarily related to transport and transit between locations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Commuting, transit transfers, wandering"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Commuting"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#InformationSeeking"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Parking"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransferBetweenModes"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Transit"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#Wandering"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Transportation Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#UniversityAttendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#FormalLearning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending university or higher education."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "University Attendance"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Wandering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TransportationPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose involving movement without a specific destination or goal."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#Wandering"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Wandering"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Movement purpose related to employment and professional activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Office work, field work, business meetings"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#BusinessMeeting"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#FieldWork"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#OfficeWork"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ProfessionalEvent"
+  }, {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Work Purpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#WorkPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to regular workplace routines and activities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#WorkplaceRoutine"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Workplace Routine"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#WorkshopAttendance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#EducationalPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending workshops, seminars, or training sessions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose#WorkshopAttendance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Workshop Attendance"
+  } ]
+}, {
+  "@id" : "http://w3id.org/trajecto/purpose/skos#Worship",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Purpose related to attending regular religious worship services."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Worship"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#related",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

@@ -1,0 +1,7 @@
+corpus,style,night,morning,weekday,weekend,night_share_pct,weekend_share_pct
+OSM Rome,CasualMovement,11,39,80,16,22.0,16.666666666666668
+OSM Rome,ExploratoryMovement,0,7,8,2,0.0,20.0
+OSM Rome,TargetedSegment,158,129,318,138,55.05226480836237,30.263157894736842
+GeoLife,CasualMovement,72,95,120,46,43.11377245508982,27.710843373493976
+GeoLife,ExploratoryMovement,140,115,169,57,54.90196078431372,25.221238938053098
+GeoLife,TargetedSegment,199,233,323,104,46.06481481481482,24.355971896955502

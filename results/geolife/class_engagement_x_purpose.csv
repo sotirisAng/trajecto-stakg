@@ -1,0 +1,4 @@
+a,AccommodationPurpose,CommercialPurpose,CulturalPurpose,EducationalPurpose,HealthcarePurpose,RecreationalPurpose,TransportationPurpose
+HighEngagement,0,115,56,5,1,28,18
+LowEngagement,16,311,62,8,6,17,181
+MediumEngagement,3,145,45,7,2,7,18

@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto Context Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto/context#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto/context#","name":"Trajecto Context Module", "headline":"This module extends the trajecto ontology with universal contextual dimensions applicable across different movement domains.", "dateReleased":"2025-05-09", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto Context Module</h1>
+<h2>Release: 2025-05-09</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/context/1.1.0">http://w3id.org/trajecto/context/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/context/1.0">http://w3id.org/trajecto/context/1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/context.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/context.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This module extends the trajecto ontology with universal contextual dimensions applicable across different movement domains.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/context.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>context</b></td><td>&lt;http://w3id.org/trajecto/context#&gt;</td></tr>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dul</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto-context: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AccessPolicy" title="http://w3id.org/trajecto/context#AccessPolicy">Access Policy</a>
+   </li>
+   <li>
+      <a href="#AccessibilityRequirement"
+         title="http://w3id.org/trajecto/context#AccessibilityRequirement">Accessibility Requirement</a>
+   </li>
+   <li>
+      <a href="#Afternoon" title="http://w3id.org/trajecto/context#Afternoon">Afternoon</a>
+   </li>
+   <li>
+      <a href="#AmbientCondition"
+         title="http://w3id.org/trajecto/context#AmbientCondition">Ambient Condition</a>
+   </li>
+   <li>
+      <a href="#Barrier" title="http://w3id.org/trajecto/context#Barrier">Barrier</a>
+   </li>
+   <li>
+      <a href="#Constraint" title="http://w3id.org/trajecto/context#Constraint">Constraint</a>
+   </li>
+   <li>
+      <a href="#Crowding" title="http://w3id.org/trajecto/context#Crowding">Crowding</a>
+   </li>
+   <li>
+      <a href="#Deadline" title="http://w3id.org/trajecto/context#Deadline">Deadline</a>
+   </li>
+   <li>
+      <a href="#EnvironmentalCondition"
+         title="http://w3id.org/trajecto/context#EnvironmentalCondition">Environmental Condition</a>
+   </li>
+   <li>
+      <a href="#EnvironmentalContext"
+         title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a>
+   </li>
+   <li>
+      <a href="#Evening" title="http://w3id.org/trajecto/context#Evening">Evening</a>
+   </li>
+   <li>
+      <a href="#EventPeriod" title="http://w3id.org/trajecto/context#EventPeriod">Event Period</a>
+   </li>
+   <li>
+      <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a>
+   </li>
+   <li>
+      <a href="#Fall" title="http://w3id.org/trajecto/context#Fall">Fall</a>
+   </li>
+   <li>
+      <a href="#Family" title="http://w3id.org/trajecto/context#Family">Family</a>
+   </li>
+   <li>
+      <a href="#Forced" title="http://w3id.org/trajecto/context#Forced">Forced</a>
+   </li>
+   <li>
+      <a href="#Habitual" title="http://w3id.org/trajecto/context#Habitual">Habitual</a>
+   </li>
+   <li>
+      <a href="#HolidayPeriod" title="http://w3id.org/trajecto/context#HolidayPeriod">Holiday Period</a>
+   </li>
+   <li>
+      <a href="#Individual" title="http://w3id.org/trajecto/context#Individual">Individual</a>
+   </li>
+   <li>
+      <a href="#IndoorEnvironment"
+         title="http://w3id.org/trajecto/context#IndoorEnvironment">Indoor Environment</a>
+   </li>
+   <li>
+      <a href="#LargeGroup" title="http://w3id.org/trajecto/context#LargeGroup">Large Group</a>
+   </li>
+   <li>
+      <a href="#MobilityAssistance"
+         title="http://w3id.org/trajecto/context#MobilityAssistance">Mobility Assistance</a>
+   </li>
+   <li>
+      <a href="#MobilityConcern" title="http://w3id.org/trajecto/context#MobilityConcern">Mobility Concern</a>
+   </li>
+   <li>
+      <a href="#Morning" title="http://w3id.org/trajecto/context#Morning">Morning</a>
+   </li>
+   <li>
+      <a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a>
+   </li>
+   <li>
+      <a href="#Night" title="http://w3id.org/trajecto/context#Night">Night</a>
+   </li>
+   <li>
+      <a href="#OrganizedTour" title="http://w3id.org/trajecto/context#OrganizedTour">Organized Tour</a>
+   </li>
+   <li>
+      <a href="#OutdoorEnvironment"
+         title="http://w3id.org/trajecto/context#OutdoorEnvironment">Outdoor Environment</a>
+   </li>
+   <li>
+      <a href="#Pair" title="http://w3id.org/trajecto/context#Pair">Pair</a>
+   </li>
+   <li>
+      <a href="#Weekpart" title="http://w3id.org/trajecto/context#Weekpart">Part of the week</a>
+   </li>
+   <li>
+      <a href="#PersonalRecommendation"
+         title="http://w3id.org/trajecto/context#PersonalRecommendation">Personal Recommendation</a>
+   </li>
+   <li>
+      <a href="#PhysicalConstraint"
+         title="http://w3id.org/trajecto/context#PhysicalConstraint">Physical Constraint</a>
+   </li>
+   <li>
+      <a href="#Planned" title="http://w3id.org/trajecto/context#Planned">Planned</a>
+   </li>
+   <li>
+      <a href="#Policy" title="http://w3id.org/trajecto/context#Policy">Policy</a>
+   </li>
+   <li>
+      <a href="#Recommendation" title="http://w3id.org/trajecto/context#Recommendation">Recommendation</a>
+   </li>
+   <li>
+      <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a>
+   </li>
+   <li>
+      <a href="#RuralSetting" title="http://w3id.org/trajecto/context#RuralSetting">Rural Setting</a>
+   </li>
+   <li>
+      <a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a>
+   </li>
+   <li>
+      <a href="#SmallGroup" title="http://w3id.org/trajecto/context#SmallGroup">Small Group</a>
+   </li>
+   <li>
+      <a href="#SocialAttraction"
+         title="http://w3id.org/trajecto/context#SocialAttraction">Social Attraction</a>
+   </li>
+   <li>
+      <a href="#SocialConstraint"
+         title="http://w3id.org/trajecto/context#SocialConstraint">Social Constraint</a>
+   </li>
+   <li>
+      <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a>
+   </li>
+   <li>
+      <a href="#SocialNorm" title="http://w3id.org/trajecto/context#SocialNorm">Social Norm</a>
+   </li>
+   <li>
+      <a href="#SocialPresence" title="http://w3id.org/trajecto/context#SocialPresence">Social Presence</a>
+   </li>
+   <li>
+      <a href="#SpecialEvent" title="http://w3id.org/trajecto/context#SpecialEvent">Special Event</a>
+   </li>
+   <li>
+      <a href="#SpecialPeriod" title="http://w3id.org/trajecto/context#SpecialPeriod">Special Period</a>
+   </li>
+   <li>
+      <a href="#Spontaneous" title="http://w3id.org/trajecto/context#Spontaneous">Spontaneous</a>
+   </li>
+   <li>
+      <a href="#Spring" title="http://w3id.org/trajecto/context#Spring">Spring</a>
+   </li>
+   <li>
+      <a href="#Summer" title="http://w3id.org/trajecto/context#Summer">Summer</a>
+   </li>
+   <li>
+      <a href="#SystemRecommendation"
+         title="http://w3id.org/trajecto/context#SystemRecommendation">System Recommendation</a>
+   </li>
+   <li>
+      <a href="#TemporalConstraint"
+         title="http://w3id.org/trajecto/context#TemporalConstraint">Temporal Constraint</a>
+   </li>
+   <li>
+      <a href="#TemporalContext"
+         title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a>
+   </li>
+   <li>
+      <a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a>
+   </li>
+   <li>
+      <a href="#TimePolicy" title="http://w3id.org/trajecto/context#TimePolicy">Time Policy</a>
+   </li>
+   <li>
+      <a href="#TransitionalSpace"
+         title="http://w3id.org/trajecto/context#TransitionalSpace">Transitional Space</a>
+   </li>
+   <li>
+      <a href="#UrbanSetting" title="http://w3id.org/trajecto/context#UrbanSetting">Urban Setting</a>
+   </li>
+   <li>
+      <a href="#WeatherCondition"
+         title="http://w3id.org/trajecto/context#WeatherCondition">Weather Condition</a>
+   </li>
+   <li>
+      <a href="#Weekday" title="http://w3id.org/trajecto/context#Weekday">Weekday</a>
+   </li>
+   <li>
+      <a href="#Weekend" title="http://w3id.org/trajecto/context#Weekend">Weekend</a>
+   </li>
+   <li>
+      <a href="#WheelchairAccessibility"
+         title="http://w3id.org/trajecto/context#WheelchairAccessibility">Wheelchair Accessibility</a>
+   </li>
+   <li>
+      <a href="#Winter" title="http://w3id.org/trajecto/context#Winter">Winter</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasConstraint" title="http://w3id.org/trajecto/context#hasConstraint">has constraint</a>
+   </li>
+   <li>
+      <a href="#hasEnvironmentalContext"
+         title="http://w3id.org/trajecto/context#hasEnvironmentalContext">has environmental context</a>
+   </li>
+   <li>
+      <a href="#hasExternalFactor"
+         title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a>
+   </li>
+   <li>
+      <a href="#hasMovementContext"
+         title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a>
+   </li>
+   <li>
+      <a href="#hasRoutineContext"
+         title="http://w3id.org/trajecto/context#hasRoutineContext">has routine context</a>
+   </li>
+   <li>
+      <a href="#hasSocialContext"
+         title="http://w3id.org/trajecto/context#hasSocialContext">has social context</a>
+   </li>
+   <li>
+      <a href="#hasTemporalContext"
+         title="http://w3id.org/trajecto/context#hasTemporalContext">has temporal context</a>
+   </li>
+   <li>
+      <a href="#influencedByCondition"
+         title="http://w3id.org/trajecto/context#influencedByCondition">influenced by condition</a>
+   </li>
+   <li>
+      <a href="#influencedByEvent"
+         title="http://w3id.org/trajecto/context#influencedByEvent">influenced by event</a>
+   </li>
+   <li>
+      <a href="#influencedByPolicy"
+         title="http://w3id.org/trajecto/context#influencedByPolicy">influenced by policy</a>
+   </li>
+   <li>
+      <a href="#influencedByRecommendation"
+         title="http://w3id.org/trajecto/context#influencedByRecommendation">influenced by recommendation</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasFrequency" title="http://w3id.org/trajecto/context#hasFrequency">has frequency</a>
+   </li>
+   <li>
+      <a href="#hasPaceVariation"
+         title="http://w3id.org/trajecto/context#hasPaceVariation">has pace variation</a>
+   </li>
+   <li>
+      <a href="#hasPathComplexity"
+         title="http://w3id.org/trajecto/context#hasPathComplexity">has path complexity</a>
+   </li>
+   <li>
+      <a href="#hasPredictability"
+         title="http://w3id.org/trajecto/context#hasPredictability">has predictability</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto-context: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module extends the trajecto ontology with universal contextual dimensions applicable across different movement domains.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto-context classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto-context.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AccessPolicy" title="http://w3id.org/trajecto/context#AccessPolicy">Access Policy</a></li>
+  <li><a href="#AccessibilityRequirement" title="http://w3id.org/trajecto/context#AccessibilityRequirement">Accessibility Requirement</a></li>
+  <li><a href="#Afternoon" title="http://w3id.org/trajecto/context#Afternoon">Afternoon</a></li>
+  <li><a href="#AmbientCondition" title="http://w3id.org/trajecto/context#AmbientCondition">Ambient Condition</a></li>
+  <li><a href="#Barrier" title="http://w3id.org/trajecto/context#Barrier">Barrier</a></li>
+  <li><a href="#Constraint" title="http://w3id.org/trajecto/context#Constraint">Constraint</a></li>
+  <li><a href="#Crowding" title="http://w3id.org/trajecto/context#Crowding">Crowding</a></li>
+  <li><a href="#Deadline" title="http://w3id.org/trajecto/context#Deadline">Deadline</a></li>
+  <li><a href="#EnvironmentalCondition" title="http://w3id.org/trajecto/context#EnvironmentalCondition">Environmental Condition</a></li>
+  <li><a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a></li>
+  <li><a href="#Evening" title="http://w3id.org/trajecto/context#Evening">Evening</a></li>
+  <li><a href="#EventPeriod" title="http://w3id.org/trajecto/context#EventPeriod">Event Period</a></li>
+  <li><a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a></li>
+  <li><a href="#Fall" title="http://w3id.org/trajecto/context#Fall">Fall</a></li>
+  <li><a href="#Family" title="http://w3id.org/trajecto/context#Family">Family</a></li>
+  <li><a href="#Forced" title="http://w3id.org/trajecto/context#Forced">Forced</a></li>
+  <li><a href="#Habitual" title="http://w3id.org/trajecto/context#Habitual">Habitual</a></li>
+  <li><a href="#HolidayPeriod" title="http://w3id.org/trajecto/context#HolidayPeriod">Holiday Period</a></li>
+  <li><a href="#Individual" title="http://w3id.org/trajecto/context#Individual">Individual</a></li>
+  <li><a href="#IndoorEnvironment" title="http://w3id.org/trajecto/context#IndoorEnvironment">Indoor Environment</a></li>
+  <li><a href="#LargeGroup" title="http://w3id.org/trajecto/context#LargeGroup">Large Group</a></li>
+  <li><a href="#MobilityAssistance" title="http://w3id.org/trajecto/context#MobilityAssistance">Mobility Assistance</a></li>
+  <li><a href="#MobilityConcern" title="http://w3id.org/trajecto/context#MobilityConcern">Mobility Concern</a></li>
+  <li><a href="#Morning" title="http://w3id.org/trajecto/context#Morning">Morning</a></li>
+  <li><a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a></li>
+  <li><a href="#Night" title="http://w3id.org/trajecto/context#Night">Night</a></li>
+  <li><a href="#OrganizedTour" title="http://w3id.org/trajecto/context#OrganizedTour">Organized Tour</a></li>
+  <li><a href="#OutdoorEnvironment" title="http://w3id.org/trajecto/context#OutdoorEnvironment">Outdoor Environment</a></li>
+  <li><a href="#Pair" title="http://w3id.org/trajecto/context#Pair">Pair</a></li>
+  <li><a href="#Weekpart" title="http://w3id.org/trajecto/context#Weekpart">Part of the week</a></li>
+  <li><a href="#PersonalRecommendation" title="http://w3id.org/trajecto/context#PersonalRecommendation">Personal Recommendation</a></li>
+  <li><a href="#PhysicalConstraint" title="http://w3id.org/trajecto/context#PhysicalConstraint">Physical Constraint</a></li>
+  <li><a href="#Planned" title="http://w3id.org/trajecto/context#Planned">Planned</a></li>
+  <li><a href="#Policy" title="http://w3id.org/trajecto/context#Policy">Policy</a></li>
+  <li><a href="#Recommendation" title="http://w3id.org/trajecto/context#Recommendation">Recommendation</a></li>
+  <li><a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a></li>
+  <li><a href="#RuralSetting" title="http://w3id.org/trajecto/context#RuralSetting">Rural Setting</a></li>
+  <li><a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a></li>
+  <li><a href="#SmallGroup" title="http://w3id.org/trajecto/context#SmallGroup">Small Group</a></li>
+  <li><a href="#SocialAttraction" title="http://w3id.org/trajecto/context#SocialAttraction">Social Attraction</a></li>
+  <li><a href="#SocialConstraint" title="http://w3id.org/trajecto/context#SocialConstraint">Social Constraint</a></li>
+  <li><a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a></li>
+  <li><a href="#SocialNorm" title="http://w3id.org/trajecto/context#SocialNorm">Social Norm</a></li>
+  <li><a href="#SocialPresence" title="http://w3id.org/trajecto/context#SocialPresence">Social Presence</a></li>
+  <li><a href="#SpecialEvent" title="http://w3id.org/trajecto/context#SpecialEvent">Special Event</a></li>
+  <li><a href="#SpecialPeriod" title="http://w3id.org/trajecto/context#SpecialPeriod">Special Period</a></li>
+  <li><a href="#Spontaneous" title="http://w3id.org/trajecto/context#Spontaneous">Spontaneous</a></li>
+  <li><a href="#Spring" title="http://w3id.org/trajecto/context#Spring">Spring</a></li>
+  <li><a href="#Summer" title="http://w3id.org/trajecto/context#Summer">Summer</a></li>
+  <li><a href="#SystemRecommendation" title="http://w3id.org/trajecto/context#SystemRecommendation">System Recommendation</a></li>
+  <li><a href="#TemporalConstraint" title="http://w3id.org/trajecto/context#TemporalConstraint">Temporal Constraint</a></li>
+  <li><a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a></li>
+  <li><a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a></li>
+  <li><a href="#TimePolicy" title="http://w3id.org/trajecto/context#TimePolicy">Time Policy</a></li>
+  <li><a href="#TransitionalSpace" title="http://w3id.org/trajecto/context#TransitionalSpace">Transitional Space</a></li>
+  <li><a href="#UrbanSetting" title="http://w3id.org/trajecto/context#UrbanSetting">Urban Setting</a></li>
+  <li><a href="#WeatherCondition" title="http://w3id.org/trajecto/context#WeatherCondition">Weather Condition</a></li>
+  <li><a href="#Weekday" title="http://w3id.org/trajecto/context#Weekday">Weekday</a></li>
+  <li><a href="#Weekend" title="http://w3id.org/trajecto/context#Weekend">Weekend</a></li>
+  <li><a href="#WheelchairAccessibility" title="http://w3id.org/trajecto/context#WheelchairAccessibility">Wheelchair Accessibility</a></li>
+  <li><a href="#Winter" title="http://w3id.org/trajecto/context#Winter">Winter</a></li>
+ </ul>
+ <div class="entity" id="AccessPolicy">
+  <h3>Access Policy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#AccessPolicy</p>
+  <div class="comment">
+   <span class="markdown">Policies regarding access to spaces that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Policy" title="http://w3id.org/trajecto/context#Policy">Policy</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AccessibilityRequirement">
+  <h3>Accessibility Requirement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#AccessibilityRequirement</p>
+  <div class="comment">
+   <span class="markdown">Requirements for accessibility that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MobilityConcern" title="http://w3id.org/trajecto/context#MobilityConcern">Mobility Concern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#WheelchairAccessibility" title="http://w3id.org/trajecto/context#WheelchairAccessibility">Wheelchair Accessibility</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Afternoon">
+  <h3>Afternoon<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Afternoon</p>
+  <div class="comment">
+   <span class="markdown">Afternoon time period.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AmbientCondition">
+  <h3>Ambient Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#AmbientCondition</p>
+  <div class="comment">
+   <span class="markdown">Ambient conditions (lighting, noise, temperature) that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalCondition" title="http://w3id.org/trajecto/context#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Barrier">
+  <h3>Barrier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Barrier</p>
+  <div class="comment">
+   <span class="markdown">Physical barriers that prevent or restrict movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PhysicalConstraint" title="http://w3id.org/trajecto/context#PhysicalConstraint">Physical Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Constraint">
+  <h3>Constraint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Constraint</p>
+  <div class="comment">
+   <span class="markdown">Limitations or restrictions that affect movement patterns.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A limiting factor that restricts or influences the possible movement patterns within a trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#PhysicalConstraint" title="http://w3id.org/trajecto/context#PhysicalConstraint">Physical Constraint</a> <sup class="type-c" title="class">c</sup>, <a href="#SocialConstraint" title="http://w3id.org/trajecto/context#SocialConstraint">Social Constraint</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalConstraint" title="http://w3id.org/trajecto/context#TemporalConstraint">Temporal Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasConstraint" title="http://w3id.org/trajecto/context#hasConstraint">has constraint</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Crowding">
+  <h3>Crowding<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Crowding</p>
+  <div class="comment">
+   <span class="markdown">High density of people that influences movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialPresence" title="http://w3id.org/trajecto/context#SocialPresence">Social Presence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Deadline">
+  <h3>Deadline<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Deadline</p>
+  <div class="comment">
+   <span class="markdown">Time deadlines that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalConstraint" title="http://w3id.org/trajecto/context#TemporalConstraint">Temporal Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnvironmentalCondition">
+  <h3>Environmental Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#EnvironmentalCondition</p>
+  <div class="comment">
+   <span class="markdown">Environmental conditions that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AmbientCondition" title="http://w3id.org/trajecto/context#AmbientCondition">Ambient Condition</a> <sup class="type-c" title="class">c</sup>, <a href="#WeatherCondition" title="http://w3id.org/trajecto/context#WeatherCondition">Weather Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#influencedByCondition" title="http://w3id.org/trajecto/context#influencedByCondition">influenced by condition</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnvironmentalContext">
+  <h3>Environmental Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#EnvironmentalContext</p>
+  <div class="comment">
+   <span class="markdown">The environmental aspects that influence or characterize movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IndoorEnvironment" title="http://w3id.org/trajecto/context#IndoorEnvironment">Indoor Environment</a> <sup class="type-c" title="class">c</sup>, <a href="#OutdoorEnvironment" title="http://w3id.org/trajecto/context#OutdoorEnvironment">Outdoor Environment</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralSetting" title="http://w3id.org/trajecto/context#RuralSetting">Rural Setting</a> <sup class="type-c" title="class">c</sup>, <a href="#TransitionalSpace" title="http://w3id.org/trajecto/context#TransitionalSpace">Transitional Space</a> <sup class="type-c" title="class">c</sup>, <a href="#UrbanSetting" title="http://w3id.org/trajecto/context#UrbanSetting">Urban Setting</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEnvironmentalContext" title="http://w3id.org/trajecto/context#hasEnvironmentalContext">has environmental context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Evening">
+  <h3>Evening<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Evening</p>
+  <div class="comment">
+   <span class="markdown">Evening time period.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EventPeriod">
+  <h3>Event Period<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#EventPeriod</p>
+  <div class="comment">
+   <span class="markdown">Periods during special events that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpecialPeriod" title="http://w3id.org/trajecto/context#SpecialPeriod">Special Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExternalFactor">
+  <h3>External Factor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#ExternalFactor</p>
+  <div class="comment">
+   <span class="markdown">External elements that influence movement patterns.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Any external circumstance, condition, or situation that impacts or influences movement behavior.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalCondition" title="http://w3id.org/trajecto/context#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>, <a href="#Policy" title="http://w3id.org/trajecto/context#Policy">Policy</a> <sup class="type-c" title="class">c</sup>, <a href="#Recommendation" title="http://w3id.org/trajecto/context#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>, <a href="#SocialPresence" title="http://w3id.org/trajecto/context#SocialPresence">Social Presence</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialEvent" title="http://w3id.org/trajecto/context#SpecialEvent">Special Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasExternalFactor" title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Fall">
+  <h3>Fall<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Fall</p>
+  <div class="comment">
+   <span class="markdown">Fall/Autumn season.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Family">
+  <h3>Family<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Family</p>
+  <div class="comment">
+   <span class="markdown">Movement by a family group.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Forced">
+  <h3>Forced<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Forced</p>
+  <div class="comment">
+   <span class="markdown">Movement necessitated by emergency or obligation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Habitual">
+  <h3>Habitual<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Habitual</p>
+  <div class="comment">
+   <span class="markdown">Regular, habitual movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HolidayPeriod">
+  <h3>Holiday Period<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#HolidayPeriod</p>
+  <div class="comment">
+   <span class="markdown">Holiday periods with distinctive movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpecialPeriod" title="http://w3id.org/trajecto/context#SpecialPeriod">Special Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Individual">
+  <h3>Individual<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Individual</p>
+  <div class="comment">
+   <span class="markdown">Movement by a single individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IndoorEnvironment">
+  <h3>Indoor Environment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#IndoorEnvironment</p>
+  <div class="comment">
+   <span class="markdown">Movement within indoor environments.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LargeGroup">
+  <h3>Large Group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#LargeGroup</p>
+  <div class="comment">
+   <span class="markdown">Movement by a large group (more than 8 people).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MobilityAssistance">
+  <h3>Mobility Assistance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#MobilityAssistance</p>
+  <div class="comment">
+   <span class="markdown">Assistance provided for mobility that affects movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MobilityConcern" title="http://w3id.org/trajecto/context#MobilityConcern">Mobility Concern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MobilityConcern">
+  <h3>Mobility Concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#MobilityConcern</p>
+  <div class="comment">
+   <span class="markdown">Special considerations related to mobility that affect movement patterns.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A special consideration or requirement related to the physical ability to move that influences trajectory patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AccessibilityRequirement" title="http://w3id.org/trajecto/context#AccessibilityRequirement">Accessibility Requirement</a> <sup class="type-c" title="class">c</sup>, <a href="#MobilityAssistance" title="http://w3id.org/trajecto/context#MobilityAssistance">Mobility Assistance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Morning">
+  <h3>Morning<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Morning</p>
+  <div class="comment">
+   <span class="markdown">Morning time period.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MovementContext">
+  <h3>Movement Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#MovementContext</p>
+  <div class="comment">
+   <span class="markdown">The contextual dimensions that influence or characterize movement.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The set of circumstances, conditions, or situations that influence or characterize the nature of movement in a trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>, <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a> <sup class="type-c" title="class">c</sup>, <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasMovementContext" title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Night">
+  <h3>Night<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Night</p>
+  <div class="comment">
+   <span class="markdown">Night time period.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OrganizedTour">
+  <h3>Organized Tour<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#OrganizedTour</p>
+  <div class="comment">
+   <span class="markdown">Movement as part of an organized tour group.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OutdoorEnvironment">
+  <h3>Outdoor Environment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#OutdoorEnvironment</p>
+  <div class="comment">
+   <span class="markdown">Movement within outdoor environments.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Pair">
+  <h3>Pair<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Pair</p>
+  <div class="comment">
+   <span class="markdown">Movement by a pair of individuals.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Weekpart">
+  <h3>Part of the week<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Weekpart</p>
+  <div class="comment">
+   <span class="markdown">Distinction between weekday and weekend movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Weekday" title="http://w3id.org/trajecto/context#Weekday">Weekday</a> <sup class="type-c" title="class">c</sup>, <a href="#Weekend" title="http://w3id.org/trajecto/context#Weekend">Weekend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PersonalRecommendation">
+  <h3>Personal Recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#PersonalRecommendation</p>
+  <div class="comment">
+   <span class="markdown">Recommendations from other people that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Recommendation" title="http://w3id.org/trajecto/context#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PhysicalConstraint">
+  <h3>Physical Constraint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#PhysicalConstraint</p>
+  <div class="comment">
+   <span class="markdown">Physical barriers or limitations that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Constraint" title="http://w3id.org/trajecto/context#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Barrier" title="http://w3id.org/trajecto/context#Barrier">Barrier</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Planned">
+  <h3>Planned<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Planned</p>
+  <div class="comment">
+   <span class="markdown">Deliberately planned, non-routine movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Policy">
+  <h3>Policy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Policy</p>
+  <div class="comment">
+   <span class="markdown">Policies or regulations that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AccessPolicy" title="http://w3id.org/trajecto/context#AccessPolicy">Access Policy</a> <sup class="type-c" title="class">c</sup>, <a href="#TimePolicy" title="http://w3id.org/trajecto/context#TimePolicy">Time Policy</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#influencedByPolicy" title="http://w3id.org/trajecto/context#influencedByPolicy">influenced by policy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Recommendation">
+  <h3>Recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Recommendation</p>
+  <div class="comment">
+   <span class="markdown">Recommendations that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#PersonalRecommendation" title="http://w3id.org/trajecto/context#PersonalRecommendation">Personal Recommendation</a> <sup class="type-c" title="class">c</sup>, <a href="#SystemRecommendation" title="http://w3id.org/trajecto/context#SystemRecommendation">System Recommendation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#influencedByRecommendation" title="http://w3id.org/trajecto/context#influencedByRecommendation">influenced by recommendation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RoutineContext">
+  <h3>Routine Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#RoutineContext</p>
+  <div class="comment">
+   <span class="markdown">The routine aspects that influence or characterize movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Forced" title="http://w3id.org/trajecto/context#Forced">Forced</a> <sup class="type-c" title="class">c</sup>, <a href="#Habitual" title="http://w3id.org/trajecto/context#Habitual">Habitual</a> <sup class="type-c" title="class">c</sup>, <a href="#Planned" title="http://w3id.org/trajecto/context#Planned">Planned</a> <sup class="type-c" title="class">c</sup>, <a href="#Spontaneous" title="http://w3id.org/trajecto/context#Spontaneous">Spontaneous</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRoutineContext" title="http://w3id.org/trajecto/context#hasRoutineContext">has routine context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RuralSetting">
+  <h3>Rural Setting<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#RuralSetting</p>
+  <div class="comment">
+   <span class="markdown">Movement within rural environments.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Season">
+  <h3>Season<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Season</p>
+  <div class="comment">
+   <span class="markdown">The season during which movement occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Fall" title="http://w3id.org/trajecto/context#Fall">Fall</a> <sup class="type-c" title="class">c</sup>, <a href="#Spring" title="http://w3id.org/trajecto/context#Spring">Spring</a> <sup class="type-c" title="class">c</sup>, <a href="#Summer" title="http://w3id.org/trajecto/context#Summer">Summer</a> <sup class="type-c" title="class">c</sup>, <a href="#Winter" title="http://w3id.org/trajecto/context#Winter">Winter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SmallGroup">
+  <h3>Small Group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SmallGroup</p>
+  <div class="comment">
+   <span class="markdown">Movement by a small group (3-8 people).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialAttraction">
+  <h3>Social Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SocialAttraction</p>
+  <div class="comment">
+   <span class="markdown">Social gathering points that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialPresence" title="http://w3id.org/trajecto/context#SocialPresence">Social Presence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialConstraint">
+  <h3>Social Constraint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SocialConstraint</p>
+  <div class="comment">
+   <span class="markdown">Social limitations or norms that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Constraint" title="http://w3id.org/trajecto/context#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#SocialNorm" title="http://w3id.org/trajecto/context#SocialNorm">Social Norm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialContext">
+  <h3>Social Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SocialContext</p>
+  <div class="comment">
+   <span class="markdown">The social aspects that influence or characterize movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Family" title="http://w3id.org/trajecto/context#Family">Family</a> <sup class="type-c" title="class">c</sup>, <a href="#Individual" title="http://w3id.org/trajecto/context#Individual">Individual</a> <sup class="type-c" title="class">c</sup>, <a href="#LargeGroup" title="http://w3id.org/trajecto/context#LargeGroup">Large Group</a> <sup class="type-c" title="class">c</sup>, <a href="#OrganizedTour" title="http://w3id.org/trajecto/context#OrganizedTour">Organized Tour</a> <sup class="type-c" title="class">c</sup>, <a href="#Pair" title="http://w3id.org/trajecto/context#Pair">Pair</a> <sup class="type-c" title="class">c</sup>, <a href="#SmallGroup" title="http://w3id.org/trajecto/context#SmallGroup">Small Group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSocialContext" title="http://w3id.org/trajecto/context#hasSocialContext">has social context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialNorm">
+  <h3>Social Norm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SocialNorm</p>
+  <div class="comment">
+   <span class="markdown">Social expectations or norms that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SocialConstraint" title="http://w3id.org/trajecto/context#SocialConstraint">Social Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialPresence">
+  <h3>Social Presence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SocialPresence</p>
+  <div class="comment">
+   <span class="markdown">Presence of other people that influences movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Crowding" title="http://w3id.org/trajecto/context#Crowding">Crowding</a> <sup class="type-c" title="class">c</sup>, <a href="#SocialAttraction" title="http://w3id.org/trajecto/context#SocialAttraction">Social Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpecialEvent">
+  <h3>Special Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SpecialEvent</p>
+  <div class="comment">
+   <span class="markdown">Special events that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpecialPeriod">
+  <h3>Special Period<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SpecialPeriod</p>
+  <div class="comment">
+   <span class="markdown">Special temporal periods that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EventPeriod" title="http://w3id.org/trajecto/context#EventPeriod">Event Period</a> <sup class="type-c" title="class">c</sup>, <a href="#HolidayPeriod" title="http://w3id.org/trajecto/context#HolidayPeriod">Holiday Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Spontaneous">
+  <h3>Spontaneous<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Spontaneous</p>
+  <div class="comment">
+   <span class="markdown">Unplanned, spontaneous movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Spring">
+  <h3>Spring<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Spring</p>
+  <div class="comment">
+   <span class="markdown">Spring season.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Summer">
+  <h3>Summer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Summer</p>
+  <div class="comment">
+   <span class="markdown">Summer season.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SystemRecommendation">
+  <h3>System Recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#SystemRecommendation</p>
+  <div class="comment">
+   <span class="markdown">Recommendations from automated systems that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Recommendation" title="http://w3id.org/trajecto/context#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TemporalConstraint">
+  <h3>Temporal Constraint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#TemporalConstraint</p>
+  <div class="comment">
+   <span class="markdown">Time-related limitations that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Constraint" title="http://w3id.org/trajecto/context#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Deadline" title="http://w3id.org/trajecto/context#Deadline">Deadline</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TemporalContext">
+  <h3>Temporal Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#TemporalContext</p>
+  <div class="comment">
+   <span class="markdown">The temporal aspects that influence or characterize movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Weekpart" title="http://w3id.org/trajecto/context#Weekpart">Part of the week</a> <sup class="type-c" title="class">c</sup>, <a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a> <sup class="type-c" title="class">c</sup>, <a href="#SpecialPeriod" title="http://w3id.org/trajecto/context#SpecialPeriod">Special Period</a> <sup class="type-c" title="class">c</sup>, <a href="#TimeOfDay" title="http://w3id.org/trajecto/context#TimeOfDay">Time of Day</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTemporalContext" title="http://w3id.org/trajecto/context#hasTemporalContext">has temporal context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TimeOfDay">
+  <h3>Time of Day<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#TimeOfDay</p>
+  <div class="comment">
+   <span class="markdown">The specific time of day when movement occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Afternoon" title="http://w3id.org/trajecto/context#Afternoon">Afternoon</a> <sup class="type-c" title="class">c</sup>, <a href="#Evening" title="http://w3id.org/trajecto/context#Evening">Evening</a> <sup class="type-c" title="class">c</sup>, <a href="#Morning" title="http://w3id.org/trajecto/context#Morning">Morning</a> <sup class="type-c" title="class">c</sup>, <a href="#Night" title="http://w3id.org/trajecto/context#Night">Night</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TimePolicy">
+  <h3>Time Policy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#TimePolicy</p>
+  <div class="comment">
+   <span class="markdown">Policies regarding timing (opening hours, etc.) that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Policy" title="http://w3id.org/trajecto/context#Policy">Policy</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransitionalSpace">
+  <h3>Transitional Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#TransitionalSpace</p>
+  <div class="comment">
+   <span class="markdown">Movement through transitional spaces between different environments.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UrbanSetting">
+  <h3>Urban Setting<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#UrbanSetting</p>
+  <div class="comment">
+   <span class="markdown">Movement within urban environments.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WeatherCondition">
+  <h3>Weather Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#WeatherCondition</p>
+  <div class="comment">
+   <span class="markdown">Weather conditions that influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EnvironmentalCondition" title="http://w3id.org/trajecto/context#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Weekday">
+  <h3>Weekday<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Weekday</p>
+  <div class="comment">
+   <span class="markdown">Movement occurring on a weekday (Monday-Friday).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Weekpart" title="http://w3id.org/trajecto/context#Weekpart">Part of the week</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Weekend">
+  <h3>Weekend<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Weekend</p>
+  <div class="comment">
+   <span class="markdown">Movement occurring on a weekend (Saturday-Sunday).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Weekpart" title="http://w3id.org/trajecto/context#Weekpart">Part of the week</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WheelchairAccessibility">
+  <h3>Wheelchair Accessibility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#WheelchairAccessibility</p>
+  <div class="comment">
+   <span class="markdown">Requirements for wheelchair accessibility that affect movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AccessibilityRequirement" title="http://w3id.org/trajecto/context#AccessibilityRequirement">Accessibility Requirement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Winter">
+  <h3>Winter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#Winter</p>
+  <div class="comment">
+   <span class="markdown">Winter season.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Season" title="http://w3id.org/trajecto/context#Season">Season</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasConstraint" title="http://w3id.org/trajecto/context#hasConstraint">has constraint</a></li>
+  <li><a href="#hasEnvironmentalContext" title="http://w3id.org/trajecto/context#hasEnvironmentalContext">has environmental context</a></li>
+  <li><a href="#hasExternalFactor" title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a></li>
+  <li><a href="#hasMovementContext" title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a></li>
+  <li><a href="#hasRoutineContext" title="http://w3id.org/trajecto/context#hasRoutineContext">has routine context</a></li>
+  <li><a href="#hasSocialContext" title="http://w3id.org/trajecto/context#hasSocialContext">has social context</a></li>
+  <li><a href="#hasTemporalContext" title="http://w3id.org/trajecto/context#hasTemporalContext">has temporal context</a></li>
+  <li><a href="#influencedByCondition" title="http://w3id.org/trajecto/context#influencedByCondition">influenced by condition</a></li>
+  <li><a href="#influencedByEvent" title="http://w3id.org/trajecto/context#influencedByEvent">influenced by event</a></li>
+  <li><a href="#influencedByPolicy" title="http://w3id.org/trajecto/context#influencedByPolicy">influenced by policy</a></li>
+  <li><a href="#influencedByRecommendation" title="http://w3id.org/trajecto/context#influencedByRecommendation">influenced by recommendation</a></li>
+ </ul>
+ <div class="entity" id="hasConstraint">
+  <h3>has constraint<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasConstraint</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with constraints that limit or influence movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Constraint" title="http://w3id.org/trajecto/context#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEnvironmentalContext">
+  <h3>has environmental context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasEnvironmentalContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its environmental context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasMovementContext" title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EnvironmentalContext" title="http://w3id.org/trajecto/context#EnvironmentalContext">Environmental Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExternalFactor">
+  <h3>has external factor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasExternalFactor</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with external factors that influence it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#influencedByCondition" title="http://w3id.org/trajecto/context#influencedByCondition">influenced by condition</a> <sup class="type-op" title="object property">op</sup>, <a href="#influencedByEvent" title="http://w3id.org/trajecto/context#influencedByEvent">influenced by event</a> <sup class="type-op" title="object property">op</sup>, <a href="#influencedByPolicy" title="http://w3id.org/trajecto/context#influencedByPolicy">influenced by policy</a> <sup class="type-op" title="object property">op</sup>, <a href="#influencedByRecommendation" title="http://w3id.org/trajecto/context#influencedByRecommendation">influenced by recommendation</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ExternalFactor" title="http://w3id.org/trajecto/context#ExternalFactor">External Factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMovementContext">
+  <h3>has movement context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasMovementContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its contextual dimensions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasEnvironmentalContext" title="http://w3id.org/trajecto/context#hasEnvironmentalContext">has environmental context</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRoutineContext" title="http://w3id.org/trajecto/context#hasRoutineContext">has routine context</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSocialContext" title="http://w3id.org/trajecto/context#hasSocialContext">has social context</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTemporalContext" title="http://w3id.org/trajecto/context#hasTemporalContext">has temporal context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MovementContext" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRoutineContext">
+  <h3>has routine context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasRoutineContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its routine context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasMovementContext" title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#RoutineContext" title="http://w3id.org/trajecto/context#RoutineContext">Routine Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSocialContext">
+  <h3>has social context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasSocialContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its social context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasMovementContext" title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SocialContext" title="http://w3id.org/trajecto/context#SocialContext">Social Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalContext">
+  <h3>has temporal context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasTemporalContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its temporal context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasMovementContext" title="http://w3id.org/trajecto/context#hasMovementContext">has movement context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TemporalContext" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="influencedByCondition">
+  <h3>influenced by condition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#influencedByCondition</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a trajectory is influenced by specific environmental conditions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasExternalFactor" title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EnvironmentalCondition" title="http://w3id.org/trajecto/context#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="influencedByEvent">
+  <h3>influenced by event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#influencedByEvent</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a trajectory is influenced by a specific event.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasExternalFactor" title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#EventOfInterest" target="_blank" title="http://w3id.org/trajecto#EventOfInterest">Event Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="influencedByPolicy">
+  <h3>influenced by policy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#influencedByPolicy</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a trajectory is influenced by specific policies or regulations.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasExternalFactor" title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Policy" title="http://w3id.org/trajecto/context#Policy">Policy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="influencedByRecommendation">
+  <h3>influenced by recommendation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#influencedByRecommendation</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a trajectory is influenced by recommendations from systems or people.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasExternalFactor" title="http://w3id.org/trajecto/context#hasExternalFactor">has external factor</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Recommendation" title="http://w3id.org/trajecto/context#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasFrequency" title="http://w3id.org/trajecto/context#hasFrequency">has frequency</a></li>
+  <li><a href="#hasPaceVariation" title="http://w3id.org/trajecto/context#hasPaceVariation">has pace variation</a></li>
+  <li><a href="#hasPathComplexity" title="http://w3id.org/trajecto/context#hasPathComplexity">has path complexity</a></li>
+  <li><a href="#hasPredictability" title="http://w3id.org/trajecto/context#hasPredictability">has predictability</a></li>
+ </ul>
+ <div class="entity" id="hasFrequency">
+  <h3>has frequency<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasFrequency</p>
+  <div class="comment">
+   <span class="markdown">Describes how often a particular trajectory pattern occurs (e.g., daily, weekly, monthly).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPaceVariation">
+  <h3>has pace variation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasPaceVariation</p>
+  <div class="comment">
+   <span class="markdown">A numerical value indicating how much the pace varies during a trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPathComplexity">
+  <h3>has path complexity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasPathComplexity</p>
+  <div class="comment">
+   <span class="markdown">A numerical value indicating the complexity of a trajectory path.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPredictability">
+  <h3>has predictability<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/context#hasPredictability</p>
+  <div class="comment">
+   <span class="markdown">A numerical value indicating how predictable a trajectory is (0.0 to 1.0).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context">http://w3id.org/trajecto/context</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

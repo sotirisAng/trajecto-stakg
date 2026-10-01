@@ -1,0 +1,106 @@
+
+=== geolife ===
+stage                      shapes   triples       result  viol  warn
+Fuseki query endpoint: http://localhost:3030/geolife/sparql
+Fuseki update endpoint: http://localhost:3030/geolife/update
+SHACL [stage-02-base-rdf]: FAIL — 0 violation(s), 1160 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1150 more warning(s)
+stage-02-base-rdf               4    59,425    warn only     0  1160
+SHACL [stage-03-enrichment]: FAIL — 0 violation(s), 1160 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1150 more warning(s)
+stage-03-enrichment             5    64,814    warn only     0  1160
+SHACL [stage-05-poi-scoring]: FAIL — 0 violation(s), 1160 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1150 more warning(s)
+stage-05-poi-scoring            6    66,736    warn only     0  1160
+SHACL [stage-06-navigation]: FAIL — 0 violation(s), 1609 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1599 more warning(s)
+stage-06-navigation             5    65,633    warn only     0  1609
+SHACL [stage-07-classification]: FAIL — 0 violation(s), 1718 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1708 more warning(s)
+stage-07-classification         5    66,684    warn only     0  1718
+SHACL [stage-08-user-profiles]: FAIL — 0 violation(s), 1718 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1708 more warning(s)
+stage-08-user-profiles          6    66,876    warn only     0  1718
+SHACL [stage-S1-reasoning]: FAIL — 0 violation(s), 1733 warning(s)
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826149574
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787827935713
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787829855794
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787823445492
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826157577
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878337081145
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878335831105
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787826983634
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_17878306071016
+  [sh:Warning] Trajectory should have at least one position @ trajecto:trajectory_1787830164864
+  ... and 1723 more warning(s)
+stage-S1-reasoning              6    68,021    warn only     0  1733
+
+violations are the gating signal; sh:Warning results are advisory.
+Note: the validation graph is a PROJECTION built from per-stage
+CONSTRUCTs, so a shape whose context is not projected reports a
+warning for every focus node. Verified example: 'Trajectory should
+have at least one position' warns 1,258 times on Rome, while the
+full KG has 0 trajectories without a position. Such warnings
+characterise the projection, not the data.
+
+fuseki_config restored to osm-rome

@@ -1,0 +1,561 @@
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix context: <http://w3id.org/trajecto/context#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/trajecto/context> a owl:Ontology ;
+    rdfs:label "trajecto-context"@en ;
+    dcterms:created "2025-05-09"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "This module extends the trajecto ontology with universal contextual dimensions applicable across different movement domains."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Context Module"@en ;
+    vann:preferredNamespacePrefix "context" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/context#" ;
+    owl:priorVersion <http://w3id.org/trajecto/context/1.0> ;
+    owl:versionIRI <http://w3id.org/trajecto/context/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+context:AccessibilityRequirement a owl:Class ;
+    rdfs:label "Accessibility Requirement"@en ;
+    rdfs:comment "Requirements for accessibility that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:MobilityConcern .
+
+context:AccessPolicy a owl:Class ;
+    rdfs:label "Access Policy"@en ;
+    rdfs:comment "Policies regarding access to spaces that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Policy .
+
+context:Afternoon a owl:Class ;
+    rdfs:label "Afternoon"@en ;
+    rdfs:comment "Afternoon time period."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TimeOfDay .
+
+context:AmbientCondition a owl:Class ;
+    rdfs:label "Ambient Condition"@en ;
+    rdfs:comment "Ambient conditions (lighting, noise, temperature) that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalCondition .
+
+context:Barrier a owl:Class ;
+    rdfs:label "Barrier"@en ;
+    rdfs:comment "Physical barriers that prevent or restrict movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:PhysicalConstraint .
+
+context:Constraint a owl:Class ;
+    rdfs:label "Constraint"@en ;
+    rdfs:comment "Limitations or restrictions that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf dul:Situation ;
+    skos:definition "A limiting factor that restricts or influences the possible movement patterns within a trajectory."@en .
+
+context:Crowding a owl:Class ;
+    rdfs:label "Crowding"@en ;
+    rdfs:comment "High density of people that influences movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialPresence .
+
+context:Deadline a owl:Class ;
+    rdfs:label "Deadline"@en ;
+    rdfs:comment "Time deadlines that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TemporalConstraint .
+
+context:EnvironmentalCondition a owl:Class ;
+    rdfs:label "Environmental Condition"@en ;
+    rdfs:comment "Environmental conditions that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:ExternalFactor .
+
+context:EnvironmentalContext a owl:Class ;
+    rdfs:label "Environmental Context"@en ;
+    rdfs:comment "The environmental aspects that influence or characterize movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:MovementContext .
+
+context:Evening a owl:Class ;
+    rdfs:label "Evening"@en ;
+    rdfs:comment "Evening time period."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TimeOfDay .
+
+context:EventPeriod a owl:Class ;
+    rdfs:label "Event Period"@en ;
+    rdfs:comment "Periods during special events that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SpecialPeriod .
+
+context:ExternalFactor a owl:Class ;
+    rdfs:label "External Factor"@en ;
+    rdfs:comment "External elements that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf dul:Situation ;
+    skos:definition "Any external circumstance, condition, or situation that impacts or influences movement behavior."@en .
+
+context:Fall a owl:Class ;
+    rdfs:label "Fall"@en ;
+    rdfs:comment "Fall/Autumn season."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Season .
+
+context:Family a owl:Class ;
+    rdfs:label "Family"@en ;
+    rdfs:comment "Movement by a family group."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialContext .
+
+context:Forced a owl:Class ;
+    rdfs:label "Forced"@en ;
+    rdfs:comment "Movement necessitated by emergency or obligation."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:RoutineContext .
+
+context:Habitual a owl:Class ;
+    rdfs:label "Habitual"@en ;
+    rdfs:comment "Regular, habitual movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:RoutineContext .
+
+context:HolidayPeriod a owl:Class ;
+    rdfs:label "Holiday Period"@en ;
+    rdfs:comment "Holiday periods with distinctive movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SpecialPeriod .
+
+context:Individual a owl:Class ;
+    rdfs:label "Individual"@en ;
+    rdfs:comment "Movement by a single individual."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialContext .
+
+context:IndoorEnvironment a owl:Class ;
+    rdfs:label "Indoor Environment"@en ;
+    rdfs:comment "Movement within indoor environments."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalContext .
+
+context:LargeGroup a owl:Class ;
+    rdfs:label "Large Group"@en ;
+    rdfs:comment "Movement by a large group (more than 8 people)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialContext .
+
+context:MobilityAssistance a owl:Class ;
+    rdfs:label "Mobility Assistance"@en ;
+    rdfs:comment "Assistance provided for mobility that affects movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:MobilityConcern .
+
+context:MobilityConcern a owl:Class ;
+    rdfs:label "Mobility Concern"@en ;
+    rdfs:comment "Special considerations related to mobility that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf dul:Situation ;
+    skos:definition "A special consideration or requirement related to the physical ability to move that influences trajectory patterns."@en .
+
+context:Morning a owl:Class ;
+    rdfs:label "Morning"@en ;
+    rdfs:comment "Morning time period."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TimeOfDay .
+
+context:MovementContext a owl:Class ;
+    rdfs:label "Movement Context"@en ;
+    rdfs:comment "The contextual dimensions that influence or characterize movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf dul:Situation ;
+    skos:definition "The set of circumstances, conditions, or situations that influence or characterize the nature of movement in a trajectory."@en .
+
+context:Night a owl:Class ;
+    rdfs:label "Night"@en ;
+    rdfs:comment "Night time period."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TimeOfDay .
+
+context:OrganizedTour a owl:Class ;
+    rdfs:label "Organized Tour"@en ;
+    rdfs:comment "Movement as part of an organized tour group."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialContext .
+
+context:OutdoorEnvironment a owl:Class ;
+    rdfs:label "Outdoor Environment"@en ;
+    rdfs:comment "Movement within outdoor environments."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalContext .
+
+context:Pair a owl:Class ;
+    rdfs:label "Pair"@en ;
+    rdfs:comment "Movement by a pair of individuals."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialContext .
+
+context:PersonalRecommendation a owl:Class ;
+    rdfs:label "Personal Recommendation"@en ;
+    rdfs:comment "Recommendations from other people that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Recommendation .
+
+context:PhysicalConstraint a owl:Class ;
+    rdfs:label "Physical Constraint"@en ;
+    rdfs:comment "Physical barriers or limitations that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Constraint .
+
+context:Planned a owl:Class ;
+    rdfs:label "Planned"@en ;
+    rdfs:comment "Deliberately planned, non-routine movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:RoutineContext .
+
+context:Policy a owl:Class ;
+    rdfs:label "Policy"@en ;
+    rdfs:comment "Policies or regulations that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:ExternalFactor .
+
+context:Recommendation a owl:Class ;
+    rdfs:label "Recommendation"@en ;
+    rdfs:comment "Recommendations that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:ExternalFactor .
+
+context:RoutineContext a owl:Class ;
+    rdfs:label "Routine Context"@en ;
+    rdfs:comment "The routine aspects that influence or characterize movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:MovementContext .
+
+context:RuralSetting a owl:Class ;
+    rdfs:label "Rural Setting"@en ;
+    rdfs:comment "Movement within rural environments."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalContext .
+
+context:Season a owl:Class ;
+    rdfs:label "Season"@en ;
+    rdfs:comment "The season during which movement occurs."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TemporalContext .
+
+context:SmallGroup a owl:Class ;
+    rdfs:label "Small Group"@en ;
+    rdfs:comment "Movement by a small group (3-8 people)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialContext .
+
+context:SocialAttraction a owl:Class ;
+    rdfs:label "Social Attraction"@en ;
+    rdfs:comment "Social gathering points that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialPresence .
+
+context:SocialConstraint a owl:Class ;
+    rdfs:label "Social Constraint"@en ;
+    rdfs:comment "Social limitations or norms that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Constraint .
+
+context:SocialContext a owl:Class ;
+    rdfs:label "Social Context"@en ;
+    rdfs:comment "The social aspects that influence or characterize movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:MovementContext .
+
+context:SocialNorm a owl:Class ;
+    rdfs:label "Social Norm"@en ;
+    rdfs:comment "Social expectations or norms that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:SocialConstraint .
+
+context:SocialPresence a owl:Class ;
+    rdfs:label "Social Presence"@en ;
+    rdfs:comment "Presence of other people that influences movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:ExternalFactor .
+
+context:SpecialEvent a owl:Class ;
+    rdfs:label "Special Event"@en ;
+    rdfs:comment "Special events that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:ExternalFactor .
+
+context:SpecialPeriod a owl:Class ;
+    rdfs:label "Special Period"@en ;
+    rdfs:comment "Special temporal periods that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TemporalContext .
+
+context:Spontaneous a owl:Class ;
+    rdfs:label "Spontaneous"@en ;
+    rdfs:comment "Unplanned, spontaneous movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:RoutineContext .
+
+context:Spring a owl:Class ;
+    rdfs:label "Spring"@en ;
+    rdfs:comment "Spring season."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Season .
+
+context:Summer a owl:Class ;
+    rdfs:label "Summer"@en ;
+    rdfs:comment "Summer season."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Season .
+
+context:SystemRecommendation a owl:Class ;
+    rdfs:label "System Recommendation"@en ;
+    rdfs:comment "Recommendations from automated systems that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Recommendation .
+
+context:TemporalConstraint a owl:Class ;
+    rdfs:label "Temporal Constraint"@en ;
+    rdfs:comment "Time-related limitations that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Constraint .
+
+context:TemporalContext a owl:Class ;
+    rdfs:label "Temporal Context"@en ;
+    rdfs:comment "The temporal aspects that influence or characterize movement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:MovementContext .
+
+context:TimeOfDay a owl:Class ;
+    rdfs:label "Time of Day"@en ;
+    rdfs:comment "The specific time of day when movement occurs."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TemporalContext .
+
+context:TimePolicy a owl:Class ;
+    rdfs:label "Time Policy"@en ;
+    rdfs:comment "Policies regarding timing (opening hours, etc.) that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Policy .
+
+context:TransitionalSpace a owl:Class ;
+    rdfs:label "Transitional Space"@en ;
+    rdfs:comment "Movement through transitional spaces between different environments."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalContext .
+
+context:UrbanSetting a owl:Class ;
+    rdfs:label "Urban Setting"@en ;
+    rdfs:comment "Movement within urban environments."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalContext .
+
+context:WeatherCondition a owl:Class ;
+    rdfs:label "Weather Condition"@en ;
+    rdfs:comment "Weather conditions that influence movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:EnvironmentalCondition .
+
+context:Weekday a owl:Class ;
+    rdfs:label "Weekday"@en ;
+    rdfs:comment "Movement occurring on a weekday (Monday-Friday)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Weekpart .
+
+context:Weekend a owl:Class ;
+    rdfs:label "Weekend"@en ;
+    rdfs:comment "Movement occurring on a weekend (Saturday-Sunday)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Weekpart .
+
+context:Weekpart a owl:Class ;
+    rdfs:label "Part of the week"@en ;
+    rdfs:comment "Distinction between weekday and weekend movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:TemporalContext .
+
+context:WheelchairAccessibility a owl:Class ;
+    rdfs:label "Wheelchair Accessibility"@en ;
+    rdfs:comment "Requirements for wheelchair accessibility that affect movement patterns."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:AccessibilityRequirement .
+
+context:Winter a owl:Class ;
+    rdfs:label "Winter"@en ;
+    rdfs:comment "Winter season."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:subClassOf context:Season .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+context:hasConstraint a owl:ObjectProperty ;
+    rdfs:label "has constraint"@en ;
+    rdfs:comment "Associates a trajectory with constraints that limit or influence movement."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:Constraint .
+
+context:hasEnvironmentalContext a owl:ObjectProperty ;
+    rdfs:label "has environmental context"@en ;
+    rdfs:comment "Associates a trajectory with its environmental context."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:EnvironmentalContext ;
+    rdfs:subPropertyOf context:hasMovementContext .
+
+context:hasExternalFactor a owl:ObjectProperty ;
+    rdfs:label "has external factor"@en ;
+    rdfs:comment "Associates a trajectory with external factors that influence it."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:ExternalFactor ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+context:hasMovementContext a owl:ObjectProperty ;
+    rdfs:label "has movement context"@en ;
+    rdfs:comment "Associates a trajectory with its contextual dimensions."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:MovementContext ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+context:hasRoutineContext a owl:ObjectProperty ;
+    rdfs:label "has routine context"@en ;
+    rdfs:comment "Associates a trajectory with its routine context."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:RoutineContext ;
+    rdfs:subPropertyOf context:hasMovementContext .
+
+context:hasSocialContext a owl:ObjectProperty ;
+    rdfs:label "has social context"@en ;
+    rdfs:comment "Associates a trajectory with its social context."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:SocialContext ;
+    rdfs:subPropertyOf context:hasMovementContext .
+
+context:hasTemporalContext a owl:ObjectProperty ;
+    rdfs:label "has temporal context"@en ;
+    rdfs:comment "Associates a trajectory with its temporal context."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:TemporalContext ;
+    rdfs:subPropertyOf context:hasMovementContext .
+
+context:influencedByCondition a owl:ObjectProperty ;
+    rdfs:label "influenced by condition"@en ;
+    rdfs:comment "Indicates that a trajectory is influenced by specific environmental conditions."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:EnvironmentalCondition ;
+    rdfs:subPropertyOf context:hasExternalFactor .
+
+context:influencedByEvent a owl:ObjectProperty ;
+    rdfs:label "influenced by event"@en ;
+    rdfs:comment "Indicates that a trajectory is influenced by a specific event."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range trajecto:EventOfInterest ;
+    rdfs:subPropertyOf context:hasExternalFactor .
+
+context:influencedByPolicy a owl:ObjectProperty ;
+    rdfs:label "influenced by policy"@en ;
+    rdfs:comment "Indicates that a trajectory is influenced by specific policies or regulations."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:Policy ;
+    rdfs:subPropertyOf context:hasExternalFactor .
+
+context:influencedByRecommendation a owl:ObjectProperty ;
+    rdfs:label "influenced by recommendation"@en ;
+    rdfs:comment "Indicates that a trajectory is influenced by recommendations from systems or people."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range context:Recommendation ;
+    rdfs:subPropertyOf context:hasExternalFactor .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+context:hasFrequency a owl:DatatypeProperty ;
+    rdfs:label "has frequency"@en ;
+    rdfs:comment "Describes how often a particular trajectory pattern occurs (e.g., daily, weekly, monthly)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range xsd:string .
+
+context:hasPaceVariation a owl:DatatypeProperty ;
+    rdfs:label "has pace variation"@en ;
+    rdfs:comment "A numerical value indicating how much the pace varies during a trajectory."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range xsd:float .
+
+context:hasPathComplexity a owl:DatatypeProperty ;
+    rdfs:label "has path complexity"@en ;
+    rdfs:comment "A numerical value indicating the complexity of a trajectory path."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range xsd:float .
+
+context:hasPredictability a owl:DatatypeProperty ;
+    rdfs:label "has predictability"@en ;
+    rdfs:comment "A numerical value indicating how predictable a trajectory is (0.0 to 1.0)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/context> ;
+    rdfs:range xsd:float .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+trajecto:EventOfInterest a owl:Class .
+
+datacron:Trajectory a owl:Class .
+
+dul:Situation a owl:Class .
+
+dul:associatedWith a owl:ObjectProperty .
+
+skos:definition a owl:AnnotationProperty .

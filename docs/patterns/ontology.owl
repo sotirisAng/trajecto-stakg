@@ -1,0 +1,1165 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/trajecto/patterns#"
+     xml:base="http://w3id.org/trajecto/patterns"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/trajecto/patterns">
+        <owl:versionIRI rdf:resource="http://w3id.org/trajecto/patterns/1.1.0"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-09</terms:created>
+        <terms:creator>Konstantinos Kotis</terms:creator>
+        <terms:creator>Sotirios Angelis</terms:creator>
+        <terms:description xml:lang="en">This module extends the trajecto ontology with concepts for analyzing movement patterns and behavior independent of purpose.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
+        <terms:publisher>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</terms:publisher>
+        <terms:title xml:lang="en">Trajecto Movement Patterns Module</terms:title>
+        <vann:preferredNamespacePrefix>patterns</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/trajecto/patterns#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">trajecto-patterns</rdfs:label>
+        <owl:priorVersion rdf:resource="http://w3id.org/trajecto/patterns/1.0"/>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#exhibitsPattern -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#exhibitsPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Associates a trajectory with movement patterns it exhibits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">exhibits pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasAlternativePath -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasAlternativePath">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#Path"/>
+        <rdfs:comment xml:lang="en">Links a decision point to alternative paths not taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has alternative path</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasChosenPath -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasChosenPath">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/patterns#hasAlternativePath"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#Path"/>
+        <rdfs:comment xml:lang="en">Links a decision point to the path actually taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has chosen path</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasDecisionOutcome -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasDecisionOutcome">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#DecisionOutcome"/>
+        <rdfs:comment xml:lang="en">Links a decision point to its outcome.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has decision outcome</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasDecisionPoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasDecisionPoint">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:comment xml:lang="en">Links a trajectory to decision points within it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has decision point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasDirectionality -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasDirectionality">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/patterns#exhibitsPattern"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#DirectionalPattern"/>
+        <rdfs:comment xml:lang="en">Associates a trajectory with its directional pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has directionality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasFocusPattern -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasFocusPattern">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/patterns#exhibitsPattern"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Associates a trajectory with its focus pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has focus pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasSegmentType -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasSegmentType">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Segment"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Classifies a trajectory segment by its behavioral type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has segment type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasVelocityPattern -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#hasVelocityPattern">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/patterns#exhibitsPattern"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/patterns#VelocityPattern"/>
+        <rdfs:comment xml:lang="en">Associates a trajectory with its velocity pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has velocity pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasDecisionTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/patterns#hasDecisionTime">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <rdfs:comment xml:lang="en">Duration of time spent making a decision at a decision point.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has decision time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasDirectionalChanges -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/patterns#hasDirectionalChanges">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">Number of significant direction changes in a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has directional changes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasDirectionalStraightness -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/patterns#hasDirectionalStraightness">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A numerical value (0.0-1.0) indicating how straight a trajectory is.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has directional straightness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#hasVelocityVariance -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/patterns#hasVelocityVariance">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A numerical value indicating the variance in velocity during a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">has velocity variance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto#Stop -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#Stop"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#AcceleratingDecelerating -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#AcceleratingDecelerating">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#VelocityPattern"/>
+        <rdfs:comment xml:lang="en">Regular patterns of acceleration and deceleration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Accelerating Decelerating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#AvoidanceSegment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#AvoidanceSegment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Segment characterized by movement to avoid an area or obstacle.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Avoidance Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Backtrack -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Backtrack">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionOutcome"/>
+        <rdfs:comment xml:lang="en">Decision to return along the previous path.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Backtrack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#BacktrackingMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#BacktrackingMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Movement that involves returning along previously traveled paths.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Backtracking Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#BehavioralPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#BehavioralPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the behavioral characteristics of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Behavioral Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#BriefDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#BriefDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DwellPattern"/>
+        <rdfs:comment xml:lang="en">Short stays at many points of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Brief Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#CasualMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#CasualMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Relaxed, low-speed movement without focused engagement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Casual Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ChangeDirection -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ChangeDirection">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionOutcome"/>
+        <rdfs:comment xml:lang="en">Decision to change direction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Change Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ChoicePoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ChoicePoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:comment xml:lang="en">A decision point with multiple clear options available.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Choice Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#CircularReturn -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#CircularReturn">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DirectionalPattern"/>
+        <rdfs:comment xml:lang="en">Circular movement pattern returning to the starting point.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Circular Return</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ClusteredVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ClusteredVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#VisitPattern"/>
+        <rdfs:comment xml:lang="en">Visiting clusters of points of interest together.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Clustered Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#CoherentGroupMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#CoherentGroupMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#GroupMovementPattern"/>
+        <rdfs:comment xml:lang="en">Group moving together with high cohesion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Coherent Group Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Consistent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Consistent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#VelocityPattern"/>
+        <rdfs:comment xml:lang="en">Consistent, steady velocity throughout movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Consistent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ContinueForward -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ContinueForward">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionOutcome"/>
+        <rdfs:comment xml:lang="en">Decision to continue in the current direction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Continue Forward</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#CyclicalPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#CyclicalPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#SpatioTemporalPattern"/>
+        <rdfs:comment xml:lang="en">Pattern with regular repetition over time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Cyclical Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DecisionOutcome -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DecisionOutcome">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">The outcome of a decision at a decision point.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Decision Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DecisionPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DecisionPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#Stop"/>
+        <rdfs:comment xml:lang="en">A point in a trajectory where a decision is made about movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Decision Point</rdfs:label>
+        <skos:definition xml:lang="en">A specific location in a trajectory where a movement decision is made, often characterized by a change in direction, speed, or behavior.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DenseSpatialPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DenseSpatialPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#SpatioTemporalPattern"/>
+        <rdfs:comment xml:lang="en">Pattern where movement is concentrated in a small area.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Dense Spatial Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DenseTimePattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DenseTimePattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#SpatioTemporalPattern"/>
+        <rdfs:comment xml:lang="en">Pattern where much activity occurs in a short time span.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Dense Time Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DirectionalPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DirectionalPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the directionality of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Directional Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DispersedSpatialPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DispersedSpatialPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#SpatioTemporalPattern"/>
+        <rdfs:comment xml:lang="en">Pattern where movement is dispersed over a large area.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Dispersed Spatial Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#DwellPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#DwellPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#BehavioralPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in how long a visitor stays at points of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Dwell Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ExplorationSegment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ExplorationSegment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Segment characterized by exploratory behavior.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Exploration Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ExploratoryMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ExploratoryMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Movement focused on exploration without specific destinations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Exploratory Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ExternalInterruptionPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ExternalInterruptionPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:comment xml:lang="en">A decision point caused by external interruption (call, message, encounter).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">External Interruption Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#FastPaced -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#FastPaced">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#PacePattern"/>
+        <rdfs:comment xml:lang="en">Consistently fast movement throughout a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Fast Paced</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Fluctuating -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Fluctuating">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#VelocityPattern"/>
+        <rdfs:comment xml:lang="en">Fluctuating velocity with irregular changes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Fluctuating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#FocusPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#FocusPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the focus or intention of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Focus Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#FocusedDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#FocusedDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DwellPattern"/>
+        <rdfs:comment xml:lang="en">Long stays at a few key points of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Focused Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#GroupMovementPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#GroupMovementPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the movement of groups of individuals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Group Movement Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#HesitationSegment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#HesitationSegment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Segment characterized by hesitation or indecision.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Hesitation Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ImmersiveMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ImmersiveMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Movement dominated by prolonged, immersive engagement with points of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Immersive Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#IndependentGroupMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#IndependentGroupMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#GroupMovementPattern"/>
+        <rdfs:comment xml:lang="en">Group members moving independently within a larger area.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Independent Group Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#InformationSeekingPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#InformationSeekingPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:comment xml:lang="en">A decision point where information is sought to inform movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Information Seeking Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#IrregularPace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#IrregularPace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#PacePattern"/>
+        <rdfs:comment xml:lang="en">Unpredictable changes in pace throughout a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Irregular Pace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Junction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Junction">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#ChoicePoint"/>
+        <rdfs:comment xml:lang="en">A physical junction where multiple paths meet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Junction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#LeaderFollowerMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#LeaderFollowerMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#GroupMovementPattern"/>
+        <rdfs:comment xml:lang="en">Group following a leader who determines the movement path.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Leader Follower Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Linear -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Linear">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DirectionalPattern"/>
+        <rdfs:comment xml:lang="en">Linear, direct movement pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Linear</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#LingeringSegment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#LingeringSegment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Segment characterized by prolonged stay in one area.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Lingering Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#MapCheckingPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#MapCheckingPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#InformationSeekingPoint"/>
+        <rdfs:comment xml:lang="en">A point where a map or navigation aid is consulted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Map Checking Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#MovementPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#MovementPattern">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">A recognizable pattern in movement behavior.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Movement Pattern</rdfs:label>
+        <skos:definition xml:lang="en">A distinct, identifiable pattern in how a person or group moves through space over time.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#MultiDestination -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#MultiDestination">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Movement visiting multiple destinations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Multi Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#PacePattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#PacePattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#BehavioralPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the pace or rhythm of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Pace Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Path -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Path">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">A potential path that could be taken from a decision point.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Path</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#PingPongVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#PingPongVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#VisitPattern"/>
+        <rdfs:comment xml:lang="en">Moving back and forth between a small number of points repeatedly.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Ping Pong Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#RandomWalk -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#RandomWalk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DirectionalPattern"/>
+        <rdfs:comment xml:lang="en">Random, unpredictable movement pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Random Walk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#ReorientationPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#ReorientationPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionPoint"/>
+        <rdfs:comment xml:lang="en">A decision point where a change in direction or plan occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Reorientation Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#RhythmicPace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#RhythmicPace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#PacePattern"/>
+        <rdfs:comment xml:lang="en">Regular alternation between faster and slower movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Rhythmic Pace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SequentialVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SequentialVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#VisitPattern"/>
+        <rdfs:comment xml:lang="en">Visiting points of interest in a sequential order.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Sequential Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SignageCheckPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SignageCheckPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#InformationSeekingPoint"/>
+        <rdfs:comment xml:lang="en">A point where signage is read or consulted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Signage Check Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SingleDestination -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SingleDestination">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Movement focused on reaching a single destination.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Single Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SlowPaced -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SlowPaced">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#PacePattern"/>
+        <rdfs:comment xml:lang="en">Consistently slow, leisurely movement throughout a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Slow Paced</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SpatioTemporalPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SpatioTemporalPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the spatial and temporal aspects of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Spatio Temporal Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SplitAndMergeMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SplitAndMergeMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#GroupMovementPattern"/>
+        <rdfs:comment xml:lang="en">Group repeatedly splitting apart and reconvening.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Split and Merge Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SpreadTimePattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SpreadTimePattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#SpatioTemporalPattern"/>
+        <rdfs:comment xml:lang="en">Pattern where activity is spread out over a longer time span.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Spread Time Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#SteadyMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#SteadyMovement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusPattern"/>
+        <rdfs:comment xml:lang="en">Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Steady Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#StopAndWait -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#StopAndWait">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DecisionOutcome"/>
+        <rdfs:comment xml:lang="en">Decision to stop movement temporarily.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Stop and Wait</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#TargetedSegment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#TargetedSegment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Segment characterized by direct, purposeful movement toward a destination.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Targeted Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#TrajectorySegmentType -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#TrajectorySegmentType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">Classification of trajectory segments by behavioral characteristics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Trajectory Segment Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#TransitionSegment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#TransitionSegment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#TrajectorySegmentType"/>
+        <rdfs:comment xml:lang="en">Segment characterized by movement between different spaces or zones.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Transition Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#VariableDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#VariableDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DwellPattern"/>
+        <rdfs:comment xml:lang="en">Highly variable dwell times across different points of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Variable Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#VelocityPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#VelocityPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#MovementPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in the velocity of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Velocity Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#VisitPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#VisitPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#BehavioralPattern"/>
+        <rdfs:comment xml:lang="en">Pattern in how points of interest are visited.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Visit Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#Zigzag -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#Zigzag">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#DirectionalPattern"/>
+        <rdfs:comment xml:lang="en">Zigzagging movement pattern with regular direction changes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <rdfs:label xml:lang="en">Zigzag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#Segment -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#Segment"/>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#Trajectory -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#Trajectory"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

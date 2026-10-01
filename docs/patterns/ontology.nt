@@ -1,0 +1,675 @@
+<http://w3id.org/trajecto/patterns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/patterns> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/patterns/1.1.0> .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/description> "This module extends the trajecto ontology with concepts for analyzing movement patterns and behavior independent of purpose."@en .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/patterns> <http://purl.org/dc/terms/title> "Trajecto Movement Patterns Module"@en .
+<http://w3id.org/trajecto/patterns> <http://purl.org/vocab/vann/preferredNamespacePrefix> "patterns" .
+<http://w3id.org/trajecto/patterns> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/patterns#" .
+<http://w3id.org/trajecto/patterns> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-patterns"@en .
+<http://w3id.org/trajecto/patterns> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/patterns/1.0> .
+<http://w3id.org/trajecto/patterns> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/patterns#exhibitsPattern
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with movement patterns it exhibits."@en .
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#exhibitsPattern> <http://www.w3.org/2000/01/rdf-schema#label> "exhibits pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasAlternativePath
+<http://w3id.org/trajecto/patterns#hasAlternativePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasAlternativePath> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#hasAlternativePath> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#Path> .
+<http://w3id.org/trajecto/patterns#hasAlternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a decision point to alternative paths not taken."@en .
+<http://w3id.org/trajecto/patterns#hasAlternativePath> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasAlternativePath> <http://www.w3.org/2000/01/rdf-schema#label> "has alternative path"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasChosenPath
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/patterns#hasAlternativePath> .
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#Path> .
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a decision point to the path actually taken."@en .
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasChosenPath> <http://www.w3.org/2000/01/rdf-schema#label> "has chosen path"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasDecisionOutcome
+<http://w3id.org/trajecto/patterns#hasDecisionOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasDecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#hasDecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#DecisionOutcome> .
+<http://w3id.org/trajecto/patterns#hasDecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a decision point to its outcome."@en .
+<http://w3id.org/trajecto/patterns#hasDecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasDecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "has decision outcome"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasDecisionPoint
+<http://w3id.org/trajecto/patterns#hasDecisionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasDecisionPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasDecisionPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#hasDecisionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a trajectory to decision points within it."@en .
+<http://w3id.org/trajecto/patterns#hasDecisionPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasDecisionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has decision point"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasDirectionality
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/patterns#exhibitsPattern> .
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#DirectionalPattern> .
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its directional pattern."@en .
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasDirectionality> <http://www.w3.org/2000/01/rdf-schema#label> "has directionality"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasFocusPattern
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/patterns#exhibitsPattern> .
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its focus pattern."@en .
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasFocusPattern> <http://www.w3.org/2000/01/rdf-schema#label> "has focus pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasSegmentType
+<http://w3id.org/trajecto/patterns#hasSegmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasSegmentType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Segment> .
+<http://w3id.org/trajecto/patterns#hasSegmentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#hasSegmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies a trajectory segment by its behavioral type."@en .
+<http://w3id.org/trajecto/patterns#hasSegmentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasSegmentType> <http://www.w3.org/2000/01/rdf-schema#label> "has segment type"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasVelocityPattern
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/patterns#exhibitsPattern> .
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/patterns#VelocityPattern> .
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its velocity pattern."@en .
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasVelocityPattern> <http://www.w3.org/2000/01/rdf-schema#label> "has velocity pattern"@en .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/patterns#hasDecisionTime
+<http://w3id.org/trajecto/patterns#hasDecisionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/patterns#hasDecisionTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#hasDecisionTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://w3id.org/trajecto/patterns#hasDecisionTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of time spent making a decision at a decision point."@en .
+<http://w3id.org/trajecto/patterns#hasDecisionTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasDecisionTime> <http://www.w3.org/2000/01/rdf-schema#label> "has decision time"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasDirectionalChanges
+<http://w3id.org/trajecto/patterns#hasDirectionalChanges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/patterns#hasDirectionalChanges> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasDirectionalChanges> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://w3id.org/trajecto/patterns#hasDirectionalChanges> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of significant direction changes in a trajectory."@en .
+<http://w3id.org/trajecto/patterns#hasDirectionalChanges> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasDirectionalChanges> <http://www.w3.org/2000/01/rdf-schema#label> "has directional changes"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasDirectionalStraightness
+<http://w3id.org/trajecto/patterns#hasDirectionalStraightness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/patterns#hasDirectionalStraightness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasDirectionalStraightness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/patterns#hasDirectionalStraightness> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value (0.0-1.0) indicating how straight a trajectory is."@en .
+<http://w3id.org/trajecto/patterns#hasDirectionalStraightness> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasDirectionalStraightness> <http://www.w3.org/2000/01/rdf-schema#label> "has directional straightness"@en .
+# 
+# http://w3id.org/trajecto/patterns#hasVelocityVariance
+<http://w3id.org/trajecto/patterns#hasVelocityVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/patterns#hasVelocityVariance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/patterns#hasVelocityVariance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/patterns#hasVelocityVariance> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value indicating the variance in velocity during a trajectory."@en .
+<http://w3id.org/trajecto/patterns#hasVelocityVariance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#hasVelocityVariance> <http://www.w3.org/2000/01/rdf-schema#label> "has velocity variance"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#Stop
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto/patterns#AcceleratingDecelerating
+<http://w3id.org/trajecto/patterns#AcceleratingDecelerating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#AcceleratingDecelerating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#VelocityPattern> .
+<http://w3id.org/trajecto/patterns#AcceleratingDecelerating> <http://www.w3.org/2000/01/rdf-schema#comment> "Regular patterns of acceleration and deceleration."@en .
+<http://w3id.org/trajecto/patterns#AcceleratingDecelerating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#AcceleratingDecelerating> <http://www.w3.org/2000/01/rdf-schema#label> "Accelerating Decelerating"@en .
+# 
+# http://w3id.org/trajecto/patterns#AvoidanceSegment
+<http://w3id.org/trajecto/patterns#AvoidanceSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#AvoidanceSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#AvoidanceSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment characterized by movement to avoid an area or obstacle."@en .
+<http://w3id.org/trajecto/patterns#AvoidanceSegment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#AvoidanceSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Avoidance Segment"@en .
+# 
+# http://w3id.org/trajecto/patterns#Backtrack
+<http://w3id.org/trajecto/patterns#Backtrack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Backtrack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionOutcome> .
+<http://w3id.org/trajecto/patterns#Backtrack> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision to return along the previous path."@en .
+<http://w3id.org/trajecto/patterns#Backtrack> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Backtrack> <http://www.w3.org/2000/01/rdf-schema#label> "Backtrack"@en .
+# 
+# http://w3id.org/trajecto/patterns#BacktrackingMovement
+<http://w3id.org/trajecto/patterns#BacktrackingMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#BacktrackingMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#BacktrackingMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement that involves returning along previously traveled paths."@en .
+<http://w3id.org/trajecto/patterns#BacktrackingMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#BacktrackingMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Backtracking Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#BehavioralPattern
+<http://w3id.org/trajecto/patterns#BehavioralPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#BehavioralPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#BehavioralPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the behavioral characteristics of movement."@en .
+<http://w3id.org/trajecto/patterns#BehavioralPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#BehavioralPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioral Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#BriefDwell
+<http://w3id.org/trajecto/patterns#BriefDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#BriefDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DwellPattern> .
+<http://w3id.org/trajecto/patterns#BriefDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "Short stays at many points of interest."@en .
+<http://w3id.org/trajecto/patterns#BriefDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#BriefDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Brief Dwell"@en .
+# 
+# http://w3id.org/trajecto/patterns#CasualMovement
+<http://w3id.org/trajecto/patterns#CasualMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#CasualMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#CasualMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaxed, low-speed movement without focused engagement."@en .
+<http://w3id.org/trajecto/patterns#CasualMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#CasualMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Casual Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#ChangeDirection
+<http://w3id.org/trajecto/patterns#ChangeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ChangeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionOutcome> .
+<http://w3id.org/trajecto/patterns#ChangeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision to change direction."@en .
+<http://w3id.org/trajecto/patterns#ChangeDirection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ChangeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Change Direction"@en .
+# 
+# http://w3id.org/trajecto/patterns#ChoicePoint
+<http://w3id.org/trajecto/patterns#ChoicePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ChoicePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#ChoicePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A decision point with multiple clear options available."@en .
+<http://w3id.org/trajecto/patterns#ChoicePoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ChoicePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Choice Point"@en .
+# 
+# http://w3id.org/trajecto/patterns#CircularReturn
+<http://w3id.org/trajecto/patterns#CircularReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#CircularReturn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DirectionalPattern> .
+<http://w3id.org/trajecto/patterns#CircularReturn> <http://www.w3.org/2000/01/rdf-schema#comment> "Circular movement pattern returning to the starting point."@en .
+<http://w3id.org/trajecto/patterns#CircularReturn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#CircularReturn> <http://www.w3.org/2000/01/rdf-schema#label> "Circular Return"@en .
+# 
+# http://w3id.org/trajecto/patterns#ClusteredVisit
+<http://w3id.org/trajecto/patterns#ClusteredVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ClusteredVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#VisitPattern> .
+<http://w3id.org/trajecto/patterns#ClusteredVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "Visiting clusters of points of interest together."@en .
+<http://w3id.org/trajecto/patterns#ClusteredVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ClusteredVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Clustered Visit"@en .
+# 
+# http://w3id.org/trajecto/patterns#CoherentGroupMovement
+<http://w3id.org/trajecto/patterns#CoherentGroupMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#CoherentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#GroupMovementPattern> .
+<http://w3id.org/trajecto/patterns#CoherentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Group moving together with high cohesion."@en .
+<http://w3id.org/trajecto/patterns#CoherentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#CoherentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Coherent Group Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#Consistent
+<http://w3id.org/trajecto/patterns#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Consistent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#VelocityPattern> .
+<http://w3id.org/trajecto/patterns#Consistent> <http://www.w3.org/2000/01/rdf-schema#comment> "Consistent, steady velocity throughout movement."@en .
+<http://w3id.org/trajecto/patterns#Consistent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Consistent> <http://www.w3.org/2000/01/rdf-schema#label> "Consistent"@en .
+# 
+# http://w3id.org/trajecto/patterns#ContinueForward
+<http://w3id.org/trajecto/patterns#ContinueForward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ContinueForward> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionOutcome> .
+<http://w3id.org/trajecto/patterns#ContinueForward> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision to continue in the current direction."@en .
+<http://w3id.org/trajecto/patterns#ContinueForward> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ContinueForward> <http://www.w3.org/2000/01/rdf-schema#label> "Continue Forward"@en .
+# 
+# http://w3id.org/trajecto/patterns#CyclicalPattern
+<http://w3id.org/trajecto/patterns#CyclicalPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#CyclicalPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#SpatioTemporalPattern> .
+<http://w3id.org/trajecto/patterns#CyclicalPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern with regular repetition over time."@en .
+<http://w3id.org/trajecto/patterns#CyclicalPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#CyclicalPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Cyclical Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#DecisionOutcome
+<http://w3id.org/trajecto/patterns#DecisionOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/patterns#DecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome of a decision at a decision point."@en .
+<http://w3id.org/trajecto/patterns#DecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DecisionOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Outcome"@en .
+# 
+# http://w3id.org/trajecto/patterns#DecisionPoint
+<http://w3id.org/trajecto/patterns#DecisionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DecisionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#Stop> .
+<http://w3id.org/trajecto/patterns#DecisionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A point in a trajectory where a decision is made about movement."@en .
+<http://w3id.org/trajecto/patterns#DecisionPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DecisionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Point"@en .
+<http://w3id.org/trajecto/patterns#DecisionPoint> <http://www.w3.org/2004/02/skos/core#definition> "A specific location in a trajectory where a movement decision is made, often characterized by a change in direction, speed, or behavior."@en .
+# 
+# http://w3id.org/trajecto/patterns#DenseSpatialPattern
+<http://w3id.org/trajecto/patterns#DenseSpatialPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DenseSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#SpatioTemporalPattern> .
+<http://w3id.org/trajecto/patterns#DenseSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern where movement is concentrated in a small area."@en .
+<http://w3id.org/trajecto/patterns#DenseSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DenseSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Dense Spatial Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#DenseTimePattern
+<http://w3id.org/trajecto/patterns#DenseTimePattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DenseTimePattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#SpatioTemporalPattern> .
+<http://w3id.org/trajecto/patterns#DenseTimePattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern where much activity occurs in a short time span."@en .
+<http://w3id.org/trajecto/patterns#DenseTimePattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DenseTimePattern> <http://www.w3.org/2000/01/rdf-schema#label> "Dense Time Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#DirectionalPattern
+<http://w3id.org/trajecto/patterns#DirectionalPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DirectionalPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#DirectionalPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the directionality of movement."@en .
+<http://w3id.org/trajecto/patterns#DirectionalPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DirectionalPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Directional Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#DispersedSpatialPattern
+<http://w3id.org/trajecto/patterns#DispersedSpatialPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DispersedSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#SpatioTemporalPattern> .
+<http://w3id.org/trajecto/patterns#DispersedSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern where movement is dispersed over a large area."@en .
+<http://w3id.org/trajecto/patterns#DispersedSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DispersedSpatialPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Dispersed Spatial Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#DwellPattern
+<http://w3id.org/trajecto/patterns#DwellPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#DwellPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#BehavioralPattern> .
+<http://w3id.org/trajecto/patterns#DwellPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in how long a visitor stays at points of interest."@en .
+<http://w3id.org/trajecto/patterns#DwellPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#DwellPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Dwell Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#ExplorationSegment
+<http://w3id.org/trajecto/patterns#ExplorationSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ExplorationSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#ExplorationSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment characterized by exploratory behavior."@en .
+<http://w3id.org/trajecto/patterns#ExplorationSegment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ExplorationSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Exploration Segment"@en .
+# 
+# http://w3id.org/trajecto/patterns#ExploratoryMovement
+<http://w3id.org/trajecto/patterns#ExploratoryMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ExploratoryMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#ExploratoryMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement focused on exploration without specific destinations."@en .
+<http://w3id.org/trajecto/patterns#ExploratoryMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ExploratoryMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Exploratory Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#ExternalInterruptionPoint
+<http://w3id.org/trajecto/patterns#ExternalInterruptionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ExternalInterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#ExternalInterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A decision point caused by external interruption (call, message, encounter)."@en .
+<http://w3id.org/trajecto/patterns#ExternalInterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ExternalInterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "External Interruption Point"@en .
+# 
+# http://w3id.org/trajecto/patterns#FastPaced
+<http://w3id.org/trajecto/patterns#FastPaced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#FastPaced> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#PacePattern> .
+<http://w3id.org/trajecto/patterns#FastPaced> <http://www.w3.org/2000/01/rdf-schema#comment> "Consistently fast movement throughout a trajectory."@en .
+<http://w3id.org/trajecto/patterns#FastPaced> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#FastPaced> <http://www.w3.org/2000/01/rdf-schema#label> "Fast Paced"@en .
+# 
+# http://w3id.org/trajecto/patterns#Fluctuating
+<http://w3id.org/trajecto/patterns#Fluctuating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Fluctuating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#VelocityPattern> .
+<http://w3id.org/trajecto/patterns#Fluctuating> <http://www.w3.org/2000/01/rdf-schema#comment> "Fluctuating velocity with irregular changes."@en .
+<http://w3id.org/trajecto/patterns#Fluctuating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Fluctuating> <http://www.w3.org/2000/01/rdf-schema#label> "Fluctuating"@en .
+# 
+# http://w3id.org/trajecto/patterns#FocusPattern
+<http://w3id.org/trajecto/patterns#FocusPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#FocusPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#FocusPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the focus or intention of movement."@en .
+<http://w3id.org/trajecto/patterns#FocusPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#FocusPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Focus Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#FocusedDwell
+<http://w3id.org/trajecto/patterns#FocusedDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#FocusedDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DwellPattern> .
+<http://w3id.org/trajecto/patterns#FocusedDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "Long stays at a few key points of interest."@en .
+<http://w3id.org/trajecto/patterns#FocusedDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#FocusedDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Focused Dwell"@en .
+# 
+# http://w3id.org/trajecto/patterns#GroupMovementPattern
+<http://w3id.org/trajecto/patterns#GroupMovementPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#GroupMovementPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#GroupMovementPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the movement of groups of individuals."@en .
+<http://w3id.org/trajecto/patterns#GroupMovementPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#GroupMovementPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Group Movement Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#HesitationSegment
+<http://w3id.org/trajecto/patterns#HesitationSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#HesitationSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#HesitationSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment characterized by hesitation or indecision."@en .
+<http://w3id.org/trajecto/patterns#HesitationSegment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#HesitationSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Hesitation Segment"@en .
+# 
+# http://w3id.org/trajecto/patterns#ImmersiveMovement
+<http://w3id.org/trajecto/patterns#ImmersiveMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ImmersiveMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#ImmersiveMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement dominated by prolonged, immersive engagement with points of interest."@en .
+<http://w3id.org/trajecto/patterns#ImmersiveMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ImmersiveMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Immersive Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#IndependentGroupMovement
+<http://w3id.org/trajecto/patterns#IndependentGroupMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#IndependentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#GroupMovementPattern> .
+<http://w3id.org/trajecto/patterns#IndependentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Group members moving independently within a larger area."@en .
+<http://w3id.org/trajecto/patterns#IndependentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#IndependentGroupMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Independent Group Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#InformationSeekingPoint
+<http://w3id.org/trajecto/patterns#InformationSeekingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#InformationSeekingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#InformationSeekingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A decision point where information is sought to inform movement."@en .
+<http://w3id.org/trajecto/patterns#InformationSeekingPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#InformationSeekingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Information Seeking Point"@en .
+# 
+# http://w3id.org/trajecto/patterns#IrregularPace
+<http://w3id.org/trajecto/patterns#IrregularPace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#IrregularPace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#PacePattern> .
+<http://w3id.org/trajecto/patterns#IrregularPace> <http://www.w3.org/2000/01/rdf-schema#comment> "Unpredictable changes in pace throughout a trajectory."@en .
+<http://w3id.org/trajecto/patterns#IrregularPace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#IrregularPace> <http://www.w3.org/2000/01/rdf-schema#label> "Irregular Pace"@en .
+# 
+# http://w3id.org/trajecto/patterns#Junction
+<http://w3id.org/trajecto/patterns#Junction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Junction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#ChoicePoint> .
+<http://w3id.org/trajecto/patterns#Junction> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical junction where multiple paths meet."@en .
+<http://w3id.org/trajecto/patterns#Junction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Junction> <http://www.w3.org/2000/01/rdf-schema#label> "Junction"@en .
+# 
+# http://w3id.org/trajecto/patterns#LeaderFollowerMovement
+<http://w3id.org/trajecto/patterns#LeaderFollowerMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#LeaderFollowerMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#GroupMovementPattern> .
+<http://w3id.org/trajecto/patterns#LeaderFollowerMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Group following a leader who determines the movement path."@en .
+<http://w3id.org/trajecto/patterns#LeaderFollowerMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#LeaderFollowerMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Leader Follower Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#Linear
+<http://w3id.org/trajecto/patterns#Linear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Linear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DirectionalPattern> .
+<http://w3id.org/trajecto/patterns#Linear> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear, direct movement pattern."@en .
+<http://w3id.org/trajecto/patterns#Linear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Linear> <http://www.w3.org/2000/01/rdf-schema#label> "Linear"@en .
+# 
+# http://w3id.org/trajecto/patterns#LingeringSegment
+<http://w3id.org/trajecto/patterns#LingeringSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#LingeringSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#LingeringSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment characterized by prolonged stay in one area."@en .
+<http://w3id.org/trajecto/patterns#LingeringSegment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#LingeringSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Lingering Segment"@en .
+# 
+# http://w3id.org/trajecto/patterns#MapCheckingPoint
+<http://w3id.org/trajecto/patterns#MapCheckingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#MapCheckingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#InformationSeekingPoint> .
+<http://w3id.org/trajecto/patterns#MapCheckingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A point where a map or navigation aid is consulted."@en .
+<http://w3id.org/trajecto/patterns#MapCheckingPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#MapCheckingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Map Checking Point"@en .
+# 
+# http://w3id.org/trajecto/patterns#MovementPattern
+<http://w3id.org/trajecto/patterns#MovementPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#MovementPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/patterns#MovementPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A recognizable pattern in movement behavior."@en .
+<http://w3id.org/trajecto/patterns#MovementPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#MovementPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Movement Pattern"@en .
+<http://w3id.org/trajecto/patterns#MovementPattern> <http://www.w3.org/2004/02/skos/core#definition> "A distinct, identifiable pattern in how a person or group moves through space over time."@en .
+# 
+# http://w3id.org/trajecto/patterns#MultiDestination
+<http://w3id.org/trajecto/patterns#MultiDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#MultiDestination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#MultiDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement visiting multiple destinations."@en .
+<http://w3id.org/trajecto/patterns#MultiDestination> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#MultiDestination> <http://www.w3.org/2000/01/rdf-schema#label> "Multi Destination"@en .
+# 
+# http://w3id.org/trajecto/patterns#PacePattern
+<http://w3id.org/trajecto/patterns#PacePattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#PacePattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#BehavioralPattern> .
+<http://w3id.org/trajecto/patterns#PacePattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the pace or rhythm of movement."@en .
+<http://w3id.org/trajecto/patterns#PacePattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#PacePattern> <http://www.w3.org/2000/01/rdf-schema#label> "Pace Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#Path
+<http://w3id.org/trajecto/patterns#Path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Path> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/patterns#Path> <http://www.w3.org/2000/01/rdf-schema#comment> "A potential path that could be taken from a decision point."@en .
+<http://w3id.org/trajecto/patterns#Path> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Path> <http://www.w3.org/2000/01/rdf-schema#label> "Path"@en .
+# 
+# http://w3id.org/trajecto/patterns#PingPongVisit
+<http://w3id.org/trajecto/patterns#PingPongVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#PingPongVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#VisitPattern> .
+<http://w3id.org/trajecto/patterns#PingPongVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "Moving back and forth between a small number of points repeatedly."@en .
+<http://w3id.org/trajecto/patterns#PingPongVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#PingPongVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Ping Pong Visit"@en .
+# 
+# http://w3id.org/trajecto/patterns#RandomWalk
+<http://w3id.org/trajecto/patterns#RandomWalk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#RandomWalk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DirectionalPattern> .
+<http://w3id.org/trajecto/patterns#RandomWalk> <http://www.w3.org/2000/01/rdf-schema#comment> "Random, unpredictable movement pattern."@en .
+<http://w3id.org/trajecto/patterns#RandomWalk> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#RandomWalk> <http://www.w3.org/2000/01/rdf-schema#label> "Random Walk"@en .
+# 
+# http://w3id.org/trajecto/patterns#ReorientationPoint
+<http://w3id.org/trajecto/patterns#ReorientationPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#ReorientationPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionPoint> .
+<http://w3id.org/trajecto/patterns#ReorientationPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A decision point where a change in direction or plan occurs."@en .
+<http://w3id.org/trajecto/patterns#ReorientationPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#ReorientationPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Reorientation Point"@en .
+# 
+# http://w3id.org/trajecto/patterns#RhythmicPace
+<http://w3id.org/trajecto/patterns#RhythmicPace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#RhythmicPace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#PacePattern> .
+<http://w3id.org/trajecto/patterns#RhythmicPace> <http://www.w3.org/2000/01/rdf-schema#comment> "Regular alternation between faster and slower movement."@en .
+<http://w3id.org/trajecto/patterns#RhythmicPace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#RhythmicPace> <http://www.w3.org/2000/01/rdf-schema#label> "Rhythmic Pace"@en .
+# 
+# http://w3id.org/trajecto/patterns#SequentialVisit
+<http://w3id.org/trajecto/patterns#SequentialVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SequentialVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#VisitPattern> .
+<http://w3id.org/trajecto/patterns#SequentialVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "Visiting points of interest in a sequential order."@en .
+<http://w3id.org/trajecto/patterns#SequentialVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SequentialVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Sequential Visit"@en .
+# 
+# http://w3id.org/trajecto/patterns#SignageCheckPoint
+<http://w3id.org/trajecto/patterns#SignageCheckPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SignageCheckPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#InformationSeekingPoint> .
+<http://w3id.org/trajecto/patterns#SignageCheckPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A point where signage is read or consulted."@en .
+<http://w3id.org/trajecto/patterns#SignageCheckPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SignageCheckPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Signage Check Point"@en .
+# 
+# http://w3id.org/trajecto/patterns#SingleDestination
+<http://w3id.org/trajecto/patterns#SingleDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SingleDestination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#SingleDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement focused on reaching a single destination."@en .
+<http://w3id.org/trajecto/patterns#SingleDestination> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SingleDestination> <http://www.w3.org/2000/01/rdf-schema#label> "Single Destination"@en .
+# 
+# http://w3id.org/trajecto/patterns#SlowPaced
+<http://w3id.org/trajecto/patterns#SlowPaced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SlowPaced> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#PacePattern> .
+<http://w3id.org/trajecto/patterns#SlowPaced> <http://www.w3.org/2000/01/rdf-schema#comment> "Consistently slow, leisurely movement throughout a trajectory."@en .
+<http://w3id.org/trajecto/patterns#SlowPaced> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SlowPaced> <http://www.w3.org/2000/01/rdf-schema#label> "Slow Paced"@en .
+# 
+# http://w3id.org/trajecto/patterns#SpatioTemporalPattern
+<http://w3id.org/trajecto/patterns#SpatioTemporalPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SpatioTemporalPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#SpatioTemporalPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the spatial and temporal aspects of movement."@en .
+<http://w3id.org/trajecto/patterns#SpatioTemporalPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SpatioTemporalPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Spatio Temporal Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#SplitAndMergeMovement
+<http://w3id.org/trajecto/patterns#SplitAndMergeMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SplitAndMergeMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#GroupMovementPattern> .
+<http://w3id.org/trajecto/patterns#SplitAndMergeMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Group repeatedly splitting apart and reconvening."@en .
+<http://w3id.org/trajecto/patterns#SplitAndMergeMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SplitAndMergeMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Split and Merge Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#SpreadTimePattern
+<http://w3id.org/trajecto/patterns#SpreadTimePattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SpreadTimePattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#SpatioTemporalPattern> .
+<http://w3id.org/trajecto/patterns#SpreadTimePattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern where activity is spread out over a longer time span."@en .
+<http://w3id.org/trajecto/patterns#SpreadTimePattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SpreadTimePattern> <http://www.w3.org/2000/01/rdf-schema#label> "Spread Time Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#SteadyMovement
+<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#FocusPattern> .
+<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."@en .
+<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#SteadyMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Steady Movement"@en .
+# 
+# http://w3id.org/trajecto/patterns#StopAndWait
+<http://w3id.org/trajecto/patterns#StopAndWait> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#StopAndWait> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DecisionOutcome> .
+<http://w3id.org/trajecto/patterns#StopAndWait> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision to stop movement temporarily."@en .
+<http://w3id.org/trajecto/patterns#StopAndWait> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#StopAndWait> <http://www.w3.org/2000/01/rdf-schema#label> "Stop and Wait"@en .
+# 
+# http://w3id.org/trajecto/patterns#TargetedSegment
+<http://w3id.org/trajecto/patterns#TargetedSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#TargetedSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#TargetedSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment characterized by direct, purposeful movement toward a destination."@en .
+<http://w3id.org/trajecto/patterns#TargetedSegment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#TargetedSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Targeted Segment"@en .
+# 
+# http://w3id.org/trajecto/patterns#TrajectorySegmentType
+<http://w3id.org/trajecto/patterns#TrajectorySegmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#TrajectorySegmentType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/patterns#TrajectorySegmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification of trajectory segments by behavioral characteristics."@en .
+<http://w3id.org/trajecto/patterns#TrajectorySegmentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#TrajectorySegmentType> <http://www.w3.org/2000/01/rdf-schema#label> "Trajectory Segment Type"@en .
+# 
+# http://w3id.org/trajecto/patterns#TransitionSegment
+<http://w3id.org/trajecto/patterns#TransitionSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#TransitionSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#TrajectorySegmentType> .
+<http://w3id.org/trajecto/patterns#TransitionSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment characterized by movement between different spaces or zones."@en .
+<http://w3id.org/trajecto/patterns#TransitionSegment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#TransitionSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Segment"@en .
+# 
+# http://w3id.org/trajecto/patterns#VariableDwell
+<http://w3id.org/trajecto/patterns#VariableDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DwellPattern> .
+<http://w3id.org/trajecto/patterns#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "Highly variable dwell times across different points of interest."@en .
+<http://w3id.org/trajecto/patterns#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Dwell"@en .
+# 
+# http://w3id.org/trajecto/patterns#VelocityPattern
+<http://w3id.org/trajecto/patterns#VelocityPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#VelocityPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#MovementPattern> .
+<http://w3id.org/trajecto/patterns#VelocityPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in the velocity of movement."@en .
+<http://w3id.org/trajecto/patterns#VelocityPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#VelocityPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Velocity Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#VisitPattern
+<http://w3id.org/trajecto/patterns#VisitPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#VisitPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#BehavioralPattern> .
+<http://w3id.org/trajecto/patterns#VisitPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern in how points of interest are visited."@en .
+<http://w3id.org/trajecto/patterns#VisitPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#VisitPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Visit Pattern"@en .
+# 
+# http://w3id.org/trajecto/patterns#Zigzag
+<http://w3id.org/trajecto/patterns#Zigzag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/patterns#Zigzag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/patterns#DirectionalPattern> .
+<http://w3id.org/trajecto/patterns#Zigzag> <http://www.w3.org/2000/01/rdf-schema#comment> "Zigzagging movement pattern with regular direction changes."@en .
+<http://w3id.org/trajecto/patterns#Zigzag> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto/patterns#Zigzag> <http://www.w3.org/2000/01/rdf-schema#label> "Zigzag"@en .
+# 
+# http://www.datacron-project.eu/datAcron#Segment
+<http://www.datacron-project.eu/datAcron#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

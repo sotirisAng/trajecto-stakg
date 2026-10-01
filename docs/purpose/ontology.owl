@@ -1,0 +1,950 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/trajecto/purpose#"
+     xml:base="http://w3id.org/trajecto/purpose"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/trajecto/purpose">
+        <owl:versionIRI rdf:resource="http://w3id.org/trajecto/purpose/1.1.0"/>
+        <owl:imports rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-09</terms:created>
+        <terms:creator>Konstantinos Kotis</terms:creator>
+        <terms:creator>Sotirios Angelis</terms:creator>
+        <terms:description xml:lang="en">This module extends the trajecto ontology with a comprehensive framework for representing purposes of movement.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
+        <terms:publisher>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</terms:publisher>
+        <terms:title xml:lang="en">Trajecto Purpose Module</terms:title>
+        <vann:preferredNamespacePrefix>purpose</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/trajecto/purpose#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">trajecto-purpose</rdfs:label>
+        <owl:priorVersion rdf:resource="http://w3id.org/trajecto/purpose/1.0"/>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto#hasPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto#hasPurpose"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#fromPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#fromPurpose">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeTransition"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Specifies the original purpose before a transition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">from purpose</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasOpportunisticPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#hasOpportunisticPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Specifies unplanned purposes that emerge during the trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has opportunistic purpose</rdfs:label>
+        <skos:definition xml:lang="en">Spontaneous or unplanned purposes that arise during the trajectory and influence movement patterns.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPrimaryPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#hasPrimaryPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Specifies the main purpose of a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has primary purpose</rdfs:label>
+        <skos:definition xml:lang="en">The primary motivation or goal behind the movement represented by the trajectory.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposeCharacteristic -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposeCharacteristic">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Links a purpose category to its characteristic properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposeHierarchy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposeHierarchy">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeHierarchy"/>
+        <rdfs:comment xml:lang="en">Links a trajectory to its complete purpose hierarchy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose hierarchy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposeTransition -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposeTransition">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeTransition"/>
+        <rdfs:comment xml:lang="en">Links a trajectory to purpose transitions that occur within it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose transition</rdfs:label>
+        <skos:definition xml:lang="en">Identifies changes in movement purpose that occur during a trajectory.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasSecondaryPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#hasSecondaryPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Specifies additional purposes of a trajectory that are not the main driver of movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has secondary purpose</rdfs:label>
+        <skos:definition xml:lang="en">Additional goals or aims that may be fulfilled during the trajectory, but are not the primary motivation for the movement.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#toPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/purpose#toPurpose">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeTransition"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Specifies the new purpose after a transition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">to purpose</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposeConfidenceScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposeConfidenceScore">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Share of the meaningful dwell of a trajectory spent at POIs of its assigned purpose, as a percentage (0 to 100).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose confidence score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposeDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposeDuration">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <rdfs:comment xml:lang="en">Specifies the typical duration associated with a purpose.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposeFrequency -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposeFrequency">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Describes how frequently this purpose typically occurs (e.g., &apos;daily&apos;, &apos;weekly&apos;, &apos;monthly&apos;, &apos;rarely&apos;).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#hasPurposePriority -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/purpose#hasPurposePriority">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Numeric representation of purpose priority, with lower numbers indicating higher priority.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">has purpose priority</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#transitionTimestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/purpose#transitionTimestamp">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/purpose#PurposeTransition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Timestamp when the purpose transition occurred.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">transition timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto#PurposeOfMovement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#PurposeOfMovement"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#ArtisticExperience -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#ArtisticExperience">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to experiencing artistic works or performances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Artistic Experience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#BusinessMeeting -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#BusinessMeeting">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#WorkPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to professional business meetings.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Business Meeting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#CommercialPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#CommercialPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose related to commercial activities such as shopping or services.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Commercial Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated by purchase, consumption or service-seeking activities.</skos:definition>
+        <skos:example xml:lang="en">Shopping, dining out, visiting a bank</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#Commuting -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#Commuting">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#TransportationPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to regular travel between home and work/education.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Commuting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#CulturalEventAttendance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#CulturalEventAttendance">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to attending cultural events, festivals, or performances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Cultural Event Attendance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#CulturalPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#CulturalPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose related to cultural activities and experiences.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Cultural Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated by engagement with cultural artifacts, spaces, or events.</skos:definition>
+        <skos:example xml:lang="en">Museum visits, attending performances, exploring heritage sites</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#DiningExperience -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#DiningExperience">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CommercialPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to dining at restaurants or food establishments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Dining Experience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#DomesticActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#DomesticActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ResidentialPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to household or domestic activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Domestic Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#EducationalPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#EducationalPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose related to learning and educational activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Educational Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated by formal or informal learning objectives.</skos:definition>
+        <skos:example xml:lang="en">School attendance, workshops, field studies, research activities</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#EducationalTour -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#EducationalTour">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#EducationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose that combines cultural experience with educational objectives.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Educational Tour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#EntertainmentAttendance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#EntertainmentAttendance">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#RecreationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to attending entertainment events (cinema, sports, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Entertainment Attendance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#ExerciseActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#ExerciseActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#RecreationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to physical exercise or sports activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Exercise Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#FieldStudy -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#FieldStudy">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#EducationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to educational field studies or site visits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Field Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#FieldWork -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#FieldWork">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#WorkPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to professional work conducted in the field.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Field Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#FineArtsPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#FineArtsPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ArtisticExperience"/>
+        <rdfs:comment xml:lang="en">Purpose related to engagement with paintings, mixed media, mirrors, and installations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Fine Arts Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#FormalLearning -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#FormalLearning">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#EducationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to formal educational activities (classes, lectures).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Formal Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#GeneralPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#GeneralPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <rdfs:comment xml:lang="en">Mixed cultural engagement with no dominant artwork type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">General Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#HeritageExploration -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#HeritageExploration">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to exploring heritage sites or historical locations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Heritage Exploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#HomeBound -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#HomeBound">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ResidentialPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to returning to or staying at home.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Home Bound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#LeisureActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#LeisureActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#RecreationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to casual leisure activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Leisure Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#LocalCommunityEngagement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#LocalCommunityEngagement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ResidentialPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to engaging with the local community near one&apos;s residence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Local Community Engagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#MuseumVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#MuseumVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to visiting museums or exhibitions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Museum Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#OfficeWork -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#OfficeWork">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#WorkPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to working in an office environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Office Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#PhotographyPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#PhotographyPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ArtisticExperience"/>
+        <rdfs:comment xml:lang="en">Purpose related to engagement with photographic works.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Photography Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#PrintPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#PrintPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ArtisticExperience"/>
+        <rdfs:comment xml:lang="en">Purpose related to engagement with prints and printmaking works.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Print Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#ProfessionalEvent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#ProfessionalEvent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#WorkPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to attending professional events, conferences, or trade shows.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Professional Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#PurposeCategory -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#PurposeCategory">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#PurposeOfMovement"/>
+        <rdfs:comment xml:lang="en">A general category of movement purpose.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Purpose Category</rdfs:label>
+        <skos:definition xml:lang="en">A classification of movement purpose into general categories that can be hierarchically organized.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#PurposeHierarchy -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#PurposeHierarchy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">A structure representing the hierarchical organization of movement purposes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Purpose Hierarchy</rdfs:label>
+        <skos:definition xml:lang="en">A construct that represents the organization of primary, secondary, and opportunistic purposes that motivate a trajectory.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#PurposeTransition -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#PurposeTransition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:comment xml:lang="en">Represents a change from one purpose to another during a trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Purpose Transition</rdfs:label>
+        <skos:definition xml:lang="en">An event where the primary motivation for movement changes from one purpose to another.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#RecreationalPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#RecreationalPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose related to leisure and recreational activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Recreational Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated by leisure, entertainment, relaxation, or pleasure.</skos:definition>
+        <skos:example xml:lang="en">Park visits, beach trips, attending sporting events</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#Research -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#Research">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#EducationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to research activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#ResidentialPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#ResidentialPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose related to residential and home-based activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Residential Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated by home-related activities or local community engagement.</skos:definition>
+        <skos:example xml:lang="en">Returning home, local neighborhood activities</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#SculpturePurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#SculpturePurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#ArtisticExperience"/>
+        <rdfs:comment xml:lang="en">Purpose related to engagement with sculptural works.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Sculpture Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#ServiceAccess -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#ServiceAccess">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CommercialPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to accessing commercial services (banking, healthcare, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Service Access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#Shopping -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#Shopping">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#CommercialPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to purchasing goods.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Shopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#SocialGathering -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#SocialGathering">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#RecreationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to meeting and socializing with others.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Social Gathering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#Tourism -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#Tourism">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#RecreationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to visiting places as a tourist.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Tourism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#TransferBetweenModes -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#TransferBetweenModes">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#TransportationPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to transferring between different modes of transportation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Transfer Between Modes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#Transit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#Transit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#TransportationPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose primarily focused on moving from one location to another.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Transit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#TransportationPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#TransportationPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose primarily related to transport and transit between locations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Transportation Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated primarily by the need to travel between locations rather than activities at those locations.</skos:definition>
+        <skos:example xml:lang="en">Commuting, transit transfers, wandering</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#Wandering -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#Wandering">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#TransportationPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose involving movement without a specific destination or goal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Wandering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#WorkPurpose -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#WorkPurpose">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#PurposeCategory"/>
+        <rdfs:comment xml:lang="en">Movement purpose related to employment and professional activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Work Purpose</rdfs:label>
+        <skos:definition xml:lang="en">Movement motivated by professional responsibilities or employment-related activities.</skos:definition>
+        <skos:example xml:lang="en">Office work, field work, business meetings</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#WorkplaceRoutine -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#WorkplaceRoutine">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#WorkPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to regular workplace routines and activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Workplace Routine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose#WorkshopAttendance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/purpose#WorkshopAttendance">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/purpose#EducationalPurpose"/>
+        <rdfs:comment xml:lang="en">Purpose related to attending workshops, seminars, or training sessions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <rdfs:label xml:lang="en">Workshop Attendance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#Trajectory -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#Trajectory"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

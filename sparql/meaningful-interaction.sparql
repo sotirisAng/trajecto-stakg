@@ -1,0 +1,29 @@
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT {
+    ?interaction a poi:MeaningfulInteraction .
+}
+WHERE {
+    ?interaction poi:hasDwellTime ?dwellTime ;
+          poi:interactsWith ?poi .
+
+    ?poi a ?poiType .
+
+    # Use hasTypeConfiguration property to directly link POI type to its configuration
+    ?poiType poi:hasTypeConfiguration ?configIndividual .
+    ?configIndividual poi:hasMinimumMeaningfulDuration ?minDuration .
+
+    FILTER(?dwellTime >= ?minDuration)
+
+    # Use most specific type when POI has multiple types
+    FILTER NOT EXISTS {
+        ?poi a ?moreSpecificType .
+        ?moreSpecificType poi:hasTypeConfiguration ?moreSpecificConfig .
+        ?moreSpecificConfig poi:hasMinimumMeaningfulDuration ?moreSpecificMin .
+        FILTER(?moreSpecificType != ?poiType)
+        ?moreSpecificType rdfs:subClassOf+ ?poiType .
+    }
+}

@@ -1,0 +1,76 @@
+# SR-11: Category Jaccard similarity between trajectory pairs
+# Shared POI categories / union of POI categories. Materializes pairs > 0.3.
+# Blocking key: trajecto:hasPurpose (only compare trajectories sharing a purpose).
+# NOTE: Batch mode only. For on-demand, use parameterized query in semantic_reasoning.py.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?trajA trajecto:hasJaccardCategorySimilarity [
+        trajecto:withTrajectory ?trajB ;
+        trajecto:similarityScore ?jaccard
+    ] .
+}
+WHERE {
+    # Blocking: only compare pairs sharing a purpose
+    ?trajA trajecto:hasPurpose ?purpose .
+    ?trajB trajecto:hasPurpose ?purpose .
+    FILTER(STR(?trajA) < STR(?trajB))
+
+    {
+        SELECT ?trajA ?trajB
+            (COUNT(DISTINCT ?sharedCat) AS ?shared)
+            (COUNT(DISTINCT ?unionCat) AS ?total)
+        WHERE {
+            {
+                # Categories of trajA
+                ?posA dul:isPartOf ?trajA .
+                ?posA trajecto:hasInteraction ?intA .
+                ?intA a poi:MeaningfulInteraction .
+                ?intA poi:interactsWith ?poiA .
+                ?poiA a ?catA .
+                FILTER(?catA != trajecto:PointOfInterest)
+                FILTER(?catA != poi:SignificantPOI)
+                BIND(?catA AS ?unionCat)
+            }
+            UNION
+            {
+                # Categories of trajB
+                ?posB dul:isPartOf ?trajB .
+                ?posB trajecto:hasInteraction ?intB .
+                ?intB a poi:MeaningfulInteraction .
+                ?intB poi:interactsWith ?poiB .
+                ?poiB a ?catB .
+                FILTER(?catB != trajecto:PointOfInterest)
+                FILTER(?catB != poi:SignificantPOI)
+                BIND(?catB AS ?unionCat)
+            }
+
+            # Shared categories
+            OPTIONAL {
+                ?posAS dul:isPartOf ?trajA .
+                ?posAS trajecto:hasInteraction ?intAS .
+                ?intAS a poi:MeaningfulInteraction .
+                ?intAS poi:interactsWith ?poiAS .
+                ?poiAS a ?catS .
+                FILTER(?catS != trajecto:PointOfInterest)
+                FILTER(?catS != poi:SignificantPOI)
+
+                ?posBS dul:isPartOf ?trajB .
+                ?posBS trajecto:hasInteraction ?intBS .
+                ?intBS a poi:MeaningfulInteraction .
+                ?intBS poi:interactsWith ?poiBS .
+                ?poiBS a ?catS .
+
+                BIND(?catS AS ?sharedCat)
+            }
+        }
+        GROUP BY ?trajA ?trajB
+    }
+
+    BIND(IF(?total > 0, xsd:float(?shared) / xsd:float(?total), 0.0) AS ?jaccard)
+    FILTER(?jaccard > 0.3)
+}

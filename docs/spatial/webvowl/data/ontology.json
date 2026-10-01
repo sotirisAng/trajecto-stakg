@@ -1,0 +1,2701 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl", "http://w3id.org/trajecto", "http://www.datacron-project.eu/datAcron", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2003/01/geo/wgs84_pos", "http://www.w3.org/2001/XMLSchema", "http://w3id.org/trajecto/spatial", "http://xmlns.com/foaf/0.1" ],
+    "title" : {
+      "en" : "Trajecto Spatial Analysis Module"
+    },
+    "iri" : "http://w3id.org/trajecto/spatial",
+    "version" : "1.1.0",
+    "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
+    "description" : {
+      "en" : "This module extends the trajecto ontology with comprehensive spatial analysis capabilities for trajectory proximity detection and spatial relationship modeling."
+    },
+    "labels" : {
+      "en" : "trajecto-spatial"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial/1.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sotirios Angelis",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Konstantinos Kotis",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-05-30",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "spatial",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Spatial Analysis Module",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto#PointOfInterest",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointOfInterest"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Quality"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ProximityZone",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A circular or polygonal area around a POI within which trajectory points are considered to be in proximity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProximityZone",
+      "en" : "Proximity Zone"
+    },
+    "subClasses" : [ "8", "9", "10" ],
+    "comment" : {
+      "en" : "A defined spatial zone around a point of interest for proximity detection."
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ImmediateProximity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ImmediateProximity",
+      "en" : "Immediate Proximity"
+    },
+    "comment" : {
+      "en" : "Immediate proximity (typically 0-10 meters)."
+    },
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ManhattanMetric",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ManhattanMetric",
+      "en" : "Manhattan Metric"
+    },
+    "comment" : {
+      "en" : "Manhattan distance metric for grid-based distance calculation."
+    },
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialAnalysisAlgorithm",
+      "en" : "Spatial Analysis Algorithm"
+    },
+    "subClasses" : [ "37", "35", "32", "38" ],
+    "comment" : {
+      "en" : "Algorithm used for spatial proximity analysis."
+    },
+    "id" : "33",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#LowQuality",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LowQuality",
+      "en" : "Low Quality"
+    },
+    "comment" : {
+      "en" : "Low quality spatial analysis with unreliable results."
+    },
+    "id" : "44",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ProximityInteraction",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProximityInteraction",
+      "en" : "Proximity Interaction"
+    },
+    "comment" : {
+      "en" : "Interaction based on being within proximity threshold."
+    },
+    "id" : "45",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialContext",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Contextual information about the spatial environment and relationships relevant to trajectory analysis.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialContext",
+      "en" : "Spatial Context"
+    },
+    "subClasses" : [ "40", "24", "21", "28" ],
+    "comment" : {
+      "en" : "Spatial context information for trajectory analysis."
+    },
+    "id" : "22",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#VoronoiAnalysis",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VoronoiAnalysis",
+      "en" : "Voronoi Analysis"
+    },
+    "comment" : {
+      "en" : "Voronoi diagram-based spatial analysis algorithm."
+    },
+    "id" : "37",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "49",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialCluster",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A group of trajectories that exhibit similar spatial proximity patterns to points of interest.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialCluster",
+      "en" : "Spatial Cluster"
+    },
+    "subClasses" : [ "26", "17", "14" ],
+    "comment" : {
+      "en" : "A cluster of trajectories based on spatial proximity patterns."
+    },
+    "id" : "15",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#RuralSpatialContext",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RuralSpatialContext",
+      "en" : "Rural Spatial Context"
+    },
+    "comment" : {
+      "en" : "Spatial context in rural environments with low POI density."
+    },
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ProximityAnalysis",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An analytical process that identifies and measures spatial relationships between trajectory elements and points of interest.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProximityAnalysis",
+      "en" : "Proximity Analysis"
+    },
+    "comment" : {
+      "en" : "A comprehensive analysis of spatial proximity relationships in a trajectory."
+    },
+    "id" : "63",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#KNearestNeighbor",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "KNearestNeighbor",
+      "en" : "K Nearest Neighbor"
+    },
+    "comment" : {
+      "en" : "K-nearest neighbor algorithm for proximity analysis."
+    },
+    "id" : "32",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#PolygonalZone",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PolygonalZone",
+      "en" : "Polygonal Zone"
+    },
+    "comment" : {
+      "en" : "A polygonal proximity zone defined by boundary coordinates."
+    },
+    "id" : "10",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto#EntityOfInterest",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntityOfInterest"
+    },
+    "attributes" : [ "external" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialRelationship",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A formalized spatial relationship that describes how trajectory elements relate to entities in space.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialRelationship",
+      "en" : "Spatial Relationship"
+    },
+    "comment" : {
+      "en" : "A spatial relationship between trajectory elements and entities of interest."
+    },
+    "id" : "80",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#Trajectory",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trajectory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#AttractionInteraction",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AttractionInteraction",
+      "en" : "Attraction Interaction"
+    },
+    "comment" : {
+      "en" : "Interaction where POI attracts trajectory movement."
+    },
+    "id" : "75",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpatialThing",
+      "en" : "SpatialThing"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "en" : "Anything with spatial extent, i.e. size, shape, or position.\n e.g. people, places, bowling balls, as well as abstract areas like cubes.\n"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#NearbyProximity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NearbyProximity",
+      "en" : "Nearby Proximity"
+    },
+    "comment" : {
+      "en" : "Nearby proximity (typically 50-100 meters)."
+    },
+    "id" : "108",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ProximityLevel",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProximityLevel",
+      "en" : "Proximity Level"
+    },
+    "subClasses" : [ "11", "109", "108", "110", "111" ],
+    "comment" : {
+      "en" : "Classification level for spatial proximity."
+    },
+    "id" : "12",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#EuclideanMetric",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EuclideanMetric",
+      "en" : "Euclidean Metric"
+    },
+    "comment" : {
+      "en" : "Euclidean distance metric for straight-line distance calculation."
+    },
+    "id" : "67",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#TrajectoryPart",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrajectoryPart"
+    },
+    "attributes" : [ "external" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#TrajectoryCluster",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrajectoryCluster"
+    },
+    "subClasses" : [ "15" ],
+    "attributes" : [ "external" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#UrbanSpatialContext",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UrbanSpatialContext",
+      "en" : "Urban Spatial Context"
+    },
+    "comment" : {
+      "en" : "Spatial context in urban environments with high POI density."
+    },
+    "id" : "24",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#OutdoorSpatialContext",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OutdoorSpatialContext",
+      "en" : "Outdoor Spatial Context"
+    },
+    "comment" : {
+      "en" : "Spatial context for outdoor trajectory analysis."
+    },
+    "id" : "28",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Situation"
+    },
+    "subClasses" : [ "63", "22" ],
+    "attributes" : [ "external" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#HighQuality",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HighQuality",
+      "en" : "High Quality"
+    },
+    "comment" : {
+      "en" : "High quality spatial analysis with reliable results."
+    },
+    "id" : "65",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialCorridor",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialCorridor",
+      "en" : "Spatial Corridor"
+    },
+    "comment" : {
+      "en" : "Linear feature showing common trajectory paths."
+    },
+    "id" : "88",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialInteraction",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An interaction between trajectory elements and entities based on spatial proximity criteria.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialInteraction",
+      "en" : "Spatial Interaction"
+    },
+    "subClasses" : [ "45", "76" ],
+    "comment" : {
+      "en" : "Interaction defined by spatial proximity relationships."
+    },
+    "id" : "46",
+    "superClasses" : [ "83" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#DistanceMeasurement",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A structured measurement containing distance values calculated using different metrics.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DistanceMeasurement",
+      "en" : "Distance Measurement"
+    },
+    "comment" : {
+      "en" : "A measurement of distance between spatial entities."
+    },
+    "id" : "92",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto#RegionOfInterest",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegionOfInterest"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#NoiseCluster",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NoiseCluster",
+      "en" : "Noise Cluster"
+    },
+    "comment" : {
+      "en" : "Trajectories that do not fit into any meaningful spatial cluster."
+    },
+    "id" : "26",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialColdspot",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialColdspot",
+      "en" : "Spatial Coldspot"
+    },
+    "comment" : {
+      "en" : "Area with low concentration of trajectory activity."
+    },
+    "id" : "95",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialHotspot",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialHotspot",
+      "en" : "Spatial Hotspot"
+    },
+    "comment" : {
+      "en" : "Area with high concentration of trajectory activity."
+    },
+    "id" : "90",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialFeature",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialFeature",
+      "en" : "Spatial Feature"
+    },
+    "subClasses" : [ "88", "85", "95", "90" ],
+    "comment" : {
+      "en" : "Spatial feature extracted from trajectory analysis."
+    },
+    "id" : "86",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#IndoorSpatialContext",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IndoorSpatialContext",
+      "en" : "Indoor Spatial Context"
+    },
+    "comment" : {
+      "en" : "Spatial context for indoor trajectory analysis."
+    },
+    "id" : "40",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#AvoidanceInteraction",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AvoidanceInteraction",
+      "en" : "Avoidance Interaction"
+    },
+    "comment" : {
+      "en" : "Interaction where POI causes trajectory avoidance."
+    },
+    "id" : "79",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#MediumQuality",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MediumQuality",
+      "en" : "Medium Quality"
+    },
+    "comment" : {
+      "en" : "Medium quality spatial analysis with acceptable results."
+    },
+    "id" : "128",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SparseCluster",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SparseCluster",
+      "en" : "Sparse Cluster"
+    },
+    "comment" : {
+      "en" : "A spatial cluster with low density of trajectory points."
+    },
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ProximityResult",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A structured result containing distance measurements, proximity classifications, and related metadata for a trajectory-POI pair.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProximityResult",
+      "en" : "Proximity Result"
+    },
+    "comment" : {
+      "en" : "Result of proximity calculation between a trajectory part and a point of interest."
+    },
+    "id" : "30",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#CloseProximity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CloseProximity",
+      "en" : "Close Proximity"
+    },
+    "comment" : {
+      "en" : "Close proximity (typically 10-50 meters)."
+    },
+    "id" : "110",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#DistantProximity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DistantProximity",
+      "en" : "Distant Proximity"
+    },
+    "comment" : {
+      "en" : "Distant proximity (beyond 200 meters)."
+    },
+    "id" : "111",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#ProximityPattern",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProximityPattern",
+      "en" : "Proximity Pattern"
+    },
+    "comment" : {
+      "en" : "Pattern of proximity relationships in trajectory data."
+    },
+    "id" : "85",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#HaversineMetric",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HaversineMetric",
+      "en" : "Haversine Metric"
+    },
+    "comment" : {
+      "en" : "Haversine distance metric accounting for Earth's curvature."
+    },
+    "id" : "62",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#InfluenceZone",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A spatial area where a POI demonstrates measurable attraction or influence on movement patterns.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InfluenceZone",
+      "en" : "Influence Zone"
+    },
+    "comment" : {
+      "en" : "A zone where a point of interest has measurable influence on trajectory behavior."
+    },
+    "id" : "8",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "130",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "positiveInteger"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#BufferAnalysis",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BufferAnalysis",
+      "en" : "Buffer Analysis"
+    },
+    "comment" : {
+      "en" : "Buffer-based proximity analysis algorithm."
+    },
+    "id" : "35",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "142",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#DBSCANClustering",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DBSCANClustering",
+      "en" : "DBSCAN Clustering"
+    },
+    "comment" : {
+      "en" : "DBSCAN clustering algorithm for spatial analysis."
+    },
+    "id" : "38",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "107",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "147",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "146",
+    "label" : {
+      "IRI-based" : "positiveInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Point",
+      "en" : "point"
+    },
+    "comment" : {
+      "en" : "A point, typically described using a coordinate system relative to Earth, such as WGS84.\n  "
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#VicinityProximity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VicinityProximity",
+      "en" : "Vicinity Proximity"
+    },
+    "comment" : {
+      "en" : "Vicinity proximity (typically 100-200 meters)."
+    },
+    "id" : "109",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "144",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#InfluenceInteraction",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InfluenceInteraction",
+      "en" : "Influence Interaction"
+    },
+    "subClasses" : [ "79", "75" ],
+    "comment" : {
+      "en" : "Interaction where POI influences trajectory behavior."
+    },
+    "id" : "76",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#CircularZone",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CircularZone",
+      "en" : "Circular Zone"
+    },
+    "comment" : {
+      "en" : "A circular proximity zone defined by a center point and radius."
+    },
+    "id" : "9",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto#Interaction",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Interaction"
+    },
+    "subClasses" : [ "46" ],
+    "attributes" : [ "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#DistanceMetric",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DistanceMetric",
+      "en" : "Distance Metric"
+    },
+    "subClasses" : [ "18", "62", "67" ],
+    "comment" : {
+      "en" : "A method for calculating distance between spatial points."
+    },
+    "id" : "19",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#SpatialQuality",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialQuality",
+      "en" : "Spatial Quality"
+    },
+    "subClasses" : [ "65", "44", "128" ],
+    "comment" : {
+      "en" : "Quality assessment of spatial analysis results."
+    },
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#DenseCluster",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DenseCluster",
+      "en" : "Dense Cluster"
+    },
+    "comment" : {
+      "en" : "A spatial cluster with high density of trajectory points."
+    },
+    "id" : "17",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Abstract"
+    },
+    "subClasses" : [ "19", "80", "12", "92", "30", "33", "86" ],
+    "attributes" : [ "external" ],
+    "id" : "36"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "125",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "15",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "22",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "15",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "22",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#proximityTo",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "proximityTo",
+      "en" : "proximity to"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Specifies the point of interest that the proximity result refers to."
+    },
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "33",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "22",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "33",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#clustersWith",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "clustersWith",
+      "en" : "clusters with"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Indicates that two trajectories cluster together spatially."
+    },
+    "attributes" : [ "symmetric", "object", "transitive" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/based_near",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "based_near"
+    },
+    "domain" : "49",
+    "subproperty" : [ "50" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "48"
+  }, {
+    "range" : "6",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "6",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "33",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "19",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "5",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "19",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#clusterSize",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "69",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "clusterSize",
+      "en" : "cluster size"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Number of trajectories in the spatial cluster."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#zoneRadius",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "54",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "zoneRadius",
+      "en" : "zone radius"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Radius of the proximity zone in meters."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasDistance",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "72",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDistance",
+      "en" : "has distance"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Distance value in meters between trajectory part and point of interest."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "71"
+  }, {
+    "range" : "76",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#spatialCohesion",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "spatialCohesion",
+      "en" : "spatial cohesion"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Measure of spatial cohesion within the cluster (0.0-1.0)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "range" : "76",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "83",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "86",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "86",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "86",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasHaversineDistance",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "93",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasHaversineDistance",
+      "en" : "has haversine distance"
+    },
+    "domain" : "92",
+    "comment" : {
+      "en" : "Haversine distance in meters, accounting for Earth's curvature."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "91"
+  }, {
+    "range" : "86",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasProximityZone",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProximityZone",
+      "en" : "has proximity zone"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Associates a point of interest with its proximity zone definition."
+    },
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "46",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "associatedWith"
+    },
+    "domain" : "49",
+    "subproperty" : [ "100", "101", "102", "103" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#analysisAccuracy",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "105",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "analysisAccuracy",
+      "en" : "analysis accuracy"
+    },
+    "domain" : "63",
+    "comment" : {
+      "en" : "Accuracy measure of the proximity analysis (0.0-1.0)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasManhattanDistance",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "107",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasManhattanDistance",
+      "en" : "has manhattan distance"
+    },
+    "domain" : "92",
+    "comment" : {
+      "en" : "Manhattan distance in meters."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#proximityScore",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "58",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "proximityScore",
+      "en" : "proximity score"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Normalized proximity score (0.0-1.0) where 1.0 is highest proximity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "113"
+  }, {
+    "range" : "46",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "57",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "12",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "47",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "47",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "12",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "12",
+    "domain" : "110",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "12",
+    "domain" : "108",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#containsTrajectoryPart",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "112",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "containsTrajectoryPart",
+      "en" : "contains trajectory part"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Indicates that a proximity zone contains a trajectory part."
+    },
+    "attributes" : [ "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasProximityAnalysis",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "63",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProximityAnalysis",
+      "en" : "has proximity analysis"
+    },
+    "superproperty" : [ "99" ],
+    "domain" : "43",
+    "comment" : {
+      "en" : "Associates a trajectory with its spatial proximity analysis."
+    },
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasProximityResult",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProximityResult",
+      "en" : "has proximity result"
+    },
+    "superproperty" : [ "99" ],
+    "domain" : "112",
+    "comment" : {
+      "en" : "Associates a trajectory part with its proximity analysis results."
+    },
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasSpatialContext",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSpatialContext",
+      "en" : "has spatial context"
+    },
+    "superproperty" : [ "99" ],
+    "domain" : "112",
+    "comment" : {
+      "en" : "Associates a trajectory part with its spatial context."
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "range" : "36",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasInfluenceZone",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInfluenceZone",
+      "en" : "has influence zone"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Associates a point of interest with its influence zone."
+    },
+    "attributes" : [ "object" ],
+    "id" : "125"
+  }, {
+    "range" : "36",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "location",
+      "en" : "location"
+    },
+    "superproperty" : [ "48" ],
+    "domain" : "49",
+    "comment" : {
+      "en" : "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#withinProximity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "59",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "withinProximity",
+      "en" : "within proximity"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Boolean indicating if the trajectory part is within proximity threshold."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#clusterDensity",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "130",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "clusterDensity",
+      "en" : "cluster density"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Density measure of the spatial cluster."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasSpatialCluster",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSpatialCluster",
+      "en" : "has spatial cluster"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Associates a trajectory with a spatial cluster based on proximity patterns."
+    },
+    "attributes" : [ "object" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#usesDistanceMetric",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "19",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesDistanceMetric",
+      "en" : "uses distance metric"
+    },
+    "domain" : "92",
+    "comment" : {
+      "en" : "Specifies the distance metric used in a measurement."
+    },
+    "attributes" : [ "object" ],
+    "id" : "132"
+  }, {
+    "range" : "36",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "36",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "36",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "range" : "5",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasSpatialRelationship",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "80",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSpatialRelationship",
+      "en" : "has spatial relationship"
+    },
+    "domain" : "112",
+    "comment" : {
+      "en" : "Associates a trajectory part with its spatial relationships."
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "range" : "5",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "138"
+  }, {
+    "range" : "36",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "range" : "36",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasEuclideanDistance",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "142",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEuclideanDistance",
+      "en" : "has euclidean distance"
+    },
+    "domain" : "92",
+    "comment" : {
+      "en" : "Euclidean distance in meters."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#spatiallyInteractsWith",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "73",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "spatiallyInteractsWith",
+      "en" : "spatially interacts with"
+    },
+    "superproperty" : [ "99" ],
+    "domain" : "112",
+    "comment" : {
+      "en" : "Indicates spatial interaction between trajectory part and entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#analysisTimestamp",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "144",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "analysisTimestamp",
+      "en" : "analysis timestamp"
+    },
+    "domain" : "63",
+    "comment" : {
+      "en" : "Timestamp when the proximity analysis was performed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#proximityRank",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "146",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "proximityRank",
+      "en" : "proximity rank"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Rank of proximity (1 = closest) for a trajectory part among all nearby POIs."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#relatedTo",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "73",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relatedTo",
+      "en" : "related to"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Specifies the entity that the spatial relationship involves."
+    },
+    "attributes" : [ "object" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#hasDistanceMeasurement",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "92",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDistanceMeasurement",
+      "en" : "has distance measurement"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Associates a proximity result with its distance measurement details."
+    },
+    "attributes" : [ "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://w3id.org/trajecto/spatial#influenceRadius",
+    "baseIri" : "http://w3id.org/trajecto/spatial",
+    "range" : "147",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/spatial",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "influenceRadius",
+      "en" : "influence radius"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Radius of the influence zone in meters."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "150"
+  } ]
+}

@@ -1,0 +1,51 @@
+# SR-13: Temporal context overlap between trajectory pairs
+# Jaccard over shared temporal contexts (time of day, day type, season).
+# Blocking key: trajecto:hasPurpose.
+# NOTE: Batch mode only.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX context:  <http://w3id.org/trajecto/context#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?trajA trajecto:hasTemporalOverlap [
+        trajecto:withTrajectory ?trajB ;
+        trajecto:similarityScore ?jaccard
+    ] .
+}
+WHERE {
+    # Blocking: shared purpose
+    ?trajA trajecto:hasPurpose ?purpose .
+    ?trajB trajecto:hasPurpose ?purpose .
+    FILTER(STR(?trajA) < STR(?trajB))
+
+    {
+        SELECT ?trajA ?trajB
+            (COUNT(DISTINCT ?sharedCtx) AS ?shared)
+        WHERE {
+            ?trajA context:hasTemporalContext ?sharedCtx .
+            ?trajB context:hasTemporalContext ?sharedCtx .
+        }
+        GROUP BY ?trajA ?trajB
+    }
+
+    {
+        SELECT ?trajA ?trajB
+            (COUNT(DISTINCT ?anyCtx) AS ?total)
+        WHERE {
+            {
+                ?trajA context:hasTemporalContext ?ctxA .
+                BIND(?ctxA AS ?anyCtx)
+            }
+            UNION
+            {
+                ?trajB context:hasTemporalContext ?ctxB .
+                BIND(?ctxB AS ?anyCtx)
+            }
+        }
+        GROUP BY ?trajA ?trajB
+    }
+
+    BIND(IF(?total > 0, xsd:float(?shared) / xsd:float(?total), 0.0) AS ?jaccard)
+    FILTER(?jaccard > 0.0)
+}

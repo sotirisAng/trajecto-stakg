@@ -1,0 +1,55 @@
+# SR-31: Preference gap filling
+# POIs in categories the user has affinity for but hasn't visited yet.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?prefScore
+WHERE {
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputUser trajecto:formsTrajectory ?inputTraj .
+
+    # User has affinity for this category
+    ?inputUser user:hasAffinityFor ?poiCat .
+
+    # Get preference score for ranking
+    ?inputUser user:hasInferredPreference ?pref .
+    ?pref user:forCategory ?poiCat .
+    ?pref user:preferenceScore ?prefScore .
+
+    # Find POIs in that category
+    ?poi a ?poiCat .
+    FILTER(?poiCat != trajecto:PointOfInterest)
+    FILTER(?poiCat != poi:SignificantPOI)
+
+    # Exclude transportation/utility/navigation categories
+    # (generated from context_recommender.EXCLUDED_CATEGORIES by regenerate_sr_exclusions.py — do not edit by hand)
+    FILTER(?poiCat NOT IN (
+        poi:ATM, poi:Airport, poi:Bank, poi:BusStation, poi:Clinic,
+        poi:DentalOffice, poi:DoctorsOffice, poi:Elevator, poi:Embassy,
+        poi:Entrance, poi:Escalator, poi:Exit, poi:GovernmentBuilding,
+        poi:HealthcareFacility, poi:HealthcarePOI, poi:Hospital,
+        poi:Intersection, poi:Junction, poi:MedicalFacility,
+        poi:NavigationLandmark, poi:None, poi:OfficeBuilding,
+        poi:ParkingArea, poi:Pharmacy, poi:PostOffice,
+        poi:PublicService, poi:RestRoom, poi:Restroom, poi:SeatingArea,
+        poi:ServicePOI, poi:Staircase, poi:TrainStation, poi:TransitPOI,
+        poi:TransitStop, poi:Transition, poi:TransitionPOI,
+        poi:Transportation, poi:TransportationPOI, poi:Uncategorized,
+        poi:Unknown, poi:VendingMachine, poi:WaterFountain,
+        poi:Waypoint, poi:nan
+    ))
+
+    # Exclude already-visited POIs
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?inputUser trajecto:formsTrajectory ?visitTraj .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-31:preference-gap" AS ?rule)
+}

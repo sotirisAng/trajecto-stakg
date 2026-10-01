@@ -1,0 +1,48 @@
+# SR-10: Materialize engagement levels per trajectory
+# High: >=5 immersive, Medium: >=3 and <5, Low: remainder.
+# Matches museum_recommender._compute_engagement_levels() thresholds.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# High engagement: >= 5 immersive interactions
+INSERT { ?traj trajecto:hasEngagementLevel trajecto:HighEngagement . }
+WHERE {
+    {
+        SELECT ?traj (COUNT(DISTINCT ?ii) AS ?ic)
+        WHERE {
+            ?pos dul:isPartOf ?traj .
+            ?pos trajecto:hasInteraction ?ii .
+            ?ii a poi:ImmersiveInteraction .
+        }
+        GROUP BY ?traj
+        HAVING (COUNT(DISTINCT ?ii) >= 5)
+    }
+};
+
+# Medium engagement: >= 3 immersive, < 5 immersive
+INSERT { ?traj trajecto:hasEngagementLevel trajecto:MediumEngagement . }
+WHERE {
+    {
+        SELECT ?traj (COUNT(DISTINCT ?ii) AS ?ic)
+        WHERE {
+            ?pos dul:isPartOf ?traj .
+            ?pos trajecto:hasInteraction ?ii .
+            ?ii a poi:ImmersiveInteraction .
+        }
+        GROUP BY ?traj
+        HAVING (COUNT(DISTINCT ?ii) >= 3 && COUNT(DISTINCT ?ii) < 5)
+    }
+    FILTER NOT EXISTS { ?traj trajecto:hasEngagementLevel trajecto:HighEngagement }
+};
+
+# Low engagement: everything else that has at least one interaction
+INSERT { ?traj trajecto:hasEngagementLevel trajecto:LowEngagement . }
+WHERE {
+    ?pos dul:isPartOf ?traj .
+    ?pos trajecto:hasInteraction ?int .
+    ?int a poi:POIInteraction .
+    FILTER NOT EXISTS { ?traj trajecto:hasEngagementLevel ?any }
+}

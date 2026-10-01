@@ -1,0 +1,118 @@
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix poi:      <http://w3id.org/trajecto/poi#> .
+@prefix patterns: <http://w3id.org/trajecto/patterns#> .
+@prefix purpose:  <http://w3id.org/trajecto/purpose#> .
+@prefix user:     <http://w3id.org/trajecto/user#> .
+@prefix dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix ex:       <http://w3id.org/trajecto/validation#> .
+
+# --- Trajectory Validation ---
+
+ex:TrajectoryShape a sh:NodeShape ;
+    sh:targetClass datacron:Trajectory ;
+    sh:property [
+        sh:path patterns:exhibitsPattern ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory must have at least one navigation pattern" ;
+    ] ;
+    sh:property [
+        sh:path trajecto:hasPurpose ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory must have an assigned purpose" ;
+    ] .
+
+# --- POI Interaction Validation ---
+
+ex:InteractionShape a sh:NodeShape ;
+    sh:targetClass poi:POIInteraction ;
+    sh:property [
+        sh:path poi:interactsWith ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Interaction must link to exactly one artwork" ;
+    ] ;
+    sh:property [
+        sh:path poi:hasDwellTimeInSeconds ;
+        sh:minCount 1 ;
+        sh:datatype xsd:float ;
+        sh:minExclusive 0 ;
+        sh:severity sh:Warning ;
+        sh:message "Interaction must have positive dwell time" ;
+    ] .
+
+# --- Position Validation ---
+
+ex:PositionShape a sh:NodeShape ;
+    sh:targetClass datacron:RawPosition ;
+    sh:property [
+        sh:path dul:isPartOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Position must belong to exactly one trajectory" ;
+    ] .
+
+# --- Point Validation (indoor coordinates) ---
+
+ex:PointShape a sh:NodeShape ;
+    sh:targetClass datacron:Point ;
+    sh:property [
+        sh:path trajecto:hasEasting ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float ;
+        sh:severity sh:Violation ;
+        sh:message "Point must have an easting (x) coordinate" ;
+    ] ;
+    sh:property [
+        sh:path trajecto:hasNorthing ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float ;
+        sh:severity sh:Violation ;
+        sh:message "Point must have a northing (y) coordinate" ;
+    ] ;
+    sh:property [
+        sh:path trajecto:floor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+        sh:message "Point must have a floor number" ;
+    ] .
+
+# --- Artwork (PointOfInterest) Validation ---
+
+ex:ArtworkShape a sh:NodeShape ;
+    sh:targetClass trajecto:PointOfInterest ;
+    sh:property [
+        sh:path poi:hasType ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "Artwork must have an artwork type" ;
+    ] ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Artwork should have a label" ;
+    ] .
+
+# --- User Profile Validation ---
+
+ex:UserProfileShape a sh:NodeShape ;
+    sh:targetClass user:UserProfile ;
+    sh:property [
+        sh:path user:profileCreated ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message "User profile must have creation timestamp" ;
+    ] .

@@ -1,0 +1,601 @@
+@prefix : <http://w3id.org/trajecto/user#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/trajecto/user#> .
+
+<http://w3id.org/trajecto/user> rdf:type owl:Ontology ;
+                                 owl:versionIRI <http://w3id.org/trajecto/user/1.1.0> ;
+                                 <http://purl.org/dc/terms/created> "2025-01-27"^^xsd:date ;
+                                 <http://purl.org/dc/terms/creator> "Konstantinos Kotis" ,
+                                                                    "Sotirios Angelis" ;
+                                 <http://purl.org/dc/terms/description> "User profiles learned from trajectories: a UserProfile per person, a chain of timestamped ProfileSnapshots updated by an exponentially weighted moving average, POI category, dwell and time preferences, visit styles, and the preferences inferred by the semantic rules."@en ;
+                                 <http://purl.org/dc/terms/issued> "2026-10-01"^^xsd:date ;
+                                 <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                 <http://purl.org/dc/terms/modified> "2026-10-01"^^xsd:date ;
+                                 <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+                                 <http://purl.org/dc/terms/title> "Trajecto User Profile Module"@en ;
+                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "user" ;
+                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/user#" ;
+                                 rdfs:label "trajecto-user"@en ;
+                                 owl:priorVersion <http://w3id.org/trajecto/user/1.0> ;
+                                 owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/trajecto/user#belongsToUser
+:belongsToUser rdf:type owl:ObjectProperty ;
+               owl:inverseOf :hasTrajectory ;
+               rdfs:domain <http://www.datacron-project.eu/datAcron#Trajectory> ;
+               rdfs:range :UserProfile ;
+               rdfs:comment "Associates a trajectory with its user profile"@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "belongs to user"@en .
+
+
+###  http://w3id.org/trajecto/user#considersTrajectory
+:considersTrajectory rdf:type owl:ObjectProperty ;
+                     rdfs:domain :UserProfile ;
+                     rdfs:range <http://www.datacron-project.eu/datAcron#Trajectory> ;
+                     rdfs:comment "Relates a user profile to a trajectory taken into account when learning it."@en ;
+                     rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                     rdfs:label "considers trajectory"@en .
+
+
+###  http://w3id.org/trajecto/user#forCategory
+:forCategory rdf:type owl:ObjectProperty ;
+             rdfs:domain :Preference ;
+             rdfs:comment "The POI class an inferred preference refers to. The value is a class of the POI module used as an individual."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "for category"@en .
+
+
+###  http://w3id.org/trajecto/user#generatedSnapshot
+:generatedSnapshot rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://www.datacron-project.eu/datAcron#Trajectory> ;
+                   rdfs:range :ProfileSnapshot ;
+                   rdfs:comment "Relates a trajectory to the profile snapshot its update produced."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                   rdfs:label "generated snapshot"@en .
+
+
+###  http://w3id.org/trajecto/user#hasAffinityFor
+:hasAffinityFor rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://w3id.org/trajecto#Person> ;
+                rdfs:comment "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "has affinity for"@en .
+
+
+###  http://w3id.org/trajecto/user#hasDwellPreference
+:hasDwellPreference rdf:type owl:ObjectProperty ;
+                    rdfs:domain :UserProfile ;
+                    rdfs:range :DwellPreference ;
+                    rdfs:comment "Relates a user profile to its dwell preference."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                    rdfs:label "has dwell preference"@en .
+
+
+###  http://w3id.org/trajecto/user#hasInferredPreference
+:hasInferredPreference rdf:type owl:ObjectProperty ;
+                       rdfs:domain <http://w3id.org/trajecto#Person> ;
+                       rdfs:range :Preference ;
+                       rdfs:comment "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                       rdfs:label "has inferred preference"@en .
+
+
+###  http://w3id.org/trajecto/user#hasPreference
+:hasPreference rdf:type owl:ObjectProperty ;
+               rdfs:domain :UserProfile ;
+               rdfs:range :Preference ;
+               rdfs:comment "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "has preference"@en .
+
+
+###  http://w3id.org/trajecto/user#hasPreferences
+:hasPreferences rdf:type owl:ObjectProperty ;
+                rdfs:domain :ProfileSnapshot ;
+                rdfs:range :Preference ;
+                rdfs:comment "Relates a profile snapshot to a POI category preference it holds."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "has preferences"@en .
+
+
+###  http://w3id.org/trajecto/user#hasProfile
+:hasProfile rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://w3id.org/trajecto#Person> ;
+            rdfs:range :UserProfile ;
+            rdfs:comment "Relates a person to their user profile."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+            rdfs:label "has profile"@en .
+
+
+###  http://w3id.org/trajecto/user#hasSnapshot
+:hasSnapshot rdf:type owl:ObjectProperty ;
+             rdfs:domain :UserProfile ;
+             rdfs:range :ProfileSnapshot ;
+             rdfs:comment "Relates a user profile to one of its snapshots."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "has snapshot"@en .
+
+
+###  http://w3id.org/trajecto/user#hasTimePreference
+:hasTimePreference rdf:type owl:ObjectProperty ;
+                   rdfs:domain :UserProfile ;
+                   rdfs:range :TimePreference ;
+                   rdfs:comment "Relates a user profile to its time preference."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                   rdfs:label "has time preference"@en .
+
+
+###  http://w3id.org/trajecto/user#hasTrajectory
+:hasTrajectory rdf:type owl:ObjectProperty ;
+               rdfs:domain :UserProfile ;
+               rdfs:range <http://www.datacron-project.eu/datAcron#Trajectory> ;
+               rdfs:comment "Links a user profile to their trajectories"@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "has trajectory"@en .
+
+
+###  http://w3id.org/trajecto/user#hasVisitStyle
+:hasVisitStyle rdf:type owl:ObjectProperty ;
+               rdfs:domain :UserProfile ;
+               rdfs:range :PreferredStyle ;
+               rdfs:comment "Relates a user profile to its preferred visit style."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "has visit style"@en .
+
+
+###  http://w3id.org/trajecto/user#prefersPoiCategory
+:prefersPoiCategory rdf:type owl:ObjectProperty ;
+                    rdfs:domain :PoiCategoryPreference ;
+                    rdfs:comment "The POI class that a POI category preference scores. The value is a class of the POI module used as an individual."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                    rdfs:label "prefers POI category"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/trajecto/user#alignmentScore
+:alignmentScore rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:float ;
+                rdfs:comment "How well trajectory aligns with user preferences"@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "alignment score"@en .
+
+
+###  http://w3id.org/trajecto/user#confidenceLevel
+:confidenceLevel rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Preference ;
+                 rdfs:range xsd:float ;
+                 rdfs:comment "Confidence in the preference prediction (0.0 to 1.0)"@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                 rdfs:label "confidence level"@en .
+
+
+###  http://w3id.org/trajecto/user#hasInterest
+:hasInterest rdf:type owl:DatatypeProperty ;
+             rdfs:domain :UserProfile ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A free-text interest keyword of a user profile."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "has interest"@en .
+
+
+###  http://w3id.org/trajecto/user#immersiveFraction
+:immersiveFraction rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Preference ;
+                   rdfs:range xsd:float ;
+                   rdfs:comment "Share of the interactions with the category that are immersive (SR-20)."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                   rdfs:label "immersive fraction"@en .
+
+
+###  http://w3id.org/trajecto/user#initialPreferences
+:initialPreferences rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ProfileSnapshot ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:comment "True for the seed snapshot that Stage 8 writes before any trajectory update."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                    rdfs:label "initial preferences"@en .
+
+
+###  http://w3id.org/trajecto/user#interestLevel
+:interestLevel rdf:type owl:DatatypeProperty ;
+               rdfs:domain :UserProfile ;
+               rdfs:range xsd:float ;
+               rdfs:comment "Interest level from 0.0 to 1.0"@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "interest level"@en .
+
+
+###  http://w3id.org/trajecto/user#lastUpdated
+:lastUpdated rdf:type owl:DatatypeProperty ;
+             rdfs:domain :UserProfile ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "When the user profile was last updated."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "last updated"@en .
+
+
+###  http://w3id.org/trajecto/user#learningRate
+:learningRate rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ProfileSnapshot
+                                          :UserProfile
+                                        )
+                          ] ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Smoothing factor alpha of the EWMA preference update (0.15)."@en ;
+              rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+              rdfs:label "learning rate"@en .
+
+
+###  http://w3id.org/trajecto/user#meaningfulFraction
+:meaningfulFraction rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Preference ;
+                    rdfs:range xsd:float ;
+                    rdfs:comment "Share of the interactions with the category that are meaningful (SR-20)."@en ;
+                    rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                    rdfs:label "meaningful fraction"@en .
+
+
+###  http://w3id.org/trajecto/user#observationCount
+:observationCount rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :PoiCategoryPreference ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Number of interactions with the category that a POI category preference has accumulated."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                  rdfs:label "observation count"@en .
+
+
+###  http://w3id.org/trajecto/user#preferenceScore
+:preferenceScore rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Preference ;
+                 rdfs:range xsd:float ;
+                 rdfs:comment "Score from 0.0 to 1.0 indicating preference strength"@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                 rdfs:label "preference score"@en .
+
+
+###  http://w3id.org/trajecto/user#profileCreated
+:profileCreated rdf:type owl:DatatypeProperty ;
+                rdfs:domain :UserProfile ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "When the user profile was created."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "profile created"@en .
+
+
+###  http://w3id.org/trajecto/user#totalVisits
+:totalVisits rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Preference ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "Number of interactions with the category (SR-20)."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "total visits"@en .
+
+
+###  http://w3id.org/trajecto/user#updateTimestamp
+:updateTimestamp rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ProfileSnapshot ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "The time a profile snapshot refers to: the end of the trajectory that produced it."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                 rdfs:label "update timestamp"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/trajecto#Person
+<http://w3id.org/trajecto#Person> rdf:type owl:Class .
+
+
+###  http://w3id.org/trajecto/user#CasualStyle
+:CasualStyle rdf:type owl:Class ;
+             rdfs:subClassOf :PreferredStyle ;
+             rdfs:comment "A preference for unhurried, casual visits."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "Casual Style"@en .
+
+
+###  http://w3id.org/trajecto/user#DwellPreference
+:DwellPreference rdf:type owl:Class ;
+                 rdfs:subClassOf :Preference ;
+                 rdfs:comment "A preference for how long to stay at POIs."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                 rdfs:label "Dwell Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#ExploratoryStyle
+:ExploratoryStyle rdf:type owl:Class ;
+                  rdfs:subClassOf :PreferredStyle ;
+                  rdfs:comment "A preference for visits that cover many POIs."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                  rdfs:label "Exploratory Style"@en .
+
+
+###  http://w3id.org/trajecto/user#ImmersiveStyle
+:ImmersiveStyle rdf:type owl:Class ;
+                rdfs:subClassOf :PreferredStyle ;
+                rdfs:comment "A preference for long, absorbed visits to few POIs."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "Immersive Style"@en .
+
+
+###  http://w3id.org/trajecto/user#LongDwell
+:LongDwell rdf:type owl:Class ;
+           rdfs:subClassOf :DwellPreference ;
+           rdfs:comment "Preference for extended visits (>45 minutes)"@en ;
+           rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+           rdfs:label "Long Dwell"@en .
+
+
+###  http://w3id.org/trajecto/user#MediumDwell
+:MediumDwell rdf:type owl:Class ;
+             rdfs:subClassOf :DwellPreference ;
+             rdfs:comment "Preference for moderate visits (15-45 minutes)"@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "Medium Dwell"@en .
+
+
+###  http://w3id.org/trajecto/user#PoiCategoryPreference
+:PoiCategoryPreference rdf:type owl:Class ;
+                       rdfs:subClassOf :Preference ;
+                       rdfs:comment "Preference for specific POI categories"@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                       rdfs:label "POI Category Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#PreferedStyle
+:PreferedStyle rdf:type owl:Class ;
+               owl:equivalentClass :PreferredStyle ;
+               rdfs:comment "Deprecated since 1.1.0: renamed to PreferredStyle."@en ;
+               rdfs:label "PreferedStyle (deprecated)"@en ;
+               owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3id.org/trajecto/user#Preference
+:Preference rdf:type owl:Class ;
+            rdfs:comment "A preference of a user. Specialized as POI category, dwell, time and visit-style preferences."@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+            rdfs:label "Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#PreferredStyle
+:PreferredStyle rdf:type owl:Class ;
+                rdfs:subClassOf :Preference ;
+                rdfs:comment "The visit style a user prefers: casual, exploratory, immersive or targeted."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "Preferred Style"@en .
+
+
+###  http://w3id.org/trajecto/user#ProfileSnapshot
+:ProfileSnapshot rdf:type owl:Class ;
+                 rdfs:comment "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                 rdfs:label "Profile Snapshot"@en .
+
+
+###  http://w3id.org/trajecto/user#ShortDwell
+:ShortDwell rdf:type owl:Class ;
+            rdfs:subClassOf :DwellPreference ;
+            rdfs:comment "Preference for brief visits (<15 minutes)"@en ;
+            rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+            rdfs:label "Short Dwell"@en .
+
+
+###  http://w3id.org/trajecto/user#TargetedStyle
+:TargetedStyle rdf:type owl:Class ;
+               rdfs:subClassOf :PreferredStyle ;
+               rdfs:comment "A preference for direct visits to one or two POIs."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "Targeted Style"@en .
+
+
+###  http://w3id.org/trajecto/user#TimePreference
+:TimePreference rdf:type owl:Class ;
+                rdfs:subClassOf :Preference ;
+                rdfs:comment "Preference for visit times"@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "Time Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#UserProfile
+:UserProfile rdf:type owl:Class ;
+             rdfs:comment "The learned profile of a person: preferences over POI categories, dwell, time and visit style, kept as a chain of timestamped snapshots."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "User Profile"@en .
+
+
+###  http://w3id.org/trajecto/user#VariableDwell
+:VariableDwell rdf:type owl:Class ;
+               rdfs:subClassOf :DwellPreference ;
+               rdfs:comment "No specific dwell time preference"@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "Variable Dwell"@en .
+
+
+###  http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/trajecto/user#businessTravelerPersona
+:businessTravelerPersona rdf:type owl:NamedIndividual ;
+                         :hasDwellPreference :shortDwellPref ;
+                         :hasVisitStyle :targetedStyle ;
+                         :hasInterest "efficiency" ,
+                                      "restaurants" ,
+                                      "transport" ;
+                         rdfs:comment "Example persona: short, targeted visits to restaurants and transport."@en ;
+                         rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                         rdfs:label "Business Traveler Persona"@en .
+
+
+###  http://w3id.org/trajecto/user#casualStyle
+:casualStyle rdf:type owl:NamedIndividual ,
+                      :CasualStyle ;
+             rdfs:comment "The casual visit style."@en ;
+             rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+             rdfs:label "Casual Visit Style"@en .
+
+
+###  http://w3id.org/trajecto/user#culturalEnthusiastPersona
+:culturalEnthusiastPersona rdf:type owl:NamedIndividual ;
+                           :hasDwellPreference :longDwellPref ;
+                           :hasVisitStyle :immersiveStyle ;
+                           :hasInterest "galleries" ,
+                                        "heritage" ,
+                                        "museums" ;
+                           rdfs:comment "Example persona: long, immersive visits to museums, galleries and heritage."@en ;
+                           rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                           rdfs:label "Cultural Enthusiast Persona"@en .
+
+
+###  http://w3id.org/trajecto/user#exploratoryStyle
+:exploratoryStyle rdf:type owl:NamedIndividual ,
+                           :ExploratoryStyle ;
+                  rdfs:comment "The exploratory visit style."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                  rdfs:label "Exploratory Visit Style"@en .
+
+
+###  http://w3id.org/trajecto/user#immersiveStyle
+:immersiveStyle rdf:type owl:NamedIndividual ,
+                         :ImmersiveStyle ;
+                rdfs:comment "The immersive visit style."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "Immersive Visit Style"@en .
+
+
+###  http://w3id.org/trajecto/user#leisureVisitorPersona
+:leisureVisitorPersona rdf:type owl:NamedIndividual ;
+                       :hasDwellPreference :variableDwellPref ;
+                       :hasVisitStyle :casualStyle ;
+                       :hasInterest "dining" ,
+                                    "entertainment" ,
+                                    "shopping" ;
+                       rdfs:comment "Example persona: casual visits of variable length for dining, shopping and entertainment."@en ;
+                       rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                       rdfs:label "Leisure Visitor Persona"@en .
+
+
+###  http://w3id.org/trajecto/user#longDwellPref
+:longDwellPref rdf:type owl:NamedIndividual ,
+                        :LongDwell ;
+               rdfs:comment "A preference for long dwell (over 45 minutes)."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "Long Dwell Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#mediumDwellPref
+:mediumDwellPref rdf:type owl:NamedIndividual ,
+                          :MediumDwell ;
+                 rdfs:comment "A preference for medium dwell (15 to 45 minutes)."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                 rdfs:label "Medium Dwell Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#shortDwellPref
+:shortDwellPref rdf:type owl:NamedIndividual ,
+                         :ShortDwell ;
+                rdfs:comment "A preference for short dwell (under 15 minutes)."@en ;
+                rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                rdfs:label "Short Dwell Preference"@en .
+
+
+###  http://w3id.org/trajecto/user#targetedStyle
+:targetedStyle rdf:type owl:NamedIndividual ,
+                        :TargetedStyle ;
+               rdfs:comment "The targeted visit style."@en ;
+               rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+               rdfs:label "Targeted Visit Style"@en .
+
+
+###  http://w3id.org/trajecto/user#touristExplorerPersona
+:touristExplorerPersona rdf:type owl:NamedIndividual ;
+                        :hasDwellPreference :mediumDwellPref ;
+                        :hasVisitStyle :exploratoryStyle ;
+                        :hasInterest "culture" ,
+                                     "history" ,
+                                     "landmarks" ;
+                        rdfs:comment "Example persona: exploratory visits of medium length to landmarks."@en ;
+                        rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                        rdfs:label "Tourist Explorer Persona"@en .
+
+
+###  http://w3id.org/trajecto/user#variableDwellPref
+:variableDwellPref rdf:type owl:NamedIndividual ,
+                            :VariableDwell ;
+                   rdfs:comment "No particular dwell preference."@en ;
+                   rdfs:isDefinedBy <http://w3id.org/trajecto/user> ;
+                   rdfs:label "Variable Dwell Preference"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

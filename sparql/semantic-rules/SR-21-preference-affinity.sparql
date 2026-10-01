@@ -1,0 +1,13 @@
+# SR-21: Materialize strong preference affinity links
+# Links user to categories where inferred preference score > 0.3
+
+PREFIX user: <http://w3id.org/trajecto/user#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+INSERT { ?userUri user:hasAffinityFor ?cat . }
+WHERE {
+    ?userUri user:hasInferredPreference ?pref .
+    ?pref user:forCategory ?cat .
+    ?pref user:preferenceScore ?score .
+    FILTER(?score > 0.3)
+}

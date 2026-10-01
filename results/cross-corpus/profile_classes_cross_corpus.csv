@@ -1,0 +1,14 @@
+class,GeoLife,OSM Rome
+CommercialCasual,7.5,13.6
+CommercialExplorer,11.4,1.1
+CommercialTargeted,15.5,57.5
+CulturalCasual,1.8,2.0
+CulturalExplorer,3.8,0.7
+CulturalTargeted,2.4,3.4
+HighEngagementCulturalExplorer,3.5,0.7
+HighEngagementTrajectory,20.1,4.8
+LowEngagementTrajectory,59.4,92.0
+MediumEngagementTrajectory,20.5,3.2
+RecreationCasual,2.4,0.4
+RecreationExplorer,2.6,0.0
+RecreationTargeted,0.8,1.7

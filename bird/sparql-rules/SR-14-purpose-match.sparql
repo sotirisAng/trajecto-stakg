@@ -1,0 +1,20 @@
+# SR-14: Purpose match between trajectory pairs
+# 1.0 if shared purpose exists, 0.0 otherwise.
+# With purpose as blocking key, this is always 1.0 for batch-materialized pairs.
+# Retained for on-demand queries where pairs may not share purpose.
+# NOTE: Batch mode only.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?trajA trajecto:hasPurposeMatch [
+        trajecto:withTrajectory ?trajB ;
+        trajecto:similarityScore 1.0
+    ] .
+}
+WHERE {
+    ?trajA trajecto:hasPurpose ?purpose .
+    ?trajB trajecto:hasPurpose ?purpose .
+    FILTER(STR(?trajA) < STR(?trajB))
+}

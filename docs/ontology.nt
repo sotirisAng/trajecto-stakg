@@ -1,0 +1,837 @@
+<http://w3id.org/trajecto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/1.1.0> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/events> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/patterns> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/poi> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/profiles> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/purpose> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/scheduled> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/temporal-dwell> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#imports> <http://www.datacron-project.eu/datAcron#> .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/bibliographicCitation> "Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean." .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/description> "Trajecto is a modular ontology for semantic trajectories: GPS-derived movement of people, the points of interest they interact with, the patterns, purposes and contexts of that movement, and the user profiles learned from it. The core module defines the moving person, entities of interest and interactions, and reuses the datAcron trajectory model (Trajectory, TrajectoryPart, RawPosition, MovingObject) and DUL. It imports the other eleven modules and the purpose concept scheme, and is the entry point to the whole ontology."@en .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto> <http://purl.org/dc/terms/title> "Trajecto Ontology"@en .
+<http://w3id.org/trajecto> <http://purl.org/vocab/vann/preferredNamespacePrefix> "trajecto" .
+<http://w3id.org/trajecto> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto#" .
+<http://w3id.org/trajecto> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto"@en .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/0.9> .
+<http://w3id.org/trajecto> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#clusters
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryCluster> .
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory cluster to a trajectory it groups."@en .
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#clusters> <http://www.w3.org/2000/01/rdf-schema#label> "clusters"@en .
+# 
+# http://w3id.org/trajecto#encloses
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.datacron-project.eu/datAcron#hasPart> .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Segment> .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory to a segment that is part of it."@en .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#encloses> <http://www.w3.org/2000/01/rdf-schema#label> "encloses"@en .
+# 
+# http://w3id.org/trajecto#formsTrajectory
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/trajecto#isTrajectoryFormedBy> .
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#MovingObject> .
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the moving object which forms a trajectory"@en .
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#formsTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "forms trajectory"@en .
+# 
+# http://w3id.org/trajecto#happensDuringEventOfInterest
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://w3id.org/trajecto#happensdDuringEventOfInterest> .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EventOfInterest> .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory part to an event of interest that takes place while it is recorded."@en .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#happensDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "happens during event of interest"@en .
+# 
+# http://w3id.org/trajecto#happensdDuringEventOfInterest
+<http://w3id.org/trajecto#happensdDuringEventOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#happensdDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated since 1.1.0: renamed to happensDuringEventOfInterest."@en .
+<http://w3id.org/trajecto#happensdDuringEventOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "happensdDuringEventOfInterest (deprecated)"@en .
+<http://w3id.org/trajecto#happensdDuringEventOfInterest> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#hasCentralityRole
+<http://w3id.org/trajecto#hasCentralityRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasCentralityRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#hasCentralityRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#CentralityRole> .
+<http://w3id.org/trajecto#hasCentralityRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a POI to its structural role."@en .
+<http://w3id.org/trajecto#hasCentralityRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasCentralityRole> <http://www.w3.org/2000/01/rdf-schema#label> "has centrality role"@en .
+# 
+# http://w3id.org/trajecto#hasEngagementLevel
+<http://w3id.org/trajecto#hasEngagementLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasEngagementLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasEngagementLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EngagementLevel> .
+<http://w3id.org/trajecto#hasEngagementLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes."@en .
+<http://w3id.org/trajecto#hasEngagementLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasEngagementLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has engagement level"@en .
+# 
+# http://w3id.org/trajecto#hasEvent
+<http://w3id.org/trajecto#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/events#TrajectoryEvent> .
+<http://w3id.org/trajecto/events#TrajectoryEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#hasEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a trajectory to a behavioral event detected within its position sequence."@en .
+<http://w3id.org/trajecto#hasEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has event"@en .
+# 
+# http://w3id.org/trajecto#hasInteraction
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/poi#POIInteraction> .
+<http://w3id.org/trajecto/poi#POIInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a raw position to a POI interaction that takes place at it."@en .
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "has interaction"@en .
+# 
+# http://w3id.org/trajecto#hasInterest
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Correlates an entity of interest with the type of interest that it presents."@en .
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has interest"@en .
+# 
+# http://w3id.org/trajecto#hasJaccardCategorySimilarity
+<http://w3id.org/trajecto#hasJaccardCategorySimilarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasJaccardCategorySimilarity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasJaccardCategorySimilarity> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#TrajectorySimilarity> .
+<http://w3id.org/trajecto#hasJaccardCategorySimilarity> <http://www.w3.org/2000/01/rdf-schema#comment> "Jaccard similarity of the POI categories two trajectories interact with (SR-11)."@en .
+<http://w3id.org/trajecto#hasJaccardCategorySimilarity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasJaccardCategorySimilarity> <http://www.w3.org/2000/01/rdf-schema#label> "has category similarity"@en .
+# 
+# http://w3id.org/trajecto#hasModeOfTransportation
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#ModeOfTransportation> .
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory part to the mode of transportation used for it."@en .
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#label> "has mode of transportation"@en .
+# 
+# http://w3id.org/trajecto#hasNavigationMatch
+<http://w3id.org/trajecto#hasNavigationMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasNavigationMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasNavigationMatch> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#TrajectorySimilarity> .
+<http://w3id.org/trajecto#hasNavigationMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "Two trajectories share a navigation pattern (SR-12)."@en .
+<http://w3id.org/trajecto#hasNavigationMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasNavigationMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has navigation match"@en .
+# 
+# http://w3id.org/trajecto#hasNavigationStyle
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#NavigationStyle> .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated: use patterns:exhibitsPattern."@en .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2000/01/rdf-schema#label> "has navigation style"@en .
+<http://w3id.org/trajecto#hasNavigationStyle> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#hasNextPosition
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/trajecto#hasPreviousPosition> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position."@en .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasNextPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has next position"@en .
+# 
+# http://w3id.org/trajecto#hasOccurredEvent
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.datacron-project.eu/datAcron#occurs> .
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Event> .
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory part to an event that occurred during it."@en .
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasOccurredEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has occurred event"@en .
+# 
+# http://w3id.org/trajecto#hasPointOfInterest
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory part to a point of interest associated with it."@en .
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPointOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has point of interest"@en .
+# 
+# http://w3id.org/trajecto#hasPreviousPosition
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of hasNextPosition: relates a raw position to an earlier position of the same trajectory."@en .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPreviousPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has previous position"@en .
+# 
+# http://w3id.org/trajecto#hasPurpose
+<http://w3id.org/trajecto#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#PurposeOfMovement> .
+<http://w3id.org/trajecto#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory."@en .
+<http://w3id.org/trajecto#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose"@en .
+# 
+# http://w3id.org/trajecto#hasPurposeMatch
+<http://w3id.org/trajecto#hasPurposeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasPurposeMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasPurposeMatch> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#TrajectorySimilarity> .
+<http://w3id.org/trajecto#hasPurposeMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "Two trajectories share a purpose (BIRD instantiation)."@en .
+<http://w3id.org/trajecto#hasPurposeMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPurposeMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose match"@en .
+# 
+# http://w3id.org/trajecto#hasRegionOfInterest
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#RegionOfInterest> .
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory part to a region of interest it passes through."@en .
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasRegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has region of interest"@en .
+# 
+# http://w3id.org/trajecto#hasStop
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.datacron-project.eu/datAcron#comprises> .
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#Stop> .
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory part to a stop it comprises."@en .
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasStop> <http://www.w3.org/2000/01/rdf-schema#label> "has stop"@en .
+# 
+# http://w3id.org/trajecto#hasTemporalOverlap
+<http://w3id.org/trajecto#hasTemporalOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasTemporalOverlap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasTemporalOverlap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#TrajectorySimilarity> .
+<http://w3id.org/trajecto#hasTemporalOverlap> <http://www.w3.org/2000/01/rdf-schema#comment> "Jaccard similarity of the temporal contexts of two trajectories (SR-13)."@en .
+<http://w3id.org/trajecto#hasTemporalOverlap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasTemporalOverlap> <http://www.w3.org/2000/01/rdf-schema#label> "has temporal overlap"@en .
+# 
+# http://w3id.org/trajecto#hasTrajectory
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/trajecto#trajectoryRefersTo> .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#MovingObject> .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated duplicate of formsTrajectory: relates a moving object to a trajectory it forms."@en .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "has trajectory"@en .
+<http://w3id.org/trajecto#hasTrajectory> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#includesInteraction
+<http://w3id.org/trajecto#includesInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#includesInteraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#includesInteraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/poi#POIInteraction> .
+<http://w3id.org/trajecto#includesInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes."@en .
+<http://w3id.org/trajecto#includesInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#includesInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "includes interaction"@en .
+# 
+# http://w3id.org/trajecto#isTrajectoryFormedBy
+<http://w3id.org/trajecto#isTrajectoryFormedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#isTrajectoryFormedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#isTrajectoryFormedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#MovingObject> .
+<http://w3id.org/trajecto#isTrajectoryFormedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of formsTrajectory: relates a trajectory to the moving object that forms it."@en .
+<http://w3id.org/trajecto#isTrajectoryFormedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#isTrajectoryFormedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is trajectory formed by"@en .
+# 
+# http://w3id.org/trajecto#isWeatherConditionOf
+<http://w3id.org/trajecto#isWeatherConditionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#isWeatherConditionOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.datacron-project.eu/datAcron#hasWeatherCondition> .
+<http://w3id.org/trajecto#isWeatherConditionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of datAcron:hasWeatherCondition."@en .
+<http://w3id.org/trajecto#isWeatherConditionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#isWeatherConditionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is weather condition of"@en .
+# 
+# http://w3id.org/trajecto#participatesIn
+<http://w3id.org/trajecto#participatesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#participatesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+<http://w3id.org/trajecto#participatesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#Interaction> .
+<http://w3id.org/trajecto#participatesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an agent to an interaction it takes part in."@en .
+<http://w3id.org/trajecto#participatesIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#participatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "participates in"@en .
+# 
+# http://w3id.org/trajecto#trajectoryRefersTo
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#MovingObject> .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated duplicate of isTrajectoryFormedBy: relates a trajectory to its moving object."@en .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/2000/01/rdf-schema#label> "trajectory refers to"@en .
+<http://w3id.org/trajecto#trajectoryRefersTo> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#withTrajectory
+<http://w3id.org/trajecto#withTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto#withTrajectory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#TrajectorySimilarity> .
+<http://w3id.org/trajecto#withTrajectory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#withTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "The other trajectory of a trajectory similarity."@en .
+<http://w3id.org/trajecto#withTrajectory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#withTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "with trajectory"@en .
+# 
+# http://www.datacron-project.eu/datAcron#comprises
+<http://www.datacron-project.eu/datAcron#comprises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.datacron-project.eu/datAcron#hasPart
+<http://www.datacron-project.eu/datAcron#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.datacron-project.eu/datAcron#hasWeatherCondition
+<http://www.datacron-project.eu/datAcron#hasWeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.datacron-project.eu/datAcron#occurs
+<http://www.datacron-project.eu/datAcron#occurs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#betweennessCentrality
+<http://w3id.org/trajecto#betweennessCentrality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#betweennessCentrality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#betweennessCentrality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto#betweennessCentrality> <http://www.w3.org/2000/01/rdf-schema#comment> "Betweenness centrality of a POI in the POI flow graph."@en .
+<http://w3id.org/trajecto#betweennessCentrality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#betweennessCentrality> <http://www.w3.org/2000/01/rdf-schema#label> "betweenness centrality"@en .
+# 
+# http://w3id.org/trajecto#communityId
+<http://w3id.org/trajecto#communityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#communityId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#communityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#communityId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the co-visitation community a POI belongs to."@en .
+<http://w3id.org/trajecto#communityId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#communityId> <http://www.w3.org/2000/01/rdf-schema#label> "community ID"@en .
+# 
+# http://w3id.org/trajecto#externalDescription
+<http://w3id.org/trajecto#externalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#externalDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#externalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the Wikidata entity a POI is linked to."@en .
+<http://w3id.org/trajecto#externalDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#externalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "external description"@en .
+# 
+# http://w3id.org/trajecto#externalLabel
+<http://w3id.org/trajecto#externalLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#externalLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#externalLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "Label of the Wikidata entity a POI is linked to."@en .
+<http://w3id.org/trajecto#externalLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#externalLabel> <http://www.w3.org/2000/01/rdf-schema#label> "external label"@en .
+# 
+# http://w3id.org/trajecto#floor
+<http://w3id.org/trajecto#floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#floor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Point> .
+<http://w3id.org/trajecto#floor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#floor> <http://www.w3.org/2000/01/rdf-schema#comment> "Floor number of a position, for indoor positioning."@en .
+<http://w3id.org/trajecto#floor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#floor> <http://www.w3.org/2000/01/rdf-schema#label> "floor"@en .
+# 
+# http://w3id.org/trajecto#hasAddress
+<http://w3id.org/trajecto#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#RegionOfInterest> .
+<http://w3id.org/trajecto#hasAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto#hasAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Postal address of a region of interest."@en .
+<http://w3id.org/trajecto#hasAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasAddress> <http://www.w3.org/2000/01/rdf-schema#label> "has address"@en .
+# 
+# http://w3id.org/trajecto#hasEasting
+<http://w3id.org/trajecto#hasEasting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasEasting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Point> .
+<http://w3id.org/trajecto#hasEasting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto#hasEasting> <http://www.w3.org/2000/01/rdf-schema#comment> "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset."@en .
+<http://w3id.org/trajecto#hasEasting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasEasting> <http://www.w3.org/2000/01/rdf-schema#label> "has easting"@en .
+# 
+# http://w3id.org/trajecto#hasImmersiveInteractionCount
+<http://w3id.org/trajecto#hasImmersiveInteractionCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasImmersiveInteractionCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasImmersiveInteractionCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#hasImmersiveInteractionCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of immersive interactions of a trajectory (SR-40)."@en .
+<http://w3id.org/trajecto#hasImmersiveInteractionCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasImmersiveInteractionCount> <http://www.w3.org/2000/01/rdf-schema#label> "has immersive interaction count"@en .
+# 
+# http://w3id.org/trajecto#hasMeaningfulInteractionCount
+<http://w3id.org/trajecto#hasMeaningfulInteractionCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasMeaningfulInteractionCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasMeaningfulInteractionCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#hasMeaningfulInteractionCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of meaningful interactions of a trajectory (SR-40)."@en .
+<http://w3id.org/trajecto#hasMeaningfulInteractionCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasMeaningfulInteractionCount> <http://www.w3.org/2000/01/rdf-schema#label> "has meaningful interaction count"@en .
+# 
+# http://w3id.org/trajecto#hasNorthing
+<http://w3id.org/trajecto#hasNorthing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasNorthing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Point> .
+<http://w3id.org/trajecto#hasNorthing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto#hasNorthing> <http://www.w3.org/2000/01/rdf-schema#comment> "Northing (y) of a position in a projected or indoor coordinate reference system, in meters. Used instead of longitude where positions are planar."@en .
+<http://w3id.org/trajecto#hasNorthing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasNorthing> <http://www.w3.org/2000/01/rdf-schema#label> "has northing"@en .
+# 
+# http://w3id.org/trajecto#hasOSMType
+<http://w3id.org/trajecto#hasOSMType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasOSMType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto#hasOSMType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto#hasOSMType> <http://www.w3.org/2000/01/rdf-schema#comment> "The OpenStreetMap tag (key=value) that identifies the type of an entity of interest."@en .
+<http://w3id.org/trajecto#hasOSMType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasOSMType> <http://www.w3.org/2000/01/rdf-schema#label> "has OSM type"@en .
+# 
+# http://w3id.org/trajecto#hasPOICount
+<http://w3id.org/trajecto#hasPOICount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasPOICount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasPOICount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#hasPOICount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of distinct POIs a trajectory interacts with (SR-44)."@en .
+<http://w3id.org/trajecto#hasPOICount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPOICount> <http://www.w3.org/2000/01/rdf-schema#label> "has POI count"@en .
+# 
+# http://w3id.org/trajecto#hasPlaceID
+<http://w3id.org/trajecto#hasPlaceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasPlaceID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#RegionOfInterest> .
+<http://w3id.org/trajecto#hasPlaceID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto#hasPlaceID> <http://www.w3.org/2000/01/rdf-schema#comment> "External identifier of a region of interest, such as an OpenStreetMap or geocoder place ID."@en .
+<http://w3id.org/trajecto#hasPlaceID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPlaceID> <http://www.w3.org/2000/01/rdf-schema#label> "has place ID"@en .
+# 
+# http://w3id.org/trajecto#hasPositionIndex
+<http://w3id.org/trajecto#hasPositionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasPositionIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#hasPositionIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#hasPositionIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Zero-based order of a raw position within its trajectory."@en .
+<http://w3id.org/trajecto#hasPositionIndex> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasPositionIndex> <http://www.w3.org/2000/01/rdf-schema#label> "has position index"@en .
+# 
+# http://w3id.org/trajecto#hasTotalDwellTime
+<http://w3id.org/trajecto#hasTotalDwellTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasTotalDwellTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasTotalDwellTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42)."@en .
+<http://w3id.org/trajecto#hasTotalDwellTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasTotalDwellTime> <http://www.w3.org/2000/01/rdf-schema#label> "has total dwell time"@en .
+# 
+# http://w3id.org/trajecto#hasUniqueCategoryCount
+<http://w3id.org/trajecto#hasUniqueCategoryCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasUniqueCategoryCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto#hasUniqueCategoryCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto#hasUniqueCategoryCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of distinct POI categories a trajectory interacts with (SR-43)."@en .
+<http://w3id.org/trajecto#hasUniqueCategoryCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasUniqueCategoryCount> <http://www.w3.org/2000/01/rdf-schema#label> "has unique category count"@en .
+# 
+# http://w3id.org/trajecto#hasVelocity
+<http://w3id.org/trajecto#hasVelocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#hasVelocity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Geometry> .
+<http://w3id.org/trajecto#hasVelocity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto#hasVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Velocity value attached to a geometry, as recorded by the source."@en .
+<http://w3id.org/trajecto#hasVelocity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#hasVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "has velocity"@en .
+# 
+# http://w3id.org/trajecto#pageRank
+<http://w3id.org/trajecto#pageRank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#pageRank> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto#pageRank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto#pageRank> <http://www.w3.org/2000/01/rdf-schema#comment> "PageRank of a POI in the POI flow graph."@en .
+<http://w3id.org/trajecto#pageRank> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#pageRank> <http://www.w3.org/2000/01/rdf-schema#label> "PageRank"@en .
+# 
+# http://w3id.org/trajecto#similarityScore
+<http://w3id.org/trajecto#similarityScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#similarityScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#TrajectorySimilarity> .
+<http://w3id.org/trajecto#similarityScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Score of a trajectory similarity, from 0 to 1."@en .
+<http://w3id.org/trajecto#similarityScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#similarityScore> <http://www.w3.org/2000/01/rdf-schema#label> "similarity score"@en .
+# 
+# http://w3id.org/trajecto#timestamp
+<http://w3id.org/trajecto#timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto#timestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#timestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto#timestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Recording time of a raw position, as an ISO 8601 local date-time string."@en .
+<http://w3id.org/trajecto#timestamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#timestamp> <http://www.w3.org/2000/01/rdf-schema#label> "timestamp"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#CasualNavigation
+<http://w3id.org/trajecto#CasualNavigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#CasualNavigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#NavigationStyle> .
+<http://w3id.org/trajecto#CasualNavigation> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated: use patterns:CasualMovement."@en .
+<http://w3id.org/trajecto#CasualNavigation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#CasualNavigation> <http://www.w3.org/2000/01/rdf-schema#label> "Casual Navigation"@en .
+<http://w3id.org/trajecto#CasualNavigation> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#CentralityRole
+<http://w3id.org/trajecto#CentralityRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#CentralityRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto#CentralityRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21)."@en .
+<http://w3id.org/trajecto#CentralityRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#CentralityRole> <http://www.w3.org/2000/01/rdf-schema#label> "Centrality Role"@en .
+# 
+# http://w3id.org/trajecto#CulturalEvent
+<http://w3id.org/trajecto#CulturalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#EventOfInterest> .
+<http://w3id.org/trajecto#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event of interest of a cultural nature, such as a festival or an exhibition opening."@en .
+<http://w3id.org/trajecto#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Event"@en .
+# 
+# http://w3id.org/trajecto#EngagementLevel
+<http://w3id.org/trajecto#EngagementLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#EngagementLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."@en .
+<http://w3id.org/trajecto#EngagementLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#EngagementLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Engagement Level"@en .
+# 
+# http://w3id.org/trajecto#EntityOfInterest
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/trajecto#hasInterest> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity of interest of any kind (object, event, living organism), that the recording activity aims to record."@en .
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Entity of Interest"@en .
+# 
+# http://w3id.org/trajecto#EventOfInterest
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#Event> .
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific event that the recording activity aims to record. This event may be a natural phenomenon, the movement of an individual etc."@en .
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Event of Interest"@en .
+# 
+# http://w3id.org/trajecto#ExploratoryNavigation
+<http://w3id.org/trajecto#ExploratoryNavigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#ExploratoryNavigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#NavigationStyle> .
+<http://w3id.org/trajecto#ExploratoryNavigation> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated: use patterns:ExploratoryMovement."@en .
+<http://w3id.org/trajecto#ExploratoryNavigation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#ExploratoryNavigation> <http://www.w3.org/2000/01/rdf-schema#label> "Exploratory Navigation"@en .
+<http://w3id.org/trajecto#ExploratoryNavigation> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#ImmersiveNavigation
+<http://w3id.org/trajecto#ImmersiveNavigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#ImmersiveNavigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#NavigationStyle> .
+<http://w3id.org/trajecto#ImmersiveNavigation> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated: use patterns:ImmersiveMovement."@en .
+<http://w3id.org/trajecto#ImmersiveNavigation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#ImmersiveNavigation> <http://www.w3.org/2000/01/rdf-schema#label> "Immersive Navigation"@en .
+<http://w3id.org/trajecto#ImmersiveNavigation> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#Interaction
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Something a moving entity does with, or near, an entity of interest during a trajectory. Specialized as POI interactions in the POI module."@en .
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/2000/01/rdf-schema#label> "Interaction"@en .
+# 
+# http://w3id.org/trajecto#ModeOfTransportation
+<http://w3id.org/trajecto#ModeOfTransportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#ModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#comment> "The means by which a trajectory part is travelled, such as walking, cycling or bus."@en .
+<http://w3id.org/trajecto#ModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#ModeOfTransportation> <http://www.w3.org/2000/01/rdf-schema#label> "Mode of Transportation"@en .
+# 
+# http://w3id.org/trajecto#NavigationStyle
+<http://w3id.org/trajecto#NavigationStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#NavigationStyle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto#NavigationStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated: navigation styles are modeled as movement patterns in the patterns module (patterns:TargetedSegment, patterns:CasualMovement, patterns:ExploratoryMovement, patterns:ImmersiveMovement) and asserted with patterns:exhibitsPattern."@en .
+<http://w3id.org/trajecto#NavigationStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#NavigationStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Navigation Style"@en .
+<http://w3id.org/trajecto#NavigationStyle> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#ObjectOfInterest
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> .
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific physical object that the recording activity aims to record. The object of interest may be a tree, a monument, a person etc."@en .
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Object of Interest"@en .
+# 
+# http://w3id.org/trajecto#Person
+<http://w3id.org/trajecto#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#MovingObject> .
+<http://w3id.org/trajecto#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person whose movement is recorded as one or more trajectories."@en .
+<http://w3id.org/trajecto#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# http://w3id.org/trajecto#PointOfInterest
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#Point> .
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific spatial point that the recording activity aims to record. The point of interest may be literally one geometric point or an central point of a wider entity of interest."@en .
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Point of Interest"@en .
+# 
+# http://w3id.org/trajecto#PurposeOfMovement
+<http://w3id.org/trajecto#PurposeOfMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#PurposeOfMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto#PurposeOfMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "The reason a trajectory is undertaken. The purpose module specializes it; trajectories point to purpose concepts through hasPurpose."@en .
+<http://w3id.org/trajecto#PurposeOfMovement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#PurposeOfMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Purpose of Movement"@en .
+# 
+# http://w3id.org/trajecto#RegionOfInterest
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/2002/07/owl#equivalentClass> <http://w3id.org/trajecto#Region_of_Interest> .
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#Region> .
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The region that a recording activity aims to record, such as a forest, an archaeological site or a town."@en .
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Region of Interest"@en .
+# 
+# http://w3id.org/trajecto#Region_of_Interest
+<http://w3id.org/trajecto#Region_of_Interest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#Region_of_Interest> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated since 1.1.0: renamed to RegionOfInterest."@en .
+<http://w3id.org/trajecto#Region_of_Interest> <http://www.w3.org/2000/01/rdf-schema#label> "Region_of_Interest (deprecated)"@en .
+<http://w3id.org/trajecto#Region_of_Interest> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#SocialInteraction
+<http://w3id.org/trajecto#SocialInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#SocialInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#Interaction> .
+<http://w3id.org/trajecto#SocialInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "An interaction between moving persons within an area of interest."@en .
+<http://w3id.org/trajecto#SocialInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#SocialInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Social Interaction"@en .
+# 
+# http://w3id.org/trajecto#Stop
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/2002/07/owl#equivalentClass> <http://w3id.org/trajecto#stop> .
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#Point> .
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/2000/01/rdf-schema#comment> "A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration."@en .
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#Stop> <http://www.w3.org/2000/01/rdf-schema#label> "Stop"@en .
+# 
+# http://w3id.org/trajecto#StopPosition
+<http://w3id.org/trajecto#StopPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#StopPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#RawPosition> .
+<http://w3id.org/trajecto#StopPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing."@en .
+<http://w3id.org/trajecto#StopPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#StopPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Stop Position"@en .
+# 
+# http://w3id.org/trajecto#TargetedNavigation
+<http://w3id.org/trajecto#TargetedNavigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#TargetedNavigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#NavigationStyle> .
+<http://w3id.org/trajecto#TargetedNavigation> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated: use patterns:TargetedSegment."@en .
+<http://w3id.org/trajecto#TargetedNavigation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#TargetedNavigation> <http://www.w3.org/2000/01/rdf-schema#label> "Targeted Navigation"@en .
+<http://w3id.org/trajecto#TargetedNavigation> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto#TrajectorySimilarity
+<http://w3id.org/trajecto#TrajectorySimilarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#TrajectorySimilarity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto#TrajectorySimilarity> <http://www.w3.org/2000/01/rdf-schema#comment> "A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13."@en .
+<http://w3id.org/trajecto#TrajectorySimilarity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#TrajectorySimilarity> <http://www.w3.org/2000/01/rdf-schema#label> "Trajectory Similarity"@en .
+# 
+# http://w3id.org/trajecto#stop
+<http://w3id.org/trajecto#stop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto#stop> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated since 1.1.0: renamed to Stop."@en .
+<http://w3id.org/trajecto#stop> <http://www.w3.org/2000/01/rdf-schema#label> "stop (deprecated)"@en .
+<http://w3id.org/trajecto#stop> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto/events#TrajectoryEvent
+# 
+# http://w3id.org/trajecto/poi#POIInteraction
+# 
+# http://www.datacron-project.eu/datAcron#Event
+<http://www.datacron-project.eu/datAcron#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#Geometry
+<http://www.datacron-project.eu/datAcron#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#MovingObject
+<http://www.datacron-project.eu/datAcron#MovingObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#Point
+<http://www.datacron-project.eu/datAcron#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#RawPosition
+<http://www.datacron-project.eu/datAcron#RawPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#Region
+<http://www.datacron-project.eu/datAcron#Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#Segment
+<http://www.datacron-project.eu/datAcron#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#TrajectoryCluster
+<http://www.datacron-project.eu/datAcron#TrajectoryCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#TrajectoryPart
+<http://www.datacron-project.eu/datAcron#TrajectoryPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#DestinationPOI
+<http://w3id.org/trajecto#DestinationPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#DestinationPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#CentralityRole> .
+<http://w3id.org/trajecto#DestinationPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A high-PageRank POI with clearly more incoming than outgoing flow."@en .
+<http://w3id.org/trajecto#DestinationPOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#DestinationPOI> <http://www.w3.org/2000/01/rdf-schema#label> "Destination POI"@en .
+# 
+# http://w3id.org/trajecto#GatewayPOI
+<http://w3id.org/trajecto#GatewayPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#GatewayPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#CentralityRole> .
+<http://w3id.org/trajecto#GatewayPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI in the top quintile of betweenness: it bridges otherwise separate parts of the flow graph."@en .
+<http://w3id.org/trajecto#GatewayPOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#GatewayPOI> <http://www.w3.org/2000/01/rdf-schema#label> "Gateway POI"@en .
+# 
+# http://w3id.org/trajecto#HighEngagement
+<http://w3id.org/trajecto#HighEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#HighEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#EngagementLevel> .
+<http://w3id.org/trajecto#HighEngagement> <http://www.w3.org/2000/01/rdf-schema#comment> "Engagement level of a trajectory with a high share of meaningful and immersive interactions."@en .
+<http://w3id.org/trajecto#HighEngagement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#HighEngagement> <http://www.w3.org/2000/01/rdf-schema#label> "High Engagement"@en .
+# 
+# http://w3id.org/trajecto#HubPOI
+<http://w3id.org/trajecto#HubPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#HubPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#CentralityRole> .
+<http://w3id.org/trajecto#HubPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI in the top quintile of both co-visitation degree and PageRank."@en .
+<http://w3id.org/trajecto#HubPOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#HubPOI> <http://www.w3.org/2000/01/rdf-schema#label> "Hub POI"@en .
+# 
+# http://w3id.org/trajecto#LowEngagement
+<http://w3id.org/trajecto#LowEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#LowEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#EngagementLevel> .
+<http://w3id.org/trajecto#LowEngagement> <http://www.w3.org/2000/01/rdf-schema#comment> "Engagement level of a trajectory with few or no meaningful interactions."@en .
+<http://w3id.org/trajecto#LowEngagement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#LowEngagement> <http://www.w3.org/2000/01/rdf-schema#label> "Low Engagement"@en .
+# 
+# http://w3id.org/trajecto#MediumEngagement
+<http://w3id.org/trajecto#MediumEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#MediumEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#EngagementLevel> .
+<http://w3id.org/trajecto#MediumEngagement> <http://www.w3.org/2000/01/rdf-schema#comment> "Engagement level of a trajectory with a moderate share of meaningful interactions."@en .
+<http://w3id.org/trajecto#MediumEngagement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#MediumEngagement> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Engagement"@en .
+# 
+# http://w3id.org/trajecto#OriginPOI
+<http://w3id.org/trajecto#OriginPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#OriginPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#CentralityRole> .
+<http://w3id.org/trajecto#OriginPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI with clearly more outgoing than incoming flow."@en .
+<http://w3id.org/trajecto#OriginPOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#OriginPOI> <http://www.w3.org/2000/01/rdf-schema#label> "Origin POI"@en .
+# 
+# http://w3id.org/trajecto#PeripheralPOI
+<http://w3id.org/trajecto#PeripheralPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto#PeripheralPOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto#CentralityRole> .
+<http://w3id.org/trajecto#PeripheralPOI> <http://www.w3.org/2000/01/rdf-schema#comment> "A POI with none of the other structural roles."@en .
+<http://w3id.org/trajecto#PeripheralPOI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto> .
+<http://w3id.org/trajecto#PeripheralPOI> <http://www.w3.org/2000/01/rdf-schema#label> "Peripheral POI"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

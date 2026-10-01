@@ -1,0 +1,547 @@
+method,traj,poi,evidence,user_history,hit
+popularity,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_12796102568,0_unrecoverable,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_17770493170,http://w3id.org/trajecto/poi#pointOfInterest_9051032378,1-2_tail,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_3836026357,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_17770493175,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704931816,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+markov2,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704931817,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704931818,http://w3id.org/trajecto/poi#pointOfInterest_4704961892,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704931922,http://w3id.org/trajecto/poi#pointOfInterest_12115434165,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_1447566606,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932026,http://w3id.org/trajecto/poi#pointOfInterest_11534596511,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932128,http://w3id.org/trajecto/poi#pointOfInterest_4496942092,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932129,http://w3id.org/trajecto/poi#pointOfInterest_10871400301,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932332,http://w3id.org/trajecto/poi#pointOfInterest_4208626021,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932435,http://w3id.org/trajecto/poi#pointOfInterest_5825601753,0_unrecoverable,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932439,http://w3id.org/trajecto/poi#pointOfInterest_5357363522,0_unrecoverable,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932448,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932450,http://w3id.org/trajecto/poi#pointOfInterest_12481055293,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932552,http://w3id.org/trajecto/poi#pointOfInterest_6705707387,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_12020648971,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_10782843205,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932658,http://w3id.org/trajecto/poi#pointOfInterest_6206217423,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932659,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932660,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932665,http://w3id.org/trajecto/poi#pointOfInterest_5640579821,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,1
+markov2,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_9366053221,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,1
+markov2,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932666,http://w3id.org/trajecto/poi#pointOfInterest_4893981522,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_2601856597,0_unrecoverable,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_177704932768,http://w3id.org/trajecto/poi#pointOfInterest_6753188757,3+_head,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049333217,http://w3id.org/trajecto/poi#pointOfInterest_7019444885,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340478,http://w3id.org/trajecto/poi#pointOfInterest_11400217439,0_unrecoverable,0-1,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340480,http://w3id.org/trajecto/poi#pointOfInterest_13033261896,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340483,http://w3id.org/trajecto/poi#pointOfInterest_1695255321,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1172691363,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_1071282082,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340484,http://w3id.org/trajecto/poi#pointOfInterest_5288226321,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_12834516516,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340486,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340487,http://w3id.org/trajecto/poi#pointOfInterest_10578527910,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_6707390224,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340488,http://w3id.org/trajecto/poi#pointOfInterest_8789982819,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049340489,http://w3id.org/trajecto/poi#pointOfInterest_5853362485,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_1387899487,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_72959652,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341490,http://w3id.org/trajecto/poi#pointOfInterest_5296423361,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_13397462303,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_3577359551,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341493,http://w3id.org/trajecto/poi#pointOfInterest_2676800384,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341495,http://w3id.org/trajecto/poi#pointOfInterest_9738049433,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_5645460201,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049341496,http://w3id.org/trajecto/poi#pointOfInterest_13281151842,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_9367885259,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049342497,http://w3id.org/trajecto/poi#pointOfInterest_307878083,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_10162305305,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,1
+markov2,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049342498,http://w3id.org/trajecto/poi#pointOfInterest_9501019636,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_5826736985,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049342500,http://w3id.org/trajecto/poi#pointOfInterest_4260198490,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049343504,http://w3id.org/trajecto/poi#pointOfInterest_1542758952,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_3909073672,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049343505,http://w3id.org/trajecto/poi#pointOfInterest_253874144,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049343506,http://w3id.org/trajecto/poi#pointOfInterest_12045802240,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344509,http://w3id.org/trajecto/poi#pointOfInterest_7119017152,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344515,http://w3id.org/trajecto/poi#pointOfInterest_1148203560,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+markov2,http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344516,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_3198931974,0_unrecoverable,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344517,http://w3id.org/trajecto/poi#pointOfInterest_252440275,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344520,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344524,http://w3id.org/trajecto/poi#pointOfInterest_2141674123,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_5287431738,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049344525,http://w3id.org/trajecto/poi#pointOfInterest_9685722773,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+markov2,http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049345528,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_1564055705,3+_head,2+,1
+popularity,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049345529,http://w3id.org/trajecto/poi#pointOfInterest_2148972457,3+_head,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049345530,http://w3id.org/trajecto/poi#pointOfInterest_6325416986,1-2_tail,2+,0
+popularity,http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,1
+markov2,http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,1
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,1
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049346535,http://w3id.org/trajecto/poi#pointOfInterest_5762607353,3+_head,0-1,1
+popularity,http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0
+markov2,http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0
+unified_route_heavy,http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0
+rrf_uni+markov2+prox,http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0
+tagpop (1.7b),http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0
+centrality (1.7c),http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0
+cold_blend (1.7d),http://w3id.org/trajecto#trajectory_1777049346536,http://w3id.org/trajecto/poi#pointOfInterest_10751612907,0_unrecoverable,2+,0

@@ -1,0 +1,37 @@
+# SR-52: Materialize CategoryDiscovery events
+# First encounter with a POI category not previously visited in this trajectory.
+# Uses hasPositionIndex to compare ordering of positions.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX events:   <http://w3id.org/trajecto/events#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasEvent _:evt .
+    _:evt a events:CategoryDiscovery .
+    _:evt events:atPosition ?pos .
+    _:evt events:discoveredCategory ?cat .
+    _:evt events:eventSequenceIndex ?idx .
+}
+WHERE {
+    ?pos dul:isPartOf ?traj .
+    ?pos trajecto:hasPositionIndex ?idx .
+    ?pos trajecto:hasInteraction ?int .
+    ?int a poi:MeaningfulInteraction .
+    ?int poi:interactsWith ?poi .
+    ?poi a ?cat .
+    FILTER(?cat != trajecto:PointOfInterest && ?cat != poi:SignificantPOI)
+
+    # No earlier position in same trajectory has this category
+    FILTER NOT EXISTS {
+        ?prevPos dul:isPartOf ?traj .
+        ?prevPos trajecto:hasPositionIndex ?prevIdx .
+        FILTER(?prevIdx < ?idx)
+        ?prevPos trajecto:hasInteraction ?prevInt .
+        ?prevInt a poi:MeaningfulInteraction .
+        ?prevInt poi:interactsWith ?prevPoi .
+        ?prevPoi a ?cat .
+    }
+}

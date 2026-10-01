@@ -1,0 +1,31 @@
+# SR-54: Materialize DominantEncounter events
+# One event per trajectory — anchored at the first position linked to the
+# trajectory's DominantInteraction (lowest positionIndex).
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX events:   <http://w3id.org/trajecto/events#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasEvent _:evt .
+    _:evt a events:DominantEncounter .
+    _:evt events:atPosition ?pos .
+    _:evt events:eventSequenceIndex ?idx .
+}
+WHERE {
+    {
+        SELECT ?traj (MIN(?idx1) AS ?minIdx)
+        WHERE {
+            ?p1 dul:isPartOf ?traj .
+            ?p1 trajecto:hasInteraction [ a poi:DominantInteraction ] .
+            ?p1 trajecto:hasPositionIndex ?idx1 .
+        }
+        GROUP BY ?traj
+    }
+    ?pos dul:isPartOf ?traj .
+    ?pos trajecto:hasPositionIndex ?idx .
+    ?pos trajecto:hasInteraction [ a poi:DominantInteraction ] .
+    FILTER(?idx = ?minIdx)
+}

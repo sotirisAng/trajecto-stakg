@@ -1,0 +1,767 @@
+<http://w3id.org/trajecto/spatial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/spatial> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/spatial/1.1.0> .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/created> "2025-05-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/description> "This module extends the trajecto ontology with comprehensive spatial analysis capabilities for trajectory proximity detection and spatial relationship modeling."@en .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/spatial> <http://purl.org/dc/terms/title> "Trajecto Spatial Analysis Module"@en .
+<http://w3id.org/trajecto/spatial> <http://purl.org/vocab/vann/preferredNamespacePrefix> "spatial" .
+<http://w3id.org/trajecto/spatial> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/spatial#" .
+<http://w3id.org/trajecto/spatial> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-spatial"@en .
+<http://w3id.org/trajecto/spatial> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/spatial/1.0> .
+<http://w3id.org/trajecto/spatial> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters \nabove the local reference ellipsoid)."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitude"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 latitude of a SpatialThing (decimal degrees)."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 longitude of a SpatialThing (decimal degrees)."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/based_near
+<http://xmlns.com/foaf/0.1/based_near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/spatial#clustersWith
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that two trajectories cluster together spatially."@en .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#clustersWith> <http://www.w3.org/2000/01/rdf-schema#label> "clusters with"@en .
+# 
+# http://w3id.org/trajecto/spatial#containsTrajectoryPart
+<http://w3id.org/trajecto/spatial#containsTrajectoryPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#containsTrajectoryPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityZone> .
+<http://w3id.org/trajecto/spatial#containsTrajectoryPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spatial#containsTrajectoryPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a proximity zone contains a trajectory part."@en .
+<http://w3id.org/trajecto/spatial#containsTrajectoryPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#containsTrajectoryPart> <http://www.w3.org/2000/01/rdf-schema#label> "contains trajectory part"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasDistanceMeasurement
+<http://w3id.org/trajecto/spatial#hasDistanceMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasDistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#hasDistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#DistanceMeasurement> .
+<http://w3id.org/trajecto/spatial#hasDistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a proximity result with its distance measurement details."@en .
+<http://w3id.org/trajecto/spatial#hasDistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasDistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has distance measurement"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasInfluenceZone
+<http://w3id.org/trajecto/spatial#hasInfluenceZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasInfluenceZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto/spatial#hasInfluenceZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#InfluenceZone> .
+<http://w3id.org/trajecto/spatial#hasInfluenceZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a point of interest with its influence zone."@en .
+<http://w3id.org/trajecto/spatial#hasInfluenceZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasInfluenceZone> <http://www.w3.org/2000/01/rdf-schema#label> "has influence zone"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasProximityAnalysis
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#ProximityAnalysis> .
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its spatial proximity analysis."@en .
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "has proximity analysis"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasProximityResult
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory part with its proximity analysis results."@en .
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasProximityResult> <http://www.w3.org/2000/01/rdf-schema#label> "has proximity result"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasProximityZone
+<http://w3id.org/trajecto/spatial#hasProximityZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasProximityZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto/spatial#hasProximityZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#ProximityZone> .
+<http://w3id.org/trajecto/spatial#hasProximityZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a point of interest with its proximity zone definition."@en .
+<http://w3id.org/trajecto/spatial#hasProximityZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasProximityZone> <http://www.w3.org/2000/01/rdf-schema#label> "has proximity zone"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasSpatialCluster
+<http://w3id.org/trajecto/spatial#hasSpatialCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasSpatialCluster> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/spatial#hasSpatialCluster> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#hasSpatialCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with a spatial cluster based on proximity patterns."@en .
+<http://w3id.org/trajecto/spatial#hasSpatialCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasSpatialCluster> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial cluster"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasSpatialContext
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#SpatialContext> .
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory part with its spatial context."@en .
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial context"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasSpatialRelationship
+<http://w3id.org/trajecto/spatial#hasSpatialRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#hasSpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spatial#hasSpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#SpatialRelationship> .
+<http://w3id.org/trajecto/spatial#hasSpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory part with its spatial relationships."@en .
+<http://w3id.org/trajecto/spatial#hasSpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasSpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial relationship"@en .
+# 
+# http://w3id.org/trajecto/spatial#proximityTo
+<http://w3id.org/trajecto/spatial#proximityTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#proximityTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#proximityTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto/spatial#proximityTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the point of interest that the proximity result refers to."@en .
+<http://w3id.org/trajecto/spatial#proximityTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#proximityTo> <http://www.w3.org/2000/01/rdf-schema#label> "proximity to"@en .
+# 
+# http://w3id.org/trajecto/spatial#relatedTo
+<http://w3id.org/trajecto/spatial#relatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#relatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#SpatialRelationship> .
+<http://w3id.org/trajecto/spatial#relatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto/spatial#relatedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the entity that the spatial relationship involves."@en .
+<http://w3id.org/trajecto/spatial#relatedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#relatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "related to"@en .
+# 
+# http://w3id.org/trajecto/spatial#spatiallyInteractsWith
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates spatial interaction between trajectory part and entity."@en .
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#spatiallyInteractsWith> <http://www.w3.org/2000/01/rdf-schema#label> "spatially interacts with"@en .
+# 
+# http://w3id.org/trajecto/spatial#usesDistanceMetric
+<http://w3id.org/trajecto/spatial#usesDistanceMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spatial#usesDistanceMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#DistanceMeasurement> .
+<http://w3id.org/trajecto/spatial#usesDistanceMetric> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spatial#DistanceMetric> .
+<http://w3id.org/trajecto/spatial#usesDistanceMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the distance metric used in a measurement."@en .
+<http://w3id.org/trajecto/spatial#usesDistanceMetric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#usesDistanceMetric> <http://www.w3.org/2000/01/rdf-schema#label> "uses distance metric"@en .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/based_near> .
+<http://xmlns.com/foaf/0.1/based_near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/spatial#analysisAccuracy
+<http://w3id.org/trajecto/spatial#analysisAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityAnalysis> .
+<http://w3id.org/trajecto/spatial#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/spatial#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "Accuracy measure of the proximity analysis (0.0-1.0)."@en .
+<http://w3id.org/trajecto/spatial#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "analysis accuracy"@en .
+# 
+# http://w3id.org/trajecto/spatial#analysisTimestamp
+<http://w3id.org/trajecto/spatial#analysisTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#analysisTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityAnalysis> .
+<http://w3id.org/trajecto/spatial#analysisTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/trajecto/spatial#analysisTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp when the proximity analysis was performed."@en .
+<http://w3id.org/trajecto/spatial#analysisTimestamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#analysisTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "analysis timestamp"@en .
+# 
+# http://w3id.org/trajecto/spatial#clusterDensity
+<http://w3id.org/trajecto/spatial#clusterDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#clusterDensity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#clusterDensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/spatial#clusterDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "Density measure of the spatial cluster."@en .
+<http://w3id.org/trajecto/spatial#clusterDensity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#clusterDensity> <http://www.w3.org/2000/01/rdf-schema#label> "cluster density"@en .
+# 
+# http://w3id.org/trajecto/spatial#clusterSize
+<http://w3id.org/trajecto/spatial#clusterSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#clusterSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#clusterSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://w3id.org/trajecto/spatial#clusterSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of trajectories in the spatial cluster."@en .
+<http://w3id.org/trajecto/spatial#clusterSize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#clusterSize> <http://www.w3.org/2000/01/rdf-schema#label> "cluster size"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasDistance
+<http://w3id.org/trajecto/spatial#hasDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#hasDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#hasDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto/spatial#hasDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance value in meters between trajectory part and point of interest."@en .
+<http://w3id.org/trajecto/spatial#hasDistance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has distance"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasEuclideanDistance
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/spatial#hasDistance> .
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#DistanceMeasurement> .
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Euclidean distance in meters."@en .
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasEuclideanDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has euclidean distance"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasHaversineDistance
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/spatial#hasDistance> .
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#DistanceMeasurement> .
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Haversine distance in meters, accounting for Earth's curvature."@en .
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasHaversineDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has haversine distance"@en .
+# 
+# http://w3id.org/trajecto/spatial#hasManhattanDistance
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/spatial#hasDistance> .
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#DistanceMeasurement> .
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Manhattan distance in meters."@en .
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#hasManhattanDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has manhattan distance"@en .
+# 
+# http://w3id.org/trajecto/spatial#influenceRadius
+<http://w3id.org/trajecto/spatial#influenceRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#influenceRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#InfluenceZone> .
+<http://w3id.org/trajecto/spatial#influenceRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto/spatial#influenceRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Radius of the influence zone in meters."@en .
+<http://w3id.org/trajecto/spatial#influenceRadius> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#influenceRadius> <http://www.w3.org/2000/01/rdf-schema#label> "influence radius"@en .
+# 
+# http://w3id.org/trajecto/spatial#proximityRank
+<http://w3id.org/trajecto/spatial#proximityRank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#proximityRank> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#proximityRank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://w3id.org/trajecto/spatial#proximityRank> <http://www.w3.org/2000/01/rdf-schema#comment> "Rank of proximity (1 = closest) for a trajectory part among all nearby POIs."@en .
+<http://w3id.org/trajecto/spatial#proximityRank> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#proximityRank> <http://www.w3.org/2000/01/rdf-schema#label> "proximity rank"@en .
+# 
+# http://w3id.org/trajecto/spatial#proximityScore
+<http://w3id.org/trajecto/spatial#proximityScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#proximityScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#proximityScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/spatial#proximityScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Normalized proximity score (0.0-1.0) where 1.0 is highest proximity."@en .
+<http://w3id.org/trajecto/spatial#proximityScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#proximityScore> <http://www.w3.org/2000/01/rdf-schema#label> "proximity score"@en .
+# 
+# http://w3id.org/trajecto/spatial#spatialCohesion
+<http://w3id.org/trajecto/spatial#spatialCohesion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#spatialCohesion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#spatialCohesion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/spatial#spatialCohesion> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of spatial cohesion within the cluster (0.0-1.0)."@en .
+<http://w3id.org/trajecto/spatial#spatialCohesion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#spatialCohesion> <http://www.w3.org/2000/01/rdf-schema#label> "spatial cohesion"@en .
+# 
+# http://w3id.org/trajecto/spatial#withinProximity
+<http://w3id.org/trajecto/spatial#withinProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#withinProximity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityResult> .
+<http://w3id.org/trajecto/spatial#withinProximity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/trajecto/spatial#withinProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean indicating if the trajectory part is within proximity threshold."@en .
+<http://w3id.org/trajecto/spatial#withinProximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#withinProximity> <http://www.w3.org/2000/01/rdf-schema#label> "within proximity"@en .
+# 
+# http://w3id.org/trajecto/spatial#zoneRadius
+<http://w3id.org/trajecto/spatial#zoneRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spatial#zoneRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spatial#ProximityZone> .
+<http://w3id.org/trajecto/spatial#zoneRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/trajecto/spatial#zoneRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Radius of the proximity zone in meters."@en .
+<http://w3id.org/trajecto/spatial#zoneRadius> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#zoneRadius> <http://www.w3.org/2000/01/rdf-schema#label> "zone radius"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#EntityOfInterest
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#Interaction
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#PointOfInterest
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#RegionOfInterest
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto/spatial#AttractionInteraction
+<http://w3id.org/trajecto/spatial#AttractionInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#AttractionInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#InfluenceInteraction> .
+<http://w3id.org/trajecto/spatial#AttractionInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction where POI attracts trajectory movement."@en .
+<http://w3id.org/trajecto/spatial#AttractionInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#AttractionInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Attraction Interaction"@en .
+# 
+# http://w3id.org/trajecto/spatial#AvoidanceInteraction
+<http://w3id.org/trajecto/spatial#AvoidanceInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#AvoidanceInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#InfluenceInteraction> .
+<http://w3id.org/trajecto/spatial#AvoidanceInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction where POI causes trajectory avoidance."@en .
+<http://w3id.org/trajecto/spatial#AvoidanceInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#AvoidanceInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Avoidance Interaction"@en .
+# 
+# http://w3id.org/trajecto/spatial#BufferAnalysis
+<http://w3id.org/trajecto/spatial#BufferAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#BufferAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> .
+<http://w3id.org/trajecto/spatial#BufferAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Buffer-based proximity analysis algorithm."@en .
+<http://w3id.org/trajecto/spatial#BufferAnalysis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#BufferAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Buffer Analysis"@en .
+# 
+# http://w3id.org/trajecto/spatial#CircularZone
+<http://w3id.org/trajecto/spatial#CircularZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#CircularZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityZone> .
+<http://w3id.org/trajecto/spatial#CircularZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A circular proximity zone defined by a center point and radius."@en .
+<http://w3id.org/trajecto/spatial#CircularZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#CircularZone> <http://www.w3.org/2000/01/rdf-schema#label> "Circular Zone"@en .
+# 
+# http://w3id.org/trajecto/spatial#CloseProximity
+<http://w3id.org/trajecto/spatial#CloseProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#CloseProximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityLevel> .
+<http://w3id.org/trajecto/spatial#CloseProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Close proximity (typically 10-50 meters)."@en .
+<http://w3id.org/trajecto/spatial#CloseProximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#CloseProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Close Proximity"@en .
+# 
+# http://w3id.org/trajecto/spatial#DBSCANClustering
+<http://w3id.org/trajecto/spatial#DBSCANClustering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#DBSCANClustering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> .
+<http://w3id.org/trajecto/spatial#DBSCANClustering> <http://www.w3.org/2000/01/rdf-schema#comment> "DBSCAN clustering algorithm for spatial analysis."@en .
+<http://w3id.org/trajecto/spatial#DBSCANClustering> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#DBSCANClustering> <http://www.w3.org/2000/01/rdf-schema#label> "DBSCAN Clustering"@en .
+# 
+# http://w3id.org/trajecto/spatial#DenseCluster
+<http://w3id.org/trajecto/spatial#DenseCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#DenseCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#DenseCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial cluster with high density of trajectory points."@en .
+<http://w3id.org/trajecto/spatial#DenseCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#DenseCluster> <http://www.w3.org/2000/01/rdf-schema#label> "Dense Cluster"@en .
+# 
+# http://w3id.org/trajecto/spatial#DistanceMeasurement
+<http://w3id.org/trajecto/spatial#DistanceMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#DistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#DistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "A measurement of distance between spatial entities."@en .
+<http://w3id.org/trajecto/spatial#DistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#DistanceMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Distance Measurement"@en .
+<http://w3id.org/trajecto/spatial#DistanceMeasurement> <http://www.w3.org/2004/02/skos/core#definition> "A structured measurement containing distance values calculated using different metrics."@en .
+# 
+# http://w3id.org/trajecto/spatial#DistanceMetric
+<http://w3id.org/trajecto/spatial#DistanceMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#DistanceMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#DistanceMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "A method for calculating distance between spatial points."@en .
+<http://w3id.org/trajecto/spatial#DistanceMetric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#DistanceMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Distance Metric"@en .
+# 
+# http://w3id.org/trajecto/spatial#DistantProximity
+<http://w3id.org/trajecto/spatial#DistantProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#DistantProximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityLevel> .
+<http://w3id.org/trajecto/spatial#DistantProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Distant proximity (beyond 200 meters)."@en .
+<http://w3id.org/trajecto/spatial#DistantProximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#DistantProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Distant Proximity"@en .
+# 
+# http://w3id.org/trajecto/spatial#EuclideanMetric
+<http://w3id.org/trajecto/spatial#EuclideanMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#EuclideanMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#DistanceMetric> .
+<http://w3id.org/trajecto/spatial#EuclideanMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Euclidean distance metric for straight-line distance calculation."@en .
+<http://w3id.org/trajecto/spatial#EuclideanMetric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#EuclideanMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Euclidean Metric"@en .
+# 
+# http://w3id.org/trajecto/spatial#HaversineMetric
+<http://w3id.org/trajecto/spatial#HaversineMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#HaversineMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#DistanceMetric> .
+<http://w3id.org/trajecto/spatial#HaversineMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Haversine distance metric accounting for Earth's curvature."@en .
+<http://w3id.org/trajecto/spatial#HaversineMetric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#HaversineMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Haversine Metric"@en .
+# 
+# http://w3id.org/trajecto/spatial#HighQuality
+<http://w3id.org/trajecto/spatial#HighQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#HighQuality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialQuality> .
+<http://w3id.org/trajecto/spatial#HighQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "High quality spatial analysis with reliable results."@en .
+<http://w3id.org/trajecto/spatial#HighQuality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#HighQuality> <http://www.w3.org/2000/01/rdf-schema#label> "High Quality"@en .
+# 
+# http://w3id.org/trajecto/spatial#ImmediateProximity
+<http://w3id.org/trajecto/spatial#ImmediateProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ImmediateProximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityLevel> .
+<http://w3id.org/trajecto/spatial#ImmediateProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Immediate proximity (typically 0-10 meters)."@en .
+<http://w3id.org/trajecto/spatial#ImmediateProximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ImmediateProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Immediate Proximity"@en .
+# 
+# http://w3id.org/trajecto/spatial#IndoorSpatialContext
+<http://w3id.org/trajecto/spatial#IndoorSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#IndoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialContext> .
+<http://w3id.org/trajecto/spatial#IndoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial context for indoor trajectory analysis."@en .
+<http://w3id.org/trajecto/spatial#IndoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#IndoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor Spatial Context"@en .
+# 
+# http://w3id.org/trajecto/spatial#InfluenceInteraction
+<http://w3id.org/trajecto/spatial#InfluenceInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#InfluenceInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialInteraction> .
+<http://w3id.org/trajecto/spatial#InfluenceInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction where POI influences trajectory behavior."@en .
+<http://w3id.org/trajecto/spatial#InfluenceInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#InfluenceInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Influence Interaction"@en .
+# 
+# http://w3id.org/trajecto/spatial#InfluenceZone
+<http://w3id.org/trajecto/spatial#InfluenceZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#InfluenceZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityZone> .
+<http://w3id.org/trajecto/spatial#InfluenceZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A zone where a point of interest has measurable influence on trajectory behavior."@en .
+<http://w3id.org/trajecto/spatial#InfluenceZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#InfluenceZone> <http://www.w3.org/2000/01/rdf-schema#label> "Influence Zone"@en .
+<http://w3id.org/trajecto/spatial#InfluenceZone> <http://www.w3.org/2004/02/skos/core#definition> "A spatial area where a POI demonstrates measurable attraction or influence on movement patterns."@en .
+# 
+# http://w3id.org/trajecto/spatial#KNearestNeighbor
+<http://w3id.org/trajecto/spatial#KNearestNeighbor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#KNearestNeighbor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> .
+<http://w3id.org/trajecto/spatial#KNearestNeighbor> <http://www.w3.org/2000/01/rdf-schema#comment> "K-nearest neighbor algorithm for proximity analysis."@en .
+<http://w3id.org/trajecto/spatial#KNearestNeighbor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#KNearestNeighbor> <http://www.w3.org/2000/01/rdf-schema#label> "K Nearest Neighbor"@en .
+# 
+# http://w3id.org/trajecto/spatial#LowQuality
+<http://w3id.org/trajecto/spatial#LowQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#LowQuality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialQuality> .
+<http://w3id.org/trajecto/spatial#LowQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "Low quality spatial analysis with unreliable results."@en .
+<http://w3id.org/trajecto/spatial#LowQuality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#LowQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Low Quality"@en .
+# 
+# http://w3id.org/trajecto/spatial#ManhattanMetric
+<http://w3id.org/trajecto/spatial#ManhattanMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ManhattanMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#DistanceMetric> .
+<http://w3id.org/trajecto/spatial#ManhattanMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Manhattan distance metric for grid-based distance calculation."@en .
+<http://w3id.org/trajecto/spatial#ManhattanMetric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ManhattanMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Manhattan Metric"@en .
+# 
+# http://w3id.org/trajecto/spatial#MediumQuality
+<http://w3id.org/trajecto/spatial#MediumQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#MediumQuality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialQuality> .
+<http://w3id.org/trajecto/spatial#MediumQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "Medium quality spatial analysis with acceptable results."@en .
+<http://w3id.org/trajecto/spatial#MediumQuality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#MediumQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Quality"@en .
+# 
+# http://w3id.org/trajecto/spatial#NearbyProximity
+<http://w3id.org/trajecto/spatial#NearbyProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#NearbyProximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityLevel> .
+<http://w3id.org/trajecto/spatial#NearbyProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Nearby proximity (typically 50-100 meters)."@en .
+<http://w3id.org/trajecto/spatial#NearbyProximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#NearbyProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Nearby Proximity"@en .
+# 
+# http://w3id.org/trajecto/spatial#NoiseCluster
+<http://w3id.org/trajecto/spatial#NoiseCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#NoiseCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#NoiseCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "Trajectories that do not fit into any meaningful spatial cluster."@en .
+<http://w3id.org/trajecto/spatial#NoiseCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#NoiseCluster> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Cluster"@en .
+# 
+# http://w3id.org/trajecto/spatial#OutdoorSpatialContext
+<http://w3id.org/trajecto/spatial#OutdoorSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#OutdoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialContext> .
+<http://w3id.org/trajecto/spatial#OutdoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial context for outdoor trajectory analysis."@en .
+<http://w3id.org/trajecto/spatial#OutdoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#OutdoorSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "Outdoor Spatial Context"@en .
+# 
+# http://w3id.org/trajecto/spatial#PolygonalZone
+<http://w3id.org/trajecto/spatial#PolygonalZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#PolygonalZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityZone> .
+<http://w3id.org/trajecto/spatial#PolygonalZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A polygonal proximity zone defined by boundary coordinates."@en .
+<http://w3id.org/trajecto/spatial#PolygonalZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#PolygonalZone> <http://www.w3.org/2000/01/rdf-schema#label> "Polygonal Zone"@en .
+# 
+# http://w3id.org/trajecto/spatial#ProximityAnalysis
+<http://w3id.org/trajecto/spatial#ProximityAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/spatial#ProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "A comprehensive analysis of spatial proximity relationships in a trajectory."@en .
+<http://w3id.org/trajecto/spatial#ProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ProximityAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity Analysis"@en .
+<http://w3id.org/trajecto/spatial#ProximityAnalysis> <http://www.w3.org/2004/02/skos/core#definition> "An analytical process that identifies and measures spatial relationships between trajectory elements and points of interest."@en .
+# 
+# http://w3id.org/trajecto/spatial#ProximityInteraction
+<http://w3id.org/trajecto/spatial#ProximityInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ProximityInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialInteraction> .
+<http://w3id.org/trajecto/spatial#ProximityInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction based on being within proximity threshold."@en .
+<http://w3id.org/trajecto/spatial#ProximityInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ProximityInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity Interaction"@en .
+# 
+# http://w3id.org/trajecto/spatial#ProximityLevel
+<http://w3id.org/trajecto/spatial#ProximityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ProximityLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#ProximityLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification level for spatial proximity."@en .
+<http://w3id.org/trajecto/spatial#ProximityLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ProximityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity Level"@en .
+# 
+# http://w3id.org/trajecto/spatial#ProximityPattern
+<http://w3id.org/trajecto/spatial#ProximityPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ProximityPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialFeature> .
+<http://w3id.org/trajecto/spatial#ProximityPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of proximity relationships in trajectory data."@en .
+<http://w3id.org/trajecto/spatial#ProximityPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ProximityPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity Pattern"@en .
+# 
+# http://w3id.org/trajecto/spatial#ProximityResult
+<http://w3id.org/trajecto/spatial#ProximityResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ProximityResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#ProximityResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of proximity calculation between a trajectory part and a point of interest."@en .
+<http://w3id.org/trajecto/spatial#ProximityResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ProximityResult> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity Result"@en .
+<http://w3id.org/trajecto/spatial#ProximityResult> <http://www.w3.org/2004/02/skos/core#definition> "A structured result containing distance measurements, proximity classifications, and related metadata for a trajectory-POI pair."@en .
+# 
+# http://w3id.org/trajecto/spatial#ProximityZone
+<http://w3id.org/trajecto/spatial#ProximityZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#ProximityZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#RegionOfInterest> .
+<http://w3id.org/trajecto/spatial#ProximityZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined spatial zone around a point of interest for proximity detection."@en .
+<http://w3id.org/trajecto/spatial#ProximityZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#ProximityZone> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity Zone"@en .
+<http://w3id.org/trajecto/spatial#ProximityZone> <http://www.w3.org/2004/02/skos/core#definition> "A circular or polygonal area around a POI within which trajectory points are considered to be in proximity."@en .
+# 
+# http://w3id.org/trajecto/spatial#RuralSpatialContext
+<http://w3id.org/trajecto/spatial#RuralSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#RuralSpatialContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialContext> .
+<http://w3id.org/trajecto/spatial#RuralSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial context in rural environments with low POI density."@en .
+<http://w3id.org/trajecto/spatial#RuralSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#RuralSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "Rural Spatial Context"@en .
+# 
+# http://w3id.org/trajecto/spatial#SparseCluster
+<http://w3id.org/trajecto/spatial#SparseCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SparseCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialCluster> .
+<http://w3id.org/trajecto/spatial#SparseCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial cluster with low density of trajectory points."@en .
+<http://w3id.org/trajecto/spatial#SparseCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SparseCluster> <http://www.w3.org/2000/01/rdf-schema#label> "Sparse Cluster"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm
+<http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Algorithm used for spatial proximity analysis."@en .
+<http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Analysis Algorithm"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialCluster
+<http://w3id.org/trajecto/spatial#SpatialCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialCluster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.datacron-project.eu/datAcron#TrajectoryCluster> .
+<http://w3id.org/trajecto/spatial#SpatialCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "A cluster of trajectories based on spatial proximity patterns."@en .
+<http://w3id.org/trajecto/spatial#SpatialCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialCluster> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Cluster"@en .
+<http://w3id.org/trajecto/spatial#SpatialCluster> <http://www.w3.org/2004/02/skos/core#definition> "A group of trajectories that exhibit similar spatial proximity patterns to points of interest."@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialColdspot
+<http://w3id.org/trajecto/spatial#SpatialColdspot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialColdspot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialFeature> .
+<http://w3id.org/trajecto/spatial#SpatialColdspot> <http://www.w3.org/2000/01/rdf-schema#comment> "Area with low concentration of trajectory activity."@en .
+<http://w3id.org/trajecto/spatial#SpatialColdspot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialColdspot> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Coldspot"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialContext
+<http://w3id.org/trajecto/spatial#SpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/spatial#SpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial context information for trajectory analysis."@en .
+<http://w3id.org/trajecto/spatial#SpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Context"@en .
+<http://w3id.org/trajecto/spatial#SpatialContext> <http://www.w3.org/2004/02/skos/core#definition> "Contextual information about the spatial environment and relationships relevant to trajectory analysis."@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialCorridor
+<http://w3id.org/trajecto/spatial#SpatialCorridor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialCorridor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialFeature> .
+<http://w3id.org/trajecto/spatial#SpatialCorridor> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear feature showing common trajectory paths."@en .
+<http://w3id.org/trajecto/spatial#SpatialCorridor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialCorridor> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Corridor"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialFeature
+<http://w3id.org/trajecto/spatial#SpatialFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#SpatialFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial feature extracted from trajectory analysis."@en .
+<http://w3id.org/trajecto/spatial#SpatialFeature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialFeature> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Feature"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialHotspot
+<http://w3id.org/trajecto/spatial#SpatialHotspot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialHotspot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialFeature> .
+<http://w3id.org/trajecto/spatial#SpatialHotspot> <http://www.w3.org/2000/01/rdf-schema#comment> "Area with high concentration of trajectory activity."@en .
+<http://w3id.org/trajecto/spatial#SpatialHotspot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialHotspot> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Hotspot"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialInteraction
+<http://w3id.org/trajecto/spatial#SpatialInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#Interaction> .
+<http://w3id.org/trajecto/spatial#SpatialInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction defined by spatial proximity relationships."@en .
+<http://w3id.org/trajecto/spatial#SpatialInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Interaction"@en .
+<http://w3id.org/trajecto/spatial#SpatialInteraction> <http://www.w3.org/2004/02/skos/core#definition> "An interaction between trajectory elements and entities based on spatial proximity criteria."@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialQuality
+<http://w3id.org/trajecto/spatial#SpatialQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialQuality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality> .
+<http://w3id.org/trajecto/spatial#SpatialQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "Quality assessment of spatial analysis results."@en .
+<http://w3id.org/trajecto/spatial#SpatialQuality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Quality"@en .
+# 
+# http://w3id.org/trajecto/spatial#SpatialRelationship
+<http://w3id.org/trajecto/spatial#SpatialRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#SpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spatial#SpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial relationship between trajectory elements and entities of interest."@en .
+<http://w3id.org/trajecto/spatial#SpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#SpatialRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Relationship"@en .
+<http://w3id.org/trajecto/spatial#SpatialRelationship> <http://www.w3.org/2004/02/skos/core#definition> "A formalized spatial relationship that describes how trajectory elements relate to entities in space."@en .
+# 
+# http://w3id.org/trajecto/spatial#UrbanSpatialContext
+<http://w3id.org/trajecto/spatial#UrbanSpatialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#UrbanSpatialContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialContext> .
+<http://w3id.org/trajecto/spatial#UrbanSpatialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial context in urban environments with high POI density."@en .
+<http://w3id.org/trajecto/spatial#UrbanSpatialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#UrbanSpatialContext> <http://www.w3.org/2000/01/rdf-schema#label> "Urban Spatial Context"@en .
+# 
+# http://w3id.org/trajecto/spatial#VicinityProximity
+<http://w3id.org/trajecto/spatial#VicinityProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#VicinityProximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#ProximityLevel> .
+<http://w3id.org/trajecto/spatial#VicinityProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Vicinity proximity (typically 100-200 meters)."@en .
+<http://w3id.org/trajecto/spatial#VicinityProximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#VicinityProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Vicinity Proximity"@en .
+# 
+# http://w3id.org/trajecto/spatial#VoronoiAnalysis
+<http://w3id.org/trajecto/spatial#VoronoiAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spatial#VoronoiAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spatial#SpatialAnalysisAlgorithm> .
+<http://w3id.org/trajecto/spatial#VoronoiAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Voronoi diagram-based spatial analysis algorithm."@en .
+<http://w3id.org/trajecto/spatial#VoronoiAnalysis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spatial> .
+<http://w3id.org/trajecto/spatial#VoronoiAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Voronoi Analysis"@en .
+# 
+# http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#TrajectoryCluster
+<http://www.datacron-project.eu/datAcron#TrajectoryCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.datacron-project.eu/datAcron#TrajectoryPart
+<http://www.datacron-project.eu/datAcron#TrajectoryPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> " \nUniquely identified by lat/long/alt. i.e.\n\nspaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),\n  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).\n\nsameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).\n  "@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84.\n  "@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "point"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Anything with spatial extent, i.e. size, shape, or position.\n e.g. people, places, bowling balls, as well as abstract areas like cubes.\n"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialThing"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/description> "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#comment> "\nRecent changes to this namespace:\n$Log: wgs84_pos.rdf,v $\nRevision 1.22  2009/04/20 15:00:30  timbl\nRemove the time bits which have been deal with elsewhere eg in iCal.\n\nRevision 1.21  2009/04/20 12:52:47  timbl\ntry again\n\nRevision 1.20  2009/04/20 12:42:11  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.19  2009/04/20 12:36:31  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.18  2006/02/01 22:01:04  danbri\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\n\nRevision 1.17  2004/02/06 17:38:12  danbri\nFixed a bad commit screwup\n\nRevision 1.15  2003/04/19 11:24:08  danbri\nFixed the typo even more.\n\nRevision 1.14  2003/04/19 11:16:56  danbri\nfixed a typo\n\nRevision 1.13  2003/02/19 22:27:27  connolly\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\n\nRevision 1.12  2003/01/12 01:41:41  danbri\nTrying local copy of XSLT doc.\n\nRevision 1.11  2003/01/12 01:20:18  danbri\nadded a link to morten's xslt rdfs viewer.\n\nRevision 1.10  2003/01/11 18:56:49  danbri\nRemoved datatype range from lat and long properties, since they would\nhave required each occurance of the property to mention the datatype.\n\nRevision 1.9  2003/01/11 11:41:31  danbri\nAnother typo; repaired rdfs:Property to rdf:Property x4\n\nRevision 1.8  2003/01/11 11:05:02  danbri\nAdded an rdfs:range for each lat/long/alt property,\nhttp://www.w3.org/2001/XMLSchema#float\n\nRevision 1.7  2003/01/10 20:25:16  danbri\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\ncoordinate system(s) at the same time. Feedback welcomed.\n\nRevision 1.6  2003/01/10 20:18:30  danbri\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\nvocabulary. Note that this is not common practice (but seems both harmless\nand potentially useful).\n\n\nrevision 1.5\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\nUpdated schema:\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\neach property. Added XML comment on the lat_long property suggesting that\nwe might not need it (based on #rdfig commentary from implementors).\n\nrevision 1.4\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\n#rdfig for catching this error.\n\nrevision 1.3\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\nfixed buglet in vocab, added more wgs links\n\nrevision 1.2\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\nRemoved alt from the as-a-flat-string property, and switched from\nspace separated to comma separated.\n\nrevision 1.1\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\nbasic geo vocab\n\n"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#label> "geo"@en .
+# 
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#comment> "A comma-separated representation of a latitude, longitude coordinate."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#label> "lat/long"@en .
+# 
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n "@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

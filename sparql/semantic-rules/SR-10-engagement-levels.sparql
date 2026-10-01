@@ -1,0 +1,55 @@
+# SR-10: Materialize engagement levels per trajectory
+# High: >=3 immersive, Medium: >=5 meaningful (and <3 immersive), Low: remainder.
+# ImmersiveInteraction is a subclass of MeaningfulInteraction in the ontology,
+# so the Medium count (MeaningfulInteraction) inherently includes immersive ones.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+# High engagement: >= 3 immersive interactions
+INSERT { ?traj trajecto:hasEngagementLevel trajecto:HighEngagement . }
+WHERE {
+    {
+        SELECT ?traj (COUNT(DISTINCT ?ii) AS ?ic)
+        WHERE {
+            ?pos dul:isPartOf ?traj .
+            ?pos trajecto:hasInteraction ?ii .
+            ?ii a poi:ImmersiveInteraction .
+        }
+        GROUP BY ?traj
+        HAVING (COUNT(DISTINCT ?ii) >= 3)
+    }
+};
+
+# Medium engagement: >= 5 meaningful, < 3 immersive
+INSERT { ?traj trajecto:hasEngagementLevel trajecto:MediumEngagement . }
+WHERE {
+    {
+        SELECT ?traj (COUNT(DISTINCT ?mi) AS ?mc) (COUNT(DISTINCT ?ii) AS ?ic)
+        WHERE {
+            ?pos dul:isPartOf ?traj .
+            OPTIONAL {
+                ?pos trajecto:hasInteraction ?mi .
+                ?mi a poi:MeaningfulInteraction .
+            }
+            OPTIONAL {
+                ?pos trajecto:hasInteraction ?ii .
+                ?ii a poi:ImmersiveInteraction .
+            }
+        }
+        GROUP BY ?traj
+        HAVING (COUNT(DISTINCT ?mi) >= 5 && COUNT(DISTINCT ?ii) < 3)
+    }
+    FILTER NOT EXISTS { ?traj trajecto:hasEngagementLevel trajecto:HighEngagement }
+};
+
+# Low engagement: everything else that has at least one interaction
+INSERT { ?traj trajecto:hasEngagementLevel trajecto:LowEngagement . }
+WHERE {
+    ?pos dul:isPartOf ?traj .
+    ?pos trajecto:hasInteraction ?int .
+    ?int a poi:POIInteraction .
+    FILTER NOT EXISTS { ?traj trajecto:hasEngagementLevel ?any }
+}

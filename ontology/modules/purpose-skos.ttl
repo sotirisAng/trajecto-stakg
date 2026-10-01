@@ -1,0 +1,706 @@
+@prefix purpose: <http://w3id.org/trajecto/purpose#> .
+@prefix purposeskos: <http://w3id.org/trajecto/purpose/skos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+<http://w3id.org/trajecto/purpose/skos> a owl:Ontology ;
+    rdfs:label "trajecto-purpose-skos"@en ;
+    dcterms:created "2025-05-09"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Purpose Concept Scheme"@en ;
+    vann:preferredNamespacePrefix "purposeskos" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/purpose/skos#" ;
+    owl:versionIRI <http://w3id.org/trajecto/purpose/skos/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Concept schemes
+#################################################################
+
+purposeskos:TrajectoryPurposeScheme a skos:ConceptScheme ;
+    rdfs:label "trajectory purpose scheme"@en ;
+    dcterms:created "2025-01-01"^^xsd:date ;
+    dcterms:description "A SKOS concept scheme representing purposes of movement in trajectory data. Covers commercial, cultural, educational, recreational, residential, transportation, and work-related movement purposes."@en ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:title "Trajecto Purpose of Movement Concept Scheme"@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Concept scheme of the purposes a trajectory can be assigned."@en ;
+    skos:hasTopConcept purposeskos:AccommodationPurpose,
+        purposeskos:CommercialPurpose,
+        purposeskos:CulturalPurpose,
+        purposeskos:EducationalPurpose,
+        purposeskos:HealthcarePurpose,
+        purposeskos:RecreationalPurpose,
+        purposeskos:ReligiousPurpose,
+        purposeskos:ResidentialPurpose,
+        purposeskos:TransportationPurpose,
+        purposeskos:WorkPurpose ;
+    skos:prefLabel "Trajectory purpose scheme"@en .
+
+
+#################################################################
+#    Concepts
+#################################################################
+
+purposeskos:AccommodationPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to staying at temporary lodging."@en ;
+    skos:example "Hotel stays, hostel accommodation, vacation rentals"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:HostelStay,
+        purposeskos:HotelStay,
+        purposeskos:TemporaryLodging ;
+    skos:prefLabel "Accommodation Purpose"@en ;
+    skos:related schema:LodgingReservation ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:AirportTransit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:Transit ;
+    skos:definition "Purpose related to using airport facilities for travel."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Airport Transit"@en .
+
+purposeskos:ArtisticExperience a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to experiencing artistic works or performances."@en ;
+    skos:exactMatch purpose:ArtisticExperience ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Artistic Experience"@en .
+
+purposeskos:Banking a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ServiceAccess ;
+    skos:definition "Purpose related to banking and financial transactions."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Banking"@en .
+
+purposeskos:BeachVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:LeisureActivity ;
+    skos:definition "Purpose related to visiting beaches for leisure."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Beach Visit"@en .
+
+purposeskos:BusinessMeeting a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:WorkPurpose ;
+    skos:definition "Purpose related to professional business meetings."@en ;
+    skos:exactMatch purpose:BusinessMeeting ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Business Meeting"@en .
+
+purposeskos:BusStationTransit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:Transit ;
+    skos:definition "Purpose related to using bus station facilities for travel."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Bus Station Transit"@en .
+
+purposeskos:CafeVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:DiningExperience ;
+    skos:definition "Purpose related to visiting a cafe for refreshments or socializing."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Cafe Visit"@en .
+
+purposeskos:CommercialPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to commercial activities such as shopping or services."@en ;
+    skos:exactMatch purpose:CommercialPurpose ;
+    skos:example "Shopping, dining out, visiting a bank"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:DiningExperience,
+        purposeskos:ServiceAccess,
+        purposeskos:Shopping ;
+    skos:prefLabel "Commercial Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:Commuting a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:TransportationPurpose ;
+    skos:definition "Purpose related to regular travel between home and work/education."@en ;
+    skos:exactMatch purpose:Commuting ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Commuting"@en .
+
+purposeskos:CulturalEventAttendance a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to attending cultural events, festivals, or performances."@en ;
+    skos:exactMatch purpose:CulturalEventAttendance ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Cultural Event Attendance"@en .
+
+purposeskos:CulturalPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to cultural activities and experiences."@en ;
+    skos:exactMatch purpose:CulturalPurpose ;
+    skos:example "Museum visits, attending performances, exploring heritage sites"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:ArtisticExperience,
+        purposeskos:CulturalEventAttendance,
+        purposeskos:EducationalTour,
+        purposeskos:GalleryVisit,
+        purposeskos:HeritageExploration,
+        purposeskos:HistoricalSiteVisit,
+        purposeskos:MuseumVisit,
+        purposeskos:TheaterVisit ;
+    skos:prefLabel "Cultural Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:DiningExperience a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CommercialPurpose ;
+    skos:definition "Purpose related to dining at restaurants or food establishments."@en ;
+    skos:exactMatch purpose:DiningExperience ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Dining Experience"@en ;
+    skos:related schema:EatAction .
+
+purposeskos:DomesticActivity a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ResidentialPurpose ;
+    skos:definition "Purpose related to household or domestic activities."@en ;
+    skos:exactMatch purpose:DomesticActivity ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Domestic Activity"@en .
+
+purposeskos:EducationalPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to learning and educational activities."@en ;
+    skos:exactMatch purpose:EducationalPurpose ;
+    skos:example "School attendance, workshops, field studies, research activities"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:EducationalTour,
+        purposeskos:FieldStudy,
+        purposeskos:FormalLearning,
+        purposeskos:LibraryVisit,
+        purposeskos:Research,
+        purposeskos:WorkshopAttendance ;
+    skos:prefLabel "Educational Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:EducationalTour a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose,
+        purposeskos:EducationalPurpose ;
+    skos:definition "Purpose that combines cultural experience with educational objectives."@en ;
+    skos:exactMatch purpose:EducationalTour ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Educational Tour"@en .
+
+purposeskos:EmergencyCare a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:HealthcarePurpose ;
+    skos:definition "Purpose related to seeking urgent or emergency medical attention."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Emergency Care"@en .
+
+purposeskos:EntertainmentAttendance a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:RecreationalPurpose ;
+    skos:definition "Purpose related to attending entertainment events (cinema, sports, etc.)."@en ;
+    skos:exactMatch purpose:EntertainmentAttendance ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Entertainment Attendance"@en .
+
+purposeskos:ExerciseActivity a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:RecreationalPurpose ;
+    skos:definition "Purpose related to physical exercise or sports activities."@en ;
+    skos:exactMatch purpose:ExerciseActivity ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Exercise Activity"@en ;
+    skos:related schema:ExerciseAction .
+
+purposeskos:FastFoodVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:DiningExperience ;
+    skos:definition "Purpose related to quick dining at fast food establishments."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Fast Food Visit"@en .
+
+purposeskos:FieldStudy a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EducationalPurpose ;
+    skos:definition "Purpose related to educational field studies or site visits."@en ;
+    skos:exactMatch purpose:FieldStudy ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Field Study"@en .
+
+purposeskos:FieldWork a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:WorkPurpose ;
+    skos:definition "Purpose related to professional work conducted in the field."@en ;
+    skos:exactMatch purpose:FieldWork ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Field Work"@en .
+
+purposeskos:FormalLearning a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EducationalPurpose ;
+    skos:definition "Purpose related to formal educational activities (classes, lectures)."@en ;
+    skos:exactMatch purpose:FormalLearning ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Formal Learning"@en .
+
+purposeskos:GalleryVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to visiting art galleries or exhibitions."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Gallery Visit"@en .
+
+purposeskos:GroceryShopping a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:Shopping ;
+    skos:definition "Purpose related to purchasing food and household essentials."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Grocery Shopping"@en .
+
+purposeskos:GymVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ExerciseActivity ;
+    skos:definition "Purpose related to visiting a gymnasium for exercise."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Gym Visit"@en .
+
+purposeskos:HealthcarePurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to healthcare and medical activities."@en ;
+    skos:example "Doctor visits, pharmacy trips, hospital appointments"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:EmergencyCare,
+        purposeskos:MedicalAppointment,
+        purposeskos:PharmacyVisit,
+        purposeskos:TherapySession ;
+    skos:prefLabel "Healthcare Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:HeritageExploration a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to exploring heritage sites or historical locations."@en ;
+    skos:exactMatch purpose:HeritageExploration ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Heritage Exploration"@en .
+
+purposeskos:HistoricalSiteVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to visiting historical sites, monuments, or landmarks."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Historical Site Visit"@en ;
+    skos:related purposeskos:HeritageExploration .
+
+purposeskos:HomeBound a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ResidentialPurpose ;
+    skos:definition "Purpose related to returning to or staying at home."@en ;
+    skos:exactMatch purpose:HomeBound ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Home Bound"@en .
+
+purposeskos:HostelStay a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:AccommodationPurpose ;
+    skos:definition "Purpose related to staying at a hostel or budget accommodation."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Hostel Stay"@en .
+
+purposeskos:HotelStay a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:AccommodationPurpose ;
+    skos:definition "Purpose related to staying at a hotel or similar accommodation."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Hotel Stay"@en .
+
+purposeskos:InformationSeeking a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:TransportationPurpose ;
+    skos:definition "Purpose related to seeking information or wayfinding assistance."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Information Seeking"@en ;
+    skos:related purposeskos:Tourism .
+
+purposeskos:LeisureActivity a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:RecreationalPurpose ;
+    skos:definition "Purpose related to casual leisure activities."@en ;
+    skos:exactMatch purpose:LeisureActivity ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Leisure Activity"@en .
+
+purposeskos:LibraryVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EducationalPurpose ;
+    skos:definition "Purpose related to visiting a library for study or research."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Library Visit"@en .
+
+purposeskos:LocalCommunityEngagement a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ResidentialPurpose ;
+    skos:definition "Purpose related to engaging with the local community near one's residence."@en ;
+    skos:exactMatch purpose:LocalCommunityEngagement ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Local Community Engagement"@en .
+
+purposeskos:MedicalAppointment a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:HealthcarePurpose ;
+    skos:definition "Purpose related to scheduled medical consultations or check-ups."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Medical Appointment"@en .
+
+purposeskos:MuseumVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to visiting museums or exhibitions."@en ;
+    skos:exactMatch purpose:MuseumVisit ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Museum Visit"@en .
+
+purposeskos:NightlifeActivity a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EntertainmentAttendance ;
+    skos:definition "Purpose related to nightlife entertainment (bars, clubs, night venues)."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Nightlife Activity"@en .
+
+purposeskos:OfficeWork a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:WorkPurpose ;
+    skos:definition "Purpose related to working in an office environment."@en ;
+    skos:exactMatch purpose:OfficeWork ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Office Work"@en .
+
+purposeskos:OutdoorRecreation a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ExerciseActivity ;
+    skos:definition "Purpose related to outdoor recreational activities (hiking, cycling, etc.)."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Outdoor Recreation"@en .
+
+purposeskos:Parking a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:TransportationPurpose ;
+    skos:definition "Purpose related to parking a vehicle."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Parking"@en .
+
+purposeskos:ParkVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:LeisureActivity ;
+    skos:definition "Purpose related to visiting parks for relaxation or recreation."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Park Visit"@en .
+
+purposeskos:PharmacyVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:HealthcarePurpose ;
+    skos:definition "Purpose related to obtaining medication or pharmaceutical services."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Pharmacy Visit"@en .
+
+purposeskos:PostalService a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ServiceAccess ;
+    skos:definition "Purpose related to using postal or courier services."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Postal Service"@en .
+
+purposeskos:ProfessionalEvent a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:WorkPurpose ;
+    skos:definition "Purpose related to attending professional events, conferences, or trade shows."@en ;
+    skos:exactMatch purpose:ProfessionalEvent ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Professional Event"@en .
+
+purposeskos:RecreationalPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to leisure and recreational activities."@en ;
+    skos:exactMatch purpose:RecreationalPurpose ;
+    skos:example "Park visits, beach trips, attending sporting events"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:EntertainmentAttendance,
+        purposeskos:ExerciseActivity,
+        purposeskos:LeisureActivity,
+        purposeskos:SocialGathering,
+        purposeskos:Tourism ;
+    skos:prefLabel "Recreational Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:ReligiousCeremony a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ReligiousPurpose ;
+    skos:definition "Purpose related to attending religious ceremonies (weddings, funerals, baptisms)."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Religious Ceremony"@en .
+
+purposeskos:ReligiousPilgrimage a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ReligiousPurpose ;
+    skos:definition "Purpose related to visiting sacred sites as part of a religious journey."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Religious Pilgrimage"@en .
+
+purposeskos:ReligiousPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to religious or spiritual activities."@en ;
+    skos:example "Attending church, mosque, temple, or spiritual retreat"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:ReligiousCeremony,
+        purposeskos:ReligiousPilgrimage,
+        purposeskos:SpiritualRetreat,
+        purposeskos:Worship ;
+    skos:prefLabel "Religious Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:Research a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EducationalPurpose ;
+    skos:definition "Purpose related to research activities."@en ;
+    skos:exactMatch purpose:Research ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Research"@en .
+
+purposeskos:ResidentialPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to residential and home-based activities."@en ;
+    skos:exactMatch purpose:ResidentialPurpose ;
+    skos:example "Returning home, local neighborhood activities"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:DomesticActivity,
+        purposeskos:HomeBound,
+        purposeskos:LocalCommunityEngagement ;
+    skos:prefLabel "Residential Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:RestaurantDining a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:DiningExperience ;
+    skos:definition "Purpose related to dining at a restaurant."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Restaurant Dining"@en .
+
+purposeskos:RetailShopping a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:Shopping ;
+    skos:definition "Purpose related to shopping at retail stores or malls."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Retail Shopping"@en .
+
+purposeskos:SchoolAttendance a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:FormalLearning ;
+    skos:definition "Purpose related to attending primary or secondary school."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "School Attendance"@en .
+
+purposeskos:ServiceAccess a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CommercialPurpose ;
+    skos:definition "Purpose related to accessing commercial services (banking, healthcare, etc.)."@en ;
+    skos:exactMatch purpose:ServiceAccess ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Service Access"@en .
+
+purposeskos:Shopping a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CommercialPurpose ;
+    skos:definition "Purpose related to purchasing goods."@en ;
+    skos:exactMatch purpose:Shopping ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Shopping"@en ;
+    skos:related schema:BuyAction .
+
+purposeskos:SocialGathering a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:RecreationalPurpose ;
+    skos:definition "Purpose related to meeting and socializing with others."@en ;
+    skos:exactMatch purpose:SocialGathering ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Social Gathering"@en .
+
+purposeskos:SpiritualRetreat a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ReligiousPurpose ;
+    skos:definition "Purpose related to attending spiritual or meditation retreats."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Spiritual Retreat"@en .
+
+purposeskos:SportsAttendance a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EntertainmentAttendance ;
+    skos:definition "Purpose related to attending sports events as a spectator."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Sports Attendance"@en .
+
+purposeskos:TemporaryLodging a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:AccommodationPurpose ;
+    skos:definition "Purpose related to staying at temporary rental accommodations."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Temporary Lodging"@en .
+
+purposeskos:TheaterVisit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:CulturalPurpose ;
+    skos:definition "Purpose related to attending theatrical performances."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Theater Visit"@en .
+
+purposeskos:TherapySession a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:HealthcarePurpose ;
+    skos:definition "Purpose related to attending therapy or rehabilitation sessions."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Therapy Session"@en .
+
+purposeskos:Tourism a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:RecreationalPurpose ;
+    skos:definition "Purpose related to visiting places as a tourist."@en ;
+    skos:exactMatch purpose:Tourism ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Tourism"@en ;
+    skos:related schema:TouristTrip .
+
+purposeskos:TrainStationTransit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:Transit ;
+    skos:definition "Purpose related to using train station facilities for travel."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Train Station Transit"@en .
+
+purposeskos:TransferBetweenModes a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:TransportationPurpose ;
+    skos:definition "Purpose related to transferring between different modes of transportation."@en ;
+    skos:exactMatch purpose:TransferBetweenModes ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Transfer Between Modes"@en .
+
+purposeskos:Transit a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:TransportationPurpose ;
+    skos:definition "Purpose primarily focused on moving from one location to another."@en ;
+    skos:exactMatch purpose:Transit ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Transit"@en .
+
+purposeskos:TransportationPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose primarily related to transport and transit between locations."@en ;
+    skos:exactMatch purpose:TransportationPurpose ;
+    skos:example "Commuting, transit transfers, wandering"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:Commuting,
+        purposeskos:InformationSeeking,
+        purposeskos:Parking,
+        purposeskos:TransferBetweenModes,
+        purposeskos:Transit,
+        purposeskos:Wandering ;
+    skos:prefLabel "Transportation Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:UniversityAttendance a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:FormalLearning ;
+    skos:definition "Purpose related to attending university or higher education."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "University Attendance"@en .
+
+purposeskos:Wandering a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:TransportationPurpose ;
+    skos:definition "Purpose involving movement without a specific destination or goal."@en ;
+    skos:exactMatch purpose:Wandering ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Wandering"@en .
+
+purposeskos:WorkplaceRoutine a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:WorkPurpose ;
+    skos:definition "Purpose related to regular workplace routines and activities."@en ;
+    skos:exactMatch purpose:WorkplaceRoutine ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Workplace Routine"@en .
+
+purposeskos:WorkPurpose a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:definition "Movement purpose related to employment and professional activities."@en ;
+    skos:exactMatch purpose:WorkPurpose ;
+    skos:example "Office work, field work, business meetings"@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:narrower purposeskos:BusinessMeeting,
+        purposeskos:FieldWork,
+        purposeskos:OfficeWork,
+        purposeskos:ProfessionalEvent,
+        purposeskos:WorkplaceRoutine ;
+    skos:prefLabel "Work Purpose"@en ;
+    skos:topConceptOf purposeskos:TrajectoryPurposeScheme .
+
+purposeskos:WorkshopAttendance a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:EducationalPurpose ;
+    skos:definition "Purpose related to attending workshops, seminars, or training sessions."@en ;
+    skos:exactMatch purpose:WorkshopAttendance ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Workshop Attendance"@en .
+
+purposeskos:Worship a skos:Concept ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/purpose/skos> ;
+    skos:broader purposeskos:ReligiousPurpose ;
+    skos:definition "Purpose related to attending regular religious worship services."@en ;
+    skos:inScheme purposeskos:TrajectoryPurposeScheme ;
+    skos:prefLabel "Worship"@en .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty .

@@ -1,0 +1,1886 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/trajecto/temporal-dwell#"
+     xml:base="http://w3id.org/trajecto/temporal-dwell"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/trajecto/temporal-dwell">
+        <owl:versionIRI rdf:resource="http://w3id.org/trajecto/temporal-dwell/1.1.0"/>
+        <owl:imports rdf:resource="http://w3id.org/trajecto/context"/>
+        <owl:imports rdf:resource="http://w3id.org/trajecto/patterns"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-30</terms:created>
+        <terms:creator>Konstantinos Kotis</terms:creator>
+        <terms:creator>Sotirios Angelis</terms:creator>
+        <terms:description xml:lang="en">This module extends the trajecto ontology with comprehensive temporal context and dwell time analytics capabilities, integrating temporal patterns with spatial behavior analysis.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
+        <terms:publisher>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</terms:publisher>
+        <terms:title xml:lang="en">Trajecto Temporal-Dwell Module</terms:title>
+        <vann:preferredNamespacePrefix>tdwell</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/trajecto/temporal-dwell#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">trajecto-temporal-dwell</rdfs:label>
+        <owl:priorVersion rdf:resource="http://w3id.org/trajecto/temporal-dwell/1.0"/>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto#hasPointOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto#hasPointOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#hasMovementContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/context#hasMovementContext"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#hasTemporalContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/context#hasTemporalContext"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#exhibitsPattern -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/patterns#exhibitsPattern"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellsAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellsAt">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto#hasPointOfInterest"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto#PointOfInterest"/>
+        <rdfs:comment xml:lang="en">Specifies the point of interest where dwelling occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwells at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#followedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#followedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:comment xml:lang="en">Indicates temporal sequence between dwell events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">followed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with the type of activity period it occurs in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has activity period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasComparativeDwellMetrics -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasComparativeDwellMetrics">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto#PointOfInterest"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics"/>
+        <rdfs:comment xml:lang="en">Associates a POI with comparative dwell time metrics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has comparative dwell metrics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasDwellAnalytics -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasDwellAnalytics">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:comment xml:lang="en">Associates a trajectory with its comprehensive dwell analytics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has dwell analytics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasDwellClassification -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasDwellClassification">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellClassification"/>
+        <rdfs:comment xml:lang="en">Classifies a dwell event based on duration and behavioral characteristics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has dwell classification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasDwellDuration -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasDwellDuration">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellDuration"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with its duration measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has dwell duration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasDwellEvent -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasDwellEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:comment xml:lang="en">Associates a trajectory part with a dwell event that occurred there.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has dwell event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasSeasonalContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasSeasonalContext">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/context#Season"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with seasonal context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has seasonal context</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with detected temporal anomalies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has temporal anomaly</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/context#hasMovementContext"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with its temporal context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has temporal dwell context</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/patterns#exhibitsPattern"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with temporal patterns it exhibits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has temporal pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasTimeOfDay -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasTimeOfDay">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/context#TimeOfDay"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with its time of day classification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has time of day</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasWeekdayClassification -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasWeekdayClassification">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/context#Weekpart"/>
+        <rdfs:comment xml:lang="en">Associates a dwell event with weekday vs weekend classification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has weekday classification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/temporal-dwell#TimeSlot"/>
+        <rdfs:comment xml:lang="en">Indicates the time slot during which the dwell event occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">occurs during time slot</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#averageDwellTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#averageDwellTime">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Average dwell time in minutes for analytical aggregation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">average dwell time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellDurationMinutes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellDurationMinutes">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellDuration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Duration of dwelling in minutes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwell duration minutes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellDurationSeconds -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellDurationSeconds">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellDuration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Duration of dwelling in seconds for precise measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwell duration seconds</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellEndTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellEndTime">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">End timestamp of the dwell event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwell end time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellFrequency -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellFrequency">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Number of dwell events in the analysis period.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwell frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellStartTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellStartTime">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Start timestamp of the dwell event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwell start time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#dwellVariability -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#dwellVariability">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Standard deviation of dwell times indicating variability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">dwell variability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#engagementScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#engagementScore">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Calculated engagement score (0.0-1.0) based on dwell duration and context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">engagement score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasDayOfWeek -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasDayOfWeek">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+                    <rdf:Description rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Day of week (1=Monday, 7=Sunday) when dwell event occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has day of week</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasHour -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasHour">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+                    <rdf:Description rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Hour of day (0-23) when dwell event starts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has hour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasMonth -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasMonth">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+                    <rdf:Description rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Month of year (1-12) when dwell event occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has month</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#hasYear -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#hasYear">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+                    <rdf:Description rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Year when dwell event occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">has year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#isHoliday -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#isHoliday">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellEvent"/>
+                    <rdf:Description rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean indicating if the dwell event occurs on a holiday.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">is holiday</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#temporalAnomalyScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#temporalAnomalyScore">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Score indicating degree of temporal anomaly (higher = more anomalous).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">temporal anomaly score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#totalDwellTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/temporal-dwell#totalDwellTime">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Total cumulative dwell time in minutes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">total dwell time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto#Interaction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#Interaction"/>
+    
+
+
+    <!-- http://w3id.org/trajecto#PointOfInterest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#PointOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Afternoon -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Afternoon"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Evening -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Evening"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Morning -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Morning"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#MovementContext -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#MovementContext"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Night -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Night"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Season -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Season"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#TemporalContext -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#TemporalContext"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#TimeOfDay -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#TimeOfDay"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Weekday -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Weekday"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Weekend -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Weekend"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/context#Weekpart -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/context#Weekpart"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#BehavioralPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#BehavioralPattern"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#BriefDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#BriefDwell"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/patterns#FocusedDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/patterns#FocusedDwell"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/poi#POIInteraction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/poi#POIInteraction"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#ActivityPeriod -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/context#TemporalContext"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Classification of time periods based on typical activity patterns.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Activity Period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#AfternoonActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Dwell activity occurring during afternoon hours.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Afternoon Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#AnomalousDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#AnomalousDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellClassification"/>
+        <rdfs:comment xml:lang="en">Dwell events that deviate significantly from expected patterns.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Anomalous Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#BriefDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#BriefDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#BriefDwell"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellClassification"/>
+        <rdfs:comment xml:lang="en">Very short dwell events (typically less than 5 minutes).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Brief Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#CommutingHours -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#CommutingHours">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:comment xml:lang="en">Peak commuting hours (typically 7-9 AM and 5-7 PM on weekdays).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Commuting Hours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:comment xml:lang="en">Metrics for comparing dwell behavior across different contexts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Comparative Dwell Metrics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DailyDwellPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DailyDwellPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern"/>
+        <rdfs:comment xml:lang="en">Dwell patterns that repeat on a daily basis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Daily Dwell Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DecreasingTrend -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DecreasingTrend">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellTrend"/>
+        <rdfs:comment xml:lang="en">Decreasing trend in dwell time or frequency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Decreasing Trend</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DurationAnomaly -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DurationAnomaly">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly"/>
+        <rdfs:comment xml:lang="en">Dwell events with unusually long or short durations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Duration Anomaly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DwellAnalytics -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">Comprehensive analytics and metrics derived from dwell events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Dwell Analytics</rdfs:label>
+        <skos:definition xml:lang="en">A collection of analytical measures, statistics, and insights derived from dwell behavior patterns.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DwellClassification -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellClassification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">Classification of dwell events based on duration and behavioral characteristics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Dwell Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DwellDuration -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellDuration">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+        <rdfs:comment xml:lang="en">Duration of time spent dwelling at a location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Dwell Duration</rdfs:label>
+        <skos:definition xml:lang="en">A measured time interval representing the duration of a dwell event.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DwellEvent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellEvent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#Interaction"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/poi#POIInteraction"/>
+        <rdfs:comment xml:lang="en">An event representing time spent dwelling at a specific location or point of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Dwell Event</rdfs:label>
+        <skos:definition xml:lang="en">A measurable period of time during which a moving entity remains stationary or moves slowly within a defined area, typically associated with engagement at a point of interest.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#DwellTrend -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#DwellTrend">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics"/>
+        <rdfs:comment xml:lang="en">Trend analysis of dwell behavior over time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Dwell Trend</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#EngagementLevel -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#EngagementLevel">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+        <rdfs:comment xml:lang="en">Level of engagement indicated by dwell behavior.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Engagement Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#EveningActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#EveningActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Dwell activity occurring during evening hours.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Evening Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#ExtendedDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#ExtendedDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#FocusedDwell"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellClassification"/>
+        <rdfs:comment xml:lang="en">Long duration dwell events (typically more than 30 minutes).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Extended Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#FrequencyAnomaly -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#FrequencyAnomaly">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly"/>
+        <rdfs:comment xml:lang="en">Unusual frequency of dwell events at specific locations or times.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Frequency Anomaly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#HighEngagement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#HighEngagement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#EngagementLevel"/>
+        <rdfs:comment xml:lang="en">High level of engagement indicated by extended dwell times.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">High Engagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#IncreasingTrend -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#IncreasingTrend">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellTrend"/>
+        <rdfs:comment xml:lang="en">Increasing trend in dwell time or frequency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Increasing Trend</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#LeisureHours -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#LeisureHours">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:comment xml:lang="en">Leisure time periods including evenings and weekends.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Leisure Hours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#LowEngagement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#LowEngagement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#EngagementLevel"/>
+        <rdfs:comment xml:lang="en">Low level of engagement indicated by brief dwell times.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Low Engagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#LunchHours -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#LunchHours">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:comment xml:lang="en">Typical lunch time period (typically 11 AM - 2 PM).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Lunch Hours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#MediumEngagement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#MediumEngagement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#EngagementLevel"/>
+        <rdfs:comment xml:lang="en">Medium level of engagement indicated by moderate dwell times.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Medium Engagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#ModerateDwell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#ModerateDwell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellClassification"/>
+        <rdfs:comment xml:lang="en">Moderate duration dwell events (typically 5-30 minutes).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Moderate Dwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#MorningActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#MorningActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Dwell activity occurring during morning hours.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Morning Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#NightActivity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#NightActivity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Dwell activity occurring during night hours.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Night Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#POIComparison -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#POIComparison">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics"/>
+        <rdfs:comment xml:lang="en">Comparison of dwell metrics across different POIs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">POI Comparison</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#SeasonalDwellPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#SeasonalDwellPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern"/>
+        <rdfs:comment xml:lang="en">Dwell patterns that vary by season.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Seasonal Dwell Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#StableTrend -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#StableTrend">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellTrend"/>
+        <rdfs:comment xml:lang="en">Stable, consistent dwell behavior over time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Stable Trend</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">Detected anomalies in temporal dwell patterns.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Temporal Anomaly</rdfs:label>
+        <skos:definition xml:lang="en">A deviation from expected temporal patterns in dwell behavior.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#TemporalComparison -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#TemporalComparison">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics"/>
+        <rdfs:comment xml:lang="en">Comparison of dwell metrics across different time periods.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Temporal Comparison</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/context#MovementContext"/>
+        <rdfs:comment xml:lang="en">Temporal context specifically related to dwell behavior.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Temporal Dwell Context</rdfs:label>
+        <skos:definition xml:lang="en">Contextual information that describes the temporal circumstances and patterns associated with dwell events.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/patterns#BehavioralPattern"/>
+        <rdfs:comment xml:lang="en">Patterns in dwelling behavior over temporal dimensions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Temporal Dwell Pattern</rdfs:label>
+        <skos:definition xml:lang="en">Recurring patterns or regularities in dwell behavior across different temporal contexts.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#TimeSlot -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#TimeSlot">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">A defined time slot or period for temporal analysis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Time Slot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#UnusualTimingAnomaly -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#UnusualTimingAnomaly">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly"/>
+        <rdfs:comment xml:lang="en">Dwell events occurring at unusual times.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Unusual Timing Anomaly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#VisitorTypeComparison -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#VisitorTypeComparison">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics"/>
+        <rdfs:comment xml:lang="en">Comparison of dwell metrics across different visitor types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Visitor Type Comparison</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#VolatileTrend -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#VolatileTrend">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#DwellTrend"/>
+        <rdfs:comment xml:lang="en">Highly variable, unpredictable dwell behavior.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Volatile Trend</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#WeekdayDwelling -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#WeekdayDwelling">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/context#Weekday"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Dwell activity occurring on weekdays.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Weekday Dwelling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#WeekendDwelling -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#WeekendDwelling">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/context#Weekend"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext"/>
+        <rdfs:comment xml:lang="en">Dwell activity occurring on weekends.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Weekend Dwelling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#WeeklyDwellPattern -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#WeeklyDwellPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern"/>
+        <rdfs:comment xml:lang="en">Dwell patterns that repeat on a weekly basis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Weekly Dwell Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#WorkingHours -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/temporal-dwell#WorkingHours">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod"/>
+        <rdfs:comment xml:lang="en">Standard working hours period (typically 9 AM - 5 PM on weekdays).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Working Hours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#Trajectory -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#Trajectory"/>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#TrajectoryPart -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#afternoon -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/temporal-dwell#afternoon">
+        <rdf:type rdf:resource="http://w3id.org/trajecto/context#Afternoon"/>
+        <rdfs:comment xml:lang="en">The afternoon time of day, as an individual.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Afternoon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#evening -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/temporal-dwell#evening">
+        <rdf:type rdf:resource="http://w3id.org/trajecto/context#Evening"/>
+        <rdfs:comment xml:lang="en">The evening time of day, as an individual.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Evening</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#morning -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/temporal-dwell#morning">
+        <rdf:type rdf:resource="http://w3id.org/trajecto/context#Morning"/>
+        <rdfs:comment xml:lang="en">The morning time of day, as an individual.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Morning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/temporal-dwell#night -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/temporal-dwell#night">
+        <rdf:type rdf:resource="http://w3id.org/trajecto/context#Night"/>
+        <rdfs:comment xml:lang="en">The night time of day, as an individual.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/temporal-dwell"/>
+        <rdfs:label xml:lang="en">Night</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#part">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://w3id.org/trajecto/temporal-dwell#hr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Afternoon Activity Classification</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#hasHour"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#afternoon"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Evening Activity Classification</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#hasHour"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#evening"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#EveningActivity"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Night Activity Classification</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#hasHour"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#night"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#MorningActivity"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Morning Activity Classification</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#hasHour"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#morning"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#MorningActivity"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Night Activity Classification 2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#hasHour"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://w3id.org/trajecto/temporal-dwell#hr"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://w3id.org/trajecto/context#hasTemporalContext"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/trajecto/temporal-dwell#night"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://w3id.org/trajecto/temporal-dwell#MorningActivity"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/trajecto/temporal-dwell#part"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

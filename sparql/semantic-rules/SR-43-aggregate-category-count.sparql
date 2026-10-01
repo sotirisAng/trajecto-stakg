@@ -1,0 +1,24 @@
+# SR-43: Materialize unique POI category count per trajectory
+# Counts distinct POI types from meaningful interactions.
+# Excludes base classes (PointOfInterest, SignificantPOI).
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasUniqueCategoryCount ?cnt .
+}
+WHERE {
+    SELECT ?traj (COUNT(DISTINCT ?cat) AS ?cnt)
+    WHERE {
+        ?pos dul:isPartOf ?traj .
+        ?pos trajecto:hasInteraction ?int .
+        ?int a poi:MeaningfulInteraction .
+        ?int poi:interactsWith ?poi .
+        ?poi a ?cat .
+        FILTER(?cat != trajecto:PointOfInterest && ?cat != poi:SignificantPOI)
+    }
+    GROUP BY ?traj
+}

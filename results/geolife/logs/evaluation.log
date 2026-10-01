@@ -1,0 +1,117 @@
+Fuseki query endpoint: http://localhost:3030/geolife/sparql
+Fuseki update endpoint: http://localhost:3030/geolife/update
+Loading context-aware recommender data...
+  Features: loaded 1160 from file
+  Interactions: 1145 trajectories, 3041 unique POIs
+  Metadata: 1160 trajectories
+  POI metadata: 8486 POIs
+  Engagement: 1145 trajectories classified
+  Preferences: 96 users
+  Graphs: flow=2237 edges, covisit=5251 edges
+  Significant POIs: 163
+Loaded: 1160 trajectories, 3041 POIs, 96 users with preferences
+  Loading ontological classifications...
+  Ontological: 1145 classified, 13 profile classes
+  SR engine: ready (5 recommendation rules)
+  Precomputing archetype similarity matrix...
+  Archetype similarity: 1145 trajectories, 17175 pairs cached
+  Precomputing route similarity matrix...
+  Route similarity: 791 trajectories, 9370 pairs cached
+  Indexes: 3 engagement levels, 63 category groups, 96 user visit sets
+  Events: 0 scheduled events at 0 POIs
+  Trajectory windows: 1160 cached
+  Dwell semantics: 102 typed thresholds, 7171 interaction dwells
+Loaded in 44s
+Fitting LR fusion on tune half (seed 11)...
+
+=== Full-pool (protocol B, min_seq=3) ===
+  random                 N=369  R@10=0.006  R/ceil=0.01  MRR=0.003  [test-half R=0.003 MRR=0.003]
+  popularity             N=369  R@10=0.145  R/ceil=0.16  MRR=0.096  [test-half R=0.106 MRR=0.053]
+  category_popularity    N=369  R@10=0.128  R/ceil=0.14  MRR=0.079  [test-half R=0.129 MRR=0.076]
+  proximity              N=369  R@10=0.126  R/ceil=0.14  MRR=0.069  [test-half R=0.111 MRR=0.077]
+  markov                 N=369  R@10=0.211  R/ceil=0.23  MRR=0.197  [test-half R=0.183 MRR=0.170]
+  markov2                N=369  R@10=0.296  R/ceil=0.33  MRR=0.258  [test-half R=0.261 MRR=0.227]
+  unified_default        N=369  R@10=0.331  R/ceil=0.36  MRR=0.262  [test-half R=0.287 MRR=0.215]
+  unified_route_heavy    N=369  R@10=0.333  R/ceil=0.37  MRR=0.262  [test-half R=0.272 MRR=0.212]
+  rrf_uni+markov2+prox   N=369  R@10=0.374  R/ceil=0.41  MRR=0.239  [test-half R=0.322 MRR=0.191]
+  lr_fusion              N=369  R@10=0.363  R/ceil=0.40  MRR=0.277  [test-half R=0.301 MRR=0.210]
+
+=== Within-radius 500 m ===
+  random                 N= 77  R@10=0.532  MRR=0.271
+  popularity             N= 77  R@10=0.732  MRR=0.415
+  category_popularity    N= 77  R@10=0.471  MRR=0.358
+  proximity              N= 77  R@10=0.569  MRR=0.248
+  markov                 N= 77  R@10=0.581  MRR=0.369
+  markov2                N= 77  R@10=0.654  MRR=0.364
+  unified_default        N= 77  R@10=0.455  MRR=0.323
+  unified_route_heavy    N= 77  R@10=0.455  MRR=0.285
+  rrf_uni+markov2+prox   N= 77  R@10=0.758  MRR=0.409
+  lr_fusion              N= 77  R@10=0.461  MRR=0.304
+  candidates≈25 | holdout outside: 90.0% | ceiling 0.913
+
+=== Within-radius 1000 m ===
+  random                 N=139  R@10=0.325  MRR=0.169
+  popularity             N=139  R@10=0.630  MRR=0.384
+  category_popularity    N=139  R@10=0.406  MRR=0.288
+  proximity              N=139  R@10=0.390  MRR=0.194
+  markov                 N=139  R@10=0.551  MRR=0.418
+  markov2                N=139  R@10=0.567  MRR=0.415
+  unified_default        N=139  R@10=0.536  MRR=0.378
+  unified_route_heavy    N=139  R@10=0.540  MRR=0.350
+  rrf_uni+markov2+prox   N=139  R@10=0.680  MRR=0.379
+  lr_fusion              N=139  R@10=0.536  MRR=0.369
+  candidates≈62 | holdout outside: 83.4% | ceiling 0.921
+
+=== Session transfer (transfer) ===
+  random                   N=328  R@10=0.004  MRR=0.011
+  popularity               N=328  R@10=0.021  MRR=0.013
+  category_popularity      N=328  R@10=0.027  MRR=0.017
+  proximity                N=328  R@10=0.027  MRR=0.022
+  markov                   N=328  R@10=0.031  MRR=0.023
+  markov2                  N=328  R@10=0.054  MRR=0.028
+  unified_default          N=328  R@10=0.079  MRR=0.059
+  unified_route_heavy      N=328  R@10=0.082  MRR=0.068
+  rrf_uni+markov2+prox     N=328  R@10=0.098  MRR=0.054
+  lr_fusion                N=328  R@10=0.081  MRR=0.047
+  ceiling 0.779 | repeat fraction 48.0%
+
+=== Session transfer (transfer_repeats) ===
+  random                   N=511  R@10=0.004  MRR=0.003
+  popularity               N=511  R@10=0.007  MRR=0.008
+  category_popularity      N=511  R@10=0.011  MRR=0.011
+  proximity                N=511  R@10=0.011  MRR=0.014
+  markov                   N=511  R@10=0.014  MRR=0.015
+  markov2                  N=511  R@10=0.024  MRR=0.018
+  unified_default          N=511  R@10=0.036  MRR=0.038
+  unified_route_heavy      N=511  R@10=0.037  MRR=0.043
+  rrf_uni+markov2+prox     N=511  R@10=0.043  MRR=0.035
+  lr_fusion                N=511  R@10=0.037  MRR=0.030
+  repeat                   N=511  R@10=0.267  MRR=0.232
+  rrf_repeat+uni+markov2   N=511  R@10=0.192  MRR=0.096
+  ceiling 0.880 | repeat fraction 48.0%
+
+=== Significance (paired sign-flip) ===
+  [fullpool] unified_route_heavy vs popularity (recall@10): Δ=+0.189 p=0.000 n=369
+  [fullpool] unified_route_heavy vs popularity (mrr): Δ=+0.166 p=0.000 n=369
+  [fullpool] unified_route_heavy vs markov (recall@10): Δ=+0.122 p=0.000 n=369
+  [fullpool] unified_route_heavy vs markov (mrr): Δ=+0.065 p=0.001 n=369
+  [fullpool] unified_route_heavy vs markov2 (recall@10): Δ=+0.037 p=0.037 n=369
+  [fullpool] unified_route_heavy vs markov2 (mrr): Δ=+0.004 p=0.796 n=369
+  [fullpool] lr_fusion vs unified_route_heavy (recall@10): Δ=+0.030 p=0.001 n=369
+  [fullpool] lr_fusion vs unified_route_heavy (mrr): Δ=+0.015 p=0.078 n=369
+  [fullpool] rrf_uni+markov2+prox vs unified_route_heavy (recall@10): Δ=+0.040 p=0.003 n=369
+  [fullpool] rrf_uni+markov2+prox vs unified_route_heavy (mrr): Δ=-0.023 p=0.078 n=369
+  [radius500] unified_route_heavy vs markov (recall@10): Δ=-0.126 p=0.082 n=77
+  [radius500] unified_route_heavy vs markov (mrr): Δ=-0.084 p=0.072 n=77
+  [radius1000] unified_route_heavy vs markov (recall@10): Δ=-0.012 p=0.811 n=139
+  [radius1000] unified_route_heavy vs markov (mrr): Δ=-0.068 p=0.021 n=139
+  [radius1000] lr_fusion vs markov (recall@10): Δ=-0.015 p=0.752 n=139
+  [radius1000] lr_fusion vs markov (mrr): Δ=-0.049 p=0.117 n=139
+  [transfer_repeats] rrf_repeat+uni+markov2 vs repeat (recall@10): Δ=-0.075 p=0.000 n=511
+  [transfer_repeats] rrf_repeat+uni+markov2 vs repeat (mrr): Δ=-0.136 p=0.000 n=511
+  [transfer_repeats] rrf_repeat+uni+markov2 vs unified_route_heavy (recall@10): Δ=+0.155 p=0.000 n=511
+  [transfer_repeats] rrf_repeat+uni+markov2 vs unified_route_heavy (mrr): Δ=+0.053 p=0.000 n=511
+  [fullpool TEST-HALF] lr_fusion vs unified_route_heavy (recall@10): Δ=+0.029 p=0.026 n=178
+  [fullpool TEST-HALF] lr_fusion vs unified_route_heavy (mrr): Δ=-0.001 p=0.861 n=178
+
+Saved geolife_* to output/evaluation/. Total 299s

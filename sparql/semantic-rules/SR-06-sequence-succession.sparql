@@ -1,0 +1,22 @@
+# SR-06: Materialize POI visit sequence relationships
+# POI A followed by POI B based on position chain (meaningful only;
+# ImmersiveInteraction is a subclass of MeaningfulInteraction in the ontology).
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+INSERT { ?poiA poi:followedBy ?poiB . }
+WHERE {
+    ?pos1 trajecto:hasInteraction ?int1 .
+    ?int1 a poi:MeaningfulInteraction .
+    ?int1 poi:interactsWith ?poiA .
+
+    ?pos1 trajecto:hasNextPosition ?pos2 .
+
+    ?pos2 trajecto:hasInteraction ?int2 .
+    ?int2 a poi:MeaningfulInteraction .
+    ?int2 poi:interactsWith ?poiB .
+
+    FILTER(?poiA != ?poiB)
+}

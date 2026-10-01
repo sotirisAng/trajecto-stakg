@@ -1,0 +1,43 @@
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Query Purpose: Identify and classify immersive interactions
+# An ImmersiveInteraction occurs when the interaction duration exceeds
+# the typical duration (poi:hasTypicalDuration) for the POI type.
+# This indicates deep engagement where users spend more time than expected.
+
+INSERT {
+    ?interaction a poi:ImmersiveInteraction .
+}
+WHERE {
+    ?interaction poi:hasDwellTime ?dwellTime ;
+          poi:interactsWith ?poi .
+
+    ?poi a ?poiType .
+
+    ?configIndividual a poi:POITypeConfiguration ;
+        poi:hasTypicalDuration ?typicalDuration .
+    # A POI class's configuration is the individual named after it:
+    # <Class>-configuration or <Class>POI-configuration.
+    FILTER(STRAFTER(STR(?configIndividual), "#") IN (
+        CONCAT(STRAFTER(STR(?poiType), "#"), "-configuration"),
+        CONCAT(STRAFTER(STR(?poiType), "#"), "POI-configuration")))
+
+    # Interaction is immersive if dwell time exceeds typical duration
+    FILTER(?dwellTime > ?typicalDuration)
+
+    # Use most specific type when POI has multiple types
+    # This ensures we compare against the most specific configuration
+    FILTER NOT EXISTS {
+        ?poi a ?moreSpecificType .
+        ?moreSpecificConfig a poi:POITypeConfiguration ;
+            poi:hasTypicalDuration ?moreSpecificTypical .
+        FILTER(STRAFTER(STR(?moreSpecificConfig), "#") IN (
+            CONCAT(STRAFTER(STR(?moreSpecificType), "#"), "-configuration"),
+            CONCAT(STRAFTER(STR(?moreSpecificType), "#"), "POI-configuration")))
+        FILTER(?moreSpecificType != ?poiType)
+        ?moreSpecificType rdfs:subClassOf+ ?poiType .
+    }
+}

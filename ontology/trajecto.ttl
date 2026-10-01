@@ -1,0 +1,695 @@
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix poi: <http://w3id.org/trajecto/poi#> .
+@prefix events: <http://w3id.org/trajecto/events#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/trajecto> a owl:Ontology ;
+    rdfs:label "trajecto"@en ;
+    dcterms:bibliographicCitation "Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean." ;
+    dcterms:created "2025-05-09"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "Trajecto is a modular ontology for semantic trajectories: GPS-derived movement of people, the points of interest they interact with, the patterns, purposes and contexts of that movement, and the user profiles learned from it. The core module defines the moving person, entities of interest and interactions, and reuses the datAcron trajectory model (Trajectory, TrajectoryPart, RawPosition, MovingObject) and DUL. It imports the other eleven modules and the purpose concept scheme, and is the entry point to the whole ontology."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Ontology"@en ;
+    vann:preferredNamespacePrefix "trajecto" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto#" ;
+    owl:imports <http://w3id.org/trajecto/context>,
+        <http://w3id.org/trajecto/events>,
+        <http://w3id.org/trajecto/patterns>,
+        <http://w3id.org/trajecto/poi>,
+        <http://w3id.org/trajecto/profiles>,
+        <http://w3id.org/trajecto/purpose>,
+        <http://w3id.org/trajecto/purpose/skos>,
+        <http://w3id.org/trajecto/scheduled>,
+        <http://w3id.org/trajecto/spaces>,
+        <http://w3id.org/trajecto/spatial>,
+        <http://w3id.org/trajecto/temporal-dwell>,
+        <http://w3id.org/trajecto/user>,
+        datacron: ;
+    owl:priorVersion <http://w3id.org/trajecto/0.9> ;
+    owl:versionIRI <http://w3id.org/trajecto/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+trajecto:CasualNavigation a owl:Class ;
+    rdfs:label "Casual Navigation"@en ;
+    rdfs:comment "Deprecated: use patterns:CasualMovement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:NavigationStyle ;
+    owl:deprecated true .
+
+trajecto:CentralityRole a owl:Class ;
+    rdfs:label "Centrality Role"@en ;
+    rdfs:comment "Structural role of a POI in the co-visitation and flow graphs, assigned from corpus quantiles of degree, betweenness and PageRank (KG analytics, notebook 21)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf dul:Abstract .
+
+trajecto:CulturalEvent a owl:Class ;
+    rdfs:label "Cultural Event"@en ;
+    rdfs:comment "An event of interest of a cultural nature, such as a festival or an exhibition opening."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:EventOfInterest .
+
+trajecto:EngagementLevel a owl:Class ;
+    rdfs:label "Engagement Level"@en ;
+    rdfs:comment "Engagement of a trajectory as a whole, assigned by rule SR-10 from the share of meaningful and immersive interactions. Values: HighEngagement, MediumEngagement, LowEngagement. The temporal-dwell module models engagement of single dwell events separately."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:EntityOfInterest a owl:Class ;
+    rdfs:label "Entity of Interest"@en ;
+    rdfs:comment "The entity of interest of any kind (object, event, living organism), that the recording activity aims to record."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty trajecto:hasInterest ;
+            owl:someValuesFrom skos:Concept ],
+        dul:Entity .
+
+trajecto:EventOfInterest a owl:Class ;
+    rdfs:label "Event of Interest"@en ;
+    rdfs:comment "The specific event that the recording activity aims to record. This event may be a natural phenomenon, the movement of an individual etc."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:EntityOfInterest,
+        datacron:Event .
+
+trajecto:ExploratoryNavigation a owl:Class ;
+    rdfs:label "Exploratory Navigation"@en ;
+    rdfs:comment "Deprecated: use patterns:ExploratoryMovement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:NavigationStyle ;
+    owl:deprecated true .
+
+trajecto:ImmersiveNavigation a owl:Class ;
+    rdfs:label "Immersive Navigation"@en ;
+    rdfs:comment "Deprecated: use patterns:ImmersiveMovement."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:NavigationStyle ;
+    owl:deprecated true .
+
+trajecto:Interaction a owl:Class ;
+    rdfs:label "Interaction"@en ;
+    rdfs:comment "Something a moving entity does with, or near, an entity of interest during a trajectory. Specialized as POI interactions in the POI module."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf dul:Abstract .
+
+trajecto:ModeOfTransportation a owl:Class ;
+    rdfs:label "Mode of Transportation"@en ;
+    rdfs:comment "The means by which a trajectory part is travelled, such as walking, cycling or bus."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:NavigationStyle a owl:Class ;
+    rdfs:label "Navigation Style"@en ;
+    rdfs:comment "Deprecated: navigation styles are modeled as movement patterns in the patterns module (patterns:TargetedSegment, patterns:CasualMovement, patterns:ExploratoryMovement, patterns:ImmersiveMovement) and asserted with patterns:exhibitsPattern."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf dul:Abstract ;
+    owl:deprecated true .
+
+trajecto:ObjectOfInterest a owl:Class ;
+    rdfs:label "Object of Interest"@en ;
+    rdfs:comment "The specific physical object that the recording activity aims to record. The object of interest may be a tree, a monument, a person etc."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:EntityOfInterest,
+        dul:Object .
+
+trajecto:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A person whose movement is recorded as one or more trajectories."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf datacron:MovingObject .
+
+trajecto:PointOfInterest a owl:Class ;
+    rdfs:label "Point of Interest"@en ;
+    rdfs:comment "The specific spatial point that the recording activity aims to record. The point of interest may be literally one geometric point or an central point of a wider entity of interest."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:EntityOfInterest,
+        datacron:Point .
+
+trajecto:PurposeOfMovement a owl:Class ;
+    rdfs:label "Purpose of Movement"@en ;
+    rdfs:comment "The reason a trajectory is undertaken. The purpose module specializes it; trajectories point to purpose concepts through hasPurpose."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf dul:Abstract .
+
+trajecto:Region_of_Interest a owl:Class ;
+    rdfs:label "Region_of_Interest (deprecated)"@en ;
+    rdfs:comment "Deprecated since 1.1.0: renamed to RegionOfInterest."@en ;
+    owl:deprecated true ;
+    owl:equivalentClass trajecto:RegionOfInterest .
+
+trajecto:RegionOfInterest a owl:Class ;
+    rdfs:label "Region of Interest"@en ;
+    rdfs:comment "The region that a recording activity aims to record, such as a forest, an archaeological site or a town."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:EntityOfInterest,
+        datacron:Region .
+
+trajecto:SocialInteraction a owl:Class ;
+    rdfs:label "Social Interaction"@en ;
+    rdfs:comment "An interaction between moving persons within an area of interest."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:Interaction .
+
+trajecto:Stop a owl:Class ;
+    rdfs:label "Stop"@en ;
+    rdfs:comment "A trajectory part during which the moving object stays within a small area for a minimum time. The pipeline detects stops with a 20 m diameter and 60 s duration."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf datacron:Point,
+        datacron:TrajectoryPart .
+
+trajecto:stop a owl:Class ;
+    rdfs:label "stop (deprecated)"@en ;
+    rdfs:comment "Deprecated since 1.1.0: renamed to Stop."@en ;
+    owl:deprecated true ;
+    owl:equivalentClass trajecto:Stop .
+
+trajecto:StopPosition a owl:Class ;
+    rdfs:label "Stop Position"@en ;
+    rdfs:comment "A raw position that belongs to a detected stop. Stop positions carry the nearby POI candidates found during preprocessing."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf datacron:RawPosition .
+
+trajecto:TargetedNavigation a owl:Class ;
+    rdfs:label "Targeted Navigation"@en ;
+    rdfs:comment "Deprecated: use patterns:TargetedSegment."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf trajecto:NavigationStyle ;
+    owl:deprecated true .
+
+trajecto:TrajectorySimilarity a owl:Class ;
+    rdfs:label "Trajectory Similarity"@en ;
+    rdfs:comment "A scored similarity between two trajectories along one facet, materialized by rules SR-11 to SR-13."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:subClassOf dul:Abstract .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+trajecto:clusters a owl:ObjectProperty ;
+    rdfs:label "clusters"@en ;
+    rdfs:comment "Relates a trajectory cluster to a trajectory it groups."@en ;
+    rdfs:domain datacron:TrajectoryCluster ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:Trajectory ;
+    rdfs:subPropertyOf dul:hasPart .
+
+trajecto:encloses a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "encloses"@en ;
+    rdfs:comment "Relates a trajectory to a segment that is part of it."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:Segment ;
+    rdfs:subPropertyOf datacron:hasPart .
+
+trajecto:formsTrajectory a owl:ObjectProperty ;
+    rdfs:label "forms trajectory"@en ;
+    rdfs:comment "Specifies the moving object which forms a trajectory"@en ;
+    rdfs:domain datacron:MovingObject ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:Trajectory ;
+    owl:inverseOf trajecto:isTrajectoryFormedBy .
+
+trajecto:happensdDuringEventOfInterest a owl:ObjectProperty ;
+    rdfs:label "happensdDuringEventOfInterest (deprecated)"@en ;
+    rdfs:comment "Deprecated since 1.1.0: renamed to happensDuringEventOfInterest."@en ;
+    owl:deprecated true ;
+    owl:equivalentProperty trajecto:happensDuringEventOfInterest .
+
+trajecto:happensDuringEventOfInterest a owl:ObjectProperty ;
+    rdfs:label "happens during event of interest"@en ;
+    rdfs:comment "Relates a trajectory part to an event of interest that takes place while it is recorded."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:EventOfInterest ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasCentralityRole a owl:ObjectProperty ;
+    rdfs:label "has centrality role"@en ;
+    rdfs:comment "Relates a POI to its structural role."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:CentralityRole .
+
+trajecto:hasEngagementLevel a owl:ObjectProperty ;
+    rdfs:label "has engagement level"@en ;
+    rdfs:comment "Engagement inferred for a trajectory by rule SR-10; used by trajecto-profiles-module to define the engagement trajectory classes."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:EngagementLevel .
+
+trajecto:hasEvent a owl:ObjectProperty ;
+    rdfs:label "has event"@en ;
+    rdfs:comment "Links a trajectory to a behavioral event detected within its position sequence."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range events:TrajectoryEvent .
+
+trajecto:hasInteraction a owl:ObjectProperty ;
+    rdfs:label "has interaction"@en ;
+    rdfs:comment "Relates a raw position to a POI interaction that takes place at it."@en ;
+    rdfs:domain datacron:RawPosition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range poi:POIInteraction ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasInterest a owl:ObjectProperty ;
+    rdfs:label "has interest"@en ;
+    rdfs:comment "Correlates an entity of interest with the type of interest that it presents."@en ;
+    rdfs:domain trajecto:EntityOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range skos:Concept ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasJaccardCategorySimilarity a owl:ObjectProperty ;
+    rdfs:label "has category similarity"@en ;
+    rdfs:comment "Jaccard similarity of the POI categories two trajectories interact with (SR-11)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:TrajectorySimilarity .
+
+trajecto:hasModeOfTransportation a owl:ObjectProperty ;
+    rdfs:label "has mode of transportation"@en ;
+    rdfs:comment "Relates a trajectory part to the mode of transportation used for it."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:ModeOfTransportation ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasNavigationMatch a owl:ObjectProperty ;
+    rdfs:label "has navigation match"@en ;
+    rdfs:comment "Two trajectories share a navigation pattern (SR-12)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:TrajectorySimilarity .
+
+trajecto:hasNavigationStyle a owl:ObjectProperty ;
+    rdfs:label "has navigation style"@en ;
+    rdfs:comment "Deprecated: use patterns:exhibitsPattern."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:NavigationStyle ;
+    rdfs:subPropertyOf dul:associatedWith ;
+    owl:deprecated true .
+
+trajecto:hasNextPosition a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has next position"@en ;
+    rdfs:comment "Relates a raw position to a later position of the same trajectory. The enrichment asserts it between consecutive positions; as the property is transitive, a reasoner extends it to every later position."@en ;
+    rdfs:domain datacron:RawPosition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:RawPosition ;
+    rdfs:subPropertyOf dul:associatedWith ;
+    owl:inverseOf trajecto:hasPreviousPosition .
+
+trajecto:hasOccurredEvent a owl:ObjectProperty ;
+    rdfs:label "has occurred event"@en ;
+    rdfs:comment "Relates a trajectory part to an event that occurred during it."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:Event ;
+    owl:inverseOf datacron:occurs .
+
+trajecto:hasPointOfInterest a owl:ObjectProperty ;
+    rdfs:label "has point of interest"@en ;
+    rdfs:comment "Relates a trajectory part to a point of interest associated with it."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:PointOfInterest ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasPreviousPosition a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has previous position"@en ;
+    rdfs:comment "Inverse of hasNextPosition: relates a raw position to an earlier position of the same trajectory."@en ;
+    rdfs:domain datacron:RawPosition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:RawPosition ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasPurpose a owl:ObjectProperty ;
+    rdfs:label "has purpose"@en ;
+    rdfs:comment "Relates a trajectory to its purpose. The purpose classification stage assigns one concept of the purpose concept scheme per trajectory."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:PurposeOfMovement .
+
+trajecto:hasPurposeMatch a owl:ObjectProperty ;
+    rdfs:label "has purpose match"@en ;
+    rdfs:comment "Two trajectories share a purpose (BIRD instantiation)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:TrajectorySimilarity .
+
+trajecto:hasRegionOfInterest a owl:ObjectProperty ;
+    rdfs:label "has region of interest"@en ;
+    rdfs:comment "Relates a trajectory part to a region of interest it passes through."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:RegionOfInterest ;
+    rdfs:subPropertyOf dul:associatedWith .
+
+trajecto:hasStop a owl:ObjectProperty ;
+    rdfs:label "has stop"@en ;
+    rdfs:comment "Relates a trajectory part to a stop it comprises."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:Stop ;
+    rdfs:subPropertyOf datacron:comprises .
+
+trajecto:hasTemporalOverlap a owl:ObjectProperty ;
+    rdfs:label "has temporal overlap"@en ;
+    rdfs:comment "Jaccard similarity of the temporal contexts of two trajectories (SR-13)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:TrajectorySimilarity .
+
+trajecto:hasTrajectory a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has trajectory"@en ;
+    rdfs:comment "Deprecated duplicate of formsTrajectory: relates a moving object to a trajectory it forms."@en ;
+    rdfs:domain datacron:MovingObject ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:Trajectory ;
+    owl:deprecated true ;
+    owl:inverseOf trajecto:trajectoryRefersTo .
+
+trajecto:includesInteraction a owl:ObjectProperty ;
+    rdfs:label "includes interaction"@en ;
+    rdfs:comment "Links a trajectory to all POI interactions occurring at its constituent positions. Materialized via SPARQL (SR-41) to enable OWL reasoner classification of trajectory archetypes."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range poi:POIInteraction .
+
+trajecto:isTrajectoryFormedBy a owl:ObjectProperty ;
+    rdfs:label "is trajectory formed by"@en ;
+    rdfs:comment "Inverse of formsTrajectory: relates a trajectory to the moving object that forms it."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:MovingObject .
+
+trajecto:isWeatherConditionOf a owl:ObjectProperty ;
+    rdfs:label "is weather condition of"@en ;
+    rdfs:comment "Inverse of datAcron:hasWeatherCondition."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    owl:inverseOf datacron:hasWeatherCondition .
+
+trajecto:participatesIn a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    rdfs:comment "Relates an agent to an interaction it takes part in."@en ;
+    rdfs:domain dul:Agent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range trajecto:Interaction .
+
+trajecto:trajectoryRefersTo a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "trajectory refers to"@en ;
+    rdfs:comment "Deprecated duplicate of isTrajectoryFormedBy: relates a trajectory to its moving object."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:MovingObject ;
+    owl:deprecated true .
+
+trajecto:withTrajectory a owl:ObjectProperty ;
+    rdfs:label "with trajectory"@en ;
+    rdfs:comment "The other trajectory of a trajectory similarity."@en ;
+    rdfs:domain trajecto:TrajectorySimilarity ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range datacron:Trajectory .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+trajecto:betweennessCentrality a owl:DatatypeProperty ;
+    rdfs:label "betweenness centrality"@en ;
+    rdfs:comment "Betweenness centrality of a POI in the POI flow graph."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:float .
+
+trajecto:communityId a owl:DatatypeProperty ;
+    rdfs:label "community ID"@en ;
+    rdfs:comment "Identifier of the co-visitation community a POI belongs to."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:externalDescription a owl:DatatypeProperty ;
+    rdfs:label "external description"@en ;
+    rdfs:comment "Description of the Wikidata entity a POI is linked to."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:externalLabel a owl:DatatypeProperty ;
+    rdfs:label "external label"@en ;
+    rdfs:comment "Label of the Wikidata entity a POI is linked to."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:floor a owl:DatatypeProperty ;
+    rdfs:label "floor"@en ;
+    rdfs:comment "Floor number of a position, for indoor positioning."@en ;
+    rdfs:domain datacron:Point ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:hasAddress a owl:DatatypeProperty ;
+    rdfs:label "has address"@en ;
+    rdfs:comment "Postal address of a region of interest."@en ;
+    rdfs:domain trajecto:RegionOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:string .
+
+trajecto:hasEasting a owl:DatatypeProperty ;
+    rdfs:label "has easting"@en ;
+    rdfs:comment "Easting (x) of a position in a projected or indoor coordinate reference system, in meters. Used instead of latitude where positions are planar, as in the BIRD museum dataset."@en ;
+    rdfs:domain datacron:Point ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:float .
+
+trajecto:hasImmersiveInteractionCount a owl:DatatypeProperty ;
+    rdfs:label "has immersive interaction count"@en ;
+    rdfs:comment "Number of immersive interactions of a trajectory (SR-40)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:hasMeaningfulInteractionCount a owl:DatatypeProperty ;
+    rdfs:label "has meaningful interaction count"@en ;
+    rdfs:comment "Number of meaningful interactions of a trajectory (SR-40)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:hasNorthing a owl:DatatypeProperty ;
+    rdfs:label "has northing"@en ;
+    rdfs:comment "Northing (y) of a position in a projected or indoor coordinate reference system, in meters. Used instead of longitude where positions are planar."@en ;
+    rdfs:domain datacron:Point ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:float .
+
+trajecto:hasOSMType a owl:DatatypeProperty ;
+    rdfs:label "has OSM type"@en ;
+    rdfs:comment "The OpenStreetMap tag (key=value) that identifies the type of an entity of interest."@en ;
+    rdfs:domain trajecto:EntityOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:string .
+
+trajecto:hasPlaceID a owl:DatatypeProperty ;
+    rdfs:label "has place ID"@en ;
+    rdfs:comment "External identifier of a region of interest, such as an OpenStreetMap or geocoder place ID."@en ;
+    rdfs:domain trajecto:RegionOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:string .
+
+trajecto:hasPOICount a owl:DatatypeProperty ;
+    rdfs:label "has POI count"@en ;
+    rdfs:comment "Number of distinct POIs a trajectory interacts with (SR-44)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:hasPositionIndex a owl:DatatypeProperty ;
+    rdfs:label "has position index"@en ;
+    rdfs:comment "Zero-based order of a raw position within its trajectory."@en ;
+    rdfs:domain datacron:RawPosition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:hasTotalDwellTime a owl:DatatypeProperty ;
+    rdfs:label "has total dwell time"@en ;
+    rdfs:comment "Sum of the dwell times of the interactions of a trajectory, in seconds (SR-42)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:hasUniqueCategoryCount a owl:DatatypeProperty ;
+    rdfs:label "has unique category count"@en ;
+    rdfs:comment "Number of distinct POI categories a trajectory interacts with (SR-43)."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:integer .
+
+trajecto:hasVelocity a owl:DatatypeProperty ;
+    rdfs:label "has velocity"@en ;
+    rdfs:comment "Velocity value attached to a geometry, as recorded by the source."@en ;
+    rdfs:domain datacron:Geometry ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:double .
+
+trajecto:pageRank a owl:DatatypeProperty ;
+    rdfs:label "PageRank"@en ;
+    rdfs:comment "PageRank of a POI in the POI flow graph."@en ;
+    rdfs:domain trajecto:PointOfInterest ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:float .
+
+trajecto:similarityScore a owl:DatatypeProperty ;
+    rdfs:label "similarity score"@en ;
+    rdfs:comment "Score of a trajectory similarity, from 0 to 1."@en ;
+    rdfs:domain trajecto:TrajectorySimilarity ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:timestamp a owl:DatatypeProperty ;
+    rdfs:label "timestamp"@en ;
+    rdfs:comment "Recording time of a raw position, as an ISO 8601 local date-time string."@en ;
+    rdfs:domain datacron:RawPosition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> ;
+    rdfs:range xsd:string .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+trajecto:DestinationPOI a trajecto:CentralityRole,
+        owl:NamedIndividual ;
+    rdfs:label "Destination POI"@en ;
+    rdfs:comment "A high-PageRank POI with clearly more incoming than outgoing flow."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:GatewayPOI a trajecto:CentralityRole,
+        owl:NamedIndividual ;
+    rdfs:label "Gateway POI"@en ;
+    rdfs:comment "A POI in the top quintile of betweenness: it bridges otherwise separate parts of the flow graph."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:HighEngagement a trajecto:EngagementLevel,
+        owl:NamedIndividual ;
+    rdfs:label "High Engagement"@en ;
+    rdfs:comment "Engagement level of a trajectory with a high share of meaningful and immersive interactions."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:HubPOI a trajecto:CentralityRole,
+        owl:NamedIndividual ;
+    rdfs:label "Hub POI"@en ;
+    rdfs:comment "A POI in the top quintile of both co-visitation degree and PageRank."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:LowEngagement a trajecto:EngagementLevel,
+        owl:NamedIndividual ;
+    rdfs:label "Low Engagement"@en ;
+    rdfs:comment "Engagement level of a trajectory with few or no meaningful interactions."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:MediumEngagement a trajecto:EngagementLevel,
+        owl:NamedIndividual ;
+    rdfs:label "Medium Engagement"@en ;
+    rdfs:comment "Engagement level of a trajectory with a moderate share of meaningful interactions."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:OriginPOI a trajecto:CentralityRole,
+        owl:NamedIndividual ;
+    rdfs:label "Origin POI"@en ;
+    rdfs:comment "A POI with clearly more outgoing than incoming flow."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+trajecto:PeripheralPOI a trajecto:CentralityRole,
+        owl:NamedIndividual ;
+    rdfs:label "Peripheral POI"@en ;
+    rdfs:comment "A POI with none of the other structural roles."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto> .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:bibliographicCitation a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+datacron:Event a owl:Class .
+
+datacron:Geometry a owl:Class .
+
+datacron:MovingObject a owl:Class .
+
+datacron:Point a owl:Class .
+
+datacron:RawPosition a owl:Class .
+
+datacron:Region a owl:Class .
+
+datacron:Segment a owl:Class .
+
+datacron:Trajectory a owl:Class .
+
+datacron:TrajectoryCluster a owl:Class .
+
+datacron:TrajectoryPart a owl:Class .
+
+datacron:comprises a owl:ObjectProperty .
+
+datacron:hasPart a owl:ObjectProperty .
+
+datacron:hasWeatherCondition a owl:ObjectProperty .
+
+datacron:occurs a owl:ObjectProperty .
+
+dul:Abstract a owl:Class .
+
+dul:Agent a owl:Class .
+
+dul:Entity a owl:Class .
+
+dul:Object a owl:Class .
+
+dul:associatedWith a owl:ObjectProperty .
+
+dul:hasPart a owl:ObjectProperty .
+
+skos:Concept a owl:Class .

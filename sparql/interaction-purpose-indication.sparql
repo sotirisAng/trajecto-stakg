@@ -1,0 +1,28 @@
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX spatial: <http://w3id.org/trajecto/spatial#>
+PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX purposeskos: <http://w3id.org/trajecto/purpose/skos#>
+
+SELECT DISTINCT ?interaction ?trajectory ?distance ?seconds ?poi_class ?purpose
+WHERE {
+  ?interaction a poi:MeaningfulInteraction .
+  ?posiotion trajecto:hasInteraction ?interaction ;
+             dul:isPartOf ?trajectory.
+  ?interaction poi:hasDwellTimeInSeconds ?seconds;
+               spatial:hasDistance ?distance;
+               poi:interactsWith ?poi.
+  
+  ?poi a ?poi_class.
+  ?poi_class rdfs:subClassOf ?poi_browder_class.
+  ?poi_browder_class skos:related ?purpose.
+  OPTIONAL { ?purpose skos:prefLabel ?purposeLabel }
+  FILTER(?poi_class != trajecto:PointOfInterest)
+  FILTER(?poi_class != poi:SignificantPOI)
+  FILTER(!isBlank(?poi_class))
+}

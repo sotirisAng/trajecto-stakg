@@ -1,0 +1,1215 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/trajecto/spaces#"
+     xml:base="http://w3id.org/trajecto/spaces"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/trajecto/spaces">
+        <owl:versionIRI rdf:resource="http://w3id.org/trajecto/spaces/1.1.0"/>
+        <owl:imports rdf:resource="http://w3id.org/trajecto/purpose"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-09</terms:created>
+        <terms:creator>Konstantinos Kotis</terms:creator>
+        <terms:creator>Sotirios Angelis</terms:creator>
+        <terms:description xml:lang="en">This module extends the trajecto ontology with cultural spaces and commercial spaces concepts for semantic trajectories.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
+        <terms:publisher>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</terms:publisher>
+        <terms:title xml:lang="en">Trajecto Spaces Module</terms:title>
+        <vann:preferredNamespacePrefix>spaces</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/trajecto/spaces#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">trajecto-spaces</rdfs:label>
+        <owl:priorVersion rdf:resource="http://w3id.org/trajecto/spaces/1.0"/>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#containsEntity -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#containsEntity">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto#EntityOfInterest"/>
+        <rdfs:comment xml:lang="en">Relates a space to entities it contains.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">contains entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#exhibits -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#exhibits">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:comment xml:lang="en">Relates a cultural space to artifacts it exhibits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">exhibits</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasCommercialIntent -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasCommercialIntent">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#CommercialIntent"/>
+        <rdfs:comment xml:lang="en">Links a trajectory part to commercial intent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has commercial intent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasCulturalSignificance -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasCulturalSignificance">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#CulturalSignificance"/>
+        <rdfs:comment xml:lang="en">Links a cultural entity to its significance information.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has cultural significance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasEntrance -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasEntrance">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#AccessPoint"/>
+        <rdfs:comment xml:lang="en">Relates a space to its entrance points.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has entrance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasExhibitMetadata -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasExhibitMetadata">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#ExhibitMetadata"/>
+        <rdfs:comment xml:lang="en">Links a cultural artifact to its metadata information.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has exhibit metadata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasExit -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasExit">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#AccessPoint"/>
+        <rdfs:comment xml:lang="en">Relates a space to its exit points.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has exit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasTransactionEvent -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasTransactionEvent">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#TransactionEvent"/>
+        <rdfs:comment xml:lang="en">Links a trajectory part to a transaction event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has transaction event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasVisitContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasVisitContext">
+        <rdfs:domain rdf:resource="http://www.datacron-project.eu/datAcron#Trajectory"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:comment xml:lang="en">Links a trajectory to the context of the visit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has visit context</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasZone -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#hasZone">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#Zone"/>
+        <rdfs:comment xml:lang="en">Relates a space to its constituent zones or areas.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#isLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#isLocationOf">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto#EventOfInterest"/>
+        <rdfs:comment xml:lang="en">Relates a space to events that take place there.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#providesService -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#providesService">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#ServiceSpace"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#Service"/>
+        <rdfs:comment xml:lang="en">Relates a service space to services it provides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">provides service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#sells -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/spaces#sells">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#RetailSpace"/>
+        <rdfs:range rdf:resource="http://w3id.org/trajecto/spaces#Product"/>
+        <rdfs:comment xml:lang="en">Relates a retail space to products it sells.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">sells</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasAccessibility -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasAccessibility">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Accessibility features of a space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has accessibility</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasArtist -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasArtist">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Artist or creator of a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has artist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasCapacity">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">Maximum capacity of a space in terms of people.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasCreationDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasCreationDate">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date when a cultural artifact was created.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has creation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasExhibitID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasExhibitID">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifier for a cultural artifact in an exhibition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has exhibit ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasOpeningHours -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasOpeningHours">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#CommercialSpace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Opening hours of a commercial space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has opening hours</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasPrice -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasPrice">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/spaces#Product"/>
+                    <rdf:Description rdf:about="http://w3id.org/trajecto/spaces#Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Price of a product or service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasProductCategory -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasProductCategory">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Category of a product.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has product category</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasTransactionAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasTransactionAmount">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#TransactionEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Amount of money involved in a transaction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has transaction amount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#hasVisitDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/spaces#hasVisitDuration">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <rdfs:comment xml:lang="en">Duration of a visit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">has visit duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto#EntityOfInterest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#EntityOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto#EventOfInterest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#EventOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto#Interaction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#Interaction"/>
+    
+
+
+    <!-- http://w3id.org/trajecto#ObjectOfInterest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#ObjectOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto#PointOfInterest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#PointOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto#RegionOfInterest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto#RegionOfInterest"/>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#AccessPoint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#AccessPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#PointOfInterest"/>
+        <rdfs:comment xml:lang="en">A point where a space can be entered or exited.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Access Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ArtifactEngagement -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ArtifactEngagement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalInteraction"/>
+        <rdfs:comment xml:lang="en">Direct engagement with a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Artifact Engagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Artwork -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Artwork">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:comment xml:lang="en">A creative work of art.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Artwork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Browsing -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Browsing">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialInteraction"/>
+        <rdfs:comment xml:lang="en">Looking at products without necessarily intending to purchase.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Browsing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#BrowsingIntent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#BrowsingIntent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialIntent"/>
+        <rdfs:comment xml:lang="en">Intent to browse without specific purchase plans.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Browsing Intent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Checkout -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Checkout">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#Zone"/>
+        <rdfs:comment xml:lang="en">Area where purchases are processed and paid for.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Checkout</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CommercialIntent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CommercialIntent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">The intended purpose behind a commercial visit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Commercial Intent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CommercialInteraction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CommercialInteraction">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#Interaction"/>
+        <rdfs:comment xml:lang="en">Interaction in a commercial context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Commercial Interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CommercialSpace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CommercialSpace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:comment xml:lang="en">A space dedicated to commercial activities such as retail, services, or dining.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Commercial Space</rdfs:label>
+        <skos:definition xml:lang="en">A designated space where commercial transactions and activities take place.</skos:definition>
+        <skos:example xml:lang="en">Shops, malls, restaurants, banks</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CulturalArtifact -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CulturalArtifact">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#ObjectOfInterest"/>
+        <rdfs:comment xml:lang="en">A physical object of cultural significance or value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Cultural Artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CulturalInteraction -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CulturalInteraction">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#Interaction"/>
+        <rdfs:comment xml:lang="en">Interaction with cultural artifacts or in cultural contexts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Cultural Interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CulturalLandmark -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CulturalLandmark">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+        <rdfs:comment xml:lang="en">A recognizable cultural feature of a landscape or cityscape.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Cultural Landmark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CulturalSignificance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CulturalSignificance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">Information about the cultural importance or value of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Cultural Significance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#CulturalSpace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#CulturalSpace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#Space"/>
+        <rdfs:comment xml:lang="en">A space dedicated to cultural activities, exhibitions, or performances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Cultural Space</rdfs:label>
+        <skos:definition xml:lang="en">A designated space where cultural artifacts are exhibited or cultural events take place.</skos:definition>
+        <skos:example xml:lang="en">Museums, galleries, theaters, historical sites</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Department -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Department">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#Zone"/>
+        <rdfs:comment xml:lang="en">A section of a retail space dedicated to a specific category of products.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#DigitalInstallation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#DigitalInstallation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:comment xml:lang="en">A digital or electronic installation in a cultural space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Digital Installation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#DiningEstablishment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#DiningEstablishment">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#DiningSpace"/>
+        <rdfs:comment xml:lang="en">A restaurant, café, or other food service establishment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Dining Establishment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#DiningSpace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#DiningSpace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialSpace"/>
+        <rdfs:comment xml:lang="en">A commercial space dedicated to food service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Dining Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Exhibit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Exhibit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:comment xml:lang="en">An object displayed in a cultural space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Exhibit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ExhibitMetadata -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ExhibitMetadata">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">Descriptive information about a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Exhibit Metadata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#FirstTimeVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#FirstTimeVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:comment xml:lang="en">A first-time visit to a space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">First Time Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Gallery -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Gallery">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+        <rdfs:comment xml:lang="en">A space for exhibiting art, typically visual art.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Gallery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#GuidedVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#GuidedVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:comment xml:lang="en">A visit with a guide or guided tour.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Guided Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#HistoricalObject -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#HistoricalObject">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalArtifact"/>
+        <rdfs:comment xml:lang="en">An object with historical significance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Historical Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#HistoricalSite -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#HistoricalSite">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+        <rdfs:comment xml:lang="en">A location recognized for its historical significance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Historical Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Listening -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Listening">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#ArtifactEngagement"/>
+        <rdfs:comment xml:lang="en">Listening to audio associated with a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Listening</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Museum -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Museum">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+        <rdfs:comment xml:lang="en">A building or institution that houses and exhibits collections of artifacts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Museum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#PerformanceVenue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#PerformanceVenue">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalSpace"/>
+        <rdfs:comment xml:lang="en">A space designed for performing arts events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Performance Venue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Photographing -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Photographing">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#ArtifactEngagement"/>
+        <rdfs:comment xml:lang="en">Taking photographs of a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Photographing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Product -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Product">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#ObjectOfInterest"/>
+        <rdfs:comment xml:lang="en">A physical item available for purchase in a commercial space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Purchase -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Purchase">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialInteraction"/>
+        <rdfs:comment xml:lang="en">The act of buying a product or service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Purchase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#PurchaseIntent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#PurchaseIntent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialIntent"/>
+        <rdfs:comment xml:lang="en">Intent to purchase specific products or services.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Purchase Intent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Reading -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Reading">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#ArtifactEngagement"/>
+        <rdfs:comment xml:lang="en">Reading text associated with a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Reading</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#RepeatVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#RepeatVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:comment xml:lang="en">A return visit to a previously visited space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Repeat Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#RetailLayout -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#RetailLayout">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">The physical arrangement and organization of a retail space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Retail Layout</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#RetailSpace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#RetailSpace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialSpace"/>
+        <rdfs:comment xml:lang="en">A commercial space dedicated to selling goods to customers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Retail Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#RetailStore -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#RetailStore">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#RetailSpace"/>
+        <rdfs:comment xml:lang="en">A retail establishment selling goods to customers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Retail Store</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#SelfDirectedVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#SelfDirectedVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:comment xml:lang="en">A self-guided visit without formal guidance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Self Directed Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Service -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Service">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+        <rdfs:comment xml:lang="en">A non-physical offering available in a commercial space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ServiceConsumption -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ServiceConsumption">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialInteraction"/>
+        <rdfs:comment xml:lang="en">The act of using or consuming a service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Service Consumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ServiceIntent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ServiceIntent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialIntent"/>
+        <rdfs:comment xml:lang="en">Intent to use specific services.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Service Intent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ServiceProvider -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ServiceProvider">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#ServiceSpace"/>
+        <rdfs:comment xml:lang="en">An establishment providing specific services (banking, healthcare, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Service Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ServiceSpace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ServiceSpace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CommercialSpace"/>
+        <rdfs:comment xml:lang="en">A commercial space dedicated to providing services.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Service Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ShoppingAisle -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ShoppingAisle">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#Zone"/>
+        <rdfs:comment xml:lang="en">A pathway between shelves or displays in a retail space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Shopping Aisle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ShoppingMall -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ShoppingMall">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#RetailSpace"/>
+        <rdfs:comment xml:lang="en">A large enclosed shopping area containing multiple retail stores.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Shopping Mall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#SocialLearning -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#SocialLearning">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#CulturalInteraction"/>
+        <rdfs:comment xml:lang="en">Learning through social interaction in a cultural context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Social Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Space -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Space">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#RegionOfInterest"/>
+        <rdfs:comment xml:lang="en">A designated area with defined boundaries where human movement occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+        <skos:definition xml:lang="en">A physical or conceptual area where human movement and activities take place, characterized by boundaries and internal organization.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#ThematicVisit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#ThematicVisit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#VisitContext"/>
+        <rdfs:comment xml:lang="en">A visit focused on a specific theme or aspect of the space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Thematic Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#TransactionEvent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#TransactionEvent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#EventOfInterest"/>
+        <rdfs:comment xml:lang="en">An event involving a commercial transaction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Transaction Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Viewing -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Viewing">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/spaces#ArtifactEngagement"/>
+        <rdfs:comment xml:lang="en">Looking at or observing a cultural artifact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Viewing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#VisitContext -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#VisitContext">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:comment xml:lang="en">Contextual information about a visit to a space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Visit Context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/spaces#Zone -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/spaces#Zone">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto#RegionOfInterest"/>
+        <rdfs:comment xml:lang="en">A defined section or area within a larger space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/spaces"/>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#Trajectory -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#Trajectory"/>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#TrajectoryPart -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#TrajectoryPart"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

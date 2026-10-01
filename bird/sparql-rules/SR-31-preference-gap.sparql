@@ -1,0 +1,36 @@
+# SR-31: Preference gap filling
+# BIRD adaptation: artwork types via poi:hasType.
+# Artworks in categories the user has affinity for but hasn't visited yet.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?prefScore
+WHERE {
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputTraj user:belongsToUser ?inputUser .
+
+    # User has affinity for this category
+    ?inputUser user:hasAffinityFor ?poiCat .
+
+    # Get preference score for ranking
+    ?inputUser user:hasInferredPreference ?pref .
+    ?pref user:forCategory ?poiCat .
+    ?pref user:preferenceScore ?prefScore .
+
+    # Find artworks of that type
+    ?poi poi:hasType ?poiCat .
+
+    # Exclude already-visited artworks
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?visitTraj user:belongsToUser ?inputUser .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-31:preference-gap" AS ?rule)
+}

@@ -1,0 +1,709 @@
+<http://w3id.org/trajecto/spaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/spaces> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/spaces/1.1.0> .
+<http://w3id.org/trajecto/spaces> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/trajecto/purpose> .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/description> "This module extends the trajecto ontology with cultural spaces and commercial spaces concepts for semantic trajectories."@en .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/spaces> <http://purl.org/dc/terms/title> "Trajecto Spaces Module"@en .
+<http://w3id.org/trajecto/spaces> <http://purl.org/vocab/vann/preferredNamespacePrefix> "spaces" .
+<http://w3id.org/trajecto/spaces> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/spaces#" .
+<http://w3id.org/trajecto/spaces> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-spaces"@en .
+<http://w3id.org/trajecto/spaces> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/spaces/1.0> .
+<http://w3id.org/trajecto/spaces> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/spaces#containsEntity
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EntityOfInterest> .
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to entities it contains."@en .
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#containsEntity> <http://www.w3.org/2000/01/rdf-schema#label> "contains entity"@en .
+# 
+# http://w3id.org/trajecto/spaces#exhibits
+<http://w3id.org/trajecto/spaces#exhibits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#exhibits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+<http://w3id.org/trajecto/spaces#exhibits> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#exhibits> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a cultural space to artifacts it exhibits."@en .
+<http://w3id.org/trajecto/spaces#exhibits> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#exhibits> <http://www.w3.org/2000/01/rdf-schema#label> "exhibits"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasCommercialIntent
+<http://w3id.org/trajecto/spaces#hasCommercialIntent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasCommercialIntent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spaces#hasCommercialIntent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#CommercialIntent> .
+<http://w3id.org/trajecto/spaces#hasCommercialIntent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a trajectory part to commercial intent."@en .
+<http://w3id.org/trajecto/spaces#hasCommercialIntent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasCommercialIntent> <http://www.w3.org/2000/01/rdf-schema#label> "has commercial intent"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasCulturalSignificance
+<http://w3id.org/trajecto/spaces#hasCulturalSignificance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasCulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#hasCulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#CulturalSignificance> .
+<http://w3id.org/trajecto/spaces#hasCulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a cultural entity to its significance information."@en .
+<http://w3id.org/trajecto/spaces#hasCulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasCulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#label> "has cultural significance"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasEntrance
+<http://w3id.org/trajecto/spaces#hasEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasEntrance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#hasEntrance> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#AccessPoint> .
+<http://w3id.org/trajecto/spaces#hasEntrance> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to its entrance points."@en .
+<http://w3id.org/trajecto/spaces#hasEntrance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "has entrance"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasExhibitMetadata
+<http://w3id.org/trajecto/spaces#hasExhibitMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#hasExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#ExhibitMetadata> .
+<http://w3id.org/trajecto/spaces#hasExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a cultural artifact to its metadata information."@en .
+<http://w3id.org/trajecto/spaces#hasExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "has exhibit metadata"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasExit
+<http://w3id.org/trajecto/spaces#hasExit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasExit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#hasExit> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#AccessPoint> .
+<http://w3id.org/trajecto/spaces#hasExit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to its exit points."@en .
+<http://w3id.org/trajecto/spaces#hasExit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasExit> <http://www.w3.org/2000/01/rdf-schema#label> "has exit"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasTransactionEvent
+<http://w3id.org/trajecto/spaces#hasTransactionEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasTransactionEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#TrajectoryPart> .
+<http://w3id.org/trajecto/spaces#hasTransactionEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#TransactionEvent> .
+<http://w3id.org/trajecto/spaces#hasTransactionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a trajectory part to a transaction event."@en .
+<http://w3id.org/trajecto/spaces#hasTransactionEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasTransactionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has transaction event"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasVisitContext
+<http://w3id.org/trajecto/spaces#hasVisitContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasVisitContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://www.datacron-project.eu/datAcron#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#hasVisitContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#hasVisitContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a trajectory to the context of the visit."@en .
+<http://w3id.org/trajecto/spaces#hasVisitContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasVisitContext> <http://www.w3.org/2000/01/rdf-schema#label> "has visit context"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasZone
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#Zone> .
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to its constituent zones or areas."@en .
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasZone> <http://www.w3.org/2000/01/rdf-schema#label> "has zone"@en .
+# 
+# http://w3id.org/trajecto/spaces#isLocationOf
+<http://w3id.org/trajecto/spaces#isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EventOfInterest> .
+<http://w3id.org/trajecto/spaces#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to events that take place there."@en .
+<http://w3id.org/trajecto/spaces#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is location of"@en .
+# 
+# http://w3id.org/trajecto/spaces#providesService
+<http://w3id.org/trajecto/spaces#providesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#providesService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#ServiceSpace> .
+<http://w3id.org/trajecto/spaces#providesService> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#Service> .
+<http://w3id.org/trajecto/spaces#providesService> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a service space to services it provides."@en .
+<http://w3id.org/trajecto/spaces#providesService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#providesService> <http://www.w3.org/2000/01/rdf-schema#label> "provides service"@en .
+# 
+# http://w3id.org/trajecto/spaces#sells
+<http://w3id.org/trajecto/spaces#sells> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/spaces#sells> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#RetailSpace> .
+<http://w3id.org/trajecto/spaces#sells> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/spaces#Product> .
+<http://w3id.org/trajecto/spaces#sells> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a retail space to products it sells."@en .
+<http://w3id.org/trajecto/spaces#sells> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#sells> <http://www.w3.org/2000/01/rdf-schema#label> "sells"@en .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/spaces#hasAccessibility
+<http://w3id.org/trajecto/spaces#hasAccessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasAccessibility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#hasAccessibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/spaces#hasAccessibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Accessibility features of a space."@en .
+<http://w3id.org/trajecto/spaces#hasAccessibility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasAccessibility> <http://www.w3.org/2000/01/rdf-schema#label> "has accessibility"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasArtist
+<http://w3id.org/trajecto/spaces#hasArtist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasArtist> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#hasArtist> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/spaces#hasArtist> <http://www.w3.org/2000/01/rdf-schema#comment> "Artist or creator of a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#hasArtist> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasArtist> <http://www.w3.org/2000/01/rdf-schema#label> "has artist"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasCapacity
+<http://w3id.org/trajecto/spaces#hasCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://w3id.org/trajecto/spaces#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum capacity of a space in terms of people."@en .
+<http://w3id.org/trajecto/spaces#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "has capacity"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasCreationDate
+<http://w3id.org/trajecto/spaces#hasCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/spaces#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when a cultural artifact was created."@en .
+<http://w3id.org/trajecto/spaces#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has creation date"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasExhibitID
+<http://w3id.org/trajecto/spaces#hasExhibitID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasExhibitID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#hasExhibitID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/spaces#hasExhibitID> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier for a cultural artifact in an exhibition."@en .
+<http://w3id.org/trajecto/spaces#hasExhibitID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasExhibitID> <http://www.w3.org/2000/01/rdf-schema#label> "has exhibit ID"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasOpeningHours
+<http://w3id.org/trajecto/spaces#hasOpeningHours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasOpeningHours> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#CommercialSpace> .
+<http://w3id.org/trajecto/spaces#hasOpeningHours> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/spaces#hasOpeningHours> <http://www.w3.org/2000/01/rdf-schema#comment> "Opening hours of a commercial space."@en .
+<http://w3id.org/trajecto/spaces#hasOpeningHours> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasOpeningHours> <http://www.w3.org/2000/01/rdf-schema#label> "has opening hours"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasPrice
+<http://w3id.org/trajecto/spaces#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/trajecto/spaces#Service> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/trajecto/spaces#Product> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/trajecto/spaces#hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Price of a product or service."@en .
+<http://w3id.org/trajecto/spaces#hasPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasProductCategory
+<http://w3id.org/trajecto/spaces#hasProductCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasProductCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#Product> .
+<http://w3id.org/trajecto/spaces#hasProductCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/spaces#hasProductCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category of a product."@en .
+<http://w3id.org/trajecto/spaces#hasProductCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasProductCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has product category"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasTransactionAmount
+<http://w3id.org/trajecto/spaces#hasTransactionAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasTransactionAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#TransactionEvent> .
+<http://w3id.org/trajecto/spaces#hasTransactionAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/trajecto/spaces#hasTransactionAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of money involved in a transaction."@en .
+<http://w3id.org/trajecto/spaces#hasTransactionAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasTransactionAmount> <http://www.w3.org/2000/01/rdf-schema#label> "has transaction amount"@en .
+# 
+# http://w3id.org/trajecto/spaces#hasVisitDuration
+<http://w3id.org/trajecto/spaces#hasVisitDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/spaces#hasVisitDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#hasVisitDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://w3id.org/trajecto/spaces#hasVisitDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of a visit."@en .
+<http://w3id.org/trajecto/spaces#hasVisitDuration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#hasVisitDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has visit duration"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#EntityOfInterest
+<http://w3id.org/trajecto#EntityOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#EventOfInterest
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#Interaction
+<http://w3id.org/trajecto#Interaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#ObjectOfInterest
+<http://w3id.org/trajecto#ObjectOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#PointOfInterest
+<http://w3id.org/trajecto#PointOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto#RegionOfInterest
+<http://w3id.org/trajecto#RegionOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto/spaces#AccessPoint
+<http://w3id.org/trajecto/spaces#AccessPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#AccessPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#PointOfInterest> .
+<http://w3id.org/trajecto/spaces#AccessPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A point where a space can be entered or exited."@en .
+<http://w3id.org/trajecto/spaces#AccessPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#AccessPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Access Point"@en .
+# 
+# http://w3id.org/trajecto/spaces#ArtifactEngagement
+<http://w3id.org/trajecto/spaces#ArtifactEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ArtifactEngagement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalInteraction> .
+<http://w3id.org/trajecto/spaces#ArtifactEngagement> <http://www.w3.org/2000/01/rdf-schema#comment> "Direct engagement with a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#ArtifactEngagement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ArtifactEngagement> <http://www.w3.org/2000/01/rdf-schema#label> "Artifact Engagement"@en .
+# 
+# http://w3id.org/trajecto/spaces#Artwork
+<http://w3id.org/trajecto/spaces#Artwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Artwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#Artwork> <http://www.w3.org/2000/01/rdf-schema#comment> "A creative work of art."@en .
+<http://w3id.org/trajecto/spaces#Artwork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Artwork> <http://www.w3.org/2000/01/rdf-schema#label> "Artwork"@en .
+# 
+# http://w3id.org/trajecto/spaces#Browsing
+<http://w3id.org/trajecto/spaces#Browsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Browsing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialInteraction> .
+<http://w3id.org/trajecto/spaces#Browsing> <http://www.w3.org/2000/01/rdf-schema#comment> "Looking at products without necessarily intending to purchase."@en .
+<http://w3id.org/trajecto/spaces#Browsing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Browsing> <http://www.w3.org/2000/01/rdf-schema#label> "Browsing"@en .
+# 
+# http://w3id.org/trajecto/spaces#BrowsingIntent
+<http://w3id.org/trajecto/spaces#BrowsingIntent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#BrowsingIntent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialIntent> .
+<http://w3id.org/trajecto/spaces#BrowsingIntent> <http://www.w3.org/2000/01/rdf-schema#comment> "Intent to browse without specific purchase plans."@en .
+<http://w3id.org/trajecto/spaces#BrowsingIntent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#BrowsingIntent> <http://www.w3.org/2000/01/rdf-schema#label> "Browsing Intent"@en .
+# 
+# http://w3id.org/trajecto/spaces#Checkout
+<http://w3id.org/trajecto/spaces#Checkout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Checkout> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#Zone> .
+<http://w3id.org/trajecto/spaces#Checkout> <http://www.w3.org/2000/01/rdf-schema#comment> "Area where purchases are processed and paid for."@en .
+<http://w3id.org/trajecto/spaces#Checkout> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Checkout> <http://www.w3.org/2000/01/rdf-schema#label> "Checkout"@en .
+# 
+# http://w3id.org/trajecto/spaces#CommercialIntent
+<http://w3id.org/trajecto/spaces#CommercialIntent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CommercialIntent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CommercialIntent> <http://www.w3.org/2000/01/rdf-schema#comment> "The intended purpose behind a commercial visit."@en .
+<http://w3id.org/trajecto/spaces#CommercialIntent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CommercialIntent> <http://www.w3.org/2000/01/rdf-schema#label> "Commercial Intent"@en .
+# 
+# http://w3id.org/trajecto/spaces#CommercialInteraction
+<http://w3id.org/trajecto/spaces#CommercialInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CommercialInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#Interaction> .
+<http://w3id.org/trajecto/spaces#CommercialInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction in a commercial context."@en .
+<http://w3id.org/trajecto/spaces#CommercialInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CommercialInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Commercial Interaction"@en .
+# 
+# http://w3id.org/trajecto/spaces#CommercialSpace
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A space dedicated to commercial activities such as retail, services, or dining."@en .
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Commercial Space"@en .
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/2004/02/skos/core#definition> "A designated space where commercial transactions and activities take place."@en .
+<http://w3id.org/trajecto/spaces#CommercialSpace> <http://www.w3.org/2004/02/skos/core#example> "Shops, malls, restaurants, banks"@en .
+# 
+# http://w3id.org/trajecto/spaces#CulturalArtifact
+<http://w3id.org/trajecto/spaces#CulturalArtifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CulturalArtifact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#ObjectOfInterest> .
+<http://w3id.org/trajecto/spaces#CulturalArtifact> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical object of cultural significance or value."@en .
+<http://w3id.org/trajecto/spaces#CulturalArtifact> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CulturalArtifact> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Artifact"@en .
+# 
+# http://w3id.org/trajecto/spaces#CulturalInteraction
+<http://w3id.org/trajecto/spaces#CulturalInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CulturalInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#Interaction> .
+<http://w3id.org/trajecto/spaces#CulturalInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Interaction with cultural artifacts or in cultural contexts."@en .
+<http://w3id.org/trajecto/spaces#CulturalInteraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CulturalInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Interaction"@en .
+# 
+# http://w3id.org/trajecto/spaces#CulturalLandmark
+<http://w3id.org/trajecto/spaces#CulturalLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CulturalLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+<http://w3id.org/trajecto/spaces#CulturalLandmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A recognizable cultural feature of a landscape or cityscape."@en .
+<http://w3id.org/trajecto/spaces#CulturalLandmark> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CulturalLandmark> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Landmark"@en .
+# 
+# http://w3id.org/trajecto/spaces#CulturalSignificance
+<http://w3id.org/trajecto/spaces#CulturalSignificance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spaces#CulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the cultural importance or value of an entity."@en .
+<http://w3id.org/trajecto/spaces#CulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CulturalSignificance> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Significance"@en .
+# 
+# http://w3id.org/trajecto/spaces#CulturalSpace
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#Space> .
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A space dedicated to cultural activities, exhibitions, or performances."@en .
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Space"@en .
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/2004/02/skos/core#definition> "A designated space where cultural artifacts are exhibited or cultural events take place."@en .
+<http://w3id.org/trajecto/spaces#CulturalSpace> <http://www.w3.org/2004/02/skos/core#example> "Museums, galleries, theaters, historical sites"@en .
+# 
+# http://w3id.org/trajecto/spaces#Department
+<http://w3id.org/trajecto/spaces#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#Zone> .
+<http://w3id.org/trajecto/spaces#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "A section of a retail space dedicated to a specific category of products."@en .
+<http://w3id.org/trajecto/spaces#Department> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
+# 
+# http://w3id.org/trajecto/spaces#DigitalInstallation
+<http://w3id.org/trajecto/spaces#DigitalInstallation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#DigitalInstallation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#DigitalInstallation> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital or electronic installation in a cultural space."@en .
+<http://w3id.org/trajecto/spaces#DigitalInstallation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#DigitalInstallation> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Installation"@en .
+# 
+# http://w3id.org/trajecto/spaces#DiningEstablishment
+<http://w3id.org/trajecto/spaces#DiningEstablishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#DiningEstablishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#DiningSpace> .
+<http://w3id.org/trajecto/spaces#DiningEstablishment> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant, café, or other food service establishment."@en .
+<http://w3id.org/trajecto/spaces#DiningEstablishment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#DiningEstablishment> <http://www.w3.org/2000/01/rdf-schema#label> "Dining Establishment"@en .
+# 
+# http://w3id.org/trajecto/spaces#DiningSpace
+<http://w3id.org/trajecto/spaces#DiningSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#DiningSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialSpace> .
+<http://w3id.org/trajecto/spaces#DiningSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A commercial space dedicated to food service."@en .
+<http://w3id.org/trajecto/spaces#DiningSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#DiningSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Dining Space"@en .
+# 
+# http://w3id.org/trajecto/spaces#Exhibit
+<http://w3id.org/trajecto/spaces#Exhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Exhibit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#Exhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "An object displayed in a cultural space."@en .
+<http://w3id.org/trajecto/spaces#Exhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Exhibit> <http://www.w3.org/2000/01/rdf-schema#label> "Exhibit"@en .
+# 
+# http://w3id.org/trajecto/spaces#ExhibitMetadata
+<http://w3id.org/trajecto/spaces#ExhibitMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spaces#ExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Descriptive information about a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#ExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ExhibitMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "Exhibit Metadata"@en .
+# 
+# http://w3id.org/trajecto/spaces#FirstTimeVisit
+<http://w3id.org/trajecto/spaces#FirstTimeVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#FirstTimeVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#FirstTimeVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A first-time visit to a space."@en .
+<http://w3id.org/trajecto/spaces#FirstTimeVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#FirstTimeVisit> <http://www.w3.org/2000/01/rdf-schema#label> "First Time Visit"@en .
+# 
+# http://w3id.org/trajecto/spaces#Gallery
+<http://w3id.org/trajecto/spaces#Gallery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Gallery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+<http://w3id.org/trajecto/spaces#Gallery> <http://www.w3.org/2000/01/rdf-schema#comment> "A space for exhibiting art, typically visual art."@en .
+<http://w3id.org/trajecto/spaces#Gallery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Gallery> <http://www.w3.org/2000/01/rdf-schema#label> "Gallery"@en .
+# 
+# http://w3id.org/trajecto/spaces#GuidedVisit
+<http://w3id.org/trajecto/spaces#GuidedVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#GuidedVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#GuidedVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A visit with a guide or guided tour."@en .
+<http://w3id.org/trajecto/spaces#GuidedVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#GuidedVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Guided Visit"@en .
+# 
+# http://w3id.org/trajecto/spaces#HistoricalObject
+<http://w3id.org/trajecto/spaces#HistoricalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#HistoricalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalArtifact> .
+<http://w3id.org/trajecto/spaces#HistoricalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An object with historical significance."@en .
+<http://w3id.org/trajecto/spaces#HistoricalObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#HistoricalObject> <http://www.w3.org/2000/01/rdf-schema#label> "Historical Object"@en .
+# 
+# http://w3id.org/trajecto/spaces#HistoricalSite
+<http://w3id.org/trajecto/spaces#HistoricalSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#HistoricalSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+<http://w3id.org/trajecto/spaces#HistoricalSite> <http://www.w3.org/2000/01/rdf-schema#comment> "A location recognized for its historical significance."@en .
+<http://w3id.org/trajecto/spaces#HistoricalSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#HistoricalSite> <http://www.w3.org/2000/01/rdf-schema#label> "Historical Site"@en .
+# 
+# http://w3id.org/trajecto/spaces#Listening
+<http://w3id.org/trajecto/spaces#Listening> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Listening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#ArtifactEngagement> .
+<http://w3id.org/trajecto/spaces#Listening> <http://www.w3.org/2000/01/rdf-schema#comment> "Listening to audio associated with a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#Listening> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Listening> <http://www.w3.org/2000/01/rdf-schema#label> "Listening"@en .
+# 
+# http://w3id.org/trajecto/spaces#Museum
+<http://w3id.org/trajecto/spaces#Museum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Museum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+<http://w3id.org/trajecto/spaces#Museum> <http://www.w3.org/2000/01/rdf-schema#comment> "A building or institution that houses and exhibits collections of artifacts."@en .
+<http://w3id.org/trajecto/spaces#Museum> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Museum> <http://www.w3.org/2000/01/rdf-schema#label> "Museum"@en .
+# 
+# http://w3id.org/trajecto/spaces#PerformanceVenue
+<http://w3id.org/trajecto/spaces#PerformanceVenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#PerformanceVenue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalSpace> .
+<http://w3id.org/trajecto/spaces#PerformanceVenue> <http://www.w3.org/2000/01/rdf-schema#comment> "A space designed for performing arts events."@en .
+<http://w3id.org/trajecto/spaces#PerformanceVenue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#PerformanceVenue> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Venue"@en .
+# 
+# http://w3id.org/trajecto/spaces#Photographing
+<http://w3id.org/trajecto/spaces#Photographing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Photographing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#ArtifactEngagement> .
+<http://w3id.org/trajecto/spaces#Photographing> <http://www.w3.org/2000/01/rdf-schema#comment> "Taking photographs of a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#Photographing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Photographing> <http://www.w3.org/2000/01/rdf-schema#label> "Photographing"@en .
+# 
+# http://w3id.org/trajecto/spaces#Product
+<http://w3id.org/trajecto/spaces#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#ObjectOfInterest> .
+<http://w3id.org/trajecto/spaces#Product> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical item available for purchase in a commercial space."@en .
+<http://w3id.org/trajecto/spaces#Product> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product"@en .
+# 
+# http://w3id.org/trajecto/spaces#Purchase
+<http://w3id.org/trajecto/spaces#Purchase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Purchase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialInteraction> .
+<http://w3id.org/trajecto/spaces#Purchase> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of buying a product or service."@en .
+<http://w3id.org/trajecto/spaces#Purchase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Purchase> <http://www.w3.org/2000/01/rdf-schema#label> "Purchase"@en .
+# 
+# http://w3id.org/trajecto/spaces#PurchaseIntent
+<http://w3id.org/trajecto/spaces#PurchaseIntent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#PurchaseIntent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialIntent> .
+<http://w3id.org/trajecto/spaces#PurchaseIntent> <http://www.w3.org/2000/01/rdf-schema#comment> "Intent to purchase specific products or services."@en .
+<http://w3id.org/trajecto/spaces#PurchaseIntent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#PurchaseIntent> <http://www.w3.org/2000/01/rdf-schema#label> "Purchase Intent"@en .
+# 
+# http://w3id.org/trajecto/spaces#Reading
+<http://w3id.org/trajecto/spaces#Reading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Reading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#ArtifactEngagement> .
+<http://w3id.org/trajecto/spaces#Reading> <http://www.w3.org/2000/01/rdf-schema#comment> "Reading text associated with a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#Reading> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Reading> <http://www.w3.org/2000/01/rdf-schema#label> "Reading"@en .
+# 
+# http://w3id.org/trajecto/spaces#RepeatVisit
+<http://w3id.org/trajecto/spaces#RepeatVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#RepeatVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#RepeatVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A return visit to a previously visited space."@en .
+<http://w3id.org/trajecto/spaces#RepeatVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#RepeatVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Repeat Visit"@en .
+# 
+# http://w3id.org/trajecto/spaces#RetailLayout
+<http://w3id.org/trajecto/spaces#RetailLayout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#RetailLayout> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spaces#RetailLayout> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical arrangement and organization of a retail space."@en .
+<http://w3id.org/trajecto/spaces#RetailLayout> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#RetailLayout> <http://www.w3.org/2000/01/rdf-schema#label> "Retail Layout"@en .
+# 
+# http://w3id.org/trajecto/spaces#RetailSpace
+<http://w3id.org/trajecto/spaces#RetailSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#RetailSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialSpace> .
+<http://w3id.org/trajecto/spaces#RetailSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A commercial space dedicated to selling goods to customers."@en .
+<http://w3id.org/trajecto/spaces#RetailSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#RetailSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Retail Space"@en .
+# 
+# http://w3id.org/trajecto/spaces#RetailStore
+<http://w3id.org/trajecto/spaces#RetailStore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#RetailStore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#RetailSpace> .
+<http://w3id.org/trajecto/spaces#RetailStore> <http://www.w3.org/2000/01/rdf-schema#comment> "A retail establishment selling goods to customers."@en .
+<http://w3id.org/trajecto/spaces#RetailStore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#RetailStore> <http://www.w3.org/2000/01/rdf-schema#label> "Retail Store"@en .
+# 
+# http://w3id.org/trajecto/spaces#SelfDirectedVisit
+<http://w3id.org/trajecto/spaces#SelfDirectedVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#SelfDirectedVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#SelfDirectedVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A self-guided visit without formal guidance."@en .
+<http://w3id.org/trajecto/spaces#SelfDirectedVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#SelfDirectedVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Self Directed Visit"@en .
+# 
+# http://w3id.org/trajecto/spaces#Service
+<http://w3id.org/trajecto/spaces#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract> .
+<http://w3id.org/trajecto/spaces#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-physical offering available in a commercial space."@en .
+<http://w3id.org/trajecto/spaces#Service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+# 
+# http://w3id.org/trajecto/spaces#ServiceConsumption
+<http://w3id.org/trajecto/spaces#ServiceConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ServiceConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialInteraction> .
+<http://w3id.org/trajecto/spaces#ServiceConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using or consuming a service."@en .
+<http://w3id.org/trajecto/spaces#ServiceConsumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ServiceConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Service Consumption"@en .
+# 
+# http://w3id.org/trajecto/spaces#ServiceIntent
+<http://w3id.org/trajecto/spaces#ServiceIntent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ServiceIntent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialIntent> .
+<http://w3id.org/trajecto/spaces#ServiceIntent> <http://www.w3.org/2000/01/rdf-schema#comment> "Intent to use specific services."@en .
+<http://w3id.org/trajecto/spaces#ServiceIntent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ServiceIntent> <http://www.w3.org/2000/01/rdf-schema#label> "Service Intent"@en .
+# 
+# http://w3id.org/trajecto/spaces#ServiceProvider
+<http://w3id.org/trajecto/spaces#ServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#ServiceSpace> .
+<http://w3id.org/trajecto/spaces#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "An establishment providing specific services (banking, healthcare, etc.)."@en .
+<http://w3id.org/trajecto/spaces#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Service Provider"@en .
+# 
+# http://w3id.org/trajecto/spaces#ServiceSpace
+<http://w3id.org/trajecto/spaces#ServiceSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ServiceSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CommercialSpace> .
+<http://w3id.org/trajecto/spaces#ServiceSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A commercial space dedicated to providing services."@en .
+<http://w3id.org/trajecto/spaces#ServiceSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ServiceSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Service Space"@en .
+# 
+# http://w3id.org/trajecto/spaces#ShoppingAisle
+<http://w3id.org/trajecto/spaces#ShoppingAisle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ShoppingAisle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#Zone> .
+<http://w3id.org/trajecto/spaces#ShoppingAisle> <http://www.w3.org/2000/01/rdf-schema#comment> "A pathway between shelves or displays in a retail space."@en .
+<http://w3id.org/trajecto/spaces#ShoppingAisle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ShoppingAisle> <http://www.w3.org/2000/01/rdf-schema#label> "Shopping Aisle"@en .
+# 
+# http://w3id.org/trajecto/spaces#ShoppingMall
+<http://w3id.org/trajecto/spaces#ShoppingMall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ShoppingMall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#RetailSpace> .
+<http://w3id.org/trajecto/spaces#ShoppingMall> <http://www.w3.org/2000/01/rdf-schema#comment> "A large enclosed shopping area containing multiple retail stores."@en .
+<http://w3id.org/trajecto/spaces#ShoppingMall> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ShoppingMall> <http://www.w3.org/2000/01/rdf-schema#label> "Shopping Mall"@en .
+# 
+# http://w3id.org/trajecto/spaces#SocialLearning
+<http://w3id.org/trajecto/spaces#SocialLearning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#SocialLearning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#CulturalInteraction> .
+<http://w3id.org/trajecto/spaces#SocialLearning> <http://www.w3.org/2000/01/rdf-schema#comment> "Learning through social interaction in a cultural context."@en .
+<http://w3id.org/trajecto/spaces#SocialLearning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#SocialLearning> <http://www.w3.org/2000/01/rdf-schema#label> "Social Learning"@en .
+# 
+# http://w3id.org/trajecto/spaces#Space
+<http://w3id.org/trajecto/spaces#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#RegionOfInterest> .
+<http://w3id.org/trajecto/spaces#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A designated area with defined boundaries where human movement occurs."@en .
+<http://w3id.org/trajecto/spaces#Space> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+<http://w3id.org/trajecto/spaces#Space> <http://www.w3.org/2004/02/skos/core#definition> "A physical or conceptual area where human movement and activities take place, characterized by boundaries and internal organization."@en .
+# 
+# http://w3id.org/trajecto/spaces#ThematicVisit
+<http://w3id.org/trajecto/spaces#ThematicVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#ThematicVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#VisitContext> .
+<http://w3id.org/trajecto/spaces#ThematicVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A visit focused on a specific theme or aspect of the space."@en .
+<http://w3id.org/trajecto/spaces#ThematicVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#ThematicVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Thematic Visit"@en .
+# 
+# http://w3id.org/trajecto/spaces#TransactionEvent
+<http://w3id.org/trajecto/spaces#TransactionEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#EventOfInterest> .
+<http://w3id.org/trajecto/spaces#TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event involving a commercial transaction."@en .
+<http://w3id.org/trajecto/spaces#TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Transaction Event"@en .
+# 
+# http://w3id.org/trajecto/spaces#Viewing
+<http://w3id.org/trajecto/spaces#Viewing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Viewing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/spaces#ArtifactEngagement> .
+<http://w3id.org/trajecto/spaces#Viewing> <http://www.w3.org/2000/01/rdf-schema#comment> "Looking at or observing a cultural artifact."@en .
+<http://w3id.org/trajecto/spaces#Viewing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Viewing> <http://www.w3.org/2000/01/rdf-schema#label> "Viewing"@en .
+# 
+# http://w3id.org/trajecto/spaces#VisitContext
+<http://w3id.org/trajecto/spaces#VisitContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#VisitContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/spaces#VisitContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Contextual information about a visit to a space."@en .
+<http://w3id.org/trajecto/spaces#VisitContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#VisitContext> <http://www.w3.org/2000/01/rdf-schema#label> "Visit Context"@en .
+# 
+# http://w3id.org/trajecto/spaces#Zone
+<http://w3id.org/trajecto/spaces#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/spaces#Zone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto#RegionOfInterest> .
+<http://w3id.org/trajecto/spaces#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined section or area within a larger space."@en .
+<http://w3id.org/trajecto/spaces#Zone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/spaces> .
+<http://w3id.org/trajecto/spaces#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@en .
+# 
+# http://www.datacron-project.eu/datAcron#Trajectory
+# 
+# http://www.datacron-project.eu/datAcron#TrajectoryPart
+<http://www.datacron-project.eu/datAcron#TrajectoryPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

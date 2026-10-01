@@ -1,0 +1,20 @@
+# SR-42: Materialize total dwell time per trajectory
+# Sum of all interaction dwell times in seconds.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasTotalDwellTime ?total .
+}
+WHERE {
+    SELECT ?traj (SUM(?dwell) AS ?total)
+    WHERE {
+        ?pos dul:isPartOf ?traj .
+        ?pos trajecto:hasInteraction ?int .
+        ?int poi:hasDwellTimeInSeconds ?dwell .
+    }
+    GROUP BY ?traj
+}

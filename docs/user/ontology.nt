@@ -1,0 +1,556 @@
+<http://w3id.org/trajecto/user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/user> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/user/1.1.0> .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/created> "2025-01-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/description> "User profiles learned from trajectories: a UserProfile per person, a chain of timestamped ProfileSnapshots updated by an exponentially weighted moving average, POI category, dwell and time preferences, visit styles, and the preferences inferred by the semantic rules."@en .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/user> <http://purl.org/dc/terms/title> "Trajecto User Profile Module"@en .
+<http://w3id.org/trajecto/user> <http://purl.org/vocab/vann/preferredNamespacePrefix> "user" .
+<http://w3id.org/trajecto/user> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/user#" .
+<http://w3id.org/trajecto/user> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-user"@en .
+<http://w3id.org/trajecto/user> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/user/1.0> .
+<http://w3id.org/trajecto/user> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/user#belongsToUser
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/trajecto/user#hasTrajectory> .
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its user profile"@en .
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#belongsToUser> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to user"@en .
+# 
+# http://w3id.org/trajecto/user#considersTrajectory
+<http://w3id.org/trajecto/user#considersTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#considersTrajectory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#considersTrajectory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/user#considersTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile to a trajectory taken into account when learning it."@en .
+<http://w3id.org/trajecto/user#considersTrajectory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#considersTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "considers trajectory"@en .
+# 
+# http://w3id.org/trajecto/user#forCategory
+<http://w3id.org/trajecto/user#forCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#forCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#forCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The POI class an inferred preference refers to. The value is a class of the POI module used as an individual."@en .
+<http://w3id.org/trajecto/user#forCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#forCategory> <http://www.w3.org/2000/01/rdf-schema#label> "for category"@en .
+# 
+# http://w3id.org/trajecto/user#generatedSnapshot
+<http://w3id.org/trajecto/user#generatedSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#generatedSnapshot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/user#generatedSnapshot> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#ProfileSnapshot> .
+<http://w3id.org/trajecto/user#generatedSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a trajectory to the profile snapshot its update produced."@en .
+<http://w3id.org/trajecto/user#generatedSnapshot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#generatedSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "generated snapshot"@en .
+# 
+# http://w3id.org/trajecto/user#hasAffinityFor
+<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#Person> .
+<http://w3id.org/trajecto#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."@en .
+<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasAffinityFor> <http://www.w3.org/2000/01/rdf-schema#label> "has affinity for"@en .
+# 
+# http://w3id.org/trajecto/user#hasDwellPreference
+<http://w3id.org/trajecto/user#hasDwellPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasDwellPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasDwellPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#DwellPreference> .
+<http://w3id.org/trajecto/user#hasDwellPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile to its dwell preference."@en .
+<http://w3id.org/trajecto/user#hasDwellPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasDwellPreference> <http://www.w3.org/2000/01/rdf-schema#label> "has dwell preference"@en .
+# 
+# http://w3id.org/trajecto/user#hasInferredPreference
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#Person> .
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."@en .
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasInferredPreference> <http://www.w3.org/2000/01/rdf-schema#label> "has inferred preference"@en .
+# 
+# http://w3id.org/trajecto/user#hasPreference
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."@en .
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasPreference> <http://www.w3.org/2000/01/rdf-schema#label> "has preference"@en .
+# 
+# http://w3id.org/trajecto/user#hasPreferences
+<http://w3id.org/trajecto/user#hasPreferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasPreferences> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#ProfileSnapshot> .
+<http://w3id.org/trajecto/user#hasPreferences> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#hasPreferences> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a profile snapshot to a POI category preference it holds."@en .
+<http://w3id.org/trajecto/user#hasPreferences> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasPreferences> <http://www.w3.org/2000/01/rdf-schema#label> "has preferences"@en .
+# 
+# http://w3id.org/trajecto/user#hasProfile
+<http://w3id.org/trajecto/user#hasProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto#Person> .
+<http://w3id.org/trajecto/user#hasProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a person to their user profile."@en .
+<http://w3id.org/trajecto/user#hasProfile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasProfile> <http://www.w3.org/2000/01/rdf-schema#label> "has profile"@en .
+# 
+# http://w3id.org/trajecto/user#hasSnapshot
+<http://w3id.org/trajecto/user#hasSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#ProfileSnapshot> .
+<http://w3id.org/trajecto/user#hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile to one of its snapshots."@en .
+<http://w3id.org/trajecto/user#hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "has snapshot"@en .
+# 
+# http://w3id.org/trajecto/user#hasTimePreference
+<http://w3id.org/trajecto/user#hasTimePreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasTimePreference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasTimePreference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#TimePreference> .
+<http://w3id.org/trajecto/user#hasTimePreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile to its time preference."@en .
+<http://w3id.org/trajecto/user#hasTimePreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasTimePreference> <http://www.w3.org/2000/01/rdf-schema#label> "has time preference"@en .
+# 
+# http://w3id.org/trajecto/user#hasTrajectory
+<http://w3id.org/trajecto/user#hasTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/user#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a user profile to their trajectories"@en .
+<http://w3id.org/trajecto/user#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "has trajectory"@en .
+# 
+# http://w3id.org/trajecto/user#hasVisitStyle
+<http://w3id.org/trajecto/user#hasVisitStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#hasVisitStyle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasVisitStyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/user#PreferredStyle> .
+<http://w3id.org/trajecto/user#hasVisitStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a user profile to its preferred visit style."@en .
+<http://w3id.org/trajecto/user#hasVisitStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasVisitStyle> <http://www.w3.org/2000/01/rdf-schema#label> "has visit style"@en .
+# 
+# http://w3id.org/trajecto/user#prefersPoiCategory
+<http://w3id.org/trajecto/user#prefersPoiCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/user#prefersPoiCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#PoiCategoryPreference> .
+<http://w3id.org/trajecto/user#prefersPoiCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The POI class that a POI category preference scores. The value is a class of the POI module used as an individual."@en .
+<http://w3id.org/trajecto/user#prefersPoiCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#prefersPoiCategory> <http://www.w3.org/2000/01/rdf-schema#label> "prefers POI category"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/user#alignmentScore
+<http://w3id.org/trajecto/user#alignmentScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#alignmentScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#alignmentScore> <http://www.w3.org/2000/01/rdf-schema#comment> "How well trajectory aligns with user preferences"@en .
+<http://w3id.org/trajecto/user#alignmentScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#alignmentScore> <http://www.w3.org/2000/01/rdf-schema#label> "alignment score"@en .
+# 
+# http://w3id.org/trajecto/user#confidenceLevel
+<http://w3id.org/trajecto/user#confidenceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#confidenceLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#confidenceLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#confidenceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Confidence in the preference prediction (0.0 to 1.0)"@en .
+<http://w3id.org/trajecto/user#confidenceLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#confidenceLevel> <http://www.w3.org/2000/01/rdf-schema#label> "confidence level"@en .
+# 
+# http://w3id.org/trajecto/user#hasInterest
+<http://w3id.org/trajecto/user#hasInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#hasInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#hasInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/user#hasInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A free-text interest keyword of a user profile."@en .
+<http://w3id.org/trajecto/user#hasInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#hasInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has interest"@en .
+# 
+# http://w3id.org/trajecto/user#immersiveFraction
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Share of the interactions with the category that are immersive (SR-20)."@en .
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#immersiveFraction> <http://www.w3.org/2000/01/rdf-schema#label> "immersive fraction"@en .
+# 
+# http://w3id.org/trajecto/user#initialPreferences
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#ProfileSnapshot> .
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#comment> "True for the seed snapshot that Stage 8 writes before any trajectory update."@en .
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#initialPreferences> <http://www.w3.org/2000/01/rdf-schema#label> "initial preferences"@en .
+# 
+# http://w3id.org/trajecto/user#interestLevel
+<http://w3id.org/trajecto/user#interestLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#interestLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#interestLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#interestLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Interest level from 0.0 to 1.0"@en .
+<http://w3id.org/trajecto/user#interestLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#interestLevel> <http://www.w3.org/2000/01/rdf-schema#label> "interest level"@en .
+# 
+# http://w3id.org/trajecto/user#lastUpdated
+<http://w3id.org/trajecto/user#lastUpdated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/trajecto/user#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#comment> "When the user profile was last updated."@en .
+<http://w3id.org/trajecto/user#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#lastUpdated> <http://www.w3.org/2000/01/rdf-schema#label> "last updated"@en .
+# 
+# http://w3id.org/trajecto/user#learningRate
+<http://w3id.org/trajecto/user#learningRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#learningRate> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/trajecto/user#UserProfile> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/trajecto/user#ProfileSnapshot> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#learningRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#learningRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Smoothing factor alpha of the EWMA preference update (0.15)."@en .
+<http://w3id.org/trajecto/user#learningRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#learningRate> <http://www.w3.org/2000/01/rdf-schema#label> "learning rate"@en .
+# 
+# http://w3id.org/trajecto/user#meaningfulFraction
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Share of the interactions with the category that are meaningful (SR-20)."@en .
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#meaningfulFraction> <http://www.w3.org/2000/01/rdf-schema#label> "meaningful fraction"@en .
+# 
+# http://w3id.org/trajecto/user#observationCount
+<http://w3id.org/trajecto/user#observationCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#observationCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#PoiCategoryPreference> .
+<http://w3id.org/trajecto/user#observationCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto/user#observationCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of interactions with the category that a POI category preference has accumulated."@en .
+<http://w3id.org/trajecto/user#observationCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#observationCount> <http://www.w3.org/2000/01/rdf-schema#label> "observation count"@en .
+# 
+# http://w3id.org/trajecto/user#preferenceScore
+<http://w3id.org/trajecto/user#preferenceScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#preferenceScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#preferenceScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/user#preferenceScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Score from 0.0 to 1.0 indicating preference strength"@en .
+<http://w3id.org/trajecto/user#preferenceScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#preferenceScore> <http://www.w3.org/2000/01/rdf-schema#label> "preference score"@en .
+# 
+# http://w3id.org/trajecto/user#profileCreated
+<http://w3id.org/trajecto/user#profileCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#profileCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#UserProfile> .
+<http://w3id.org/trajecto/user#profileCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/trajecto/user#profileCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "When the user profile was created."@en .
+<http://w3id.org/trajecto/user#profileCreated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#profileCreated> <http://www.w3.org/2000/01/rdf-schema#label> "profile created"@en .
+# 
+# http://w3id.org/trajecto/user#totalVisits
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of interactions with the category (SR-20)."@en .
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#totalVisits> <http://www.w3.org/2000/01/rdf-schema#label> "total visits"@en .
+# 
+# http://w3id.org/trajecto/user#updateTimestamp
+<http://w3id.org/trajecto/user#updateTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/user#updateTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/trajecto/user#ProfileSnapshot> .
+<http://w3id.org/trajecto/user#updateTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/trajecto/user#updateTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "The time a profile snapshot refers to: the end of the trajectory that produced it."@en .
+<http://w3id.org/trajecto/user#updateTimestamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#updateTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "update timestamp"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#Person
+# 
+# http://w3id.org/trajecto/user#CasualStyle
+<http://w3id.org/trajecto/user#CasualStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#CasualStyle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#PreferredStyle> .
+<http://w3id.org/trajecto/user#CasualStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for unhurried, casual visits."@en .
+<http://w3id.org/trajecto/user#CasualStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#CasualStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Casual Style"@en .
+# 
+# http://w3id.org/trajecto/user#DwellPreference
+<http://w3id.org/trajecto/user#DwellPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#DwellPreference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#DwellPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for how long to stay at POIs."@en .
+<http://w3id.org/trajecto/user#DwellPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#DwellPreference> <http://www.w3.org/2000/01/rdf-schema#label> "Dwell Preference"@en .
+# 
+# http://w3id.org/trajecto/user#ExploratoryStyle
+<http://w3id.org/trajecto/user#ExploratoryStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#ExploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#PreferredStyle> .
+<http://w3id.org/trajecto/user#ExploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for visits that cover many POIs."@en .
+<http://w3id.org/trajecto/user#ExploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#ExploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Exploratory Style"@en .
+# 
+# http://w3id.org/trajecto/user#ImmersiveStyle
+<http://w3id.org/trajecto/user#ImmersiveStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#ImmersiveStyle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#PreferredStyle> .
+<http://w3id.org/trajecto/user#ImmersiveStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for long, absorbed visits to few POIs."@en .
+<http://w3id.org/trajecto/user#ImmersiveStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#ImmersiveStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Immersive Style"@en .
+# 
+# http://w3id.org/trajecto/user#LongDwell
+<http://w3id.org/trajecto/user#LongDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#LongDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#DwellPreference> .
+<http://w3id.org/trajecto/user#LongDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "Preference for extended visits (>45 minutes)"@en .
+<http://w3id.org/trajecto/user#LongDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#LongDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Long Dwell"@en .
+# 
+# http://w3id.org/trajecto/user#MediumDwell
+<http://w3id.org/trajecto/user#MediumDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#MediumDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#DwellPreference> .
+<http://w3id.org/trajecto/user#MediumDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "Preference for moderate visits (15-45 minutes)"@en .
+<http://w3id.org/trajecto/user#MediumDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#MediumDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Dwell"@en .
+# 
+# http://w3id.org/trajecto/user#PoiCategoryPreference
+<http://w3id.org/trajecto/user#PoiCategoryPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#PoiCategoryPreference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#PoiCategoryPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Preference for specific POI categories"@en .
+<http://w3id.org/trajecto/user#PoiCategoryPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#PoiCategoryPreference> <http://www.w3.org/2000/01/rdf-schema#label> "POI Category Preference"@en .
+# 
+# http://w3id.org/trajecto/user#PreferedStyle
+<http://w3id.org/trajecto/user#PreferedStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#PreferedStyle> <http://www.w3.org/2002/07/owl#equivalentClass> <http://w3id.org/trajecto/user#PreferredStyle> .
+<http://w3id.org/trajecto/user#PreferedStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated since 1.1.0: renamed to PreferredStyle."@en .
+<http://w3id.org/trajecto/user#PreferedStyle> <http://www.w3.org/2000/01/rdf-schema#label> "PreferedStyle (deprecated)"@en .
+<http://w3id.org/trajecto/user#PreferedStyle> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://w3id.org/trajecto/user#Preference
+<http://w3id.org/trajecto/user#Preference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#Preference> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference of a user. Specialized as POI category, dwell, time and visit-style preferences."@en .
+<http://w3id.org/trajecto/user#Preference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#Preference> <http://www.w3.org/2000/01/rdf-schema#label> "Preference"@en .
+# 
+# http://w3id.org/trajecto/user#PreferredStyle
+<http://w3id.org/trajecto/user#PreferredStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#PreferredStyle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#PreferredStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "The visit style a user prefers: casual, exploratory, immersive or targeted."@en .
+<http://w3id.org/trajecto/user#PreferredStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#PreferredStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred Style"@en .
+# 
+# http://w3id.org/trajecto/user#ProfileSnapshot
+<http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."@en .
+<http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#ProfileSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "Profile Snapshot"@en .
+# 
+# http://w3id.org/trajecto/user#ShortDwell
+<http://w3id.org/trajecto/user#ShortDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#ShortDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#DwellPreference> .
+<http://w3id.org/trajecto/user#ShortDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "Preference for brief visits (<15 minutes)"@en .
+<http://w3id.org/trajecto/user#ShortDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#ShortDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Short Dwell"@en .
+# 
+# http://w3id.org/trajecto/user#TargetedStyle
+<http://w3id.org/trajecto/user#TargetedStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#TargetedStyle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#PreferredStyle> .
+<http://w3id.org/trajecto/user#TargetedStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for direct visits to one or two POIs."@en .
+<http://w3id.org/trajecto/user#TargetedStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#TargetedStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Targeted Style"@en .
+# 
+# http://w3id.org/trajecto/user#TimePreference
+<http://w3id.org/trajecto/user#TimePreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#TimePreference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#Preference> .
+<http://w3id.org/trajecto/user#TimePreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Preference for visit times"@en .
+<http://w3id.org/trajecto/user#TimePreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#TimePreference> <http://www.w3.org/2000/01/rdf-schema#label> "Time Preference"@en .
+# 
+# http://w3id.org/trajecto/user#UserProfile
+<http://w3id.org/trajecto/user#UserProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#UserProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "The learned profile of a person: preferences over POI categories, dwell, time and visit style, kept as a chain of timestamped snapshots."@en .
+<http://w3id.org/trajecto/user#UserProfile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#UserProfile> <http://www.w3.org/2000/01/rdf-schema#label> "User Profile"@en .
+# 
+# http://w3id.org/trajecto/user#VariableDwell
+<http://w3id.org/trajecto/user#VariableDwell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/user#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/user#DwellPreference> .
+<http://w3id.org/trajecto/user#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#comment> "No specific dwell time preference"@en .
+<http://w3id.org/trajecto/user#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#VariableDwell> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Dwell"@en .
+# 
+# http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/user#businessTravelerPersona
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://w3id.org/trajecto/user#hasDwellPreference> <http://w3id.org/trajecto/user#shortDwellPref> .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://w3id.org/trajecto/user#hasVisitStyle> <http://w3id.org/trajecto/user#targetedStyle> .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://w3id.org/trajecto/user#hasInterest> "efficiency" .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://w3id.org/trajecto/user#hasInterest> "restaurants" .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://w3id.org/trajecto/user#hasInterest> "transport" .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://www.w3.org/2000/01/rdf-schema#comment> "Example persona: short, targeted visits to restaurants and transport."@en .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#businessTravelerPersona> <http://www.w3.org/2000/01/rdf-schema#label> "Business Traveler Persona"@en .
+# 
+# http://w3id.org/trajecto/user#casualStyle
+<http://w3id.org/trajecto/user#casualStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#casualStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#CasualStyle> .
+<http://w3id.org/trajecto/user#casualStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "The casual visit style."@en .
+<http://w3id.org/trajecto/user#casualStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#casualStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Casual Visit Style"@en .
+# 
+# http://w3id.org/trajecto/user#culturalEnthusiastPersona
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://w3id.org/trajecto/user#hasDwellPreference> <http://w3id.org/trajecto/user#longDwellPref> .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://w3id.org/trajecto/user#hasVisitStyle> <http://w3id.org/trajecto/user#immersiveStyle> .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://w3id.org/trajecto/user#hasInterest> "galleries" .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://w3id.org/trajecto/user#hasInterest> "heritage" .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://w3id.org/trajecto/user#hasInterest> "museums" .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://www.w3.org/2000/01/rdf-schema#comment> "Example persona: long, immersive visits to museums, galleries and heritage."@en .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#culturalEnthusiastPersona> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Enthusiast Persona"@en .
+# 
+# http://w3id.org/trajecto/user#exploratoryStyle
+<http://w3id.org/trajecto/user#exploratoryStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#exploratoryStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#ExploratoryStyle> .
+<http://w3id.org/trajecto/user#exploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "The exploratory visit style."@en .
+<http://w3id.org/trajecto/user#exploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#exploratoryStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Exploratory Visit Style"@en .
+# 
+# http://w3id.org/trajecto/user#immersiveStyle
+<http://w3id.org/trajecto/user#immersiveStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#immersiveStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#ImmersiveStyle> .
+<http://w3id.org/trajecto/user#immersiveStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "The immersive visit style."@en .
+<http://w3id.org/trajecto/user#immersiveStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#immersiveStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Immersive Visit Style"@en .
+# 
+# http://w3id.org/trajecto/user#leisureVisitorPersona
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://w3id.org/trajecto/user#hasDwellPreference> <http://w3id.org/trajecto/user#variableDwellPref> .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://w3id.org/trajecto/user#hasVisitStyle> <http://w3id.org/trajecto/user#casualStyle> .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://w3id.org/trajecto/user#hasInterest> "dining" .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://w3id.org/trajecto/user#hasInterest> "entertainment" .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://w3id.org/trajecto/user#hasInterest> "shopping" .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://www.w3.org/2000/01/rdf-schema#comment> "Example persona: casual visits of variable length for dining, shopping and entertainment."@en .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#leisureVisitorPersona> <http://www.w3.org/2000/01/rdf-schema#label> "Leisure Visitor Persona"@en .
+# 
+# http://w3id.org/trajecto/user#longDwellPref
+<http://w3id.org/trajecto/user#longDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#longDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#LongDwell> .
+<http://w3id.org/trajecto/user#longDwellPref> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for long dwell (over 45 minutes)."@en .
+<http://w3id.org/trajecto/user#longDwellPref> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#longDwellPref> <http://www.w3.org/2000/01/rdf-schema#label> "Long Dwell Preference"@en .
+# 
+# http://w3id.org/trajecto/user#mediumDwellPref
+<http://w3id.org/trajecto/user#mediumDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#mediumDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#MediumDwell> .
+<http://w3id.org/trajecto/user#mediumDwellPref> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for medium dwell (15 to 45 minutes)."@en .
+<http://w3id.org/trajecto/user#mediumDwellPref> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#mediumDwellPref> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Dwell Preference"@en .
+# 
+# http://w3id.org/trajecto/user#shortDwellPref
+<http://w3id.org/trajecto/user#shortDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#shortDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#ShortDwell> .
+<http://w3id.org/trajecto/user#shortDwellPref> <http://www.w3.org/2000/01/rdf-schema#comment> "A preference for short dwell (under 15 minutes)."@en .
+<http://w3id.org/trajecto/user#shortDwellPref> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#shortDwellPref> <http://www.w3.org/2000/01/rdf-schema#label> "Short Dwell Preference"@en .
+# 
+# http://w3id.org/trajecto/user#targetedStyle
+<http://w3id.org/trajecto/user#targetedStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#targetedStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#TargetedStyle> .
+<http://w3id.org/trajecto/user#targetedStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "The targeted visit style."@en .
+<http://w3id.org/trajecto/user#targetedStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#targetedStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Targeted Visit Style"@en .
+# 
+# http://w3id.org/trajecto/user#touristExplorerPersona
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://w3id.org/trajecto/user#hasDwellPreference> <http://w3id.org/trajecto/user#mediumDwellPref> .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://w3id.org/trajecto/user#hasVisitStyle> <http://w3id.org/trajecto/user#exploratoryStyle> .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://w3id.org/trajecto/user#hasInterest> "culture" .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://w3id.org/trajecto/user#hasInterest> "history" .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://w3id.org/trajecto/user#hasInterest> "landmarks" .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://www.w3.org/2000/01/rdf-schema#comment> "Example persona: exploratory visits of medium length to landmarks."@en .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#touristExplorerPersona> <http://www.w3.org/2000/01/rdf-schema#label> "Tourist Explorer Persona"@en .
+# 
+# http://w3id.org/trajecto/user#variableDwellPref
+<http://w3id.org/trajecto/user#variableDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/user#variableDwellPref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/trajecto/user#VariableDwell> .
+<http://w3id.org/trajecto/user#variableDwellPref> <http://www.w3.org/2000/01/rdf-schema#comment> "No particular dwell preference."@en .
+<http://w3id.org/trajecto/user#variableDwellPref> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/user> .
+<http://w3id.org/trajecto/user#variableDwellPref> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Dwell Preference"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

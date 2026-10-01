@@ -1,0 +1,16 @@
+# SR-41: Materialize trajectory-level interaction links
+# Lifts hasInteraction from RawPosition to Trajectory so OWL reasoner
+# can evaluate defined classes (visitor, focused, immersive) that use
+# qualified cardinality restrictions on trajectory individuals.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+INSERT {
+    ?traj trajecto:includesInteraction ?int .
+}
+WHERE {
+    ?pos dul:isPartOf ?traj .
+    ?pos trajecto:hasInteraction ?int .
+}

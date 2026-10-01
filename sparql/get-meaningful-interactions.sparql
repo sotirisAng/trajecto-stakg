@@ -1,0 +1,16 @@
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX spatial: <http://w3id.org/trajecto/spatial#>
+PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?interaction ?trajectory ?seconds ?distance
+WHERE {
+    ?interaction a poi:MeaningfulInteraction .
+    ?position trajecto:hasInteraction ?interaction ;
+        dul:isPartOf ?trajectory.
+    ?interaction poi:hasDwellTimeInSeconds ?seconds;
+        spatial:hasDistance	?distance;
+        poi:interactsWith ?poi.
+}

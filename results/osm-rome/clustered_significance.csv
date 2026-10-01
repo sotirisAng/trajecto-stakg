@@ -1,0 +1,11 @@
+kg,a,b,metric,delta,p_flat,p_clustered,n_trajectories,n_users
+osm-rome,unified_route_heavy,popularity,recall@10,0.0440251572327044,0.4246,0.5491,53,16
+osm-rome,unified_route_heavy,popularity,mrr,0.11530398322851154,0.032,0.3184,53,16
+osm-rome,unified_route_heavy,markov,recall@10,-0.04716981132075472,0.3481,0.8713,53,16
+osm-rome,unified_route_heavy,markov,mrr,0.02788259958071279,0.5196,0.4998,53,16
+osm-rome,unified_route_heavy,markov2,recall@10,-0.0660377358490566,0.1246,0.7464,53,16
+osm-rome,unified_route_heavy,markov2,mrr,-0.011740041928721174,0.5796,0.6251,53,16
+osm-rome,lr_fusion,unified_route_heavy,recall@10,0.04716981132075472,0.2533,0.5014,53,16
+osm-rome,lr_fusion,unified_route_heavy,mrr,0.0002620545073375253,1.0,0.8773,53,16
+osm-rome,rrf_uni+markov2+prox,unified_route_heavy,recall@10,0.0660377358490566,0.0626,0.5014,53,16
+osm-rome,rrf_uni+markov2+prox,unified_route_heavy,mrr,0.03189577717879605,0.197,0.1227,53,16

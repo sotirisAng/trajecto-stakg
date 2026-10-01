@@ -1,0 +1,48 @@
+Fuseki query endpoint: http://localhost:3030/geolife/sparql
+Fuseki update endpoint: http://localhost:3030/geolife/update
+Loading context-aware recommender data...
+  Features: loaded 1160 from file
+  Interactions: 1145 trajectories, 3041 unique POIs
+  Metadata: 1160 trajectories
+  POI metadata: 8486 POIs
+  Engagement: 1145 trajectories classified
+  Preferences: 96 users
+  Graphs: flow=2237 edges, covisit=5251 edges
+  Significant POIs: 163
+Loaded: 1160 trajectories, 3041 POIs, 96 users with preferences
+  Loading ontological classifications...
+  Ontological: 1145 classified, 13 profile classes
+  SR engine: ready (5 recommendation rules)
+  Precomputing archetype similarity matrix...
+  Archetype similarity: 1145 trajectories, 17175 pairs cached
+  Precomputing route similarity matrix...
+  Route similarity: 791 trajectories, 9370 pairs cached
+  Indexes: 3 engagement levels, 63 category groups, 96 user visit sets
+  Events: 0 scheduled events at 0 POIs
+  Trajectory windows: 1160 cached
+  Dwell semantics: 102 typed thresholds, 7171 interaction dwells
+CORPUS CHECK: endpoint=http://localhost:3030/geolife/sparql, trajectories=1145, POIs=3041
+
+=== within 500 m ===
+  random                   R@10=0.519  MRR=0.260  N=77
+  popularity               R@10=0.732  MRR=0.415  N=77
+  category_popularity      R@10=0.497  MRR=0.376  N=77
+  proximity                R@10=0.569  MRR=0.248  N=77
+  markov                   R@10=0.581  MRR=0.369  N=77
+  markov2                  R@10=0.654  MRR=0.364  N=77
+  unified_default          R@10=0.737  MRR=0.394  N=77
+  unified_route_heavy      R@10=0.730  MRR=0.389  N=77
+  rrf_uni+markov2+prox     R@10=0.749  MRR=0.421  N=77
+  -> output/evaluation/geolife_protocol_radius500_fixed.csv
+
+=== within 1000 m ===
+  random                   R@10=0.325  MRR=0.158  N=139
+  popularity               R@10=0.630  MRR=0.384  N=139
+  category_popularity      R@10=0.420  MRR=0.303  N=139
+  proximity                R@10=0.390  MRR=0.194  N=139
+  markov                   R@10=0.551  MRR=0.418  N=139
+  markov2                  R@10=0.567  MRR=0.415  N=139
+  unified_default          R@10=0.686  MRR=0.416  N=139
+  unified_route_heavy      R@10=0.718  MRR=0.435  N=139
+  rrf_uni+markov2+prox     R@10=0.692  MRR=0.387  N=139
+  -> output/evaluation/geolife_protocol_radius1000_fixed.csv

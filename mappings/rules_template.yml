@@ -1,0 +1,283 @@
+prefixes:
+  trajecto: "http://w3id.org/trajecto#"
+  patterns: "http://w3id.org/trajecto/patterns#"
+  context: "http://w3id.org/trajecto/context#"
+  purpose: "http://w3id.org/trajecto/purpose#"
+  user: "http://w3id.org/trajecto/user#"
+  poi: "http://w3id.org/trajecto/poi#"
+  spaces: "http://w3id.org/trajecto/spaces#"
+  datacron: "http://www.datacron-project.eu/datAcron#"
+  dul: "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+  geo: "http://www.opengis.net/ont/geosparql#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+  idlab-fn: https://w3id.org/imec/idlab/function#
+
+mappings:
+  trajectory:
+    sources:
+      - [trajectory_1.csv~csv]
+    s: trajecto:trajectory_$(traj_id)
+    po:
+      - [a, datacron:Trajectory]
+#      - [datacron:hasTemporalFeature, trajecto:temporalFeature_$(traj_id)~iri]
+#      - [purpose:hasPrimaryPurpose, purpose:purpose_$(traj_id)~iri]
+      - [rdfs:label, "Trajectory $(traj_id)"]
+
+  rawPosition:
+    sources:
+      - [trajectory_1.csv~csv]
+    s: trajecto:rawPosition_$(traj_id)_$(id)
+    po:
+      - [a, datacron:RawPosition]
+      - [datacron:hasSpeed, $(speed)]
+      - [trajecto:timestamp, "$(date)T$(time)"]
+      - [datacron:hasGeometry, datacron:point_$(traj_id)_$(id)~iri]
+      - [dul:isPartOf, trajecto:trajectory_$(traj_id)~iri]
+      - p: a
+        o:
+          value: trajecto:StopPosition
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(is_stop)]
+              - [str2, "True"]
+      - p: trajecto:hasInteraction
+        o:
+          value: poi:interaction_$(traj_id)_$(stop_id)
+          type: iri
+          condition:
+            function: idlab-fn:notEqual
+            parameters:
+              - [grel:valueParameter, $(poi_ids)]
+              - [grel:valueParameter2, "[]"]
+
+  trajectoryPoint:
+    sources:
+      - [trajectory_1.csv~csv]
+    s: datacron:point_$(traj_id)_$(id)
+    po:
+      - [a, datacron:Point]
+      - [datacron:hasLatitude, $(latitude)]
+      - [datacron:hasLongitude, $(longitude)]
+      - [datacron:hasAltitude, $(altitude)]
+
+
+  pointOfInterest:
+    sources:
+      - [../files/csv/pois.csv~csv]
+    s: poi:pointOfInterest_$(id)
+    po:
+      - [a, trajecto:PointOfInterest]
+      - [rdfs:label, $(name)]
+      - [datacron:hasLatitude, $(lat)]
+      - [datacron:hasLongitude, $(lon)]
+      - [rdfs:label, "$(name_en)", en~lang]
+
+#      - p: a
+#        o:
+#          - value: poi:Museum
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(tourism)]
+#                - [str2, "museum"]
+#
+#      - p: a
+#        o:
+#          - value: poi:CulturalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(tourism)]
+#                - [str2, "attraction"]
+#      - p: a
+#        o:
+#          - value: poi:CulturalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "place_of_worship"]
+#      - p: a
+#        o:
+#          - value: poi:ReligiousPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "place_of_worship"]
+#      - p: a
+#        o:
+#          - value: poi:CulturalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "history"]
+#      - p: a
+#        o:
+#          - value: poi:HistoricalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "history"]
+#      - p: a
+#        o:
+#          - value: poi:CulturalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(tourism)]
+#                - [str2, "information"]
+#      - p: a
+#        o:
+#          - value: poi:CulturalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(tourism)]
+#                - [str2, "museum"]
+#
+#      - p: a
+#        o:
+#          - value: poi:DiningPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "restaurant"]
+#
+#      - p: a
+#        o:
+#          - value: poi:RecreationalPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "bar"]
+#      - p: a
+#        o:
+#          - value: poi:DiningPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "fast-food"]
+#
+#      - p: a
+#        o:
+#          - value: poi:Cafe
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "cafe"]
+#
+#      - p: a
+#        o:
+#          - value: poi:InformationPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "information"]
+#
+##      - p: a
+##        o:
+##          - value: poi:InformationSign
+##            condition:
+##              function: equal
+##              parameters:
+##                - [str1, $(information)]
+##                - [str2, "board"]
+#
+#      - p: a
+#        o:
+#          - value: poi:CommercialPOI
+#            condition:
+#              function: equal
+#              parameters:
+#                - [str1, $(amenity)]
+#                - [str2, "marketplace"]
+##      - p: a
+##        o:
+##          - value: poi:CommercialPOI
+##            condition:
+##              function: idlab-fn:notEqual
+##            parameters:
+##              - [grel:str1, $(shop)]
+##              - [grel:str2, ""]
+
+      - p: owl:sameAs
+        o:
+          value: "https://www.wikidata.org/wiki/$(wikidata)"
+          type: iri
+          condition:
+            function: idlab-fn:notEqual
+            parameters:
+              - [grel:str1, $(wikidata)]
+              - [grel:str2, ""]
+
+      - p: rdfs:seeAlso
+        o:
+          value: "https://en.wikipedia.org/wiki/$(wikipedia)"
+          condition:
+            function: idlab-fn:notEqual
+            parameters:
+              - [grel:str1, $(wikipedia)]
+              - [grel:str2, ""]
+
+  poiInteraction:
+    sources:
+      - [trajectory_1.csv~csv]
+    s: poi:interaction_$(traj_id)_$(stop_id)
+    po:
+      - p: a
+        o:
+          - value: poi:POIInteraction
+            condition:
+              function: idlab-fn:notEqual
+              parameters:
+                - [grel:valueParameter, $(poi_ids)]
+                - [grel:valueParameter2, "[]"]
+      - p: poi:interactsWith
+        o:
+          - value: poi:pointOfInterest_$(poi_ids)
+            condition:
+              function: idlab-fn:notEqual
+              parameters:
+                - [grel:valueParameter, $(poi_ids)]
+                - [grel:valueParameter2, "[]"]
+      - p: poi:hasDwellTime
+        o:
+          - value: "PT$(time_spent)S"
+            datatype: xsd:duration
+            condition:
+              function: idlab-fn:notEqual
+              parameters:
+                - [grel:valueParameter, $(time_spent)]
+                - [grel:valueParameter2, ""]
+      - p: poi:hasDwellTimeInSeconds
+        o:
+          - value: $(time_spent)
+            datatype: xsd:float
+            condition:
+              function: idlab-fn:notEqual
+              parameters:
+                - [grel:valueParameter, $(time_spent)]
+                - [grel:valueParameter2, ""]
+
+  person:
+    sources:
+      - [trajectory_1.csv~csv]
+    s: user:$(username)
+    po:
+      - [a, trajecto:Person]
+      - [trajecto:formsTrajectory, trajecto:trajectory_$(traj_id)~iri]
+      - [rdfs:label, $(username)]

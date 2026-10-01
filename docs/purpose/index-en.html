@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto Purpose Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto/purpose#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto/purpose#","name":"Trajecto Purpose Module", "headline":"This module extends the trajecto ontology with a comprehensive framework for representing purposes of movement.", "dateReleased":"2025-05-09", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto Purpose Module</h1>
+<h2>Release: 2025-05-09</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/purpose/1.1.0">http://w3id.org/trajecto/purpose/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/purpose/1.0">http://w3id.org/trajecto/purpose/1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://w3id.org/trajecto/purpose/skos">purpose/skos</a></dd>
+
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/purpose.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/purpose.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This module extends the trajecto ontology with a comprehensive framework for representing purposes of movement.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/purpose.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dul</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>purpose</b></td><td>&lt;http://w3id.org/trajecto/purpose#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto-purpose: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ArtisticExperience"
+         title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a>
+   </li>
+   <li>
+      <a href="#BusinessMeeting" title="http://w3id.org/trajecto/purpose#BusinessMeeting">Business Meeting</a>
+   </li>
+   <li>
+      <a href="#CommercialPurpose"
+         title="http://w3id.org/trajecto/purpose#CommercialPurpose">Commercial Purpose</a>
+   </li>
+   <li>
+      <a href="#Commuting" title="http://w3id.org/trajecto/purpose#Commuting">Commuting</a>
+   </li>
+   <li>
+      <a href="#CulturalEventAttendance"
+         title="http://w3id.org/trajecto/purpose#CulturalEventAttendance">Cultural Event Attendance</a>
+   </li>
+   <li>
+      <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a>
+   </li>
+   <li>
+      <a href="#DiningExperience"
+         title="http://w3id.org/trajecto/purpose#DiningExperience">Dining Experience</a>
+   </li>
+   <li>
+      <a href="#DomesticActivity"
+         title="http://w3id.org/trajecto/purpose#DomesticActivity">Domestic Activity</a>
+   </li>
+   <li>
+      <a href="#EducationalPurpose"
+         title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a>
+   </li>
+   <li>
+      <a href="#EducationalTour" title="http://w3id.org/trajecto/purpose#EducationalTour">Educational Tour</a>
+   </li>
+   <li>
+      <a href="#EntertainmentAttendance"
+         title="http://w3id.org/trajecto/purpose#EntertainmentAttendance">Entertainment Attendance</a>
+   </li>
+   <li>
+      <a href="#ExerciseActivity"
+         title="http://w3id.org/trajecto/purpose#ExerciseActivity">Exercise Activity</a>
+   </li>
+   <li>
+      <a href="#FieldStudy" title="http://w3id.org/trajecto/purpose#FieldStudy">Field Study</a>
+   </li>
+   <li>
+      <a href="#FieldWork" title="http://w3id.org/trajecto/purpose#FieldWork">Field Work</a>
+   </li>
+   <li>
+      <a href="#FineArtsPurpose" title="http://w3id.org/trajecto/purpose#FineArtsPurpose">Fine Arts Purpose</a>
+   </li>
+   <li>
+      <a href="#FormalLearning" title="http://w3id.org/trajecto/purpose#FormalLearning">Formal Learning</a>
+   </li>
+   <li>
+      <a href="#GeneralPurpose" title="http://w3id.org/trajecto/purpose#GeneralPurpose">General Purpose</a>
+   </li>
+   <li>
+      <a href="#HeritageExploration"
+         title="http://w3id.org/trajecto/purpose#HeritageExploration">Heritage Exploration</a>
+   </li>
+   <li>
+      <a href="#HomeBound" title="http://w3id.org/trajecto/purpose#HomeBound">Home Bound</a>
+   </li>
+   <li>
+      <a href="#LeisureActivity" title="http://w3id.org/trajecto/purpose#LeisureActivity">Leisure Activity</a>
+   </li>
+   <li>
+      <a href="#LocalCommunityEngagement"
+         title="http://w3id.org/trajecto/purpose#LocalCommunityEngagement">Local Community Engagement</a>
+   </li>
+   <li>
+      <a href="#MuseumVisit" title="http://w3id.org/trajecto/purpose#MuseumVisit">Museum Visit</a>
+   </li>
+   <li>
+      <a href="#OfficeWork" title="http://w3id.org/trajecto/purpose#OfficeWork">Office Work</a>
+   </li>
+   <li>
+      <a href="#PhotographyPurpose"
+         title="http://w3id.org/trajecto/purpose#PhotographyPurpose">Photography Purpose</a>
+   </li>
+   <li>
+      <a href="#PrintPurpose" title="http://w3id.org/trajecto/purpose#PrintPurpose">Print Purpose</a>
+   </li>
+   <li>
+      <a href="#ProfessionalEvent"
+         title="http://w3id.org/trajecto/purpose#ProfessionalEvent">Professional Event</a>
+   </li>
+   <li>
+      <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a>
+   </li>
+   <li>
+      <a href="#PurposeHierarchy"
+         title="http://w3id.org/trajecto/purpose#PurposeHierarchy">Purpose Hierarchy</a>
+   </li>
+   <li>
+      <a href="#PurposeTransition"
+         title="http://w3id.org/trajecto/purpose#PurposeTransition">Purpose Transition</a>
+   </li>
+   <li>
+      <a href="#RecreationalPurpose"
+         title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a>
+   </li>
+   <li>
+      <a href="#Research" title="http://w3id.org/trajecto/purpose#Research">Research</a>
+   </li>
+   <li>
+      <a href="#ResidentialPurpose"
+         title="http://w3id.org/trajecto/purpose#ResidentialPurpose">Residential Purpose</a>
+   </li>
+   <li>
+      <a href="#SculpturePurpose"
+         title="http://w3id.org/trajecto/purpose#SculpturePurpose">Sculpture Purpose</a>
+   </li>
+   <li>
+      <a href="#ServiceAccess" title="http://w3id.org/trajecto/purpose#ServiceAccess">Service Access</a>
+   </li>
+   <li>
+      <a href="#Shopping" title="http://w3id.org/trajecto/purpose#Shopping">Shopping</a>
+   </li>
+   <li>
+      <a href="#SocialGathering" title="http://w3id.org/trajecto/purpose#SocialGathering">Social Gathering</a>
+   </li>
+   <li>
+      <a href="#Tourism" title="http://w3id.org/trajecto/purpose#Tourism">Tourism</a>
+   </li>
+   <li>
+      <a href="#TransferBetweenModes"
+         title="http://w3id.org/trajecto/purpose#TransferBetweenModes">Transfer Between Modes</a>
+   </li>
+   <li>
+      <a href="#Transit" title="http://w3id.org/trajecto/purpose#Transit">Transit</a>
+   </li>
+   <li>
+      <a href="#TransportationPurpose"
+         title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a>
+   </li>
+   <li>
+      <a href="#Wandering" title="http://w3id.org/trajecto/purpose#Wandering">Wandering</a>
+   </li>
+   <li>
+      <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a>
+   </li>
+   <li>
+      <a href="#WorkplaceRoutine"
+         title="http://w3id.org/trajecto/purpose#WorkplaceRoutine">Workplace Routine</a>
+   </li>
+   <li>
+      <a href="#WorkshopAttendance"
+         title="http://w3id.org/trajecto/purpose#WorkshopAttendance">Workshop Attendance</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#fromPurpose" title="http://w3id.org/trajecto/purpose#fromPurpose">from purpose</a>
+   </li>
+   <li>
+      <a href="#hasOpportunisticPurpose"
+         title="http://w3id.org/trajecto/purpose#hasOpportunisticPurpose">has opportunistic purpose</a>
+   </li>
+   <li>
+      <a href="#hasPrimaryPurpose"
+         title="http://w3id.org/trajecto/purpose#hasPrimaryPurpose">has primary purpose</a>
+   </li>
+   <li>
+      <a href="#hasPurposeCharacteristic"
+         title="http://w3id.org/trajecto/purpose#hasPurposeCharacteristic">has purpose characteristic</a>
+   </li>
+   <li>
+      <a href="#hasPurposeHierarchy"
+         title="http://w3id.org/trajecto/purpose#hasPurposeHierarchy">has purpose hierarchy</a>
+   </li>
+   <li>
+      <a href="#hasPurposeTransition"
+         title="http://w3id.org/trajecto/purpose#hasPurposeTransition">has purpose transition</a>
+   </li>
+   <li>
+      <a href="#hasSecondaryPurpose"
+         title="http://w3id.org/trajecto/purpose#hasSecondaryPurpose">has secondary purpose</a>
+   </li>
+   <li>
+      <a href="#toPurpose" title="http://w3id.org/trajecto/purpose#toPurpose">to purpose</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasPurposeConfidenceScore"
+         title="http://w3id.org/trajecto/purpose#hasPurposeConfidenceScore">has purpose confidence score</a>
+   </li>
+   <li>
+      <a href="#hasPurposeDuration"
+         title="http://w3id.org/trajecto/purpose#hasPurposeDuration">has purpose duration</a>
+   </li>
+   <li>
+      <a href="#hasPurposeFrequency"
+         title="http://w3id.org/trajecto/purpose#hasPurposeFrequency">has purpose frequency</a>
+   </li>
+   <li>
+      <a href="#hasPurposePriority"
+         title="http://w3id.org/trajecto/purpose#hasPurposePriority">has purpose priority</a>
+   </li>
+   <li>
+      <a href="#transitionTimestamp"
+         title="http://w3id.org/trajecto/purpose#transitionTimestamp">transition timestamp</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto-purpose: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module extends the trajecto ontology with a comprehensive framework for representing purposes of movement.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto-purpose classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto-purpose.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#ArtisticExperience" title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a></li>
+  <li><a href="#BusinessMeeting" title="http://w3id.org/trajecto/purpose#BusinessMeeting">Business Meeting</a></li>
+  <li><a href="#CommercialPurpose" title="http://w3id.org/trajecto/purpose#CommercialPurpose">Commercial Purpose</a></li>
+  <li><a href="#Commuting" title="http://w3id.org/trajecto/purpose#Commuting">Commuting</a></li>
+  <li><a href="#CulturalEventAttendance" title="http://w3id.org/trajecto/purpose#CulturalEventAttendance">Cultural Event Attendance</a></li>
+  <li><a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a></li>
+  <li><a href="#DiningExperience" title="http://w3id.org/trajecto/purpose#DiningExperience">Dining Experience</a></li>
+  <li><a href="#DomesticActivity" title="http://w3id.org/trajecto/purpose#DomesticActivity">Domestic Activity</a></li>
+  <li><a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a></li>
+  <li><a href="#EducationalTour" title="http://w3id.org/trajecto/purpose#EducationalTour">Educational Tour</a></li>
+  <li><a href="#EntertainmentAttendance" title="http://w3id.org/trajecto/purpose#EntertainmentAttendance">Entertainment Attendance</a></li>
+  <li><a href="#ExerciseActivity" title="http://w3id.org/trajecto/purpose#ExerciseActivity">Exercise Activity</a></li>
+  <li><a href="#FieldStudy" title="http://w3id.org/trajecto/purpose#FieldStudy">Field Study</a></li>
+  <li><a href="#FieldWork" title="http://w3id.org/trajecto/purpose#FieldWork">Field Work</a></li>
+  <li><a href="#FineArtsPurpose" title="http://w3id.org/trajecto/purpose#FineArtsPurpose">Fine Arts Purpose</a></li>
+  <li><a href="#FormalLearning" title="http://w3id.org/trajecto/purpose#FormalLearning">Formal Learning</a></li>
+  <li><a href="#GeneralPurpose" title="http://w3id.org/trajecto/purpose#GeneralPurpose">General Purpose</a></li>
+  <li><a href="#HeritageExploration" title="http://w3id.org/trajecto/purpose#HeritageExploration">Heritage Exploration</a></li>
+  <li><a href="#HomeBound" title="http://w3id.org/trajecto/purpose#HomeBound">Home Bound</a></li>
+  <li><a href="#LeisureActivity" title="http://w3id.org/trajecto/purpose#LeisureActivity">Leisure Activity</a></li>
+  <li><a href="#LocalCommunityEngagement" title="http://w3id.org/trajecto/purpose#LocalCommunityEngagement">Local Community Engagement</a></li>
+  <li><a href="#MuseumVisit" title="http://w3id.org/trajecto/purpose#MuseumVisit">Museum Visit</a></li>
+  <li><a href="#OfficeWork" title="http://w3id.org/trajecto/purpose#OfficeWork">Office Work</a></li>
+  <li><a href="#PhotographyPurpose" title="http://w3id.org/trajecto/purpose#PhotographyPurpose">Photography Purpose</a></li>
+  <li><a href="#PrintPurpose" title="http://w3id.org/trajecto/purpose#PrintPurpose">Print Purpose</a></li>
+  <li><a href="#ProfessionalEvent" title="http://w3id.org/trajecto/purpose#ProfessionalEvent">Professional Event</a></li>
+  <li><a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a></li>
+  <li><a href="#PurposeHierarchy" title="http://w3id.org/trajecto/purpose#PurposeHierarchy">Purpose Hierarchy</a></li>
+  <li><a href="#PurposeTransition" title="http://w3id.org/trajecto/purpose#PurposeTransition">Purpose Transition</a></li>
+  <li><a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a></li>
+  <li><a href="#Research" title="http://w3id.org/trajecto/purpose#Research">Research</a></li>
+  <li><a href="#ResidentialPurpose" title="http://w3id.org/trajecto/purpose#ResidentialPurpose">Residential Purpose</a></li>
+  <li><a href="#SculpturePurpose" title="http://w3id.org/trajecto/purpose#SculpturePurpose">Sculpture Purpose</a></li>
+  <li><a href="#ServiceAccess" title="http://w3id.org/trajecto/purpose#ServiceAccess">Service Access</a></li>
+  <li><a href="#Shopping" title="http://w3id.org/trajecto/purpose#Shopping">Shopping</a></li>
+  <li><a href="#SocialGathering" title="http://w3id.org/trajecto/purpose#SocialGathering">Social Gathering</a></li>
+  <li><a href="#Tourism" title="http://w3id.org/trajecto/purpose#Tourism">Tourism</a></li>
+  <li><a href="#TransferBetweenModes" title="http://w3id.org/trajecto/purpose#TransferBetweenModes">Transfer Between Modes</a></li>
+  <li><a href="#Transit" title="http://w3id.org/trajecto/purpose#Transit">Transit</a></li>
+  <li><a href="#TransportationPurpose" title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a></li>
+  <li><a href="#Wandering" title="http://w3id.org/trajecto/purpose#Wandering">Wandering</a></li>
+  <li><a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a></li>
+  <li><a href="#WorkplaceRoutine" title="http://w3id.org/trajecto/purpose#WorkplaceRoutine">Workplace Routine</a></li>
+  <li><a href="#WorkshopAttendance" title="http://w3id.org/trajecto/purpose#WorkshopAttendance">Workshop Attendance</a></li>
+ </ul>
+ <div class="entity" id="ArtisticExperience">
+  <h3>Artistic Experience<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#ArtisticExperience</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to experiencing artistic works or performances.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FineArtsPurpose" title="http://w3id.org/trajecto/purpose#FineArtsPurpose">Fine Arts Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#PhotographyPurpose" title="http://w3id.org/trajecto/purpose#PhotographyPurpose">Photography Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#PrintPurpose" title="http://w3id.org/trajecto/purpose#PrintPurpose">Print Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#SculpturePurpose" title="http://w3id.org/trajecto/purpose#SculpturePurpose">Sculpture Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusinessMeeting">
+  <h3>Business Meeting<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#BusinessMeeting</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to professional business meetings.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CommercialPurpose">
+  <h3>Commercial Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#CommercialPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose related to commercial activities such as shopping or services.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated by purchase, consumption or service-seeking activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Shopping, dining out, visiting a bank</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DiningExperience" title="http://w3id.org/trajecto/purpose#DiningExperience">Dining Experience</a> <sup class="type-c" title="class">c</sup>, <a href="#ServiceAccess" title="http://w3id.org/trajecto/purpose#ServiceAccess">Service Access</a> <sup class="type-c" title="class">c</sup>, <a href="#Shopping" title="http://w3id.org/trajecto/purpose#Shopping">Shopping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Commuting">
+  <h3>Commuting<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#Commuting</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to regular travel between home and work/education.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransportationPurpose" title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalEventAttendance">
+  <h3>Cultural Event Attendance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#CulturalEventAttendance</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to attending cultural events, festivals, or performances.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalPurpose">
+  <h3>Cultural Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#CulturalPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose related to cultural activities and experiences.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated by engagement with cultural artifacts, spaces, or events.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Museum visits, attending performances, exploring heritage sites</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ArtisticExperience" title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalEventAttendance" title="http://w3id.org/trajecto/purpose#CulturalEventAttendance">Cultural Event Attendance</a> <sup class="type-c" title="class">c</sup>, <a href="#EducationalTour" title="http://w3id.org/trajecto/purpose#EducationalTour">Educational Tour</a> <sup class="type-c" title="class">c</sup>, <a href="#GeneralPurpose" title="http://w3id.org/trajecto/purpose#GeneralPurpose">General Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#HeritageExploration" title="http://w3id.org/trajecto/purpose#HeritageExploration">Heritage Exploration</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumVisit" title="http://w3id.org/trajecto/purpose#MuseumVisit">Museum Visit</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DiningExperience">
+  <h3>Dining Experience<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#DiningExperience</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to dining at restaurants or food establishments.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialPurpose" title="http://w3id.org/trajecto/purpose#CommercialPurpose">Commercial Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DomesticActivity">
+  <h3>Domestic Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#DomesticActivity</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to household or domestic activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ResidentialPurpose" title="http://w3id.org/trajecto/purpose#ResidentialPurpose">Residential Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EducationalPurpose">
+  <h3>Educational Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#EducationalPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose related to learning and educational activities.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated by formal or informal learning objectives.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>School attendance, workshops, field studies, research activities</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EducationalTour" title="http://w3id.org/trajecto/purpose#EducationalTour">Educational Tour</a> <sup class="type-c" title="class">c</sup>, <a href="#FieldStudy" title="http://w3id.org/trajecto/purpose#FieldStudy">Field Study</a> <sup class="type-c" title="class">c</sup>, <a href="#FormalLearning" title="http://w3id.org/trajecto/purpose#FormalLearning">Formal Learning</a> <sup class="type-c" title="class">c</sup>, <a href="#Research" title="http://w3id.org/trajecto/purpose#Research">Research</a> <sup class="type-c" title="class">c</sup>, <a href="#WorkshopAttendance" title="http://w3id.org/trajecto/purpose#WorkshopAttendance">Workshop Attendance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EducationalTour">
+  <h3>Educational Tour<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#EducationalTour</p>
+  <div class="comment">
+   <span class="markdown">Purpose that combines cultural experience with educational objectives.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EntertainmentAttendance">
+  <h3>Entertainment Attendance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#EntertainmentAttendance</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to attending entertainment events (cinema, sports, etc.).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExerciseActivity">
+  <h3>Exercise Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#ExerciseActivity</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to physical exercise or sports activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FieldStudy">
+  <h3>Field Study<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#FieldStudy</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to educational field studies or site visits.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FieldWork">
+  <h3>Field Work<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#FieldWork</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to professional work conducted in the field.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FineArtsPurpose">
+  <h3>Fine Arts Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#FineArtsPurpose</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to engagement with paintings, mixed media, mirrors, and installations.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtisticExperience" title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FormalLearning">
+  <h3>Formal Learning<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#FormalLearning</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to formal educational activities (classes, lectures).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GeneralPurpose">
+  <h3>General Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#GeneralPurpose</p>
+  <div class="comment">
+   <span class="markdown">Mixed cultural engagement with no dominant artwork type.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HeritageExploration">
+  <h3>Heritage Exploration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#HeritageExploration</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to exploring heritage sites or historical locations.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HomeBound">
+  <h3>Home Bound<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#HomeBound</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to returning to or staying at home.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ResidentialPurpose" title="http://w3id.org/trajecto/purpose#ResidentialPurpose">Residential Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LeisureActivity">
+  <h3>Leisure Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#LeisureActivity</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to casual leisure activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LocalCommunityEngagement">
+  <h3>Local Community Engagement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#LocalCommunityEngagement</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to engaging with the local community near one's residence.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ResidentialPurpose" title="http://w3id.org/trajecto/purpose#ResidentialPurpose">Residential Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MuseumVisit">
+  <h3>Museum Visit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#MuseumVisit</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to visiting museums or exhibitions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OfficeWork">
+  <h3>Office Work<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#OfficeWork</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to working in an office environment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PhotographyPurpose">
+  <h3>Photography Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#PhotographyPurpose</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to engagement with photographic works.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtisticExperience" title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PrintPurpose">
+  <h3>Print Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#PrintPurpose</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to engagement with prints and printmaking works.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtisticExperience" title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProfessionalEvent">
+  <h3>Professional Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#ProfessionalEvent</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to attending professional events, conferences, or trade shows.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PurposeCategory">
+  <h3>Purpose Category<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#PurposeCategory</p>
+  <div class="comment">
+   <span class="markdown">A general category of movement purpose.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A classification of movement purpose into general categories that can be hierarchically organized.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#PurposeOfMovement" target="_blank" title="http://w3id.org/trajecto#PurposeOfMovement">Purpose Of Movement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CommercialPurpose" title="http://w3id.org/trajecto/purpose#CommercialPurpose">Commercial Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalPurpose" title="http://w3id.org/trajecto/purpose#CulturalPurpose">Cultural Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#ResidentialPurpose" title="http://w3id.org/trajecto/purpose#ResidentialPurpose">Residential Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#TransportationPurpose" title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a> <sup class="type-c" title="class">c</sup>, <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasPurposeCharacteristic" title="http://w3id.org/trajecto/purpose#hasPurposeCharacteristic">has purpose characteristic</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPurposeDuration" title="http://w3id.org/trajecto/purpose#hasPurposeDuration">has purpose duration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPurposeFrequency" title="http://w3id.org/trajecto/purpose#hasPurposeFrequency">has purpose frequency</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPurposePriority" title="http://w3id.org/trajecto/purpose#hasPurposePriority">has purpose priority</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#fromPurpose" title="http://w3id.org/trajecto/purpose#fromPurpose">from purpose</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOpportunisticPurpose" title="http://w3id.org/trajecto/purpose#hasOpportunisticPurpose">has opportunistic purpose</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPrimaryPurpose" title="http://w3id.org/trajecto/purpose#hasPrimaryPurpose">has primary purpose</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSecondaryPurpose" title="http://w3id.org/trajecto/purpose#hasSecondaryPurpose">has secondary purpose</a> <sup class="type-op" title="object property">op</sup>, <a href="#toPurpose" title="http://w3id.org/trajecto/purpose#toPurpose">to purpose</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PurposeHierarchy">
+  <h3>Purpose Hierarchy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#PurposeHierarchy</p>
+  <div class="comment">
+   <span class="markdown">A structure representing the hierarchical organization of movement purposes.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A construct that represents the organization of primary, secondary, and opportunistic purposes that motivate a trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPurposeHierarchy" title="http://w3id.org/trajecto/purpose#hasPurposeHierarchy">has purpose hierarchy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PurposeTransition">
+  <h3>Purpose Transition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#PurposeTransition</p>
+  <div class="comment">
+   <span class="markdown">Represents a change from one purpose to another during a trajectory.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">An event where the primary motivation for movement changes from one purpose to another.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#fromPurpose" title="http://w3id.org/trajecto/purpose#fromPurpose">from purpose</a> <sup class="type-op" title="object property">op</sup>, <a href="#toPurpose" title="http://w3id.org/trajecto/purpose#toPurpose">to purpose</a> <sup class="type-op" title="object property">op</sup>, <a href="#transitionTimestamp" title="http://w3id.org/trajecto/purpose#transitionTimestamp">transition timestamp</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPurposeTransition" title="http://w3id.org/trajecto/purpose#hasPurposeTransition">has purpose transition</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RecreationalPurpose">
+  <h3>Recreational Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#RecreationalPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose related to leisure and recreational activities.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated by leisure, entertainment, relaxation, or pleasure.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Park visits, beach trips, attending sporting events</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EntertainmentAttendance" title="http://w3id.org/trajecto/purpose#EntertainmentAttendance">Entertainment Attendance</a> <sup class="type-c" title="class">c</sup>, <a href="#ExerciseActivity" title="http://w3id.org/trajecto/purpose#ExerciseActivity">Exercise Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#LeisureActivity" title="http://w3id.org/trajecto/purpose#LeisureActivity">Leisure Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#SocialGathering" title="http://w3id.org/trajecto/purpose#SocialGathering">Social Gathering</a> <sup class="type-c" title="class">c</sup>, <a href="#Tourism" title="http://w3id.org/trajecto/purpose#Tourism">Tourism</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Research">
+  <h3>Research<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#Research</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to research activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResidentialPurpose">
+  <h3>Residential Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#ResidentialPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose related to residential and home-based activities.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated by home-related activities or local community engagement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Returning home, local neighborhood activities</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DomesticActivity" title="http://w3id.org/trajecto/purpose#DomesticActivity">Domestic Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#HomeBound" title="http://w3id.org/trajecto/purpose#HomeBound">Home Bound</a> <sup class="type-c" title="class">c</sup>, <a href="#LocalCommunityEngagement" title="http://w3id.org/trajecto/purpose#LocalCommunityEngagement">Local Community Engagement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SculpturePurpose">
+  <h3>Sculpture Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#SculpturePurpose</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to engagement with sculptural works.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ArtisticExperience" title="http://w3id.org/trajecto/purpose#ArtisticExperience">Artistic Experience</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceAccess">
+  <h3>Service Access<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#ServiceAccess</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to accessing commercial services (banking, healthcare, etc.).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialPurpose" title="http://w3id.org/trajecto/purpose#CommercialPurpose">Commercial Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Shopping">
+  <h3>Shopping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#Shopping</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to purchasing goods.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CommercialPurpose" title="http://w3id.org/trajecto/purpose#CommercialPurpose">Commercial Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SocialGathering">
+  <h3>Social Gathering<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#SocialGathering</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to meeting and socializing with others.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Tourism">
+  <h3>Tourism<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#Tourism</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to visiting places as a tourist.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RecreationalPurpose" title="http://w3id.org/trajecto/purpose#RecreationalPurpose">Recreational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransferBetweenModes">
+  <h3>Transfer Between Modes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#TransferBetweenModes</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to transferring between different modes of transportation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransportationPurpose" title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Transit">
+  <h3>Transit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#Transit</p>
+  <div class="comment">
+   <span class="markdown">Purpose primarily focused on moving from one location to another.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransportationPurpose" title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransportationPurpose">
+  <h3>Transportation Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#TransportationPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose primarily related to transport and transit between locations.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated primarily by the need to travel between locations rather than activities at those locations.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Commuting, transit transfers, wandering</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Commuting" title="http://w3id.org/trajecto/purpose#Commuting">Commuting</a> <sup class="type-c" title="class">c</sup>, <a href="#TransferBetweenModes" title="http://w3id.org/trajecto/purpose#TransferBetweenModes">Transfer Between Modes</a> <sup class="type-c" title="class">c</sup>, <a href="#Transit" title="http://w3id.org/trajecto/purpose#Transit">Transit</a> <sup class="type-c" title="class">c</sup>, <a href="#Wandering" title="http://w3id.org/trajecto/purpose#Wandering">Wandering</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Wandering">
+  <h3>Wandering<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#Wandering</p>
+  <div class="comment">
+   <span class="markdown">Purpose involving movement without a specific destination or goal.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransportationPurpose" title="http://w3id.org/trajecto/purpose#TransportationPurpose">Transportation Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WorkPurpose">
+  <h3>Work Purpose<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#WorkPurpose</p>
+  <div class="comment">
+   <span class="markdown">Movement purpose related to employment and professional activities.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Movement motivated by professional responsibilities or employment-related activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Office work, field work, business meetings</pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BusinessMeeting" title="http://w3id.org/trajecto/purpose#BusinessMeeting">Business Meeting</a> <sup class="type-c" title="class">c</sup>, <a href="#FieldWork" title="http://w3id.org/trajecto/purpose#FieldWork">Field Work</a> <sup class="type-c" title="class">c</sup>, <a href="#OfficeWork" title="http://w3id.org/trajecto/purpose#OfficeWork">Office Work</a> <sup class="type-c" title="class">c</sup>, <a href="#ProfessionalEvent" title="http://w3id.org/trajecto/purpose#ProfessionalEvent">Professional Event</a> <sup class="type-c" title="class">c</sup>, <a href="#WorkplaceRoutine" title="http://w3id.org/trajecto/purpose#WorkplaceRoutine">Workplace Routine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WorkplaceRoutine">
+  <h3>Workplace Routine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#WorkplaceRoutine</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to regular workplace routines and activities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#WorkPurpose" title="http://w3id.org/trajecto/purpose#WorkPurpose">Work Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WorkshopAttendance">
+  <h3>Workshop Attendance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#WorkshopAttendance</p>
+  <div class="comment">
+   <span class="markdown">Purpose related to attending workshops, seminars, or training sessions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EducationalPurpose" title="http://w3id.org/trajecto/purpose#EducationalPurpose">Educational Purpose</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#fromPurpose" title="http://w3id.org/trajecto/purpose#fromPurpose">from purpose</a></li>
+  <li><a href="#hasOpportunisticPurpose" title="http://w3id.org/trajecto/purpose#hasOpportunisticPurpose">has opportunistic purpose</a></li>
+  <li><a href="#hasPrimaryPurpose" title="http://w3id.org/trajecto/purpose#hasPrimaryPurpose">has primary purpose</a></li>
+  <li><a href="#hasPurposeCharacteristic" title="http://w3id.org/trajecto/purpose#hasPurposeCharacteristic">has purpose characteristic</a></li>
+  <li><a href="#hasPurposeHierarchy" title="http://w3id.org/trajecto/purpose#hasPurposeHierarchy">has purpose hierarchy</a></li>
+  <li><a href="#hasPurposeTransition" title="http://w3id.org/trajecto/purpose#hasPurposeTransition">has purpose transition</a></li>
+  <li><a href="#hasSecondaryPurpose" title="http://w3id.org/trajecto/purpose#hasSecondaryPurpose">has secondary purpose</a></li>
+  <li><a href="#toPurpose" title="http://w3id.org/trajecto/purpose#toPurpose">to purpose</a></li>
+ </ul>
+ <div class="entity" id="fromPurpose">
+  <h3>from purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#fromPurpose</p>
+  <div class="comment">
+   <span class="markdown">Specifies the original purpose before a transition.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeTransition" title="http://w3id.org/trajecto/purpose#PurposeTransition">Purpose Transition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOpportunisticPurpose">
+  <h3>has opportunistic purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasOpportunisticPurpose</p>
+  <div class="comment">
+   <span class="markdown">Specifies unplanned purposes that emerge during the trajectory.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Spontaneous or unplanned purposes that arise during the trajectory and influence movement patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#hasPurpose" target="_blank" title="http://w3id.org/trajecto#hasPurpose">has Purpose</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPrimaryPurpose">
+  <h3>has primary purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPrimaryPurpose</p>
+  <div class="comment">
+   <span class="markdown">Specifies the main purpose of a trajectory.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The primary motivation or goal behind the movement represented by the trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#hasPurpose" target="_blank" title="http://w3id.org/trajecto#hasPurpose">has Purpose</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposeCharacteristic">
+  <h3>has purpose characteristic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposeCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Links a purpose category to its characteristic properties.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposeHierarchy">
+  <h3>has purpose hierarchy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposeHierarchy</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory to its complete purpose hierarchy.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeHierarchy" title="http://w3id.org/trajecto/purpose#PurposeHierarchy">Purpose Hierarchy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposeTransition">
+  <h3>has purpose transition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposeTransition</p>
+  <div class="comment">
+   <span class="markdown">Links a trajectory to purpose transitions that occur within it.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Identifies changes in movement purpose that occur during a trajectory.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeTransition" title="http://w3id.org/trajecto/purpose#PurposeTransition">Purpose Transition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSecondaryPurpose">
+  <h3>has secondary purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasSecondaryPurpose</p>
+  <div class="comment">
+   <span class="markdown">Specifies additional purposes of a trajectory that are not the main driver of movement.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Additional goals or aims that may be fulfilled during the trajectory, but are not the primary motivation for the movement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#hasPurpose" target="_blank" title="http://w3id.org/trajecto#hasPurpose">has Purpose</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="toPurpose">
+  <h3>to purpose<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#toPurpose</p>
+  <div class="comment">
+   <span class="markdown">Specifies the new purpose after a transition.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeTransition" title="http://w3id.org/trajecto/purpose#PurposeTransition">Purpose Transition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasPurposeConfidenceScore" title="http://w3id.org/trajecto/purpose#hasPurposeConfidenceScore">has purpose confidence score</a></li>
+  <li><a href="#hasPurposeDuration" title="http://w3id.org/trajecto/purpose#hasPurposeDuration">has purpose duration</a></li>
+  <li><a href="#hasPurposeFrequency" title="http://w3id.org/trajecto/purpose#hasPurposeFrequency">has purpose frequency</a></li>
+  <li><a href="#hasPurposePriority" title="http://w3id.org/trajecto/purpose#hasPurposePriority">has purpose priority</a></li>
+  <li><a href="#transitionTimestamp" title="http://w3id.org/trajecto/purpose#transitionTimestamp">transition timestamp</a></li>
+ </ul>
+ <div class="entity" id="hasPurposeConfidenceScore">
+  <h3>has purpose confidence score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposeConfidenceScore</p>
+  <div class="comment">
+   <span class="markdown">Share of the meaningful dwell of a trajectory spent at POIs of its assigned purpose, as a percentage (0 to 100).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposeDuration">
+  <h3>has purpose duration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposeDuration</p>
+  <div class="comment">
+   <span class="markdown">Specifies the typical duration associated with a purpose.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#duration" target="_blank" title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposeFrequency">
+  <h3>has purpose frequency<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposeFrequency</p>
+  <div class="comment">
+   <span class="markdown">Describes how frequently this purpose typically occurs (e.g., 'daily', 'weekly', 'monthly', 'rarely').</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPurposePriority">
+  <h3>has purpose priority<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#hasPurposePriority</p>
+  <div class="comment">
+   <span class="markdown">Numeric representation of purpose priority, with lower numbers indicating higher priority.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeCategory" title="http://w3id.org/trajecto/purpose#PurposeCategory">Purpose Category</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="transitionTimestamp">
+  <h3>transition timestamp<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/purpose#transitionTimestamp</p>
+  <div class="comment">
+   <span class="markdown">Timestamp when the purpose transition occurred.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/purpose">http://w3id.org/trajecto/purpose</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PurposeTransition" title="http://w3id.org/trajecto/purpose#PurposeTransition">Purpose Transition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

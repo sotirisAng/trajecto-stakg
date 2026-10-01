@@ -1,0 +1,63 @@
+# SR-34: Purpose alignment recommendations
+# POIs whose category aligns with the input trajectory's purpose.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?trajPurpose
+WHERE {
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputUser trajecto:formsTrajectory ?inputTraj .
+    ?inputTraj trajecto:hasPurpose ?trajPurpose .
+
+    # Purpose-to-category mapping (inline)
+    # Uses purpose/skos# namespace as stored in the KG
+    VALUES (?trajPurpose ?alignedCat) {
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:Museum)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:Gallery)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:ArtworkPOI)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:HistoricalLandmark)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:HistoricalSite)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:Monument)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:CulturalPOI)
+        (<http://w3id.org/trajecto/purpose/skos#CulturalPurpose>      poi:ReligiousPOI)
+        (<http://w3id.org/trajecto/purpose/skos#CommercialPurpose>    poi:RetailStore)
+        (<http://w3id.org/trajecto/purpose/skos#CommercialPurpose>    poi:ShoppingMall)
+        (<http://w3id.org/trajecto/purpose/skos#CommercialPurpose>    poi:MarketArea)
+        (<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose>  poi:Park)
+        (<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose>  poi:Beach)
+        (<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose>  poi:LeisureFacility)
+        (<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose>  poi:SportsFacility)
+        (<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose>  poi:NaturalLandmark)
+        (<http://w3id.org/trajecto/purpose/skos#EducationalPurpose>   poi:Library)
+        (<http://w3id.org/trajecto/purpose/skos#EducationalPurpose>   poi:University)
+        (<http://w3id.org/trajecto/purpose/skos#EducationalPurpose>   poi:EducationalPOI)
+        (<http://w3id.org/trajecto/purpose/skos#EducationalPurpose>   poi:Museum)
+        (<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> poi:Hotel)
+        (<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> poi:AccommodationPOI)
+        (<http://w3id.org/trajecto/purpose/skos#CafeVisit>            poi:Cafe)
+        (<http://w3id.org/trajecto/purpose/skos#CafeVisit>            poi:Bar)
+        (<http://w3id.org/trajecto/purpose/skos#CafeVisit>            poi:FoodCourt)
+        (<http://w3id.org/trajecto/purpose/skos#NightlifeActivity>    poi:NightlifeFacility)
+        (<http://w3id.org/trajecto/purpose/skos#NightlifeActivity>    poi:Bar)
+        (<http://w3id.org/trajecto/purpose/skos#NightlifeActivity>    poi:Cafe)
+        (<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose>    poi:HealthcareFacility)
+        (<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose>    poi:MedicalFacility)
+    }
+
+    ?poi a ?alignedCat .
+    BIND(?alignedCat AS ?poiCat)
+
+    # Exclude already-visited
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?inputUser trajecto:formsTrajectory ?visitTraj .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-34:purpose-alignment" AS ?rule)
+}

@@ -1,0 +1,25 @@
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX purpose: <http://w3id.org/trajecto/purpose#>
+PREFIX spatial: <http://w3id.org/trajecto/spatial#>
+PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+INSERT {
+  ?trajectory trajecto:hasPurpose purpose:TransportationPurpose.
+}
+WHERE {
+    # Trajectory has at least one interaction
+    ?position dul:isPartOf ?trajectory ;
+              trajecto:hasInteraction ?interaction .
+
+    # But no meaningful interactions exist for this trajectory
+    FILTER NOT EXISTS {
+        ?meaningfulPosition dul:isPartOf ?trajectory ;
+                           trajecto:hasInteraction ?meaningfulInteraction .
+        ?meaningfulInteraction a poi:MeaningfulInteraction .
+    }
+}

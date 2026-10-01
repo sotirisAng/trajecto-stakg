@@ -1,0 +1,2618 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl", "http://w3id.org/trajecto", "http://www.datacron-project.eu/datAcron", "http://www.w3.org/2000/01/rdf-schema", "http://w3id.org/trajecto/patterns", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Trajecto Movement Patterns Module"
+    },
+    "iri" : "http://w3id.org/trajecto/patterns",
+    "version" : "1.1.0",
+    "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
+    "description" : {
+      "en" : "This module extends the trajecto ontology with concepts for analyzing movement patterns and behavior independent of purpose."
+    },
+    "labels" : {
+      "en" : "trajecto-patterns"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns/1.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sotirios Angelis",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Konstantinos Kotis",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-05-09",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "patterns",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Movement Patterns Module",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/patterns#CoherentGroupMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CoherentGroupMovement",
+      "en" : "Coherent Group Movement"
+    },
+    "comment" : {
+      "en" : "Group moving together with high cohesion."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SlowPaced",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SlowPaced",
+      "en" : "Slow Paced"
+    },
+    "comment" : {
+      "en" : "Consistently slow, leisurely movement throughout a trajectory."
+    },
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ImmersiveMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ImmersiveMovement",
+      "en" : "Immersive Movement"
+    },
+    "comment" : {
+      "en" : "Movement dominated by prolonged, immersive engagement with points of interest."
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#CircularReturn",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CircularReturn",
+      "en" : "Circular Return"
+    },
+    "comment" : {
+      "en" : "Circular movement pattern returning to the starting point."
+    },
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ExplorationSegment",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExplorationSegment",
+      "en" : "Exploration Segment"
+    },
+    "comment" : {
+      "en" : "Segment characterized by exploratory behavior."
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SingleDestination",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SingleDestination",
+      "en" : "Single Destination"
+    },
+    "comment" : {
+      "en" : "Movement focused on reaching a single destination."
+    },
+    "id" : "33",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#IndependentGroupMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IndependentGroupMovement",
+      "en" : "Independent Group Movement"
+    },
+    "comment" : {
+      "en" : "Group members moving independently within a larger area."
+    },
+    "id" : "34",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#GroupMovementPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GroupMovementPattern",
+      "en" : "Group Movement Pattern"
+    },
+    "subClasses" : [ "34", "0", "36", "37" ],
+    "comment" : {
+      "en" : "Pattern in the movement of groups of individuals."
+    },
+    "id" : "1",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#RandomWalk",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RandomWalk",
+      "en" : "Random Walk"
+    },
+    "comment" : {
+      "en" : "Random, unpredictable movement pattern."
+    },
+    "id" : "18",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ReorientationPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ReorientationPoint",
+      "en" : "Reorientation Point"
+    },
+    "comment" : {
+      "en" : "A decision point where a change in direction or plan occurs."
+    },
+    "id" : "38",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#PingPongVisit",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PingPongVisit",
+      "en" : "Ping Pong Visit"
+    },
+    "comment" : {
+      "en" : "Moving back and forth between a small number of points repeatedly."
+    },
+    "id" : "39",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#VisitPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VisitPattern",
+      "en" : "Visit Pattern"
+    },
+    "subClasses" : [ "39", "42", "43" ],
+    "comment" : {
+      "en" : "Pattern in how points of interest are visited."
+    },
+    "id" : "40",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#BriefDwell",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BriefDwell",
+      "en" : "Brief Dwell"
+    },
+    "comment" : {
+      "en" : "Short stays at many points of interest."
+    },
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ChoicePoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ChoicePoint",
+      "en" : "Choice Point"
+    },
+    "subClasses" : [ "52" ],
+    "comment" : {
+      "en" : "A decision point with multiple clear options available."
+    },
+    "id" : "51",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ClusteredVisit",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ClusteredVisit",
+      "en" : "Clustered Visit"
+    },
+    "comment" : {
+      "en" : "Visiting clusters of points of interest together."
+    },
+    "id" : "42",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#BacktrackingMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BacktrackingMovement",
+      "en" : "Backtracking Movement"
+    },
+    "comment" : {
+      "en" : "Movement that involves returning along previously traveled paths."
+    },
+    "id" : "55",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#FastPaced",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FastPaced",
+      "en" : "Fast Paced"
+    },
+    "comment" : {
+      "en" : "Consistently fast movement throughout a trajectory."
+    },
+    "id" : "58",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#PacePattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PacePattern",
+      "en" : "Pace Pattern"
+    },
+    "subClasses" : [ "3", "5", "58", "74" ],
+    "comment" : {
+      "en" : "Pattern in the pace or rhythm of movement."
+    },
+    "id" : "4",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DwellPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DwellPattern",
+      "en" : "Dwell Pattern"
+    },
+    "subClasses" : [ "44", "75", "76" ],
+    "comment" : {
+      "en" : "Pattern in how long a visitor stays at points of interest."
+    },
+    "id" : "45",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Path",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Path",
+      "en" : "Path"
+    },
+    "comment" : {
+      "en" : "A potential path that could be taken from a decision point."
+    },
+    "id" : "78",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SpatioTemporalPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatioTemporalPattern",
+      "en" : "Spatio Temporal Pattern"
+    },
+    "subClasses" : [ "82", "83", "84", "85", "86" ],
+    "comment" : {
+      "en" : "Pattern in the spatial and temporal aspects of movement."
+    },
+    "id" : "81",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#VelocityPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VelocityPattern",
+      "en" : "Velocity Pattern"
+    },
+    "subClasses" : [ "88", "89", "90" ],
+    "comment" : {
+      "en" : "Pattern in the velocity of movement."
+    },
+    "id" : "87",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DispersedSpatialPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DispersedSpatialPattern",
+      "en" : "Dispersed Spatial Pattern"
+    },
+    "comment" : {
+      "en" : "Pattern where movement is dispersed over a large area."
+    },
+    "id" : "84",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#Trajectory",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trajectory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#MultiDestination",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MultiDestination",
+      "en" : "Multi Destination"
+    },
+    "comment" : {
+      "en" : "Movement visiting multiple destinations."
+    },
+    "id" : "100",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#HesitationSegment",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HesitationSegment",
+      "en" : "Hesitation Segment"
+    },
+    "comment" : {
+      "en" : "Segment characterized by hesitation or indecision."
+    },
+    "id" : "27",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#BehavioralPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BehavioralPattern",
+      "en" : "Behavioral Pattern"
+    },
+    "subClasses" : [ "40", "4", "45" ],
+    "comment" : {
+      "en" : "Pattern in the behavioral characteristics of movement."
+    },
+    "id" : "41",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#FocusPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FocusPattern",
+      "en" : "Focus Pattern"
+    },
+    "subClasses" : [ "33", "100", "107", "55", "108", "109", "6" ],
+    "comment" : {
+      "en" : "Pattern in the focus or intention of movement."
+    },
+    "id" : "7",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#CyclicalPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CyclicalPattern",
+      "en" : "Cyclical Pattern"
+    },
+    "comment" : {
+      "en" : "Pattern with regular repetition over time."
+    },
+    "id" : "86",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#MapCheckingPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MapCheckingPoint",
+      "en" : "Map Checking Point"
+    },
+    "comment" : {
+      "en" : "A point where a map or navigation aid is consulted."
+    },
+    "id" : "67",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#Segment",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Segment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DenseTimePattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DenseTimePattern",
+      "en" : "Dense Time Pattern"
+    },
+    "comment" : {
+      "en" : "Pattern where much activity occurs in a short time span."
+    },
+    "id" : "82",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#MovementPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A distinct, identifiable pattern in how a person or group moves through space over time.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MovementPattern",
+      "en" : "Movement Pattern"
+    },
+    "subClasses" : [ "81", "87", "1", "41", "7", "9" ],
+    "comment" : {
+      "en" : "A recognizable pattern in movement behavior."
+    },
+    "id" : "35",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#AvoidanceSegment",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AvoidanceSegment",
+      "en" : "Avoidance Segment"
+    },
+    "comment" : {
+      "en" : "Segment characterized by movement to avoid an area or obstacle."
+    },
+    "id" : "30",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#RhythmicPace",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RhythmicPace",
+      "en" : "Rhythmic Pace"
+    },
+    "comment" : {
+      "en" : "Regular alternation between faster and slower movement."
+    },
+    "id" : "74",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto#Stop",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Stop"
+    },
+    "subClasses" : [ "13" ],
+    "attributes" : [ "external" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SplitAndMergeMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SplitAndMergeMovement",
+      "en" : "Split and Merge Movement"
+    },
+    "comment" : {
+      "en" : "Group repeatedly splitting apart and reconvening."
+    },
+    "id" : "36",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#CasualMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CasualMovement",
+      "en" : "Casual Movement"
+    },
+    "comment" : {
+      "en" : "Relaxed, low-speed movement without focused engagement."
+    },
+    "id" : "108",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Consistent",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Consistent",
+      "en" : "Consistent"
+    },
+    "comment" : {
+      "en" : "Consistent, steady velocity throughout movement."
+    },
+    "id" : "89",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#StopAndWait",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StopAndWait",
+      "en" : "Stop and Wait"
+    },
+    "comment" : {
+      "en" : "Decision to stop movement temporarily."
+    },
+    "id" : "47",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ChangeDirection",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ChangeDirection",
+      "en" : "Change Direction"
+    },
+    "comment" : {
+      "en" : "Decision to change direction."
+    },
+    "id" : "60",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#TargetedSegment",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TargetedSegment",
+      "en" : "Targeted Segment"
+    },
+    "comment" : {
+      "en" : "Segment characterized by direct, purposeful movement toward a destination."
+    },
+    "id" : "20",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Junction",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Junction",
+      "en" : "Junction"
+    },
+    "comment" : {
+      "en" : "A physical junction where multiple paths meet."
+    },
+    "id" : "52",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#InformationSeekingPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InformationSeekingPoint",
+      "en" : "Information Seeking Point"
+    },
+    "subClasses" : [ "63", "67" ],
+    "comment" : {
+      "en" : "A decision point where information is sought to inform movement."
+    },
+    "id" : "64",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#FocusedDwell",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FocusedDwell",
+      "en" : "Focused Dwell"
+    },
+    "comment" : {
+      "en" : "Long stays at a few key points of interest."
+    },
+    "id" : "76",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ExternalInterruptionPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExternalInterruptionPoint",
+      "en" : "External Interruption Point"
+    },
+    "comment" : {
+      "en" : "A decision point caused by external interruption (call, message, encounter)."
+    },
+    "id" : "98",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DecisionOutcome",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DecisionOutcome",
+      "en" : "Decision Outcome"
+    },
+    "subClasses" : [ "60", "50", "47", "54" ],
+    "comment" : {
+      "en" : "The outcome of a decision at a decision point."
+    },
+    "id" : "48",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#TrajectorySegmentType",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TrajectorySegmentType",
+      "en" : "Trajectory Segment Type"
+    },
+    "subClasses" : [ "10", "27", "32", "30", "22", "20" ],
+    "comment" : {
+      "en" : "Classification of trajectory segments by behavioral characteristics."
+    },
+    "id" : "11",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DirectionalPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DirectionalPattern",
+      "en" : "Directional Pattern"
+    },
+    "subClasses" : [ "8", "24", "18", "16" ],
+    "comment" : {
+      "en" : "Pattern in the directionality of movement."
+    },
+    "id" : "9",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ExploratoryMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExploratoryMovement",
+      "en" : "Exploratory Movement"
+    },
+    "comment" : {
+      "en" : "Movement focused on exploration without specific destinations."
+    },
+    "id" : "107",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "123",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "106",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DenseSpatialPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DenseSpatialPattern",
+      "en" : "Dense Spatial Pattern"
+    },
+    "comment" : {
+      "en" : "Pattern where movement is concentrated in a small area."
+    },
+    "id" : "83",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#LeaderFollowerMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LeaderFollowerMovement",
+      "en" : "Leader Follower Movement"
+    },
+    "comment" : {
+      "en" : "Group following a leader who determines the movement path."
+    },
+    "id" : "37",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Zigzag",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Zigzag",
+      "en" : "Zigzag"
+    },
+    "comment" : {
+      "en" : "Zigzagging movement pattern with regular direction changes."
+    },
+    "id" : "24",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#DecisionPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A specific location in a trajectory where a movement decision is made, often characterized by a change in direction, speed, or behavior.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DecisionPoint",
+      "en" : "Decision Point"
+    },
+    "subClasses" : [ "98", "51", "64", "38" ],
+    "comment" : {
+      "en" : "A point in a trajectory where a decision is made about movement."
+    },
+    "id" : "13",
+    "superClasses" : [ "121" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#ContinueForward",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ContinueForward",
+      "en" : "Continue Forward"
+    },
+    "comment" : {
+      "en" : "Decision to continue in the current direction."
+    },
+    "id" : "50",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SignageCheckPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SignageCheckPoint",
+      "en" : "Signage Check Point"
+    },
+    "comment" : {
+      "en" : "A point where signage is read or consulted."
+    },
+    "id" : "63",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "141",
+    "label" : {
+      "IRI-based" : "positiveInteger"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#IrregularPace",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IrregularPace",
+      "en" : "Irregular Pace"
+    },
+    "comment" : {
+      "en" : "Unpredictable changes in pace throughout a trajectory."
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#LingeringSegment",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LingeringSegment",
+      "en" : "Lingering Segment"
+    },
+    "comment" : {
+      "en" : "Segment characterized by prolonged stay in one area."
+    },
+    "id" : "32",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SequentialVisit",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SequentialVisit",
+      "en" : "Sequential Visit"
+    },
+    "comment" : {
+      "en" : "Visiting points of interest in a sequential order."
+    },
+    "id" : "43",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Linear",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Linear",
+      "en" : "Linear"
+    },
+    "comment" : {
+      "en" : "Linear, direct movement pattern."
+    },
+    "id" : "16",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SteadyMovement",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SteadyMovement",
+      "en" : "Steady Movement"
+    },
+    "comment" : {
+      "en" : "Movement with a moderate number of interactions and moderate dwell, between targeted and exploratory (BIRD instantiation)."
+    },
+    "id" : "109",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#AcceleratingDecelerating",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AcceleratingDecelerating",
+      "en" : "Accelerating Decelerating"
+    },
+    "comment" : {
+      "en" : "Regular patterns of acceleration and deceleration."
+    },
+    "id" : "88",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#TransitionSegment",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransitionSegment",
+      "en" : "Transition Segment"
+    },
+    "comment" : {
+      "en" : "Segment characterized by movement between different spaces or zones."
+    },
+    "id" : "22",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Fluctuating",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Fluctuating",
+      "en" : "Fluctuating"
+    },
+    "comment" : {
+      "en" : "Fluctuating velocity with irregular changes."
+    },
+    "id" : "90",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Abstract"
+    },
+    "subClasses" : [ "78", "35", "48", "11" ],
+    "attributes" : [ "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#SpreadTimePattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpreadTimePattern",
+      "en" : "Spread Time Pattern"
+    },
+    "comment" : {
+      "en" : "Pattern where activity is spread out over a longer time span."
+    },
+    "id" : "85",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#Backtrack",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Backtrack",
+      "en" : "Backtrack"
+    },
+    "comment" : {
+      "en" : "Decision to return along the previous path."
+    },
+    "id" : "54",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#VariableDwell",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VariableDwell",
+      "en" : "Variable Dwell"
+    },
+    "comment" : {
+      "en" : "Highly variable dwell times across different points of interest."
+    },
+    "id" : "75",
+    "superClasses" : [ "45" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasDecisionTime",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDecisionTime",
+      "en" : "has decision time"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Duration of time spent making a decision at a decision point."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "range" : "9",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "9",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "11",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "11",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "9",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "11",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "11",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "11",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "48",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "48",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "40",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "40",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "48",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "51",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "64",
+    "domain" : "63",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "40",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "64",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "41",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasDirectionalStraightness",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "71",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDirectionalStraightness",
+      "en" : "has directional straightness"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "A numerical value (0.0-1.0) indicating how straight a trajectory is."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "range" : "7",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "41",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasAlternativePath",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "78",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAlternativePath",
+      "en" : "has alternative path"
+    },
+    "domain" : "13",
+    "subproperty" : [ "79" ],
+    "comment" : {
+      "en" : "Links a decision point to alternative paths not taken."
+    },
+    "attributes" : [ "object" ],
+    "id" : "77"
+  }, {
+    "range" : "13",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "13",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "41",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "13",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "87",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "87",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "13",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "range" : "87",
+    "domain" : "90",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "81",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasDirectionality",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDirectionality",
+      "en" : "has directionality"
+    },
+    "superproperty" : [ "103" ],
+    "domain" : "70",
+    "comment" : {
+      "en" : "Associates a trajectory with its directional pattern."
+    },
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "range" : "81",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "associatedWith"
+    },
+    "domain" : "106",
+    "subproperty" : [ "103" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasDecisionPoint",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDecisionPoint",
+      "en" : "has decision point"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Links a trajectory to decision points within it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "111"
+  }, {
+    "range" : "81",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "range" : "45",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
+    "range" : "45",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "114"
+  }, {
+    "range" : "81",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "115"
+  }, {
+    "range" : "81",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "4",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "4",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasVelocityVariance",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "123",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasVelocityVariance",
+      "en" : "has velocity variance"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "A numerical value indicating the variance in velocity during a trajectory."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasSegmentType",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSegmentType",
+      "en" : "has segment type"
+    },
+    "domain" : "110",
+    "comment" : {
+      "en" : "Classifies a trajectory segment by its behavioral type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "124"
+  }, {
+    "range" : "80",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "range" : "80",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "126"
+  }, {
+    "range" : "35",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "127"
+  }, {
+    "range" : "80",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
+  }, {
+    "range" : "80",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "35",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "35",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "35",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "35",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "7",
+    "domain" : "109",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "35",
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "7",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "7",
+    "domain" : "100",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "7",
+    "domain" : "108",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasDirectionalChanges",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "141",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDirectionalChanges",
+      "en" : "has directional changes"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Number of significant direction changes in a trajectory."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "140"
+  }, {
+    "range" : "7",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#exhibitsPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "exhibitsPattern",
+      "en" : "exhibits pattern"
+    },
+    "superproperty" : [ "105" ],
+    "domain" : "70",
+    "subproperty" : [ "102", "143", "144" ],
+    "comment" : {
+      "en" : "Associates a trajectory with movement patterns it exhibits."
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasFocusPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFocusPattern",
+      "en" : "has focus pattern"
+    },
+    "superproperty" : [ "103" ],
+    "domain" : "70",
+    "comment" : {
+      "en" : "Associates a trajectory with its focus pattern."
+    },
+    "attributes" : [ "object" ],
+    "id" : "144"
+  }, {
+    "range" : "121",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "1",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "1",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasVelocityPattern",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasVelocityPattern",
+      "en" : "has velocity pattern"
+    },
+    "superproperty" : [ "103" ],
+    "domain" : "70",
+    "comment" : {
+      "en" : "Associates a trajectory with its velocity pattern."
+    },
+    "attributes" : [ "object" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasChosenPath",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "78",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChosenPath",
+      "en" : "has chosen path"
+    },
+    "superproperty" : [ "77" ],
+    "domain" : "13",
+    "comment" : {
+      "en" : "Links a decision point to the path actually taken."
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://w3id.org/trajecto/patterns#hasDecisionOutcome",
+    "baseIri" : "http://w3id.org/trajecto/patterns",
+    "range" : "48",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/patterns",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDecisionOutcome",
+      "en" : "has decision outcome"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Links a decision point to its outcome."
+    },
+    "attributes" : [ "object" ],
+    "id" : "150"
+  } ]
+}

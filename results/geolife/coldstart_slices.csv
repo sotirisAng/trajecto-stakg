@@ -1,0 +1,8 @@
+method,0_unrecoverable,1-2_tail,3+_head,0-1,2+
+centrality (1.7c),0.0,0.0,0.228,0.1,0.188
+cold_blend (1.7d),0.0,0.0,0.255,0.1,0.21
+markov2,0.0,0.194,0.405,0.3,0.367
+popularity,0.0,0.0,0.177,0.0,0.149
+rrf_uni+markov2+prox,0.0,0.214,0.481,0.3,0.435
+tagpop (1.7b),0.0,0.0,0.233,0.05,0.194
+unified_route_heavy,0.0,0.173,0.388,0.15,0.355

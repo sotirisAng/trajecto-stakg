@@ -1,0 +1,73 @@
+Fuseki query endpoint: http://localhost:3030/osm-rome/sparql
+Fuseki update endpoint: http://localhost:3030/osm-rome/update
+============================================================
+OWL 2 RL Profile Classification (reasonable)
+============================================================
+
+[1] Loading ontology modules...
+  OK: trajecto-poi-module.owl
+  OK: trajecto-context-module.owl
+  OK: trajecto-patterns-module.owl
+  OK: trajecto-purpose-module.owl
+  OK: trajecto-spaces-module.owl
+  OK: trajecto_spatial_module.owl
+  OK: trajecto-user-module.rdf.owl
+  OK: trajecto-events-module.owl
+  OK: trajecto-profiles-module.owl
+  Property shim loaded
+  TBox: 4842 triples (0.1s)
+
+[2] Fetching trajectory-level triples from Fuseki...
+  ABox: 2144 triples, 543 trajectories (0.1s)
+
+[3] Running OWL 2 RL reasoner...
+  Inferred 17279 triples in 0.2s
+
+[4] Extracting profile classifications...
+  Classified trajectories: 537/543
+  Total classifications: 973
+  Unique profile classes: 12
+
+[5] Writing 973 triples to <http://w3id.org/trajecto/inferred>...
+  Inserted batch 1 (500 triples)
+  Inserted batch 2 (473 triples)
+  Done (0.4s)
+
+[6] Computing cardinality classes (SPARQL fallback)...
+  0 classifications across 0 classes (0.1s)
+
+============================================================
+Classification complete: 12 classes, 973 type assertions
+WARNING: Could not find graph_name assignment in notebooks/helpers/fuseki_config.py
+
+Trajecto Pipeline Runner
+============================================================
+KG dataset: osm-rome
+Output directory: notebooks/output/pipeline-osm-rome
+
+Notebooks to run:
+  [13] 13-owl-classification.ipynb
+       OWL 2 RL classification and ontological similarity
+       prereq: ../scripts/run_owl_classification.py
+
+Starting pipeline at 2026-09-30 16:27:17
+
+============================================================
+Running script: run_owl_classification.py
+============================================================
+Completed in 1.0s
+
+============================================================
+Running: 13-owl-classification.ipynb
+Output:  13-owl-classification_executed.ipynb
+============================================================
+Executing:   0%|          | 0/17 [00:00<?, ?cell/s]Executing:   6%|▌         | 1/17 [00:00<00:14,  1.12cell/s]Executing:  12%|█▏        | 2/17 [00:01<00:10,  1.49cell/s]Executing:  29%|██▉       | 5/17 [00:01<00:02,  4.59cell/s]Executing:  41%|████      | 7/17 [00:01<00:01,  6.55cell/s]Executing:  76%|███████▋  | 13/17 [00:02<00:00, 10.35cell/s]Executing: 100%|██████████| 17/17 [00:02<00:00, 12.97cell/s]Executing: 100%|██████████| 17/17 [00:02<00:00,  7.03cell/s]
+Completed in 2.5s
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+Succeeded: 1
+  [13] 13-owl-classification.ipynb
+
+All 1 notebooks completed successfully!

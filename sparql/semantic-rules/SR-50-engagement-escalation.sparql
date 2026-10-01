@@ -1,0 +1,34 @@
+# SR-50: Materialize EngagementEscalation events
+# Detects consecutive positions where interaction type transitions
+# from PassingInteraction to MeaningfulInteraction or ImmersiveInteraction.
+# Uses hasNextPosition for adjacency.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX events:   <http://w3id.org/trajecto/events#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?traj trajecto:hasEvent _:evt .
+    _:evt a events:EngagementEscalation .
+    _:evt events:atPosition ?pos2 .
+    _:evt events:fromInteractionType ?type1 .
+    _:evt events:toInteractionType ?type2 .
+    _:evt events:eventSequenceIndex ?idx2 .
+}
+WHERE {
+    ?pos1 dul:isPartOf ?traj .
+    ?pos1 trajecto:hasInteraction ?int1 .
+    ?int1 a ?type1 .
+    FILTER(?type1 = poi:PassingInteraction)
+
+    ?pos1 trajecto:hasNextPosition ?pos2 .
+
+    ?pos2 dul:isPartOf ?traj .
+    ?pos2 trajecto:hasInteraction ?int2 .
+    ?int2 a ?type2 .
+    FILTER(?type2 IN (poi:MeaningfulInteraction, poi:ImmersiveInteraction))
+
+    OPTIONAL { ?pos2 trajecto:hasPositionIndex ?idx2 }
+}

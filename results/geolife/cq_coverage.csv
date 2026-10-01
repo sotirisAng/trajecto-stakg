@@ -1,0 +1,16 @@
+cq,source,capability,question,answers,sample
+CQ1,CQs.md,recognition of stops,How many stop positions does each trajectory contain?,1160,traj=trajectory_1787821867270; stops=4629
+CQ2,CQs.md,recognition of semantic overlap between trajectories,"Which POIs are co-visited, and by how many trajectories?",1994,a=pointOfInterest_1271376766; b=pointOfInterest_1016191048
+CQ3,CQs.md,trajectory segmentation,How many trajectories did each moving entity produce?,96,person=3; n=105
+CQ4,CQs.md,recognition of POIs by dwell time and proximity,"Which POI interactions were recognised, with what dwell time and distance?",16593,poi=pointOfInterest_8948382439; dwell=30065.0; dist=90.8
+CQ5,CQs.md,prediction of next positions,"Given a POI, which POIs are recorded as following it?",7,from=pointOfInterest_1016137277; to=pointOfInterest_9740745704
+CQ6,CQs.md,trajectory classification by shared characteristics,"Which purpose classes are assigned, and to how many trajectories each?",8,purpose=CommercialPurpose; n=571
+CQ7,CQs.md,trajectory clustering by extracted patterns,"Which movement patterns are exhibited, and by how many trajectories?",3,pattern=TargetedSegment; n=427
+CQ8,CQs.md,recognition of visitor engagement,"What engagement level is inferred per trajectory, and how are levels distributed?",3,level=LowEngagement; n=680
+CQ9,CQs.md,interest recognition based on POI visit/selection,"What are a user's inferred category preferences, with score and confidence?",57,category=BusStation; records=953; meanScore=0.535706900314795383001049
+CQ10,CQs.md,prediction of trajectory timespan from its class,What is the mean dwell time of trajectories grouped by purpose?,8,purpose=RecreationalPurpose; meanDwell=6074.998214781608283413337; n=52
+CQ11,CQs.md,recommend POIs from similar trajectories,Which POIs are co-visited with a POI the trajectory already contains?,778,traj=trajectory_1787823151461; candidates=133
+CQ12,CQs.md,context-based recommendation from visitor interests,Which POI categories does a user prefer that they have not yet visited?,1936,person=0; category=Artwork; score=1.0
+CQ13,CQs.md,temporal context of movement,Under which temporal contexts do trajectories occur?,18,ctx=Weekday; n=853
+CQ14,pipeline,ontology-parameterised interaction semantics,What dwell thresholds does the ontology define for each POI type?,91,type=RecreationalPOI-configurat; typical=PT60M; minMeaningful=PT10M; maxReasonable=PT480M
+CQ15,pipeline,KG-native structural analytics,"Which POIs are structurally central, by materialised PageRank?",1443,poi=pointOfInterest_1016137277; pr=0.019797

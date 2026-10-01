@@ -1,0 +1,74 @@
+# SR-20: Infer user preferences per POI category
+# Score = 0.4 * immersive_frac + 0.3 * meaningful_frac + 0.2 * dwell_norm + 0.1 * visit_norm
+# Computed per user per category across all their trajectories.
+# ImmersiveInteraction is a subclass of MeaningfulInteraction in the ontology.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?userUri user:hasInferredPreference [
+        user:forCategory ?cat ;
+        user:preferenceScore ?score ;
+        user:immersiveFraction ?immFrac ;
+        user:meaningfulFraction ?meanFrac ;
+        user:totalVisits ?totalVisits
+    ] .
+}
+WHERE {
+    {
+        SELECT ?userUri ?cat
+            (xsd:float(COUNT(DISTINCT ?immInt)) / xsd:float(IF(COUNT(DISTINCT ?anyInt) < 1, 1, COUNT(DISTINCT ?anyInt))) AS ?immFrac)
+            (xsd:float(COUNT(DISTINCT ?meanInt)) / xsd:float(IF(COUNT(DISTINCT ?anyInt) < 1, 1, COUNT(DISTINCT ?anyInt))) AS ?meanFrac)
+            (COUNT(DISTINCT ?anyInt) AS ?totalVisits)
+        WHERE {
+            ?userUri trajecto:formsTrajectory ?traj.
+            ?pos dul:isPartOf ?traj .
+            ?pos trajecto:hasInteraction ?anyInt .
+            ?anyInt poi:interactsWith ?poi .
+            ?poi a ?cat .
+            FILTER(?cat != trajecto:PointOfInterest)
+            FILTER(?cat != poi:SignificantPOI)
+
+            OPTIONAL {
+                ?pos trajecto:hasInteraction ?immInt .
+                ?immInt a poi:ImmersiveInteraction .
+                ?immInt poi:interactsWith ?poi .
+            }
+            OPTIONAL {
+                ?pos trajecto:hasInteraction ?meanInt .
+                ?meanInt a poi:MeaningfulInteraction .
+                ?meanInt poi:interactsWith ?poi .
+            }
+        }
+        GROUP BY ?userUri ?cat
+    }
+
+    # Normalize dwell and visit counts across categories for this user
+    {
+        SELECT ?userUri (MAX(?totalVisits2) AS ?maxVisits)
+        WHERE {
+            {
+                SELECT ?userUri ?cat2 (COUNT(DISTINCT ?anyInt2) AS ?totalVisits2)
+                WHERE {
+                    ?userUri trajecto:formsTrajectory ?traj2.
+                    ?pos2 dul:isPartOf ?traj2 .
+                    ?pos2 trajecto:hasInteraction ?anyInt2 .
+                    ?anyInt2 poi:interactsWith ?poi2 .
+                    ?poi2 a ?cat2 .
+                    FILTER(?cat2 != trajecto:PointOfInterest)
+                    FILTER(?cat2 != poi:SignificantPOI)
+                }
+                GROUP BY ?userUri ?cat2
+            }
+        }
+        GROUP BY ?userUri
+    }
+
+    BIND(IF(?maxVisits > 0, xsd:float(?totalVisits) / xsd:float(?maxVisits), 0.0) AS ?visitNorm)
+    # Dwell normalization approximated by meaningful fraction (dwell correlates with interaction quality)
+    BIND(0.4 * ?immFrac + 0.3 * ?meanFrac + 0.2 * ?meanFrac + 0.1 * ?visitNorm AS ?score)
+}

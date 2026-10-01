@@ -1,0 +1,23 @@
+# SR-12: Navigation style match between trajectory pairs
+# 1.0 if shared navigation pattern exists, 0.0 otherwise.
+# Blocking key: trajecto:hasPurpose.
+# NOTE: Batch mode only.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX patterns: <http://w3id.org/trajecto/patterns#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?trajA trajecto:hasNavigationMatch [
+        trajecto:withTrajectory ?trajB ;
+        trajecto:similarityScore 1.0
+    ] .
+}
+WHERE {
+    ?trajA patterns:exhibitsPattern ?pattern .
+    ?trajB patterns:exhibitsPattern ?pattern .
+    FILTER(STR(?trajA) < STR(?trajB))
+    # Blocking: require shared purpose
+    ?trajA trajecto:hasPurpose ?purpose .
+    ?trajB trajecto:hasPurpose ?purpose .
+}

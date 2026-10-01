@@ -1,0 +1,1407 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/trajecto/purpose/skos#"
+     xml:base="http://w3id.org/trajecto/purpose/skos"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/trajecto/purpose/skos">
+        <owl:versionIRI rdf:resource="http://w3id.org/trajecto/purpose/skos/1.1.0"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-09</terms:created>
+        <terms:creator>Konstantinos Kotis</terms:creator>
+        <terms:creator>Sotirios Angelis</terms:creator>
+        <terms:description xml:lang="en">SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
+        <terms:publisher>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</terms:publisher>
+        <terms:title xml:lang="en">Trajecto Purpose Concept Scheme</terms:title>
+        <vann:preferredNamespacePrefix>purposeskos</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/trajecto/purpose/skos#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">trajecto-purpose-skos</rdfs:label>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#AccommodationPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#AccommodationPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to staying at temporary lodging.</skos:definition>
+        <skos:example xml:lang="en">Hotel stays, hostel accommodation, vacation rentals</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#HostelStay"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#HotelStay"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#TemporaryLodging"/>
+        <skos:prefLabel xml:lang="en">Accommodation Purpose</skos:prefLabel>
+        <skos:related rdf:resource="https://schema.org/LodgingReservation"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#AirportTransit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#AirportTransit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#Transit"/>
+        <skos:definition xml:lang="en">Purpose related to using airport facilities for travel.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Airport Transit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ArtisticExperience -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ArtisticExperience">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to experiencing artistic works or performances.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#ArtisticExperience"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Artistic Experience</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Banking -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Banking">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ServiceAccess"/>
+        <skos:definition xml:lang="en">Purpose related to banking and financial transactions.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Banking</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#BeachVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#BeachVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#LeisureActivity"/>
+        <skos:definition xml:lang="en">Purpose related to visiting beaches for leisure.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Beach Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#BusStationTransit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#BusStationTransit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#Transit"/>
+        <skos:definition xml:lang="en">Purpose related to using bus station facilities for travel.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Bus Station Transit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#BusinessMeeting -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#BusinessMeeting">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to professional business meetings.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#BusinessMeeting"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Business Meeting</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#CafeVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#CafeVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#DiningExperience"/>
+        <skos:definition xml:lang="en">Purpose related to visiting a cafe for refreshments or socializing.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Cafe Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#CommercialPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#CommercialPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to commercial activities such as shopping or services.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#CommercialPurpose"/>
+        <skos:example xml:lang="en">Shopping, dining out, visiting a bank</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#DiningExperience"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#ServiceAccess"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Shopping"/>
+        <skos:prefLabel xml:lang="en">Commercial Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Commuting -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Commuting">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to regular travel between home and work/education.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#Commuting"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Commuting</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending cultural events, festivals, or performances.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#CulturalEventAttendance"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Cultural Event Attendance</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#CulturalPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#CulturalPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to cultural activities and experiences.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#CulturalPurpose"/>
+        <skos:example xml:lang="en">Museum visits, attending performances, exploring heritage sites</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#ArtisticExperience"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalTour"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#GalleryVisit"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#HeritageExploration"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#MuseumVisit"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#TheaterVisit"/>
+        <skos:prefLabel xml:lang="en">Cultural Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#DiningExperience -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#DiningExperience">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CommercialPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to dining at restaurants or food establishments.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#DiningExperience"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Dining Experience</skos:prefLabel>
+        <skos:related rdf:resource="https://schema.org/EatAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#DomesticActivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#DomesticActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to household or domestic activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#DomesticActivity"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Domestic Activity</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#EducationalPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#EducationalPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to learning and educational activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#EducationalPurpose"/>
+        <skos:example xml:lang="en">School attendance, workshops, field studies, research activities</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalTour"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#FieldStudy"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#FormalLearning"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#LibraryVisit"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Research"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkshopAttendance"/>
+        <skos:prefLabel xml:lang="en">Educational Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#EducationalTour -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#EducationalTour">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose that combines cultural experience with educational objectives.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#EducationalTour"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Educational Tour</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#EmergencyCare -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#EmergencyCare">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"/>
+        <skos:definition xml:lang="en">Purpose related to seeking urgent or emergency medical attention.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Emergency Care</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending entertainment events (cinema, sports, etc.).</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#EntertainmentAttendance"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Entertainment Attendance</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ExerciseActivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ExerciseActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to physical exercise or sports activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#ExerciseActivity"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Exercise Activity</skos:prefLabel>
+        <skos:related rdf:resource="https://schema.org/ExerciseAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#FastFoodVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#FastFoodVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#DiningExperience"/>
+        <skos:definition xml:lang="en">Purpose related to quick dining at fast food establishments.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Fast Food Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#FieldStudy -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#FieldStudy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to educational field studies or site visits.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#FieldStudy"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Field Study</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#FieldWork -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#FieldWork">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to professional work conducted in the field.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#FieldWork"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Field Work</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#FormalLearning -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#FormalLearning">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to formal educational activities (classes, lectures).</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#FormalLearning"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Formal Learning</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#GalleryVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#GalleryVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to visiting art galleries or exhibitions.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Gallery Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#GroceryShopping -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#GroceryShopping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#Shopping"/>
+        <skos:definition xml:lang="en">Purpose related to purchasing food and household essentials.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Grocery Shopping</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#GymVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#GymVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ExerciseActivity"/>
+        <skos:definition xml:lang="en">Purpose related to visiting a gymnasium for exercise.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Gym Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#HealthcarePurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#HealthcarePurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to healthcare and medical activities.</skos:definition>
+        <skos:example xml:lang="en">Doctor visits, pharmacy trips, hospital appointments</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#EmergencyCare"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#MedicalAppointment"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#PharmacyVisit"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#TherapySession"/>
+        <skos:prefLabel xml:lang="en">Healthcare Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#HeritageExploration -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#HeritageExploration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to exploring heritage sites or historical locations.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#HeritageExploration"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Heritage Exploration</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to visiting historical sites, monuments, or landmarks.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Historical Site Visit</skos:prefLabel>
+        <skos:related rdf:resource="http://w3id.org/trajecto/purpose/skos#HeritageExploration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#HomeBound -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#HomeBound">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to returning to or staying at home.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#HomeBound"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Home Bound</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#HostelStay -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#HostelStay">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to staying at a hostel or budget accommodation.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Hostel Stay</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#HotelStay -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#HotelStay">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to staying at a hotel or similar accommodation.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Hotel Stay</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#InformationSeeking -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#InformationSeeking">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to seeking information or wayfinding assistance.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Information Seeking</skos:prefLabel>
+        <skos:related rdf:resource="http://w3id.org/trajecto/purpose/skos#Tourism"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#LeisureActivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#LeisureActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to casual leisure activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#LeisureActivity"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Leisure Activity</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#LibraryVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#LibraryVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to visiting a library for study or research.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Library Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to engaging with the local community near one&apos;s residence.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#LocalCommunityEngagement"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Local Community Engagement</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#MedicalAppointment -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#MedicalAppointment">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"/>
+        <skos:definition xml:lang="en">Purpose related to scheduled medical consultations or check-ups.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Medical Appointment</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#MuseumVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#MuseumVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to visiting museums or exhibitions.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#MuseumVisit"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Museum Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#NightlifeActivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#NightlifeActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance"/>
+        <skos:definition xml:lang="en">Purpose related to nightlife entertainment (bars, clubs, night venues).</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Nightlife Activity</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#OfficeWork -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#OfficeWork">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to working in an office environment.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#OfficeWork"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Office Work</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#OutdoorRecreation -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#OutdoorRecreation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ExerciseActivity"/>
+        <skos:definition xml:lang="en">Purpose related to outdoor recreational activities (hiking, cycling, etc.).</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Outdoor Recreation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ParkVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ParkVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#LeisureActivity"/>
+        <skos:definition xml:lang="en">Purpose related to visiting parks for relaxation or recreation.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Park Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Parking -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Parking">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to parking a vehicle.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Parking</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#PharmacyVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#PharmacyVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"/>
+        <skos:definition xml:lang="en">Purpose related to obtaining medication or pharmaceutical services.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Pharmacy Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#PostalService -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#PostalService">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ServiceAccess"/>
+        <skos:definition xml:lang="en">Purpose related to using postal or courier services.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Postal Service</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ProfessionalEvent -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ProfessionalEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending professional events, conferences, or trade shows.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#ProfessionalEvent"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Professional Event</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#RecreationalPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to leisure and recreational activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#RecreationalPurpose"/>
+        <skos:example xml:lang="en">Park visits, beach trips, attending sporting events</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#ExerciseActivity"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#LeisureActivity"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#SocialGathering"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Tourism"/>
+        <skos:prefLabel xml:lang="en">Recreational Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ReligiousCeremony -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ReligiousCeremony">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending religious ceremonies (weddings, funerals, baptisms).</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Religious Ceremony</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to visiting sacred sites as part of a religious journey.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Religious Pilgrimage</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ReligiousPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ReligiousPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to religious or spiritual activities.</skos:definition>
+        <skos:example xml:lang="en">Attending church, mosque, temple, or spiritual retreat</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousCeremony"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#SpiritualRetreat"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Worship"/>
+        <skos:prefLabel xml:lang="en">Religious Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Research -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Research">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to research activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#Research"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Research</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ResidentialPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ResidentialPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to residential and home-based activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#ResidentialPurpose"/>
+        <skos:example xml:lang="en">Returning home, local neighborhood activities</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#DomesticActivity"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#HomeBound"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement"/>
+        <skos:prefLabel xml:lang="en">Residential Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#RestaurantDining -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#RestaurantDining">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#DiningExperience"/>
+        <skos:definition xml:lang="en">Purpose related to dining at a restaurant.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Restaurant Dining</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#RetailShopping -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#RetailShopping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#Shopping"/>
+        <skos:definition xml:lang="en">Purpose related to shopping at retail stores or malls.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Retail Shopping</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#SchoolAttendance -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#SchoolAttendance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#FormalLearning"/>
+        <skos:definition xml:lang="en">Purpose related to attending primary or secondary school.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">School Attendance</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#ServiceAccess -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#ServiceAccess">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CommercialPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to accessing commercial services (banking, healthcare, etc.).</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#ServiceAccess"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Service Access</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Shopping -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Shopping">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CommercialPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to purchasing goods.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#Shopping"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Shopping</skos:prefLabel>
+        <skos:related rdf:resource="https://schema.org/BuyAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#SocialGathering -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#SocialGathering">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to meeting and socializing with others.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#SocialGathering"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Social Gathering</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#SpiritualRetreat -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#SpiritualRetreat">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending spiritual or meditation retreats.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Spiritual Retreat</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#SportsAttendance -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#SportsAttendance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance"/>
+        <skos:definition xml:lang="en">Purpose related to attending sports events as a spectator.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Sports Attendance</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TemporaryLodging -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TemporaryLodging">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to staying at temporary rental accommodations.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Temporary Lodging</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TheaterVisit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TheaterVisit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending theatrical performances.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Theater Visit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TherapySession -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TherapySession">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending therapy or rehabilitation sessions.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Therapy Session</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Tourism -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Tourism">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to visiting places as a tourist.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#Tourism"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Tourism</skos:prefLabel>
+        <skos:related rdf:resource="https://schema.org/TouristTrip"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TrainStationTransit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TrainStationTransit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#Transit"/>
+        <skos:definition xml:lang="en">Purpose related to using train station facilities for travel.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Train Station Transit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-01</terms:created>
+        <terms:description xml:lang="en">A SKOS concept scheme representing purposes of movement in trajectory data. Covers commercial, cultural, educational, recreational, residential, transportation, and work-related movement purposes.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:title xml:lang="en">Trajecto Purpose of Movement Concept Scheme</terms:title>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <rdfs:label xml:lang="en">trajectory purpose scheme</rdfs:label>
+        <skos:definition xml:lang="en">Concept scheme of the purposes a trajectory can be assigned.</skos:definition>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#AccommodationPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#CommercialPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#CulturalPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#HealthcarePurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#RecreationalPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#ResidentialPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:hasTopConcept rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkPurpose"/>
+        <skos:prefLabel xml:lang="en">Trajectory purpose scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TransferBetweenModes -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TransferBetweenModes">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to transferring between different modes of transportation.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#TransferBetweenModes"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Transfer Between Modes</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Transit -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Transit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:definition xml:lang="en">Purpose primarily focused on moving from one location to another.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#Transit"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Transit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#TransportationPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#TransportationPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose primarily related to transport and transit between locations.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#TransportationPurpose"/>
+        <skos:example xml:lang="en">Commuting, transit transfers, wandering</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Commuting"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#InformationSeeking"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Parking"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#TransferBetweenModes"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Transit"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#Wandering"/>
+        <skos:prefLabel xml:lang="en">Transportation Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#UniversityAttendance -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#UniversityAttendance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#FormalLearning"/>
+        <skos:definition xml:lang="en">Purpose related to attending university or higher education.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">University Attendance</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Wandering -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Wandering">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#TransportationPurpose"/>
+        <skos:definition xml:lang="en">Purpose involving movement without a specific destination or goal.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#Wandering"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Wandering</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#WorkPurpose -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#WorkPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:definition xml:lang="en">Movement purpose related to employment and professional activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#WorkPurpose"/>
+        <skos:example xml:lang="en">Office work, field work, business meetings</skos:example>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#BusinessMeeting"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#FieldWork"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#OfficeWork"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#ProfessionalEvent"/>
+        <skos:narrower rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine"/>
+        <skos:prefLabel xml:lang="en">Work Purpose</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#WorkPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to regular workplace routines and activities.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#WorkplaceRoutine"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Workplace Routine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#WorkshopAttendance -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#WorkshopAttendance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#EducationalPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending workshops, seminars, or training sessions.</skos:definition>
+        <skos:exactMatch rdf:resource="http://w3id.org/trajecto/purpose#WorkshopAttendance"/>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Workshop Attendance</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/trajecto/purpose/skos#Worship -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/trajecto/purpose/skos#Worship">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/purpose/skos"/>
+        <skos:broader rdf:resource="http://w3id.org/trajecto/purpose/skos#ReligiousPurpose"/>
+        <skos:definition xml:lang="en">Purpose related to attending regular religious worship services.</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme"/>
+        <skos:prefLabel xml:lang="en">Worship</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

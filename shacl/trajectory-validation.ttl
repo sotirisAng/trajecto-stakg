@@ -1,0 +1,78 @@
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix poi:      <http://w3id.org/trajecto/poi#> .
+@prefix patterns: <http://w3id.org/trajecto/patterns#> .
+@prefix context:  <http://w3id.org/trajecto/context#> .
+@prefix purpose:  <http://w3id.org/trajecto/purpose#> .
+@prefix user:     <http://w3id.org/trajecto/user#> .
+@prefix dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix ex:       <http://w3id.org/trajecto/validation#> .
+
+# --- Trajectory Validation ---
+
+ex:TrajectoryShape a sh:NodeShape ;
+    sh:targetClass datacron:Trajectory ;
+    sh:property [
+        sh:path patterns:exhibitsPattern ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory must have at least one navigation pattern" ;
+    ] ;
+    sh:property [
+        sh:path trajecto:hasPurpose ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory must have an assigned purpose" ;
+    ] ;
+    sh:property [
+        sh:path context:hasTemporalContext ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Trajectory must have temporal context" ;
+    ] .
+
+# --- POI Interaction Validation ---
+
+ex:InteractionShape a sh:NodeShape ;
+    sh:targetClass poi:POIInteraction ;
+    sh:property [
+        sh:path poi:interactsWith ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Interaction must link to exactly one POI" ;
+    ] ;
+    sh:property [
+        sh:path poi:hasDwellTimeInSeconds ;
+        sh:minCount 1 ;
+        sh:datatype xsd:float ;
+        sh:minExclusive 0 ;
+        sh:severity sh:Warning ;
+        sh:message "Interaction must have positive dwell time" ;
+    ] .
+
+# --- Position Validation ---
+
+ex:PositionShape a sh:NodeShape ;
+    sh:targetClass datacron:RawPosition ;
+    sh:property [
+        sh:path dul:isPartOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Position must belong to exactly one trajectory" ;
+    ] .
+
+# --- User Profile Validation ---
+
+ex:UserProfileShape a sh:NodeShape ;
+    sh:targetClass user:UserProfile ;
+    sh:property [
+        sh:path user:profileCreated ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message "User profile must have creation timestamp" ;
+    ] .

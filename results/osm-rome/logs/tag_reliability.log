@@ -1,0 +1,11 @@
+
+=== osm-rome ===
+Fuseki query endpoint: http://localhost:3030/osm-rome/sparql
+Fuseki update endpoint: http://localhost:3030/osm-rome/update
+              tag  stability  n_stability  predictivity  n_predictivity  kg_agreement  n_kg
+     dominant_poi   0.836935          509      0.951220              82      0.679012    81
+dominant_category   0.862348          494      0.949367              79           NaN     0
+       engagement   0.909627          509      0.939024              82      1.000000    82
+          purpose   0.881607          473      0.959459              74      0.323944    71
+  nav_interaction   0.725610          328      0.571429              42           NaN     0
+  note: -

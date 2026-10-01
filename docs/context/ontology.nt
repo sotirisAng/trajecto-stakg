@@ -1,0 +1,671 @@
+<http://w3id.org/trajecto/context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/context> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/context/1.1.0> .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/description> "This module extends the trajecto ontology with universal contextual dimensions applicable across different movement domains."@en .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/context> <http://purl.org/dc/terms/title> "Trajecto Context Module"@en .
+<http://w3id.org/trajecto/context> <http://purl.org/vocab/vann/preferredNamespacePrefix> "context" .
+<http://w3id.org/trajecto/context> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/context#" .
+<http://w3id.org/trajecto/context> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-context"@en .
+<http://w3id.org/trajecto/context> <http://www.w3.org/2002/07/owl#priorVersion> <http://w3id.org/trajecto/context/1.0> .
+<http://w3id.org/trajecto/context> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/context#hasConstraint
+<http://w3id.org/trajecto/context#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#Constraint> .
+<http://w3id.org/trajecto/context#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with constraints that limit or influence movement."@en .
+<http://w3id.org/trajecto/context#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has constraint"@en .
+# 
+# http://w3id.org/trajecto/context#hasEnvironmentalContext
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasMovementContext> .
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#EnvironmentalContext> .
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its environmental context."@en .
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasEnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#label> "has environmental context"@en .
+# 
+# http://w3id.org/trajecto/context#hasExternalFactor
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#ExternalFactor> .
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with external factors that influence it."@en .
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasExternalFactor> <http://www.w3.org/2000/01/rdf-schema#label> "has external factor"@en .
+# 
+# http://w3id.org/trajecto/context#hasMovementContext
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#MovementContext> .
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its contextual dimensions."@en .
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasMovementContext> <http://www.w3.org/2000/01/rdf-schema#label> "has movement context"@en .
+# 
+# http://w3id.org/trajecto/context#hasRoutineContext
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasMovementContext> .
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#RoutineContext> .
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its routine context."@en .
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasRoutineContext> <http://www.w3.org/2000/01/rdf-schema#label> "has routine context"@en .
+# 
+# http://w3id.org/trajecto/context#hasSocialContext
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasMovementContext> .
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its social context."@en .
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasSocialContext> <http://www.w3.org/2000/01/rdf-schema#label> "has social context"@en .
+# 
+# http://w3id.org/trajecto/context#hasTemporalContext
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasMovementContext> .
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#TemporalContext> .
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a trajectory with its temporal context."@en .
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasTemporalContext> <http://www.w3.org/2000/01/rdf-schema#label> "has temporal context"@en .
+# 
+# http://w3id.org/trajecto/context#influencedByCondition
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasExternalFactor> .
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#EnvironmentalCondition> .
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a trajectory is influenced by specific environmental conditions."@en .
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#influencedByCondition> <http://www.w3.org/2000/01/rdf-schema#label> "influenced by condition"@en .
+# 
+# http://w3id.org/trajecto/context#influencedByEvent
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasExternalFactor> .
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto#EventOfInterest> .
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a trajectory is influenced by a specific event."@en .
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#influencedByEvent> <http://www.w3.org/2000/01/rdf-schema#label> "influenced by event"@en .
+# 
+# http://w3id.org/trajecto/context#influencedByPolicy
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasExternalFactor> .
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#Policy> .
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a trajectory is influenced by specific policies or regulations."@en .
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#influencedByPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "influenced by policy"@en .
+# 
+# http://w3id.org/trajecto/context#influencedByRecommendation
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/trajecto/context#hasExternalFactor> .
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/trajecto/context#Recommendation> .
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a trajectory is influenced by recommendations from systems or people."@en .
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#influencedByRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "influenced by recommendation"@en .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/context#hasFrequency
+<http://w3id.org/trajecto/context#hasFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/context#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/trajecto/context#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes how often a particular trajectory pattern occurs (e.g., daily, weekly, monthly)."@en .
+<http://w3id.org/trajecto/context#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "has frequency"@en .
+# 
+# http://w3id.org/trajecto/context#hasPaceVariation
+<http://w3id.org/trajecto/context#hasPaceVariation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/context#hasPaceVariation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasPaceVariation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/context#hasPaceVariation> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value indicating how much the pace varies during a trajectory."@en .
+<http://w3id.org/trajecto/context#hasPaceVariation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasPaceVariation> <http://www.w3.org/2000/01/rdf-schema#label> "has pace variation"@en .
+# 
+# http://w3id.org/trajecto/context#hasPathComplexity
+<http://w3id.org/trajecto/context#hasPathComplexity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/context#hasPathComplexity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasPathComplexity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/context#hasPathComplexity> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value indicating the complexity of a trajectory path."@en .
+<http://w3id.org/trajecto/context#hasPathComplexity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasPathComplexity> <http://www.w3.org/2000/01/rdf-schema#label> "has path complexity"@en .
+# 
+# http://w3id.org/trajecto/context#hasPredictability
+<http://w3id.org/trajecto/context#hasPredictability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/trajecto/context#hasPredictability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.datacron-project.eu/datAcron#Trajectory> .
+<http://w3id.org/trajecto/context#hasPredictability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://w3id.org/trajecto/context#hasPredictability> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value indicating how predictable a trajectory is (0.0 to 1.0)."@en .
+<http://w3id.org/trajecto/context#hasPredictability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#hasPredictability> <http://www.w3.org/2000/01/rdf-schema#label> "has predictability"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto#EventOfInterest
+<http://w3id.org/trajecto#EventOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/trajecto/context#AccessPolicy
+<http://w3id.org/trajecto/context#AccessPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Policy> .
+<http://w3id.org/trajecto/context#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "Policies regarding access to spaces that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Access Policy"@en .
+# 
+# http://w3id.org/trajecto/context#AccessibilityRequirement
+<http://w3id.org/trajecto/context#AccessibilityRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#AccessibilityRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#MobilityConcern> .
+<http://w3id.org/trajecto/context#AccessibilityRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Requirements for accessibility that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#AccessibilityRequirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#AccessibilityRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Accessibility Requirement"@en .
+# 
+# http://w3id.org/trajecto/context#Afternoon
+<http://w3id.org/trajecto/context#Afternoon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Afternoon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TimeOfDay> .
+<http://w3id.org/trajecto/context#Afternoon> <http://www.w3.org/2000/01/rdf-schema#comment> "Afternoon time period."@en .
+<http://w3id.org/trajecto/context#Afternoon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Afternoon> <http://www.w3.org/2000/01/rdf-schema#label> "Afternoon"@en .
+# 
+# http://w3id.org/trajecto/context#AmbientCondition
+<http://w3id.org/trajecto/context#AmbientCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#AmbientCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalCondition> .
+<http://w3id.org/trajecto/context#AmbientCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Ambient conditions (lighting, noise, temperature) that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#AmbientCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#AmbientCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Condition"@en .
+# 
+# http://w3id.org/trajecto/context#Barrier
+<http://w3id.org/trajecto/context#Barrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Barrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#PhysicalConstraint> .
+<http://w3id.org/trajecto/context#Barrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical barriers that prevent or restrict movement."@en .
+<http://w3id.org/trajecto/context#Barrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Barrier> <http://www.w3.org/2000/01/rdf-schema#label> "Barrier"@en .
+# 
+# http://w3id.org/trajecto/context#Constraint
+<http://w3id.org/trajecto/context#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/context#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Limitations or restrictions that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#Constraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
+<http://w3id.org/trajecto/context#Constraint> <http://www.w3.org/2004/02/skos/core#definition> "A limiting factor that restricts or influences the possible movement patterns within a trajectory."@en .
+# 
+# http://w3id.org/trajecto/context#Crowding
+<http://w3id.org/trajecto/context#Crowding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Crowding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialPresence> .
+<http://w3id.org/trajecto/context#Crowding> <http://www.w3.org/2000/01/rdf-schema#comment> "High density of people that influences movement patterns."@en .
+<http://w3id.org/trajecto/context#Crowding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Crowding> <http://www.w3.org/2000/01/rdf-schema#label> "Crowding"@en .
+# 
+# http://w3id.org/trajecto/context#Deadline
+<http://w3id.org/trajecto/context#Deadline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Deadline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TemporalConstraint> .
+<http://w3id.org/trajecto/context#Deadline> <http://www.w3.org/2000/01/rdf-schema#comment> "Time deadlines that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#Deadline> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Deadline> <http://www.w3.org/2000/01/rdf-schema#label> "Deadline"@en .
+# 
+# http://w3id.org/trajecto/context#EnvironmentalCondition
+<http://w3id.org/trajecto/context#EnvironmentalCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#EnvironmentalCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#ExternalFactor> .
+<http://w3id.org/trajecto/context#EnvironmentalCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Environmental conditions that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#EnvironmentalCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#EnvironmentalCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Condition"@en .
+# 
+# http://w3id.org/trajecto/context#EnvironmentalContext
+<http://w3id.org/trajecto/context#EnvironmentalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#EnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#MovementContext> .
+<http://w3id.org/trajecto/context#EnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The environmental aspects that influence or characterize movement."@en .
+<http://w3id.org/trajecto/context#EnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#EnvironmentalContext> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Context"@en .
+# 
+# http://w3id.org/trajecto/context#Evening
+<http://w3id.org/trajecto/context#Evening> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Evening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TimeOfDay> .
+<http://w3id.org/trajecto/context#Evening> <http://www.w3.org/2000/01/rdf-schema#comment> "Evening time period."@en .
+<http://w3id.org/trajecto/context#Evening> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Evening> <http://www.w3.org/2000/01/rdf-schema#label> "Evening"@en .
+# 
+# http://w3id.org/trajecto/context#EventPeriod
+<http://w3id.org/trajecto/context#EventPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#EventPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SpecialPeriod> .
+<http://w3id.org/trajecto/context#EventPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Periods during special events that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#EventPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#EventPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Event Period"@en .
+# 
+# http://w3id.org/trajecto/context#ExternalFactor
+<http://w3id.org/trajecto/context#ExternalFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#ExternalFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/context#ExternalFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "External elements that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#ExternalFactor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#ExternalFactor> <http://www.w3.org/2000/01/rdf-schema#label> "External Factor"@en .
+<http://w3id.org/trajecto/context#ExternalFactor> <http://www.w3.org/2004/02/skos/core#definition> "Any external circumstance, condition, or situation that impacts or influences movement behavior."@en .
+# 
+# http://w3id.org/trajecto/context#Fall
+<http://w3id.org/trajecto/context#Fall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Fall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Season> .
+<http://w3id.org/trajecto/context#Fall> <http://www.w3.org/2000/01/rdf-schema#comment> "Fall/Autumn season."@en .
+<http://w3id.org/trajecto/context#Fall> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Fall> <http://www.w3.org/2000/01/rdf-schema#label> "Fall"@en .
+# 
+# http://w3id.org/trajecto/context#Family
+<http://w3id.org/trajecto/context#Family> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Family> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#Family> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement by a family group."@en .
+<http://w3id.org/trajecto/context#Family> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Family> <http://www.w3.org/2000/01/rdf-schema#label> "Family"@en .
+# 
+# http://w3id.org/trajecto/context#Forced
+<http://w3id.org/trajecto/context#Forced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Forced> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#RoutineContext> .
+<http://w3id.org/trajecto/context#Forced> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement necessitated by emergency or obligation."@en .
+<http://w3id.org/trajecto/context#Forced> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Forced> <http://www.w3.org/2000/01/rdf-schema#label> "Forced"@en .
+# 
+# http://w3id.org/trajecto/context#Habitual
+<http://w3id.org/trajecto/context#Habitual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Habitual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#RoutineContext> .
+<http://w3id.org/trajecto/context#Habitual> <http://www.w3.org/2000/01/rdf-schema#comment> "Regular, habitual movement patterns."@en .
+<http://w3id.org/trajecto/context#Habitual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Habitual> <http://www.w3.org/2000/01/rdf-schema#label> "Habitual"@en .
+# 
+# http://w3id.org/trajecto/context#HolidayPeriod
+<http://w3id.org/trajecto/context#HolidayPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#HolidayPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SpecialPeriod> .
+<http://w3id.org/trajecto/context#HolidayPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Holiday periods with distinctive movement patterns."@en .
+<http://w3id.org/trajecto/context#HolidayPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#HolidayPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Holiday Period"@en .
+# 
+# http://w3id.org/trajecto/context#Individual
+<http://w3id.org/trajecto/context#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement by a single individual."@en .
+<http://w3id.org/trajecto/context#Individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
+# 
+# http://w3id.org/trajecto/context#IndoorEnvironment
+<http://w3id.org/trajecto/context#IndoorEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#IndoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalContext> .
+<http://w3id.org/trajecto/context#IndoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement within indoor environments."@en .
+<http://w3id.org/trajecto/context#IndoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#IndoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor Environment"@en .
+# 
+# http://w3id.org/trajecto/context#LargeGroup
+<http://w3id.org/trajecto/context#LargeGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#LargeGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#LargeGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement by a large group (more than 8 people)."@en .
+<http://w3id.org/trajecto/context#LargeGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#LargeGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Large Group"@en .
+# 
+# http://w3id.org/trajecto/context#MobilityAssistance
+<http://w3id.org/trajecto/context#MobilityAssistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#MobilityAssistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#MobilityConcern> .
+<http://w3id.org/trajecto/context#MobilityAssistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Assistance provided for mobility that affects movement patterns."@en .
+<http://w3id.org/trajecto/context#MobilityAssistance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#MobilityAssistance> <http://www.w3.org/2000/01/rdf-schema#label> "Mobility Assistance"@en .
+# 
+# http://w3id.org/trajecto/context#MobilityConcern
+<http://w3id.org/trajecto/context#MobilityConcern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#MobilityConcern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/context#MobilityConcern> <http://www.w3.org/2000/01/rdf-schema#comment> "Special considerations related to mobility that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#MobilityConcern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#MobilityConcern> <http://www.w3.org/2000/01/rdf-schema#label> "Mobility Concern"@en .
+<http://w3id.org/trajecto/context#MobilityConcern> <http://www.w3.org/2004/02/skos/core#definition> "A special consideration or requirement related to the physical ability to move that influences trajectory patterns."@en .
+# 
+# http://w3id.org/trajecto/context#Morning
+<http://w3id.org/trajecto/context#Morning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Morning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TimeOfDay> .
+<http://w3id.org/trajecto/context#Morning> <http://www.w3.org/2000/01/rdf-schema#comment> "Morning time period."@en .
+<http://w3id.org/trajecto/context#Morning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Morning> <http://www.w3.org/2000/01/rdf-schema#label> "Morning"@en .
+# 
+# http://w3id.org/trajecto/context#MovementContext
+<http://w3id.org/trajecto/context#MovementContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#MovementContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> .
+<http://w3id.org/trajecto/context#MovementContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The contextual dimensions that influence or characterize movement."@en .
+<http://w3id.org/trajecto/context#MovementContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#MovementContext> <http://www.w3.org/2000/01/rdf-schema#label> "Movement Context"@en .
+<http://w3id.org/trajecto/context#MovementContext> <http://www.w3.org/2004/02/skos/core#definition> "The set of circumstances, conditions, or situations that influence or characterize the nature of movement in a trajectory."@en .
+# 
+# http://w3id.org/trajecto/context#Night
+<http://w3id.org/trajecto/context#Night> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Night> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TimeOfDay> .
+<http://w3id.org/trajecto/context#Night> <http://www.w3.org/2000/01/rdf-schema#comment> "Night time period."@en .
+<http://w3id.org/trajecto/context#Night> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Night> <http://www.w3.org/2000/01/rdf-schema#label> "Night"@en .
+# 
+# http://w3id.org/trajecto/context#OrganizedTour
+<http://w3id.org/trajecto/context#OrganizedTour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#OrganizedTour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#OrganizedTour> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement as part of an organized tour group."@en .
+<http://w3id.org/trajecto/context#OrganizedTour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#OrganizedTour> <http://www.w3.org/2000/01/rdf-schema#label> "Organized Tour"@en .
+# 
+# http://w3id.org/trajecto/context#OutdoorEnvironment
+<http://w3id.org/trajecto/context#OutdoorEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#OutdoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalContext> .
+<http://w3id.org/trajecto/context#OutdoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement within outdoor environments."@en .
+<http://w3id.org/trajecto/context#OutdoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#OutdoorEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Outdoor Environment"@en .
+# 
+# http://w3id.org/trajecto/context#Pair
+<http://w3id.org/trajecto/context#Pair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Pair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#Pair> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement by a pair of individuals."@en .
+<http://w3id.org/trajecto/context#Pair> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Pair> <http://www.w3.org/2000/01/rdf-schema#label> "Pair"@en .
+# 
+# http://w3id.org/trajecto/context#PersonalRecommendation
+<http://w3id.org/trajecto/context#PersonalRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#PersonalRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Recommendation> .
+<http://w3id.org/trajecto/context#PersonalRecommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Recommendations from other people that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#PersonalRecommendation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#PersonalRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Recommendation"@en .
+# 
+# http://w3id.org/trajecto/context#PhysicalConstraint
+<http://w3id.org/trajecto/context#PhysicalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#PhysicalConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Constraint> .
+<http://w3id.org/trajecto/context#PhysicalConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical barriers or limitations that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#PhysicalConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#PhysicalConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Constraint"@en .
+# 
+# http://w3id.org/trajecto/context#Planned
+<http://w3id.org/trajecto/context#Planned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Planned> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#RoutineContext> .
+<http://w3id.org/trajecto/context#Planned> <http://www.w3.org/2000/01/rdf-schema#comment> "Deliberately planned, non-routine movement."@en .
+<http://w3id.org/trajecto/context#Planned> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Planned> <http://www.w3.org/2000/01/rdf-schema#label> "Planned"@en .
+# 
+# http://w3id.org/trajecto/context#Policy
+<http://w3id.org/trajecto/context#Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Policy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#ExternalFactor> .
+<http://w3id.org/trajecto/context#Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "Policies or regulations that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#Policy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Policy> <http://www.w3.org/2000/01/rdf-schema#label> "Policy"@en .
+# 
+# http://w3id.org/trajecto/context#Recommendation
+<http://w3id.org/trajecto/context#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#ExternalFactor> .
+<http://w3id.org/trajecto/context#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Recommendations that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#Recommendation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
+# 
+# http://w3id.org/trajecto/context#RoutineContext
+<http://w3id.org/trajecto/context#RoutineContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#RoutineContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#MovementContext> .
+<http://w3id.org/trajecto/context#RoutineContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The routine aspects that influence or characterize movement."@en .
+<http://w3id.org/trajecto/context#RoutineContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#RoutineContext> <http://www.w3.org/2000/01/rdf-schema#label> "Routine Context"@en .
+# 
+# http://w3id.org/trajecto/context#RuralSetting
+<http://w3id.org/trajecto/context#RuralSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#RuralSetting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalContext> .
+<http://w3id.org/trajecto/context#RuralSetting> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement within rural environments."@en .
+<http://w3id.org/trajecto/context#RuralSetting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#RuralSetting> <http://www.w3.org/2000/01/rdf-schema#label> "Rural Setting"@en .
+# 
+# http://w3id.org/trajecto/context#Season
+<http://w3id.org/trajecto/context#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TemporalContext> .
+<http://w3id.org/trajecto/context#Season> <http://www.w3.org/2000/01/rdf-schema#comment> "The season during which movement occurs."@en .
+<http://w3id.org/trajecto/context#Season> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Season> <http://www.w3.org/2000/01/rdf-schema#label> "Season"@en .
+# 
+# http://w3id.org/trajecto/context#SmallGroup
+<http://w3id.org/trajecto/context#SmallGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SmallGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialContext> .
+<http://w3id.org/trajecto/context#SmallGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement by a small group (3-8 people)."@en .
+<http://w3id.org/trajecto/context#SmallGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SmallGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Small Group"@en .
+# 
+# http://w3id.org/trajecto/context#SocialAttraction
+<http://w3id.org/trajecto/context#SocialAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SocialAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialPresence> .
+<http://w3id.org/trajecto/context#SocialAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Social gathering points that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#SocialAttraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SocialAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Social Attraction"@en .
+# 
+# http://w3id.org/trajecto/context#SocialConstraint
+<http://w3id.org/trajecto/context#SocialConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SocialConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Constraint> .
+<http://w3id.org/trajecto/context#SocialConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Social limitations or norms that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#SocialConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SocialConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Social Constraint"@en .
+# 
+# http://w3id.org/trajecto/context#SocialContext
+<http://w3id.org/trajecto/context#SocialContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SocialContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#MovementContext> .
+<http://w3id.org/trajecto/context#SocialContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The social aspects that influence or characterize movement."@en .
+<http://w3id.org/trajecto/context#SocialContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SocialContext> <http://www.w3.org/2000/01/rdf-schema#label> "Social Context"@en .
+# 
+# http://w3id.org/trajecto/context#SocialNorm
+<http://w3id.org/trajecto/context#SocialNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SocialNorm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#SocialConstraint> .
+<http://w3id.org/trajecto/context#SocialNorm> <http://www.w3.org/2000/01/rdf-schema#comment> "Social expectations or norms that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#SocialNorm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SocialNorm> <http://www.w3.org/2000/01/rdf-schema#label> "Social Norm"@en .
+# 
+# http://w3id.org/trajecto/context#SocialPresence
+<http://w3id.org/trajecto/context#SocialPresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SocialPresence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#ExternalFactor> .
+<http://w3id.org/trajecto/context#SocialPresence> <http://www.w3.org/2000/01/rdf-schema#comment> "Presence of other people that influences movement patterns."@en .
+<http://w3id.org/trajecto/context#SocialPresence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SocialPresence> <http://www.w3.org/2000/01/rdf-schema#label> "Social Presence"@en .
+# 
+# http://w3id.org/trajecto/context#SpecialEvent
+<http://w3id.org/trajecto/context#SpecialEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SpecialEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#ExternalFactor> .
+<http://w3id.org/trajecto/context#SpecialEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Special events that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#SpecialEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SpecialEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Special Event"@en .
+# 
+# http://w3id.org/trajecto/context#SpecialPeriod
+<http://w3id.org/trajecto/context#SpecialPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SpecialPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TemporalContext> .
+<http://w3id.org/trajecto/context#SpecialPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Special temporal periods that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#SpecialPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SpecialPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Special Period"@en .
+# 
+# http://w3id.org/trajecto/context#Spontaneous
+<http://w3id.org/trajecto/context#Spontaneous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Spontaneous> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#RoutineContext> .
+<http://w3id.org/trajecto/context#Spontaneous> <http://www.w3.org/2000/01/rdf-schema#comment> "Unplanned, spontaneous movement."@en .
+<http://w3id.org/trajecto/context#Spontaneous> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Spontaneous> <http://www.w3.org/2000/01/rdf-schema#label> "Spontaneous"@en .
+# 
+# http://w3id.org/trajecto/context#Spring
+<http://w3id.org/trajecto/context#Spring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Spring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Season> .
+<http://w3id.org/trajecto/context#Spring> <http://www.w3.org/2000/01/rdf-schema#comment> "Spring season."@en .
+<http://w3id.org/trajecto/context#Spring> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Spring> <http://www.w3.org/2000/01/rdf-schema#label> "Spring"@en .
+# 
+# http://w3id.org/trajecto/context#Summer
+<http://w3id.org/trajecto/context#Summer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Summer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Season> .
+<http://w3id.org/trajecto/context#Summer> <http://www.w3.org/2000/01/rdf-schema#comment> "Summer season."@en .
+<http://w3id.org/trajecto/context#Summer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Summer> <http://www.w3.org/2000/01/rdf-schema#label> "Summer"@en .
+# 
+# http://w3id.org/trajecto/context#SystemRecommendation
+<http://w3id.org/trajecto/context#SystemRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#SystemRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Recommendation> .
+<http://w3id.org/trajecto/context#SystemRecommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Recommendations from automated systems that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#SystemRecommendation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#SystemRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "System Recommendation"@en .
+# 
+# http://w3id.org/trajecto/context#TemporalConstraint
+<http://w3id.org/trajecto/context#TemporalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#TemporalConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Constraint> .
+<http://w3id.org/trajecto/context#TemporalConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Time-related limitations that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#TemporalConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#TemporalConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Constraint"@en .
+# 
+# http://w3id.org/trajecto/context#TemporalContext
+<http://w3id.org/trajecto/context#TemporalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#TemporalContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#MovementContext> .
+<http://w3id.org/trajecto/context#TemporalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The temporal aspects that influence or characterize movement."@en .
+<http://w3id.org/trajecto/context#TemporalContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#TemporalContext> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Context"@en .
+# 
+# http://w3id.org/trajecto/context#TimeOfDay
+<http://w3id.org/trajecto/context#TimeOfDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TemporalContext> .
+<http://w3id.org/trajecto/context#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific time of day when movement occurs."@en .
+<http://w3id.org/trajecto/context#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#label> "Time of Day"@en .
+# 
+# http://w3id.org/trajecto/context#TimePolicy
+<http://w3id.org/trajecto/context#TimePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#TimePolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Policy> .
+<http://w3id.org/trajecto/context#TimePolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "Policies regarding timing (opening hours, etc.) that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#TimePolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#TimePolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Time Policy"@en .
+# 
+# http://w3id.org/trajecto/context#TransitionalSpace
+<http://w3id.org/trajecto/context#TransitionalSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#TransitionalSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalContext> .
+<http://w3id.org/trajecto/context#TransitionalSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement through transitional spaces between different environments."@en .
+<http://w3id.org/trajecto/context#TransitionalSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#TransitionalSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Transitional Space"@en .
+# 
+# http://w3id.org/trajecto/context#UrbanSetting
+<http://w3id.org/trajecto/context#UrbanSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#UrbanSetting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalContext> .
+<http://w3id.org/trajecto/context#UrbanSetting> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement within urban environments."@en .
+<http://w3id.org/trajecto/context#UrbanSetting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#UrbanSetting> <http://www.w3.org/2000/01/rdf-schema#label> "Urban Setting"@en .
+# 
+# http://w3id.org/trajecto/context#WeatherCondition
+<http://w3id.org/trajecto/context#WeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#EnvironmentalCondition> .
+<http://w3id.org/trajecto/context#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Weather conditions that influence movement patterns."@en .
+<http://w3id.org/trajecto/context#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Weather Condition"@en .
+# 
+# http://w3id.org/trajecto/context#Weekday
+<http://w3id.org/trajecto/context#Weekday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Weekday> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Weekpart> .
+<http://w3id.org/trajecto/context#Weekday> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement occurring on a weekday (Monday-Friday)."@en .
+<http://w3id.org/trajecto/context#Weekday> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Weekday> <http://www.w3.org/2000/01/rdf-schema#label> "Weekday"@en .
+# 
+# http://w3id.org/trajecto/context#Weekend
+<http://w3id.org/trajecto/context#Weekend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Weekend> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Weekpart> .
+<http://w3id.org/trajecto/context#Weekend> <http://www.w3.org/2000/01/rdf-schema#comment> "Movement occurring on a weekend (Saturday-Sunday)."@en .
+<http://w3id.org/trajecto/context#Weekend> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Weekend> <http://www.w3.org/2000/01/rdf-schema#label> "Weekend"@en .
+# 
+# http://w3id.org/trajecto/context#Weekpart
+<http://w3id.org/trajecto/context#Weekpart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Weekpart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#TemporalContext> .
+<http://w3id.org/trajecto/context#Weekpart> <http://www.w3.org/2000/01/rdf-schema#comment> "Distinction between weekday and weekend movement patterns."@en .
+<http://w3id.org/trajecto/context#Weekpart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Weekpart> <http://www.w3.org/2000/01/rdf-schema#label> "Part of the week"@en .
+# 
+# http://w3id.org/trajecto/context#WheelchairAccessibility
+<http://w3id.org/trajecto/context#WheelchairAccessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#WheelchairAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#AccessibilityRequirement> .
+<http://w3id.org/trajecto/context#WheelchairAccessibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Requirements for wheelchair accessibility that affect movement patterns."@en .
+<http://w3id.org/trajecto/context#WheelchairAccessibility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#WheelchairAccessibility> <http://www.w3.org/2000/01/rdf-schema#label> "Wheelchair Accessibility"@en .
+# 
+# http://w3id.org/trajecto/context#Winter
+<http://w3id.org/trajecto/context#Winter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/trajecto/context#Winter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/trajecto/context#Season> .
+<http://w3id.org/trajecto/context#Winter> <http://www.w3.org/2000/01/rdf-schema#comment> "Winter season."@en .
+<http://w3id.org/trajecto/context#Winter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/context> .
+<http://w3id.org/trajecto/context#Winter> <http://www.w3.org/2000/01/rdf-schema#label> "Winter"@en .
+# 
+# http://www.datacron-project.eu/datAcron#Trajectory
+<http://www.datacron-project.eu/datAcron#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,61 @@
+Fuseki query endpoint: http://localhost:3030/geolife/sparql
+Fuseki update endpoint: http://localhost:3030/geolife/update
+Loading context-aware recommender data...
+  Features: loaded 1160 from file
+  Interactions: 1145 trajectories, 3041 unique POIs
+  Metadata: 1160 trajectories
+  POI metadata: 8486 POIs
+  Engagement: 1145 trajectories classified
+  Preferences: 96 users
+  Graphs: flow=2237 edges, covisit=5251 edges
+  Significant POIs: 163
+Loaded: 1160 trajectories, 3041 POIs, 96 users with preferences
+  Loading ontological classifications...
+  Ontological: 1145 classified, 13 profile classes
+  SR engine: ready (5 recommendation rules)
+  Precomputing archetype similarity matrix...
+  Archetype similarity: 1145 trajectories, 17175 pairs cached
+  Precomputing route similarity matrix...
+  Route similarity: 791 trajectories, 9370 pairs cached
+  Indexes: 3 engagement levels, 63 category groups, 96 user visit sets
+  Events: 0 scheduled events at 0 POIs
+  Trajectory windows: 1160 cached
+  Dwell semantics: 102 typed thresholds, 7171 interaction dwells
+Loaded in 42s
+
+=== Hit-rate@10 by held-out-POI evidence level ===
+   (holdout POIs per slice: {'3+_head': 412, '1-2_tail': 98, '0_unrecoverable': 53})
+evidence              0_unrecoverable  1-2_tail  3+_head
+method                                                  
+centrality (1.7c)                 0.0     0.000    0.228
+cold_blend (1.7d)                 0.0     0.000    0.255
+markov2                           0.0     0.194    0.405
+popularity                        0.0     0.000    0.177
+rrf_uni+markov2+prox              0.0     0.214    0.481
+tagpop (1.7b)                     0.0     0.000    0.233
+unified_route_heavy               0.0     0.173    0.388
+
+=== Hit-rate@10 by user history (recoverable POIs only) ===
+   (holdout POIs per slice: {'2+': 490, '0-1': 20})
+user_history           0-1     2+
+method                           
+centrality (1.7c)     0.10  0.188
+cold_blend (1.7d)     0.10  0.210
+markov2               0.30  0.367
+popularity            0.00  0.149
+rrf_uni+markov2+prox  0.30  0.435
+tagpop (1.7b)         0.05  0.194
+unified_route_heavy   0.15  0.355
+
+=== Cold cell: tail evidence x low history ===
+   (4 holdout POIs)
+method
+markov2                 0.25
+centrality (1.7c)       0.00
+cold_blend (1.7d)       0.00
+popularity              0.00
+rrf_uni+markov2+prox    0.00
+tagpop (1.7b)           0.00
+unified_route_heavy     0.00
+
+Saved. Total 73s

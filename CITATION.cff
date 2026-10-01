@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or the Trajecto ontology, please cite the thesis."
+title: "Trajecto STaKG"
+authors:
+  - family-names: Angelis
+    given-names: Sotirios
+license: MIT
+repository-code: "https://github.com/sotirisAng/trajecto-stakg"
+preferred-citation:
+  type: thesis
+  title: "Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs"
+  authors:
+    - family-names: Angelis
+      given-names: Sotirios
+  institution:
+    name: "University of the Aegean"
+  year: 2026
+  thesis-type: "Doctoral dissertation"

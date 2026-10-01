@@ -1,0 +1,586 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl", "http://www.datacron-project.eu/datAcron", "http://www.w3.org/2000/01/rdf-schema", "http://w3id.org/trajecto/events", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Trajecto Trajectory Events Module"
+    },
+    "iri" : "http://w3id.org/trajecto/events",
+    "version" : "1.1.0",
+    "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
+    "description" : {
+      "en" : "Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."
+    },
+    "labels" : {
+      "en" : "trajecto-events"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events/1.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sotirios Angelis",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Konstantinos Kotis",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-03-29",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "events",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Trajectory Events Module",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/events#DominantEncounter",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DominantEncounter",
+      "en" : "Dominant Encounter"
+    },
+    "comment" : {
+      "en" : "The position where the trajectory's DominantInteraction (highest engagement, singleton per trajectory) occurs."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#EngagementEscalation",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EngagementEscalation",
+      "en" : "Engagement Escalation"
+    },
+    "comment" : {
+      "en" : "Transition from PassingInteraction at one position to MeaningfulInteraction or ImmersiveInteraction at the next consecutive position. Indicates increasing engagement with the environment."
+    },
+    "id" : "2",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "6",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#TrajectoryEvent",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TrajectoryEvent",
+      "en" : "Trajectory Event"
+    },
+    "subClasses" : [ "4", "11", "0", "15", "2", "16" ],
+    "comment" : {
+      "en" : "A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types."
+    },
+    "id" : "1",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#RawPosition",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RawPosition"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#EngagementDrop",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EngagementDrop",
+      "en" : "Engagement Drop"
+    },
+    "comment" : {
+      "en" : "Transition from MeaningfulInteraction or ImmersiveInteraction to PassingInteraction at the next position. Indicates disengagement or transit."
+    },
+    "id" : "4",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#CategoryReturn",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CategoryReturn",
+      "en" : "Category Return"
+    },
+    "comment" : {
+      "en" : "Return to a previously visited POI category after visiting a different category. Subtype of CategoryTransition where the toCategory was already encountered earlier in the trajectory."
+    },
+    "id" : "11",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#CategoryDiscovery",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CategoryDiscovery",
+      "en" : "Category Discovery"
+    },
+    "comment" : {
+      "en" : "First meaningful encounter with a POI category not previously visited in this trajectory. The discoveredCategory property identifies which category was new."
+    },
+    "id" : "16",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#CategoryTransition",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CategoryTransition",
+      "en" : "Category Transition"
+    },
+    "comment" : {
+      "en" : "Transition between consecutive meaningful interactions at POIs of different categories. The fromCategory and toCategory properties identify the transition."
+    },
+    "id" : "15",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "3",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "18",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "1",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#toInteractionType",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "toInteractionType",
+      "en" : "to interaction type"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The interaction type at the current position in an engagement transition event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "range" : "4",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "2",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#toCategory",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "toCategory",
+      "en" : "to category"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The POI category at the current position in a category transition."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#atPosition",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "19",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "atPosition",
+      "en" : "at position"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The position at which the event occurs within the trajectory."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#eventSequenceIndex",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "eventSequenceIndex",
+      "en" : "event sequence index"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The position index at which the event occurs, corresponding to hasPositionIndex of the associated RawPosition."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#fromCategory",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fromCategory",
+      "en" : "from category"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The POI category at the preceding position in a category transition."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#discoveredCategory",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "discoveredCategory",
+      "en" : "discovered category"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The POI category encountered for the first time at this position."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "range" : "14",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "1",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://w3id.org/trajecto/events#fromInteractionType",
+    "baseIri" : "http://w3id.org/trajecto/events",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/events",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fromInteractionType",
+      "en" : "from interaction type"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The interaction type at the preceding position in an engagement transition event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "range" : "1",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  } ]
+}

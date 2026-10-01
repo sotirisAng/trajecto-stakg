@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/trajecto/events#"
+     xml:base="http://w3id.org/trajecto/events"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/trajecto/events">
+        <owl:versionIRI rdf:resource="http://w3id.org/trajecto/events/1.1.0"/>
+        <owl:imports rdf:resource="http://w3id.org/trajecto/poi"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-29</terms:created>
+        <terms:creator>Konstantinos Kotis</terms:creator>
+        <terms:creator>Sotirios Angelis</terms:creator>
+        <terms:description xml:lang="en">Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-01</terms:modified>
+        <terms:publisher>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</terms:publisher>
+        <terms:title xml:lang="en">Trajecto Trajectory Events Module</terms:title>
+        <vann:preferredNamespacePrefix>events</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://w3id.org/trajecto/events#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">trajecto-events</rdfs:label>
+        <owl:priorVersion rdf:resource="http://w3id.org/trajecto/events/1.0"/>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/events#atPosition -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/events#atPosition">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:range rdf:resource="http://www.datacron-project.eu/datAcron#RawPosition"/>
+        <rdfs:comment xml:lang="en">The position at which the event occurs within the trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">at position</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#discoveredCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/events#discoveredCategory">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#CategoryDiscovery"/>
+        <rdfs:comment xml:lang="en">The POI category encountered for the first time at this position.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">discovered category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#fromCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/events#fromCategory">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#CategoryTransition"/>
+        <rdfs:comment xml:lang="en">The POI category at the preceding position in a category transition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">from category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#fromInteractionType -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/events#fromInteractionType">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">The interaction type at the preceding position in an engagement transition event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">from interaction type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#toCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/events#toCategory">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#CategoryTransition"/>
+        <rdfs:comment xml:lang="en">The POI category at the current position in a category transition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">to category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#toInteractionType -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/trajecto/events#toInteractionType">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">The interaction type at the current position in an engagement transition event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">to interaction type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/events#eventSequenceIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/trajecto/events#eventSequenceIndex">
+        <rdfs:domain rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The position index at which the event occurs, corresponding to hasPositionIndex of the associated RawPosition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">event sequence index</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/trajecto/events#CategoryDiscovery -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#CategoryDiscovery">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">First meaningful encounter with a POI category not previously visited in this trajectory. The discoveredCategory property identifies which category was new.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Category Discovery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#CategoryReturn -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#CategoryReturn">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">Return to a previously visited POI category after visiting a different category. Subtype of CategoryTransition where the toCategory was already encountered earlier in the trajectory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Category Return</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#CategoryTransition -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#CategoryTransition">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">Transition between consecutive meaningful interactions at POIs of different categories. The fromCategory and toCategory properties identify the transition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Category Transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#DominantEncounter -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#DominantEncounter">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">The position where the trajectory&apos;s DominantInteraction (highest engagement, singleton per trajectory) occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Dominant Encounter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#EngagementDrop -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#EngagementDrop">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">Transition from MeaningfulInteraction or ImmersiveInteraction to PassingInteraction at the next position. Indicates disengagement or transit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Engagement Drop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#EngagementEscalation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#EngagementEscalation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/trajecto/events#TrajectoryEvent"/>
+        <rdfs:comment xml:lang="en">Transition from PassingInteraction at one position to MeaningfulInteraction or ImmersiveInteraction at the next consecutive position. Indicates increasing engagement with the environment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Engagement Escalation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/trajecto/events#TrajectoryEvent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/trajecto/events#TrajectoryEvent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+        <rdfs:comment xml:lang="en">A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/trajecto/events"/>
+        <rdfs:label xml:lang="en">Trajectory Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.datacron-project.eu/datAcron#RawPosition -->
+
+
+    <owl:Class rdf:about="http://www.datacron-project.eu/datAcron#RawPosition"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/trajecto/events#DominantEncounter"/>
+            <rdf:Description rdf:about="http://w3id.org/trajecto/events#EngagementDrop"/>
+            <rdf:Description rdf:about="http://w3id.org/trajecto/events#EngagementEscalation"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,22 @@
+# SR-05: Materialize POI co-visitation relationships
+# Dominant POI linked to other meaningful POIs in the same trajectory.
+# (ImmersiveInteraction is a subclass of MeaningfulInteraction in the ontology.)
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+INSERT { ?dominantPoi poi:covisitedWith ?otherPoi . }
+WHERE {
+    ?pos1 dul:isPartOf ?traj .
+    ?pos1 trajecto:hasInteraction ?int1 .
+    ?int1 a poi:DominantInteraction .
+    ?int1 poi:interactsWith ?dominantPoi .
+
+    ?pos2 dul:isPartOf ?traj .
+    ?pos2 trajecto:hasInteraction ?int2 .
+    ?int2 a poi:MeaningfulInteraction .
+    ?int2 poi:interactsWith ?otherPoi .
+
+    FILTER(?dominantPoi != ?otherPoi)
+}

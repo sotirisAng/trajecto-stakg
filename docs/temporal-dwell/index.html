@@ -1,0 +1,2856 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto Temporal-Dwell Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto/temporal-dwell#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto/temporal-dwell#","name":"Trajecto Temporal-Dwell Module", "headline":"This module extends the trajecto ontology with comprehensive temporal context and dwell time analytics capabilities, integrating temporal patterns with spatial behavior analysis.", "dateReleased":"2025-05-30", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto Temporal-Dwell Module</h1>
+<h2>Release: 2025-05-30</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/temporal-dwell/1.1.0">http://w3id.org/trajecto/temporal-dwell/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/temporal-dwell/1.0">http://w3id.org/trajecto/temporal-dwell/1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://w3id.org/trajecto/context">context</a></dd><dd><a href="http://w3id.org/trajecto/patterns">patterns</a></dd><dd><a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a></dd>
+
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/temporal-dwell.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/temporal-dwell.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This module extends the trajecto ontology with comprehensive temporal context and dwell time analytics capabilities, integrating temporal patterns with spatial behavior analysis.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/temporal-dwell.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>context</b></td><td>&lt;http://w3id.org/trajecto/context#&gt;</td></tr>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dul</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>patterns</b></td><td>&lt;http://w3id.org/trajecto/patterns#&gt;</td></tr>
+<tr><td><b>poi</b></td><td>&lt;http://w3id.org/trajecto/poi#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrla</b></td><td>&lt;http://swrl.stanford.edu/ontologies/3.3/swrla.owl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>tdwell</b></td><td>&lt;http://w3id.org/trajecto/temporal-dwell#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto-temporal-dwell: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ActivityPeriod"
+         title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a>
+   </li>
+   <li>
+      <a href="#AfternoonActivity"
+         title="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity">Afternoon Activity</a>
+   </li>
+   <li>
+      <a href="#AnomalousDwell"
+         title="http://w3id.org/trajecto/temporal-dwell#AnomalousDwell">Anomalous Dwell</a>
+   </li>
+   <li>
+      <a href="#BriefDwell"
+         title="http://w3id.org/trajecto/temporal-dwell#BriefDwell">Brief Dwell</a>
+   </li>
+   <li>
+      <a href="#CommutingHours"
+         title="http://w3id.org/trajecto/temporal-dwell#CommutingHours">Commuting Hours</a>
+   </li>
+   <li>
+      <a href="#ComparativeDwellMetrics"
+         title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a>
+   </li>
+   <li>
+      <a href="#DailyDwellPattern"
+         title="http://w3id.org/trajecto/temporal-dwell#DailyDwellPattern">Daily Dwell Pattern</a>
+   </li>
+   <li>
+      <a href="#DecreasingTrend"
+         title="http://w3id.org/trajecto/temporal-dwell#DecreasingTrend">Decreasing Trend</a>
+   </li>
+   <li>
+      <a href="#DurationAnomaly"
+         title="http://w3id.org/trajecto/temporal-dwell#DurationAnomaly">Duration Anomaly</a>
+   </li>
+   <li>
+      <a href="#DwellAnalytics"
+         title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a>
+   </li>
+   <li>
+      <a href="#DwellClassification"
+         title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a>
+   </li>
+   <li>
+      <a href="#DwellDuration"
+         title="http://w3id.org/trajecto/temporal-dwell#DwellDuration">Dwell Duration</a>
+   </li>
+   <li>
+      <a href="#DwellEvent"
+         title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a>
+   </li>
+   <li>
+      <a href="#DwellTrend"
+         title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a>
+   </li>
+   <li>
+      <a href="#EngagementLevel"
+         title="http://w3id.org/trajecto/temporal-dwell#EngagementLevel">Engagement Level</a>
+   </li>
+   <li>
+      <a href="#EveningActivity"
+         title="http://w3id.org/trajecto/temporal-dwell#EveningActivity">Evening Activity</a>
+   </li>
+   <li>
+      <a href="#ExtendedDwell"
+         title="http://w3id.org/trajecto/temporal-dwell#ExtendedDwell">Extended Dwell</a>
+   </li>
+   <li>
+      <a href="#FrequencyAnomaly"
+         title="http://w3id.org/trajecto/temporal-dwell#FrequencyAnomaly">Frequency Anomaly</a>
+   </li>
+   <li>
+      <a href="#HighEngagement"
+         title="http://w3id.org/trajecto/temporal-dwell#HighEngagement">High Engagement</a>
+   </li>
+   <li>
+      <a href="#IncreasingTrend"
+         title="http://w3id.org/trajecto/temporal-dwell#IncreasingTrend">Increasing Trend</a>
+   </li>
+   <li>
+      <a href="#LeisureHours"
+         title="http://w3id.org/trajecto/temporal-dwell#LeisureHours">Leisure Hours</a>
+   </li>
+   <li>
+      <a href="#LowEngagement"
+         title="http://w3id.org/trajecto/temporal-dwell#LowEngagement">Low Engagement</a>
+   </li>
+   <li>
+      <a href="#LunchHours"
+         title="http://w3id.org/trajecto/temporal-dwell#LunchHours">Lunch Hours</a>
+   </li>
+   <li>
+      <a href="#MediumEngagement"
+         title="http://w3id.org/trajecto/temporal-dwell#MediumEngagement">Medium Engagement</a>
+   </li>
+   <li>
+      <a href="#ModerateDwell"
+         title="http://w3id.org/trajecto/temporal-dwell#ModerateDwell">Moderate Dwell</a>
+   </li>
+   <li>
+      <a href="#MorningActivity"
+         title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a>
+   </li>
+   <li>
+      <a href="#NightActivity"
+         title="http://w3id.org/trajecto/temporal-dwell#NightActivity">Night Activity</a>
+   </li>
+   <li>
+      <a href="#POIComparison"
+         title="http://w3id.org/trajecto/temporal-dwell#POIComparison">POI Comparison</a>
+   </li>
+   <li>
+      <a href="#SeasonalDwellPattern"
+         title="http://w3id.org/trajecto/temporal-dwell#SeasonalDwellPattern">Seasonal Dwell Pattern</a>
+   </li>
+   <li>
+      <a href="#StableTrend"
+         title="http://w3id.org/trajecto/temporal-dwell#StableTrend">Stable Trend</a>
+   </li>
+   <li>
+      <a href="#TemporalAnomaly"
+         title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a>
+   </li>
+   <li>
+      <a href="#TemporalComparison"
+         title="http://w3id.org/trajecto/temporal-dwell#TemporalComparison">Temporal Comparison</a>
+   </li>
+   <li>
+      <a href="#TemporalDwellContext"
+         title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a>
+   </li>
+   <li>
+      <a href="#TemporalDwellPattern"
+         title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">Temporal Dwell Pattern</a>
+   </li>
+   <li>
+      <a href="#TimeSlot"
+         title="http://w3id.org/trajecto/temporal-dwell#TimeSlot">Time Slot</a>
+   </li>
+   <li>
+      <a href="#UnusualTimingAnomaly"
+         title="http://w3id.org/trajecto/temporal-dwell#UnusualTimingAnomaly">Unusual Timing Anomaly</a>
+   </li>
+   <li>
+      <a href="#VisitorTypeComparison"
+         title="http://w3id.org/trajecto/temporal-dwell#VisitorTypeComparison">Visitor Type Comparison</a>
+   </li>
+   <li>
+      <a href="#VolatileTrend"
+         title="http://w3id.org/trajecto/temporal-dwell#VolatileTrend">Volatile Trend</a>
+   </li>
+   <li>
+      <a href="#WeekdayDwelling"
+         title="http://w3id.org/trajecto/temporal-dwell#WeekdayDwelling">Weekday Dwelling</a>
+   </li>
+   <li>
+      <a href="#WeekendDwelling"
+         title="http://w3id.org/trajecto/temporal-dwell#WeekendDwelling">Weekend Dwelling</a>
+   </li>
+   <li>
+      <a href="#WeeklyDwellPattern"
+         title="http://w3id.org/trajecto/temporal-dwell#WeeklyDwellPattern">Weekly Dwell Pattern</a>
+   </li>
+   <li>
+      <a href="#WorkingHours"
+         title="http://w3id.org/trajecto/temporal-dwell#WorkingHours">Working Hours</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#dwellsAt" title="http://w3id.org/trajecto/temporal-dwell#dwellsAt">dwells at</a>
+   </li>
+   <li>
+      <a href="#followedBy"
+         title="http://w3id.org/trajecto/temporal-dwell#followedBy">followed by</a>
+   </li>
+   <li>
+      <a href="#hasActivityPeriod"
+         title="http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod">has activity period</a>
+   </li>
+   <li>
+      <a href="#hasComparativeDwellMetrics"
+         title="http://w3id.org/trajecto/temporal-dwell#hasComparativeDwellMetrics">has comparative dwell metrics</a>
+   </li>
+   <li>
+      <a href="#hasDwellAnalytics"
+         title="http://w3id.org/trajecto/temporal-dwell#hasDwellAnalytics">has dwell analytics</a>
+   </li>
+   <li>
+      <a href="#hasDwellClassification"
+         title="http://w3id.org/trajecto/temporal-dwell#hasDwellClassification">has dwell classification</a>
+   </li>
+   <li>
+      <a href="#hasDwellDuration"
+         title="http://w3id.org/trajecto/temporal-dwell#hasDwellDuration">has dwell duration</a>
+   </li>
+   <li>
+      <a href="#hasDwellEvent"
+         title="http://w3id.org/trajecto/temporal-dwell#hasDwellEvent">has dwell event</a>
+   </li>
+   <li>
+      <a href="#hasSeasonalContext"
+         title="http://w3id.org/trajecto/temporal-dwell#hasSeasonalContext">has seasonal context</a>
+   </li>
+   <li>
+      <a href="#hasTemporalAnomaly"
+         title="http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly">has temporal anomaly</a>
+   </li>
+   <li>
+      <a href="#hasTemporalDwellContext"
+         title="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext">has temporal dwell context</a>
+   </li>
+   <li>
+      <a href="#hasTemporalPattern"
+         title="http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern">has temporal pattern</a>
+   </li>
+   <li>
+      <a href="#hasTimeOfDay"
+         title="http://w3id.org/trajecto/temporal-dwell#hasTimeOfDay">has time of day</a>
+   </li>
+   <li>
+      <a href="#hasWeekdayClassification"
+         title="http://w3id.org/trajecto/temporal-dwell#hasWeekdayClassification">has weekday classification</a>
+   </li>
+   <li>
+      <a href="#occursDuringTimeSlot"
+         title="http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot">occurs during time slot</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#averageDwellTime"
+         title="http://w3id.org/trajecto/temporal-dwell#averageDwellTime">average dwell time</a>
+   </li>
+   <li>
+      <a href="#dwellDurationMinutes"
+         title="http://w3id.org/trajecto/temporal-dwell#dwellDurationMinutes">dwell duration minutes</a>
+   </li>
+   <li>
+      <a href="#dwellDurationSeconds"
+         title="http://w3id.org/trajecto/temporal-dwell#dwellDurationSeconds">dwell duration seconds</a>
+   </li>
+   <li>
+      <a href="#dwellEndTime"
+         title="http://w3id.org/trajecto/temporal-dwell#dwellEndTime">dwell end time</a>
+   </li>
+   <li>
+      <a href="#dwellFrequency"
+         title="http://w3id.org/trajecto/temporal-dwell#dwellFrequency">dwell frequency</a>
+   </li>
+   <li>
+      <a href="#dwellStartTime"
+         title="http://w3id.org/trajecto/temporal-dwell#dwellStartTime">dwell start time</a>
+   </li>
+   <li>
+      <a href="#dwellVariability"
+         title="http://w3id.org/trajecto/temporal-dwell#dwellVariability">dwell variability</a>
+   </li>
+   <li>
+      <a href="#engagementScore"
+         title="http://w3id.org/trajecto/temporal-dwell#engagementScore">engagement score</a>
+   </li>
+   <li>
+      <a href="#hasDayOfWeek"
+         title="http://w3id.org/trajecto/temporal-dwell#hasDayOfWeek">has day of week</a>
+   </li>
+   <li>
+      <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a>
+   </li>
+   <li>
+      <a href="#hasMonth" title="http://w3id.org/trajecto/temporal-dwell#hasMonth">has month</a>
+   </li>
+   <li>
+      <a href="#hasYear" title="http://w3id.org/trajecto/temporal-dwell#hasYear">has year</a>
+   </li>
+   <li>
+      <a href="#isHoliday"
+         title="http://w3id.org/trajecto/temporal-dwell#isHoliday">is holiday</a>
+   </li>
+   <li>
+      <a href="#temporalAnomalyScore"
+         title="http://w3id.org/trajecto/temporal-dwell#temporalAnomalyScore">temporal anomaly score</a>
+   </li>
+   <li>
+      <a href="#totalDwellTime"
+         title="http://w3id.org/trajecto/temporal-dwell#totalDwellTime">total dwell time</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#afternoon"
+         title="http://w3id.org/trajecto/temporal-dwell#afternoon">Afternoon</a>
+   </li>
+   <li>
+      <a href="#evening" title="http://w3id.org/trajecto/temporal-dwell#evening">Evening</a>
+   </li>
+   <li>
+      <a href="#morning" title="http://w3id.org/trajecto/temporal-dwell#morning">Morning</a>
+   </li>
+   <li>
+      <a href="#night" title="http://w3id.org/trajecto/temporal-dwell#night">Night</a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1626">Afternoon Activity Classification</a>
+   </li>
+   <li>
+      <a href="#d4e1806">Evening Activity Classification</a>
+   </li>
+   <li>
+      <a href="#d4e2125">Morning Activity Classification</a>
+   </li>
+   <li>
+      <a href="#d4e1986">Night Activity Classification</a>
+   </li>
+   <li>
+      <a href="#d4e2305">Night Activity Classification 2</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto-temporal-dwell: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module extends the trajecto ontology with comprehensive temporal context and dwell time analytics capabilities, integrating temporal patterns with spatial behavior analysis.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto-temporal-dwell classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto-temporal-dwell.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a></li>
+  <li><a href="#AfternoonActivity" title="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity">Afternoon Activity</a></li>
+  <li><a href="#AnomalousDwell" title="http://w3id.org/trajecto/temporal-dwell#AnomalousDwell">Anomalous Dwell</a></li>
+  <li><a href="#BriefDwell" title="http://w3id.org/trajecto/temporal-dwell#BriefDwell">Brief Dwell</a></li>
+  <li><a href="#CommutingHours" title="http://w3id.org/trajecto/temporal-dwell#CommutingHours">Commuting Hours</a></li>
+  <li><a href="#ComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a></li>
+  <li><a href="#DailyDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#DailyDwellPattern">Daily Dwell Pattern</a></li>
+  <li><a href="#DecreasingTrend" title="http://w3id.org/trajecto/temporal-dwell#DecreasingTrend">Decreasing Trend</a></li>
+  <li><a href="#DurationAnomaly" title="http://w3id.org/trajecto/temporal-dwell#DurationAnomaly">Duration Anomaly</a></li>
+  <li><a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a></li>
+  <li><a href="#DwellClassification" title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a></li>
+  <li><a href="#DwellDuration" title="http://w3id.org/trajecto/temporal-dwell#DwellDuration">Dwell Duration</a></li>
+  <li><a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a></li>
+  <li><a href="#DwellTrend" title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a></li>
+  <li><a href="#EngagementLevel" title="http://w3id.org/trajecto/temporal-dwell#EngagementLevel">Engagement Level</a></li>
+  <li><a href="#EveningActivity" title="http://w3id.org/trajecto/temporal-dwell#EveningActivity">Evening Activity</a></li>
+  <li><a href="#ExtendedDwell" title="http://w3id.org/trajecto/temporal-dwell#ExtendedDwell">Extended Dwell</a></li>
+  <li><a href="#FrequencyAnomaly" title="http://w3id.org/trajecto/temporal-dwell#FrequencyAnomaly">Frequency Anomaly</a></li>
+  <li><a href="#HighEngagement" title="http://w3id.org/trajecto/temporal-dwell#HighEngagement">High Engagement</a></li>
+  <li><a href="#IncreasingTrend" title="http://w3id.org/trajecto/temporal-dwell#IncreasingTrend">Increasing Trend</a></li>
+  <li><a href="#LeisureHours" title="http://w3id.org/trajecto/temporal-dwell#LeisureHours">Leisure Hours</a></li>
+  <li><a href="#LowEngagement" title="http://w3id.org/trajecto/temporal-dwell#LowEngagement">Low Engagement</a></li>
+  <li><a href="#LunchHours" title="http://w3id.org/trajecto/temporal-dwell#LunchHours">Lunch Hours</a></li>
+  <li><a href="#MediumEngagement" title="http://w3id.org/trajecto/temporal-dwell#MediumEngagement">Medium Engagement</a></li>
+  <li><a href="#ModerateDwell" title="http://w3id.org/trajecto/temporal-dwell#ModerateDwell">Moderate Dwell</a></li>
+  <li><a href="#MorningActivity" title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a></li>
+  <li><a href="#NightActivity" title="http://w3id.org/trajecto/temporal-dwell#NightActivity">Night Activity</a></li>
+  <li><a href="#POIComparison" title="http://w3id.org/trajecto/temporal-dwell#POIComparison">POI Comparison</a></li>
+  <li><a href="#SeasonalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#SeasonalDwellPattern">Seasonal Dwell Pattern</a></li>
+  <li><a href="#StableTrend" title="http://w3id.org/trajecto/temporal-dwell#StableTrend">Stable Trend</a></li>
+  <li><a href="#TemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a></li>
+  <li><a href="#TemporalComparison" title="http://w3id.org/trajecto/temporal-dwell#TemporalComparison">Temporal Comparison</a></li>
+  <li><a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a></li>
+  <li><a href="#TemporalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">Temporal Dwell Pattern</a></li>
+  <li><a href="#TimeSlot" title="http://w3id.org/trajecto/temporal-dwell#TimeSlot">Time Slot</a></li>
+  <li><a href="#UnusualTimingAnomaly" title="http://w3id.org/trajecto/temporal-dwell#UnusualTimingAnomaly">Unusual Timing Anomaly</a></li>
+  <li><a href="#VisitorTypeComparison" title="http://w3id.org/trajecto/temporal-dwell#VisitorTypeComparison">Visitor Type Comparison</a></li>
+  <li><a href="#VolatileTrend" title="http://w3id.org/trajecto/temporal-dwell#VolatileTrend">Volatile Trend</a></li>
+  <li><a href="#WeekdayDwelling" title="http://w3id.org/trajecto/temporal-dwell#WeekdayDwelling">Weekday Dwelling</a></li>
+  <li><a href="#WeekendDwelling" title="http://w3id.org/trajecto/temporal-dwell#WeekendDwelling">Weekend Dwelling</a></li>
+  <li><a href="#WeeklyDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#WeeklyDwellPattern">Weekly Dwell Pattern</a></li>
+  <li><a href="#WorkingHours" title="http://w3id.org/trajecto/temporal-dwell#WorkingHours">Working Hours</a></li>
+ </ul>
+ <div class="entity" id="ActivityPeriod">
+  <h3>Activity Period<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#ActivityPeriod</p>
+  <div class="comment">
+   <span class="markdown">Classification of time periods based on typical activity patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context#TemporalContext" target="_blank" title="http://w3id.org/trajecto/context#TemporalContext">Temporal Context</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AfternoonActivity" title="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity">Afternoon Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#CommutingHours" title="http://w3id.org/trajecto/temporal-dwell#CommutingHours">Commuting Hours</a> <sup class="type-c" title="class">c</sup>, <a href="#EveningActivity" title="http://w3id.org/trajecto/temporal-dwell#EveningActivity">Evening Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#LeisureHours" title="http://w3id.org/trajecto/temporal-dwell#LeisureHours">Leisure Hours</a> <sup class="type-c" title="class">c</sup>, <a href="#LunchHours" title="http://w3id.org/trajecto/temporal-dwell#LunchHours">Lunch Hours</a> <sup class="type-c" title="class">c</sup>, <a href="#MorningActivity" title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#NightActivity" title="http://w3id.org/trajecto/temporal-dwell#NightActivity">Night Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#WorkingHours" title="http://w3id.org/trajecto/temporal-dwell#WorkingHours">Working Hours</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod">has activity period</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AfternoonActivity">
+  <h3>Afternoon Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#AfternoonActivity</p>
+  <div class="comment">
+   <span class="markdown">Dwell activity occurring during afternoon hours.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AnomalousDwell">
+  <h3>Anomalous Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#AnomalousDwell</p>
+  <div class="comment">
+   <span class="markdown">Dwell events that deviate significantly from expected patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellClassification" title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BriefDwell">
+  <h3>Brief Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#BriefDwell</p>
+  <div class="comment">
+   <span class="markdown">Very short dwell events (typically less than 5 minutes).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/patterns#BriefDwell" target="_blank" title="http://w3id.org/trajecto/patterns#BriefDwell">Brief Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#DwellClassification" title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CommutingHours">
+  <h3>Commuting Hours<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#CommutingHours</p>
+  <div class="comment">
+   <span class="markdown">Peak commuting hours (typically 7-9 AM and 5-7 PM on weekdays).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComparativeDwellMetrics">
+  <h3>Comparative Dwell Metrics<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics</p>
+  <div class="comment">
+   <span class="markdown">Metrics for comparing dwell behavior across different contexts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#POIComparison" title="http://w3id.org/trajecto/temporal-dwell#POIComparison">POI Comparison</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalComparison" title="http://w3id.org/trajecto/temporal-dwell#TemporalComparison">Temporal Comparison</a> <sup class="type-c" title="class">c</sup>, <a href="#VisitorTypeComparison" title="http://w3id.org/trajecto/temporal-dwell#VisitorTypeComparison">Visitor Type Comparison</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#hasComparativeDwellMetrics">has comparative dwell metrics</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DailyDwellPattern">
+  <h3>Daily Dwell Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DailyDwellPattern</p>
+  <div class="comment">
+   <span class="markdown">Dwell patterns that repeat on a daily basis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">Temporal Dwell Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DecreasingTrend">
+  <h3>Decreasing Trend<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DecreasingTrend</p>
+  <div class="comment">
+   <span class="markdown">Decreasing trend in dwell time or frequency.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellTrend" title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DurationAnomaly">
+  <h3>Duration Anomaly<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DurationAnomaly</p>
+  <div class="comment">
+   <span class="markdown">Dwell events with unusually long or short durations.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DwellAnalytics">
+  <h3>Dwell Analytics<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DwellAnalytics</p>
+  <div class="comment">
+   <span class="markdown">Comprehensive analytics and metrics derived from dwell events.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A collection of analytical measures, statistics, and insights derived from dwell behavior patterns.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a> <sup class="type-c" title="class">c</sup>, <a href="#DwellTrend" title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#averageDwellTime" title="http://w3id.org/trajecto/temporal-dwell#averageDwellTime">average dwell time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dwellFrequency" title="http://w3id.org/trajecto/temporal-dwell#dwellFrequency">dwell frequency</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dwellVariability" title="http://w3id.org/trajecto/temporal-dwell#dwellVariability">dwell variability</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#totalDwellTime" title="http://w3id.org/trajecto/temporal-dwell#totalDwellTime">total dwell time</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#hasDwellAnalytics">has dwell analytics</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DwellClassification">
+  <h3>Dwell Classification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DwellClassification</p>
+  <div class="comment">
+   <span class="markdown">Classification of dwell events based on duration and behavioral characteristics.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AnomalousDwell" title="http://w3id.org/trajecto/temporal-dwell#AnomalousDwell">Anomalous Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#BriefDwell" title="http://w3id.org/trajecto/temporal-dwell#BriefDwell">Brief Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#ExtendedDwell" title="http://w3id.org/trajecto/temporal-dwell#ExtendedDwell">Extended Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#ModerateDwell" title="http://w3id.org/trajecto/temporal-dwell#ModerateDwell">Moderate Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDwellClassification" title="http://w3id.org/trajecto/temporal-dwell#hasDwellClassification">has dwell classification</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DwellDuration">
+  <h3>Dwell Duration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DwellDuration</p>
+  <div class="comment">
+   <span class="markdown">Duration of time spent dwelling at a location.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A measured time interval representing the duration of a dwell event.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval">Time Interval</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#dwellDurationMinutes" title="http://w3id.org/trajecto/temporal-dwell#dwellDurationMinutes">dwell duration minutes</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dwellDurationSeconds" title="http://w3id.org/trajecto/temporal-dwell#dwellDurationSeconds">dwell duration seconds</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDwellDuration" title="http://w3id.org/trajecto/temporal-dwell#hasDwellDuration">has dwell duration</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DwellEvent">
+  <h3>Dwell Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DwellEvent</p>
+  <div class="comment">
+   <span class="markdown">An event representing time spent dwelling at a specific location or point of interest.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A measurable period of time during which a moving entity remains stationary or moves slowly within a defined area, typically associated with engagement at a point of interest.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto#Interaction" target="_blank" title="http://w3id.org/trajecto#Interaction">Interaction</a> <sup class="type-c" title="class">c</sup>, <a href="http://w3id.org/trajecto/poi#POIInteraction" target="_blank" title="http://w3id.org/trajecto/poi#POIInteraction">P O I Interaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#dwellEndTime" title="http://w3id.org/trajecto/temporal-dwell#dwellEndTime">dwell end time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dwellStartTime" title="http://w3id.org/trajecto/temporal-dwell#dwellStartTime">dwell start time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dwellsAt" title="http://w3id.org/trajecto/temporal-dwell#dwellsAt">dwells at</a> <sup class="type-op" title="object property">op</sup>, <a href="#engagementScore" title="http://w3id.org/trajecto/temporal-dwell#engagementScore">engagement score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#followedBy" title="http://w3id.org/trajecto/temporal-dwell#followedBy">followed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod">has activity period</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDayOfWeek" title="http://w3id.org/trajecto/temporal-dwell#hasDayOfWeek">has day of week</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDwellClassification" title="http://w3id.org/trajecto/temporal-dwell#hasDwellClassification">has dwell classification</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDwellDuration" title="http://w3id.org/trajecto/temporal-dwell#hasDwellDuration">has dwell duration</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMonth" title="http://w3id.org/trajecto/temporal-dwell#hasMonth">has month</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSeasonalContext" title="http://w3id.org/trajecto/temporal-dwell#hasSeasonalContext">has seasonal context</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly">has temporal anomaly</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext">has temporal dwell context</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTemporalPattern" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern">has temporal pattern</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTimeOfDay" title="http://w3id.org/trajecto/temporal-dwell#hasTimeOfDay">has time of day</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasWeekdayClassification" title="http://w3id.org/trajecto/temporal-dwell#hasWeekdayClassification">has weekday classification</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasYear" title="http://w3id.org/trajecto/temporal-dwell#hasYear">has year</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isHoliday" title="http://w3id.org/trajecto/temporal-dwell#isHoliday">is holiday</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#occursDuringTimeSlot" title="http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot">occurs during time slot</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#followedBy" title="http://w3id.org/trajecto/temporal-dwell#followedBy">followed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDwellEvent" title="http://w3id.org/trajecto/temporal-dwell#hasDwellEvent">has dwell event</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DwellTrend">
+  <h3>Dwell Trend<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#DwellTrend</p>
+  <div class="comment">
+   <span class="markdown">Trend analysis of dwell behavior over time.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DecreasingTrend" title="http://w3id.org/trajecto/temporal-dwell#DecreasingTrend">Decreasing Trend</a> <sup class="type-c" title="class">c</sup>, <a href="#IncreasingTrend" title="http://w3id.org/trajecto/temporal-dwell#IncreasingTrend">Increasing Trend</a> <sup class="type-c" title="class">c</sup>, <a href="#StableTrend" title="http://w3id.org/trajecto/temporal-dwell#StableTrend">Stable Trend</a> <sup class="type-c" title="class">c</sup>, <a href="#VolatileTrend" title="http://w3id.org/trajecto/temporal-dwell#VolatileTrend">Volatile Trend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EngagementLevel">
+  <h3>Engagement Level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#EngagementLevel</p>
+  <div class="comment">
+   <span class="markdown">Level of engagement indicated by dwell behavior.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality">Quality</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#HighEngagement" title="http://w3id.org/trajecto/temporal-dwell#HighEngagement">High Engagement</a> <sup class="type-c" title="class">c</sup>, <a href="#LowEngagement" title="http://w3id.org/trajecto/temporal-dwell#LowEngagement">Low Engagement</a> <sup class="type-c" title="class">c</sup>, <a href="#MediumEngagement" title="http://w3id.org/trajecto/temporal-dwell#MediumEngagement">Medium Engagement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EveningActivity">
+  <h3>Evening Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#EveningActivity</p>
+  <div class="comment">
+   <span class="markdown">Dwell activity occurring during evening hours.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExtendedDwell">
+  <h3>Extended Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#ExtendedDwell</p>
+  <div class="comment">
+   <span class="markdown">Long duration dwell events (typically more than 30 minutes).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellClassification" title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a> <sup class="type-c" title="class">c</sup>, <a href="http://w3id.org/trajecto/patterns#FocusedDwell" target="_blank" title="http://w3id.org/trajecto/patterns#FocusedDwell">Focused Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FrequencyAnomaly">
+  <h3>Frequency Anomaly<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#FrequencyAnomaly</p>
+  <div class="comment">
+   <span class="markdown">Unusual frequency of dwell events at specific locations or times.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HighEngagement">
+  <h3>High Engagement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#HighEngagement</p>
+  <div class="comment">
+   <span class="markdown">High level of engagement indicated by extended dwell times.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EngagementLevel" title="http://w3id.org/trajecto/temporal-dwell#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IncreasingTrend">
+  <h3>Increasing Trend<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#IncreasingTrend</p>
+  <div class="comment">
+   <span class="markdown">Increasing trend in dwell time or frequency.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellTrend" title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LeisureHours">
+  <h3>Leisure Hours<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#LeisureHours</p>
+  <div class="comment">
+   <span class="markdown">Leisure time periods including evenings and weekends.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LowEngagement">
+  <h3>Low Engagement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#LowEngagement</p>
+  <div class="comment">
+   <span class="markdown">Low level of engagement indicated by brief dwell times.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EngagementLevel" title="http://w3id.org/trajecto/temporal-dwell#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LunchHours">
+  <h3>Lunch Hours<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#LunchHours</p>
+  <div class="comment">
+   <span class="markdown">Typical lunch time period (typically 11 AM - 2 PM).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediumEngagement">
+  <h3>Medium Engagement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#MediumEngagement</p>
+  <div class="comment">
+   <span class="markdown">Medium level of engagement indicated by moderate dwell times.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EngagementLevel" title="http://w3id.org/trajecto/temporal-dwell#EngagementLevel">Engagement Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModerateDwell">
+  <h3>Moderate Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#ModerateDwell</p>
+  <div class="comment">
+   <span class="markdown">Moderate duration dwell events (typically 5-30 minutes).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellClassification" title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MorningActivity">
+  <h3>Morning Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#MorningActivity</p>
+  <div class="comment">
+   <span class="markdown">Dwell activity occurring during morning hours.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NightActivity">
+  <h3>Night Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#NightActivity</p>
+  <div class="comment">
+   <span class="markdown">Dwell activity occurring during night hours.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>, <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="POIComparison">
+  <h3>POI Comparison<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#POIComparison</p>
+  <div class="comment">
+   <span class="markdown">Comparison of dwell metrics across different POIs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeasonalDwellPattern">
+  <h3>Seasonal Dwell Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#SeasonalDwellPattern</p>
+  <div class="comment">
+   <span class="markdown">Dwell patterns that vary by season.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">Temporal Dwell Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StableTrend">
+  <h3>Stable Trend<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#StableTrend</p>
+  <div class="comment">
+   <span class="markdown">Stable, consistent dwell behavior over time.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellTrend" title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TemporalAnomaly">
+  <h3>Temporal Anomaly<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly</p>
+  <div class="comment">
+   <span class="markdown">Detected anomalies in temporal dwell patterns.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A deviation from expected temporal patterns in dwell behavior.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">Abstract</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DurationAnomaly" title="http://w3id.org/trajecto/temporal-dwell#DurationAnomaly">Duration Anomaly</a> <sup class="type-c" title="class">c</sup>, <a href="#FrequencyAnomaly" title="http://w3id.org/trajecto/temporal-dwell#FrequencyAnomaly">Frequency Anomaly</a> <sup class="type-c" title="class">c</sup>, <a href="#UnusualTimingAnomaly" title="http://w3id.org/trajecto/temporal-dwell#UnusualTimingAnomaly">Unusual Timing Anomaly</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#temporalAnomalyScore" title="http://w3id.org/trajecto/temporal-dwell#temporalAnomalyScore">temporal anomaly score</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly">has temporal anomaly</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TemporalComparison">
+  <h3>Temporal Comparison<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#TemporalComparison</p>
+  <div class="comment">
+   <span class="markdown">Comparison of dwell metrics across different time periods.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TemporalDwellContext">
+  <h3>Temporal Dwell Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext</p>
+  <div class="comment">
+   <span class="markdown">Temporal context specifically related to dwell behavior.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Contextual information that describes the temporal circumstances and patterns associated with dwell events.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context#MovementContext" target="_blank" title="http://w3id.org/trajecto/context#MovementContext">Movement Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>, <a href="#AfternoonActivity" title="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity">Afternoon Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#EveningActivity" title="http://w3id.org/trajecto/temporal-dwell#EveningActivity">Evening Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#MorningActivity" title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#NightActivity" title="http://w3id.org/trajecto/temporal-dwell#NightActivity">Night Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#TimeSlot" title="http://w3id.org/trajecto/temporal-dwell#TimeSlot">Time Slot</a> <sup class="type-c" title="class">c</sup>, <a href="#WeekdayDwelling" title="http://w3id.org/trajecto/temporal-dwell#WeekdayDwelling">Weekday Dwelling</a> <sup class="type-c" title="class">c</sup>, <a href="#WeekendDwelling" title="http://w3id.org/trajecto/temporal-dwell#WeekendDwelling">Weekend Dwelling</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext">has temporal dwell context</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TemporalDwellPattern">
+  <h3>Temporal Dwell Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern</p>
+  <div class="comment">
+   <span class="markdown">Patterns in dwelling behavior over temporal dimensions.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Recurring patterns or regularities in dwell behavior across different temporal contexts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/patterns#BehavioralPattern" target="_blank" title="http://w3id.org/trajecto/patterns#BehavioralPattern">Behavioral Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DailyDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#DailyDwellPattern">Daily Dwell Pattern</a> <sup class="type-c" title="class">c</sup>, <a href="#SeasonalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#SeasonalDwellPattern">Seasonal Dwell Pattern</a> <sup class="type-c" title="class">c</sup>, <a href="#WeeklyDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#WeeklyDwellPattern">Weekly Dwell Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTemporalPattern" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern">has temporal pattern</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TimeSlot">
+  <h3>Time Slot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#TimeSlot</p>
+  <div class="comment">
+   <span class="markdown">A defined time slot or period for temporal analysis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#occursDuringTimeSlot" title="http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot">occurs during time slot</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UnusualTimingAnomaly">
+  <h3>Unusual Timing Anomaly<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#UnusualTimingAnomaly</p>
+  <div class="comment">
+   <span class="markdown">Dwell events occurring at unusual times.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VisitorTypeComparison">
+  <h3>Visitor Type Comparison<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#VisitorTypeComparison</p>
+  <div class="comment">
+   <span class="markdown">Comparison of dwell metrics across different visitor types.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VolatileTrend">
+  <h3>Volatile Trend<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#VolatileTrend</p>
+  <div class="comment">
+   <span class="markdown">Highly variable, unpredictable dwell behavior.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellTrend" title="http://w3id.org/trajecto/temporal-dwell#DwellTrend">Dwell Trend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WeekdayDwelling">
+  <h3>Weekday Dwelling<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#WeekdayDwelling</p>
+  <div class="comment">
+   <span class="markdown">Dwell activity occurring on weekdays.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>, <a href="http://w3id.org/trajecto/context#Weekday" target="_blank" title="http://w3id.org/trajecto/context#Weekday">Weekday</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WeekendDwelling">
+  <h3>Weekend Dwelling<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#WeekendDwelling</p>
+  <div class="comment">
+   <span class="markdown">Dwell activity occurring on weekends.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>, <a href="http://w3id.org/trajecto/context#Weekend" target="_blank" title="http://w3id.org/trajecto/context#Weekend">Weekend</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WeeklyDwellPattern">
+  <h3>Weekly Dwell Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#WeeklyDwellPattern</p>
+  <div class="comment">
+   <span class="markdown">Dwell patterns that repeat on a weekly basis.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TemporalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">Temporal Dwell Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WorkingHours">
+  <h3>Working Hours<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#WorkingHours</p>
+  <div class="comment">
+   <span class="markdown">Standard working hours period (typically 9 AM - 5 PM on weekdays).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#dwellsAt" title="http://w3id.org/trajecto/temporal-dwell#dwellsAt">dwells at</a></li>
+  <li><a href="#followedBy" title="http://w3id.org/trajecto/temporal-dwell#followedBy">followed by</a></li>
+  <li><a href="#hasActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod">has activity period</a></li>
+  <li><a href="#hasComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#hasComparativeDwellMetrics">has comparative dwell metrics</a></li>
+  <li><a href="#hasDwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#hasDwellAnalytics">has dwell analytics</a></li>
+  <li><a href="#hasDwellClassification" title="http://w3id.org/trajecto/temporal-dwell#hasDwellClassification">has dwell classification</a></li>
+  <li><a href="#hasDwellDuration" title="http://w3id.org/trajecto/temporal-dwell#hasDwellDuration">has dwell duration</a></li>
+  <li><a href="#hasDwellEvent" title="http://w3id.org/trajecto/temporal-dwell#hasDwellEvent">has dwell event</a></li>
+  <li><a href="#hasSeasonalContext" title="http://w3id.org/trajecto/temporal-dwell#hasSeasonalContext">has seasonal context</a></li>
+  <li><a href="#hasTemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly">has temporal anomaly</a></li>
+  <li><a href="#hasTemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext">has temporal dwell context</a></li>
+  <li><a href="#hasTemporalPattern" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern">has temporal pattern</a></li>
+  <li><a href="#hasTimeOfDay" title="http://w3id.org/trajecto/temporal-dwell#hasTimeOfDay">has time of day</a></li>
+  <li><a href="#hasWeekdayClassification" title="http://w3id.org/trajecto/temporal-dwell#hasWeekdayClassification">has weekday classification</a></li>
+  <li><a href="#occursDuringTimeSlot" title="http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot">occurs during time slot</a></li>
+ </ul>
+ <div class="entity" id="dwellsAt">
+  <h3>dwells at<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellsAt</p>
+  <div class="comment">
+   <span class="markdown">Specifies the point of interest where dwelling occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#hasPointOfInterest" target="_blank" title="http://w3id.org/trajecto#hasPointOfInterest">has Point Of Interest</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#PointOfInterest" target="_blank" title="http://w3id.org/trajecto#PointOfInterest">Point Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="followedBy">
+  <h3>followed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#followedBy</p>
+  <div class="comment">
+   <span class="markdown">Indicates temporal sequence between dwell events.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasActivityPeriod">
+  <h3>has activity period<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with the type of activity period it occurs in.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasTemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext">has temporal dwell context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#ActivityPeriod">Activity Period</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasComparativeDwellMetrics">
+  <h3>has comparative dwell metrics<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasComparativeDwellMetrics</p>
+  <div class="comment">
+   <span class="markdown">Associates a POI with comparative dwell time metrics.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#PointOfInterest" target="_blank" title="http://w3id.org/trajecto#PointOfInterest">Point Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ComparativeDwellMetrics" title="http://w3id.org/trajecto/temporal-dwell#ComparativeDwellMetrics">Comparative Dwell Metrics</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDwellAnalytics">
+  <h3>has dwell analytics<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasDwellAnalytics</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its comprehensive dwell analytics.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDwellClassification">
+  <h3>has dwell classification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasDwellClassification</p>
+  <div class="comment">
+   <span class="markdown">Classifies a dwell event based on duration and behavioral characteristics.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DwellClassification" title="http://w3id.org/trajecto/temporal-dwell#DwellClassification">Dwell Classification</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDwellDuration">
+  <h3>has dwell duration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasDwellDuration</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with its duration measurement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DwellDuration" title="http://w3id.org/trajecto/temporal-dwell#DwellDuration">Dwell Duration</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDwellEvent">
+  <h3>has dwell event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasDwellEvent</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory part with a dwell event that occurred there.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated With</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSeasonalContext">
+  <h3>has seasonal context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasSeasonalContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with seasonal context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#Season" target="_blank" title="http://w3id.org/trajecto/context#Season">Season</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalAnomaly">
+  <h3>has temporal anomaly<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasTemporalAnomaly</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with detected temporal anomalies.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalDwellContext">
+  <h3>has temporal dwell context<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasTemporalDwellContext</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with its temporal context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#hasMovementContext" target="_blank" title="http://w3id.org/trajecto/context#hasMovementContext">has Movement Context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasActivityPeriod" title="http://w3id.org/trajecto/temporal-dwell#hasActivityPeriod">has activity period</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TemporalDwellContext" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellContext">Temporal Dwell Context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalPattern">
+  <h3>has temporal pattern<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasTemporalPattern</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with temporal patterns it exhibits.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/patterns#exhibitsPattern" target="_blank" title="http://w3id.org/trajecto/patterns#exhibitsPattern">exhibits Pattern</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TemporalDwellPattern" title="http://w3id.org/trajecto/temporal-dwell#TemporalDwellPattern">Temporal Dwell Pattern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTimeOfDay">
+  <h3>has time of day<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasTimeOfDay</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with its time of day classification.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#TimeOfDay" target="_blank" title="http://w3id.org/trajecto/context#TimeOfDay">Time Of Day</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasWeekdayClassification">
+  <h3>has weekday classification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasWeekdayClassification</p>
+  <div class="comment">
+   <span class="markdown">Associates a dwell event with weekday vs weekend classification.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto/context#Weekpart" target="_blank" title="http://w3id.org/trajecto/context#Weekpart">Weekpart</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="occursDuringTimeSlot">
+  <h3>occurs during time slot<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#occursDuringTimeSlot</p>
+  <div class="comment">
+   <span class="markdown">Indicates the time slot during which the dwell event occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TimeSlot" title="http://w3id.org/trajecto/temporal-dwell#TimeSlot">Time Slot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#averageDwellTime" title="http://w3id.org/trajecto/temporal-dwell#averageDwellTime">average dwell time</a></li>
+  <li><a href="#dwellDurationMinutes" title="http://w3id.org/trajecto/temporal-dwell#dwellDurationMinutes">dwell duration minutes</a></li>
+  <li><a href="#dwellDurationSeconds" title="http://w3id.org/trajecto/temporal-dwell#dwellDurationSeconds">dwell duration seconds</a></li>
+  <li><a href="#dwellEndTime" title="http://w3id.org/trajecto/temporal-dwell#dwellEndTime">dwell end time</a></li>
+  <li><a href="#dwellFrequency" title="http://w3id.org/trajecto/temporal-dwell#dwellFrequency">dwell frequency</a></li>
+  <li><a href="#dwellStartTime" title="http://w3id.org/trajecto/temporal-dwell#dwellStartTime">dwell start time</a></li>
+  <li><a href="#dwellVariability" title="http://w3id.org/trajecto/temporal-dwell#dwellVariability">dwell variability</a></li>
+  <li><a href="#engagementScore" title="http://w3id.org/trajecto/temporal-dwell#engagementScore">engagement score</a></li>
+  <li><a href="#hasDayOfWeek" title="http://w3id.org/trajecto/temporal-dwell#hasDayOfWeek">has day of week</a></li>
+  <li><a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a></li>
+  <li><a href="#hasMonth" title="http://w3id.org/trajecto/temporal-dwell#hasMonth">has month</a></li>
+  <li><a href="#hasYear" title="http://w3id.org/trajecto/temporal-dwell#hasYear">has year</a></li>
+  <li><a href="#isHoliday" title="http://w3id.org/trajecto/temporal-dwell#isHoliday">is holiday</a></li>
+  <li><a href="#temporalAnomalyScore" title="http://w3id.org/trajecto/temporal-dwell#temporalAnomalyScore">temporal anomaly score</a></li>
+  <li><a href="#totalDwellTime" title="http://w3id.org/trajecto/temporal-dwell#totalDwellTime">total dwell time</a></li>
+ </ul>
+ <div class="entity" id="averageDwellTime">
+  <h3>average dwell time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#averageDwellTime</p>
+  <div class="comment">
+   <span class="markdown">Average dwell time in minutes for analytical aggregation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dwellDurationMinutes">
+  <h3>dwell duration minutes<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellDurationMinutes</p>
+  <div class="comment">
+   <span class="markdown">Duration of dwelling in minutes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellDuration" title="http://w3id.org/trajecto/temporal-dwell#DwellDuration">Dwell Duration</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dwellDurationSeconds">
+  <h3>dwell duration seconds<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellDurationSeconds</p>
+  <div class="comment">
+   <span class="markdown">Duration of dwelling in seconds for precise measurement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellDuration" title="http://w3id.org/trajecto/temporal-dwell#DwellDuration">Dwell Duration</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dwellEndTime">
+  <h3>dwell end time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellEndTime</p>
+  <div class="comment">
+   <span class="markdown">End timestamp of the dwell event.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dwellFrequency">
+  <h3>dwell frequency<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellFrequency</p>
+  <div class="comment">
+   <span class="markdown">Number of dwell events in the analysis period.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dwellStartTime">
+  <h3>dwell start time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellStartTime</p>
+  <div class="comment">
+   <span class="markdown">Start timestamp of the dwell event.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dwellVariability">
+  <h3>dwell variability<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#dwellVariability</p>
+  <div class="comment">
+   <span class="markdown">Standard deviation of dwell times indicating variability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="engagementScore">
+  <h3>engagement score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#engagementScore</p>
+  <div class="comment">
+   <span class="markdown">Calculated engagement score (0.0-1.0) based on dwell duration and context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDayOfWeek">
+  <h3>has day of week<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasDayOfWeek</p>
+  <div class="comment">
+   <span class="markdown">Day of week (1=Monday, 7=Sunday) when dwell event occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasHour">
+  <h3>has hour<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasHour</p>
+  <div class="comment">
+   <span class="markdown">Hour of day (0-23) when dwell event starts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMonth">
+  <h3>has month<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasMonth</p>
+  <div class="comment">
+   <span class="markdown">Month of year (1-12) when dwell event occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasYear">
+  <h3>has year<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#hasYear</p>
+  <div class="comment">
+   <span class="markdown">Year when dwell event occurs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isHoliday">
+  <h3>is holiday<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#isHoliday</p>
+  <div class="comment">
+   <span class="markdown">Boolean indicating if the dwell event occurs on a holiday.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellEvent" title="http://w3id.org/trajecto/temporal-dwell#DwellEvent">Dwell Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="temporalAnomalyScore">
+  <h3>temporal anomaly score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#temporalAnomalyScore</p>
+  <div class="comment">
+   <span class="markdown">Score indicating degree of temporal anomaly (higher = more anomalous).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TemporalAnomaly" title="http://w3id.org/trajecto/temporal-dwell#TemporalAnomaly">Temporal Anomaly</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="totalDwellTime">
+  <h3>total dwell time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#totalDwellTime</p>
+  <div class="comment">
+   <span class="markdown">Total cumulative dwell time in minutes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DwellAnalytics" title="http://w3id.org/trajecto/temporal-dwell#DwellAnalytics">Dwell Analytics</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#afternoon" title="http://w3id.org/trajecto/temporal-dwell#afternoon">Afternoon</a></li>
+  <li><a href="#evening" title="http://w3id.org/trajecto/temporal-dwell#evening">Evening</a></li>
+  <li><a href="#morning" title="http://w3id.org/trajecto/temporal-dwell#morning">Morning</a></li>
+  <li><a href="#night" title="http://w3id.org/trajecto/temporal-dwell#night">Night</a></li>
+ </ul>
+ <div class="entity" id="afternoon">
+  <h3>Afternoon<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#afternoon</p>
+  <div class="comment">
+   <span class="markdown">The afternoon time of day, as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context#Afternoon" target="_blank" title="http://w3id.org/trajecto/context#Afternoon">Afternoon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="evening">
+  <h3>Evening<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#evening</p>
+  <div class="comment">
+   <span class="markdown">The evening time of day, as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context#Evening" target="_blank" title="http://w3id.org/trajecto/context#Evening">Evening</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="morning">
+  <h3>Morning<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#morning</p>
+  <div class="comment">
+   <span class="markdown">The morning time of day, as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context#Morning" target="_blank" title="http://w3id.org/trajecto/context#Morning">Morning</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="night">
+  <h3>Night<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/temporal-dwell#night</p>
+  <div class="comment">
+   <span class="markdown">The night time of day, as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/temporal-dwell">http://w3id.org/trajecto/temporal-dwell</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/context#Night" target="_blank" title="http://w3id.org/trajecto/context#Night">Night</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1626">Afternoon Activity Classification</a></li>
+  <li><a href="#d4e1806">Evening Activity Classification</a></li>
+  <li><a href="#d4e2125">Morning Activity Classification</a></li>
+  <li><a href="#d4e1986">Night Activity Classification</a></li>
+  <li><a href="#d4e2305">Night Activity Classification 2</a></li>
+ </ul>
+ <div class="entity" id="d4e1626">
+  <h3>Afternoon Activity Classification<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>(?part) , <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a> <sup class="type-dp" title="data property">dp</sup>(?part,?hr) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) -&gt; <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>(?part,?afternoon) , <a href="#AfternoonActivity" title="http://w3id.org/trajecto/temporal-dwell#AfternoonActivity">Afternoon Activity</a> <sup class="type-c" title="class">c</sup>(?part)</p>
+ </div>
+ <div class="entity" id="d4e1806">
+  <h3>Evening Activity Classification<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>(?part) , <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a> <sup class="type-dp" title="data property">dp</sup>(?part,?hr) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) -&gt; <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>(?part,?evening) , <a href="#EveningActivity" title="http://w3id.org/trajecto/temporal-dwell#EveningActivity">Evening Activity</a> <sup class="type-c" title="class">c</sup>(?part)</p>
+ </div>
+ <div class="entity" id="d4e2125">
+  <h3>Morning Activity Classification<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>(?part) , <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a> <sup class="type-dp" title="data property">dp</sup>(?part,?hr) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) -&gt; <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>(?part,?morning) , <a href="#MorningActivity" title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a> <sup class="type-c" title="class">c</sup>(?part)</p>
+ </div>
+ <div class="entity" id="d4e1986">
+  <h3>Night Activity Classification<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>(?part) , <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a> <sup class="type-dp" title="data property">dp</sup>(?part,?hr) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) -&gt; <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>(?part,?night) , <a href="#MorningActivity" title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a> <sup class="type-c" title="class">c</sup>(?part)</p>
+ </div>
+ <div class="entity" id="d4e2305">
+  <h3>Night Activity Classification 2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="http://www.datacron-project.eu/datAcron#TrajectoryPart" target="_blank" title="http://www.datacron-project.eu/datAcron#TrajectoryPart">Trajectory Part</a> <sup class="type-c" title="class">c</sup>(?part) , <a href="#hasHour" title="http://w3id.org/trajecto/temporal-dwell#hasHour">has hour</a> <sup class="type-dp" title="data property">dp</sup>(?part,?hr) , <a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) -&gt; <a href="http://w3id.org/trajecto/context#hasTemporalContext" target="_blank" title="http://w3id.org/trajecto/context#hasTemporalContext">has Temporal Context</a> <sup class="type-op" title="object property">op</sup>(?part,?night) , <a href="#MorningActivity" title="http://w3id.org/trajecto/temporal-dwell#MorningActivity">Morning Activity</a> <sup class="type-c" title="class">c</sup>(?part)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

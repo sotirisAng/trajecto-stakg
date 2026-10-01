@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Trajecto User Profile Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/trajecto/user#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/trajecto/user#","name":"Trajecto User Profile Module", "headline":"User profiles learned from trajectories: a UserProfile per person, a chain of timestamped ProfileSnapshots updated by an exponentially weighted moving average, POI category, dwell and time preferences, visit styles, and the preferences inferred by the semantic rules.", "dateReleased":"2025-01-27", "dateModified":"2026-10-01", "version":"1.1.0", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Sotirios Angelis"},{"@type":"Person","name":"Konstantinos Kotis"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Trajecto User Profile Module</h1>
+<h2>Release: 2025-01-27</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-01</dt>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/trajecto/user/1.1.0">http://w3id.org/trajecto/user/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://w3id.org/trajecto/user/1.0">http://w3id.org/trajecto/user/1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-10-01</dd>
+<dt>Authors:</dt>
+<dd>Sotirios Angelis, University of the Aegean</dd><dd>Konstantinos Kotis, University of the Aegean</dd>
+
+<dt>Publisher:</dt>
+<dd>i-Lab, Department of Cultural Technology and Communication, University of the Aegean</dd>
+<dt>Source:</dt>
+<dd><a href="https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/user.ttl">https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/user.ttl</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC0%201.0%20Universal-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Angelis, S. (2026). Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as Knowledge Graphs. Doctoral dissertation, University of the Aegean.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+User profiles learned from trajectories: a UserProfile per person, a chain of timestamped ProfileSnapshots updated by an exponentially weighted moving average, POI category, dwell and time preferences, visit styles, and the preferences inferred by the semantic rules.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Source: https://github.com/sotirisAng/trajecto-stakg/blob/main/ontology/modules/user.ttl. The whole ontology is documented from http://w3id.org/trajecto (the core module), which imports every module.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>datacron</b></td><td>&lt;http://www.datacron-project.eu/datAcron#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>trajecto</b></td><td>&lt;http://w3id.org/trajecto#&gt;</td></tr>
+<tr><td><b>user</b></td><td>&lt;http://w3id.org/trajecto/user#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">trajecto-user: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#CasualStyle" title="http://w3id.org/trajecto/user#CasualStyle">Casual Style</a>
+   </li>
+   <li>
+      <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a>
+   </li>
+   <li>
+      <a href="#ExploratoryStyle" title="http://w3id.org/trajecto/user#ExploratoryStyle">Exploratory Style</a>
+   </li>
+   <li>
+      <a href="#ImmersiveStyle" title="http://w3id.org/trajecto/user#ImmersiveStyle">Immersive Style</a>
+   </li>
+   <li>
+      <a href="#LongDwell" title="http://w3id.org/trajecto/user#LongDwell">Long Dwell</a>
+   </li>
+   <li>
+      <a href="#MediumDwell" title="http://w3id.org/trajecto/user#MediumDwell">Medium Dwell</a>
+   </li>
+   <li>
+      <a href="#PoiCategoryPreference"
+         title="http://w3id.org/trajecto/user#PoiCategoryPreference">POI Category Preference</a>
+   </li>
+   <li>
+      <a href="#PreferedStyle" title="http://w3id.org/trajecto/user#PreferedStyle">PreferedStyle (deprecated)</a>
+   </li>
+   <li>
+      <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a>
+   </li>
+   <li>
+      <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a>
+   </li>
+   <li>
+      <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a>
+   </li>
+   <li>
+      <a href="#ShortDwell" title="http://w3id.org/trajecto/user#ShortDwell">Short Dwell</a>
+   </li>
+   <li>
+      <a href="#TargetedStyle" title="http://w3id.org/trajecto/user#TargetedStyle">Targeted Style</a>
+   </li>
+   <li>
+      <a href="#TimePreference" title="http://w3id.org/trajecto/user#TimePreference">Time Preference</a>
+   </li>
+   <li>
+      <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a>
+   </li>
+   <li>
+      <a href="#VariableDwell" title="http://w3id.org/trajecto/user#VariableDwell">Variable Dwell</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#belongsToUser" title="http://w3id.org/trajecto/user#belongsToUser">belongs to user</a>
+   </li>
+   <li>
+      <a href="#considersTrajectory"
+         title="http://w3id.org/trajecto/user#considersTrajectory">considers trajectory</a>
+   </li>
+   <li>
+      <a href="#forCategory" title="http://w3id.org/trajecto/user#forCategory">for category</a>
+   </li>
+   <li>
+      <a href="#generatedSnapshot" title="http://w3id.org/trajecto/user#generatedSnapshot">generated snapshot</a>
+   </li>
+   <li>
+      <a href="#hasAffinityFor" title="http://w3id.org/trajecto/user#hasAffinityFor">has affinity for</a>
+   </li>
+   <li>
+      <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a>
+   </li>
+   <li>
+      <a href="#hasInferredPreference"
+         title="http://w3id.org/trajecto/user#hasInferredPreference">has inferred preference</a>
+   </li>
+   <li>
+      <a href="#hasPreference" title="http://w3id.org/trajecto/user#hasPreference">has preference</a>
+   </li>
+   <li>
+      <a href="#hasPreferences" title="http://w3id.org/trajecto/user#hasPreferences">has preferences</a>
+   </li>
+   <li>
+      <a href="#hasProfile" title="http://w3id.org/trajecto/user#hasProfile">has profile</a>
+   </li>
+   <li>
+      <a href="#hasSnapshot" title="http://w3id.org/trajecto/user#hasSnapshot">has snapshot</a>
+   </li>
+   <li>
+      <a href="#hasTimePreference" title="http://w3id.org/trajecto/user#hasTimePreference">has time preference</a>
+   </li>
+   <li>
+      <a href="#hasTrajectory" title="http://w3id.org/trajecto/user#hasTrajectory">has trajectory</a>
+   </li>
+   <li>
+      <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a>
+   </li>
+   <li>
+      <a href="#prefersPoiCategory" title="http://w3id.org/trajecto/user#prefersPoiCategory">prefers POI category</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#alignmentScore" title="http://w3id.org/trajecto/user#alignmentScore">alignment score</a>
+   </li>
+   <li>
+      <a href="#confidenceLevel" title="http://w3id.org/trajecto/user#confidenceLevel">confidence level</a>
+   </li>
+   <li>
+      <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a>
+   </li>
+   <li>
+      <a href="#immersiveFraction" title="http://w3id.org/trajecto/user#immersiveFraction">immersive fraction</a>
+   </li>
+   <li>
+      <a href="#initialPreferences" title="http://w3id.org/trajecto/user#initialPreferences">initial preferences</a>
+   </li>
+   <li>
+      <a href="#interestLevel" title="http://w3id.org/trajecto/user#interestLevel">interest level</a>
+   </li>
+   <li>
+      <a href="#lastUpdated" title="http://w3id.org/trajecto/user#lastUpdated">last updated</a>
+   </li>
+   <li>
+      <a href="#learningRate" title="http://w3id.org/trajecto/user#learningRate">learning rate</a>
+   </li>
+   <li>
+      <a href="#meaningfulFraction" title="http://w3id.org/trajecto/user#meaningfulFraction">meaningful fraction</a>
+   </li>
+   <li>
+      <a href="#observationCount" title="http://w3id.org/trajecto/user#observationCount">observation count</a>
+   </li>
+   <li>
+      <a href="#preferenceScore" title="http://w3id.org/trajecto/user#preferenceScore">preference score</a>
+   </li>
+   <li>
+      <a href="#profileCreated" title="http://w3id.org/trajecto/user#profileCreated">profile created</a>
+   </li>
+   <li>
+      <a href="#totalVisits" title="http://w3id.org/trajecto/user#totalVisits">total visits</a>
+   </li>
+   <li>
+      <a href="#updateTimestamp" title="http://w3id.org/trajecto/user#updateTimestamp">update timestamp</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#businessTravelerPersona"
+         title="http://w3id.org/trajecto/user#businessTravelerPersona">Business Traveler Persona</a>
+   </li>
+   <li>
+      <a href="#casualStyle" title="http://w3id.org/trajecto/user#casualStyle">Casual Visit Style</a>
+   </li>
+   <li>
+      <a href="#culturalEnthusiastPersona"
+         title="http://w3id.org/trajecto/user#culturalEnthusiastPersona">Cultural Enthusiast Persona</a>
+   </li>
+   <li>
+      <a href="#exploratoryStyle" title="http://w3id.org/trajecto/user#exploratoryStyle">Exploratory Visit Style</a>
+   </li>
+   <li>
+      <a href="#immersiveStyle" title="http://w3id.org/trajecto/user#immersiveStyle">Immersive Visit Style</a>
+   </li>
+   <li>
+      <a href="#leisureVisitorPersona"
+         title="http://w3id.org/trajecto/user#leisureVisitorPersona">Leisure Visitor Persona</a>
+   </li>
+   <li>
+      <a href="#longDwellPref" title="http://w3id.org/trajecto/user#longDwellPref">Long Dwell Preference</a>
+   </li>
+   <li>
+      <a href="#mediumDwellPref" title="http://w3id.org/trajecto/user#mediumDwellPref">Medium Dwell Preference</a>
+   </li>
+   <li>
+      <a href="#shortDwellPref" title="http://w3id.org/trajecto/user#shortDwellPref">Short Dwell Preference</a>
+   </li>
+   <li>
+      <a href="#targetedStyle" title="http://w3id.org/trajecto/user#targetedStyle">Targeted Visit Style</a>
+   </li>
+   <li>
+      <a href="#touristExplorerPersona"
+         title="http://w3id.org/trajecto/user#touristExplorerPersona">Tourist Explorer Persona</a>
+   </li>
+   <li>
+      <a href="#variableDwellPref" title="http://w3id.org/trajecto/user#variableDwellPref">Variable Dwell Preference</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">trajecto-user: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">User profiles learned from trajectories: a UserProfile per person, a chain of timestamped ProfileSnapshots updated by an exponentially weighted moving average, POI category, dwell and time preferences, visit styles, and the preferences inferred by the semantic rules.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for trajecto-user classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by trajecto-user.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#CasualStyle" title="http://w3id.org/trajecto/user#CasualStyle">Casual Style</a></li>
+  <li><a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a></li>
+  <li><a href="#ExploratoryStyle" title="http://w3id.org/trajecto/user#ExploratoryStyle">Exploratory Style</a></li>
+  <li><a href="#ImmersiveStyle" title="http://w3id.org/trajecto/user#ImmersiveStyle">Immersive Style</a></li>
+  <li><a href="#LongDwell" title="http://w3id.org/trajecto/user#LongDwell">Long Dwell</a></li>
+  <li><a href="#MediumDwell" title="http://w3id.org/trajecto/user#MediumDwell">Medium Dwell</a></li>
+  <li><a href="#PoiCategoryPreference" title="http://w3id.org/trajecto/user#PoiCategoryPreference">POI Category Preference</a></li>
+  <li><a href="#PreferedStyle" title="http://w3id.org/trajecto/user#PreferedStyle">PreferedStyle (deprecated)</a></li>
+  <li><a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a></li>
+  <li><a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a></li>
+  <li><a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a></li>
+  <li><a href="#ShortDwell" title="http://w3id.org/trajecto/user#ShortDwell">Short Dwell</a></li>
+  <li><a href="#TargetedStyle" title="http://w3id.org/trajecto/user#TargetedStyle">Targeted Style</a></li>
+  <li><a href="#TimePreference" title="http://w3id.org/trajecto/user#TimePreference">Time Preference</a></li>
+  <li><a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a></li>
+  <li><a href="#VariableDwell" title="http://w3id.org/trajecto/user#VariableDwell">Variable Dwell</a></li>
+ </ul>
+ <div class="entity" id="CasualStyle">
+  <h3>Casual Style<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#CasualStyle</p>
+  <div class="comment">
+   <span class="markdown">A preference for unhurried, casual visits.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#casualStyle" title="http://w3id.org/trajecto/user#casualStyle">Casual Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DwellPreference">
+  <h3>Dwell Preference<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#DwellPreference</p>
+  <div class="comment">
+   <span class="markdown">A preference for how long to stay at POIs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#LongDwell" title="http://w3id.org/trajecto/user#LongDwell">Long Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#MediumDwell" title="http://w3id.org/trajecto/user#MediumDwell">Medium Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#ShortDwell" title="http://w3id.org/trajecto/user#ShortDwell">Short Dwell</a> <sup class="type-c" title="class">c</sup>, <a href="#VariableDwell" title="http://w3id.org/trajecto/user#VariableDwell">Variable Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExploratoryStyle">
+  <h3>Exploratory Style<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#ExploratoryStyle</p>
+  <div class="comment">
+   <span class="markdown">A preference for visits that cover many POIs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#exploratoryStyle" title="http://w3id.org/trajecto/user#exploratoryStyle">Exploratory Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImmersiveStyle">
+  <h3>Immersive Style<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#ImmersiveStyle</p>
+  <div class="comment">
+   <span class="markdown">A preference for long, absorbed visits to few POIs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#immersiveStyle" title="http://w3id.org/trajecto/user#immersiveStyle">Immersive Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LongDwell">
+  <h3>Long Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#LongDwell</p>
+  <div class="comment">
+   <span class="markdown">Preference for extended visits (&gt;45 minutes)</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#longDwellPref" title="http://w3id.org/trajecto/user#longDwellPref">Long Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediumDwell">
+  <h3>Medium Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#MediumDwell</p>
+  <div class="comment">
+   <span class="markdown">Preference for moderate visits (15-45 minutes)</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#mediumDwellPref" title="http://w3id.org/trajecto/user#mediumDwellPref">Medium Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PoiCategoryPreference">
+  <h3>POI Category Preference<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#PoiCategoryPreference</p>
+  <div class="comment">
+   <span class="markdown">Preference for specific POI categories</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#observationCount" title="http://w3id.org/trajecto/user#observationCount">observation count</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#prefersPoiCategory" title="http://w3id.org/trajecto/user#prefersPoiCategory">prefers POI category</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PreferedStyle">
+  <h3>PreferedStyle (deprecated)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#PreferedStyle</p>
+  <div class="comment">
+   <span class="markdown">Deprecated since 1.1.0: renamed to PreferredStyle.</span>
+  </div>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Preference">
+  <h3>Preference<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#Preference</p>
+  <div class="comment">
+   <span class="markdown">A preference of a user. Specialized as POI category, dwell, time and visit-style preferences.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a> <sup class="type-c" title="class">c</sup>, <a href="#PoiCategoryPreference" title="http://w3id.org/trajecto/user#PoiCategoryPreference">POI Category Preference</a> <sup class="type-c" title="class">c</sup>, <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>, <a href="#TimePreference" title="http://w3id.org/trajecto/user#TimePreference">Time Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#confidenceLevel" title="http://w3id.org/trajecto/user#confidenceLevel">confidence level</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#forCategory" title="http://w3id.org/trajecto/user#forCategory">for category</a> <sup class="type-op" title="object property">op</sup>, <a href="#immersiveFraction" title="http://w3id.org/trajecto/user#immersiveFraction">immersive fraction</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#meaningfulFraction" title="http://w3id.org/trajecto/user#meaningfulFraction">meaningful fraction</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#preferenceScore" title="http://w3id.org/trajecto/user#preferenceScore">preference score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#totalVisits" title="http://w3id.org/trajecto/user#totalVisits">total visits</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInferredPreference" title="http://w3id.org/trajecto/user#hasInferredPreference">has inferred preference</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreference" title="http://w3id.org/trajecto/user#hasPreference">has preference</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreferences" title="http://w3id.org/trajecto/user#hasPreferences">has preferences</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PreferredStyle">
+  <h3>Preferred Style<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#PreferredStyle</p>
+  <div class="comment">
+   <span class="markdown">The visit style a user prefers: casual, exploratory, immersive or targeted.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CasualStyle" title="http://w3id.org/trajecto/user#CasualStyle">Casual Style</a> <sup class="type-c" title="class">c</sup>, <a href="#ExploratoryStyle" title="http://w3id.org/trajecto/user#ExploratoryStyle">Exploratory Style</a> <sup class="type-c" title="class">c</sup>, <a href="#ImmersiveStyle" title="http://w3id.org/trajecto/user#ImmersiveStyle">Immersive Style</a> <sup class="type-c" title="class">c</sup>, <a href="#TargetedStyle" title="http://w3id.org/trajecto/user#TargetedStyle">Targeted Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProfileSnapshot">
+  <h3>Profile Snapshot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#ProfileSnapshot</p>
+  <div class="comment">
+   <span class="markdown">The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasPreferences" title="http://w3id.org/trajecto/user#hasPreferences">has preferences</a> <sup class="type-op" title="object property">op</sup>, <a href="#initialPreferences" title="http://w3id.org/trajecto/user#initialPreferences">initial preferences</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#learningRate" title="http://w3id.org/trajecto/user#learningRate">learning rate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#updateTimestamp" title="http://w3id.org/trajecto/user#updateTimestamp">update timestamp</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#generatedSnapshot" title="http://w3id.org/trajecto/user#generatedSnapshot">generated snapshot</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSnapshot" title="http://w3id.org/trajecto/user#hasSnapshot">has snapshot</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ShortDwell">
+  <h3>Short Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#ShortDwell</p>
+  <div class="comment">
+   <span class="markdown">Preference for brief visits (&lt;15 minutes)</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#shortDwellPref" title="http://w3id.org/trajecto/user#shortDwellPref">Short Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TargetedStyle">
+  <h3>Targeted Style<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#TargetedStyle</p>
+  <div class="comment">
+   <span class="markdown">A preference for direct visits to one or two POIs.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#targetedStyle" title="http://w3id.org/trajecto/user#targetedStyle">Targeted Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TimePreference">
+  <h3>Time Preference<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#TimePreference</p>
+  <div class="comment">
+   <span class="markdown">Preference for visit times</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTimePreference" title="http://w3id.org/trajecto/user#hasTimePreference">has time preference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UserProfile">
+  <h3>User Profile<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#UserProfile</p>
+  <div class="comment">
+   <span class="markdown">The learned profile of a person: preferences over POI categories, dwell, time and visit style, kept as a chain of timestamped snapshots.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#considersTrajectory" title="http://w3id.org/trajecto/user#considersTrajectory">considers trajectory</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPreference" title="http://w3id.org/trajecto/user#hasPreference">has preference</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSnapshot" title="http://w3id.org/trajecto/user#hasSnapshot">has snapshot</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTimePreference" title="http://w3id.org/trajecto/user#hasTimePreference">has time preference</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTrajectory" title="http://w3id.org/trajecto/user#hasTrajectory">has trajectory</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a> <sup class="type-op" title="object property">op</sup>, <a href="#interestLevel" title="http://w3id.org/trajecto/user#interestLevel">interest level</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lastUpdated" title="http://w3id.org/trajecto/user#lastUpdated">last updated</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#learningRate" title="http://w3id.org/trajecto/user#learningRate">learning rate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profileCreated" title="http://w3id.org/trajecto/user#profileCreated">profile created</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#belongsToUser" title="http://w3id.org/trajecto/user#belongsToUser">belongs to user</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProfile" title="http://w3id.org/trajecto/user#hasProfile">has profile</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VariableDwell">
+  <h3>Variable Dwell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#VariableDwell</p>
+  <div class="comment">
+   <span class="markdown">No specific dwell time preference</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#variableDwellPref" title="http://w3id.org/trajecto/user#variableDwellPref">Variable Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#belongsToUser" title="http://w3id.org/trajecto/user#belongsToUser">belongs to user</a></li>
+  <li><a href="#considersTrajectory" title="http://w3id.org/trajecto/user#considersTrajectory">considers trajectory</a></li>
+  <li><a href="#forCategory" title="http://w3id.org/trajecto/user#forCategory">for category</a></li>
+  <li><a href="#generatedSnapshot" title="http://w3id.org/trajecto/user#generatedSnapshot">generated snapshot</a></li>
+  <li><a href="#hasAffinityFor" title="http://w3id.org/trajecto/user#hasAffinityFor">has affinity for</a></li>
+  <li><a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a></li>
+  <li><a href="#hasInferredPreference" title="http://w3id.org/trajecto/user#hasInferredPreference">has inferred preference</a></li>
+  <li><a href="#hasPreference" title="http://w3id.org/trajecto/user#hasPreference">has preference</a></li>
+  <li><a href="#hasPreferences" title="http://w3id.org/trajecto/user#hasPreferences">has preferences</a></li>
+  <li><a href="#hasProfile" title="http://w3id.org/trajecto/user#hasProfile">has profile</a></li>
+  <li><a href="#hasSnapshot" title="http://w3id.org/trajecto/user#hasSnapshot">has snapshot</a></li>
+  <li><a href="#hasTimePreference" title="http://w3id.org/trajecto/user#hasTimePreference">has time preference</a></li>
+  <li><a href="#hasTrajectory" title="http://w3id.org/trajecto/user#hasTrajectory">has trajectory</a></li>
+  <li><a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a></li>
+  <li><a href="#prefersPoiCategory" title="http://w3id.org/trajecto/user#prefersPoiCategory">prefers POI category</a></li>
+ </ul>
+ <div class="entity" id="belongsToUser">
+  <h3>belongs to user<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#belongsToUser</p>
+  <div class="comment">
+   <span class="markdown">Associates a trajectory with its user profile</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTrajectory" title="http://w3id.org/trajecto/user#hasTrajectory">has trajectory</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="considersTrajectory">
+  <h3>considers trajectory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#considersTrajectory</p>
+  <div class="comment">
+   <span class="markdown">Relates a user profile to a trajectory taken into account when learning it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="forCategory">
+  <h3>for category<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#forCategory</p>
+  <div class="comment">
+   <span class="markdown">The POI class an inferred preference refers to. The value is a class of the POI module used as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="generatedSnapshot">
+  <h3>generated snapshot<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#generatedSnapshot</p>
+  <div class="comment">
+   <span class="markdown">Relates a trajectory to the profile snapshot its update produced.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAffinityFor">
+  <h3>has affinity for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasAffinityFor</p>
+  <div class="comment">
+   <span class="markdown">A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#Person" target="_blank" title="http://w3id.org/trajecto#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDwellPreference">
+  <h3>has dwell preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasDwellPreference</p>
+  <div class="comment">
+   <span class="markdown">Relates a user profile to its dwell preference.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DwellPreference" title="http://w3id.org/trajecto/user#DwellPreference">Dwell Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInferredPreference">
+  <h3>has inferred preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasInferredPreference</p>
+  <div class="comment">
+   <span class="markdown">Relates a person to a category preference inferred by rule SR-20 from all of their trajectories.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#Person" target="_blank" title="http://w3id.org/trajecto#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPreference">
+  <h3>has preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasPreference</p>
+  <div class="comment">
+   <span class="markdown">Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPreferences">
+  <h3>has preferences<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasPreferences</p>
+  <div class="comment">
+   <span class="markdown">Relates a profile snapshot to a POI category preference it holds.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProfile">
+  <h3>has profile<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasProfile</p>
+  <div class="comment">
+   <span class="markdown">Relates a person to their user profile.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://w3id.org/trajecto#Person" target="_blank" title="http://w3id.org/trajecto#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSnapshot">
+  <h3>has snapshot<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasSnapshot</p>
+  <div class="comment">
+   <span class="markdown">Relates a user profile to one of its snapshots.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTimePreference">
+  <h3>has time preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasTimePreference</p>
+  <div class="comment">
+   <span class="markdown">Relates a user profile to its time preference.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TimePreference" title="http://w3id.org/trajecto/user#TimePreference">Time Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTrajectory">
+  <h3>has trajectory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasTrajectory</p>
+  <div class="comment">
+   <span class="markdown">Links a user profile to their trajectories</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.datacron-project.eu/datAcron#Trajectory" target="_blank" title="http://www.datacron-project.eu/datAcron#Trajectory">Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#belongsToUser" title="http://w3id.org/trajecto/user#belongsToUser">belongs to user</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasVisitStyle">
+  <h3>has visit style<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasVisitStyle</p>
+  <div class="comment">
+   <span class="markdown">Relates a user profile to its preferred visit style.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PreferredStyle" title="http://w3id.org/trajecto/user#PreferredStyle">Preferred Style</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="prefersPoiCategory">
+  <h3>prefers POI category<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#prefersPoiCategory</p>
+  <div class="comment">
+   <span class="markdown">The POI class that a POI category preference scores. The value is a class of the POI module used as an individual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PoiCategoryPreference" title="http://w3id.org/trajecto/user#PoiCategoryPreference">POI Category Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#alignmentScore" title="http://w3id.org/trajecto/user#alignmentScore">alignment score</a></li>
+  <li><a href="#confidenceLevel" title="http://w3id.org/trajecto/user#confidenceLevel">confidence level</a></li>
+  <li><a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a></li>
+  <li><a href="#immersiveFraction" title="http://w3id.org/trajecto/user#immersiveFraction">immersive fraction</a></li>
+  <li><a href="#initialPreferences" title="http://w3id.org/trajecto/user#initialPreferences">initial preferences</a></li>
+  <li><a href="#interestLevel" title="http://w3id.org/trajecto/user#interestLevel">interest level</a></li>
+  <li><a href="#lastUpdated" title="http://w3id.org/trajecto/user#lastUpdated">last updated</a></li>
+  <li><a href="#learningRate" title="http://w3id.org/trajecto/user#learningRate">learning rate</a></li>
+  <li><a href="#meaningfulFraction" title="http://w3id.org/trajecto/user#meaningfulFraction">meaningful fraction</a></li>
+  <li><a href="#observationCount" title="http://w3id.org/trajecto/user#observationCount">observation count</a></li>
+  <li><a href="#preferenceScore" title="http://w3id.org/trajecto/user#preferenceScore">preference score</a></li>
+  <li><a href="#profileCreated" title="http://w3id.org/trajecto/user#profileCreated">profile created</a></li>
+  <li><a href="#totalVisits" title="http://w3id.org/trajecto/user#totalVisits">total visits</a></li>
+  <li><a href="#updateTimestamp" title="http://w3id.org/trajecto/user#updateTimestamp">update timestamp</a></li>
+ </ul>
+ <div class="entity" id="alignmentScore">
+  <h3>alignment score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#alignmentScore</p>
+  <div class="comment">
+   <span class="markdown">How well trajectory aligns with user preferences</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="confidenceLevel">
+  <h3>confidence level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#confidenceLevel</p>
+  <div class="comment">
+   <span class="markdown">Confidence in the preference prediction (0.0 to 1.0)</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInterest">
+  <h3>has interest<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#hasInterest</p>
+  <div class="comment">
+   <span class="markdown">A free-text interest keyword of a user profile.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="immersiveFraction">
+  <h3>immersive fraction<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#immersiveFraction</p>
+  <div class="comment">
+   <span class="markdown">Share of the interactions with the category that are immersive (SR-20).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="initialPreferences">
+  <h3>initial preferences<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#initialPreferences</p>
+  <div class="comment">
+   <span class="markdown">True for the seed snapshot that Stage 8 writes before any trajectory update.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="interestLevel">
+  <h3>interest level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#interestLevel</p>
+  <div class="comment">
+   <span class="markdown">Interest level from 0.0 to 1.0</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="lastUpdated">
+  <h3>last updated<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#lastUpdated</p>
+  <div class="comment">
+   <span class="markdown">When the user profile was last updated.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="learningRate">
+  <h3>learning rate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#learningRate</p>
+  <div class="comment">
+   <span class="markdown">Smoothing factor alpha of the EWMA preference update (0.15).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="meaningfulFraction">
+  <h3>meaningful fraction<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#meaningfulFraction</p>
+  <div class="comment">
+   <span class="markdown">Share of the interactions with the category that are meaningful (SR-20).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="observationCount">
+  <h3>observation count<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#observationCount</p>
+  <div class="comment">
+   <span class="markdown">Number of interactions with the category that a POI category preference has accumulated.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PoiCategoryPreference" title="http://w3id.org/trajecto/user#PoiCategoryPreference">POI Category Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="preferenceScore">
+  <h3>preference score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#preferenceScore</p>
+  <div class="comment">
+   <span class="markdown">Score from 0.0 to 1.0 indicating preference strength</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="profileCreated">
+  <h3>profile created<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#profileCreated</p>
+  <div class="comment">
+   <span class="markdown">When the user profile was created.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://w3id.org/trajecto/user#UserProfile">User Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="totalVisits">
+  <h3>total visits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#totalVisits</p>
+  <div class="comment">
+   <span class="markdown">Number of interactions with the category (SR-20).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="http://w3id.org/trajecto/user#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="updateTimestamp">
+  <h3>update timestamp<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#updateTimestamp</p>
+  <div class="comment">
+   <span class="markdown">The time a profile snapshot refers to: the end of the trajectory that produced it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProfileSnapshot" title="http://w3id.org/trajecto/user#ProfileSnapshot">Profile Snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#businessTravelerPersona" title="http://w3id.org/trajecto/user#businessTravelerPersona">Business Traveler Persona</a></li>
+  <li><a href="#casualStyle" title="http://w3id.org/trajecto/user#casualStyle">Casual Visit Style</a></li>
+  <li><a href="#culturalEnthusiastPersona" title="http://w3id.org/trajecto/user#culturalEnthusiastPersona">Cultural Enthusiast Persona</a></li>
+  <li><a href="#exploratoryStyle" title="http://w3id.org/trajecto/user#exploratoryStyle">Exploratory Visit Style</a></li>
+  <li><a href="#immersiveStyle" title="http://w3id.org/trajecto/user#immersiveStyle">Immersive Visit Style</a></li>
+  <li><a href="#leisureVisitorPersona" title="http://w3id.org/trajecto/user#leisureVisitorPersona">Leisure Visitor Persona</a></li>
+  <li><a href="#longDwellPref" title="http://w3id.org/trajecto/user#longDwellPref">Long Dwell Preference</a></li>
+  <li><a href="#mediumDwellPref" title="http://w3id.org/trajecto/user#mediumDwellPref">Medium Dwell Preference</a></li>
+  <li><a href="#shortDwellPref" title="http://w3id.org/trajecto/user#shortDwellPref">Short Dwell Preference</a></li>
+  <li><a href="#targetedStyle" title="http://w3id.org/trajecto/user#targetedStyle">Targeted Visit Style</a></li>
+  <li><a href="#touristExplorerPersona" title="http://w3id.org/trajecto/user#touristExplorerPersona">Tourist Explorer Persona</a></li>
+  <li><a href="#variableDwellPref" title="http://w3id.org/trajecto/user#variableDwellPref">Variable Dwell Preference</a></li>
+ </ul>
+ <div class="entity" id="businessTravelerPersona">
+  <h3>Business Traveler Persona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#businessTravelerPersona</p>
+  <div class="comment">
+   <span class="markdown">Example persona: short, targeted visits to restaurants and transport.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a> <sup class="type-op" title="object property">op</sup> <a href="#shortDwellPref" title="http://w3id.org/trajecto/user#shortDwellPref">Short Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a> <sup class="type-op" title="object property">op</sup> <a href="#targetedStyle" title="http://w3id.org/trajecto/user#targetedStyle">Targeted Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"efficiency"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"restaurants"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"transport"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="casualStyle">
+  <h3>Casual Visit Style<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#casualStyle</p>
+  <div class="comment">
+   <span class="markdown">The casual visit style.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CasualStyle" title="http://w3id.org/trajecto/user#CasualStyle">Casual Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="culturalEnthusiastPersona">
+  <h3>Cultural Enthusiast Persona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#culturalEnthusiastPersona</p>
+  <div class="comment">
+   <span class="markdown">Example persona: long, immersive visits to museums, galleries and heritage.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a> <sup class="type-op" title="object property">op</sup> <a href="#longDwellPref" title="http://w3id.org/trajecto/user#longDwellPref">Long Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a> <sup class="type-op" title="object property">op</sup> <a href="#immersiveStyle" title="http://w3id.org/trajecto/user#immersiveStyle">Immersive Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"galleries"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"heritage"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"museums"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="exploratoryStyle">
+  <h3>Exploratory Visit Style<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#exploratoryStyle</p>
+  <div class="comment">
+   <span class="markdown">The exploratory visit style.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ExploratoryStyle" title="http://w3id.org/trajecto/user#ExploratoryStyle">Exploratory Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="immersiveStyle">
+  <h3>Immersive Visit Style<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#immersiveStyle</p>
+  <div class="comment">
+   <span class="markdown">The immersive visit style.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ImmersiveStyle" title="http://w3id.org/trajecto/user#ImmersiveStyle">Immersive Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="leisureVisitorPersona">
+  <h3>Leisure Visitor Persona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#leisureVisitorPersona</p>
+  <div class="comment">
+   <span class="markdown">Example persona: casual visits of variable length for dining, shopping and entertainment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a> <sup class="type-op" title="object property">op</sup> <a href="#variableDwellPref" title="http://w3id.org/trajecto/user#variableDwellPref">Variable Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a> <sup class="type-op" title="object property">op</sup> <a href="#casualStyle" title="http://w3id.org/trajecto/user#casualStyle">Casual Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"dining"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"entertainment"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"shopping"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="longDwellPref">
+  <h3>Long Dwell Preference<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#longDwellPref</p>
+  <div class="comment">
+   <span class="markdown">A preference for long dwell (over 45 minutes).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#LongDwell" title="http://w3id.org/trajecto/user#LongDwell">Long Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="mediumDwellPref">
+  <h3>Medium Dwell Preference<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#mediumDwellPref</p>
+  <div class="comment">
+   <span class="markdown">A preference for medium dwell (15 to 45 minutes).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MediumDwell" title="http://w3id.org/trajecto/user#MediumDwell">Medium Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="shortDwellPref">
+  <h3>Short Dwell Preference<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#shortDwellPref</p>
+  <div class="comment">
+   <span class="markdown">A preference for short dwell (under 15 minutes).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ShortDwell" title="http://w3id.org/trajecto/user#ShortDwell">Short Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="targetedStyle">
+  <h3>Targeted Visit Style<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#targetedStyle</p>
+  <div class="comment">
+   <span class="markdown">The targeted visit style.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TargetedStyle" title="http://w3id.org/trajecto/user#TargetedStyle">Targeted Style</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="touristExplorerPersona">
+  <h3>Tourist Explorer Persona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#touristExplorerPersona</p>
+  <div class="comment">
+   <span class="markdown">Example persona: exploratory visits of medium length to landmarks.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasDwellPreference" title="http://w3id.org/trajecto/user#hasDwellPreference">has dwell preference</a> <sup class="type-op" title="object property">op</sup> <a href="#mediumDwellPref" title="http://w3id.org/trajecto/user#mediumDwellPref">Medium Dwell Preference</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasVisitStyle" title="http://w3id.org/trajecto/user#hasVisitStyle">has visit style</a> <sup class="type-op" title="object property">op</sup> <a href="#exploratoryStyle" title="http://w3id.org/trajecto/user#exploratoryStyle">Exploratory Visit Style</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"culture"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"history"</span>
+   </dd>
+   <dd>
+    <a href="#hasInterest" title="http://w3id.org/trajecto/user#hasInterest">has interest</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"landmarks"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="variableDwellPref">
+  <h3>Variable Dwell Preference<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/trajecto/user#variableDwellPref</p>
+  <div class="comment">
+   <span class="markdown">No particular dwell preference.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/trajecto/user">http://w3id.org/trajecto/user</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#VariableDwell" title="http://w3id.org/trajecto/user#VariableDwell">Variable Dwell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+<ul>
+<li>S. Angelis. Semantic Trajectory Analytics and Recommender Systems: Engineering Semantic Trajectories as
+Knowledge Graphs. Doctoral dissertation, University of the Aegean, 2026.</li>
+<li>G. M. Santipantakis, G. A. Vouros, A. Glenis, C. Doulkeridis, A. Vlachou. The datAcron Ontology for Semantic
+Trajectories. ESWC 2017 Satellite Events, LNCS 10577, pp. 26-30, Springer, 2017.
+<a href="https://doi.org/10.1007/978-3-319-70407-4_6">doi:10.1007/978-3-319-70407-4_6</a></li>
+<li>A. Gangemi, N. Guarino, C. Masolo, A. Oltramari, L. Schneider. Sweetening Ontologies with DOLCE. EKAW 2002,
+LNCS 2473, pp. 166-181, Springer, 2002. <a href="https://doi.org/10.1007/3-540-45810-7_18">doi:10.1007/3-540-45810-7_18</a></li>
+<li>D. Doumanas, G. Bouchouras, A. Soularidis, K. Kotis, G. Vouros. From Human- to LLM-Centered Collaborative
+Ontology Engineering. Applied Ontology, 2024. <a href="https://doi.org/10.1177/15705838241305067">doi:10.1177/15705838241305067</a></li>
+</ul></span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

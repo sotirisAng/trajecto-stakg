@@ -1,0 +1,120 @@
+prefixes:
+  trajecto: "http://w3id.org/trajecto#"
+  patterns: "http://w3id.org/trajecto/patterns#"
+  context: "http://w3id.org/trajecto/context#"
+  purpose: "http://w3id.org/trajecto/purpose#"
+  user: "http://w3id.org/trajecto/user#"
+  poi: "http://w3id.org/trajecto/poi#"
+  spaces: "http://w3id.org/trajecto/spaces#"
+  datacron: "http://www.datacron-project.eu/datAcron#"
+  dul: "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+  geo: "http://www.opengis.net/ont/geosparql#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+  idlab-fn: https://w3id.org/imec/idlab/function#
+
+mappings:
+  trajectory:
+    sources:
+      - [../bird/files/csv/bird_trajectories.csv~csv]
+    s: trajecto:trajectory_$(traj_id)
+    po:
+      - [a, datacron:Trajectory]
+      - [rdfs:label, "Trajectory $(traj_id)"]
+
+  rawPosition:
+    sources:
+      - [../bird/files/csv/bird_trajectories.csv~csv]
+    s: trajecto:rawPosition_$(traj_id)_$(id)
+    po:
+      - [a, datacron:RawPosition]
+      - [trajecto:timestamp, $(timestamp), xsd:float]
+      - [datacron:hasGeometry, datacron:point_$(traj_id)_$(id)~iri]
+      - [dul:isPartOf, trajecto:trajectory_$(traj_id)~iri]
+      - p: a
+        o: trajecto:StopPosition
+        condition:
+          function: idlab-fn:equal
+          parameters:
+            - [grel:valueParameter, $(is_stop)]
+            - [grel:valueParameter2, "True"]
+      - p: trajecto:hasInteraction
+        o: poi:interaction_$(traj_id)_$(obs_id)~iri
+        condition:
+          function: idlab-fn:notEqual
+          parameters:
+            - [grel:valueParameter, $(artwork_id)]
+            - [grel:valueParameter2, ""]
+
+  trajectoryPoint:
+    sources:
+      - [../bird/files/csv/bird_trajectories.csv~csv]
+    s: datacron:point_$(traj_id)_$(id)
+    po:
+      - [a, datacron:Point]
+      - [trajecto:hasEasting, $(x), xsd:float]
+      - [trajecto:hasNorthing, $(y), xsd:float]
+      - [trajecto:floor, $(floor), xsd:integer]
+
+  pointOfInterest:
+    sources:
+      - [../bird/files/csv/artworks.csv~csv]
+    s: poi:artwork_$(image_id)
+    po:
+      - [a, trajecto:PointOfInterest]
+      - [rdfs:label, $(painting_name)]
+      - [poi:creator, $(artist)]
+      - [poi:creationPeriod, $(date)]
+      - [poi:hasType, $(type)]
+      - [trajecto:floor, $(floor), xsd:integer]
+
+  poiInteraction:
+    sources:
+      - [../bird/files/csv/bird_trajectories.csv~csv]
+    s: poi:interaction_$(traj_id)_$(obs_id)
+    po:
+      - p: a
+        o: poi:POIInteraction
+        condition:
+          function: idlab-fn:notEqual
+          parameters:
+            - [grel:valueParameter, $(artwork_id)]
+            - [grel:valueParameter2, ""]
+      - p: poi:interactsWith
+        o: poi:artwork_$(artwork_id)~iri
+        condition:
+          function: idlab-fn:notEqual
+          parameters:
+            - [grel:valueParameter, $(artwork_id)]
+            - [grel:valueParameter2, ""]
+      - p: poi:hasDwellTime
+        o:
+          value: "PT$(dwell_time)S"
+          datatype: xsd:duration
+        condition:
+          function: idlab-fn:notEqual
+          parameters:
+            - [grel:valueParameter, $(dwell_time)]
+            - [grel:valueParameter2, ""]
+      - p: poi:hasDwellTimeInSeconds
+        o:
+          value: $(dwell_time)
+          datatype: xsd:float
+        condition:
+          function: idlab-fn:notEqual
+          parameters:
+            - [grel:valueParameter, $(dwell_time)]
+            - [grel:valueParameter2, ""]
+
+  person:
+    sources:
+      - [../bird/files/csv/bird_trajectories.csv~csv]
+    s: trajecto:person_$(username)
+    po:
+      - [a, trajecto:Person]
+      - [trajecto:formsTrajectory, trajecto:trajectory_$(traj_id)~iri]
+      - [rdfs:label, $(username)]

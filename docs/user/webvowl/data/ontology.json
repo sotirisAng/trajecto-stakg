@@ -1,0 +1,1662 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://w3id.org/trajecto", "http://www.datacron-project.eu/datAcron", "http://w3id.org/trajecto/user", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Trajecto User Profile Module"
+    },
+    "iri" : "http://w3id.org/trajecto/user",
+    "version" : "1.1.0",
+    "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
+    "description" : {
+      "en" : "User profiles learned from trajectories: a UserProfile per person, a chain of timestamped ProfileSnapshots updated by an exponentially weighted moving average, POI category, dwell and time preferences, visit styles, and the preferences inferred by the semantic rules."
+    },
+    "labels" : {
+      "en" : "trajecto-user"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user/1.0",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sotirios Angelis",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Konstantinos Kotis",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-01-27",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "user",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto User Profile Module",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "21",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "34",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/user#VariableDwell",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VariableDwell",
+      "en" : "Variable Dwell"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#variableDwellPref",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "No particular dwell preference."
+      },
+      "labels" : {
+        "IRI-based" : "variableDwellPref",
+        "en" : "Variable Dwell Preference"
+      }
+    } ],
+    "comment" : {
+      "en" : "No specific dwell time preference"
+    },
+    "id" : "6",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#MediumDwell",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MediumDwell",
+      "en" : "Medium Dwell"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#mediumDwellPref",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A preference for medium dwell (15 to 45 minutes)."
+      },
+      "labels" : {
+        "IRI-based" : "mediumDwellPref",
+        "en" : "Medium Dwell Preference"
+      }
+    } ],
+    "comment" : {
+      "en" : "Preference for moderate visits (15-45 minutes)"
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#ExploratoryStyle",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExploratoryStyle",
+      "en" : "Exploratory Style"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#exploratoryStyle",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The exploratory visit style."
+      },
+      "labels" : {
+        "IRI-based" : "exploratoryStyle",
+        "en" : "Exploratory Visit Style"
+      }
+    } ],
+    "comment" : {
+      "en" : "A preference for visits that cover many POIs."
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#PoiCategoryPreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PoiCategoryPreference",
+      "en" : "POI Category Preference"
+    },
+    "comment" : {
+      "en" : "Preference for specific POI categories"
+    },
+    "id" : "15",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#ShortDwell",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ShortDwell",
+      "en" : "Short Dwell"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#shortDwellPref",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A preference for short dwell (under 15 minutes)."
+      },
+      "labels" : {
+        "IRI-based" : "shortDwellPref",
+        "en" : "Short Dwell Preference"
+      }
+    } ],
+    "comment" : {
+      "en" : "Preference for brief visits (<15 minutes)"
+    },
+    "id" : "16",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#PreferredStyle",
+    "equivalent" : [ "34" ],
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PreferredStyle",
+      "en" : "Preferred Style"
+    },
+    "subClasses" : [ "13", "30", "28", "33" ],
+    "comment" : {
+      "en" : "The visit style a user prefers: casual, exploratory, immersive or targeted."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "14",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#Preference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Preference",
+      "en" : "Preference"
+    },
+    "subClasses" : [ "14", "24", "15", "5" ],
+    "comment" : {
+      "en" : "A preference of a user. Specialized as POI category, dwell, time and visit-style preferences."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "44",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "21",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#PreferedStyle",
+    "equivalent" : [ "14" ],
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PreferedStyle",
+      "en" : "PreferedStyle (deprecated)"
+    },
+    "comment" : {
+      "en" : "Deprecated since 1.1.0: renamed to PreferredStyle."
+    },
+    "attributes" : [ "deprecated", "equivalent" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "54",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#UserProfile",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UserProfile",
+      "en" : "User Profile"
+    },
+    "comment" : {
+      "en" : "The learned profile of a person: preferences over POI categories, dwell, time and visit style, kept as a chain of timestamped snapshots."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#LongDwell",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LongDwell",
+      "en" : "Long Dwell"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#longDwellPref",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A preference for long dwell (over 45 minutes)."
+      },
+      "labels" : {
+        "IRI-based" : "longDwellPref",
+        "en" : "Long Dwell Preference"
+      }
+    } ],
+    "comment" : {
+      "en" : "Preference for extended visits (>45 minutes)"
+    },
+    "id" : "18",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#ImmersiveStyle",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ImmersiveStyle",
+      "en" : "Immersive Style"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#immersiveStyle",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The immersive visit style."
+      },
+      "labels" : {
+        "IRI-based" : "immersiveStyle",
+        "en" : "Immersive Visit Style"
+      }
+    } ],
+    "comment" : {
+      "en" : "A preference for long, absorbed visits to few POIs."
+    },
+    "id" : "33",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "8" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto#Person",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#DwellPreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DwellPreference",
+      "en" : "Dwell Preference"
+    },
+    "subClasses" : [ "16", "6", "18", "4" ],
+    "comment" : {
+      "en" : "A preference for how long to stay at POIs."
+    },
+    "id" : "5",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#Trajectory",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trajectory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#TimePreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TimePreference",
+      "en" : "Time Preference"
+    },
+    "comment" : {
+      "en" : "Preference for visit times"
+    },
+    "id" : "24",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#CasualStyle",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CasualStyle",
+      "en" : "Casual Style"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#casualStyle",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The casual visit style."
+      },
+      "labels" : {
+        "IRI-based" : "casualStyle",
+        "en" : "Casual Visit Style"
+      }
+    } ],
+    "comment" : {
+      "en" : "A preference for unhurried, casual visits."
+    },
+    "id" : "28",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#TargetedStyle",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TargetedStyle",
+      "en" : "Targeted Style"
+    },
+    "individuals" : [ {
+      "iri" : "http://w3id.org/trajecto/user#targetedStyle",
+      "baseIri" : "http://w3id.org/trajecto/user",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/trajecto/user",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The targeted visit style."
+      },
+      "labels" : {
+        "IRI-based" : "targetedStyle",
+        "en" : "Targeted Visit Style"
+      }
+    } ],
+    "comment" : {
+      "en" : "A preference for direct visits to one or two POIs."
+    },
+    "id" : "30",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#ProfileSnapshot",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProfileSnapshot",
+      "en" : "Profile Snapshot"
+    },
+    "comment" : {
+      "en" : "The state of a user profile after a trajectory. Stage 9 writes one snapshot per trajectory by an exponentially weighted moving average (alpha = 0.15)."
+    },
+    "id" : "37"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/user#alignmentScore",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "alignmentScore",
+      "en" : "alignment score"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "How well trajectory aligns with user preferences"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#profileCreated",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "profileCreated",
+      "en" : "profile created"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "When the user profile was created."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#immersiveFraction",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "immersiveFraction",
+      "en" : "immersive fraction"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Share of the interactions with the category that are immersive (SR-20)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "10"
+  }, {
+    "range" : "5",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#prefersPoiCategory",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "prefersPoiCategory",
+      "en" : "prefers POI category"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The POI class that a POI category preference scores. The value is a class of the POI module used as an individual."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "range" : "11",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "11",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "range" : "5",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "11",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "14",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "14",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "11",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "14",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasTimePreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTimePreference",
+      "en" : "has time preference"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile to its time preference."
+    },
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasSnapshot",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "37",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSnapshot",
+      "en" : "has snapshot"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile to one of its snapshots."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasTrajectory",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTrajectory",
+      "en" : "has trajectory"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Links a user profile to their trajectories"
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#meaningfulFraction",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "meaningfulFraction",
+      "en" : "meaningful fraction"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Share of the interactions with the category that are meaningful (SR-20)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasDwellPreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDwellPreference",
+      "en" : "has dwell preference"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile to its dwell preference."
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasPreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPreference",
+      "en" : "has preference"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile directly to a category preference, without a snapshot chain (BIRD instantiation)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#belongsToUser",
+    "inverse" : "38",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "belongsToUser",
+      "en" : "belongs to user"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Associates a trajectory with its user profile"
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#interestLevel",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "interestLevel",
+      "en" : "interest level"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Interest level from 0.0 to 1.0"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasInterest",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "51",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInterest",
+      "en" : "has interest"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A free-text interest keyword of a user profile."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasVisitStyle",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasVisitStyle",
+      "en" : "has visit style"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile to its preferred visit style."
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#confidenceLevel",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "56",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "confidenceLevel",
+      "en" : "confidence level"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Confidence in the preference prediction (0.0 to 1.0)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#initialPreferences",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "58",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "initialPreferences",
+      "en" : "initial preferences"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "True for the seed snapshot that Stage 8 writes before any trajectory update."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#forCategory",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "44",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "forCategory",
+      "en" : "for category"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The POI class an inferred preference refers to. The value is a class of the POI module used as an individual."
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasAffinityFor",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "54",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAffinityFor",
+      "en" : "has affinity for"
+    },
+    "domain" : "63",
+    "comment" : {
+      "en" : "A person has a strong inferred preference for a POI class (SR-21). The value is a class of the POI module used as an individual."
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasPreferences",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPreferences",
+      "en" : "has preferences"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Relates a profile snapshot to a POI category preference it holds."
+    },
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#learningRate",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "66",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "learningRate",
+      "en" : "learning rate"
+    },
+    "domain" : "65",
+    "comment" : {
+      "en" : "Smoothing factor alpha of the EWMA preference update (0.15)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#totalVisits",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "52",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "totalVisits",
+      "en" : "total visits"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Number of interactions with the category (SR-20)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#lastUpdated",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "64",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lastUpdated",
+      "en" : "last updated"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "When the user profile was last updated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasInferredPreference",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInferredPreference",
+      "en" : "has inferred preference"
+    },
+    "domain" : "63",
+    "comment" : {
+      "en" : "Relates a person to a category preference inferred by rule SR-20 from all of their trajectories."
+    },
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#considersTrajectory",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "considersTrajectory",
+      "en" : "considers trajectory"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a user profile to a trajectory taken into account when learning it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#hasProfile",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProfile",
+      "en" : "has profile"
+    },
+    "domain" : "63",
+    "comment" : {
+      "en" : "Relates a person to their user profile."
+    },
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#preferenceScore",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "61",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "preferenceScore",
+      "en" : "preference score"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Score from 0.0 to 1.0 indicating preference strength"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#updateTimestamp",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "47",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "updateTimestamp",
+      "en" : "update timestamp"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "The time a profile snapshot refers to: the end of the trajectory that produced it."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#observationCount",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "59",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observationCount",
+      "en" : "observation count"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Number of interactions with the category that a POI category preference has accumulated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://w3id.org/trajecto/user#generatedSnapshot",
+    "baseIri" : "http://w3id.org/trajecto/user",
+    "range" : "37",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/user",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "generatedSnapshot",
+      "en" : "generated snapshot"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Relates a trajectory to the profile snapshot its update produced."
+    },
+    "attributes" : [ "object" ],
+    "id" : "77"
+  } ]
+}

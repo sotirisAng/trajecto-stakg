@@ -1,0 +1,4 @@
+Input Notebook:  21-kg-analytics.ipynb
+Output Notebook: output/pipeline-geolife/21-out.ipynb
+Executing:   0%|          | 0/12 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   8%|▊         | 1/12 [00:00<00:09,  1.14cell/s]Executing:  17%|█▋        | 2/12 [00:04<00:23,  2.35s/cell]Executing:  33%|███▎      | 4/12 [00:12<00:26,  3.36s/cell]Executing:  42%|████▏     | 5/12 [00:13<00:19,  2.72s/cell]Executing:  58%|█████▊    | 7/12 [00:18<00:13,  2.70s/cell]Executing:  75%|███████▌  | 9/12 [00:20<00:05,  1.89s/cell]Executing:  92%|█████████▏| 11/12 [00:22<00:01,  1.66s/cell]Executing: 100%|██████████| 12/12 [00:22<00:00,  1.91s/cell]

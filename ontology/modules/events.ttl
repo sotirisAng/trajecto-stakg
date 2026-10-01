@@ -1,0 +1,160 @@
+@prefix events: <http://w3id.org/trajecto/events#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/trajecto/events> a owl:Ontology ;
+    rdfs:label "trajecto-events"@en ;
+    dcterms:created "2026-03-29"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "Trajectory events detected by SPARQL rules over the position sequence of a trajectory: engagement escalation and drop, category discovery, transition and return, and the dominant encounter."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Trajectory Events Module"@en ;
+    vann:preferredNamespacePrefix "events" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/events#" ;
+    owl:imports <http://w3id.org/trajecto/poi> ;
+    owl:priorVersion <http://w3id.org/trajecto/events/1.0> ;
+    owl:versionIRI <http://w3id.org/trajecto/events/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+events:CategoryDiscovery a owl:Class ;
+    rdfs:label "Category Discovery"@en ;
+    rdfs:comment "First meaningful encounter with a POI category not previously visited in this trajectory. The discoveredCategory property identifies which category was new."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf events:TrajectoryEvent .
+
+events:CategoryReturn a owl:Class ;
+    rdfs:label "Category Return"@en ;
+    rdfs:comment "Return to a previously visited POI category after visiting a different category. Subtype of CategoryTransition where the toCategory was already encountered earlier in the trajectory."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf events:TrajectoryEvent .
+
+events:CategoryTransition a owl:Class ;
+    rdfs:label "Category Transition"@en ;
+    rdfs:comment "Transition between consecutive meaningful interactions at POIs of different categories. The fromCategory and toCategory properties identify the transition."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf events:TrajectoryEvent .
+
+events:DominantEncounter a owl:Class ;
+    rdfs:label "Dominant Encounter"@en ;
+    rdfs:comment "The position where the trajectory's DominantInteraction (highest engagement, singleton per trajectory) occurs."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf events:TrajectoryEvent .
+
+events:EngagementDrop a owl:Class ;
+    rdfs:label "Engagement Drop"@en ;
+    rdfs:comment "Transition from MeaningfulInteraction or ImmersiveInteraction to PassingInteraction at the next position. Indicates disengagement or transit."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf events:TrajectoryEvent .
+
+events:EngagementEscalation a owl:Class ;
+    rdfs:label "Engagement Escalation"@en ;
+    rdfs:comment "Transition from PassingInteraction at one position to MeaningfulInteraction or ImmersiveInteraction at the next consecutive position. Indicates increasing engagement with the environment."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf events:TrajectoryEvent .
+
+events:TrajectoryEvent a owl:Class ;
+    rdfs:label "Trajectory Event"@en ;
+    rdfs:comment "A behavioral transition or notable occurrence within a trajectory. Detected via SPARQL rules over position sequences and interaction types."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:subClassOf dul:Event .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+events:atPosition a owl:ObjectProperty ;
+    rdfs:label "at position"@en ;
+    rdfs:comment "The position at which the event occurs within the trajectory."@en ;
+    rdfs:domain events:TrajectoryEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:range datacron:RawPosition .
+
+events:discoveredCategory a owl:ObjectProperty ;
+    rdfs:label "discovered category"@en ;
+    rdfs:comment "The POI category encountered for the first time at this position."@en ;
+    rdfs:domain events:CategoryDiscovery ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> .
+
+events:fromCategory a owl:ObjectProperty ;
+    rdfs:label "from category"@en ;
+    rdfs:comment "The POI category at the preceding position in a category transition."@en ;
+    rdfs:domain events:CategoryTransition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> .
+
+events:fromInteractionType a owl:ObjectProperty ;
+    rdfs:label "from interaction type"@en ;
+    rdfs:comment "The interaction type at the preceding position in an engagement transition event."@en ;
+    rdfs:domain events:TrajectoryEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> .
+
+events:toCategory a owl:ObjectProperty ;
+    rdfs:label "to category"@en ;
+    rdfs:comment "The POI category at the current position in a category transition."@en ;
+    rdfs:domain events:CategoryTransition ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> .
+
+events:toInteractionType a owl:ObjectProperty ;
+    rdfs:label "to interaction type"@en ;
+    rdfs:comment "The interaction type at the current position in an engagement transition event."@en ;
+    rdfs:domain events:TrajectoryEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+events:eventSequenceIndex a owl:DatatypeProperty ;
+    rdfs:label "event sequence index"@en ;
+    rdfs:comment "The position index at which the event occurs, corresponding to hasPositionIndex of the associated RawPosition."@en ;
+    rdfs:domain events:TrajectoryEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/events> ;
+    rdfs:range xsd:integer .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( events:EngagementEscalation events:EngagementDrop events:DominantEncounter ) .

@@ -1,0 +1,36 @@
+# SR-33: Co-visitation recommendations
+# BIRD adaptation: artwork types via poi:hasType.
+# Artworks co-visited with the dominant artwork of the input trajectory.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?dominantPoi
+WHERE {
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputTraj user:belongsToUser ?inputUser .
+
+    # Get dominant artwork of input trajectory
+    ?domPos dul:isPartOf ?inputTraj .
+    ?domPos trajecto:hasInteraction ?domInt .
+    ?domInt a poi:DominantInteraction .
+    ?domInt poi:interactsWith ?dominantPoi .
+
+    # Follow co-visitation links
+    ?dominantPoi poi:covisitedWith ?poi .
+
+    ?poi poi:hasType ?poiCat .
+
+    # Exclude already-visited
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?visitTraj user:belongsToUser ?inputUser .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-33:covisitation" AS ?rule)
+}

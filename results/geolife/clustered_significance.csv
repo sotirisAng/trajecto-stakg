@@ -1,0 +1,11 @@
+kg,a,b,metric,delta,p_flat,p_clustered,n_trajectories,n_users
+geolife,unified_route_heavy,popularity,recall@10,0.18879855465221315,0.0,0.0,369,69
+geolife,unified_route_heavy,popularity,mrr,0.16609670064954618,0.0,0.0,369,69
+geolife,unified_route_heavy,markov,recall@10,0.1222222222222222,0.0,0.0,369,69
+geolife,unified_route_heavy,markov,mrr,0.0653138039316901,0.0006,0.0103,369,69
+geolife,unified_route_heavy,markov2,recall@10,0.03739837398373983,0.037,0.1234,369,69
+geolife,unified_route_heavy,markov2,mrr,0.004260764829870519,0.7963,0.8651,369,69
+geolife,lr_fusion,unified_route_heavy,recall@10,0.02981029810298103,0.0014,0.0135,369,69
+geolife,lr_fusion,unified_route_heavy,mrr,0.01479223125564589,0.0776,0.0908,369,69
+geolife,rrf_uni+markov2+prox,unified_route_heavy,recall@10,0.04019873532068654,0.0028,0.0293,369,69
+geolife,rrf_uni+markov2+prox,unified_route_heavy,mrr,-0.02347184582956941,0.0776,0.3956,369,69

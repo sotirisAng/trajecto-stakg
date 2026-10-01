@@ -1,0 +1,11 @@
+corpus,seed,match,ic_jaccard,shared_classes
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_177704932659,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_1777049341490,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_1777049342497,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_177704932332,0.4138,CulturalCasual;HighEngagementTrajectory
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_1777049340480,0.4138,CulturalCasual;HighEngagementTrajectory
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_1777049343504,0.4138,CulturalCasual;HighEngagementTrajectory
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_177704932551,0.2315,CulturalCasual
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_17770493170,0.1928,CulturalCasual
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_177704932768,0.1928,CulturalCasual
+OSM Rome,http://w3id.org/trajecto#trajectory_177704932553,http://w3id.org/trajecto#trajectory_177704932445,0.1925,CulturalCasual

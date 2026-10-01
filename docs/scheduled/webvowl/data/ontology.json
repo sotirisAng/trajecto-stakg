@@ -1,0 +1,354 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl", "http://w3id.org/trajecto/scheduled", "http://w3id.org/trajecto", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Trajecto Scheduled Events Module"
+    },
+    "iri" : "http://w3id.org/trajecto/scheduled",
+    "version" : "1.1.0",
+    "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
+    "description" : {
+      "en" : "Externally scheduled events (concerts, conferences, exhibitions, matches, services) hosted at a POI for a finite time window. Event-gated POI categories are recommended only when such an event overlaps the trajectory."
+    },
+    "labels" : {
+      "en" : "trajecto-scheduled-events"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled/1.0",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sotirios Angelis",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Konstantinos Kotis",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-04-22",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "scheduled",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Scheduled Events Module",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto#PointOfInterest",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointOfInterest"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "2" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://w3id.org/trajecto/scheduled#ScheduledEvent",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ScheduledEvent",
+      "en" : "Scheduled Event"
+    },
+    "comment" : {
+      "en" : "A calendared event (concert, conference, exhibition, sports match, festival, religious service) hosted at a POI for a finite time window. Distinct from trajecto/events#TrajectoryEvent which models behavioral trajectory events."
+    },
+    "id" : "2",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/scheduled#endTime",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endTime",
+      "en" : "end time"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Event end (inclusive). Equal to startTime for instantaneous events."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://w3id.org/trajecto/scheduled#eventCategory",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "eventCategory",
+      "en" : "event category"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Event classification: Concert, Exhibition, Conference, Festival, Sports, Theater, ReligiousService, Other."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://w3id.org/trajecto/scheduled#externalSource",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "externalSource",
+      "en" : "external source"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Provenance tag: fixture, ticketmaster, eventbrite, etc."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://w3id.org/trajecto/scheduled#hostedAt",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "range" : "0",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hostedAt",
+      "en" : "hosted at"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "POI where the scheduled event takes place."
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "range" : "11",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://w3id.org/trajecto/scheduled#externalId",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "externalId",
+      "en" : "external id"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Identifier assigned by the source system; used for idempotent ingestion."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://w3id.org/trajecto/scheduled#startTime",
+    "baseIri" : "http://w3id.org/trajecto/scheduled",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/scheduled",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startTime",
+      "en" : "start time"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Event start (inclusive)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "14"
+  } ]
+}

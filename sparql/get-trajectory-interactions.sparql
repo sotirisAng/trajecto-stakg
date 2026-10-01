@@ -1,0 +1,22 @@
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi: <http://w3id.org/trajecto/poi#>
+PREFIX spatial: <http://w3id.org/trajecto/spatial#>
+PREFIX datacron: <http://www.datacron-project.eu/datAcron#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?interaction ?poi_class ?isDominant ?isImmersive
+WHERE {
+  ?position dul:isPartOf ?trajectory .
+           ?position trajecto:hasInteraction ?interaction .
+
+  ?interaction a poi:MeaningfulInteraction ;
+               poi:interactsWith ?poi .
+  OPTIONAL { ?interaction a poi:DominantInteraction . BIND(true AS ?isDominant) }
+  OPTIONAL { ?interaction a poi:ImmersiveInteraction . BIND(true AS ?isImmersive) }
+
+  ?poi a ?poi_class .
+  FILTER(?poi_class NOT IN (trajecto:PointOfInterest, poi:SignificantPOI) && !isBlank(?poi_class))
+}

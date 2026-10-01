@@ -1,0 +1,36 @@
+# SR-32: Sequence continuation
+# BIRD adaptation: artwork types via poi:hasType.
+# Next artworks via poi:followedBy from the input trajectory's visited artworks.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?sourcePoi
+WHERE {
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputTraj user:belongsToUser ?inputUser .
+
+    # Artworks visited in the input trajectory (meaningful only; immersive is subclass)
+    ?pos dul:isPartOf ?inputTraj .
+    ?pos trajecto:hasInteraction ?int .
+    ?int a poi:MeaningfulInteraction .
+    ?int poi:interactsWith ?sourcePoi .
+
+    # Follow sequence chain
+    ?sourcePoi poi:followedBy ?poi .
+
+    ?poi poi:hasType ?poiCat .
+
+    # Exclude already-visited
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?visitTraj user:belongsToUser ?inputUser .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-32:sequence-continuation" AS ?rule)
+}

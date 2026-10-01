@@ -1,0 +1,910 @@
+<http://w3id.org/trajecto/purpose/skos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/trajecto/purpose/skos> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/trajecto/purpose/skos/1.1.0> .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/created> "2025-05-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/creator> "Konstantinos Kotis" .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/creator> "Sotirios Angelis" .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/description> "SKOS concept scheme of movement purposes. POI classes point to these concepts with skos:related, and the purpose classification stage assigns them to trajectories through trajecto:hasPurpose."@en .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/issued> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/modified> "2026-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/publisher> "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/dc/terms/title> "Trajecto Purpose Concept Scheme"@en .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/vocab/vann/preferredNamespacePrefix> "purposeskos" .
+<http://w3id.org/trajecto/purpose/skos> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/trajecto/purpose/skos#" .
+<http://w3id.org/trajecto/purpose/skos> <http://www.w3.org/2000/01/rdf-schema#label> "trajecto-purpose-skos"@en .
+<http://w3id.org/trajecto/purpose/skos> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/trajecto/purpose/skos#AccommodationPurpose
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to staying at temporary lodging."@en .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#example> "Hotel stays, hostel accommodation, vacation rentals"@en .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#HostelStay> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#HotelStay> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#TemporaryLodging> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accommodation Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#related> <https://schema.org/LodgingReservation> .
+<http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#AirportTransit
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#Transit> .
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to using airport facilities for travel."@en .
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#AirportTransit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Airport Transit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ArtisticExperience
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to experiencing artistic works or performances."@en .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#ArtisticExperience> .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ArtisticExperience> <http://www.w3.org/2004/02/skos/core#prefLabel> "Artistic Experience"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Banking
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ServiceAccess> .
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to banking and financial transactions."@en .
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Banking> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banking"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#BeachVisit
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#LeisureActivity> .
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting beaches for leisure."@en .
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#BeachVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beach Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#BusStationTransit
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#Transit> .
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to using bus station facilities for travel."@en .
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#BusStationTransit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bus Station Transit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#BusinessMeeting
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to professional business meetings."@en .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#BusinessMeeting> .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#BusinessMeeting> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business Meeting"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#CafeVisit
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#DiningExperience> .
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting a cafe for refreshments or socializing."@en .
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#CafeVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cafe Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#CommercialPurpose
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to commercial activities such as shopping or services."@en .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#CommercialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#example> "Shopping, dining out, visiting a bank"@en .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#DiningExperience> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#ServiceAccess> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Shopping> .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commercial Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#CommercialPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#Commuting
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to regular travel between home and work/education."@en .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#Commuting> .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Commuting> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commuting"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending cultural events, festivals, or performances."@en .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#CulturalEventAttendance> .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cultural Event Attendance"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#CulturalPurpose
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to cultural activities and experiences."@en .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#example> "Museum visits, attending performances, exploring heritage sites"@en .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#ArtisticExperience> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#CulturalEventAttendance> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#EducationalTour> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#GalleryVisit> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#HeritageExploration> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#MuseumVisit> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#TheaterVisit> .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cultural Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#CulturalPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#DiningExperience
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CommercialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to dining at restaurants or food establishments."@en .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#DiningExperience> .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dining Experience"@en .
+<http://w3id.org/trajecto/purpose/skos#DiningExperience> <http://www.w3.org/2004/02/skos/core#related> <https://schema.org/EatAction> .
+# 
+# http://w3id.org/trajecto/purpose/skos#DomesticActivity
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to household or domestic activities."@en .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#DomesticActivity> .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#DomesticActivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Domestic Activity"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#EducationalPurpose
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to learning and educational activities."@en .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#example> "School attendance, workshops, field studies, research activities"@en .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#EducationalTour> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#FieldStudy> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#FormalLearning> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#LibraryVisit> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Research> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Educational Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#EducationalPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#EducationalTour
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2004/02/skos/core#definition> "Purpose that combines cultural experience with educational objectives."@en .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#EducationalTour> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#EducationalTour> <http://www.w3.org/2004/02/skos/core#prefLabel> "Educational Tour"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#EmergencyCare
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> .
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to seeking urgent or emergency medical attention."@en .
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#EmergencyCare> <http://www.w3.org/2004/02/skos/core#prefLabel> "Emergency Care"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending entertainment events (cinema, sports, etc.)."@en .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#EntertainmentAttendance> .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Entertainment Attendance"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ExerciseActivity
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to physical exercise or sports activities."@en .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#ExerciseActivity> .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Exercise Activity"@en .
+<http://w3id.org/trajecto/purpose/skos#ExerciseActivity> <http://www.w3.org/2004/02/skos/core#related> <https://schema.org/ExerciseAction> .
+# 
+# http://w3id.org/trajecto/purpose/skos#FastFoodVisit
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#DiningExperience> .
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to quick dining at fast food establishments."@en .
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#FastFoodVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Food Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#FieldStudy
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to educational field studies or site visits."@en .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#FieldStudy> .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#FieldStudy> <http://www.w3.org/2004/02/skos/core#prefLabel> "Field Study"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#FieldWork
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to professional work conducted in the field."@en .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#FieldWork> .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#FieldWork> <http://www.w3.org/2004/02/skos/core#prefLabel> "Field Work"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#FormalLearning
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to formal educational activities (classes, lectures)."@en .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#FormalLearning> .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#FormalLearning> <http://www.w3.org/2004/02/skos/core#prefLabel> "Formal Learning"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#GalleryVisit
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting art galleries or exhibitions."@en .
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#GalleryVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gallery Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#GroceryShopping
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#Shopping> .
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to purchasing food and household essentials."@en .
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#GroceryShopping> <http://www.w3.org/2004/02/skos/core#prefLabel> "Grocery Shopping"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#GymVisit
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ExerciseActivity> .
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting a gymnasium for exercise."@en .
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#GymVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gym Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#HealthcarePurpose
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to healthcare and medical activities."@en .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#example> "Doctor visits, pharmacy trips, hospital appointments"@en .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#EmergencyCare> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#MedicalAppointment> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#PharmacyVisit> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#TherapySession> .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Healthcare Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#HeritageExploration
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to exploring heritage sites or historical locations."@en .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#HeritageExploration> .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#HeritageExploration> <http://www.w3.org/2004/02/skos/core#prefLabel> "Heritage Exploration"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting historical sites, monuments, or landmarks."@en .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historical Site Visit"@en .
+<http://w3id.org/trajecto/purpose/skos#HistoricalSiteVisit> <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#HeritageExploration> .
+# 
+# http://w3id.org/trajecto/purpose/skos#HomeBound
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to returning to or staying at home."@en .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#HomeBound> .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#HomeBound> <http://www.w3.org/2004/02/skos/core#prefLabel> "Home Bound"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#HostelStay
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to staying at a hostel or budget accommodation."@en .
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#HostelStay> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hostel Stay"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#HotelStay
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to staying at a hotel or similar accommodation."@en .
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#HotelStay> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hotel Stay"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#InformationSeeking
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to seeking information or wayfinding assistance."@en .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/2004/02/skos/core#prefLabel> "Information Seeking"@en .
+<http://w3id.org/trajecto/purpose/skos#InformationSeeking> <http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/trajecto/purpose/skos#Tourism> .
+# 
+# http://w3id.org/trajecto/purpose/skos#LeisureActivity
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to casual leisure activities."@en .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#LeisureActivity> .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#LeisureActivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leisure Activity"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#LibraryVisit
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting a library for study or research."@en .
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#LibraryVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Library Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to engaging with the local community near one's residence."@en .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#LocalCommunityEngagement> .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Local Community Engagement"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#MedicalAppointment
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> .
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to scheduled medical consultations or check-ups."@en .
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#MedicalAppointment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medical Appointment"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#MuseumVisit
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting museums or exhibitions."@en .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#MuseumVisit> .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#MuseumVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Museum Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#NightlifeActivity
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> .
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to nightlife entertainment (bars, clubs, night venues)."@en .
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#NightlifeActivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nightlife Activity"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#OfficeWork
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to working in an office environment."@en .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#OfficeWork> .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#OfficeWork> <http://www.w3.org/2004/02/skos/core#prefLabel> "Office Work"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#OutdoorRecreation
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ExerciseActivity> .
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to outdoor recreational activities (hiking, cycling, etc.)."@en .
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#OutdoorRecreation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Outdoor Recreation"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ParkVisit
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#LeisureActivity> .
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting parks for relaxation or recreation."@en .
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ParkVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Park Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Parking
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to parking a vehicle."@en .
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Parking> <http://www.w3.org/2004/02/skos/core#prefLabel> "Parking"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#PharmacyVisit
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> .
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to obtaining medication or pharmaceutical services."@en .
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#PharmacyVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pharmacy Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#PostalService
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ServiceAccess> .
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to using postal or courier services."@en .
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#PostalService> <http://www.w3.org/2004/02/skos/core#prefLabel> "Postal Service"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ProfessionalEvent
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending professional events, conferences, or trade shows."@en .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#ProfessionalEvent> .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional Event"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#RecreationalPurpose
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to leisure and recreational activities."@en .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#example> "Park visits, beach trips, attending sporting events"@en .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#ExerciseActivity> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#LeisureActivity> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#SocialGathering> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Tourism> .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recreational Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#ReligiousCeremony
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending religious ceremonies (weddings, funerals, baptisms)."@en .
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> <http://www.w3.org/2004/02/skos/core#prefLabel> "Religious Ceremony"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting sacred sites as part of a religious journey."@en .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> <http://www.w3.org/2004/02/skos/core#prefLabel> "Religious Pilgrimage"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ReligiousPurpose
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to religious or spiritual activities."@en .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#example> "Attending church, mosque, temple, or spiritual retreat"@en .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#ReligiousCeremony> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#ReligiousPilgrimage> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Worship> .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Religious Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#Research
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to research activities."@en .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#Research> .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Research> <http://www.w3.org/2004/02/skos/core#prefLabel> "Research"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ResidentialPurpose
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to residential and home-based activities."@en .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#ResidentialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#example> "Returning home, local neighborhood activities"@en .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#DomesticActivity> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#HomeBound> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#LocalCommunityEngagement> .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Residential Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#RestaurantDining
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#DiningExperience> .
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to dining at a restaurant."@en .
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#RestaurantDining> <http://www.w3.org/2004/02/skos/core#prefLabel> "Restaurant Dining"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#RetailShopping
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#Shopping> .
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to shopping at retail stores or malls."@en .
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#RetailShopping> <http://www.w3.org/2004/02/skos/core#prefLabel> "Retail Shopping"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#SchoolAttendance
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#FormalLearning> .
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending primary or secondary school."@en .
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#SchoolAttendance> <http://www.w3.org/2004/02/skos/core#prefLabel> "School Attendance"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#ServiceAccess
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CommercialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to accessing commercial services (banking, healthcare, etc.)."@en .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#ServiceAccess> .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#ServiceAccess> <http://www.w3.org/2004/02/skos/core#prefLabel> "Service Access"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Shopping
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CommercialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to purchasing goods."@en .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#Shopping> .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shopping"@en .
+<http://w3id.org/trajecto/purpose/skos#Shopping> <http://www.w3.org/2004/02/skos/core#related> <https://schema.org/BuyAction> .
+# 
+# http://w3id.org/trajecto/purpose/skos#SocialGathering
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to meeting and socializing with others."@en .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#SocialGathering> .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#SocialGathering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Social Gathering"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#SpiritualRetreat
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> .
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending spiritual or meditation retreats."@en .
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#SpiritualRetreat> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spiritual Retreat"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#SportsAttendance
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EntertainmentAttendance> .
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending sports events as a spectator."@en .
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#SportsAttendance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sports Attendance"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#TemporaryLodging
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to staying at temporary rental accommodations."@en .
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#TemporaryLodging> <http://www.w3.org/2004/02/skos/core#prefLabel> "Temporary Lodging"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#TheaterVisit
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending theatrical performances."@en .
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#TheaterVisit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Theater Visit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#TherapySession
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> .
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending therapy or rehabilitation sessions."@en .
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#TherapySession> <http://www.w3.org/2004/02/skos/core#prefLabel> "Therapy Session"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Tourism
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to visiting places as a tourist."@en .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#Tourism> .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tourism"@en .
+<http://w3id.org/trajecto/purpose/skos#Tourism> <http://www.w3.org/2004/02/skos/core#related> <https://schema.org/TouristTrip> .
+# 
+# http://w3id.org/trajecto/purpose/skos#TrainStationTransit
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#Transit> .
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to using train station facilities for travel."@en .
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#TrainStationTransit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Train Station Transit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://purl.org/dc/terms/created> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://purl.org/dc/terms/description> "A SKOS concept scheme representing purposes of movement in trajectory data. Covers commercial, cultural, educational, recreational, residential, transportation, and work-related movement purposes."@en .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://purl.org/dc/terms/title> "Trajecto Purpose of Movement Concept Scheme"@en .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "trajectory purpose scheme"@en .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#definition> "Concept scheme of the purposes a trajectory can be assigned."@en .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#AccommodationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#CommercialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#CulturalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#HealthcarePurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#RecreationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#ResidentialPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://w3id.org/trajecto/purpose/skos#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trajectory purpose scheme"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#TransferBetweenModes
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to transferring between different modes of transportation."@en .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#TransferBetweenModes> .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfer Between Modes"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Transit
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/2004/02/skos/core#definition> "Purpose primarily focused on moving from one location to another."@en .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#Transit> .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Transit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transit"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#TransportationPurpose
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose primarily related to transport and transit between locations."@en .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#example> "Commuting, transit transfers, wandering"@en .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Commuting> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#InformationSeeking> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Parking> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#TransferBetweenModes> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Transit> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#Wandering> .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transportation Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#TransportationPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#UniversityAttendance
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#FormalLearning> .
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending university or higher education."@en .
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#UniversityAttendance> <http://www.w3.org/2004/02/skos/core#prefLabel> "University Attendance"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Wandering
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#TransportationPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/2004/02/skos/core#definition> "Purpose involving movement without a specific destination or goal."@en .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#Wandering> .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Wandering> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wandering"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#WorkPurpose
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#definition> "Movement purpose related to employment and professional activities."@en .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#example> "Office work, field work, business meetings"@en .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#BusinessMeeting> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#FieldWork> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#OfficeWork> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#ProfessionalEvent> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Work Purpose"@en .
+<http://w3id.org/trajecto/purpose/skos#WorkPurpose> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+# 
+# http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#WorkPurpose> .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to regular workplace routines and activities."@en .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#WorkplaceRoutine> .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#WorkplaceRoutine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Workplace Routine"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#WorkshopAttendance
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#EducationalPurpose> .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending workshops, seminars, or training sessions."@en .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://w3id.org/trajecto/purpose#WorkshopAttendance> .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#WorkshopAttendance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Workshop Attendance"@en .
+# 
+# http://w3id.org/trajecto/purpose/skos#Worship
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/trajecto/purpose/skos> .
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/trajecto/purpose/skos#ReligiousPurpose> .
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/2004/02/skos/core#definition> "Purpose related to attending regular religious worship services."@en .
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/trajecto/purpose/skos#TrajectoryPurposeScheme> .
+<http://w3id.org/trajecto/purpose/skos#Worship> <http://www.w3.org/2004/02/skos/core#prefLabel> "Worship"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

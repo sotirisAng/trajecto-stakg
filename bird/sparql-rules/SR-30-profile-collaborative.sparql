@@ -1,0 +1,43 @@
+# SR-30: Profile-based collaborative filtering
+# BIRD adaptation: no temporal context, artwork types via poi:hasType.
+# POIs from trajectories sharing purpose + movement style, not yet visited.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX patterns: <http://w3id.org/trajecto/patterns#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?similarTraj
+WHERE {
+    # Get the input trajectory's profile
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputTraj trajecto:hasPurpose ?purpose .
+    ?inputTraj user:belongsToUser ?inputUser .
+
+    # Find similar trajectories: same purpose
+    ?similarTraj trajecto:hasPurpose ?purpose .
+    FILTER(?similarTraj != ?inputTraj)
+
+    # Plus shared movement pattern
+    ?inputTraj patterns:exhibitsPattern ?pattern .
+    ?similarTraj patterns:exhibitsPattern ?pattern .
+
+    # Get artworks from similar trajectories (meaningful only; immersive is subclass)
+    ?simPos dul:isPartOf ?similarTraj .
+    ?simPos trajecto:hasInteraction ?simInt .
+    ?simInt a poi:MeaningfulInteraction .
+    ?simInt poi:interactsWith ?poi .
+    ?poi poi:hasType ?poiCat .
+
+    # Exclude already-visited artworks
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?visitTraj user:belongsToUser ?inputUser .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-30:profile-collaborative" AS ?rule)
+}

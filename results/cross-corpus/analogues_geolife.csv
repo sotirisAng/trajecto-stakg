@@ -1,0 +1,11 @@
+corpus,seed,match,ic_jaccard,shared_classes
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787822741359,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787824700524,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787827038653,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787827093672,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787827104676,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787827113679,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787827130685,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787830324917,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_1787830542990,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory
+GeoLife,http://w3id.org/trajecto#trajectory_178781864656,http://w3id.org/trajecto#trajectory_17878305701000,1.0,CulturalCasual;CulturalExplorer;HighEngagementCulturalExplorer;HighEngagementTrajectory

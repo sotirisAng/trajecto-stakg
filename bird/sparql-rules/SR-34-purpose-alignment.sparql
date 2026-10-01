@@ -1,0 +1,41 @@
+# SR-34: Purpose alignment recommendations
+# BIRD adaptation: museum artwork type mappings instead of outdoor POI categories.
+# Artworks whose type aligns with the input trajectory's purpose.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX purpose:  <http://w3id.org/trajecto/purpose#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?trajPurpose
+WHERE {
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputTraj user:belongsToUser ?inputUser .
+    ?inputTraj trajecto:hasPurpose ?trajPurpose .
+
+    # Purpose-to-artwork-type mapping (museum context)
+    VALUES (?trajPurpose ?alignedCat) {
+        (purpose:FineArtsPurpose      "Painting")
+        (purpose:FineArtsPurpose      "Sculpture")
+        (purpose:FineArtsPurpose      "MixedMedia")
+        (purpose:PhotographyPurpose   "Photography")
+        (purpose:PrintPurpose         "Print")
+        (purpose:SculpturePurpose     "Sculpture")
+        (purpose:SculpturePurpose     "Installation")
+    }
+
+    ?poi poi:hasType ?alignedCat .
+    BIND(?alignedCat AS ?poiCat)
+
+    # Exclude already-visited
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?visitTraj user:belongsToUser ?inputUser .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-34:purpose-alignment" AS ?rule)
+}

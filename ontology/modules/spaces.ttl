@@ -1,0 +1,574 @@
+@prefix trajecto: <http://w3id.org/trajecto#> .
+@prefix spaces: <http://w3id.org/trajecto/spaces#> .
+@prefix datacron: <http://www.datacron-project.eu/datAcron#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/trajecto/spaces> a owl:Ontology ;
+    rdfs:label "trajecto-spaces"@en ;
+    dcterms:created "2025-05-09"^^xsd:date ;
+    dcterms:creator "Konstantinos Kotis",
+        "Sotirios Angelis" ;
+    dcterms:description "This module extends the trajecto ontology with cultural spaces and commercial spaces concepts for semantic trajectories."@en ;
+    dcterms:issued "2026-10-01"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:publisher "i-Lab, Department of Cultural Technology and Communication, University of the Aegean" ;
+    dcterms:title "Trajecto Spaces Module"@en ;
+    vann:preferredNamespacePrefix "spaces" ;
+    vann:preferredNamespaceUri "http://w3id.org/trajecto/spaces#" ;
+    owl:imports <http://w3id.org/trajecto/purpose> ;
+    owl:priorVersion <http://w3id.org/trajecto/spaces/1.0> ;
+    owl:versionIRI <http://w3id.org/trajecto/spaces/1.1.0> ;
+    owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+spaces:AccessPoint a owl:Class ;
+    rdfs:label "Access Point"@en ;
+    rdfs:comment "A point where a space can be entered or exited."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:PointOfInterest .
+
+spaces:ArtifactEngagement a owl:Class ;
+    rdfs:label "Artifact Engagement"@en ;
+    rdfs:comment "Direct engagement with a cultural artifact."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalInteraction .
+
+spaces:Artwork a owl:Class ;
+    rdfs:label "Artwork"@en ;
+    rdfs:comment "A creative work of art."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalArtifact .
+
+spaces:Browsing a owl:Class ;
+    rdfs:label "Browsing"@en ;
+    rdfs:comment "Looking at products without necessarily intending to purchase."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialInteraction .
+
+spaces:BrowsingIntent a owl:Class ;
+    rdfs:label "Browsing Intent"@en ;
+    rdfs:comment "Intent to browse without specific purchase plans."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialIntent .
+
+spaces:Checkout a owl:Class ;
+    rdfs:label "Checkout"@en ;
+    rdfs:comment "Area where purchases are processed and paid for."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:Zone .
+
+spaces:CommercialIntent a owl:Class ;
+    rdfs:label "Commercial Intent"@en ;
+    rdfs:comment "The intended purpose behind a commercial visit."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf dul:Abstract .
+
+spaces:CommercialInteraction a owl:Class ;
+    rdfs:label "Commercial Interaction"@en ;
+    rdfs:comment "Interaction in a commercial context."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:Interaction .
+
+spaces:CommercialSpace a owl:Class ;
+    rdfs:label "Commercial Space"@en ;
+    rdfs:comment "A space dedicated to commercial activities such as retail, services, or dining."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:Space ;
+    skos:definition "A designated space where commercial transactions and activities take place."@en ;
+    skos:example "Shops, malls, restaurants, banks"@en .
+
+spaces:CulturalArtifact a owl:Class ;
+    rdfs:label "Cultural Artifact"@en ;
+    rdfs:comment "A physical object of cultural significance or value."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:ObjectOfInterest .
+
+spaces:CulturalInteraction a owl:Class ;
+    rdfs:label "Cultural Interaction"@en ;
+    rdfs:comment "Interaction with cultural artifacts or in cultural contexts."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:Interaction .
+
+spaces:CulturalLandmark a owl:Class ;
+    rdfs:label "Cultural Landmark"@en ;
+    rdfs:comment "A recognizable cultural feature of a landscape or cityscape."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalSpace .
+
+spaces:CulturalSignificance a owl:Class ;
+    rdfs:label "Cultural Significance"@en ;
+    rdfs:comment "Information about the cultural importance or value of an entity."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf dul:Abstract .
+
+spaces:CulturalSpace a owl:Class ;
+    rdfs:label "Cultural Space"@en ;
+    rdfs:comment "A space dedicated to cultural activities, exhibitions, or performances."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:Space ;
+    skos:definition "A designated space where cultural artifacts are exhibited or cultural events take place."@en ;
+    skos:example "Museums, galleries, theaters, historical sites"@en .
+
+spaces:Department a owl:Class ;
+    rdfs:label "Department"@en ;
+    rdfs:comment "A section of a retail space dedicated to a specific category of products."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:Zone .
+
+spaces:DigitalInstallation a owl:Class ;
+    rdfs:label "Digital Installation"@en ;
+    rdfs:comment "A digital or electronic installation in a cultural space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalArtifact .
+
+spaces:DiningEstablishment a owl:Class ;
+    rdfs:label "Dining Establishment"@en ;
+    rdfs:comment "A restaurant, café, or other food service establishment."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:DiningSpace .
+
+spaces:DiningSpace a owl:Class ;
+    rdfs:label "Dining Space"@en ;
+    rdfs:comment "A commercial space dedicated to food service."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialSpace .
+
+spaces:Exhibit a owl:Class ;
+    rdfs:label "Exhibit"@en ;
+    rdfs:comment "An object displayed in a cultural space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalArtifact .
+
+spaces:ExhibitMetadata a owl:Class ;
+    rdfs:label "Exhibit Metadata"@en ;
+    rdfs:comment "Descriptive information about a cultural artifact."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf dul:Abstract .
+
+spaces:FirstTimeVisit a owl:Class ;
+    rdfs:label "First Time Visit"@en ;
+    rdfs:comment "A first-time visit to a space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:VisitContext .
+
+spaces:Gallery a owl:Class ;
+    rdfs:label "Gallery"@en ;
+    rdfs:comment "A space for exhibiting art, typically visual art."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalSpace .
+
+spaces:GuidedVisit a owl:Class ;
+    rdfs:label "Guided Visit"@en ;
+    rdfs:comment "A visit with a guide or guided tour."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:VisitContext .
+
+spaces:HistoricalObject a owl:Class ;
+    rdfs:label "Historical Object"@en ;
+    rdfs:comment "An object with historical significance."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalArtifact .
+
+spaces:HistoricalSite a owl:Class ;
+    rdfs:label "Historical Site"@en ;
+    rdfs:comment "A location recognized for its historical significance."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalSpace .
+
+spaces:Listening a owl:Class ;
+    rdfs:label "Listening"@en ;
+    rdfs:comment "Listening to audio associated with a cultural artifact."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:ArtifactEngagement .
+
+spaces:Museum a owl:Class ;
+    rdfs:label "Museum"@en ;
+    rdfs:comment "A building or institution that houses and exhibits collections of artifacts."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalSpace .
+
+spaces:PerformanceVenue a owl:Class ;
+    rdfs:label "Performance Venue"@en ;
+    rdfs:comment "A space designed for performing arts events."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalSpace .
+
+spaces:Photographing a owl:Class ;
+    rdfs:label "Photographing"@en ;
+    rdfs:comment "Taking photographs of a cultural artifact."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:ArtifactEngagement .
+
+spaces:Product a owl:Class ;
+    rdfs:label "Product"@en ;
+    rdfs:comment "A physical item available for purchase in a commercial space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:ObjectOfInterest .
+
+spaces:Purchase a owl:Class ;
+    rdfs:label "Purchase"@en ;
+    rdfs:comment "The act of buying a product or service."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialInteraction .
+
+spaces:PurchaseIntent a owl:Class ;
+    rdfs:label "Purchase Intent"@en ;
+    rdfs:comment "Intent to purchase specific products or services."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialIntent .
+
+spaces:Reading a owl:Class ;
+    rdfs:label "Reading"@en ;
+    rdfs:comment "Reading text associated with a cultural artifact."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:ArtifactEngagement .
+
+spaces:RepeatVisit a owl:Class ;
+    rdfs:label "Repeat Visit"@en ;
+    rdfs:comment "A return visit to a previously visited space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:VisitContext .
+
+spaces:RetailLayout a owl:Class ;
+    rdfs:label "Retail Layout"@en ;
+    rdfs:comment "The physical arrangement and organization of a retail space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf dul:Abstract .
+
+spaces:RetailSpace a owl:Class ;
+    rdfs:label "Retail Space"@en ;
+    rdfs:comment "A commercial space dedicated to selling goods to customers."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialSpace .
+
+spaces:RetailStore a owl:Class ;
+    rdfs:label "Retail Store"@en ;
+    rdfs:comment "A retail establishment selling goods to customers."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:RetailSpace .
+
+spaces:SelfDirectedVisit a owl:Class ;
+    rdfs:label "Self Directed Visit"@en ;
+    rdfs:comment "A self-guided visit without formal guidance."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:VisitContext .
+
+spaces:Service a owl:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "A non-physical offering available in a commercial space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf dul:Abstract .
+
+spaces:ServiceConsumption a owl:Class ;
+    rdfs:label "Service Consumption"@en ;
+    rdfs:comment "The act of using or consuming a service."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialInteraction .
+
+spaces:ServiceIntent a owl:Class ;
+    rdfs:label "Service Intent"@en ;
+    rdfs:comment "Intent to use specific services."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialIntent .
+
+spaces:ServiceProvider a owl:Class ;
+    rdfs:label "Service Provider"@en ;
+    rdfs:comment "An establishment providing specific services (banking, healthcare, etc.)."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:ServiceSpace .
+
+spaces:ServiceSpace a owl:Class ;
+    rdfs:label "Service Space"@en ;
+    rdfs:comment "A commercial space dedicated to providing services."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CommercialSpace .
+
+spaces:ShoppingAisle a owl:Class ;
+    rdfs:label "Shopping Aisle"@en ;
+    rdfs:comment "A pathway between shelves or displays in a retail space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:Zone .
+
+spaces:ShoppingMall a owl:Class ;
+    rdfs:label "Shopping Mall"@en ;
+    rdfs:comment "A large enclosed shopping area containing multiple retail stores."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:RetailSpace .
+
+spaces:SocialLearning a owl:Class ;
+    rdfs:label "Social Learning"@en ;
+    rdfs:comment "Learning through social interaction in a cultural context."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:CulturalInteraction .
+
+spaces:Space a owl:Class ;
+    rdfs:label "Space"@en ;
+    rdfs:comment "A designated area with defined boundaries where human movement occurs."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:RegionOfInterest ;
+    skos:definition "A physical or conceptual area where human movement and activities take place, characterized by boundaries and internal organization."@en .
+
+spaces:ThematicVisit a owl:Class ;
+    rdfs:label "Thematic Visit"@en ;
+    rdfs:comment "A visit focused on a specific theme or aspect of the space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:VisitContext .
+
+spaces:TransactionEvent a owl:Class ;
+    rdfs:label "Transaction Event"@en ;
+    rdfs:comment "An event involving a commercial transaction."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:EventOfInterest .
+
+spaces:Viewing a owl:Class ;
+    rdfs:label "Viewing"@en ;
+    rdfs:comment "Looking at or observing a cultural artifact."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf spaces:ArtifactEngagement .
+
+spaces:VisitContext a owl:Class ;
+    rdfs:label "Visit Context"@en ;
+    rdfs:comment "Contextual information about a visit to a space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf dul:Situation .
+
+spaces:Zone a owl:Class ;
+    rdfs:label "Zone"@en ;
+    rdfs:comment "A defined section or area within a larger space."@en ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:subClassOf trajecto:RegionOfInterest .
+
+
+#################################################################
+#    Object properties
+#################################################################
+
+spaces:containsEntity a owl:ObjectProperty ;
+    rdfs:label "contains entity"@en ;
+    rdfs:comment "Relates a space to entities it contains."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range trajecto:EntityOfInterest ;
+    rdfs:subPropertyOf dul:hasPart .
+
+spaces:exhibits a owl:ObjectProperty ;
+    rdfs:label "exhibits"@en ;
+    rdfs:comment "Relates a cultural space to artifacts it exhibits."@en ;
+    rdfs:domain spaces:CulturalSpace ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:CulturalArtifact .
+
+spaces:hasCommercialIntent a owl:ObjectProperty ;
+    rdfs:label "has commercial intent"@en ;
+    rdfs:comment "Links a trajectory part to commercial intent."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:CommercialIntent .
+
+spaces:hasCulturalSignificance a owl:ObjectProperty ;
+    rdfs:label "has cultural significance"@en ;
+    rdfs:comment "Links a cultural entity to its significance information."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( spaces:CulturalArtifact spaces:CulturalSpace ) ] ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:CulturalSignificance .
+
+spaces:hasEntrance a owl:ObjectProperty ;
+    rdfs:label "has entrance"@en ;
+    rdfs:comment "Relates a space to its entrance points."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:AccessPoint .
+
+spaces:hasExhibitMetadata a owl:ObjectProperty ;
+    rdfs:label "has exhibit metadata"@en ;
+    rdfs:comment "Links a cultural artifact to its metadata information."@en ;
+    rdfs:domain spaces:CulturalArtifact ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:ExhibitMetadata .
+
+spaces:hasExit a owl:ObjectProperty ;
+    rdfs:label "has exit"@en ;
+    rdfs:comment "Relates a space to its exit points."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:AccessPoint .
+
+spaces:hasTransactionEvent a owl:ObjectProperty ;
+    rdfs:label "has transaction event"@en ;
+    rdfs:comment "Links a trajectory part to a transaction event."@en ;
+    rdfs:domain datacron:TrajectoryPart ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:TransactionEvent .
+
+spaces:hasVisitContext a owl:ObjectProperty ;
+    rdfs:label "has visit context"@en ;
+    rdfs:comment "Links a trajectory to the context of the visit."@en ;
+    rdfs:domain datacron:Trajectory ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:VisitContext .
+
+spaces:hasZone a owl:ObjectProperty ;
+    rdfs:label "has zone"@en ;
+    rdfs:comment "Relates a space to its constituent zones or areas."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:Zone ;
+    rdfs:subPropertyOf dul:hasPart .
+
+spaces:isLocationOf a owl:ObjectProperty ;
+    rdfs:label "is location of"@en ;
+    rdfs:comment "Relates a space to events that take place there."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range trajecto:EventOfInterest .
+
+spaces:providesService a owl:ObjectProperty ;
+    rdfs:label "provides service"@en ;
+    rdfs:comment "Relates a service space to services it provides."@en ;
+    rdfs:domain spaces:ServiceSpace ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:Service .
+
+spaces:sells a owl:ObjectProperty ;
+    rdfs:label "sells"@en ;
+    rdfs:comment "Relates a retail space to products it sells."@en ;
+    rdfs:domain spaces:RetailSpace ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range spaces:Product .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+spaces:hasAccessibility a owl:DatatypeProperty ;
+    rdfs:label "has accessibility"@en ;
+    rdfs:comment "Accessibility features of a space."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:string .
+
+spaces:hasArtist a owl:DatatypeProperty ;
+    rdfs:label "has artist"@en ;
+    rdfs:comment "Artist or creator of a cultural artifact."@en ;
+    rdfs:domain spaces:CulturalArtifact ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:string .
+
+spaces:hasCapacity a owl:DatatypeProperty ;
+    rdfs:label "has capacity"@en ;
+    rdfs:comment "Maximum capacity of a space in terms of people."@en ;
+    rdfs:domain spaces:Space ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:positiveInteger .
+
+spaces:hasCreationDate a owl:DatatypeProperty ;
+    rdfs:label "has creation date"@en ;
+    rdfs:comment "Date when a cultural artifact was created."@en ;
+    rdfs:domain spaces:CulturalArtifact ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:date .
+
+spaces:hasExhibitID a owl:DatatypeProperty ;
+    rdfs:label "has exhibit ID"@en ;
+    rdfs:comment "Identifier for a cultural artifact in an exhibition."@en ;
+    rdfs:domain spaces:CulturalArtifact ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:string .
+
+spaces:hasOpeningHours a owl:DatatypeProperty ;
+    rdfs:label "has opening hours"@en ;
+    rdfs:comment "Opening hours of a commercial space."@en ;
+    rdfs:domain spaces:CommercialSpace ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:string .
+
+spaces:hasPrice a owl:DatatypeProperty ;
+    rdfs:label "has price"@en ;
+    rdfs:comment "Price of a product or service."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( spaces:Product spaces:Service ) ] ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:decimal .
+
+spaces:hasProductCategory a owl:DatatypeProperty ;
+    rdfs:label "has product category"@en ;
+    rdfs:comment "Category of a product."@en ;
+    rdfs:domain spaces:Product ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:string .
+
+spaces:hasTransactionAmount a owl:DatatypeProperty ;
+    rdfs:label "has transaction amount"@en ;
+    rdfs:comment "Amount of money involved in a transaction."@en ;
+    rdfs:domain spaces:TransactionEvent ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:decimal .
+
+spaces:hasVisitDuration a owl:DatatypeProperty ;
+    rdfs:label "has visit duration"@en ;
+    rdfs:comment "Duration of a visit."@en ;
+    rdfs:domain spaces:VisitContext ;
+    rdfs:isDefinedBy <http://w3id.org/trajecto/spaces> ;
+    rdfs:range xsd:duration .
+
+
+#################################################################
+#    Terms reused from other modules and vocabularies
+#################################################################
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+trajecto:EntityOfInterest a owl:Class .
+
+trajecto:EventOfInterest a owl:Class .
+
+trajecto:Interaction a owl:Class .
+
+trajecto:ObjectOfInterest a owl:Class .
+
+trajecto:PointOfInterest a owl:Class .
+
+trajecto:RegionOfInterest a owl:Class .
+
+datacron:TrajectoryPart a owl:Class .
+
+dul:Situation a owl:Class .
+
+dul:hasPart a owl:ObjectProperty .
+
+xsd:date a rdfs:Datatype .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .

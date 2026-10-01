@@ -1,0 +1,282 @@
+poi,label,category,covisit_degree,betweenness,eigenvector,pagerank,flow_in,flow_out,community,role
+http://w3id.org/trajecto/poi#artwork_0_0890,Les Voluptueux,Painting,1198,0.004197216612908629,0.1942328524621783,0.018602822879164423,33,33,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0187,La destruction du palais d'Armide,Painting,1148,0.0029721015245127934,0.19340119077598478,0.016518778118067307,29,30,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0379,La Transfiguration,Painting,1255,0.003632404443192763,0.21242637914075588,0.016093621525838476,32,32,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0235,Portrait équestre de Madame de Saint-Baslemont,Painting,986,0.0027550646967824366,0.17044444719182855,0.013772751522991601,24,25,0,Hub
+http://w3id.org/trajecto/poi#artwork_0_0861,La Toussaint,Painting,915,0.004658290908046207,0.15374744149492525,0.012904137288939958,26,26,0,Hub
+http://w3id.org/trajecto/poi#artwork_0_0869,La douleur,Painting,844,0.004898558767841319,0.13601439995665973,0.011922133072857848,24,25,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0341,Marine,Painting,806,0.005023658551137887,0.1387112024553134,0.011462545814065151,21,21,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_5845,La Femme à la puce,Painting,936,0.003078112872332555,0.15769972543251481,0.010275772533111592,22,22,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0345,Paysage d'hiver,Painting,739,0.0032629594543800676,0.12548925330176175,0.009255751234649948,16,16,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2900,Le Christ chassant les marchands du temple,Painting,800,0.002108512473891025,0.13798574446574377,0.009105730746429825,17,16,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0053,Charles le Téméraire retrouvé mort après la bataille de Nancy,Painting,797,0.002821463036657931,0.14165498857478065,0.009077997797580119,21,20,0,Hub
+http://w3id.org/trajecto/poi#artwork_0_0894,Travaux de nuit sur la voie publique,Painting,514,0.004346234177067186,0.08472951879880175,0.008753555641043263,13,12,0,Hub
+http://w3id.org/trajecto/poi#artwork_0_0887,Nymphe,Painting,652,0.0050242568633956765,0.10225563633425352,0.008564970352467432,15,14,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_5775,Panneau décoratif ovale : deux dragons gardant la perle sacrée,Sculpture,744,0.004221370718151303,0.12302395720472355,0.008340379677753439,16,17,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0078,Retour de chasse au lion,Painting,763,0.003212981522885276,0.1320992519205901,0.00832437322250766,21,22,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0987,Les jours heureux/L'enfant couronné de fleurs ,Painting,584,0.00571695148658634,0.09560031751213927,0.008226942673541878,15,14,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0178,L'Ivresse de Silène,Painting,602,0.004891354192059033,0.1048862707558748,0.00820800907336264,15,15,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_5870,Le Ravissement de saint François,Painting,661,0.0024638413817558197,0.11382608246188777,0.008126937143628886,16,16,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2930,La Continence de Scipion,Painting,718,0.004246404780667086,0.1195153383712031,0.00799111565175711,15,15,1,Hub
+http://w3id.org/trajecto/poi#artwork_0_0841,Les Amoureux,Painting,519,0.003427989992123114,0.08989749832167428,0.007825350408816234,15,15,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0370,L'Annonciation,Painting,737,0.002675315757953118,0.1258085294681318,0.007824070424917713,16,16,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2878,La passion du Christ,Painting,706,0.0039549374330897485,0.11570055963969254,0.007565726168786187,14,14,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0141,Anne et Jehanne,Painting,771,0.003888234633496729,0.1287752882398111,0.007550532951874477,18,18,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0060,Jeune fille et la Mort,Painting,732,0.002383371531464374,0.12657700279388967,0.007481654689818959,19,20,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0268,Saint Sébastien soigné par sainte Irène,Painting,563,0.004127244687958919,0.10157001557416973,0.007372129918292528,14,14,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_5846,Le Souffleur à la pipe,Painting,755,0.0029288633622481255,0.12866605562720657,0.00728267148145575,16,16,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0124,Vue de la ville et du port de Dieppe,Painting,846,0.002245711676612334,0.14052388974200442,0.00721371981716158,19,19,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0274,Le songe de Jacob,Painting,461,0.003876902592856066,0.08302533451039233,0.007035281454947802,13,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0266,Le Pape Alexandre VII porté à la procession du Corpus Domini,Painting,492,0.004714906903468955,0.08516861578778734,0.006793288901457723,12,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_5848,Saint Charles Borromée donnant la sainte communion aux pestiférées de Milan,Painting,516,0.0024160213322037445,0.0937533180126636,0.006618609365166269,14,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2917,Les Compteurs d'argent,Painting,732,0.003839763006840003,0.11730597607642299,0.006618373364341481,14,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_0_0859,Dans la forêt,Painting,508,0.007787314124678676,0.08341910491061347,0.006613814154409921,13,12,0,Hub
+http://w3id.org/trajecto/poi#artwork_2_2932,Persée délivrant Andromède,Painting,676,0.0023853228839109055,0.11386289412534968,0.00659719154567154,13,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_5915,Restaurant en plein vent à Ain-Sefra,Painting,492,0.00863486818751855,0.07988927136331703,0.006589129659691147,14,16,0,Hub
+http://w3id.org/trajecto/poi#artwork_2_0527,Déposition de croix avec Joseph d'Arimthie,Painting,520,0.003832626590681239,0.08636700961723355,0.006504145847868173,11,12,1,Hub
+http://w3id.org/trajecto/poi#artwork_0_0865,La Toussaint,Installation,394,0.0035159044635214814,0.07019940772101352,0.006468086874223152,12,9,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0853,Jeune Nancéienne dans un paysage de neige,Painting,419,0.006103608607534772,0.07054711882699784,0.00631054004455455,11,10,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0976,Soir de 14 juillet,Painting,355,0.004230968713665569,0.053406159805404994,0.006243183638503649,11,10,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0985,Les jours heureux/L'enfant endormi ,Painting,366,0.0027600395833443695,0.06488078861960425,0.006069547462928854,11,12,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0174,Le repos de Diane,Painting,323,0.003954821663075389,0.055778398764040456,0.006067154855480911,9,9,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2840,L'Enlèvement d'Hélène,Painting,585,0.00404041732454846,0.0955588713150209,0.0060593224319256496,11,11,1,Hub
+http://w3id.org/trajecto/poi#artwork_0_0826,Le lancement du filet,Painting,463,0.0036474422185299366,0.07647320295242488,0.00604284389006525,11,11,0,Hub
+http://w3id.org/trajecto/poi#artwork_1_0062,Paysage de montagne,Painting,756,0.003993312830766557,0.12607453797332144,0.005997523606450127,16,18,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0368,L'Annonciation,Painting,646,0.003594443940694924,0.10786702655649569,0.005981112301784437,12,12,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_0417,Ne me touche pas,Painting,677,0.0025541243792447563,0.11189282180401872,0.00597101701790612,12,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_0_0824,Escale,Painting,389,0.002963675775633242,0.057914846910125835,0.00566006195163711,10,11,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0353,Coin de jardin,Painting,373,0.004617905173854255,0.061884426040487196,0.005639337612152082,11,11,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0193,Aurore et Céphale,Painting,409,0.0039001633395729274,0.06883137981084458,0.0055267215592675,9,9,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0395,Femme essuyant ses larmes,Painting,511,0.0032495253564513863,0.08963356064988355,0.005507431429165412,11,13,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2871,Le Calvaire,Painting,435,0.0019402643983242461,0.07489020673485516,0.005470989015883116,10,10,1,Hub
+http://w3id.org/trajecto/poi#artwork_0_0879,Chant du soir,Painting,393,0.004576123194046518,0.06549993200511169,0.005452683124757374,9,9,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_0422,Prédiction de saint Jean-Baptiste,Painting,588,0.0026044668118440006,0.09791954649013684,0.005429930918366347,11,11,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2904,Laissez venir à moi les petits enfants,Painting,626,0.0035919829698336323,0.1015240955643992,0.005360920814932671,11,11,1,Hub
+http://w3id.org/trajecto/poi#artwork_1_0983,Ophélie,Painting,331,0.0071720774897942804,0.054253584595442654,0.005360704643862665,10,9,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0334,Paysage,Painting,360,0.0037509293705984747,0.05798816928214497,0.005324817366448727,10,10,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0101,Fantaisie d'architecture en ruine avec la naissance de Vénus,Painting,371,0.0060295690292541965,0.056190486405506265,0.005193304230603908,8,8,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2902,Marché avec l'Ecce Homo,Painting,476,0.0037811846626591445,0.08204906298769474,0.0051000877278044,10,10,1,Hub
+http://w3id.org/trajecto/poi#artwork_2_2936,Le Christ après la flagellation,Painting,506,0.0022173852736129237,0.08608293601811431,0.00508284403770896,9,9,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0280,Le Baptême du Christ,Painting,258,0.005715791607944134,0.043600416871694435,0.005077181704103754,8,8,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0843,Après l'enterrement,Painting,345,0.0035023715247886364,0.0591517601128906,0.005055456545673522,10,9,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5876,L'Ile heureuse,Painting,339,0.004927628340986979,0.05998917904003107,0.004992701576742979,9,9,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0439,Le pauvre pêcheur,Painting,300,0.003315633896122632,0.04946083460410384,0.00488396548774643,8,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0363,Saint Jean l'Evangéliste,Painting,400,0.003297682088600369,0.0723918656203305,0.004837091335243063,9,8,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0305,Fleurs et tapis,Painting,338,0.0036831691575615545,0.057812811465492615,0.004783931060648967,8,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0680,"DIJ VII - VI 1,2,3",Painting,283,0.0046812101459394895,0.042997526363589715,0.004730626299338957,7,8,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_5872,Les Lamentations sur le Christ mort,Painting,341,0.003179768979738692,0.059882288844089915,0.004679998924371448,8,8,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2867,Le mariage mystique de sainte Catherine,Painting,457,0.0015812315354878208,0.0763043102643129,0.004606714625898066,8,8,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0389,La mélancolie,Painting,518,0.0010446251091882762,0.08922118038123163,0.0045466184039357135,9,10,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0365,Archange,Painting,400,0.0019691167096888606,0.0710238778017237,0.004519364135418037,9,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5928,Ellipse orange évidée par sept disques,Painting,318,0.002133498034439897,0.057015865919947575,0.0044635345989654605,11,11,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0720,La Veillée,Painting,279,0.003118097335316252,0.046337814786915885,0.004427080087291017,7,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0375,Le Christ ressuscité apparaissant à sa mère,Painting,500,0.0023526986472364483,0.08346085524945196,0.004421459833865689,9,9,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5882,Place du Dôme à Pise,Painting,302,0.0025536596980190664,0.05549619740116648,0.0043201824998740776,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0272,La Circoncision,Painting,301,0.0031931569182573638,0.05366498787249219,0.004305796013475694,7,6,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2888,Adoration des bergers,Painting,454,0.0012176024368578504,0.0746338352403015,0.004305525198565578,6,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0781,Femme sur un canapé,Painting,326,0.008388977858039007,0.04790250343215195,0.004267150652196813,8,6,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0016,Portrait d'Edmond de Goncourt,Painting,306,0.0042984726201653195,0.05076999617341421,0.004255085914959894,8,8,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0328,Tortue et crabe,Painting,338,0.0036714867612169327,0.05632562625858868,0.004232674808231072,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0391,L'incrédulité de saint Thomas,Painting,486,0.0021869492384935267,0.08486502760766161,0.004220122591805782,9,10,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0815,"Le souk aux tapis, Marrakech",Painting,221,0.003003351779839193,0.034352623580108266,0.004187848931312773,6,6,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0228,La Déposition de croix,Painting,284,0.004709879292948904,0.047001650916460455,0.004142314853397389,7,7,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2852,Vierge à l'Enfant,Painting,267,0.0033720008015325985,0.044792337536480105,0.004104249611868496,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0324,"Nature morte, écrevisse et poissons",Painting,306,0.0016523051944882434,0.05310980471099065,0.004101075495229253,6,6,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0303,L'Automne,Painting,380,0.002308107870122197,0.06456768159980221,0.0040831883577549495,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0058,Soir d'automne en forêt (Ile-et-Vilaine),Painting,446,0.005680665771424525,0.07756372214736854,0.004080609007671455,11,13,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_5913,Nurmahal,Painting,335,0.0036154105114034477,0.05662473636661724,0.004065626310201892,7,8,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0385,Isaac envoie Esaü à la chasse,Painting,391,0.003948637149645604,0.06610321270831723,0.004009855357858119,8,8,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0014,Portrait de Charles Cartier-Bresson,Painting,287,0.002347944690077392,0.04361854756220897,0.003982177556241567,7,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0172,La Continence de Scipion,Painting,312,0.003444807754345887,0.05462597727647792,0.003932045771404787,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2831,Sainte Famille avec saint Jean et sainte Elisabeth,Painting,398,0.002266728092393013,0.06543795625817647,0.003929419505883089,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0377,Les Apprêts du martyre de saint Sébastien,Painting,403,0.0011628732165545098,0.0713832238304596,0.003882483616488521,8,8,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0570,Sans titre,MixedMedia,265,0.0053451629319854746,0.042423044087639215,0.0038759038284276104,7,9,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0848,Autoportrait,Painting,262,0.0032382516285196323,0.04221225053992409,0.003799078266728437,7,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2816,Le Jugement dernier,Painting,455,0.0018266909495102937,0.07528694974692644,0.003715494370318254,6,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2829,La Sainte Trinité,Painting,391,0.0021476490871154023,0.06562121187254495,0.0036756682839501893,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0387,Saint Jérôme,Painting,370,0.0011041470004891812,0.06489088495015756,0.003626797920651128,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2934,Andromède attachée au rocher,Painting,374,0.0014425163616368665,0.06425418463694467,0.003608954882762649,7,7,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0978,Job,Painting,226,0.006034884724632054,0.03565880225620695,0.003572216347573532,6,5,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_5909,Portrait de Lucien Wiener dans son atelier,Painting,214,0.003114289438016475,0.03376751752034674,0.0035591438516442576,6,6,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0678,Dante et Virgile,Painting,217,0.0028957565567395357,0.037554736927034454,0.003555758346959955,6,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0772,Autoportrait,Painting,198,0.0027586866105427164,0.03007291200877064,0.0035027199579292425,7,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0311,Le Déjeuner de poisson,Painting,290,0.004761570684830099,0.04804925453270454,0.00349824013682202,6,6,1,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2890,L'Adoration des bergers,Painting,364,0.0017365562045423442,0.06018812000448258,0.0034862207945169483,6,6,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0189,L'Annonciation,Painting,167,0.003664780652054612,0.02837801063541085,0.0034600513796092048,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5884,Place du palais ducal à Florence,Painting,223,0.004297778415256741,0.034709579766674103,0.003423936948165124,5,5,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0689,Dans un jardin zen,MixedMedia,181,0.0021180841998252728,0.03225056142256085,0.003406287947353783,5,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0813,"Ighil n'oro, le Mellah",Painting,175,0.0032415275834734073,0.025885338577613718,0.00338959159039331,5,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5905,Portrait d'Elisabeth-Charlotte de Bavière,Painting,237,0.004468732991566029,0.03953795175373284,0.003356999935366159,5,5,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0375,Femme blonde,Painting,231,0.0025698353296344984,0.042302679593494624,0.003347292579757493,5,5,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0356,Les patineurs,Painting,296,0.0013577239150628603,0.04860822090558896,0.0033295181921957923,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0851,Le Sculpteur Bussière dans son atelier,Painting,222,0.0020276419160465023,0.03671521283277236,0.003305538309579098,6,6,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0577,"Assemblage Konshie II, polish village",MixedMedia,172,0.0059945535488153436,0.027839910428089837,0.003302351931057711,6,5,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0960,Jeune femme assise,Painting,239,0.004974564122961657,0.038983263400716325,0.003302026831614578,6,6,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2873,Le Christ au désert servi par des anges,Painting,283,0.0024519287505289787,0.045400539651811525,0.0032771823043896485,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0875,Femme à la perle,Painting,152,0.0024201926822447085,0.02598990683891266,0.0032766266637416124,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0969,Portrait de Colette Gervex,Painting,200,0.005417682088507586,0.029914800050854586,0.0032640449917605836,6,6,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0759,Le pardon de l'Hymen,Painting,108,0.001311531820915407,0.018036277862496165,0.0032523247106264,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0360,La Diseuse de bonne aventure,Painting,315,0.0029073721593589133,0.049998074851296606,0.0032508784208340894,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5886,Esquisse de plafond,Painting,225,0.0029009768247569043,0.03819761714302691,0.0032454035914000054,5,5,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_6003,Bacchanale,Painting,256,0.003653110043629284,0.0404539174873869,0.003235239030336107,5,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5899,Episode du siège de Metz,Painting,281,0.003253180096319644,0.04962850107174153,0.003198593151620299,7,7,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2827,Pietà avec des anges,Painting,362,0.0015008635474529227,0.061222422656624975,0.003196716455923254,6,6,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0307,Memento Mori,Painting,195,0.0023910472331896394,0.0350852817710935,0.0031886802346952564,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0787,Environs de Dijon,Painting,256,0.00312512716324032,0.041427378060641375,0.0031660511799406254,5,6,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0962,Après-midi à Pardigon,Painting,209,0.005285534705011085,0.034142973166482175,0.0031440284368151553,5,5,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_5896,Portrait de Guilbert de Pixerécourt,Painting,292,0.005394468282374584,0.046860213084358504,0.0031304456782237796,6,6,1,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2926,Jésus marchant sur les eaux,Painting,300,0.0013361388685569028,0.0514819775183899,0.003126176567661362,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2915,Diane chasseresse,Painting,390,0.0015777534823093178,0.06342563675555009,0.0031118150158067066,6,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0789,Paysage de neige,Painting,186,0.0024669230892252285,0.029916885335599906,0.003099297564322633,5,5,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0855,Portrait de Madame Lebeau,Painting,236,0.005189109097475851,0.037262617894254065,0.0030876220985150866,5,5,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0373,L'Annonciation,Painting,299,0.0014713815803682575,0.054077427115743634,0.0030716458439457362,6,6,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0819,Port de Toulon,Painting,146,0.001441002097966562,0.01847657350436246,0.003068546906014422,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2913,Noces de Thétis et Pélée,Painting,305,0.0018819664413297077,0.04964548503572771,0.0030585829512476907,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0276,Le Christ au tombeau,Painting,256,0.004394632387921198,0.04217886569657523,0.00304021323492554,5,5,1,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0176,Junon ordonne à Eole de détruire la flotte d'Enée,Painting,179,0.0037116768930756114,0.030523079161104912,0.0030042541985711765,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2818,La décollation de Saint Jean-Baptiste,Painting,291,0.0023424016482136746,0.04782703801902269,0.003004086953967837,5,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_0459,Portrait d'Antoine de Ville,Painting,252,0.001238140659214092,0.045647342248305044,0.0029819439216656886,5,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0239,Madeleine pénitente,Painting,239,0.0034510977763429936,0.039947404186808054,0.002912416949970751,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0283,Sibylle de Tibur annonçant à Auguste l'avènement,Painting,138,0.0035877839152521477,0.026382497659125495,0.002895835275788691,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0270,Mariage mystique de sainte Catherine,Painting,174,0.0033640034041445745,0.031190438643429734,0.0028395329390812608,4,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0074,Médée,Painting,216,0.0048950357879993765,0.03639558415363322,0.002824236371331001,6,6,0,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0703,La tranche de pastèque,Painting,116,0.0026209279886085833,0.016185757041684047,0.0028097669753354153,3,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0718,Les dentellières de Burano,Painting,131,0.003003257063183903,0.02067306108338251,0.002804282616718713,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2864,Naissance de la Vierge,Painting,208,0.002676686979325891,0.03449697699792525,0.0027830862338943233,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0222,Nymphe essayant les flèches de l'Amour,Painting,223,0.0035598129509181085,0.03633545598737445,0.002762627529178437,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0845,Le Travail du lundi,Painting,174,0.0035153513447894053,0.02711567462273906,0.0027415933269198498,5,5,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5866,Assomption,Painting,93,0.0023671220391338105,0.01500873992335112,0.0027286890036220387,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5868,Saint François de Paule en prière,Print,158,0.0010931081308105503,0.02993796978612697,0.002707540664428838,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0670,Anamorphose,Painting,281,0.005968430271305132,0.04041558919113133,0.002679935146281768,5,6,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0358,Le Torrent,Painting,263,0.0014034148030074869,0.04279796832335859,0.002646315374649185,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2838,Déluge / Le Déluge,Painting,144,0.00579064746435493,0.02427928227817762,0.002622241178534504,4,4,1,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0220,L'Amour qui se venge,Painting,189,0.004282070281271729,0.029642146326125492,0.0025694325317532633,4,4,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0821,Les trois baigneuses,Painting,124,0.002259483052902244,0.016966893341556696,0.0025071442967758285,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0356,Paysage de Diénay,Painting,143,0.0024022626323651807,0.02322712203654581,0.002498867291577374,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2801,Vierge à l'enfant accompagnée par deux anges,Painting,263,0.0014034148030074869,0.04279796832335859,0.0024937952195284102,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5907,Roméo et Juliette,Painting,221,0.0030318040726229397,0.03996625325553708,0.0024709458572852653,5,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0160,Portrait d'un architecte,Painting,67,0.0011428356935814065,0.011294026746841424,0.002463080803750897,3,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2850,Le Sauveur du monde,Painting,253,0.0030578665647594226,0.0416762807702712,0.0024596516447929983,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2822,La Mise au tombeau,Painting,234,0.0013740475333105435,0.038907136983169895,0.0024439787510402962,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0817,Paysage d'Avila,Painting,129,0.002410168065237258,0.01679582828515182,0.0024164568173681744,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0776,Paysage d'Aix-en-Provence,Painting,171,0.0025744805739153272,0.024133688777868277,0.002402057013685347,4,5,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0558,Apparition de la Vierge à San Andrea Corsini l'invitant à accepter l'évêché de Fiesole,Sculpture,112,0.0019630155824978453,0.02081061042198813,0.0023860518092764073,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0967,L'Allée ombragée,Painting,165,0.002146156157297591,0.02691412373793191,0.0023832449703597076,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2824,L'Apparition du Christ à Marie-Madeleine,Painting,281,0.0018555690110056897,0.04449559273759785,0.0023625233430903127,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5917,Repos d'Arabes,Painting,195,0.003646344395338053,0.028799922093616544,0.0023590836203294828,5,6,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0301,Corbeille de fleurs,Painting,154,0.002662952209025809,0.029268416406188418,0.0023554234341028124,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2836,Déploration du Christ,Painting,215,0.004666481682275268,0.034416121689285394,0.002346126063229367,4,5,1,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0230,L'Enlèvement des Sabines,Painting,147,0.003394217741986576,0.02485061734648625,0.00234363155517404,4,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2922,Têtes de vieille femme,Painting,287,0.003909678877364609,0.04678168032670423,0.00232878285963319,4,5,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0829,Pierrotins,Painting,154,0.002455862371157797,0.02315384745585112,0.0023238787555394597,3,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0183,La Rencontre de Didon et Enée,Painting,180,0.002555931630490778,0.032088580520913526,0.002310611014021015,4,4,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0135,Jahel et Sisara,Painting,115,0.002955466876367484,0.018607825871005637,0.0022941282876781256,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0320,Fruits d'Italie,Painting,183,0.0023973059471754086,0.031434789026414736,0.0022862697839337418,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0191,La Nativité,Painting,111,0.0022792392526007252,0.018639796568266982,0.0022152412594053906,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0095,Architecture en ruine avec la commedia dell'arte,Painting,94,0.0021349404591564087,0.017001187691838615,0.0022099840551332317,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2869,Vierge à l'Enfant servie par des anges,Painting,170,0.0028543956553676135,0.02800244002192139,0.0021987281269941162,3,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0337,Paysage de provence,Painting,89,0.0027193538698334616,0.012301362104706011,0.0021940723893180054,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0930,"Rue Lepic, le moulin de la Galette",Painting,159,0.004139584313664109,0.023215136025864103,0.002186689904739315,3,3,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2863,La Présentation de Jésus au temple,Painting,207,0.002598253942779035,0.03222121637368022,0.0021796068971452324,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0339,Fête de village flamand,Painting,148,0.0011175493917707502,0.0250570664227034,0.002169542521692395,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0158,Portrait de la Belle de Ludres / Portrait de la comtesse des Salles de Malpierre,Painting,128,0.004891417833558698,0.019238272560918097,0.0021663503862244114,3,3,0,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2809,"Vierge à l'Enfant, saint Jean et deux anges",Painting,151,0.0021150426210243853,0.026581445432962255,0.0021566026557933173,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0785,Paysage,Painting,80,0.0015176579139905314,0.014255231889157612,0.0021351439209300327,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2854,Saint Paul,Painting,193,0.0018680224731297266,0.03162706291692376,0.0021075634560858477,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0093,Les Oiseleurs,Painting,103,0.0020459503846604822,0.018100931772856405,0.0020438173140199115,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5787,"Les cinquante-trois relais de Tôkaidô, station 14 : Hara",Print,138,0.0023403640323457885,0.01928029242369123,0.0020403738159168435,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0241,La Charité,Painting,154,0.004179477294422478,0.024020681848197986,0.0020368696358650283,3,3,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0847,Autoportrait,Painting,114,0.002177950376952625,0.020158568844554216,0.0020264506052145945,3,4,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0809,Sainte-Adresse. Nuit,Painting,111,0.001853085830598543,0.014744787990070236,0.002025566032678176,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2812,Saint Jean-Baptiste dans le désert,Painting,136,0.002559960474724395,0.02232553121749135,0.002014273416998753,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0326,Nature morte au petit chien,Painting,145,0.0025528106451470664,0.022357885923260788,0.0020122886664441474,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2846,Christ au roseau,Painting,186,0.0012424341943569938,0.03181262129550292,0.0020007814514020807,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0958,L'Automne (portrait de Méry Laurent),Painting,109,0.0025211166669013825,0.01640001536116147,0.0019828103610786247,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0150,Portrait présumé d'Emilie Charton,Painting,72,0.0016190151392842468,0.011589384313190383,0.001982057285475101,3,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2787,Promenade en barque,Painting,191,0.0009353700218939074,0.032462511842917034,0.0019496893800853253,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0694,La femme rousse,Painting,163,0.004775478453558251,0.025391687957361422,0.0018859489868971947,3,3,0,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0218,Baptême du centurion Corneille à Césarée,Painting,210,0.0036299851229179797,0.03325063585059523,0.0018852672510098114,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_2100,On air,,50,0.0038668668542584357,0.007500071397594811,0.001875137468683551,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0103,Fantaisie d'architecture en ruine avec Bellérophon frappant la chimère,Painting,106,0.00113332406934375,0.019319867514555635,0.0018664741765467515,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0757,La Cueillette des pommes,Painting,69,0.001387502940089747,0.008593869585729027,0.0018664662369846222,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2814,Tobie conduit par l'ange,Painting,194,0.004005203329842858,0.0322856845552621,0.0018593663710160593,3,3,1,Gateway
+http://w3id.org/trajecto/poi#artwork_2_2797,Sainte Catherine,Painting,164,0.0014606944221430425,0.028161641036868842,0.00185475009198417,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0080,Le Coucher du soleil,Painting,104,0.0021600056659356525,0.01852452928648579,0.0018401249958988897,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2924,Vierge à l'Enfant,Painting,151,0.001544535945864805,0.02759137196505962,0.00182765669116131,3,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5864,Eliézer et Rebecca,Painting,29,0.0003276538623701256,0.004584102972177359,0.0017518855020753842,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_5830,Les grands Trans-parents,,127,0.003535716598254241,0.019459076700559175,0.001749369456404555,3,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0705,Nature morte aux poissons,Painting,53,0.0009713285706780015,0.006398980248232581,0.0017370877555815496,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5894,Paysanne italienne et son enfant,Painting,134,0.004957430331198218,0.021962596883573316,0.001704149337654063,3,3,1,Gateway
+http://w3id.org/trajecto/poi#artwork_1_0148,Portrait de jeune femme au boa,Painting,103,0.004514531700758987,0.016007734694157377,0.0017030183711553783,2,2,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0709,Guitare,Sculpture,131,0.0024754115763326702,0.020362807519474124,0.0016974463702408588,2,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0082,Le Jour ou Le Triomphe d'Apollon,Painting,45,0.00011767792310435335,0.007539719721089797,0.0016836649779757846,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0877,Tête de Christ,Painting,101,0.0025025030321651526,0.014409940527762014,0.0016562608551010174,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0731,Pipe d'eau douce,,75,0.002208000601047269,0.01185626578966546,0.0016484914045565516,2,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2859,Présentation de la Vierge au Temple,Painting,119,0.002439573226618192,0.019299620207673476,0.0016444414053437988,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0696,Les dieux marins,Painting,106,0.0028592774341584613,0.014973753494517916,0.0016419160585724422,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0749,Sous la lampe,Painting,95,0.0014738610540121252,0.014162571049133568,0.0016312562863153466,2,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0199,La Marchande d'Amours,Sculpture,140,0.0022743325196408846,0.021706623816984384,0.001617342721817524,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5862,Entrée du Christ à Jérusalem,Painting,69,0.00014816865809616075,0.01426525747652009,0.001600805397635541,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0352,La Fenaison,Painting,144,0.002213518335906014,0.023590797139739775,0.0016003183061540508,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0701,Le dé,Painting,56,0.0012383510700621834,0.008661465475626906,0.0015949023771152809,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0337,La Tour en ruine,Painting,103,0.002978596108342929,0.018233660739368256,0.0015878404785550637,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2789,La Halte de chasse,Painting,146,0.0023822251369715235,0.02457119003331582,0.0015805117002937303,2,3,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0692,Chambre des enfants,Painting,92,0.001652593744144295,0.01350422559190656,0.0015799614655390582,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0981,Portrait d'Emile Bastien-Lepage,Painting,44,0.00013897237572330553,0.008019167731264492,0.0015486854004216504,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0301,Cathédrale de Rouen,Painting,180,0.004490549397950653,0.029423286361016036,0.0015382753666490227,2,3,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0801,Manège des chevaux de bois,Painting,68,0.0011068028802637278,0.010446442484567433,0.0015225643266817421,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0803,"La Seine au Pont-Neuf, effet de brouillard",Painting,128,0.0021616463791134253,0.020552246610473147,0.0015070510167827073,2,3,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0144,Portrait de Jacques-Philippe Voïart,Painting,99,0.0014314181714558069,0.016016485577822977,0.0014947050617981545,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5874,La Joie de vivre,Painting,106,0.002444647284775415,0.018052763787915344,0.0014801840182476782,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_0465,"Robert de Lénoncourt, cardinal et archevêque",Painting,57,0.0014827144730613047,0.009388097905071965,0.001477437843826541,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0767,L'amour surprend Psyché,Painting,43,0.0005542490274108458,0.00699959754843558,0.0014760820832402045,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0181,La mort de Didon,Painting,53,0.0010106116904246966,0.008606445585981497,0.0014742370505900723,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0751,Le déjeuner des enfants,Painting,69,0.001387502940089747,0.008593869585729027,0.0014721134197682561,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2875,Saint Jérôme dans le désert,Painting,157,0.0023272693532071,0.024732534826802252,0.0014616516406495664,2,2,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0912,Moselle à Liverdun,Painting,56,0.0014102214195135865,0.00947749568965526,0.0014423502124953857,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0084,Le Lever du Soleil,Painting,29,0.0003276538623701256,0.004584102972177359,0.0014220533389806148,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2803,Vierge à l'enfant couronnée par deux anges,Painting,74,0.002858841777342863,0.012420408738840741,0.0013995009311459801,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0833,Paysage breton,Painting,32,0.0004194287028571368,0.003505881583496843,0.0013765254015821586,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0753,Le Bénédicité,Painting,66,0.0017021819638182887,0.01093485469674435,0.0013690818434680045,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0139,Portrait d'Elise Voïant,Painting,45,0.00011767792310435335,0.007539719721089797,0.001342671529438949,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0668,Le Grand Char,Painting,101,0.0025025030321651526,0.014409940527762014,0.0013023178537083652,2,2,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_6000,"Portrait d'Emma Schroekinger, ""La stella di Venezia""",Painting,141,0.004018413628805537,0.02236663680692638,0.0012557871240061534,2,2,1,Gateway
+http://w3id.org/trajecto/poi#artwork_0_0699,Composition,Painting,53,0.0009713285706780015,0.006398980248232581,0.0012407799661061578,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0210,La Nymphe Nébula verse la pluie sur les fleurs,Painting,34,0.0004658847543390123,0.004825391334504847,0.0011474987558764672,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0322,Nature morte au tapis et cédrats,Painting,62,0.0019902111536992412,0.010040737370383895,0.0011238774958443548,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5781,"Les cinquante-trois relais de Tôkaidô, station 50 : Tsuchiyama",Print,44,0.0008782879915806847,0.00696202187520227,0.0011209135921243436,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0253,Le Christ chassant les marchands du temple,Painting,83,0.002550357609570658,0.01236443676463428,0.0011203829118419744,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0354,La Moisson,Painting,74,0.002858841777342863,0.012420408738840741,0.001108771920987479,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0673,Portrait du docteur Le Masle,Painting,53,0.0009713285706780015,0.006398980248232581,0.0010965273579309413,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0088,Paysage avec pont rustique,Painting,62,0.0015653873968264104,0.009952342315893979,0.0010950692322286523,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5880,Scènes de carnaval 2,Painting,53,0.0010106116904246966,0.008606445585981497,0.0010950692322286523,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0313,"Crabes, crevettes, citrons",Painting,48,0.001096815084755587,0.008041440095442108,0.0010851739463180296,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2799,Sainte Lucie,Painting,57,0.0014827144730613047,0.009388097905071965,0.0010728182952702268,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2848,Sainte Catherine d'Alexandrie,Painting,83,0.002550357609570658,0.01236443676463428,0.0010728182952702268,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2880,Le Christ tombé sous sa croix,Painting,83,0.002550357609570658,0.01236443676463428,0.0010719313717213212,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0097,Architecture en ruine avec Jupiter tonnant,Painting,53,0.0010106116904246966,0.008606445585981497,0.0010678061242233652,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_5834,"Les Eléments, formes et couleurs",Painting,21,0.00024118378023874778,0.0035702587175283473,0.0010580695381187263,1,0,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5911,Gitane,Painting,22,0.00024300852977949663,0.0032748982379119415,0.0010492467991893581,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5785,"Les cinquante-trois relais de Tôkaidô, station 29 : Mitsuke",Print,39,0.0007490767806805624,0.00713380968076636,0.0010424481935168996,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0393,Adieux de saint Pierre et de saint Paul,Painting,58,0.0015365614777418436,0.010049508148636576,0.0010385396569194188,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0779,l'hommage à Callot,Painting,29,0.0003276538623701256,0.004584102972177359,0.001034069881688439,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0900,Le quai nocturne,Painting,29,0.0003276538623701256,0.004584102972177359,0.0010222278911415886,1,1,2,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0565,Intérieur de palais,Painting,129,0.0019509628610854752,0.022588781261364956,0.0010222278911415886,1,3,0,Origin
+http://w3id.org/trajecto/poi#artwork_1_0120,Autoportrait,Painting,58,0.0015365614777418436,0.010049508148636576,0.00101474718913077,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0243,Vierge et l'Enfant,Painting,38,0.0009661964332104044,0.006719786715796794,0.0010115209521478958,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0137,Vestales,Painting,40,0.0009189876735943677,0.007500296903544142,0.0010112519235734193,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0309,Etude de faucons,Painting,24,0.0003458855790453353,0.0041815212817069855,0.0010112519235734193,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0133,Tullie faisant passer son char sur le corps de son père,Painting,20,0.0002347458349880644,0.004012040303141493,0.0010084464214015158,1,0,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_2_2928,Jonas jeté à la mer,Painting,44,0.0008782879915806847,0.00696202187520227,0.0009916549661319704,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0287,Moïse sauvé des eaux,Painting,20,0.0002347458349880644,0.004012040303141493,0.000987449760745554,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5888,Portrait de Louise-Elisabeth Dufresne,Painting,14,8.03098209180031e-05,0.001813742988151447,0.0009864035795118472,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0831,Paysage d'automne,Painting,32,0.0004194287028571368,0.003505881583496843,0.0009804588617526705,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0783,Pegeen dans son atelier,Painting,22,0.00045916448239434926,0.0038392496140663783,0.0009757084106629056,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5860,Portrait de Barthélémy Guibal,Painting,20,0.00020000582586967642,0.0037413546442922143,0.0009748092138660352,1,0,3,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0335,Scène de bataille près d'une forteresse,Painting,62,0.0015653873968264104,0.009952342315893979,0.0009704663403286907,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0942,Le voilier/ Le yacht d'Edwards,Painting,29,0.00045638583612465385,0.005851817575568214,0.0009648553243473932,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0675,La blonde,Painting,20,0.00020000582586967642,0.0037413546442922143,0.0009626014169825815,1,1,3,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_0131,Démosthène au pied de la statue de Neptune,Painting,44,0.0008782879915806847,0.00696202187520227,0.0009312777200336613,1,1,0,Peripheral
+http://w3id.org/trajecto/poi#artwork_1_5779,Barque de pêche à Chôshiura dans la province de Shimousa,Print,62,0.0015653873968264104,0.009952342315893979,0.0008643695566609821,1,1,1,Peripheral
+http://w3id.org/trajecto/poi#artwork_0_0739,Figure Masque allongé,Painting,2,0.0,7.490868056655857e-05,0.0005430095922846074,0,1,0,Origin
+http://w3id.org/trajecto/poi#artwork_0_0733,La Bête,Mirror,34,0.00048298434473188675,0.005643147240874146,0.0005430095922846074,0,1,0,Origin

@@ -1,0 +1,71 @@
+# SR-30: Profile-based collaborative filtering
+# POIs from trajectories sharing purpose + at least one of
+# {movement style, temporal context}, not yet visited by the user.
+# Parameterized: replace $TRAJECTORY_URI with target trajectory URI.
+
+PREFIX trajecto: <http://w3id.org/trajecto#>
+PREFIX poi:      <http://w3id.org/trajecto/poi#>
+PREFIX patterns: <http://w3id.org/trajecto/patterns#>
+PREFIX context:  <http://w3id.org/trajecto/context#>
+PREFIX user:     <http://w3id.org/trajecto/user#>
+PREFIX dul:      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+
+SELECT DISTINCT ?poi ?poiCat ?rule ?similarTraj
+WHERE {
+    # Get the input trajectory's profile
+    BIND(<$TRAJECTORY_URI> AS ?inputTraj)
+    ?inputTraj trajecto:hasPurpose ?purpose .
+    ?inputUser trajecto:formsTrajectory ?inputTraj .
+
+    # Find similar trajectories: same purpose
+    ?similarTraj trajecto:hasPurpose ?purpose .
+    FILTER(?similarTraj != ?inputTraj)
+
+    # Plus at least one more shared facet
+    {
+        ?inputTraj patterns:exhibitsPattern ?pattern .
+        ?similarTraj patterns:exhibitsPattern ?pattern .
+    }
+    UNION
+    {
+        ?inputTraj context:hasTemporalContext ?ctx .
+        ?similarTraj context:hasTemporalContext ?ctx .
+    }
+
+    # Get POIs from similar trajectories (meaningful only; immersive is subclass)
+    ?simPos dul:isPartOf ?similarTraj .
+    ?simPos trajecto:hasInteraction ?simInt .
+    ?simInt a poi:MeaningfulInteraction .
+    ?simInt poi:interactsWith ?poi .
+    ?poi a ?poiCat .
+    FILTER(?poiCat != trajecto:PointOfInterest)
+    FILTER(?poiCat != poi:SignificantPOI)
+
+    # Exclude transportation/utility/navigation categories
+    # (generated from context_recommender.EXCLUDED_CATEGORIES by regenerate_sr_exclusions.py — do not edit by hand)
+    FILTER(?poiCat NOT IN (
+        poi:ATM, poi:Airport, poi:Bank, poi:BusStation, poi:Clinic,
+        poi:DentalOffice, poi:DoctorsOffice, poi:Elevator, poi:Embassy,
+        poi:Entrance, poi:Escalator, poi:Exit, poi:GovernmentBuilding,
+        poi:HealthcareFacility, poi:HealthcarePOI, poi:Hospital,
+        poi:Intersection, poi:Junction, poi:MedicalFacility,
+        poi:NavigationLandmark, poi:None, poi:OfficeBuilding,
+        poi:ParkingArea, poi:Pharmacy, poi:PostOffice,
+        poi:PublicService, poi:RestRoom, poi:Restroom, poi:SeatingArea,
+        poi:ServicePOI, poi:Staircase, poi:TrainStation, poi:TransitPOI,
+        poi:TransitStop, poi:Transition, poi:TransitionPOI,
+        poi:Transportation, poi:TransportationPOI, poi:Uncategorized,
+        poi:Unknown, poi:VendingMachine, poi:WaterFountain,
+        poi:Waypoint, poi:nan
+    ))
+
+    # Exclude already-visited POIs
+    FILTER NOT EXISTS {
+        ?visitPos dul:isPartOf ?visitTraj .
+        ?inputUser trajecto:formsTrajectory ?visitTraj .
+        ?visitPos trajecto:hasInteraction ?visitInt .
+        ?visitInt poi:interactsWith ?poi .
+    }
+
+    BIND("SR-30:profile-collaborative" AS ?rule)
+}

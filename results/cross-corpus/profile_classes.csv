@@ -1,0 +1,26 @@
+corpus,class,n,share_pct,ic_weight
+OSM Rome,LowEngagementTrajectory,494,92.0,0.083
+OSM Rome,CommercialTargeted,309,57.5,0.553
+OSM Rome,CommercialCasual,73,13.6,1.996
+OSM Rome,HighEngagementTrajectory,26,4.8,3.028
+OSM Rome,CulturalTargeted,18,3.4,3.396
+OSM Rome,MediumEngagementTrajectory,17,3.2,3.453
+OSM Rome,CulturalCasual,11,2.0,3.888
+OSM Rome,RecreationTargeted,9,1.7,4.089
+OSM Rome,CommercialExplorer,6,1.1,4.494
+OSM Rome,CulturalExplorer,4,0.7,4.9
+OSM Rome,HighEngagementCulturalExplorer,4,0.7,4.9
+OSM Rome,RecreationCasual,2,0.4,5.593
+GeoLife,LowEngagementTrajectory,680,59.4,0.521
+GeoLife,MediumEngagementTrajectory,235,20.5,1.584
+GeoLife,HighEngagementTrajectory,230,20.1,1.605
+GeoLife,CommercialTargeted,178,15.5,1.861
+GeoLife,CommercialExplorer,130,11.4,2.176
+GeoLife,CommercialCasual,86,7.5,2.589
+GeoLife,CulturalExplorer,44,3.8,3.259
+GeoLife,HighEngagementCulturalExplorer,40,3.5,3.354
+GeoLife,RecreationExplorer,30,2.6,3.642
+GeoLife,RecreationCasual,28,2.4,3.711
+GeoLife,CulturalTargeted,27,2.4,3.747
+GeoLife,CulturalCasual,21,1.8,3.999
+GeoLife,RecreationTargeted,9,0.8,4.846

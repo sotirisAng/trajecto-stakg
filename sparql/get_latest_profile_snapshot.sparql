@@ -1,0 +1,19 @@
+PREFIX user: <http://w3id.org/trajecto/user#>
+PREFIX trajecto: <http://w3id.org/trajecto#>
+SELECT ?category ?score ?confidence ?snapshotDate ?snapshot
+WHERE {
+    ?user_uri user:hasProfile ?profile .
+    ?profile user:hasSnapshot ?snapshot .
+    ?snapshot user:updateTimestamp ?snapshotDate ;
+              user:hasPreferences ?pref .
+    ?pref a user:PoiCategoryPreference ;
+          user:prefersPoiCategory ?category ;
+          user:preferenceScore ?score ;
+          user:confidenceLevel ?confidence .
+    MINUS {
+        ?profile user:hasSnapshot ?other .
+        ?other user:updateTimestamp ?otherDate .
+        FILTER(?otherDate > ?snapshotDate)
+    }
+
+}

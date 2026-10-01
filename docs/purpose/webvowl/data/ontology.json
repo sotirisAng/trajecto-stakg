@@ -1,0 +1,2111 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl", "http://w3id.org/trajecto", "http://www.datacron-project.eu/datAcron", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://w3id.org/trajecto/purpose" ],
+    "title" : {
+      "en" : "Trajecto Purpose Module"
+    },
+    "iri" : "http://w3id.org/trajecto/purpose",
+    "version" : "1.1.0",
+    "author" : [ "Sotirios Angelis", "Konstantinos Kotis" ],
+    "description" : {
+      "en" : "This module extends the trajecto ontology with a comprehensive framework for representing purposes of movement."
+    },
+    "labels" : {
+      "en" : "trajecto-purpose"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose/1.0",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sotirios Angelis",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Konstantinos Kotis",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-05-09",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "purpose",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "i-Lab, Department of Cultural Technology and Communication, University of the Aegean",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-01",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Trajecto Purpose Module",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/purpose#CommercialPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated by purchase, consumption or service-seeking activities.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Shopping, dining out, visiting a bank",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CommercialPurpose",
+      "en" : "Commercial Purpose"
+    },
+    "subClasses" : [ "9", "10", "11" ],
+    "comment" : {
+      "en" : "Movement purpose related to commercial activities such as shopping or services."
+    },
+    "id" : "8",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#HeritageExploration",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HeritageExploration",
+      "en" : "Heritage Exploration"
+    },
+    "comment" : {
+      "en" : "Purpose related to exploring heritage sites or historical locations."
+    },
+    "id" : "12",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#Tourism",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Tourism",
+      "en" : "Tourism"
+    },
+    "comment" : {
+      "en" : "Purpose related to visiting places as a tourist."
+    },
+    "id" : "15",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#WorkPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated by professional responsibilities or employment-related activities.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Office work, field work, business meetings",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "WorkPurpose",
+      "en" : "Work Purpose"
+    },
+    "subClasses" : [ "18", "19", "20", "21", "22" ],
+    "comment" : {
+      "en" : "Movement purpose related to employment and professional activities."
+    },
+    "id" : "17",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#DiningExperience",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DiningExperience",
+      "en" : "Dining Experience"
+    },
+    "comment" : {
+      "en" : "Purpose related to dining at restaurants or food establishments."
+    },
+    "id" : "10",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#DomesticActivity",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DomesticActivity",
+      "en" : "Domestic Activity"
+    },
+    "comment" : {
+      "en" : "Purpose related to household or domestic activities."
+    },
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto#PurposeOfMovement",
+    "baseIri" : "http://w3id.org/trajecto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PurposeOfMovement"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#ServiceAccess",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceAccess",
+      "en" : "Service Access"
+    },
+    "comment" : {
+      "en" : "Purpose related to accessing commercial services (banking, healthcare, etc.)."
+    },
+    "id" : "9",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#FieldStudy",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FieldStudy",
+      "en" : "Field Study"
+    },
+    "comment" : {
+      "en" : "Purpose related to educational field studies or site visits."
+    },
+    "id" : "29",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#SocialGathering",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SocialGathering",
+      "en" : "Social Gathering"
+    },
+    "comment" : {
+      "en" : "Purpose related to meeting and socializing with others."
+    },
+    "id" : "65",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#MuseumVisit",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MuseumVisit",
+      "en" : "Museum Visit"
+    },
+    "comment" : {
+      "en" : "Purpose related to visiting museums or exhibitions."
+    },
+    "id" : "40",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#PurposeCategory",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A classification of movement purpose into general categories that can be hierarchically organized.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PurposeCategory",
+      "en" : "Purpose Category"
+    },
+    "subClasses" : [ "4", "17", "45", "66", "8", "27", "16" ],
+    "comment" : {
+      "en" : "A general category of movement purpose."
+    },
+    "id" : "5",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#LocalCommunityEngagement",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LocalCommunityEngagement",
+      "en" : "Local Community Engagement"
+    },
+    "comment" : {
+      "en" : "Purpose related to engaging with the local community near one's residence."
+    },
+    "id" : "67",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#ProfessionalEvent",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProfessionalEvent",
+      "en" : "Professional Event"
+    },
+    "comment" : {
+      "en" : "Purpose related to attending professional events, conferences, or trade shows."
+    },
+    "id" : "20",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#SculpturePurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SculpturePurpose",
+      "en" : "Sculpture Purpose"
+    },
+    "comment" : {
+      "en" : "Purpose related to engagement with sculptural works."
+    },
+    "id" : "70",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.datacron-project.eu/datAcron#Trajectory",
+    "baseIri" : "http://www.datacron-project.eu/datAcron",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trajectory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#PhotographyPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PhotographyPurpose",
+      "en" : "Photography Purpose"
+    },
+    "comment" : {
+      "en" : "Purpose related to engagement with photographic works."
+    },
+    "id" : "64",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#EducationalTour",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EducationalTour",
+      "en" : "Educational Tour"
+    },
+    "comment" : {
+      "en" : "Purpose that combines cultural experience with educational objectives."
+    },
+    "id" : "26",
+    "superClasses" : [ "4", "27" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#CulturalEventAttendance",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CulturalEventAttendance",
+      "en" : "Cultural Event Attendance"
+    },
+    "comment" : {
+      "en" : "Purpose related to attending cultural events, festivals, or performances."
+    },
+    "id" : "47",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#Commuting",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Commuting",
+      "en" : "Commuting"
+    },
+    "comment" : {
+      "en" : "Purpose related to regular travel between home and work/education."
+    },
+    "id" : "87",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#TransportationPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated primarily by the need to travel between locations rather than activities at those locations.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Commuting, transit transfers, wandering",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransportationPurpose",
+      "en" : "Transportation Purpose"
+    },
+    "subClasses" : [ "88", "87", "89", "86" ],
+    "comment" : {
+      "en" : "Movement purpose primarily related to transport and transit between locations."
+    },
+    "id" : "66",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#PurposeTransition",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An event where the primary motivation for movement changes from one purpose to another.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PurposeTransition",
+      "en" : "Purpose Transition"
+    },
+    "comment" : {
+      "en" : "Represents a change from one purpose to another during a trajectory."
+    },
+    "id" : "2",
+    "superClasses" : [ "84" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#BusinessMeeting",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BusinessMeeting",
+      "en" : "Business Meeting"
+    },
+    "comment" : {
+      "en" : "Purpose related to professional business meetings."
+    },
+    "id" : "19",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#Transit",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Transit",
+      "en" : "Transit"
+    },
+    "comment" : {
+      "en" : "Purpose primarily focused on moving from one location to another."
+    },
+    "id" : "88",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#ResidentialPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated by home-related activities or local community engagement.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Returning home, local neighborhood activities",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResidentialPurpose",
+      "en" : "Residential Purpose"
+    },
+    "subClasses" : [ "44", "103", "67" ],
+    "comment" : {
+      "en" : "Movement purpose related to residential and home-based activities."
+    },
+    "id" : "45",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#CulturalPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated by engagement with cultural artifacts, spaces, or events.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Museum visits, attending performances, exploring heritage sites",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CulturalPurpose",
+      "en" : "Cultural Purpose"
+    },
+    "subClasses" : [ "47", "50", "40", "12", "43", "26" ],
+    "comment" : {
+      "en" : "Movement purpose related to cultural activities and experiences."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#FineArtsPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FineArtsPurpose",
+      "en" : "Fine Arts Purpose"
+    },
+    "comment" : {
+      "en" : "Purpose related to engagement with paintings, mixed media, mirrors, and installations."
+    },
+    "id" : "61",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#GeneralPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GeneralPurpose",
+      "en" : "General Purpose"
+    },
+    "comment" : {
+      "en" : "Mixed cultural engagement with no dominant artwork type."
+    },
+    "id" : "50",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#FormalLearning",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FormalLearning",
+      "en" : "Formal Learning"
+    },
+    "comment" : {
+      "en" : "Purpose related to formal educational activities (classes, lectures)."
+    },
+    "id" : "37",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#TransferBetweenModes",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransferBetweenModes",
+      "en" : "Transfer Between Modes"
+    },
+    "comment" : {
+      "en" : "Purpose related to transferring between different modes of transportation."
+    },
+    "id" : "86",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#Research",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Research",
+      "en" : "Research"
+    },
+    "comment" : {
+      "en" : "Purpose related to research activities."
+    },
+    "id" : "35",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#EducationalPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated by formal or informal learning objectives.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "School attendance, workshops, field studies, research activities",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EducationalPurpose",
+      "en" : "Educational Purpose"
+    },
+    "subClasses" : [ "31", "37", "35", "29", "26" ],
+    "comment" : {
+      "en" : "Movement purpose related to learning and educational activities."
+    },
+    "id" : "27",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#PurposeHierarchy",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A construct that represents the organization of primary, secondary, and opportunistic purposes that motivate a trajectory.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PurposeHierarchy",
+      "en" : "Purpose Hierarchy"
+    },
+    "comment" : {
+      "en" : "A structure representing the hierarchical organization of movement purposes."
+    },
+    "id" : "24",
+    "superClasses" : [ "79" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "108",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#LeisureActivity",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LeisureActivity",
+      "en" : "Leisure Activity"
+    },
+    "comment" : {
+      "en" : "Purpose related to casual leisure activities."
+    },
+    "id" : "72",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "107",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#FieldWork",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FieldWork",
+      "en" : "Field Work"
+    },
+    "comment" : {
+      "en" : "Purpose related to professional work conducted in the field."
+    },
+    "id" : "22",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#WorkshopAttendance",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "WorkshopAttendance",
+      "en" : "Workshop Attendance"
+    },
+    "comment" : {
+      "en" : "Purpose related to attending workshops, seminars, or training sessions."
+    },
+    "id" : "31",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#EntertainmentAttendance",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EntertainmentAttendance",
+      "en" : "Entertainment Attendance"
+    },
+    "comment" : {
+      "en" : "Purpose related to attending entertainment events (cinema, sports, etc.)."
+    },
+    "id" : "77",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#ExerciseActivity",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExerciseActivity",
+      "en" : "Exercise Activity"
+    },
+    "comment" : {
+      "en" : "Purpose related to physical exercise or sports activities."
+    },
+    "id" : "81",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "2" ],
+    "attributes" : [ "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#OfficeWork",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OfficeWork",
+      "en" : "Office Work"
+    },
+    "comment" : {
+      "en" : "Purpose related to working in an office environment."
+    },
+    "id" : "18",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#PrintPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PrintPurpose",
+      "en" : "Print Purpose"
+    },
+    "comment" : {
+      "en" : "Purpose related to engagement with prints and printmaking works."
+    },
+    "id" : "75",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Abstract"
+    },
+    "subClasses" : [ "24" ],
+    "attributes" : [ "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#WorkplaceRoutine",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "WorkplaceRoutine",
+      "en" : "Workplace Routine"
+    },
+    "comment" : {
+      "en" : "Purpose related to regular workplace routines and activities."
+    },
+    "id" : "21",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#Wandering",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Wandering",
+      "en" : "Wandering"
+    },
+    "comment" : {
+      "en" : "Purpose involving movement without a specific destination or goal."
+    },
+    "id" : "89",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#Shopping",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Shopping",
+      "en" : "Shopping"
+    },
+    "comment" : {
+      "en" : "Purpose related to purchasing goods."
+    },
+    "id" : "11",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#RecreationalPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Movement motivated by leisure, entertainment, relaxation, or pleasure.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Park visits, beach trips, attending sporting events",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RecreationalPurpose",
+      "en" : "Recreational Purpose"
+    },
+    "subClasses" : [ "77", "65", "81", "72", "15" ],
+    "comment" : {
+      "en" : "Movement purpose related to leisure and recreational activities."
+    },
+    "id" : "16",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#ArtisticExperience",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ArtisticExperience",
+      "en" : "Artistic Experience"
+    },
+    "subClasses" : [ "75", "70", "61", "64" ],
+    "comment" : {
+      "en" : "Purpose related to experiencing artistic works or performances."
+    },
+    "id" : "43",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#HomeBound",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HomeBound",
+      "en" : "Home Bound"
+    },
+    "comment" : {
+      "en" : "Purpose related to returning to or staying at home."
+    },
+    "id" : "103",
+    "superClasses" : [ "45" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposeTransition",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Identifies changes in movement purpose that occur during a trajectory.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposeTransition",
+      "en" : "has purpose transition"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a trajectory to purpose transitions that occur within it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPrimaryPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The primary motivation or goal behind the movement represented by the trajectory.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPrimaryPurpose",
+      "en" : "has primary purpose"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Specifies the main purpose of a trajectory."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposeDuration",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposeDuration",
+      "en" : "has purpose duration"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Specifies the typical duration associated with a purpose."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposeHierarchy",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposeHierarchy",
+      "en" : "has purpose hierarchy"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a trajectory to its complete purpose hierarchy."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "27",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "27",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "33",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "27",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "27",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "4",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "4",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "4",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "4",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "4",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "17",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "4",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "17",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "17",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposePriority",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "54",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposePriority",
+      "en" : "has purpose priority"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Numeric representation of purpose priority, with lower numbers indicating higher priority."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "range" : "17",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "17",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "8",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "43",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#fromPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fromPurpose",
+      "en" : "from purpose"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Specifies the original purpose before a transition."
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "range" : "43",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasSecondaryPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Additional goals or aims that may be fulfilled during the trajectory, but are not the primary motivation for the movement.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSecondaryPurpose",
+      "en" : "has secondary purpose"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Specifies additional purposes of a trajectory that are not the main driver of movement."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "16",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "43",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "43",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "16",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "79",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "16",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "16",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "84",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "66",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposeConfidenceScore",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "91",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposeConfidenceScore",
+      "en" : "has purpose confidence score"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Share of the meaningful dwell of a trajectory spent at POIs of its assigned purpose, as a percentage (0 to 100)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "90"
+  }, {
+    "range" : "66",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "5",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "5",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "66",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposeFrequency",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposeFrequency",
+      "en" : "has purpose frequency"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Describes how frequently this purpose typically occurs (e.g., 'daily', 'weekly', 'monthly', 'rarely')."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "range" : "66",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "range" : "5",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "5",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "range" : "5",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "5",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#transitionTimestamp",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "105",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "transitionTimestamp",
+      "en" : "transition timestamp"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Timestamp when the purpose transition occurred."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasOpportunisticPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Spontaneous or unplanned purposes that arise during the trajectory and influence movement patterns.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOpportunisticPurpose",
+      "en" : "has opportunistic purpose"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Specifies unplanned purposes that emerge during the trajectory."
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://w3id.org/trajecto#hasPurpose",
+    "baseIri" : "http://w3id.org/trajecto",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "hasPurpose"
+    },
+    "domain" : "107",
+    "subproperty" : [ "68", "106", "6" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "range" : "45",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "range" : "45",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#hasPurposeCharacteristic",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "108",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPurposeCharacteristic",
+      "en" : "has purpose characteristic"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a purpose category to its characteristic properties."
+    },
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://w3id.org/trajecto/purpose#toPurpose",
+    "baseIri" : "http://w3id.org/trajecto/purpose",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/trajecto/purpose",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "toPurpose",
+      "en" : "to purpose"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Specifies the new purpose after a transition."
+    },
+    "attributes" : [ "object" ],
+    "id" : "113"
+  } ]
+}
