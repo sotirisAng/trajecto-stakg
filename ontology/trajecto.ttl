@@ -128,7 +128,8 @@ trajecto:Person a owl:Class ;
     rdfs:label "Person"@en ;
     rdfs:comment "A person whose movement is recorded as one or more trajectories."@en ;
     rdfs:isDefinedBy <http://w3id.org/trajecto> ;
-    rdfs:subClassOf datacron:MovingObject .
+    rdfs:subClassOf datacron:MovingObject ;
+    owl:equivalentClass dul:Person .
 
 trajecto:PointOfInterest a owl:Class ;
     rdfs:label "Point of Interest"@en ;
